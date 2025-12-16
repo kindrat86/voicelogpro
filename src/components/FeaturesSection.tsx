@@ -37,22 +37,24 @@ const features = [
 export function FeaturesSection() {
   return (
     <section className="section-container bg-secondary/30">
-      <h2 className="headline-section text-foreground mb-4 text-center">
+      <h2 className="headline-section text-foreground mb-4 text-center font-bold">
         Built for Subcontractors
       </h2>
-      <p className="body-large text-center mb-12">Every feature designed for the field.</p>
+      <p className="body-large text-center mb-12 font-medium text-foreground/80">
+        Every feature designed for the field.
+      </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12">
-        {features.map((feature, index) => (
+        {features.map((feature) => (
           <div 
             key={feature.title}
-            className="card-industrial text-center group hover:border-primary/50 transition-all duration-300"
+            className="card-sunlight text-center group transition-all duration-200"
           >
-            <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+            <div className="w-12 h-12 bg-primary/20 border border-primary/40 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors">
               <feature.icon className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-semibold text-foreground mb-1">{feature.title}</h3>
-            <p className="text-muted-foreground text-sm">— {feature.description}</p>
+            <h3 className="font-bold text-foreground mb-1">{feature.title}</h3>
+            <p className="text-foreground/70 text-sm font-medium">— {feature.description}</p>
           </div>
         ))}
       </div>
