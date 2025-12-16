@@ -72,6 +72,46 @@ export default function BlogPost() {
     );
   }
 
+  // Helper to render inline markdown links
+  const LINK_RE = /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g;
+
+  const renderInlineLinks = (text: string): React.ReactNode => {
+    const nodes: React.ReactNode[] = [];
+    let lastIndex = 0;
+    
+    for (const match of text.matchAll(LINK_RE)) {
+      const [full, label, url] = match;
+      const index = match.index ?? 0;
+      
+      // Add text before the link
+      if (index > lastIndex) {
+        nodes.push(text.slice(lastIndex, index));
+      }
+      
+      const external = /^https?:\/\//.test(url);
+      nodes.push(
+        <a
+          key={`${url}-${index}`}
+          href={url}
+          target={external ? "_blank" : undefined}
+          rel={external ? "nofollow noreferrer" : undefined}
+          className="text-primary underline hover:text-primary/80"
+        >
+          {label}
+        </a>
+      );
+      lastIndex = index + full.length;
+    }
+    
+    // Add remaining text
+    if (lastIndex < text.length) {
+      nodes.push(text.slice(lastIndex));
+    }
+    
+    // Return original text if no links found
+    return nodes.length > 0 ? nodes : text;
+  };
+
   // Parse markdown content to HTML-like structure
   const renderContent = (content: string) => {
     const lines = content.split("\n");
@@ -89,7 +129,7 @@ export default function BlogPost() {
         elements.push(
           <ListTag key={elements.length} className={`${listType === "ol" ? "list-decimal" : "list-disc"} pl-6 mb-6 space-y-2 text-muted-foreground`}>
             {listItems.map((item, i) => (
-              <li key={i}>{item}</li>
+              <li key={i}>{renderInlineLinks(item)}</li>
             ))}
           </ListTag>
         );
@@ -108,7 +148,7 @@ export default function BlogPost() {
                   <tr className="border-b border-border">
                     {tableHeaders.map((header, i) => (
                       <th key={i} className="text-left p-3 font-semibold text-foreground bg-secondary/50">
-                        {header}
+                        {renderInlineLinks(header)}
                       </th>
                     ))}
                   </tr>
@@ -119,7 +159,7 @@ export default function BlogPost() {
                   <tr key={i} className="border-b border-border/50">
                     {row.map((cell, j) => (
                       <td key={j} className="p-3 text-muted-foreground">
-                        {cell}
+                        {renderInlineLinks(cell)}
                       </td>
                     ))}
                   </tr>
@@ -164,21 +204,21 @@ export default function BlogPost() {
         flushList();
         elements.push(
           <h1 key={elements.length} className="text-3xl md:text-4xl font-display uppercase text-foreground mb-6 mt-8">
-            {trimmed.slice(2)}
+            {renderInlineLinks(trimmed.slice(2))}
           </h1>
         );
       } else if (trimmed.startsWith("## ")) {
         flushList();
         elements.push(
           <h2 key={elements.length} className="text-2xl md:text-3xl font-display uppercase text-foreground mb-4 mt-8">
-            {trimmed.slice(3)}
+            {renderInlineLinks(trimmed.slice(3))}
           </h2>
         );
       } else if (trimmed.startsWith("### ")) {
         flushList();
         elements.push(
           <h3 key={elements.length} className="text-xl font-semibold text-foreground mb-3 mt-6">
-            {trimmed.slice(4)}
+            {renderInlineLinks(trimmed.slice(4))}
           </h3>
         );
       }
@@ -205,7 +245,7 @@ export default function BlogPost() {
         flushList();
         elements.push(
           <p key={elements.length} className="text-muted-foreground leading-relaxed mb-4">
-            {trimmed}
+            {renderInlineLinks(trimmed)}
           </p>
         );
       }
