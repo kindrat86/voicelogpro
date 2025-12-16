@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Home, Mic, Unlock } from "lucide-react";
 import { vibrate } from "@/lib/utils";
+import { toast } from "sonner";
 
 export const MobileBottomBar = () => {
   const location = useLocation();
@@ -9,7 +10,9 @@ export const MobileBottomBar = () => {
 
   const handleMicClick = () => {
     vibrate();
-    // Future: navigate to recording flow
+    toast.info("Voice recording coming soon!", {
+      description: "Join the Crew Plan to get early access.",
+    });
   };
 
   return (
