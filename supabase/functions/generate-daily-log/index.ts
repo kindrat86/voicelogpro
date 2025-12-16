@@ -1,0 +1,111 @@
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+};
+
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders });
+  }
+
+  try {
+    const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
+    if (!LOVABLE_API_KEY) {
+      throw new Error('LOVABLE_API_KEY is not configured');
+    }
+
+    const { trade } = await req.json();
+
+    const systemPrompt = `You are a construction field worker generating a realistic daily log entry. Generate a daily log that would be spoken by a subcontractor at the end of their work day.
+
+The log MUST include:
+- Date and location
+- Crew size and trade (${trade || 'electrical or plumbing'})
+- Weather conditions
+- Work completed (3-4 bullet points)
+- Any blockers or delays
+- Materials used
+- Safety notes
+
+Format it exactly like this example:
+Daily Log — [Date]
+Location: [Address]
+Crew: [Number] [trade] on-site
+
+Weather: [Temperature]°F, [conditions]
+
+Work Completed:
+• [Task 1]
+• [Task 2]
+• [Task 3]
+
+Blockers:
+• [Any delays or issues]
+
+Materials Used:
+• [Material 1]
+• [Material 2]
+
+Safety: [Brief safety note]
+
+Keep it realistic, specific, and under 200 words. Use realistic construction terminology.`;
+
+    const response = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${LOVABLE_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'google/gemini-2.5-flash',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: `Generate a realistic daily construction log for today. Make it sound like it was spoken by an experienced ${trade || 'electrician'} foreman. Include specific details that would be important for payment protection and dispute documentation.` }
+        ],
+      }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Lovable AI error:', response.status, errorText);
+      
+      if (response.status === 429) {
+        return new Response(JSON.stringify({ error: 'Rate limit exceeded. Please try again in a moment.' }), {
+          status: 429,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      if (response.status === 402) {
+        return new Response(JSON.stringify({ error: 'AI credits exhausted. Please add credits to continue.' }), {
+          status: 402,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      throw new Error(`AI gateway error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    const transcript = data.choices?.[0]?.message?.content;
+
+    if (!transcript) {
+      throw new Error('No transcript generated');
+    }
+
+    console.log('Generated daily log:', transcript.substring(0, 100) + '...');
+
+    return new Response(JSON.stringify({ transcript }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
+
+  } catch (error) {
+    console.error('Error in generate-daily-log:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+    return new Response(JSON.stringify({ error: errorMessage }), {
+      status: 500,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
+  }
+});
