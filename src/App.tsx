@@ -18,6 +18,9 @@ const TexasMechanicsLien = lazy(() => import("./pages/solutions/TexasMechanicsLi
 const ConstructiveAcceleration = lazy(() => import("./pages/solutions/ConstructiveAcceleration"));
 const GoldenThread = lazy(() => import("./pages/solutions/GoldenThread"));
 
+// Comparison landing pages
+const RakenComparison = lazy(() => import("./pages/RakenComparison"));
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -39,6 +42,8 @@ const App = () => (
               <Route path="/solutions/constructive-acceleration-defense" element={<ConstructiveAcceleration />} />
               <Route path="/solutions/building-safety-act-golden-thread" element={<GoldenThread />} />
               <Route path="/solutions/uk-golden-thread" element={<GoldenThread />} />
+              {/* Comparison landing pages */}
+              <Route path="/raken-vs-voice-log-pro" element={<RakenComparison />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
