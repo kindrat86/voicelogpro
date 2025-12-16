@@ -15,50 +15,24 @@ const HeroWaveform = () => {
       setPrefersReducedMotion(mediaQuery.matches);
     }
   }, []);
-  
-  // Static heights for reduced motion or as base
-  const staticHeights = [8, 16, 12, 24, 20, 32, 28, 36, 32, 28, 36, 24, 20, 16];
-  
-  return (
-    <div className="flex items-center justify-center gap-[3px] h-12" aria-hidden="true">
-      {staticHeights.map((height, i) => (
-        <div 
-          key={i} 
-          className={`w-1.5 bg-primary rounded-sm ${prefersReducedMotion ? '' : 'vl-animate-wave'}`}
-          style={{
-            height: prefersReducedMotion ? `${height}px` : '8px',
-            animationDelay: prefersReducedMotion ? undefined : `${i * 80}ms`
-          }} 
-        />
-      ))}
-    </div>
-  );
-};
-
-// Pulsing mic indicator
-const MicPulse = () => {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-      setPrefersReducedMotion(mediaQuery.matches);
-    }
-  }, []);
-  
-  return (
-    <div className="flex items-center gap-2" aria-hidden="true">
-      <div className={`w-3 h-3 rounded-full bg-primary ${prefersReducedMotion ? '' : 'vl-animate-pulse'}`} />
-      <span className="text-xs text-primary font-bold uppercase tracking-wide">Voice Ready</span>
-    </div>
-  );
+  if (prefersReducedMotion) return null;
+  return <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20" aria-hidden="true">
+      <div className="flex items-center gap-1">
+        {Array.from({
+        length: 16
+      }).map((_, i) => <div key={i} className="w-1.5 bg-primary rounded-full animate-waveform" style={{
+        animationDelay: `${i * 80}ms`
+      }} />)}
+      </div>
+    </div>;
 };
 export function HeroSection() {
-  return <section className="relative min-h-[100dvh] flex flex-col justify-center px-4 py-12 overflow-hidden">
+  return <section className="relative min-h-[100dvh] flex flex-col justify-center px-4 py-16 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/40" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/30" />
       
       {/* Background images - mobile stacked, desktop side by side */}
-      <div className="absolute inset-0 opacity-15">
+      <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 md:w-1/2 md:left-0">
           <img src={heroPlumber} alt="Plumber working on construction site" className="w-full h-full object-cover" fetchPriority="high" />
         </div>
@@ -70,14 +44,15 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         
-        <h1 className="headline-primary text-foreground mb-5 animate-fade-up" style={{
+        
+        <h1 className="headline-primary text-foreground mb-6 animate-fade-up" style={{
         animationDelay: "0.1s"
       }}>
           Stop Typing Daily Reports.
           <span className="block text-primary">Just Speak.</span>
         </h1>
         
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-3 animate-fade-up font-medium" style={{
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4 animate-fade-up" style={{
         animationDelay: "0.15s"
       }}>
           The AI Voice-to-PDF daily log tool for defending against payment disputes, lien waivers, and schedule compression claims.
@@ -87,20 +62,19 @@ export function HeroSection() {
           Construction daily logs for mechanics liens, delay claim documentation, excusable delay proof, and dispute-ready PDF reporting.
         </p>
         
-        <p className="body-large max-w-2xl mx-auto mb-6 animate-fade-up" style={{
+        <p className="body-large max-w-2xl mx-auto mb-8 animate-fade-up" style={{
         animationDelay: "0.2s"
       }}>
           Turn glove-on voice notes into job-ready PDFs in 30 seconds.
-          <span className="block mt-2 font-bold text-foreground">Built for subs who need to move fast — and prove work got done.</span>
+          <span className="block mt-2">Built for subs who need to move fast — and prove work got done.</span>
         </p>
         
-        {/* Voice indicator + CTA */}
-        <div className="flex flex-col items-center gap-4 animate-fade-up mb-10" style={{
+        {/* CTA with waveform background */}
+        <div className="relative animate-fade-up mb-12" style={{
         animationDelay: "0.3s"
       }}>
-          <MicPulse />
           <HeroWaveform />
-          <CTAButton variant="hero" />
+          <CTAButton variant="hero" className="text-4xl" />
         </div>
 
         {/* Before/After Slider */}
@@ -112,7 +86,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         
       </div>
     </section>;
