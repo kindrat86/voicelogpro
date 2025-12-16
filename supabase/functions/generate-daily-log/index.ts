@@ -5,6 +5,9 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Allowed trade values for input validation
+const ALLOWED_TRADES = ['electrical', 'plumbing', 'HVAC', 'hvac', 'Electrical', 'Plumbing'];
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -17,7 +20,47 @@ serve(async (req) => {
       throw new Error('LOVABLE_API_KEY is not configured');
     }
 
-    const { trade } = await req.json();
+    // Parse and validate request body
+    let requestBody;
+    try {
+      requestBody = await req.json();
+    } catch {
+      return new Response(JSON.stringify({ error: 'Invalid JSON body' }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    const { trade } = requestBody;
+    
+    // Input validation: validate trade parameter
+    if (trade !== undefined && trade !== null) {
+      if (typeof trade !== 'string') {
+        return new Response(JSON.stringify({ error: 'Trade must be a string' }), {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      
+      if (trade.length > 50) {
+        return new Response(JSON.stringify({ error: 'Trade parameter too long' }), {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      
+      // Check against allowlist (case-insensitive)
+      const normalizedTrade = trade.toLowerCase();
+      if (!ALLOWED_TRADES.map(t => t.toLowerCase()).includes(normalizedTrade)) {
+        return new Response(JSON.stringify({ error: 'Invalid trade specified. Allowed: electrical, plumbing, HVAC' }), {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+    }
+
+    // Sanitize trade for use in prompt (use default if not provided)
+    const safeTrade = trade ? trade.toLowerCase() : 'electrical';
     
     // Get actual current date
     const today = new Date();
@@ -33,7 +76,7 @@ IMPORTANT: Today's date is ${formattedDate}. You MUST use this exact date in the
 
 The log MUST include:
 - Date (use exactly: ${formattedDate}) and location
-- Crew size and trade (${trade || 'electrical or plumbing'})
+- Crew size and trade (${safeTrade})
 - Weather conditions
 - Work completed (3-4 bullet points)
 - Any blockers or delays
@@ -43,7 +86,7 @@ The log MUST include:
 Format it exactly like this:
 Daily Log — ${formattedDate}
 Location: [Address]
-Crew: [Number] [trade] on-site
+Crew: [Number] ${safeTrade} workers on-site
 
 Weather: [Temperature]°F, [conditions]
 
@@ -73,7 +116,7 @@ Keep it realistic, specific, and under 200 words. Use realistic construction ter
         model: 'google/gemini-2.5-flash',
         messages: [
           { role: 'system', content: systemPrompt },
-          { role: 'user', content: `Generate a realistic daily construction log for ${formattedDate}. Make it sound like it was spoken by an experienced ${trade || 'electrician'} foreman. Include specific details that would be important for payment protection and dispute documentation.` }
+          { role: 'user', content: `Generate a realistic daily construction log for ${formattedDate}. Make it sound like it was spoken by an experienced ${safeTrade} foreman. Include specific details that would be important for payment protection and dispute documentation.` }
         ],
       }),
     });
