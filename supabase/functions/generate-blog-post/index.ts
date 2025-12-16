@@ -90,8 +90,8 @@ POST STRUCTURE:
 ## Common Failure Points
 {Bullet list of 3-4 tactical failure points - things that actually go wrong}
 
-## FAQ
-{2-3 additional questions and direct answers}
+## Frequently Asked Questions
+{3 questions with direct answers - do NOT use "See the guide" placeholders}
 
 REQUIREMENTS:
 - Use exact statute numbers and dates
@@ -100,7 +100,111 @@ REQUIREMENTS:
 - Keep language direct - written for foremen, trusted by lawyers
 - No corporate fluff or marketing language
 - Every claim must be actionable
+
+CRITICAL: At the very end of your response, output FAQ_JSON_START on its own line, followed immediately by a strict JSON object with exactly 3 FAQs. Use this exact format:
+FAQ_JSON_START
+{"faqs":[{"q":"Question 1?","a":"Direct answer under 40 words."},{"q":"Question 2?","a":"Direct answer under 40 words."},{"q":"Question 3?","a":"Direct answer under 40 words."}]}
+
+Rules for FAQ JSON:
+- No markdown code fences around the JSON
+- No text after the closing brace
+- Each answer's first sentence must be under 40 words and purely factual
+- FAQs must be derived from the article content and match the jurisdiction
+- Must be valid JSON parsable by JSON.parse()
 `;
+
+// Helper to parse FAQ JSON from model output
+interface ParsedFAQ {
+  q: string;
+  a: string;
+}
+
+interface FAQParseResult {
+  articleContent: string;
+  faqs: ParsedFAQ[];
+}
+
+function parseFAQsFromContent(content: string): FAQParseResult {
+  const delimiter = "FAQ_JSON_START";
+  const parts = content.split(delimiter);
+  
+  if (parts.length < 2) {
+    console.warn("FAQ_JSON_START delimiter not found, using fallback FAQs");
+    return {
+      articleContent: content,
+      faqs: []
+    };
+  }
+
+  const articleContent = parts[0].trim();
+  let jsonPart = parts[1].trim();
+  
+  // Clean up any markdown fences if the model added them despite instructions
+  jsonPart = jsonPart.replace(/^```json?\s*/i, "").replace(/```\s*$/, "").trim();
+  
+  try {
+    const parsed = JSON.parse(jsonPart);
+    
+    // Validate structure
+    if (!parsed.faqs || !Array.isArray(parsed.faqs) || parsed.faqs.length === 0) {
+      console.warn("Invalid FAQ structure, faqs array missing or empty");
+      return { articleContent, faqs: [] };
+    }
+
+    // Validate each FAQ has q and a strings
+    const validFaqs = parsed.faqs.filter((faq: unknown) => {
+      if (typeof faq !== "object" || faq === null) return false;
+      const f = faq as Record<string, unknown>;
+      return typeof f.q === "string" && typeof f.a === "string" && f.q.length > 0 && f.a.length > 0;
+    }).slice(0, 3) as ParsedFAQ[];
+
+    if (validFaqs.length === 0) {
+      console.warn("No valid FAQs found after validation");
+      return { articleContent, faqs: [] };
+    }
+
+    console.log(`Successfully parsed ${validFaqs.length} FAQs`);
+    return { articleContent, faqs: validFaqs };
+  } catch (e) {
+    console.error("Failed to parse FAQ JSON:", e);
+    console.error("Raw JSON part:", jsonPart.substring(0, 500));
+    return { articleContent, faqs: [] };
+  }
+}
+
+// Build FAQPage schema from parsed FAQs
+function buildFAQSchema(faqs: ParsedFAQ[], fallbackTitle: string, fallbackKeywords: string[]) {
+  // If we have parsed FAQs, use them
+  if (faqs.length > 0) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    };
+  }
+  
+  // Fallback to keyword-based FAQs (weak but better than nothing)
+  console.warn("Using fallback keyword-based FAQ schema");
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": fallbackKeywords.slice(0, 2).map(keyword => ({
+      "@type": "Question",
+      "name": `What are the requirements for ${keyword}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `See the detailed guide on ${fallbackTitle} for specific requirements and deadlines.`
+      }
+    }))
+  };
+}
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -166,29 +270,22 @@ Keywords to address naturally: ${postConfig.keywords.join(", ")}`
     }
 
     const data = await response.json();
-    const content = data.choices?.[0]?.message?.content;
+    const rawContent = data.choices?.[0]?.message?.content;
 
-    if (!content) throw new Error("No content generated");
+    if (!rawContent) throw new Error("No content generated");
 
-    // Generate FAQ schema
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": postConfig.keywords.slice(0, 2).map(keyword => ({
-        "@type": "Question",
-        "name": `What are the requirements for ${keyword}?`,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": `See the detailed guide on ${postConfig.title} for specific requirements and deadlines.`
-        }
-      }))
-    };
+    // Parse FAQs from the model output
+    const { articleContent, faqs } = parseFAQsFromContent(rawContent);
+    console.log(`Parsed content: ${articleContent.length} chars, ${faqs.length} FAQs`);
+
+    // Build FAQ schema using parsed FAQs (or fallback)
+    const faqSchema = buildFAQSchema(faqs, postConfig.title, postConfig.keywords);
 
     // Create slug from post ID
     const slug = postConfig.id;
 
     // Extract first paragraph as excerpt
-    const excerptMatch = content.match(/##[^\n]+\n+([^\n]+)/);
+    const excerptMatch = articleContent.match(/##[^\n]+\n+([^\n]+)/);
     const excerpt = excerptMatch ? excerptMatch[1].substring(0, 300) : postConfig.title;
 
     // Insert or update post in database
@@ -198,7 +295,7 @@ Keywords to address naturally: ${postConfig.keywords.join(", ")}`
         slug,
         title: postConfig.title,
         meta_description: `${postConfig.title} - Expert guidance for ${postConfig.targetAudience.toLowerCase()}s on construction compliance and payment protection.`,
-        content,
+        content: articleContent,
         excerpt,
         keywords: postConfig.keywords,
         target_audience: postConfig.targetAudience,
@@ -215,7 +312,7 @@ Keywords to address naturally: ${postConfig.keywords.join(", ")}`
       throw new Error(`Database error: ${error.message}`);
     }
 
-    return new Response(JSON.stringify({ success: true, post }), {
+    return new Response(JSON.stringify({ success: true, post, faqCount: faqs.length }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
