@@ -223,7 +223,7 @@ const GoldenThread = () => {
                 <p className="font-semibold text-foreground">Building Safety Regulator Guidance</p>
                 <p className="text-sm text-muted-foreground">
                   <a target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" href="">
-                    Official guidance from HSE's Building Safety Regulator
+                    ​Official guidance from HSE's Building Safety Regulator
                   </a>
                 </p>
               </div>
