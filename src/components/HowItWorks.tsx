@@ -1,4 +1,5 @@
 import { CTAButton } from "@/components/CTAButton";
+import { MobileTimeline } from "@/components/MobileTimeline";
 import { Mic, FileText, Send, Wifi } from "lucide-react";
 
 const steps = [
@@ -30,8 +31,12 @@ export function HowItWorks() {
       <h2 className="headline-section text-foreground mb-4 text-center">How It Works</h2>
       <p className="body-large text-center mb-12">Built for muddy gloves and long days.</p>
 
-      <div className="grid gap-4 md:gap-6 mb-12">
-        {steps.map((step, index) => (
+      {/* Mobile: Vertical Timeline */}
+      <MobileTimeline steps={steps} />
+
+      {/* Desktop: Grid Layout */}
+      <div className="hidden md:grid gap-4 md:gap-6 mb-12">
+        {steps.map((step) => (
           <div 
             key={step.number}
             className="card-industrial flex items-center gap-4 md:gap-6 transition-all duration-300 hover:border-primary/50"
@@ -47,7 +52,7 @@ export function HowItWorks() {
         ))}
       </div>
 
-      <div className="text-center">
+      <div className="text-center mt-12 md:mt-0">
         <CTAButton />
       </div>
     </section>
