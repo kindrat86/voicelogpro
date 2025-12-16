@@ -18,26 +18,26 @@ const tradeCards = [
 export function BuiltForJobsites() {
   return (
     <section className="section-container">
-      <div className="text-center mb-12">
-        <h2 className="headline-section text-foreground mb-4 font-bold">Built for the trades</h2>
-        <p className="body-large font-medium text-foreground/80">Gloves on. Phone out. One take. Done.</p>
+      <div className="text-center mb-10">
+        <h2 className="headline-section text-foreground mb-3">Built for the trades</h2>
+        <p className="body-large">Gloves on. Phone out. One take. Done.</p>
       </div>
 
       {/* Mobile: Horizontal snap-scroll | Desktop: Grid */}
-      <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 scrollbar-hide md:grid md:grid-cols-2 md:overflow-visible md:pb-0 mb-12">
+      <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-6 scrollbar-hide md:grid md:grid-cols-2 md:overflow-visible md:pb-0 mb-10">
         {tradeCards.map((card) => (
           <div 
             key={card.alt}
             className="min-w-[85vw] snap-center md:min-w-0 card-sunlight group overflow-hidden shrink-0 md:shrink"
           >
-            <div className="aspect-[4/3] overflow-hidden rounded-md mb-4 border border-primary/30">
+            <div className="aspect-[4/3] overflow-hidden mb-4 border-2 border-primary/50" style={{ borderRadius: 'var(--radius)' }}>
               <img 
                 src={card.image} 
                 alt={card.alt} 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            <p className="text-foreground/80 text-lg font-medium">
+            <p className="text-foreground text-lg font-bold">
               "{card.quote}"
             </p>
           </div>
