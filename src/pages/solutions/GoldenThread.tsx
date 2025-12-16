@@ -6,10 +6,8 @@ import { FileText, Building2, Shield, Users, CheckCircle2, Database } from "luci
 import { Button } from "@/components/ui/button";
 import { goldenThreadDocumentationHowTo } from "@/seo/legalSchema";
 import { softwareApplicationSchema, organizationSchema } from "@/seo/softwareSchema";
-
 const GoldenThread = () => {
-  return (
-    <>
+  return <>
       <Helmet>
         <title>Building Safety Act Golden Thread | UK Subcontractor Compliance | Voice Log Pro</title>
         <meta name="description" content="Meet UK Building Safety Act Golden Thread requirements with Voice Log Pro. Create digital daily records for Higher-Risk Buildings and demonstrate BS 8670 competence standards." />
@@ -224,7 +222,7 @@ const GoldenThread = () => {
               <div className="border rounded-lg p-4 bg-muted/20">
                 <p className="font-semibold text-foreground">Building Safety Regulator Guidance</p>
                 <p className="text-sm text-muted-foreground">
-                  <a href="https://www.gov.uk/government/organisations/building-safety-regulator" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  <a target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" href="">
                     Official guidance from HSE's Building Safety Regulator
                   </a>
                 </p>
@@ -261,8 +259,6 @@ const GoldenThread = () => {
 
         <Footer />
       </main>
-    </>
-  );
+    </>;
 };
-
 export default GoldenThread;
