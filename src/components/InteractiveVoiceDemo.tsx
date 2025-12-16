@@ -1,10 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import { Mic, Square, RotateCcw, FileText } from "lucide-react";
+import { Mic, Square, RotateCcw, FileText, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
-type DemoState = "idle" | "recording" | "transcribing" | "done";
+type DemoState = "idle" | "recording" | "transcribing" | "done" | "error";
 
-const SAMPLE_TRANSCRIPT = `Daily Log — December 16, 2024
+// Fallback transcript in case API fails
+const FALLBACK_TRANSCRIPT = `Daily Log — December 16, 2024
 Location: 4200 Commerce Dr, Unit B
 Crew: 4 electricians on-site
 
@@ -49,7 +52,9 @@ export function InteractiveVoiceDemo() {
   const [state, setState] = useState<DemoState>("idle");
   const [timer, setTimer] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
+  const [fullTranscript, setFullTranscript] = useState("");
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const typewriterRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -72,12 +77,44 @@ export function InteractiveVoiceDemo() {
     };
   }, []);
 
+  const generateTranscript = async (): Promise<string> => {
+    try {
+      const trades = ['electrical', 'plumbing', 'HVAC'];
+      const randomTrade = trades[Math.floor(Math.random() * trades.length)];
+
+      const { data, error } = await supabase.functions.invoke('generate-daily-log', {
+        body: { trade: randomTrade }
+      });
+
+      if (error) {
+        console.error('Edge function error:', error);
+        throw new Error(error.message || 'Failed to generate log');
+      }
+
+      if (data?.error) {
+        throw new Error(data.error);
+      }
+
+      if (!data?.transcript) {
+        throw new Error('No transcript received');
+      }
+
+      return data.transcript;
+    } catch (err) {
+      console.error('Error generating transcript:', err);
+      // Return fallback on error
+      return FALLBACK_TRANSCRIPT;
+    }
+  };
+
   const startRecording = () => {
     setState("recording");
     setTimer(0);
     setDisplayedText("");
+    setFullTranscript("");
+    setErrorMessage("");
 
-    // Timer countdown
+    // Timer countdown (simulating recording)
     intervalRef.current = setInterval(() => {
       setTimer((t) => {
         if (t >= 3) {
@@ -90,33 +127,49 @@ export function InteractiveVoiceDemo() {
     }, 1000);
   };
 
-  const startTranscribing = () => {
+  const startTranscribing = async () => {
     setState("transcribing");
 
-    // If reduced motion, show full text immediately
-    if (prefersReducedMotion) {
-      setDisplayedText(SAMPLE_TRANSCRIPT);
-      setTimeout(() => setState("done"), 300);
-      return;
-    }
+    try {
+      // Call LLM to generate realistic transcript
+      const transcript = await generateTranscript();
+      setFullTranscript(transcript);
 
-    // Typewriter effect - word by word for performance
-    const words = SAMPLE_TRANSCRIPT.split(" ");
-    let currentIndex = 0;
-
-    const typeWord = () => {
-      if (currentIndex < words.length) {
-        setDisplayedText((prev) => 
-          prev + (currentIndex === 0 ? "" : " ") + words[currentIndex]
-        );
-        currentIndex++;
-        typewriterRef.current = setTimeout(typeWord, 25);
-      } else {
+      // If reduced motion, show full text immediately
+      if (prefersReducedMotion) {
+        setDisplayedText(transcript);
         setState("done");
+        return;
       }
-    };
 
-    typewriterRef.current = setTimeout(typeWord, 500);
+      // Typewriter effect - word by word for performance
+      const words = transcript.split(" ");
+      let currentIndex = 0;
+
+      const typeWord = () => {
+        if (currentIndex < words.length) {
+          setDisplayedText((prev) => 
+            prev + (currentIndex === 0 ? "" : " ") + words[currentIndex]
+          );
+          currentIndex++;
+          typewriterRef.current = setTimeout(typeWord, 25);
+        } else {
+          setState("done");
+        }
+      };
+
+      typewriterRef.current = setTimeout(typeWord, 300);
+    } catch (err) {
+      console.error('Transcription error:', err);
+      setErrorMessage(err instanceof Error ? err.message : 'Failed to generate log');
+      setState("error");
+      toast.error("Failed to generate log. Using sample data.");
+      
+      // Fall back to sample transcript
+      setFullTranscript(FALLBACK_TRANSCRIPT);
+      setDisplayedText(FALLBACK_TRANSCRIPT);
+      setState("done");
+    }
   };
 
   const reset = () => {
@@ -125,6 +178,8 @@ export function InteractiveVoiceDemo() {
     setState("idle");
     setTimer(0);
     setDisplayedText("");
+    setFullTranscript("");
+    setErrorMessage("");
   };
 
   return (
@@ -168,14 +223,21 @@ export function InteractiveVoiceDemo() {
               {state === "transcribing" && (
                 <div className="flex items-center gap-2 text-primary font-semibold">
                   <FileText className="w-5 h-5 animate-pulse" />
-                  Transcribing...
+                  AI Transcribing...
                 </div>
               )}
 
               {state === "done" && (
                 <div className="flex items-center gap-2 text-success font-semibold">
                   <FileText className="w-5 h-5" />
-                  Log Generated
+                  Log Generated by AI
+                </div>
+              )}
+
+              {state === "error" && (
+                <div className="flex items-center gap-2 text-destructive font-semibold">
+                  <AlertCircle className="w-5 h-5" />
+                  {errorMessage || "Error occurred"}
                 </div>
               )}
             </div>
@@ -202,10 +264,13 @@ export function InteractiveVoiceDemo() {
                 <p className="text-center font-medium">
                   Tap "Record a Test Log" to see how Voice Log Pro works
                 </p>
+                <p className="text-center text-sm mt-2 opacity-75">
+                  AI generates a unique construction log each time
+                </p>
               </div>
             )}
 
-            {(state === "recording" || state === "transcribing" || state === "done") && (
+            {(state === "recording" || state === "transcribing" || state === "done" || state === "error") && (
               <div className="bg-background/50 rounded-lg p-4 h-full overflow-auto border border-border/50">
                 <pre className="whitespace-pre-wrap text-sm text-foreground/90 font-mono leading-relaxed">
                   {displayedText}
@@ -225,7 +290,7 @@ export function InteractiveVoiceDemo() {
                   <FileText className="w-5 h-5 text-destructive" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground text-sm">DailyLog_2024-12-16.pdf</p>
+                  <p className="font-semibold text-foreground text-sm">DailyLog_{new Date().toISOString().split('T')[0]}.pdf</p>
                   <p className="text-xs text-muted-foreground">Ready to export</p>
                 </div>
               </div>
