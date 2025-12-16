@@ -11,12 +11,12 @@ export function WhySitelogExists() {
           
           <p>
             What killed our pay wasn't bad work.
-            <span className="block font-semibold text-foreground">It was late or missing daily reports.</span>
+            <span className="block font-semibold text-foreground">It was missing records leading to denied payment applications and unenforceable mechanics liens.</span>
           </p>
           
           <p>
-            "I'll write it later" always meant it never got done.
-            <span className="block">That led to disputes, delays, and unpaid change orders.</span>
+            In markets like Dallas and Northern Virginia, a missing report means losing your Delay Claim.
+            <span className="block">Payment disputes and lien waivers stack up when you can't prove schedule compression or excusable delay.</span>
           </p>
           
           <p className="text-foreground font-medium text-xl">
@@ -30,7 +30,7 @@ export function WhySitelogExists() {
           </p>
           
           <p>
-            Voice Log Pro turns what you say into clean, court-ready PDFs with timestamps, weather, and safety notes - instantly.
+            Voice Log Pro turns what you say into evidence-grade daily logs with timestamps, weather, and safety notes — documentation that supports your payment disputes and lien rights.
             <span className="block font-semibold text-primary">Even works offline.</span>
           </p>
         </div>
