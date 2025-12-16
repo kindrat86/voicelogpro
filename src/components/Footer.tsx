@@ -34,7 +34,9 @@ export function Footer() {
               <Link to="/blog" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 Blog
               </Link>
-              
+              <Link to="/raken-vs-voice-log-pro" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                Raken vs Voice Log Pro
+              </Link>
             </nav>
           </div>
         </div>
