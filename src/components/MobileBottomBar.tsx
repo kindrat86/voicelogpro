@@ -1,18 +1,21 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Home, Mic, Unlock } from "lucide-react";
 import { vibrate } from "@/lib/utils";
-import { toast } from "sonner";
 
 export const MobileBottomBar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === "/";
   const isPlans = location.pathname === "/crew-plan";
 
   const handleMicClick = () => {
     vibrate();
-    toast.info("Voice recording coming soon!", {
-      description: "Join the Crew Plan to get early access.",
-    });
+    // Navigate to home and scroll to demo section
+    if (location.pathname !== "/") {
+      navigate("/#demo");
+    } else {
+      document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
