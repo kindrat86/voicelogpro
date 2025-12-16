@@ -35,8 +35,10 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogPost />} />
               {/* Solutions pages - entity-specific landing pages */}
               <Route path="/solutions/texas-mechanics-lien-compliance" element={<TexasMechanicsLien />} />
+              <Route path="/solutions/texas-lien-law" element={<TexasMechanicsLien />} />
               <Route path="/solutions/constructive-acceleration-defense" element={<ConstructiveAcceleration />} />
               <Route path="/solutions/building-safety-act-golden-thread" element={<GoldenThread />} />
+              <Route path="/solutions/uk-golden-thread" element={<GoldenThread />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
