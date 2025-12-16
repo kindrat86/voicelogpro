@@ -71,11 +71,14 @@ export default function CrewPlan() {
             <h1 className="headline-section text-foreground mb-2 text-center">
               Get Crew Plan Access
             </h1>
-            <p className="text-2xl font-bold text-primary text-center mb-2">
+            <p className="text-2xl font-bold text-primary text-center mb-4">
               $49/month
             </p>
-            <p className="body-large text-center mb-8">
-              Drop your email. We'll reach out as soon as your beta slot opens.
+            <p className="body-large text-center mb-2">
+              Reserve your spot for early access.
+            </p>
+            <p className="text-sm text-muted-foreground text-center mb-8">
+              No payment required — this is a free waitlist. We'll notify you when your beta slot opens.
             </p>
 
             {status === "success" ? (
