@@ -40,6 +40,9 @@ export function TestimonialsSection() {
                 alt={`${testimonial.name} - ${testimonial.role}`}
                 className="w-16 h-16 md:w-20 md:h-20 object-cover border-2 border-primary"
                 style={{ borderRadius: 'var(--radius)' }}
+                loading="lazy"
+                width={80}
+                height={80}
               />
               {/* Audio button for Jason */}
               {testimonial.hasAudio && (
