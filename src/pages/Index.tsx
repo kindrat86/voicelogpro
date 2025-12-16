@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { HeroSection } from "@/components/HeroSection";
 import { BuiltForJobsites } from "@/components/BuiltForJobsites";
 import { WhySitelogExists } from "@/components/WhySitelogExists";
+import { InteractiveVoiceDemo } from "@/components/InteractiveVoiceDemo";
 import { HowItWorks } from "@/components/HowItWorks";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { ComplianceMatrix } from "@/components/ComplianceMatrix";
@@ -24,6 +25,7 @@ const Index = () => {
         <HeroSection />
         <BuiltForJobsites />
         <WhySitelogExists />
+        <InteractiveVoiceDemo />
         <ComplianceMatrix />
         <HowItWorks />
         <FeaturesSection />

@@ -136,6 +136,20 @@
     }
   }
 
+  /* Waveform animation for voice-first UI */
+  .animate-waveform {
+    animation: waveform 1s ease-in-out infinite;
+  }
+
+  @keyframes waveform {
+    0%, 100% {
+      height: 8px;
+    }
+    50% {
+      height: 32px;
+    }
+  }
+
   .animate-fade-up {
     animation: fade-up 0.6s ease-out forwards;
   }
