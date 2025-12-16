@@ -13,6 +13,7 @@ export default function CrewPlan() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isDuplicate, setIsDuplicate] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,7 +28,7 @@ export default function CrewPlan() {
     }
 
     setStatus("loading");
-
+    setIsDuplicate(false);
     try {
       const { error } = await supabase
         .from("waitlist")
@@ -39,6 +40,7 @@ export default function CrewPlan() {
       if (error) {
         // 23505 = unique constraint violation (email already exists)
         if (error.code === "23505") {
+          setIsDuplicate(true);
           setStatus("success");
           return;
         }
@@ -82,10 +84,12 @@ export default function CrewPlan() {
                   <CheckCircle className="w-8 h-8 text-success" />
                 </div>
                 <p className="text-success font-semibold text-lg mb-2">
-                  You're on the waitlist.
+                  {isDuplicate ? "You're already on the waitlist." : "You're on the waitlist."}
                 </p>
                 <p className="text-muted-foreground">
-                  We'll contact you soon with next steps.
+                  {isDuplicate 
+                    ? "We've got your email. We'll contact you soon with next steps."
+                    : "We'll contact you soon with next steps."}
                   <span className="block">Check your inbox for confirmation.</span>
                 </p>
               </div>
