@@ -10,7 +10,7 @@ const steps = [
   {
     icon: FileText,
     number: "02",
-    text: "SiteLog transcribes and adds timestamps, weather, and safety tags",
+    text: "Voice Log Pro transcribes and adds timestamps, weather, and safety tags",
   },
   {
     icon: Send,
