@@ -62,7 +62,7 @@ export default function CrewPlan() {
               Get Crew Plan Access
             </h1>
             <p className="text-2xl font-bold text-primary text-center mb-2">
-              💸 $49/month
+              $49/month
             </p>
             <p className="body-large text-center mb-8">
               Drop your email. We'll reach out as soon as your beta slot opens.
@@ -86,7 +86,7 @@ export default function CrewPlan() {
                 <div>
                   <Input
                     type="email"
-                    placeholder="📧 Enter your email"
+                    placeholder="Enter your email"
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
