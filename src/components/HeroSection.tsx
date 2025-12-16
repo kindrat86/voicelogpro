@@ -41,7 +41,7 @@ const HeroWaveform = () => {
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-4 py-16 overflow-hidden">
+    <section className="relative min-h-[100dvh] flex flex-col justify-center px-4 py-16 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/30" />
       

@@ -11,8 +11,6 @@ import { CrewPlanSection } from "@/components/CrewPlanSection";
 import { LimitedBetaSection } from "@/components/LimitedBetaSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
-import { MobileBottomBar } from "@/components/MobileBottomBar";
-
 const Index = () => {
   return (
     <>
@@ -21,7 +19,7 @@ const Index = () => {
         <meta name="description" content="Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands. $49/month." />
         <link rel="canonical" href="https://www.voicelogpro.com/" />
       </Helmet>
-      <main className="min-h-screen bg-background pb-20 md:pb-0">
+      <main className="min-h-screen bg-background">
         <HeroSection />
         <BuiltForJobsites />
         <WhySitelogExists />
@@ -35,7 +33,6 @@ const Index = () => {
         <FAQSection />
         <Footer />
       </main>
-      <MobileBottomBar />
     </>
   );
 };
