@@ -103,7 +103,7 @@ export default function RakenComparison() {
         <link rel="canonical" href="https://www.voicelogpro.com/raken-vs-voice-log-pro" />
       </Helmet>
 
-      <main className="min-h-screen bg-background pb-24 md:pb-0">
+      <main className="min-h-screen bg-background">
         {/* Hero */}
         <section className="section-container text-center">
           <h1 className="headline-primary text-foreground mb-6 max-w-4xl mx-auto">
