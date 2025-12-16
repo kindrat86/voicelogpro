@@ -73,7 +73,7 @@ export function FeaturesSection() {
 
         {/* Jurisdiction Selector */}
         <div className="flex flex-col items-center mb-6">
-          <select id="region-select" value={selectedRegion} onChange={e => setSelectedRegion(e.target.value as RegionKey)} className="w-full max-w-xs h-14 md:h-12 px-4 text-base font-bold bg-background border-2 border-primary text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors cursor-pointer uppercase tracking-wide" style={{ borderRadius: 'var(--radius)' }}>
+          <select id="region-select" aria-label="Select jurisdiction" value={selectedRegion} onChange={e => setSelectedRegion(e.target.value as RegionKey)} className="w-full max-w-xs h-14 md:h-12 px-4 text-base font-bold bg-background border-2 border-primary text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors cursor-pointer uppercase tracking-wide" style={{ borderRadius: 'var(--radius)' }}>
             {Object.entries(complianceByRegion).map(([key, value]) => <option key={key} value={key}>
                 {value.label}
               </option>)}
