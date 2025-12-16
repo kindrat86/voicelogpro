@@ -15,6 +15,7 @@ export function HeroSection() {
             src={heroPlumber} 
             alt="Plumber working on construction site" 
             className="w-full h-full object-cover"
+            fetchPriority="high"
           />
         </div>
         <div className="hidden md:block absolute inset-0 w-1/2 right-0 left-auto">
