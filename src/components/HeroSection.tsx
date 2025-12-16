@@ -3,6 +3,8 @@ import { CTAButton } from "@/components/CTAButton";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import heroPlumber from "@/assets/hero-plumber.jpg";
 import heroElectrician from "@/assets/hero-electrician.jpg";
+import beforeMessyNotes from "@/assets/before-messy-notes.jpg";
+import afterCleanPdf from "@/assets/after-clean-pdf.jpg";
 
 // Animated waveform component for voice-first trust signal
 const HeroWaveform = () => {
@@ -93,8 +95,8 @@ export function HeroSection() {
         {/* Before/After Slider */}
         <div className="animate-fade-up" style={{ animationDelay: "0.4s" }}>
           <BeforeAfterSlider
-            beforeImage={heroPlumber}
-            afterImage={heroElectrician}
+            beforeImage={beforeMessyNotes}
+            afterImage={afterCleanPdf}
             beforeLabel="Before: Messy notes"
             afterLabel="After: Clean PDF"
           />
