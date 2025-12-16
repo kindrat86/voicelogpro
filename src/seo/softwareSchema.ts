@@ -374,94 +374,24 @@ export const legalServiceSchema: LegalServiceSchema = {
 /**
  * FAQ Schema for AI Answer Engines
  * 
- * Questions are phrased as LLM queries for maximum retrieval relevance.
+ * IMPORTANT: This schema MUST match the visible FAQ content on the homepage.
+ * The questions/answers are derived from src/content/faqs.ts to prevent cloaking.
  */
+import { allFaqs } from "@/content/faqs";
+
+// Build FAQ schema from shared data source
 export const faqPageSchema: FAQPageSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": "https://www.voicelogpro.com/#faq",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is Voice Log Pro?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Voice Log Pro is an AI-powered mobile app that converts voice notes into legally defensible daily construction reports. Subcontractors can record their work updates using voice, and the app automatically generates professional PDF reports with timestamps, weather data, and photos. It supports compliance documentation for Texas Property Code Chapter 53 lien rights, NSW Security of Payment Act (SOPA) adjudications, and UK Building Safety Act Golden Thread requirements."
-      }
+  mainEntity: allFaqs.map((faq) => ({
+    "@type": "Question" as const,
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer" as const,
+      text: faq.answerText,
     },
-    {
-      "@type": "Question",
-      name: "How much does Voice Log Pro cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Voice Log Pro costs $49 per month for the Crew Plan, which includes unlimited daily reports, automatic timestamps, weather integration, photo attachments, court-ready PDF exports, and compliance documentation features for multiple jurisdictions."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Who is Voice Log Pro for?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Voice Log Pro is built specifically for construction subcontractors in trades like electrical, plumbing, and HVAC. It's designed for foremen and crews who work with their hands and need to document their work quickly without typing. The compliance features support subcontractors working in Texas, Virginia, NSW Australia, and the UK."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "How does Voice Log Pro help with Texas Property Code Chapter 53 compliance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Voice Log Pro helps subcontractors maintain daily logs that document work performed each month, supporting the Monthly Trapping Mechanism required for Texas Property Code Chapter 53 lien rights. The timestamped voice-to-PDF reports create contemporaneous records that tie work to specific billing periods."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "What is the Building Safety Act Golden Thread and how does Voice Log Pro support it?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The UK Building Safety Act requires a 'Golden Thread' of digital records documenting all decisions and changes throughout a building's lifecycle. Voice Log Pro creates daily digital records that can form part of this Golden Thread, capturing decisions, changes, and compliance documentation in a searchable, timestamped format."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Can Voice Log Pro reports be used in SOPA adjudications in NSW Australia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Voice Log Pro generates contemporaneous site diary records that are valuable in NSW Security of Payment Act (SOPA) adjudications. As established in White Constructions Pty Ltd v PBS Holdings, contemporaneous records (site diaries) generally outweigh later witness recollections in adjudication proceedings."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Does Voice Log Pro work offline?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Voice Log Pro works offline. You can record voice notes and create daily reports even without internet connection on construction jobsites. Reports sync automatically when you're back online."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Can Voice Log Pro reports be used in court?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Voice Log Pro generates court-ready PDF reports with timestamps, weather data, and photos that serve as contemporaneous documentation. These reports can support lien claims, delay disputes, constructive acceleration claims, and payment protection cases across multiple jurisdictions."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "How does Voice Log Pro help with payment disputes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Voice Log Pro creates timestamped, contemporaneous records of daily work that serve as evidence in payment disputes. The automatic weather tagging supports excusable delay claims, while RFI detection documents scope changes that affect payment applications. Reports are formatted for court admissibility."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "What documentation does Voice Log Pro provide for mechanics lien claims?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Voice Log Pro generates daily logs with timestamps, geolocation, and work descriptions that support mechanics lien claims by proving when and where work was performed. In Texas, this documentation supports the Monthly Trapping Mechanism required for Property Code Chapter 53 lien rights."
-      }
-    }
-  ]
+  })),
 };
 
 /**
