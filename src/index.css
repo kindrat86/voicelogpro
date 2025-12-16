@@ -230,10 +230,13 @@
 @media (max-width: 768px) {
   p, li, span:not(.sr-only) {
     font-weight: 500;
+    font-size: 17px;
+    line-height: 1.55;
   }
   
+  /* Darker muted text for direct sunlight readability */
   .text-muted-foreground {
-    color: hsl(220 8% 70%);
+    color: hsl(220 15% 78%);
   }
 }
 
