@@ -7,7 +7,7 @@ const testimonials = [
     name: "Jason T.",
     role: "Electrical Foreman",
     image: jasonImage,
-    quote: "Even though it's still in beta, reports that took me 30 minutes now take 30 seconds. It just works. Fewer disputes, faster pay.",
+    quote: "Had a GC try to blame us for a delay. Pulled up the daily log with timestamps and photos — case closed. Voice Log Pro has my back.",
   },
   {
     name: "Maria R.",
