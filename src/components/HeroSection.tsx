@@ -28,7 +28,7 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <p className="text-4xl md:text-5xl mb-4 animate-fade-up">🔥</p>
+        
         
         <h1 className="headline-primary text-foreground mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
           Stop Typing Daily Reports.
