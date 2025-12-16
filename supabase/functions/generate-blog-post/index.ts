@@ -70,6 +70,9 @@ const POST_CONFIGS = [
   }
 ];
 
+// Valid post IDs for validation
+const VALID_POST_IDS = POST_CONFIGS.map(p => p.id);
+
 const CONTENT_TEMPLATE = `
 Generate a complete blog post following this EXACT structure. No introductions, no fluff. Answer first, explanation second.
 
@@ -219,19 +222,98 @@ serve(async (req) => {
   }
 
   try {
-    const { postId } = await req.json();
+    // ===== AUTHENTICATION CHECK =====
+    const authHeader = req.headers.get('Authorization');
+    if (!authHeader) {
+      console.warn('Unauthenticated request to generate-blog-post rejected');
+      return new Response(JSON.stringify({ error: 'Unauthorized: Authentication required' }), {
+        status: 401,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
+    const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY");
+    
+    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+      throw new Error("Supabase credentials not configured");
+    }
+
+    // Verify the user is authenticated
+    const authSupabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      global: { headers: { Authorization: authHeader } }
+    });
+
+    const { data: { user }, error: authError } = await authSupabase.auth.getUser();
+    if (authError || !user) {
+      console.warn('Invalid auth token in generate-blog-post:', authError?.message);
+      return new Response(JSON.stringify({ error: 'Unauthorized: Invalid token' }), {
+        status: 401,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    console.log(`Authenticated request from user: ${user.id}`);
+    // ===== END AUTHENTICATION CHECK =====
+
+    // ===== INPUT VALIDATION =====
+    let requestBody;
+    try {
+      requestBody = await req.json();
+    } catch {
+      return new Response(JSON.stringify({ error: 'Invalid JSON body' }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    const { postId } = requestBody;
+    
+    // Validate postId
+    if (!postId) {
+      return new Response(JSON.stringify({ error: 'postId is required' }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+    
+    if (typeof postId !== 'string') {
+      return new Response(JSON.stringify({ error: 'postId must be a string' }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+    
+    if (postId.length > 100) {
+      return new Response(JSON.stringify({ error: 'postId too long' }), {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+    
+    // Validate against known post IDs
+    if (!VALID_POST_IDS.includes(postId)) {
+      return new Response(JSON.stringify({ 
+        error: 'Invalid postId',
+        validIds: VALID_POST_IDS 
+      }), {
+        status: 404,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+    // ===== END INPUT VALIDATION =====
     
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
     const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
     
     if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
-    if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) throw new Error("Supabase credentials not configured");
+    if (!SUPABASE_SERVICE_ROLE_KEY) throw new Error("SUPABASE_SERVICE_ROLE_KEY not configured");
 
+    // Use service role for database operations
     const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
-    // Find post config
-    const postConfig = POST_CONFIGS.find(p => p.id === postId) || POST_CONFIGS[0];
+    // Find post config (already validated above)
+    const postConfig = POST_CONFIGS.find(p => p.id === postId)!;
 
     // Generate blog content using Lovable AI
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -273,6 +355,20 @@ Keywords to address naturally: ${postConfig.keywords.join(", ")}`
     if (!response.ok) {
       const errorText = await response.text();
       console.error("AI gateway error:", response.status, errorText);
+      
+      if (response.status === 429) {
+        return new Response(JSON.stringify({ error: 'Rate limit exceeded. Please try again later.' }), {
+          status: 429,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      if (response.status === 402) {
+        return new Response(JSON.stringify({ error: 'AI credits exhausted. Please add credits to continue.' }), {
+          status: 402,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      
       throw new Error(`AI gateway error: ${response.status}`);
     }
 
@@ -318,6 +414,8 @@ Keywords to address naturally: ${postConfig.keywords.join(", ")}`
       console.error("Database error:", error);
       throw new Error(`Database error: ${error.message}`);
     }
+
+    console.log(`Blog post generated successfully: ${slug} by user ${user.id}`);
 
     return new Response(JSON.stringify({ success: true, post, faqCount: faqs.length }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
