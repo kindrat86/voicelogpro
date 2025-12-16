@@ -20,6 +20,7 @@ const GoldenThread = lazy(() => import("./pages/solutions/GoldenThread"));
 
 // Comparison landing pages
 const RakenComparison = lazy(() => import("./pages/RakenComparison"));
+const FieldwireComparison = lazy(() => import("./pages/FieldwireComparison"));
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => (
               <Route path="/solutions/uk-golden-thread" element={<GoldenThread />} />
               {/* Comparison landing pages */}
               <Route path="/raken-vs-voice-log-pro" element={<RakenComparison />} />
+              <Route path="/fieldwire-vs-voice-log-pro" element={<FieldwireComparison />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
