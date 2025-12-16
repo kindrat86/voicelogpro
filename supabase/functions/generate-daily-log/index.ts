@@ -18,11 +18,21 @@ serve(async (req) => {
     }
 
     const { trade } = await req.json();
+    
+    // Get actual current date
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
 
     const systemPrompt = `You are a construction field worker generating a realistic daily log entry. Generate a daily log that would be spoken by a subcontractor at the end of their work day.
 
+IMPORTANT: Today's date is ${formattedDate}. You MUST use this exact date in the log.
+
 The log MUST include:
-- Date and location
+- Date (use exactly: ${formattedDate}) and location
 - Crew size and trade (${trade || 'electrical or plumbing'})
 - Weather conditions
 - Work completed (3-4 bullet points)
@@ -30,8 +40,8 @@ The log MUST include:
 - Materials used
 - Safety notes
 
-Format it exactly like this example:
-Daily Log — [Date]
+Format it exactly like this:
+Daily Log — ${formattedDate}
 Location: [Address]
 Crew: [Number] [trade] on-site
 
@@ -63,7 +73,7 @@ Keep it realistic, specific, and under 200 words. Use realistic construction ter
         model: 'google/gemini-2.5-flash',
         messages: [
           { role: 'system', content: systemPrompt },
-          { role: 'user', content: `Generate a realistic daily construction log for today. Make it sound like it was spoken by an experienced ${trade || 'electrician'} foreman. Include specific details that would be important for payment protection and dispute documentation.` }
+          { role: 'user', content: `Generate a realistic daily construction log for ${formattedDate}. Make it sound like it was spoken by an experienced ${trade || 'electrician'} foreman. Include specific details that would be important for payment protection and dispute documentation.` }
         ],
       }),
     });
