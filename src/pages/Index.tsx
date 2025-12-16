@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { HeroSection } from "@/components/HeroSection";
 import { BuiltForJobsites } from "@/components/BuiltForJobsites";
 import { WhySitelogExists } from "@/components/WhySitelogExists";
@@ -10,17 +11,24 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
-      <HeroSection />
-      <BuiltForJobsites />
-      <WhySitelogExists />
-      <HowItWorks />
-      <FeaturesSection />
-      <TestimonialsSection />
-      <CrewPlanSection />
-      <LimitedBetaSection />
-      <Footer />
-    </main>
+    <>
+      <Helmet>
+        <title>Voice Log Pro | Daily Construction Reports from Voice Notes</title>
+        <meta name="description" content="Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands. $49/month." />
+        <link rel="canonical" href="https://www.voicelogpro.com/" />
+      </Helmet>
+      <main className="min-h-screen bg-background">
+        <HeroSection />
+        <BuiltForJobsites />
+        <WhySitelogExists />
+        <HowItWorks />
+        <FeaturesSection />
+        <TestimonialsSection />
+        <CrewPlanSection />
+        <LimitedBetaSection />
+        <Footer />
+      </main>
+    </>
   );
 };
 
