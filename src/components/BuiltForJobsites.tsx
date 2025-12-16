@@ -6,7 +6,7 @@ export function BuiltForJobsites() {
   return (
     <section className="section-container">
       <div className="text-center mb-12">
-        <p className="text-3xl mb-4">🔨</p>
+        
         <h2 className="headline-section text-foreground mb-4">Built for the trades</h2>
         <p className="body-large">Gloves on. Phone out. One take. Done.</p>
       </div>
@@ -22,7 +22,6 @@ export function BuiltForJobsites() {
             />
           </div>
           <p className="text-muted-foreground text-lg">
-            <span className="text-xl mr-2">📸</span>
             "Log work while you work."
           </p>
         </div>
@@ -37,7 +36,6 @@ export function BuiltForJobsites() {
             />
           </div>
           <p className="text-muted-foreground text-lg">
-            <span className="text-xl mr-2">📸</span>
             "Proof of work in seconds."
           </p>
         </div>

@@ -12,7 +12,7 @@ export function CrewPlanSection() {
   return (
     <section className="section-container bg-secondary/30">
       <div className="max-w-xl mx-auto text-center">
-        <p className="text-4xl mb-4">💸</p>
+        
         <h2 className="headline-section text-foreground mb-2">Crew Plan</h2>
         <p className="font-display text-5xl md:text-6xl text-primary mb-8">$49/month</p>
 
