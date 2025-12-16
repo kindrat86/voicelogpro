@@ -1,6 +1,40 @@
+import { useEffect, useState } from "react";
 import { CTAButton } from "@/components/CTAButton";
 import heroPlumber from "@/assets/hero-plumber.jpg";
 import heroElectrician from "@/assets/hero-electrician.jpg";
+
+// Animated waveform component for voice-first trust signal
+const HeroWaveform = () => {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+      setPrefersReducedMotion(mediaQuery.matches);
+    }
+  }, []);
+
+  if (prefersReducedMotion) return null;
+
+  return (
+    <div 
+      className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20"
+      aria-hidden="true"
+    >
+      <div className="flex items-center gap-1">
+        {Array.from({ length: 16 }).map((_, i) => (
+          <div
+            key={i}
+            className="w-1.5 bg-primary rounded-full animate-waveform"
+            style={{
+              animationDelay: `${i * 80}ms`,
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export function HeroSection() {
   return (
@@ -49,7 +83,9 @@ export function HeroSection() {
           <span className="block mt-2">Built for subs who need to move fast — and prove work got done.</span>
         </p>
         
-        <div className="animate-fade-up" style={{ animationDelay: "0.3s" }}>
+        {/* CTA with waveform background */}
+        <div className="relative animate-fade-up" style={{ animationDelay: "0.3s" }}>
+          <HeroWaveform />
           <CTAButton variant="hero" />
         </div>
       </div>
