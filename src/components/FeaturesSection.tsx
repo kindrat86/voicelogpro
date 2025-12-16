@@ -5,32 +5,32 @@ const features = [
   {
     icon: Mic,
     title: "Hands-free voice capture",
-    description: "just talk",
+    description: "contemporaneous records preserved as evidence",
   },
   {
     icon: Cloud,
     title: "Automatic weather tagging",
-    description: "stronger proof for disputes",
+    description: "excusable delay proof for schedule compression claims",
   },
   {
     icon: AlertTriangle,
     title: "RFI detection",
-    description: "catch issues early",
+    description: "dispute prevention and delay claim documentation",
   },
   {
     icon: FileCheck,
     title: "Legally defensible PDFs",
-    description: "court-ready logs",
+    description: "aligned with AIA A401 documentation expectations",
   },
   {
     icon: Share2,
     title: "One-click GC sharing",
-    description: "send reports instantly",
+    description: "supports payment applications and lien rights",
   },
   {
     icon: WifiOff,
     title: "Offline capture",
-    description: "works anywhere",
+    description: "evidence-grade daily logs from anywhere",
   },
 ];
 

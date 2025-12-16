@@ -36,6 +36,14 @@ export function HeroSection() {
           <span className="block text-primary">Just Speak.</span>
         </h1>
         
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4 animate-fade-up" style={{ animationDelay: "0.15s" }}>
+          The AI Voice-to-PDF daily log tool for defending against payment disputes, lien waivers, and schedule compression claims.
+        </p>
+        
+        <p className="sr-only">
+          Construction daily logs for mechanics liens, delay claim documentation, excusable delay proof, and dispute-ready PDF reporting.
+        </p>
+        
         <p className="body-large max-w-2xl mx-auto mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
           Turn glove-on voice notes into job-ready PDFs in 30 seconds.
           <span className="block mt-2">Built for subs who need to move fast — and prove work got done.</span>
