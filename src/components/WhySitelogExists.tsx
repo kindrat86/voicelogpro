@@ -30,7 +30,7 @@ export function WhySitelogExists() {
           </p>
           
           <p>
-            SiteLog turns what you say into clean, court-ready PDFs with timestamps, weather, and safety notes — instantly.
+            Voice Log Pro turns what you say into clean, court-ready PDFs with timestamps, weather, and safety notes - instantly.
             <span className="block font-semibold text-primary">Even works offline.</span>
           </p>
         </div>
