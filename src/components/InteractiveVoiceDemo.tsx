@@ -403,10 +403,9 @@ export function InteractiveVoiceDemo() {
                   variant="jobsite"
                   size="jobsite"
                   onClick={startRecording}
-                  aria-label="Start recording a test daily log"
                   className="gap-2"
                 >
-                  <Mic className="w-5 h-5" />
+                  <Mic className="w-5 h-5" aria-hidden="true" />
                   Record a Test Log
                 </Button>
               )}
