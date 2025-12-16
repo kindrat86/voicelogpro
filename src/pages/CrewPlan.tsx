@@ -73,10 +73,7 @@ export default function CrewPlan() {
                 </p>
                 <div className="bg-secondary/50 rounded-lg p-4 text-sm text-muted-foreground">
                   <p className="font-medium text-foreground mb-1">No charge today.</p>
-                  <p>
-                    This was a Letter of Intent — you're simply telling us you'd pay for Voice Log Pro when it's ready. 
-                    You will not be billed $49/month until you sign up after launch.
-                  </p>
+                  <p>This was a Letter of Intent - you're simply telling us you'd pay for Voice Log Pro when it's ready. You will not be billed $49/month.</p>
                 </div>
               </div> : <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
