@@ -15,16 +15,42 @@ const HeroWaveform = () => {
       setPrefersReducedMotion(mediaQuery.matches);
     }
   }, []);
-  if (prefersReducedMotion) return null;
-  return <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20" aria-hidden="true">
-      <div className="flex items-center gap-1">
-        {Array.from({
-        length: 16
-      }).map((_, i) => <div key={i} className="w-1.5 bg-primary rounded-full animate-waveform" style={{
-        animationDelay: `${i * 80}ms`
-      }} />)}
-      </div>
-    </div>;
+  
+  // Static heights for reduced motion or as base
+  const staticHeights = [8, 16, 12, 24, 20, 32, 28, 36, 32, 28, 36, 24, 20, 16];
+  
+  return (
+    <div className="flex items-center justify-center gap-[3px] h-12" aria-hidden="true">
+      {staticHeights.map((height, i) => (
+        <div 
+          key={i} 
+          className={`w-1.5 bg-primary rounded-sm ${prefersReducedMotion ? '' : 'vl-animate-wave'}`}
+          style={{
+            height: prefersReducedMotion ? `${height}px` : '8px',
+            animationDelay: prefersReducedMotion ? undefined : `${i * 80}ms`
+          }} 
+        />
+      ))}
+    </div>
+  );
+};
+
+// Pulsing mic indicator
+const MicPulse = () => {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+      setPrefersReducedMotion(mediaQuery.matches);
+    }
+  }, []);
+  
+  return (
+    <div className="flex items-center gap-2" aria-hidden="true">
+      <div className={`w-3 h-3 rounded-full bg-primary ${prefersReducedMotion ? '' : 'vl-animate-pulse'}`} />
+      <span className="text-xs text-primary font-bold uppercase tracking-wide">Voice Ready</span>
+    </div>
+  );
 };
 export function HeroSection() {
   return <section className="relative min-h-[100dvh] flex flex-col justify-center px-4 py-12 overflow-hidden">
@@ -68,10 +94,11 @@ export function HeroSection() {
           <span className="block mt-2 font-bold text-foreground">Built for subs who need to move fast — and prove work got done.</span>
         </p>
         
-        {/* CTA with waveform background */}
-        <div className="relative animate-fade-up mb-10" style={{
+        {/* Voice indicator + CTA */}
+        <div className="flex flex-col items-center gap-4 animate-fade-up mb-10" style={{
         animationDelay: "0.3s"
       }}>
+          <MicPulse />
           <HeroWaveform />
           <CTAButton variant="hero" />
         </div>

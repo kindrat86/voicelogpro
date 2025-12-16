@@ -174,16 +174,30 @@
   }
 
   /* Waveform animation for voice-first UI */
-  .animate-waveform {
-    animation: waveform 1s ease-in-out infinite;
+  /* Voice waveform animation */
+  .vl-animate-wave {
+    animation: vl-wave 0.8s ease-in-out infinite;
   }
 
-  @keyframes waveform {
-    0%, 100% {
-      height: 8px;
-    }
-    50% {
-      height: 32px;
+  @keyframes vl-wave {
+    0%, 100% { height: 8px; }
+    50% { height: 32px; }
+  }
+
+  /* Mic pulse animation */
+  .vl-animate-pulse {
+    animation: vl-pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes vl-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.3); opacity: 1; }
+  }
+
+  /* Reduced motion - disable voice animations */
+  @media (prefers-reduced-motion: reduce) {
+    .vl-animate-wave, .vl-animate-pulse {
+      animation: none !important;
     }
   }
 
