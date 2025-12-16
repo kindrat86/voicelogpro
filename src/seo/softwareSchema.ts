@@ -55,6 +55,12 @@ export interface FeatureListSchema {
   itemListElement: FeatureItem[];
 }
 
+export interface DefinedTermSchema {
+  "@type": "DefinedTerm";
+  name: string;
+  inDefinedTermSet?: string;
+}
+
 export interface SoftwareApplicationSchema {
   "@context": "https://schema.org";
   "@type": "SoftwareApplication";
@@ -71,6 +77,8 @@ export interface SoftwareApplicationSchema {
   softwareHelp?: string;
   potentialAction?: SchemaAction[];
   isRelatedTo?: { "@id": string }[];
+  knowsAbout?: DefinedTermSchema[];
+  hasPart?: FeatureListSchema;
 }
 
 export interface OrganizationSchema {
@@ -261,14 +269,63 @@ const potentialActions: SchemaAction[] = [
     description: "Convert voice recording into legally defensible PDF daily construction report with automatic timestamps and weather tagging",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://www.voicelogpro.com/crew-plan",
+      urlTemplate: "https://www.voicelogpro.com/#demo",
       actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
     },
     result: {
       "@type": "DigitalDocument",
       name: "Daily Construction Report PDF"
     }
+  },
+  {
+    "@type": "CreateAction",
+    "@id": "https://www.voicelogpro.com/#action-rfi-documentation",
+    name: "Document Requests for Information (RFIs)",
+    description: "Capture RFI references and responses in daily logs to create audit trail for design clarifications and contractor communications",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://www.voicelogpro.com/crew-plan",
+      actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
+    },
+    result: {
+      "@type": "DigitalDocument",
+      name: "RFI Documentation Record"
+    }
+  },
+  {
+    "@type": "CreateAction",
+    "@id": "https://www.voicelogpro.com/#action-weather-documentation",
+    name: "Capture Weather Conditions for Delay Claims",
+    description: "Automatically tag daily reports with weather data to support excusable delay documentation and schedule impact claims",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://www.voicelogpro.com/#demo",
+      actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
+    },
+    result: {
+      "@type": "DigitalDocument",
+      name: "Weather-Tagged Daily Log"
+    }
   }
+];
+
+/**
+ * Semantic topic mapping for LLM comprehension
+ * Maps what Voice Log Pro "knows about" to structured terms
+ */
+const knowsAboutTerms: DefinedTermSchema[] = [
+  { "@type": "DefinedTerm", name: "Mechanics lien documentation", inDefinedTermSet: "Construction Compliance" },
+  { "@type": "DefinedTerm", name: "Texas Property Code Chapter 53", inDefinedTermSet: "Texas Construction Law" },
+  { "@type": "DefinedTerm", name: "Monthly Trapping Mechanism", inDefinedTermSet: "Texas Lien Rights" },
+  { "@type": "DefinedTerm", name: "Constructive acceleration claims", inDefinedTermSet: "Construction Disputes" },
+  { "@type": "DefinedTerm", name: "Excusable delay documentation", inDefinedTermSet: "Construction Claims" },
+  { "@type": "DefinedTerm", name: "Golden Thread record keeping", inDefinedTermSet: "UK Building Safety Act" },
+  { "@type": "DefinedTerm", name: "Higher-Risk Buildings (HRBs)", inDefinedTermSet: "UK Building Safety Act" },
+  { "@type": "DefinedTerm", name: "BS 8670 competence standards", inDefinedTermSet: "UK Building Standards" },
+  { "@type": "DefinedTerm", name: "Security of Payment Act (SOPA)", inDefinedTermSet: "NSW Construction Law" },
+  { "@type": "DefinedTerm", name: "Contemporaneous site diary records", inDefinedTermSet: "Construction Documentation" },
+  { "@type": "DefinedTerm", name: "Requests for Information (RFI)", inDefinedTermSet: "Construction Administration" },
+  { "@type": "DefinedTerm", name: "Court-ready PDF documentation", inDefinedTermSet: "Legal Evidence" },
 ];
 
 /**
@@ -312,6 +369,8 @@ export const softwareApplicationSchema: SoftwareApplicationSchema = {
   screenshot: "https://www.voicelogpro.com/og-image.png",
   softwareHelp: "https://www.voicelogpro.com/blog",
   potentialAction: potentialActions,
+  knowsAbout: knowsAboutTerms,
+  hasPart: featureListSchema,
   isRelatedTo: [
     { "@id": "https://www.voicelogpro.com/#legal-service" }
   ]
