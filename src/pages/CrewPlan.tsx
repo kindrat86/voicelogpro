@@ -87,14 +87,20 @@ export default function CrewPlan() {
                   <CheckCircle className="w-8 h-8 text-success" />
                 </div>
                 <p className="text-success font-semibold text-lg mb-2">
-                  {isDuplicate ? "You're already on the waitlist." : "You're on the waitlist."}
+                  {isDuplicate ? "You're already on the waitlist." : "Thank you for joining!"}
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground mb-4">
                   {isDuplicate 
-                    ? "We've got your email. We'll contact you soon with next steps."
-                    : "We'll contact you soon with next steps."}
-                  <span className="block">Check your inbox for confirmation.</span>
+                    ? "We've got your email and will reach out when your slot opens."
+                    : "You're on the waitlist. We'll reach out when your beta slot opens."}
                 </p>
+                <div className="bg-secondary/50 rounded-lg p-4 text-sm text-muted-foreground">
+                  <p className="font-medium text-foreground mb-1">No charge today.</p>
+                  <p>
+                    This was a Letter of Intent — you're simply telling us you'd pay for Voice Log Pro when it's ready. 
+                    You will not be billed $49/month until you sign up after launch.
+                  </p>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
