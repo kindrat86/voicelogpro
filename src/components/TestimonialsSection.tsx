@@ -13,7 +13,7 @@ const testimonials = [
     name: "Maria R.",
     role: "Plumbing Lead",
     image: mariaImage,
-    quote: "I was skeptical — beta tools usually break. But SiteLog AI ran smooth. It's saving our crew hours every week.",
+    quote: "I was skeptical — beta tools usually break. But Voice Log Pro ran smooth. It's saving our crew hours every week.",
   },
 ];
 
