@@ -8,13 +8,19 @@ interface ComplianceBadgeProps {
 export function ComplianceBadge({ title, subtitle }: ComplianceBadgeProps) {
   return (
     <div className="relative inline-block">
-      {/* Badge Container */}
-      <div className="relative bg-background border-4 border-primary rounded-lg p-4 md:p-6 shadow-[0_4px_0_0_hsl(var(--primary)/0.5)] overflow-hidden">
+      {/* Badge Container - Stamped industrial look */}
+      <div 
+        className="relative bg-background border-4 border-primary p-4 md:p-5 overflow-hidden"
+        style={{ 
+          borderRadius: 'var(--radius)',
+          boxShadow: '4px 4px 0 0 hsl(25 95% 40%)' 
+        }}
+      >
         {/* Corner Flourishes */}
-        <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary/50" />
-        <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary/50" />
-        <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary/50" />
-        <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary/50" />
+        <div className="absolute top-1 left-1 w-3 h-3 border-t-2 border-l-2 border-primary" />
+        <div className="absolute top-1 right-1 w-3 h-3 border-t-2 border-r-2 border-primary" />
+        <div className="absolute bottom-1 left-1 w-3 h-3 border-b-2 border-l-2 border-primary" />
+        <div className="absolute bottom-1 right-1 w-3 h-3 border-b-2 border-r-2 border-primary" />
 
         {/* Watermark Pattern */}
         <div 
@@ -34,21 +40,21 @@ export function ComplianceBadge({ title, subtitle }: ComplianceBadgeProps) {
         <div className="relative text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <Shield className="w-5 h-5 text-primary" />
-            <span className="text-xs uppercase tracking-wider text-primary font-semibold">
+            <span className="text-xs uppercase tracking-wider text-primary font-bold">
               Protection Badge
             </span>
             <Shield className="w-5 h-5 text-primary" />
           </div>
 
-          <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-2">
+          <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-2 uppercase">
             {title}
           </h3>
 
-          <p className="text-sm text-muted-foreground max-w-xs mx-auto">
+          <p className="text-sm text-muted-foreground max-w-xs mx-auto font-medium">
             {subtitle}
           </p>
 
-          <div className="mt-3 text-xs text-primary/80 font-medium">
+          <div className="mt-3 text-xs text-primary font-bold uppercase tracking-wide">
             Built for subcontractor documentation
           </div>
         </div>

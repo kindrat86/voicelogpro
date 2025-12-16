@@ -27,12 +27,12 @@ const HeroWaveform = () => {
     </div>;
 };
 export function HeroSection() {
-  return <section className="relative min-h-[100dvh] flex flex-col justify-center px-4 py-16 overflow-hidden">
+  return <section className="relative min-h-[100dvh] flex flex-col justify-center px-4 py-12 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/40" />
       
       {/* Background images - mobile stacked, desktop side by side */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-15">
         <div className="absolute inset-0 md:w-1/2 md:left-0">
           <img src={heroPlumber} alt="Plumber working on construction site" className="w-full h-full object-cover" fetchPriority="high" />
         </div>
@@ -44,15 +44,14 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         
-        
-        <h1 className="headline-primary text-foreground mb-6 animate-fade-up" style={{
+        <h1 className="headline-primary text-foreground mb-5 animate-fade-up" style={{
         animationDelay: "0.1s"
       }}>
           Stop Typing Daily Reports.
           <span className="block text-primary">Just Speak.</span>
         </h1>
         
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4 animate-fade-up" style={{
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-3 animate-fade-up font-medium" style={{
         animationDelay: "0.15s"
       }}>
           The AI Voice-to-PDF daily log tool for defending against payment disputes, lien waivers, and schedule compression claims.
@@ -62,15 +61,15 @@ export function HeroSection() {
           Construction daily logs for mechanics liens, delay claim documentation, excusable delay proof, and dispute-ready PDF reporting.
         </p>
         
-        <p className="body-large max-w-2xl mx-auto mb-8 animate-fade-up" style={{
+        <p className="body-large max-w-2xl mx-auto mb-6 animate-fade-up" style={{
         animationDelay: "0.2s"
       }}>
           Turn glove-on voice notes into job-ready PDFs in 30 seconds.
-          <span className="block mt-2">Built for subs who need to move fast — and prove work got done.</span>
+          <span className="block mt-2 font-bold text-foreground">Built for subs who need to move fast — and prove work got done.</span>
         </p>
         
         {/* CTA with waveform background */}
-        <div className="relative animate-fade-up mb-12" style={{
+        <div className="relative animate-fade-up mb-10" style={{
         animationDelay: "0.3s"
       }}>
           <HeroWaveform />
@@ -86,7 +85,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
         
       </div>
     </section>;
