@@ -23,7 +23,9 @@ const Index = () => {
         <HeroSection />
         <BuiltForJobsites />
         <WhySitelogExists />
-        <InteractiveVoiceDemo />
+        <div id="demo">
+          <InteractiveVoiceDemo />
+        </div>
         <ComplianceMatrix />
         <HowItWorks />
         <FeaturesSection />
