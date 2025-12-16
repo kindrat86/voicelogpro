@@ -57,8 +57,12 @@ export default function CrewPlan() {
           </Link>
 
           <div className="card-industrial p-8">
-            
-            
+            <h1 className="headline-section text-foreground mb-2 text-center">
+              Get Crew Plan Access
+            </h1>
+            <p className="text-2xl font-bold text-primary text-center mb-4">
+              $49/month
+            </p>
             
 
             {status === "success" ? <div className="text-center animate-fade-in">
