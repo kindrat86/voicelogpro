@@ -12,6 +12,11 @@ const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+// Solutions pages (entity-specific landing pages for LLM SEO)
+const TexasMechanicsLien = lazy(() => import("./pages/solutions/TexasMechanicsLien"));
+const ConstructiveAcceleration = lazy(() => import("./pages/solutions/ConstructiveAcceleration"));
+const GoldenThread = lazy(() => import("./pages/solutions/GoldenThread"));
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -26,6 +31,10 @@ const App = () => (
             <Route path="/crew-plan" element={<CrewPlan />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            {/* Solutions pages - entity-specific landing pages */}
+            <Route path="/solutions/texas-mechanics-lien-compliance" element={<TexasMechanicsLien />} />
+            <Route path="/solutions/constructive-acceleration-defense" element={<ConstructiveAcceleration />} />
+            <Route path="/solutions/building-safety-act-golden-thread" element={<GoldenThread />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
