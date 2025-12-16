@@ -61,6 +61,9 @@ export default function CrewPlan() {
             <h1 className="headline-section text-foreground mb-2 text-center">
               Get Crew Plan Access
             </h1>
+            <p className="text-2xl font-bold text-primary text-center mb-2">
+              💸 $49/month
+            </p>
             <p className="body-large text-center mb-8">
               Drop your email. We'll reach out as soon as your beta slot opens.
             </p>
