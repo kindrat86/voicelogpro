@@ -1,8 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
+import { JsonLd } from "@/components/JsonLd";
 import { FileText, Building2, Shield, Users, CheckCircle2, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { goldenThreadDocumentationHowTo } from "@/seo/legalSchema";
+import { softwareApplicationSchema, organizationSchema } from "@/seo/softwareSchema";
 
 const GoldenThread = () => {
   return (
@@ -12,6 +15,7 @@ const GoldenThread = () => {
         <meta name="description" content="Meet UK Building Safety Act Golden Thread requirements with Voice Log Pro. Create digital daily records for Higher-Risk Buildings and demonstrate BS 8670 competence standards." />
         <link rel="canonical" href="https://www.voicelogpro.com/solutions/building-safety-act-golden-thread" />
       </Helmet>
+      <JsonLd schema={[softwareApplicationSchema, organizationSchema, goldenThreadDocumentationHowTo]} />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="py-16 px-4 border-b border-border">
