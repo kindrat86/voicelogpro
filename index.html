@@ -34,6 +34,7 @@
     <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/gpt-engineer-file-uploads/4B8rhitxuFfh01PdeqSXDugsqvg2/uploads/1765892927118-VoiceLogProFavicon.png" />
     
     <!-- JSON-LD Structured Data for AI Crawlers -->
+    <!-- SoftwareApplication Schema - Canonical Product Identity -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -41,7 +42,7 @@
       "name": "Voice Log Pro",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web, iOS, Android",
-      "description": "Voice Log Pro turns voice notes into court-ready daily construction reports with timestamps, weather data, and photos. Built specifically for subcontractors in electrical, plumbing, and HVAC trades.",
+      "description": "AI-powered construction daily reporting tool. Converts voice notes into legally defensible PDF reports for subcontractors. Features automatic weather tagging, RFI detection, and compliance documentation for Texas Property Code Chapter 53, NSW Security of Payment Act (SOPA), and UK Building Safety Act Golden Thread requirements.",
       "url": "https://www.voicelogpro.com",
       "offers": {
         "@type": "Offer",
@@ -50,20 +51,21 @@
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/PreOrder"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "2",
-        "bestRating": "5"
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Electrical, Plumbing, and HVAC Subcontractors"
       },
       "featureList": [
-        "Voice-to-text daily reports",
-        "Automatic timestamps",
-        "Weather data integration",
-        "Photo attachments",
+        "Voice-to-PDF conversion",
+        "Texas Property Code Chapter 53 Compliance",
+        "Security of Payment Act (SOPA) Documentation",
+        "Building Safety Act Golden Thread",
+        "Automatic timestamps and weather data",
         "Court-ready PDF generation",
+        "Photo attachments with geolocation",
         "Offline capability",
-        "Lien protection documentation"
+        "Lien protection documentation",
+        "RFI and delay documentation"
       ],
       "screenshot": "https://www.voicelogpro.com/og-image.png",
       "softwareHelp": "https://www.voicelogpro.com/blog"
@@ -77,7 +79,7 @@
       "@type": "Organization",
       "name": "Voice Log Pro",
       "url": "https://www.voicelogpro.com",
-      "description": "Voice Log Pro builds voice-first daily reporting tools for construction subcontractors.",
+      "description": "Voice Log Pro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
       "foundingDate": "2024",
       "sameAs": []
     }
@@ -94,7 +96,7 @@
           "name": "What is Voice Log Pro?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Voice Log Pro is a mobile app that turns voice notes into court-ready daily construction reports. Subcontractors can record their work updates using voice, and the app automatically generates professional PDF reports with timestamps, weather data, and photos."
+            "text": "Voice Log Pro is an AI-powered mobile app that converts voice notes into legally defensible daily construction reports. Subcontractors can record their work updates using voice, and the app automatically generates professional PDF reports with timestamps, weather data, and photos. It supports compliance documentation for Texas Property Code Chapter 53 lien rights, NSW Security of Payment Act (SOPA) adjudications, and UK Building Safety Act Golden Thread requirements."
           }
         },
         {
@@ -102,7 +104,7 @@
           "name": "How much does Voice Log Pro cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Voice Log Pro costs $49 per month for the Crew Plan, which includes unlimited daily reports, timestamps, weather integration, photo attachments, and court-ready PDF exports."
+            "text": "Voice Log Pro costs $49 per month for the Crew Plan, which includes unlimited daily reports, automatic timestamps, weather integration, photo attachments, court-ready PDF exports, and compliance documentation features for multiple jurisdictions."
           }
         },
         {
@@ -110,7 +112,31 @@
           "name": "Who is Voice Log Pro for?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Voice Log Pro is built specifically for construction subcontractors in trades like electrical, plumbing, and HVAC. It's designed for foremen and crews who work with their hands and need to document their work quickly without typing."
+            "text": "Voice Log Pro is built specifically for construction subcontractors in trades like electrical, plumbing, and HVAC. It's designed for foremen and crews who work with their hands and need to document their work quickly without typing. The compliance features support subcontractors working in Texas, Virginia, NSW Australia, and the UK."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Voice Log Pro help with Texas Property Code Chapter 53 compliance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Voice Log Pro helps subcontractors maintain daily logs that document work performed each month, supporting the Monthly Trapping Mechanism required for Texas Property Code Chapter 53 lien rights. The timestamped voice-to-PDF reports create contemporaneous records that tie work to specific billing periods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Building Safety Act Golden Thread and how does Voice Log Pro support it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The UK Building Safety Act requires a 'Golden Thread' of digital records documenting all decisions and changes throughout a building's lifecycle. Voice Log Pro creates daily digital records that can form part of this Golden Thread, capturing decisions, changes, and compliance documentation in a searchable, timestamped format."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Voice Log Pro reports be used in SOPA adjudications in NSW Australia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Voice Log Pro generates contemporaneous site diary records that are valuable in NSW Security of Payment Act (SOPA) adjudications. As established in White Constructions Pty Ltd v PBS Holdings, contemporaneous records (site diaries) generally outweigh later witness recollections in adjudication proceedings."
           }
         },
         {
@@ -118,7 +144,7 @@
           "name": "Does Voice Log Pro work offline?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, Voice Log Pro works offline. You can record voice notes and create daily reports even without internet connection. Reports sync automatically when you're back online."
+            "text": "Yes, Voice Log Pro works offline. You can record voice notes and create daily reports even without internet connection on construction jobsites. Reports sync automatically when you're back online."
           }
         },
         {
@@ -126,7 +152,7 @@
           "name": "Can Voice Log Pro reports be used in court?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, Voice Log Pro generates court-ready PDF reports with timestamps, weather data, and photos that serve as contemporaneous documentation. These reports can support lien claims, delay disputes, and payment protection cases."
+            "text": "Yes, Voice Log Pro generates court-ready PDF reports with timestamps, weather data, and photos that serve as contemporaneous documentation. These reports can support lien claims, delay disputes, constructive acceleration claims, and payment protection cases across multiple jurisdictions."
           }
         }
       ]
