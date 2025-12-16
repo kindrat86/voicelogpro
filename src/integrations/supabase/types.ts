@@ -14,6 +14,57 @@ export type Database = {
   }
   public: {
     Tables: {
+      blog_posts: {
+        Row: {
+          content: string
+          created_at: string
+          excerpt: string | null
+          faq_schema: Json | null
+          id: string
+          jurisdiction: string | null
+          keywords: string[] | null
+          meta_description: string | null
+          published: boolean
+          published_at: string | null
+          slug: string
+          target_audience: string | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          excerpt?: string | null
+          faq_schema?: Json | null
+          id?: string
+          jurisdiction?: string | null
+          keywords?: string[] | null
+          meta_description?: string | null
+          published?: boolean
+          published_at?: string | null
+          slug: string
+          target_audience?: string | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          excerpt?: string | null
+          faq_schema?: Json | null
+          id?: string
+          jurisdiction?: string | null
+          keywords?: string[] | null
+          meta_description?: string | null
+          published?: boolean
+          published_at?: string | null
+          slug?: string
+          target_audience?: string | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       waitlist: {
         Row: {
           created_at: string
