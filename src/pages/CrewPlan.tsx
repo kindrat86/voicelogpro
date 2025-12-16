@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { CheckCircle, Loader2, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
 
 const emailSchema = z.string().email("Please enter a valid email address");
 
@@ -27,11 +28,20 @@ export default function CrewPlan() {
 
     setStatus("loading");
 
-    // TODO: Connect to Supabase backend
-    // For now, simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    setStatus("success");
+    try {
+      const { error } = await supabase
+        .from("waitlist")
+        .upsert(
+          { email: email.toLowerCase().trim(), source: "crew-plan" },
+          { onConflict: "email" }
+        );
+
+      if (error) throw error;
+      setStatus("success");
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage("Something went wrong. Please try again.");
+    }
   };
 
   return (
