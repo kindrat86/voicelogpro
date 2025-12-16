@@ -59,6 +59,48 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- Supabase (via Lovable Cloud)
+
+## SEO & AI Discoverability
+
+This project is optimized for AI crawlers (GPTBot, Claude, Perplexity) and traditional search engines:
+
+### What's Implemented
+
+1. **Comprehensive Meta Tags** - All pages have proper title, description, canonical, and OG tags
+2. **JSON-LD Structured Data** - SoftwareApplication, Organization, and FAQPage schemas in index.html
+3. **Noscript Fallback** - Full marketing content in `<noscript>` tags for crawlers that don't execute JS
+4. **Sitemap** - `public/sitemap.xml` with all marketing routes
+5. **robots.txt** - Explicitly allows AI crawlers (GPTBot, Claude-Web, PerplexityBot, etc.)
+6. **Per-Page SEO** - Blog posts include FAQ schema and article markup
+
+### Route Configuration
+
+Marketing routes are defined in `src/prerender/routes.ts`:
+
+```typescript
+export const PRERENDER_ROUTES = ['/', '/crew-plan', '/blog'];
+```
+
+### Adding New Routes for SEO
+
+1. Add the route to `PRERENDER_ROUTES` in `src/prerender/routes.ts`
+2. Add metadata to `ROUTE_METADATA` in the same file
+3. Add the route to `public/sitemap.xml`
+4. Use `<Helmet>` in the page component for dynamic meta tags
+
+### Limitations
+
+- Dynamic routes (`/blog/:slug`) rely on client-side rendering
+- Full SSG prerendering would require framework migration (Next.js/Astro)
+- The current solution maximizes AI discoverability within Vite SPA constraints
+
+### Verification
+
+Run after build to verify SEO content:
+```sh
+node scripts/verify-prerender.mjs
+```
 
 ## How can I deploy this project?
 
