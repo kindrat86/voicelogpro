@@ -20,7 +20,7 @@ export function WhySitelogExists() {
           </p>
           
           <p className="text-foreground font-medium text-xl">
-            SiteLog AI was built for guys like us.
+            Voice Log Pro was built for guys like us.
             <span className="block">Not office staff. Not big tech. The crew.</span>
           </p>
           
