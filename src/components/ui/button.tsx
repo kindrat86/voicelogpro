@@ -19,6 +19,8 @@ const buttonVariants = cva(
         cta: "bg-primary text-primary-foreground font-display text-lg uppercase tracking-wider hover:scale-105 hover:shadow-lg hover:shadow-primary/30 active:scale-100 transition-all duration-200",
         // Hero variant - larger, more prominent
         hero: "bg-primary text-primary-foreground font-display text-xl md:text-2xl uppercase tracking-wider py-4 px-8 hover:scale-105 hover:shadow-xl hover:shadow-primary/40 active:scale-100 animate-pulse-glow",
+        // Jobsite variant - large tactile targets for glove use
+        jobsite: "bg-primary text-primary-foreground font-display text-lg uppercase tracking-wider rounded-xl shadow-[0_4px_0_0_hsl(var(--primary)/0.7)] active:shadow-none active:translate-y-1 transition-all duration-100",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -26,6 +28,8 @@ const buttonVariants = cva(
         lg: "h-12 rounded-md px-8 text-base",
         xl: "h-14 rounded-lg px-10 text-lg",
         icon: "h-10 w-10",
+        // Jobsite size - minimum 60px for glove-friendly tap targets
+        jobsite: "h-16 min-h-[60px] px-8 rounded-xl text-lg [&_svg]:size-5",
       },
     },
     defaultVariants: {
