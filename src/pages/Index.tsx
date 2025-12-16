@@ -21,12 +21,16 @@ const Index = () => {
       </Helmet>
       <main className="min-h-screen bg-background">
         <HeroSection />
-        <BuiltForJobsites />
+        <div className="hidden md:block">
+          <BuiltForJobsites />
+        </div>
         <WhySitelogExists />
         <div id="demo">
           <InteractiveVoiceDemo />
         </div>
-        <ComplianceMatrix />
+        <div className="hidden md:block">
+          <ComplianceMatrix />
+        </div>
         <HowItWorks />
         <FeaturesSection />
         <TestimonialsSection />
