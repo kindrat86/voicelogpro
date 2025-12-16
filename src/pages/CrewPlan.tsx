@@ -31,12 +31,20 @@ export default function CrewPlan() {
     try {
       const { error } = await supabase
         .from("waitlist")
-        .upsert(
-          { email: email.toLowerCase().trim(), source: "crew-plan" },
-          { onConflict: "email" }
-        );
+        .insert({
+          email: email.toLowerCase().trim(),
+          source: "crew-plan",
+        });
 
-      if (error) throw error;
+      if (error) {
+        // 23505 = unique constraint violation (email already exists)
+        if (error.code === "23505") {
+          setStatus("success");
+          return;
+        }
+        throw error;
+      }
+
       setStatus("success");
     } catch (error) {
       setStatus("error");
