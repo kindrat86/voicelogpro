@@ -80,9 +80,9 @@ export function BeforeAfterSlider({
           <img
             src={afterImage}
             alt="After - clean PDF report"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 h-full object-cover"
             style={{ 
-              width: containerRef.current ? `${containerRef.current.offsetWidth}px` : '100%',
+              width: sliderValue > 0 ? `${10000 / sliderValue}%` : '100%',
               maxWidth: 'none'
             }}
             draggable={false}
