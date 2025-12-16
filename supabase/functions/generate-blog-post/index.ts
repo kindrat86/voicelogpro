@@ -101,6 +101,13 @@ REQUIREMENTS:
 - No corporate fluff or marketing language
 - Every claim must be actionable
 
+CITATIONS REQUIREMENT (MANDATORY):
+- You MUST include at least 3 outbound links to authoritative official sources from .gov or .org domains.
+- Use Markdown link syntax: [Source title](https://...).
+- Preferred sources: official statutes (.gov), standards bodies (.org), court decisions, official guidance documents.
+- Do NOT invent URLs. If you cannot provide an official URL, remove or rephrase the claim.
+- Distribute links throughout the article, not all in one place.
+
 CRITICAL: At the very end of your response, output FAQ_JSON_START on its own line, followed immediately by a strict JSON object with exactly 3 FAQs. Use this exact format:
 FAQ_JSON_START
 {"faqs":[{"q":"Question 1?","a":"Direct answer under 40 words."},{"q":"Question 2?","a":"Direct answer under 40 words."},{"q":"Question 3?","a":"Direct answer under 40 words."}]}
