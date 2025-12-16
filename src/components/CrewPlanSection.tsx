@@ -6,6 +6,7 @@ const features = [
   "Unlimited PDF exports",
   "All jobsite reporting features",
   "Built for teams in the field",
+  "Timestamps & photos for legal protection",
 ];
 
 export function CrewPlanSection() {
