@@ -1,8 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
+import { JsonLd } from "@/components/JsonLd";
 import { Clock, CloudSun, FileWarning, Scale, Server, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { delayDocumentationHowTo } from "@/seo/legalSchema";
+import { softwareApplicationSchema, organizationSchema } from "@/seo/softwareSchema";
 
 const ConstructiveAcceleration = () => {
   return (
@@ -12,6 +15,7 @@ const ConstructiveAcceleration = () => {
         <meta name="description" content="Build evidence for constructive acceleration claims in Virginia Data Center Alley. Document excusable delays, schedule compression, and GC directives with timestamped daily logs." />
         <link rel="canonical" href="https://www.voicelogpro.com/solutions/constructive-acceleration-defense" />
       </Helmet>
+      <JsonLd schema={[softwareApplicationSchema, organizationSchema, delayDocumentationHowTo]} />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="py-16 px-4 border-b border-border">
