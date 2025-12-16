@@ -1,55 +1,60 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, FileText, BookOpen, Users, Unlock } from "lucide-react";
-
-const navItems = [
-  { path: "/", label: "Home", icon: Home },
-  { path: "/solutions/texas-mechanics-lien-compliance", label: "Solutions", icon: FileText },
-  { path: "/blog", label: "Blog", icon: BookOpen },
-  { path: "/crew-plan", label: "Get Started", icon: Unlock, primary: true },
-];
+import { Home, Mic, Unlock } from "lucide-react";
+import { vibrate } from "@/lib/utils";
 
 export const MobileBottomBar = () => {
   const location = useLocation();
+  const isHome = location.pathname === "/";
+  const isPlans = location.pathname === "/crew-plan";
+
+  const handleMicClick = () => {
+    vibrate();
+    // Future: navigate to recording flow
+  };
 
   return (
     <nav 
-      className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/95 backdrop-blur-sm border-t border-border pb-[env(safe-area-inset-bottom)]"
+      className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/95 backdrop-blur-sm border-t border-border"
+      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       aria-label="Mobile navigation"
     >
-      <div className="flex items-stretch justify-around">
-        {navItems.map((item) => {
-          const isActive = location.pathname === item.path || 
-            (item.path !== "/" && location.pathname.startsWith(item.path.split("/").slice(0, 2).join("/")));
-          const Icon = item.icon;
+      <div className="flex items-end justify-around px-4 py-2">
+        {/* Home */}
+        <Link
+          to="/"
+          onClick={vibrate}
+          className={`flex flex-col items-center justify-center min-h-[60px] min-w-[60px] px-2 py-2 transition-colors touch-manipulation ${
+            isHome 
+              ? "text-primary" 
+              : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <Home className="w-6 h-6" />
+          <span className="text-xs font-medium mt-1">Home</span>
+        </Link>
 
-          if (item.primary) {
-            return (
-              <Link
-                key={item.path}
-                to={item.path}
-                className="flex flex-col items-center justify-center min-h-[60px] px-4 py-2 bg-primary text-primary-foreground rounded-t-xl -mt-2 shadow-lg"
-              >
-                <Icon className="w-5 h-5" />
-                <span className="text-xs font-medium mt-1">{item.label}</span>
-              </Link>
-            );
-          }
+        {/* Center Mic FAB */}
+        <button
+          onClick={handleMicClick}
+          className="flex items-center justify-center w-16 h-16 -mt-6 bg-primary text-primary-foreground rounded-full shadow-lg active:scale-95 transition-transform duration-100 touch-manipulation"
+          aria-label="Record voice log"
+        >
+          <Mic className="w-7 h-7" />
+        </button>
 
-          return (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`flex flex-col items-center justify-center min-h-[60px] px-4 py-2 transition-colors ${
-                isActive 
-                  ? "text-primary" 
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              <Icon className="w-5 h-5" />
-              <span className="text-xs font-medium mt-1">{item.label}</span>
-            </Link>
-          );
-        })}
+        {/* Plans */}
+        <Link
+          to="/crew-plan"
+          onClick={vibrate}
+          className={`flex flex-col items-center justify-center min-h-[60px] min-w-[60px] px-2 py-2 transition-colors touch-manipulation ${
+            isPlans 
+              ? "text-primary" 
+              : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <Unlock className="w-6 h-6" />
+          <span className="text-xs font-medium mt-1">Plans</span>
+        </Link>
       </div>
     </nav>
   );
