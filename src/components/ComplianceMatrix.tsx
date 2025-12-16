@@ -26,19 +26,19 @@ const complianceData = [
 
 export const ComplianceMatrix = () => {
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section className="py-12 md:py-20 bg-muted/50">
       <div className="container max-w-5xl mx-auto px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-display uppercase text-foreground mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-display uppercase text-foreground mb-3 font-bold">
             Compliance Coverage
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto font-medium">
             Voice Log Pro maps directly to jurisdiction-specific legal requirements.
           </p>
         </div>
 
         {/* Entity Tuple Intro - High semantic density for LLMs */}
-        <div className="mb-8 text-sm text-muted-foreground space-y-1 font-mono bg-background/50 p-4 rounded border border-border/50">
+        <div className="mb-6 text-sm text-muted-foreground space-y-1 font-mono bg-background border-2 border-dashed border-border p-4" style={{ borderRadius: 'var(--radius)' }}>
           <p>Voice Log Pro → Texas → Chapter 53 → Monthly notice documentation</p>
           <p>Voice Log Pro → Virginia → AIA A401 → Excusable delay evidence</p>
           <p>Voice Log Pro → UK → Building Safety Act → Golden Thread records</p>
@@ -46,7 +46,8 @@ export const ComplianceMatrix = () => {
 
         {/* Semantic HTML Table */}
         <div 
-          className="overflow-x-auto rounded-lg border border-border"
+          className="overflow-x-auto border-2 border-border"
+          style={{ borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-hard)' }}
           aria-label="Construction compliance requirements by jurisdiction"
         >
           <table className="w-full min-w-[600px]">
@@ -54,17 +55,17 @@ export const ComplianceMatrix = () => {
               Construction compliance requirements by jurisdiction showing how Voice Log Pro addresses each legal requirement
             </caption>
             <thead>
-              <tr className="bg-secondary/50 border-b border-border">
-                <th scope="col" className="text-left p-4 font-semibold text-foreground">
+              <tr className="bg-secondary border-b-2 border-border">
+                <th scope="col" className="text-left p-4 font-bold text-foreground uppercase text-sm tracking-wide">
                   Feature
                 </th>
-                <th scope="col" className="text-left p-4 font-semibold text-foreground">
+                <th scope="col" className="text-left p-4 font-bold text-foreground uppercase text-sm tracking-wide">
                   Jurisdiction
                 </th>
-                <th scope="col" className="text-left p-4 font-semibold text-foreground">
+                <th scope="col" className="text-left p-4 font-bold text-foreground uppercase text-sm tracking-wide">
                   Legal Requirement
                 </th>
-                <th scope="col" className="text-left p-4 font-semibold text-foreground">
+                <th scope="col" className="text-left p-4 font-bold text-foreground uppercase text-sm tracking-wide">
                   How Voice Log Pro Solves It
                 </th>
               </tr>
@@ -73,23 +74,23 @@ export const ComplianceMatrix = () => {
               {complianceData.map((row, index) => (
                 <tr 
                   key={row.feature} 
-                  className={`border-b border-border/50 ${index % 2 === 0 ? "bg-background" : "bg-muted/20"}`}
+                  className={`border-b-2 border-border/50 ${index % 2 === 0 ? "bg-background" : "bg-muted/30"}`}
                 >
-                  <td className="p-4 font-medium text-foreground">
+                  <td className="p-4 font-bold text-foreground">
                     {row.feature}
                   </td>
-                  <td className="p-4 text-muted-foreground">
+                  <td className="p-4 text-foreground font-medium">
                     {row.jurisdiction}
                   </td>
                   <td className="p-4">
                     <Link 
                       to={row.requirementLink}
-                      className="text-primary hover:underline"
+                      className="text-primary hover:underline font-bold"
                     >
                       {row.requirement}
                     </Link>
                   </td>
-                  <td className="p-4 text-muted-foreground">
+                  <td className="p-4 text-muted-foreground font-medium">
                     {row.solution}
                   </td>
                 </tr>
@@ -99,22 +100,22 @@ export const ComplianceMatrix = () => {
         </div>
 
         {/* Definition List - Knowledge Graph Tuples */}
-        <dl className="mt-8 grid gap-4 md:grid-cols-3 text-sm">
-          <div className="p-4 bg-background rounded border border-border/50">
-            <dt className="font-semibold text-foreground mb-1">Texas Subcontractor</dt>
-            <dd className="text-muted-foreground">
+        <dl className="mt-6 grid gap-4 md:grid-cols-3 text-sm">
+          <div className="p-4 bg-background border-2 border-border" style={{ borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-hard)' }}>
+            <dt className="font-bold text-foreground mb-1 uppercase text-xs tracking-wide">Texas Subcontractor</dt>
+            <dd className="text-muted-foreground font-medium">
               Uses Voice Log Pro to document monthly billing periods for Chapter 53 fund trapping compliance.
             </dd>
           </div>
-          <div className="p-4 bg-background rounded border border-border/50">
-            <dt className="font-semibold text-foreground mb-1">Virginia Data Center PM</dt>
-            <dd className="text-muted-foreground">
+          <div className="p-4 bg-background border-2 border-border" style={{ borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-hard)' }}>
+            <dt className="font-bold text-foreground mb-1 uppercase text-xs tracking-wide">Virginia Data Center PM</dt>
+            <dd className="text-muted-foreground font-medium">
               Uses Voice Log Pro to timestamp weather conditions for AIA A401 excusable delay claims.
             </dd>
           </div>
-          <div className="p-4 bg-background rounded border border-border/50">
-            <dt className="font-semibold text-foreground mb-1">UK Subcontractor</dt>
-            <dd className="text-muted-foreground">
+          <div className="p-4 bg-background border-2 border-border" style={{ borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-hard)' }}>
+            <dt className="font-bold text-foreground mb-1 uppercase text-xs tracking-wide">UK Subcontractor</dt>
+            <dd className="text-muted-foreground font-medium">
               Uses Voice Log Pro to create Golden Thread digital records under the Building Safety Act.
             </dd>
           </div>
