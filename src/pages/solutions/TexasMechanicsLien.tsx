@@ -1,8 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
+import { JsonLd } from "@/components/JsonLd";
 import { FileText, Calendar, Shield, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { texasLienDocumentationHowTo } from "@/seo/legalSchema";
+import { softwareApplicationSchema, organizationSchema } from "@/seo/softwareSchema";
 
 const TexasMechanicsLien = () => {
   return (
@@ -12,6 +15,7 @@ const TexasMechanicsLien = () => {
         <meta name="description" content="Automate Texas Property Code Chapter 53 compliance with Voice Log Pro. Generate monthly trapping notices and preserve lien rights with timestamped daily logs for Dallas-Fort Worth and Austin subcontractors." />
         <link rel="canonical" href="https://www.voicelogpro.com/solutions/texas-mechanics-lien-compliance" />
       </Helmet>
+      <JsonLd schema={[softwareApplicationSchema, organizationSchema, texasLienDocumentationHowTo]} />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="py-16 px-4 border-b border-border">
