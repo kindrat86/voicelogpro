@@ -70,6 +70,7 @@ export function BeforeAfterSlider({
           alt="Before - messy handwritten notes"
           className="absolute inset-0 w-full h-full object-cover"
           draggable={false}
+          fetchPriority="high"
         />
 
         {/* After Image (Clipped Layer) */}
