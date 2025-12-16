@@ -1,13 +1,29 @@
 import { useState, useEffect, useRef } from "react";
-import { Mic, Square, RotateCcw, FileText, AlertCircle } from "lucide-react";
+import { Mic, Square, RotateCcw, FileText, AlertCircle, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
 
 type DemoState = "idle" | "recording" | "transcribing" | "done" | "error";
 
-// Fallback transcript in case API fails
-const FALLBACK_TRANSCRIPT = `Daily Log — December 16, 2024
+// Get current date formatted
+const getCurrentDateFormatted = () => {
+  const now = new Date();
+  return now.toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+};
+
+const getFilenameDateFormatted = () => {
+  const now = new Date();
+  return now.toISOString().split('T')[0];
+};
+
+// Fallback transcript in case API fails - uses current date
+const getFallbackTranscript = () => `Daily Log — ${getCurrentDateFormatted()}
 Location: 4200 Commerce Dr, Unit B
 Crew: 4 electricians on-site
 
@@ -103,7 +119,7 @@ export function InteractiveVoiceDemo() {
     } catch (err) {
       console.error('Error generating transcript:', err);
       // Return fallback on error
-      return FALLBACK_TRANSCRIPT;
+      return getFallbackTranscript();
     }
   };
 
@@ -166,8 +182,8 @@ export function InteractiveVoiceDemo() {
       toast.error("Failed to generate log. Using sample data.");
       
       // Fall back to sample transcript
-      setFullTranscript(FALLBACK_TRANSCRIPT);
-      setDisplayedText(FALLBACK_TRANSCRIPT);
+      setFullTranscript(getFallbackTranscript());
+      setDisplayedText(getFallbackTranscript());
       setState("done");
     }
   };
@@ -180,6 +196,183 @@ export function InteractiveVoiceDemo() {
     setDisplayedText("");
     setFullTranscript("");
     setErrorMessage("");
+  };
+
+  const generatePDF = async () => {
+    try {
+      const pdfDoc = await PDFDocument.create();
+      const page = pdfDoc.addPage([612, 792]); // Letter size
+      const { width, height } = page.getSize();
+      
+      const helveticaBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+      const helvetica = await pdfDoc.embedFont(StandardFonts.Helvetica);
+      
+      // Header background
+      page.drawRectangle({
+        x: 0,
+        y: height - 80,
+        width: width,
+        height: 80,
+        color: rgb(0.13, 0.13, 0.13),
+      });
+      
+      // Logo/Brand
+      page.drawText("VOICE LOG PRO", {
+        x: 40,
+        y: height - 35,
+        size: 14,
+        font: helveticaBold,
+        color: rgb(0.98, 0.73, 0.01),
+      });
+      
+      // Title
+      page.drawText("Daily Construction Log", {
+        x: 40,
+        y: height - 55,
+        size: 18,
+        font: helveticaBold,
+        color: rgb(1, 1, 1),
+      });
+      
+      // Date badge
+      const dateText = getCurrentDateFormatted();
+      page.drawText(dateText, {
+        x: width - 40 - helvetica.widthOfTextAtSize(dateText, 10),
+        y: height - 50,
+        size: 10,
+        font: helvetica,
+        color: rgb(0.7, 0.7, 0.7),
+      });
+
+      // Content area
+      let yPosition = height - 120;
+      const lineHeight = 16;
+      const leftMargin = 40;
+      const maxWidth = width - 80;
+      
+      // Parse and render content
+      const lines = fullTranscript.split('\n');
+      
+      for (const line of lines) {
+        if (yPosition < 60) {
+          // Add new page if needed
+          const newPage = pdfDoc.addPage([612, 792]);
+          yPosition = height - 60;
+        }
+        
+        // Check if it's a section header
+        const isHeader = line.includes(':') && !line.startsWith('•') && line.split(':')[0].length < 25;
+        const isBullet = line.startsWith('•');
+        
+        if (line.trim() === '') {
+          yPosition -= lineHeight * 0.5;
+          continue;
+        }
+        
+        let textToDraw = line;
+        let font = helvetica;
+        let fontSize = 11;
+        let textColor = rgb(0.2, 0.2, 0.2);
+        let xPos = leftMargin;
+        
+        if (isHeader && !isBullet) {
+          font = helveticaBold;
+          fontSize = 12;
+          textColor = rgb(0.1, 0.1, 0.1);
+          yPosition -= 6;
+        }
+        
+        if (isBullet) {
+          xPos = leftMargin + 15;
+          textToDraw = line.substring(1).trim();
+          page.drawText("•", {
+            x: leftMargin + 5,
+            y: yPosition,
+            size: fontSize,
+            font: helvetica,
+            color: rgb(0.98, 0.73, 0.01),
+          });
+        }
+        
+        // Word wrap
+        const words = textToDraw.split(' ');
+        let currentLine = '';
+        
+        for (const word of words) {
+          const testLine = currentLine ? `${currentLine} ${word}` : word;
+          const testWidth = font.widthOfTextAtSize(testLine, fontSize);
+          
+          if (testWidth > maxWidth - (xPos - leftMargin)) {
+            page.drawText(currentLine, {
+              x: xPos,
+              y: yPosition,
+              size: fontSize,
+              font,
+              color: textColor,
+            });
+            yPosition -= lineHeight;
+            currentLine = word;
+          } else {
+            currentLine = testLine;
+          }
+        }
+        
+        if (currentLine) {
+          page.drawText(currentLine, {
+            x: xPos,
+            y: yPosition,
+            size: fontSize,
+            font,
+            color: textColor,
+          });
+        }
+        
+        yPosition -= lineHeight;
+      }
+      
+      // Footer
+      page.drawRectangle({
+        x: 0,
+        y: 0,
+        width: width,
+        height: 40,
+        color: rgb(0.96, 0.96, 0.96),
+      });
+      
+      page.drawText("Generated by Voice Log Pro — voicelogpro.com", {
+        x: 40,
+        y: 15,
+        size: 8,
+        font: helvetica,
+        color: rgb(0.5, 0.5, 0.5),
+      });
+      
+      const timestamp = new Date().toLocaleString();
+      page.drawText(`Created: ${timestamp}`, {
+        x: width - 40 - helvetica.widthOfTextAtSize(`Created: ${timestamp}`, 8),
+        y: 15,
+        size: 8,
+        font: helvetica,
+        color: rgb(0.5, 0.5, 0.5),
+      });
+      
+      // Save and download
+      const pdfBytes = await pdfDoc.save();
+      const blob = new Blob([pdfBytes as BlobPart], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `DailyLog_${getFilenameDateFormatted()}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      
+      toast.success("PDF downloaded successfully!");
+    } catch (err) {
+      console.error('PDF generation error:', err);
+      toast.error("Failed to generate PDF");
+    }
   };
 
   return (
@@ -295,11 +488,17 @@ export function InteractiveVoiceDemo() {
                   <FileText className="w-5 h-5 text-destructive" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground text-sm">DailyLog_{new Date().toISOString().split('T')[0]}.pdf</p>
+                  <p className="font-semibold text-foreground text-sm">DailyLog_{getFilenameDateFormatted()}.pdf</p>
                   <p className="text-xs text-muted-foreground">Ready to export</p>
                 </div>
               </div>
-              <Button variant="outline" size="sm" disabled className="opacity-50">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                onClick={generatePDF}
+                className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
+                <Download className="w-4 h-4" />
                 Download Sample
               </Button>
             </div>
