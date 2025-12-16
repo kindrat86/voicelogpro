@@ -181,6 +181,80 @@ export const goldenThreadDocumentationHowTo: HowToSchema = {
 };
 
 /**
+ * Texas Mechanics Lien FAQ Data
+ * Used by both visible FAQ section and FAQPage JSON-LD
+ */
+export const texasLienFaqs = [
+  {
+    question: "What is the Monthly Trapping Mechanism under Texas Property Code Chapter 53?",
+    answer: "The Monthly Trapping Mechanism requires subcontractors to serve notices by the 15th day of the second or third month following the month work was performed. This ties work to a specific billing period to preserve lien rights under Texas Property Code Chapter 53."
+  },
+  {
+    question: "How does Voice Log Pro help with Texas lien compliance?",
+    answer: "Voice Log Pro automatically timestamps daily logs with the date work was performed, creating contemporaneous records that tie work to specific billing periods. This supports the Monthly Trapping Mechanism required for Texas Property Code Chapter 53 compliance."
+  },
+  {
+    question: "What documentation do I need for a Texas mechanics lien?",
+    answer: "You need contemporaneous records showing when work was performed, what work was done, and the materials furnished. Voice Log Pro creates timestamped daily logs with photos that serve as evidence for lien claims."
+  },
+  {
+    question: "Can Voice Log Pro reports be used in court for Texas lien claims?",
+    answer: "Yes. Voice Log Pro generates PDF reports with timestamps, weather data, and photos that serve as contemporaneous documentation. These reports support lien claims and payment disputes under Texas Property Code Chapter 53."
+  }
+];
+
+export const texasLienFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${BASE_URL}/solutions/texas-mechanics-lien-compliance#faq`,
+  mainEntity: texasLienFaqs.map(faq => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer
+    }
+  }))
+};
+
+/**
+ * UK Golden Thread FAQ Data
+ * Used by both visible FAQ section and FAQPage JSON-LD
+ */
+export const goldenThreadFaqs = [
+  {
+    question: "What is the Golden Thread under the UK Building Safety Act?",
+    answer: "The Golden Thread is a digital record of building information required under the UK Building Safety Act 2022. It must contain accurate, up-to-date information about the design, construction, and maintenance of Higher-Risk Buildings throughout their lifecycle."
+  },
+  {
+    question: "What are Higher-Risk Buildings (HRBs)?",
+    answer: "Higher-Risk Buildings are buildings at least 18 metres in height or with at least 7 storeys, containing at least 2 residential units. These buildings are subject to enhanced regulatory requirements under the Building Safety Act, including Golden Thread compliance."
+  },
+  {
+    question: "What is BS 8670 and how does Voice Log Pro help?",
+    answer: "BS 8670 establishes competence requirements for individuals working on Higher-Risk Buildings. Voice Log Pro creates daily logs documenting safe work practices and quality checks, which support demonstrating BS 8670 competence."
+  },
+  {
+    question: "How does Voice Log Pro support Golden Thread compliance?",
+    answer: "Voice Log Pro creates timestamped digital daily records that can form part of the Golden Thread. Voice logs capture decisions, changes, and compliance documentation in a searchable, auditable format suitable for Higher-Risk Building projects."
+  }
+];
+
+export const goldenThreadFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${BASE_URL}/solutions/building-safety-act-golden-thread#faq`,
+  mainEntity: goldenThreadFaqs.map(faq => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer
+    }
+  }))
+};
+
+/**
  * Helper to serialize schema for injection
  */
 export function serializeLegalSchema(schema: object): string {

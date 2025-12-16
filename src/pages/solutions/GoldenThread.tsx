@@ -4,16 +4,24 @@ import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { FileText, Building2, Shield, Users, CheckCircle2, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { goldenThreadDocumentationHowTo } from "@/seo/legalSchema";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { goldenThreadDocumentationHowTo, goldenThreadFaqSchema, goldenThreadFaqs } from "@/seo/legalSchema";
 import { softwareApplicationSchema, organizationSchema } from "@/seo/softwareSchema";
+
 const GoldenThread = () => {
-  return <>
+  return (
+    <>
       <Helmet>
         <title>Building Safety Act Golden Thread | UK Subcontractor Compliance | Voice Log Pro</title>
         <meta name="description" content="Meet UK Building Safety Act Golden Thread requirements with Voice Log Pro. Create digital daily records for Higher-Risk Buildings and demonstrate BS 8670 competence standards." />
         <link rel="canonical" href="https://www.voicelogpro.com/solutions/building-safety-act-golden-thread" />
       </Helmet>
-      <JsonLd schema={[softwareApplicationSchema, organizationSchema, goldenThreadDocumentationHowTo]} />
+      <JsonLd schema={[softwareApplicationSchema, organizationSchema, goldenThreadDocumentationHowTo, goldenThreadFaqSchema]} />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="py-16 px-4 border-b border-border">
@@ -229,6 +237,27 @@ const GoldenThread = () => {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-16 px-4" id="faq">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-2xl font-bold text-foreground mb-8">
+              Frequently Asked Questions
+            </h2>
+            <Accordion type="single" collapsible className="bg-background rounded-lg border border-border/50">
+              {goldenThreadFaqs.map((faq, index) => (
+                <AccordionItem key={index} value={`faq-${index}`} className="border-border/50">
+                  <AccordionTrigger className="text-left text-base font-medium text-foreground hover:no-underline py-5 px-6">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-base pb-5 px-6">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-16 px-4 bg-muted/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -257,6 +286,8 @@ const GoldenThread = () => {
 
         <Footer />
       </main>
-    </>;
+    </>
+  );
 };
+
 export default GoldenThread;
