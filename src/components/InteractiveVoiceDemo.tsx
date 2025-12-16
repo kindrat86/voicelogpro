@@ -3,7 +3,7 @@ import { Mic, Square, RotateCcw, FileText, AlertCircle, Download } from "lucide-
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
+// pdf-lib is dynamically imported in generatePDF to reduce initial bundle size
 
 type DemoState = "idle" | "recording" | "transcribing" | "done" | "error";
 
@@ -200,6 +200,9 @@ export function InteractiveVoiceDemo() {
 
   const generatePDF = async () => {
     try {
+      // Dynamically import pdf-lib to reduce initial bundle size
+      const { PDFDocument, rgb, StandardFonts } = await import("pdf-lib");
+      
       const pdfDoc = await PDFDocument.create();
       const page = pdfDoc.addPage([612, 792]); // Letter size
       const { width, height } = page.getSize();
