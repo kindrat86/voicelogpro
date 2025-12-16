@@ -60,14 +60,41 @@ export default function CrewPlan() {
             {status !== "success" && (
               <>
                 <h1 className="headline-section text-foreground mb-2 text-center">
-                  Get Crew Plan Access
+                  Crew Plan
                 </h1>
-                <p className="text-2xl font-bold text-primary text-center mb-4">
+                <p className="text-3xl md:text-4xl font-bold text-primary text-center mb-6">
                   $49/month
                 </p>
+                
+                {/* Features List */}
+                <div className="bg-secondary/30 border border-border rounded-lg p-5 mb-6">
+                  <p className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wide">Includes:</p>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-muted-foreground">Unlimited voice logs</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-muted-foreground">Unlimited PDF exports</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-muted-foreground">All jobsite reporting features</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-muted-foreground">Built for teams in the field</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-muted-foreground">Timestamps & photos for legal protection</span>
+                    </li>
+                  </ul>
+                </div>
               </>
             )}
-            
+
 
             {status === "success" ? <div className="text-center animate-fade-in">
                 <div className="w-16 h-16 bg-success/20 rounded-full flex items-center justify-center mx-auto mb-4">
