@@ -1,10 +1,8 @@
 import { CTAButton } from "@/components/CTAButton";
-
 export function WhySitelogExists() {
-  return (
-    <section className="section-container bg-secondary/30">
+  return <section className="section-container bg-secondary/30">
       <div className="max-w-3xl mx-auto">
-        <h2 className="headline-section text-foreground mb-8 text-center">Why SiteLog AI Exists</h2>
+        <h2 className="headline-section text-foreground mb-8 text-center">Why Voice Log Pro Exists</h2>
         
         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
           <p>
@@ -41,6 +39,5 @@ export function WhySitelogExists() {
           <CTAButton />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
