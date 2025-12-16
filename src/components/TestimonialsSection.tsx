@@ -24,38 +24,39 @@ const testimonials = [
 export function TestimonialsSection() {
   return (
     <section className="section-container">
-      <h2 className="headline-section text-foreground mb-12 text-center">
+      <h2 className="headline-section text-foreground mb-10 text-center">
         What Crews Are Saying
       </h2>
 
-      <div className="space-y-6 max-w-2xl mx-auto mb-12">
+      <div className="space-y-5 max-w-2xl mx-auto mb-10">
         {testimonials.map((testimonial) => (
           <div 
             key={testimonial.name}
-            className="card-industrial flex gap-4 md:gap-6"
+            className="card-industrial flex gap-4 md:gap-5"
           >
             <div className="flex-shrink-0">
               <img 
                 src={testimonial.image} 
                 alt={`${testimonial.name} - ${testimonial.role}`}
-                className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-primary/30"
+                className="w-16 h-16 md:w-20 md:h-20 object-cover border-2 border-primary"
+                style={{ borderRadius: 'var(--radius)' }}
               />
               {/* Audio button for Jason */}
               {testimonial.hasAudio && (
                 <AudioTestimonialButton
                   name={testimonial.name.split(" ")[0]}
                   duration={testimonial.audioDuration}
-                  audioSrc={undefined} // Will show "Audio coming soon" until asset is added
+                  audioSrc={undefined}
                 />
               )}
             </div>
             <div className="flex-1">
-              <blockquote className="text-foreground text-base md:text-lg mb-3 leading-relaxed">
+              <blockquote className="text-foreground text-base md:text-lg mb-3 leading-relaxed font-medium">
                 "{testimonial.quote}"
               </blockquote>
               <div>
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-muted-foreground text-sm">{testimonial.role}</p>
+                <p className="font-bold text-foreground">{testimonial.name}</p>
+                <p className="text-muted-foreground text-sm font-medium">{testimonial.role}</p>
               </div>
             </div>
           </div>

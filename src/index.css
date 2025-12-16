@@ -7,59 +7,65 @@
 @layer base {
   :root {
     /* Industrial Construction Palette */
-    --background: 220 10% 10%;
-    --foreground: 40 10% 95%;
+    --background: 220 10% 8%;
+    --foreground: 40 10% 96%;
 
-    --card: 220 10% 14%;
-    --card-foreground: 40 10% 95%;
+    --card: 220 10% 12%;
+    --card-foreground: 40 10% 96%;
 
-    --popover: 220 10% 14%;
-    --popover-foreground: 40 10% 95%;
+    --popover: 220 10% 12%;
+    --popover-foreground: 40 10% 96%;
 
     /* Safety Orange - High Vis Primary */
-    --primary: 25 100% 50%;
+    --primary: 25 95% 53%;
     --primary-foreground: 220 10% 5%;
 
-    /* Concrete Gray Secondary */
-    --secondary: 220 8% 20%;
-    --secondary-foreground: 40 10% 90%;
+    /* Industrial Slate Secondary */
+    --secondary: 220 8% 18%;
+    --secondary-foreground: 40 10% 92%;
 
-    --muted: 220 8% 18%;
-    --muted-foreground: 220 8% 60%;
+    --muted: 220 8% 16%;
+    --muted-foreground: 220 8% 72%;
 
     /* Steel Blue Accent */
     --accent: 210 50% 45%;
-    --accent-foreground: 40 10% 95%;
+    --accent-foreground: 40 10% 96%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 40 10% 95%;
+    --destructive-foreground: 40 10% 96%;
 
-    --border: 220 10% 22%;
-    --input: 220 10% 18%;
-    --ring: 25 100% 50%;
+    --border: 220 10% 28%;
+    --input: 220 10% 16%;
+    --ring: 25 95% 53%;
 
-    --radius: 0.5rem;
+    /* Industrial: Sharp corners */
+    --radius: 0.25rem;
+
+    /* Hard shadows - stamped look */
+    --shadow-hard: 4px 4px 0 0 hsl(220 10% 5%);
+    --shadow-hard-primary: 4px 4px 0 0 hsl(25 95% 40%);
+    --shadow-hard-lg: 6px 6px 0 0 hsl(220 10% 5%);
 
     /* Custom tokens */
-    --glow-primary: 0 0 40px hsl(25 100% 50% / 0.3);
-    --glow-strong: 0 0 60px hsl(25 100% 50% / 0.5);
+    --glow-primary: 0 0 40px hsl(25 95% 53% / 0.3);
+    --glow-strong: 0 0 60px hsl(25 95% 53% / 0.5);
     
     /* Success state */
     --success: 142 70% 45%;
-    --success-foreground: 40 10% 95%;
+    --success-foreground: 40 10% 96%;
 
     /* Warning/caution yellow */
     --caution: 45 100% 50%;
-    --caution-foreground: 220 10% 10%;
+    --caution-foreground: 220 10% 8%;
 
-    --sidebar-background: 220 10% 10%;
-    --sidebar-foreground: 40 10% 95%;
-    --sidebar-primary: 25 100% 50%;
+    --sidebar-background: 220 10% 8%;
+    --sidebar-foreground: 40 10% 96%;
+    --sidebar-primary: 25 95% 53%;
     --sidebar-primary-foreground: 220 10% 5%;
-    --sidebar-accent: 220 8% 20%;
-    --sidebar-accent-foreground: 40 10% 95%;
-    --sidebar-border: 220 10% 22%;
-    --sidebar-ring: 25 100% 50%;
+    --sidebar-accent: 220 8% 18%;
+    --sidebar-accent-foreground: 40 10% 96%;
+    --sidebar-border: 220 10% 28%;
+    --sidebar-ring: 25 95% 53%;
   }
 }
 
@@ -79,34 +85,51 @@
 
 @layer components {
   .section-container {
-    @apply max-w-4xl mx-auto px-4 py-16 md:py-24;
+    @apply max-w-4xl mx-auto px-4 py-12 md:py-20;
   }
 
   .headline-primary {
-    @apply text-4xl md:text-6xl font-display uppercase leading-none tracking-tight;
+    @apply text-4xl md:text-6xl font-display uppercase leading-none tracking-tight font-bold;
   }
 
   .headline-section {
-    @apply text-3xl md:text-5xl font-display uppercase leading-none;
+    @apply text-3xl md:text-5xl font-display uppercase leading-none font-bold;
   }
 
   .body-large {
-    @apply text-lg md:text-xl text-muted-foreground leading-relaxed;
+    @apply text-lg md:text-xl text-muted-foreground leading-relaxed font-medium;
   }
 
+  /* Industrial card - stamped/bolted feel */
   .card-industrial {
-    @apply bg-card border border-border rounded-lg p-6 shadow-lg;
+    @apply bg-card border-2 border-border p-5;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-hard);
+  }
+
+  .card-industrial:hover {
+    box-shadow: 2px 2px 0 0 hsl(220 10% 5%);
+    transform: translate(2px, 2px);
   }
 
   /* Sunlight-safe high-contrast card for outdoor/jobsite visibility */
   .card-sunlight {
-    @apply bg-card border-2 border-primary rounded-lg p-6;
-    box-shadow: 0 6px 0 0 hsl(var(--primary) / 0.4);
+    @apply bg-card border-2 border-primary p-5;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-hard-primary);
   }
 
   .card-sunlight:hover {
-    box-shadow: 0 4px 0 0 hsl(var(--primary) / 0.5);
-    transform: translateY(2px);
+    box-shadow: 2px 2px 0 0 hsl(25 95% 40%);
+    transform: translate(2px, 2px);
+  }
+
+  /* Stamped badge look */
+  .badge-stamped {
+    @apply inline-flex items-center px-3 py-1 text-sm font-bold uppercase tracking-wide;
+    @apply bg-primary text-primary-foreground border-2 border-primary-foreground/20;
+    border-radius: var(--radius);
+    box-shadow: 2px 2px 0 0 hsl(220 10% 5%);
   }
 
   .glow-box {
@@ -119,6 +142,11 @@
 
   .text-gradient-fire {
     @apply bg-gradient-to-r from-primary via-caution to-primary bg-clip-text text-transparent;
+  }
+
+  /* Industrial divider */
+  .divider-industrial {
+    @apply border-t-2 border-dashed border-border my-6;
   }
 }
 
