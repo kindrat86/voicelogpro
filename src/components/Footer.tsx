@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-
 export function Footer() {
-  return (
-    <footer className="border-t border-border py-12 px-4">
+  return <footer className="border-t border-border py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
@@ -36,9 +34,7 @@ export function Footer() {
               <Link to="/blog" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 Blog
               </Link>
-              <Link to="/crew-plan" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                Crew Plan
-              </Link>
+              
             </nav>
           </div>
         </div>
@@ -49,6 +45,5 @@ export function Footer() {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
