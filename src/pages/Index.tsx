@@ -4,6 +4,7 @@ import { BuiltForJobsites } from "@/components/BuiltForJobsites";
 import { WhySitelogExists } from "@/components/WhySitelogExists";
 import { HowItWorks } from "@/components/HowItWorks";
 import { FeaturesSection } from "@/components/FeaturesSection";
+import { ComplianceMatrix } from "@/components/ComplianceMatrix";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { CrewPlanSection } from "@/components/CrewPlanSection";
 import { LimitedBetaSection } from "@/components/LimitedBetaSection";
@@ -22,6 +23,7 @@ const Index = () => {
         <HeroSection />
         <BuiltForJobsites />
         <WhySitelogExists />
+        <ComplianceMatrix />
         <HowItWorks />
         <FeaturesSection />
         <TestimonialsSection />
