@@ -98,6 +98,17 @@
     @apply bg-card border border-border rounded-lg p-6 shadow-lg;
   }
 
+  /* Sunlight-safe high-contrast card for outdoor/jobsite visibility */
+  .card-sunlight {
+    @apply bg-card border-2 border-primary rounded-lg p-6;
+    box-shadow: 0 6px 0 0 hsl(var(--primary) / 0.4);
+  }
+
+  .card-sunlight:hover {
+    box-shadow: 0 4px 0 0 hsl(var(--primary) / 0.5);
+    transform: translateY(2px);
+  }
+
   .glow-box {
     box-shadow: var(--glow-primary);
   }
