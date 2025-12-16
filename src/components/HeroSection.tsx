@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { CTAButton } from "@/components/CTAButton";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import heroPlumber from "@/assets/hero-plumber.jpg";
 import heroElectrician from "@/assets/hero-electrician.jpg";
 
@@ -84,9 +85,19 @@ export function HeroSection() {
         </p>
         
         {/* CTA with waveform background */}
-        <div className="relative animate-fade-up" style={{ animationDelay: "0.3s" }}>
+        <div className="relative animate-fade-up mb-12" style={{ animationDelay: "0.3s" }}>
           <HeroWaveform />
           <CTAButton variant="hero" />
+        </div>
+
+        {/* Before/After Slider */}
+        <div className="animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <BeforeAfterSlider
+            beforeImage={heroPlumber}
+            afterImage={heroElectrician}
+            beforeLabel="Before: Messy notes"
+            afterLabel="After: Clean PDF"
+          />
         </div>
       </div>
 
