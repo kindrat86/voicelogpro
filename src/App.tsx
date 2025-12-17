@@ -20,6 +20,7 @@ const GoldenThread = lazy(() => import("./pages/solutions/GoldenThread"));
 const FightUnfairDeductions = lazy(() => import("./pages/solutions/FightUnfairDeductions"));
 const PhasePaymentDisputes = lazy(() => import("./pages/solutions/PhasePaymentDisputes"));
 const ElectricalInventoryTracking = lazy(() => import("./pages/solutions/ElectricalInventoryTracking"));
+const SmallElectricalBusinessSoftware = lazy(() => import("./pages/solutions/SmallElectricalBusinessSoftware"));
 
 // Comparison landing pages
 const RakenComparison = lazy(() => import("./pages/RakenComparison"));
@@ -49,6 +50,7 @@ const App = () => (
               <Route path="/solutions/fight-unfair-gc-deductions" element={<FightUnfairDeductions />} />
               <Route path="/solutions/phase-payment-disputes" element={<PhasePaymentDisputes />} />
               <Route path="/solutions/electrical-inventory-tracking" element={<ElectricalInventoryTracking />} />
+              <Route path="/solutions/small-electrical-business-software" element={<SmallElectricalBusinessSoftware />} />
               {/* Comparison landing pages */}
               <Route path="/raken-vs-voice-log-pro" element={<RakenComparison />} />
               <Route path="/fieldwire-vs-voice-log-pro" element={<FieldwireComparison />} />
