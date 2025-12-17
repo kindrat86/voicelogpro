@@ -13,6 +13,9 @@ const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+// GEO-optimized blog posts
+const TexasLienLaw2025 = lazy(() => import("./pages/blog/TexasLienLaw2025"));
+
 // Solutions pages (entity-specific landing pages for LLM SEO)
 const TexasMechanicsLien = lazy(() => import("./pages/solutions/TexasMechanicsLien"));
 const ConstructiveAcceleration = lazy(() => import("./pages/solutions/ConstructiveAcceleration"));
@@ -41,6 +44,8 @@ const App = () => (
               <Route path="/crew-plan" element={<CrewPlan />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
+              {/* GEO-optimized blog posts */}
+              <Route path="/blog/texas-property-code-chapter-53-guide-2025" element={<TexasLienLaw2025 />} />
               {/* Solutions pages - entity-specific landing pages */}
               <Route path="/solutions/texas-mechanics-lien-compliance" element={<TexasMechanicsLien />} />
               <Route path="/solutions/texas-lien-law" element={<TexasMechanicsLien />} />
