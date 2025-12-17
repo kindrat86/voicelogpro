@@ -29,6 +29,9 @@ const SmallElectricalBusinessSoftware = lazy(() => import("./pages/solutions/Sma
 const RakenComparison = lazy(() => import("./pages/RakenComparison"));
 const FieldwireComparison = lazy(() => import("./pages/FieldwireComparison"));
 
+// Standalone conversion landing page
+const BetaSignup = lazy(() => import("./pages/BetaSignup"));
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -59,6 +62,9 @@ const App = () => (
               {/* Comparison landing pages */}
               <Route path="/raken-vs-voice-log-pro" element={<RakenComparison />} />
               <Route path="/fieldwire-vs-voice-log-pro" element={<FieldwireComparison />} />
+              {/* Standalone conversion landing page */}
+              <Route path="/beta" element={<BetaSignup />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
