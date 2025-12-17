@@ -13,7 +13,8 @@ export function Footer() {
           
           {/* Solutions */}
           <div>
-            <p className="font-semibold text-foreground mb-3 text-sm">Solutions</p>
+            <p className="font-semibold text-foreground mb-3 text-sm">Jurisdiction-Specific Compliance
+          </p>
             <nav className="flex flex-col gap-2">
               <Link to="/solutions/texas-mechanics-lien-compliance" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 Texas Chapter 53 Compliance
