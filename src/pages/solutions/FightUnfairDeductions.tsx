@@ -2,13 +2,9 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
-import { Shield, FileText, AlertTriangle, CheckCircle2, Quote, DollarSign, Mic } from "lucide-react";
+import { Shield, AlertTriangle, CheckCircle2, Quote, DollarSign, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { softwareApplicationSchema, organizationSchema } from "@/seo/softwareSchema";
-import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { Input } from "@/components/ui/input";
-import { toast } from "sonner";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -50,43 +46,12 @@ const faqSchema = {
 };
 
 const FightUnfairDeductions = () => {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleTemplateDownload = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email || !email.includes("@")) {
-      toast.error("Please enter a valid email address");
-      return;
-    }
-
-    setIsSubmitting(true);
-    try {
-      const { error } = await supabase
-        .from("waitlist")
-        .upsert(
-          { email, source: "deduction-template" },
-          { onConflict: "email" }
-        );
-
-      if (error) throw error;
-      
-      setIsSubmitted(true);
-      toast.success("Check your email for the template download link");
-    } catch (error) {
-      console.error("Error:", error);
-      toast.error("Something went wrong. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <>
       <Helmet>
         <title>Fight Unfair GC Deductions | Deductive Change Order Defense | Voice Log Pro</title>
-        <meta name="description" content="Stop letting GCs slash your invoice with unfair credits. Dispute deductive change orders and supervision fees with timestamped jobsite documentation. Free response template included." />
+        <meta name="description" content="Stop letting GCs slash your invoice with unfair credits. Dispute deductive change orders and supervision fees with timestamped jobsite documentation." />
         <link rel="canonical" href="https://www.voicelogpro.com/solutions/fight-unfair-gc-deductions" />
         <meta name="keywords" content="deductive change order, construction credit dispute, GC supervision fee, unfair back charges, subcontractor documentation" />
       </Helmet>
@@ -112,20 +77,12 @@ const FightUnfairDeductions = () => {
             <p className="text-muted-foreground mb-8">
               Most subs lose because they argue instead of proving.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#template">
-                <Button size="lg" variant="outline" className="font-semibold w-full sm:w-auto">
-                  <FileText className="w-5 h-5 mr-2" />
-                  Download Free Dispute Response Template
-                </Button>
-              </a>
-              <Link to="/crew-plan">
-                <Button size="lg" className="font-semibold w-full sm:w-auto">
-                  <Mic className="w-5 h-5 mr-2" />
-                  Start Recording Evidence
-                </Button>
-              </Link>
-            </div>
+            <Link to="/crew-plan">
+              <Button size="lg" className="font-semibold w-full sm:w-auto">
+                <Mic className="w-5 h-5 mr-2" />
+                Start Recording Evidence
+              </Button>
+            </Link>
           </div>
         </section>
 
@@ -235,60 +192,6 @@ const FightUnfairDeductions = () => {
             <p className="text-center text-muted-foreground mt-6 italic">
               Documentation for disputes, not productivity tracking.
             </p>
-          </div>
-        </section>
-
-        {/* Lead Magnet Section */}
-        <section id="template" className="py-16 px-4 bg-muted/30 scroll-mt-20">
-          <div className="max-w-4xl mx-auto">
-            <div className="border-2 border-primary rounded-lg p-8 bg-background">
-              <div className="flex items-center gap-3 mb-6">
-                <FileText className="h-8 w-8 text-primary" />
-                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
-                  Free Download: The Deductive Change Order Defense Letter
-                </h2>
-              </div>
-              
-              <ul className="space-y-3 mb-8 text-muted-foreground">
-                <li className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Pre-written response letter for disputing unfair credits</span>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Copy/paste ready — customize with your project details</span>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>References standard "Cost of Work" and supervision definitions</span>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Neutral, professional, non-emotional tone</span>
-                </li>
-              </ul>
-
-              {isSubmitted ? (
-                <div className="bg-primary/10 border border-primary rounded-lg p-6 text-center">
-                  <CheckCircle2 className="h-10 w-10 text-primary mx-auto mb-3" />
-                  <p className="text-foreground font-semibold">Check your email for the download link.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleTemplateDownload} className="flex flex-col sm:flex-row gap-3">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 h-12 text-base"
-                    required
-                  />
-                  <Button type="submit" size="lg" disabled={isSubmitting} className="font-semibold whitespace-nowrap">
-                    {isSubmitting ? "Sending..." : "Download the Free Template"}
-                  </Button>
-                </form>
-              )}
-            </div>
           </div>
         </section>
 
