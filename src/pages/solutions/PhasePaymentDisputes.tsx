@@ -88,7 +88,7 @@ const PhasePaymentDisputes = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg">
-                  <Link to="/crew-plan">Start Documenting Now — Free</Link>
+                  <Link to="/crew-plan">Start Documenting Now</Link>
                 </Button>
                 <a href="#how-it-protects" className="text-muted-foreground hover:text-foreground underline underline-offset-4 transition-colors">
                   See How It Protects You in a Dispute →
