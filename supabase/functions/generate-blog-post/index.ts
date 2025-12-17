@@ -6,122 +6,119 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Blog post configurations from the content calendar
-const POST_CONFIGS = [
-  {
-    id: "texas-lien-law",
-    title: "Texas Property Code Chapter 53: The 2025 Guide for Electrical Subcontractors",
-    targetAudience: "Texas Subcontractor",
-    jurisdiction: "Texas",
-    keywords: ["Texas mechanics lien", "monthly notice requirement", "fund trapping", "construction daily log"],
-    systemPrompt: `You are writing for Texas electrical subcontractors who need to protect their lien rights. Focus on:
-- Texas Property Code Chapter 53 requirements
-- Monthly notice deadlines (15th of 2nd month to GC, 15th of 3rd month to owner)
-- Fund trapping procedures
-- How daily logs support lien claims`
-  },
-  {
-    id: "data-center-acceleration",
-    title: "Constructive Acceleration in Data Center Construction: How to Get Paid for Overtime",
-    targetAudience: "Data Center Project Manager",
-    jurisdiction: "Virginia",
-    keywords: ["schedule compression claims", "excusable delay", "Northern Virginia data center", "daily construction report evidence"],
-    systemPrompt: `You are writing for project managers on Northern Virginia data center projects. Focus on:
-- Constructive acceleration vs directed acceleration
-- Documenting schedule compression
-- Evidence needed for overtime cost recovery
-- AIA A401 requirements for daily reports`
-  },
-  {
-    id: "daily-logs-adjudication",
-    title: "Daily Logs vs. Site Diaries: What Wins in Adjudication?",
-    targetAudience: "Global Construction Professional",
-    jurisdiction: "International",
-    keywords: ["construction adjudication evidence", "contemporaneous records", "security of payment act evidence"],
-    systemPrompt: `You are writing a comparison piece for construction professionals globally. Focus on:
-- Difference between daily logs and site diaries
-- What adjudicators and arbitrators accept as evidence
-- Requirements for contemporaneous records
-- Best practices for evidentiary documentation`
-  },
-  {
-    id: "uk-golden-thread",
-    title: "The \"Golden Thread\" Explained: Digital Record Keeping for UK Subcontractors",
-    targetAudience: "UK Subcontractor",
-    jurisdiction: "United Kingdom",
-    keywords: ["Building Safety Act 2022", "Golden Thread guidance", "digital site records", "BS 8670 competence"],
-    systemPrompt: `You are writing for UK subcontractors about post-Grenfell regulatory requirements. Focus on:
-- Building Safety Act 2022 requirements
-- Golden Thread of building information
-- Digital record-keeping obligations
-- BS 8670 competence requirements`
-  },
-  {
-    id: "florida-nto",
-    title: "Florida Notice to Owner (NTO): Proving \"First Furnishing\" Date",
-    targetAudience: "Florida Subcontractor",
-    jurisdiction: "Florida",
-    keywords: ["Florida Statute 713", "Notice to Owner deadline", "proof of first furnishing", "daily log timestamp"],
-    systemPrompt: `You are writing for Florida subcontractors about protecting lien rights. Focus on:
-- Florida Statute 713 requirements
-- 45-day NTO deadline from first furnishing
-- How to prove first furnishing date
-- Using daily logs with timestamps as evidence`
-  }
-];
+// GEO-Optimized Content Template (2025 Standards)
+const GEO_CONTENT_TEMPLATE = `
+Generate a complete, publish-ready blog post following STRICT GEO (Generative Engine Optimization) standards.
+The content will be extracted by AI search engines (ChatGPT, Perplexity, Gemini) as authoritative answers.
 
-// Valid post IDs for validation
-const VALID_POST_IDS = POST_CONFIGS.map(p => p.id);
+## CRITICAL RULES (NON-NEGOTIABLE)
 
-const CONTENT_TEMPLATE = `
-Generate a complete blog post following this EXACT structure. No introductions, no fluff. Answer first, explanation second.
+### 1. ANSWER-FIRST RULE
+Every H2 section MUST begin IMMEDIATELY with:
+**Short answer:** <1–2 factual, direct sentences>
 
-POST STRUCTURE:
+NO introductory text before the short answer. The short answer must be independently correct if extracted alone.
+
+### 2. MODULAR WRITING
+- Every paragraph must stand alone and make sense if extracted independently
+- Avoid context-dependent references ("this," "that," "it") without restating the subject
+- Paragraphs should be ≤ 700 characters
+- Assume any paragraph may be quoted by an AI engine
+
+### 3. ENTITY-FIRST COVERAGE
+- Prioritize named legal entities: statutes, code chapters, regulations, standards
+- Introduce the controlling authority early in each section
+- Every entity in the entityPack MUST appear at least once in the article
+
+### 4. CONVERSATIONAL LONG-TAIL INTENT
+- H2 headings must be real questions a professional would ask
+- Use jurisdictional and situational specificity
+- Avoid generic keyword-style headings
+
+### 5. VERIFIABLE AUTHORITY
+Include:
+- At least 1 structured markdown table (deadlines, thresholds, comparisons)
+- At least 1 checklist (compliance steps, filing steps)
+- At least 4 outbound authority links to .gov, .org, legislatures, courts, standards bodies
+- Prefer primary sources over commentary
+- Distribute links throughout the article
+
+### 6. FACTUAL DISCIPLINE
+- State deadlines, triggers, thresholds precisely
+- If uncertain, explicitly state uncertainty and point to the authoritative source
+- NEVER fabricate statutes, deadlines, or citations
+
+## REQUIRED OUTPUT STRUCTURE
+
+Your output MUST follow this exact order:
 
 # {TITLE}
 
-## {Primary Question as H2}
-{Direct answer paragraph - 2-3 sentences with exact dates, statute names, no hedging}
+## TL;DR
+- 3–5 bullet points with concrete takeaways
+- Each bullet must be independently actionable
 
-## Key Deadlines and Requirements
-{Create a markdown table with columns: Action | Deadline | Risk Level | Reference}
+## Table of Contents
+[Link each H2 as an anchor]
 
-## How to Document Compliance
-{Numbered list of 4-5 specific steps using construction daily logs}
-{Each step should mention: what to record, format requirements, how it supports the legal requirement}
+## Main Content (8–12 H2 sections)
+[Each H2 follows the Answer-First Rule]
 
-## Common Failure Points
-{Bullet list of 3-4 tactical failure points - things that actually go wrong}
+[Include at least one table]
+
+[Include at least one checklist]
 
 ## Frequently Asked Questions
-{3 questions with direct answers - do NOT use "See the guide" placeholders}
+[3 questions with direct answers derived from article content]
 
-REQUIREMENTS:
-- Use exact statute numbers and dates
-- Include specific deadlines (e.g., "by the 15th day of the third month")
-- Reference how Voice Log Pro or daily documentation helps at each step
-- Keep language direct - written for foremen, trusted by lawyers
-- No corporate fluff or marketing language
-- Every claim must be actionable
+---
 
-CITATIONS REQUIREMENT (MANDATORY):
-- You MUST include at least 3 outbound links to authoritative official sources from .gov or .org domains.
-- Use Markdown link syntax: [Source title](https://...).
-- Preferred sources: official statutes (.gov), standards bodies (.org), court decisions, official guidance documents.
-- Do NOT invent URLs. If you cannot provide an official URL, remove or rephrase the claim.
-- Distribute links throughout the article, not all in one place.
-
-CRITICAL: At the very end of your response, output FAQ_JSON_START on its own line, followed immediately by a strict JSON object with exactly 3 FAQs. Use this exact format:
 FAQ_JSON_START
-{"faqs":[{"q":"Question 1?","a":"Direct answer under 40 words."},{"q":"Question 2?","a":"Direct answer under 40 words."},{"q":"Question 3?","a":"Direct answer under 40 words."}]}
+{"faqs":[
+  {"q":"Question matching H2 or key topic?","a":"Direct factual answer under 50 words."},
+  {"q":"Second question?","a":"Direct factual answer under 50 words."},
+  {"q":"Third question?","a":"Direct factual answer under 50 words."},
+  {"q":"Fourth question?","a":"Direct factual answer under 50 words."},
+  {"q":"Fifth question?","a":"Direct factual answer under 50 words."},
+  {"q":"Sixth question?","a":"Direct factual answer under 50 words."}
+]}
 
-Rules for FAQ JSON:
-- No markdown code fences around the JSON
-- No text after the closing brace
-- Each answer's first sentence must be under 40 words and purely factual
-- FAQs must be derived from the article content and match the jurisdiction
-- Must be valid JSON parsable by JSON.parse()
+## OUTPUT CONSTRAINTS
+- Output pure markdown for the article
+- Output valid JSON for FAQs after FAQ_JSON_START delimiter
+- Do NOT explain reasoning
+- Do NOT mention SEO, GEO, or prompts
+- Do NOT reference being an AI
+- No marketing language or filler
 `;
+
+// Jurisdiction-specific system prompts
+const JURISDICTION_PROMPTS: Record<string, string> = {
+  "Texas": `You are an expert on Texas construction law and mechanics lien rights.
+Focus on Texas Property Code Chapter 53, monthly notice requirements, fund trapping procedures, and filing deadlines.
+Key entities: Texas Property Code Chapter 53, Section 53.056 (monthly notices), Section 53.057 (fund trapping), Section 53.052 (lien affidavit).
+Authority sources: Texas Legislature (statutes.capitol.texas.gov), Texas Secretary of State.`,
+
+  "Virginia": `You are an expert on Virginia construction law, particularly federal contracting and data center projects.
+Focus on constructive acceleration, schedule compression claims, and delay documentation.
+Key entities: FAR 52.242-14 (Excusable Delays), AIA A401 (Standard Form of Agreement), Virginia data center boom.
+Authority sources: Federal Acquisition Regulation (acquisition.gov), AIA Documents.`,
+
+  "United Kingdom": `You are an expert on UK building safety regulations post-Grenfell.
+Focus on Building Safety Act 2022, Golden Thread requirements, and digital record-keeping obligations.
+Key entities: Building Safety Act 2022, Golden Thread, BS 8670 (competence), Higher-Risk Buildings, Building Safety Regulator.
+Authority sources: UK Legislation (legislation.gov.uk), HSE, Building Safety Regulator guidance.`,
+
+  "Florida": `You are an expert on Florida construction lien law.
+Focus on Florida Statute 713, Notice to Owner requirements, first furnishing documentation, and lien filing.
+Key entities: Florida Statute 713, Notice to Owner (NTO), 45-day deadline, first furnishing date, Claim of Lien.
+Authority sources: Florida Legislature (leg.state.fl.us), Florida Construction Lien Law Manual.`,
+
+  "International": `You are an expert on international construction dispute resolution and adjudication.
+Focus on evidentiary standards for construction claims, contemporaneous records, and adjudication procedures.
+Key entities: business records exception, contemporaneous records doctrine, FIDIC contracts, Security of Payment Acts.
+Authority sources: FIDIC, various national adjudication bodies, case law.`
+};
 
 // Helper to parse FAQ JSON from model output
 interface ParsedFAQ {
@@ -140,79 +137,119 @@ function parseFAQsFromContent(content: string): FAQParseResult {
   
   if (parts.length < 2) {
     console.warn("FAQ_JSON_START delimiter not found, using fallback FAQs");
-    return {
-      articleContent: content,
-      faqs: []
-    };
+    return { articleContent: content, faqs: [] };
   }
 
   const articleContent = parts[0].trim();
   let jsonPart = parts[1].trim();
   
-  // Clean up any markdown fences if the model added them despite instructions
+  // Clean up any markdown fences
   jsonPart = jsonPart.replace(/^```json?\s*/i, "").replace(/```\s*$/, "").trim();
   
+  // Find the JSON object
+  const jsonMatch = jsonPart.match(/\{[\s\S]*\}/);
+  if (!jsonMatch) {
+    console.warn("No JSON object found in FAQ section");
+    return { articleContent, faqs: [] };
+  }
+  
   try {
-    const parsed = JSON.parse(jsonPart);
+    const parsed = JSON.parse(jsonMatch[0]);
     
-    // Validate structure
-    if (!parsed.faqs || !Array.isArray(parsed.faqs) || parsed.faqs.length === 0) {
-      console.warn("Invalid FAQ structure, faqs array missing or empty");
+    if (!parsed.faqs || !Array.isArray(parsed.faqs)) {
+      console.warn("Invalid FAQ structure");
       return { articleContent, faqs: [] };
     }
 
-    // Validate each FAQ has q and a strings
     const validFaqs = parsed.faqs.filter((faq: unknown) => {
       if (typeof faq !== "object" || faq === null) return false;
       const f = faq as Record<string, unknown>;
       return typeof f.q === "string" && typeof f.a === "string" && f.q.length > 0 && f.a.length > 0;
-    }).slice(0, 3) as ParsedFAQ[];
-
-    if (validFaqs.length === 0) {
-      console.warn("No valid FAQs found after validation");
-      return { articleContent, faqs: [] };
-    }
+    }).slice(0, 10) as ParsedFAQ[];
 
     console.log(`Successfully parsed ${validFaqs.length} FAQs`);
     return { articleContent, faqs: validFaqs };
   } catch (e) {
     console.error("Failed to parse FAQ JSON:", e);
-    console.error("Raw JSON part:", jsonPart.substring(0, 500));
     return { articleContent, faqs: [] };
   }
 }
 
-// Build FAQPage schema from parsed FAQs
-function buildFAQSchema(faqs: ParsedFAQ[], fallbackTitle: string, fallbackKeywords: string[]) {
-  // If we have parsed FAQs, use them
-  if (faqs.length > 0) {
-    return {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.q,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.a
-        }
-      }))
-    };
-  }
+// Build FAQPage schema
+function buildFAQSchema(faqs: ParsedFAQ[]) {
+  if (faqs.length === 0) return null;
   
-  // Fallback to keyword-based FAQs (weak but better than nothing)
-  console.warn("Using fallback keyword-based FAQ schema");
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": fallbackKeywords.slice(0, 2).map(keyword => ({
+    "mainEntity": faqs.map(faq => ({
       "@type": "Question",
-      "name": `What are the requirements for ${keyword}?`,
+      "name": faq.q,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `See the detailed guide on ${fallbackTitle} for specific requirements and deadlines.`
+        "text": faq.a
       }
     }))
+  };
+}
+
+// Validate GEO compliance
+interface ValidationResult {
+  passed: boolean;
+  errors: string[];
+  warnings: string[];
+}
+
+function validateGEOCompliance(content: string, entityPack: string[]): ValidationResult {
+  const errors: string[] = [];
+  const warnings: string[] = [];
+  
+  // Check for Answer-First rule
+  const h2Sections = content.split(/(?=^## )/gm).filter(s => s.startsWith('## '));
+  for (const section of h2Sections) {
+    const lines = section.split('\n').filter(l => l.trim());
+    if (lines.length > 1) {
+      const firstContentLine = lines[1];
+      if (!firstContentLine.includes('**Short answer:**')) {
+        const heading = lines[0].replace('## ', '').substring(0, 50);
+        warnings.push(`H2 "${heading}..." may be missing Answer-First format`);
+      }
+    }
+  }
+  
+  // Check for required elements
+  if (!content.includes('## TL;DR')) {
+    errors.push('Missing TL;DR section');
+  }
+  
+  if (!content.includes('|') || !content.includes('---')) {
+    warnings.push('May be missing required table');
+  }
+  
+  if (!content.includes('- [ ]') && !content.includes('- [x]')) {
+    warnings.push('May be missing checklist');
+  }
+  
+  // Check entity coverage
+  for (const entity of entityPack) {
+    if (!content.toLowerCase().includes(entity.toLowerCase())) {
+      warnings.push(`Entity "${entity}" not found in content`);
+    }
+  }
+  
+  // Check for authority links
+  const linkMatches = content.match(/\[([^\]]+)\]\(https?:\/\/[^)]+\)/g) || [];
+  const govOrgLinks = linkMatches.filter(l => 
+    l.includes('.gov') || l.includes('.org') || l.includes('legislation.')
+  );
+  if (govOrgLinks.length < 3) {
+    warnings.push(`Only ${govOrgLinks.length} authority links found (recommend 4+)`);
+  }
+  
+  return {
+    passed: errors.length === 0,
+    errors,
+    warnings
   };
 }
 
@@ -222,98 +259,96 @@ serve(async (req) => {
   }
 
   try {
-    // ===== AUTHENTICATION CHECK =====
-    const authHeader = req.headers.get('Authorization');
-    if (!authHeader) {
-      console.warn('Unauthenticated request to generate-blog-post rejected');
-      return new Response(JSON.stringify({ error: 'Unauthorized: Authentication required' }), {
-        status: 401,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    }
-
     const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
     const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY");
-    
-    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-      throw new Error("Supabase credentials not configured");
-    }
-
-    // Verify the user is authenticated
-    const authSupabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-      global: { headers: { Authorization: authHeader } }
-    });
-
-    const { data: { user }, error: authError } = await authSupabase.auth.getUser();
-    if (authError || !user) {
-      console.warn('Invalid auth token in generate-blog-post:', authError?.message);
-      return new Response(JSON.stringify({ error: 'Unauthorized: Invalid token' }), {
-        status: 401,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    }
-
-    console.log(`Authenticated request from user: ${user.id}`);
-    // ===== END AUTHENTICATION CHECK =====
-
-    // ===== INPUT VALIDATION =====
-    let requestBody;
-    try {
-      requestBody = await req.json();
-    } catch {
-      return new Response(JSON.stringify({ error: 'Invalid JSON body' }), {
-        status: 400,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    }
-
-    const { postId } = requestBody;
-    
-    // Validate postId
-    if (!postId) {
-      return new Response(JSON.stringify({ error: 'postId is required' }), {
-        status: 400,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    }
-    
-    if (typeof postId !== 'string') {
-      return new Response(JSON.stringify({ error: 'postId must be a string' }), {
-        status: 400,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    }
-    
-    if (postId.length > 100) {
-      return new Response(JSON.stringify({ error: 'postId too long' }), {
-        status: 400,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    }
-    
-    // Validate against known post IDs
-    if (!VALID_POST_IDS.includes(postId)) {
-      return new Response(JSON.stringify({ 
-        error: 'Invalid postId',
-        validIds: VALID_POST_IDS 
-      }), {
-        status: 404,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
-    }
-    // ===== END INPUT VALIDATION =====
-    
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     
+    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) throw new Error("Supabase credentials not configured");
     if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
     if (!SUPABASE_SERVICE_ROLE_KEY) throw new Error("SUPABASE_SERVICE_ROLE_KEY not configured");
+
+    // Check if this is a cron trigger (has special header) or authenticated request
+    const isCronTrigger = req.headers.get('x-cron-trigger') === 'true';
+    let userId = 'cron-system';
+    
+    if (!isCronTrigger) {
+      // Verify authentication for manual triggers
+      const authHeader = req.headers.get('Authorization');
+      if (!authHeader) {
+        return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+          status: 401,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+
+      const authSupabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+        global: { headers: { Authorization: authHeader } }
+      });
+
+      const { data: { user }, error: authError } = await authSupabase.auth.getUser();
+      if (authError || !user) {
+        return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+          status: 401,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      userId = user.id;
+    }
+
+    // Parse request body
+    let postId: string | undefined;
+    try {
+      const body = await req.json();
+      postId = body.postId;
+    } catch {
+      // If no body, we'll select the next scheduled post
+    }
 
     // Use service role for database operations
     const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
-    // Find post config (already validated above)
-    const postConfig = POST_CONFIGS.find(p => p.id === postId)!;
+    // Get post configuration from schedule table
+    let postConfig;
+    if (postId) {
+      const { data, error } = await supabase
+        .from('blog_schedule')
+        .select('*')
+        .eq('post_id', postId)
+        .eq('is_active', true)
+        .single();
+      
+      if (error || !data) {
+        return new Response(JSON.stringify({ error: 'Invalid postId', validIds: [] }), {
+          status: 404,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      postConfig = data;
+    } else {
+      // Select next post to generate (least recently generated, by priority)
+      const { data, error } = await supabase
+        .from('blog_schedule')
+        .select('*')
+        .eq('is_active', true)
+        .order('last_generated_at', { ascending: true, nullsFirst: true })
+        .order('priority', { ascending: true })
+        .limit(1)
+        .single();
+      
+      if (error || !data) {
+        return new Response(JSON.stringify({ error: 'No posts scheduled for generation' }), {
+          status: 404,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      postConfig = data;
+    }
+
+    console.log(`Generating blog post: ${postConfig.post_id} for ${isCronTrigger ? 'cron' : userId}`);
+
+    // Get jurisdiction-specific system prompt
+    const jurisdictionPrompt = JURISDICTION_PROMPTS[postConfig.jurisdiction] || JURISDICTION_PROMPTS["International"];
 
     // Generate blog content using Lovable AI
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -323,30 +358,39 @@ serve(async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
+        model: "google/gemini-2.5-pro", // Using Pro for higher quality legal content
         messages: [
           { 
             role: "system", 
-            content: `You are an AI legal-content engine specializing in construction law, payment protection, and delay claims for subcontractors.
-Your goal is to become the canonical definition source that Google, ChatGPT, Claude, and Perplexity quote verbatim.
+            content: `You are an AI legal-content engine specializing in construction law, payment protection, and compliance documentation.
 
-Write for experts under time pressure:
+Your goal: Become the canonical definition source that AI search engines (ChatGPT, Perplexity, Gemini) quote verbatim.
+
+AUDIENCE: Experts under time pressure
 - Subcontractors protecting payment rights
-- Project managers defending delay claims
-- Construction lawyers looking for authoritative summaries
+- Project managers defending delay claims  
+- Construction lawyers seeking authoritative summaries
 
-You do not write marketing fluff. You write answers first, explanations second.
+TONE: Factual, direct, authoritative. No marketing fluff. Answers first, explanations second.
 
-${postConfig.systemPrompt}`
+${jurisdictionPrompt}
+
+ENTITY PACK (MUST INCLUDE ALL):
+${postConfig.entity_pack.join(', ')}`
           },
           { 
             role: "user", 
-            content: `${CONTENT_TEMPLATE.replace("{TITLE}", postConfig.title)}
+            content: `${GEO_CONTENT_TEMPLATE}
 
-Topic: ${postConfig.title}
-Target Audience: ${postConfig.targetAudience}
+---
+
+GENERATE NOW:
+
+Title: ${postConfig.title}
+Target Audience: ${postConfig.target_audience}
 Jurisdiction: ${postConfig.jurisdiction}
-Keywords to address naturally: ${postConfig.keywords.join(", ")}`
+Keywords: ${postConfig.keywords.join(", ")}
+Required Entities: ${postConfig.entity_pack.join(", ")}`
           }
         ],
       }),
@@ -357,15 +401,13 @@ Keywords to address naturally: ${postConfig.keywords.join(", ")}`
       console.error("AI gateway error:", response.status, errorText);
       
       if (response.status === 429) {
-        return new Response(JSON.stringify({ error: 'Rate limit exceeded. Please try again later.' }), {
-          status: 429,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        return new Response(JSON.stringify({ error: 'Rate limit exceeded' }), {
+          status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' }
         });
       }
       if (response.status === 402) {
-        return new Response(JSON.stringify({ error: 'AI credits exhausted. Please add credits to continue.' }), {
-          status: 402,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        return new Response(JSON.stringify({ error: 'AI credits exhausted' }), {
+          status: 402, headers: { ...corsHeaders, 'Content-Type': 'application/json' }
         });
       }
       
@@ -374,50 +416,67 @@ Keywords to address naturally: ${postConfig.keywords.join(", ")}`
 
     const data = await response.json();
     const rawContent = data.choices?.[0]?.message?.content;
-
     if (!rawContent) throw new Error("No content generated");
 
-    // Parse FAQs from the model output
+    // Parse FAQs and validate
     const { articleContent, faqs } = parseFAQsFromContent(rawContent);
-    console.log(`Parsed content: ${articleContent.length} chars, ${faqs.length} FAQs`);
+    const validation = validateGEOCompliance(articleContent, postConfig.entity_pack);
+    
+    console.log(`Content validation: ${validation.passed ? 'PASSED' : 'FAILED'}`);
+    if (validation.errors.length) console.error('Validation errors:', validation.errors);
+    if (validation.warnings.length) console.warn('Validation warnings:', validation.warnings);
 
-    // Build FAQ schema using parsed FAQs (or fallback)
-    const faqSchema = buildFAQSchema(faqs, postConfig.title, postConfig.keywords);
+    // Build FAQ schema
+    const faqSchema = buildFAQSchema(faqs);
 
-    // Create slug from post ID
-    const slug = postConfig.id;
+    // Create slug
+    const slug = postConfig.post_id;
 
-    // Extract first paragraph as excerpt
-    const excerptMatch = articleContent.match(/##[^\n]+\n+([^\n]+)/);
-    const excerpt = excerptMatch ? excerptMatch[1].substring(0, 300) : postConfig.title;
+    // Extract excerpt from TL;DR or first paragraph
+    const tldrMatch = articleContent.match(/## TL;DR[\s\S]*?(?=##|$)/);
+    const excerpt = tldrMatch 
+      ? tldrMatch[0].replace('## TL;DR', '').trim().substring(0, 300)
+      : postConfig.title;
 
-    // Insert or update post in database
-    const { data: post, error } = await supabase
+    // Upsert post to database
+    const { data: post, error: dbError } = await supabase
       .from("blog_posts")
       .upsert({
         slug,
         title: postConfig.title,
-        meta_description: `${postConfig.title} - Expert guidance for ${postConfig.targetAudience.toLowerCase()}s on construction compliance and payment protection.`,
+        meta_description: `${postConfig.title} - Expert guidance for ${postConfig.target_audience.toLowerCase()}s on ${postConfig.jurisdiction} construction compliance.`,
         content: articleContent,
         excerpt,
         keywords: postConfig.keywords,
-        target_audience: postConfig.targetAudience,
+        target_audience: postConfig.target_audience,
         jurisdiction: postConfig.jurisdiction,
         faq_schema: faqSchema,
-        published: true,
-        published_at: new Date().toISOString(),
+        published: validation.passed, // Only publish if validation passes
+        published_at: validation.passed ? new Date().toISOString() : null,
       }, { onConflict: "slug" })
       .select()
       .single();
 
-    if (error) {
-      console.error("Database error:", error);
-      throw new Error(`Database error: ${error.message}`);
-    }
+    if (dbError) throw new Error(`Database error: ${dbError.message}`);
 
-    console.log(`Blog post generated successfully: ${slug} by user ${user.id}`);
+    // Update schedule tracking
+    await supabase
+      .from("blog_schedule")
+      .update({
+        last_generated_at: new Date().toISOString(),
+        generation_count: postConfig.generation_count + 1,
+      })
+      .eq("post_id", postConfig.post_id);
 
-    return new Response(JSON.stringify({ success: true, post, faqCount: faqs.length }), {
+    console.log(`Blog post generated: ${slug}, published: ${validation.passed}, FAQs: ${faqs.length}`);
+
+    return new Response(JSON.stringify({ 
+      success: true, 
+      post,
+      faqCount: faqs.length,
+      validation,
+      published: validation.passed
+    }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {

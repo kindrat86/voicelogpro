@@ -5,3 +5,6 @@ verify_jwt = false
 
 [functions.generate-daily-log]
 verify_jwt = false
+
+[functions.cron-blog-generator]
+verify_jwt = false
