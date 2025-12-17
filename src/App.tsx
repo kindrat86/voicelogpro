@@ -17,6 +17,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const TexasMechanicsLien = lazy(() => import("./pages/solutions/TexasMechanicsLien"));
 const ConstructiveAcceleration = lazy(() => import("./pages/solutions/ConstructiveAcceleration"));
 const GoldenThread = lazy(() => import("./pages/solutions/GoldenThread"));
+const FightUnfairDeductions = lazy(() => import("./pages/solutions/FightUnfairDeductions"));
 
 // Comparison landing pages
 const RakenComparison = lazy(() => import("./pages/RakenComparison"));
@@ -43,6 +44,7 @@ const App = () => (
               <Route path="/solutions/constructive-acceleration-defense" element={<ConstructiveAcceleration />} />
               <Route path="/solutions/building-safety-act-golden-thread" element={<GoldenThread />} />
               <Route path="/solutions/uk-golden-thread" element={<GoldenThread />} />
+              <Route path="/solutions/fight-unfair-gc-deductions" element={<FightUnfairDeductions />} />
               {/* Comparison landing pages */}
               <Route path="/raken-vs-voice-log-pro" element={<RakenComparison />} />
               <Route path="/fieldwire-vs-voice-log-pro" element={<FieldwireComparison />} />
