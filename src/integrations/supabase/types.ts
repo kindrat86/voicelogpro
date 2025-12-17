@@ -65,6 +65,54 @@ export type Database = {
         }
         Relationships: []
       }
+      blog_schedule: {
+        Row: {
+          created_at: string
+          entity_pack: string[] | null
+          generation_count: number | null
+          id: string
+          is_active: boolean | null
+          jurisdiction: string
+          keywords: string[]
+          last_generated_at: string | null
+          post_id: string
+          priority: number | null
+          target_audience: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          entity_pack?: string[] | null
+          generation_count?: number | null
+          id?: string
+          is_active?: boolean | null
+          jurisdiction: string
+          keywords: string[]
+          last_generated_at?: string | null
+          post_id: string
+          priority?: number | null
+          target_audience: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          entity_pack?: string[] | null
+          generation_count?: number | null
+          id?: string
+          is_active?: boolean | null
+          jurisdiction?: string
+          keywords?: string[]
+          last_generated_at?: string | null
+          post_id?: string
+          priority?: number | null
+          target_audience?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       waitlist: {
         Row: {
           created_at: string
