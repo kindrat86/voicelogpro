@@ -1,0 +1,31 @@
+name: Daily Blog Generator
+
+on:
+  schedule:
+    # Run every day at 6:00 AM UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  generate-blog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Blog Generator
+        run: |
+          response=$(curl -s -w "\n%{http_code}" -X POST \
+            "https://isethofkdawreiitpkdq.supabase.co/functions/v1/cron-blog-generator" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}")
+          
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+          
+          echo "Response: $body"
+          echo "HTTP Status: $http_code"
+          
+          if [ "$http_code" -ge 200 ] && [ "$http_code" -lt 300 ]; then
+            echo "✅ Blog generation triggered successfully"
+          else
+            echo "❌ Blog generation failed"
+            exit 1
+          fi
