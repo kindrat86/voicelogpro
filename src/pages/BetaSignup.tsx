@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
-import { Mic, FileText, Mail, Clock, Shield, FileCheck, Users, Smartphone } from "lucide-react";
+import { Mic, FileText, Clock, Shield, FileCheck, Users, Smartphone } from "lucide-react";
 import { vibrate } from "@/lib/utils";
 import beforeImage from "@/assets/before-messy-notes.jpg";
 import afterImage from "@/assets/after-clean-pdf.jpg";
@@ -224,37 +224,95 @@ export default function BetaSignup() {
           </div>
         </section>
 
-        {/* Pricing / Beta Gate */}
+        {/* Pricing / Beta Gate - Two-Option System */}
         <section className="px-4 py-16">
-          <div className="max-w-xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-2">
-              Crew Plan
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-8 text-center">
+              Choose your path
             </h2>
-            <p className="text-4xl font-bold text-primary mb-6">$49/month</p>
 
-            <ul className="text-left space-y-3 mb-8 max-w-xs mx-auto">
-              {[
-                "Up to 5 crews",
-                "Full labor tracking",
-                "Automated Phase vs. Actual reporting",
-                "Priority onboarding during Beta",
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
+            {/* Two-Option Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* LEFT CARD — Free Gate (Solo Beta) */}
+              <div className="bg-background rounded-xl border border-border p-6 md:p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Mic className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="text-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">Solo Beta</h3>
+                    <p className="text-3xl font-bold text-primary">$0 <span className="text-base font-normal text-muted-foreground">/ Free</span></p>
+                  </div>
+                </div>
 
-            <p className="text-sm text-muted-foreground mb-6">
-              Access is limited to ensure high-touch support for early users.
-            </p>
+                <div className="inline-block bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full mb-6">
+                  No Credit Card Required
+                </div>
 
-            <BetaCTA />
+                <ul className="space-y-3 mb-6">
+                  {["Unlimited Voice Logs", "Standard PDF Reports", "Email Support"].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link to="/crew-plan" onClick={vibrate}>
+                  <Button variant="outline" size="xl" className="w-full min-h-[52px] text-base font-bold">
+                    Join Beta Free
+                  </Button>
+                </Link>
+                <p className="text-xs text-muted-foreground text-center mt-3">
+                  Risk Free. Cancel anytime.
+                </p>
+              </div>
+
+              {/* RIGHT CARD — Paid Gate (Crew Plan) */}
+              <div className="bg-background rounded-xl border-2 border-primary p-6 md:p-8 relative">
+                {/* Premium indicator */}
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-sm font-medium px-3 py-1 rounded-full">
+                  Most Popular
+                </div>
+
+                <div className="flex items-center gap-3 mb-4 pt-2">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Users className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">Crew Plan</h3>
+                    <p className="text-3xl font-bold text-primary">$49 <span className="text-base font-normal text-muted-foreground">/ month</span></p>
+                  </div>
+                </div>
+
+                <ul className="space-y-3 mb-6 mt-6">
+                  {["All Beta features", "Up to 5 Crews", "Priority Onboarding", "Custom Branding"].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg className="w-3 h-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="text-sm text-muted-foreground mb-4 text-center">
+                  Access is limited to ensure high-touch support for early users.
+                </p>
+
+                <Link to="/crew-plan" onClick={vibrate}>
+                  <Button variant="cta" size="xl" className="w-full min-h-[52px] text-base font-bold">
+                    Get Crew Access
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
