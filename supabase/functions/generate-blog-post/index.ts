@@ -268,32 +268,41 @@ serve(async (req) => {
     if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
     if (!SUPABASE_SERVICE_ROLE_KEY) throw new Error("SUPABASE_SERVICE_ROLE_KEY not configured");
 
-    // Check if this is a cron trigger (has special header) or authenticated request
-    const isCronTrigger = req.headers.get('x-cron-trigger') === 'true';
-    let userId = 'cron-system';
-    
-    if (!isCronTrigger) {
-      // Verify authentication for manual triggers
-      const authHeader = req.headers.get('Authorization');
-      if (!authHeader) {
-        return new Response(JSON.stringify({ error: 'Unauthorized' }), {
-          status: 401,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        });
-      }
+    // Authenticate the request - require valid authorization
+    const authHeader = req.headers.get('Authorization');
+    if (!authHeader) {
+      console.warn("Unauthorized request: missing Authorization header");
+      return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+        status: 401,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
 
+    const token = authHeader.replace('Bearer ', '');
+    let userId = 'unknown';
+    let isServiceCall = false;
+
+    // Check if this is a service role call (from cron-blog-generator or admin)
+    if (token === SUPABASE_SERVICE_ROLE_KEY) {
+      userId = 'service-role';
+      isServiceCall = true;
+      console.log("Authenticated via service role key");
+    } else {
+      // Verify as user JWT
       const authSupabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
         global: { headers: { Authorization: authHeader } }
       });
 
       const { data: { user }, error: authError } = await authSupabase.auth.getUser();
       if (authError || !user) {
+        console.warn("Unauthorized request: invalid user JWT");
         return new Response(JSON.stringify({ error: 'Unauthorized' }), {
           status: 401,
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
       }
       userId = user.id;
+      console.log(`Authenticated as user: ${userId}`);
     }
 
     // Parse request body
@@ -345,7 +354,7 @@ serve(async (req) => {
       postConfig = data;
     }
 
-    console.log(`Generating blog post: ${postConfig.post_id} for ${isCronTrigger ? 'cron' : userId}`);
+    console.log(`Generating blog post: ${postConfig.post_id} for ${isServiceCall ? 'service-role' : userId}`);
 
     // Get jurisdiction-specific system prompt
     const jurisdictionPrompt = JURISDICTION_PROMPTS[postConfig.jurisdiction] || JURISDICTION_PROMPTS["International"];

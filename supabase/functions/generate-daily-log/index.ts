@@ -8,6 +8,35 @@ const corsHeaders = {
 // Allowed trade values for input validation
 const ALLOWED_TRADES = ['electrical', 'plumbing', 'HVAC', 'hvac', 'Electrical', 'Plumbing'];
 
+// Simple in-memory rate limiter (resets on function cold start)
+const requestCounts = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT = 10; // requests per window
+const RATE_WINDOW_MS = 60 * 1000; // 1 minute
+
+function getRateLimitKey(req: Request): string {
+  // Use X-Forwarded-For header or fall back to a default key
+  const forwarded = req.headers.get('x-forwarded-for');
+  const clientIp = forwarded ? forwarded.split(',')[0].trim() : 'unknown';
+  return clientIp;
+}
+
+function checkRateLimit(key: string): { allowed: boolean; remaining: number } {
+  const now = Date.now();
+  const record = requestCounts.get(key);
+  
+  if (!record || now > record.resetTime) {
+    requestCounts.set(key, { count: 1, resetTime: now + RATE_WINDOW_MS });
+    return { allowed: true, remaining: RATE_LIMIT - 1 };
+  }
+  
+  if (record.count >= RATE_LIMIT) {
+    return { allowed: false, remaining: 0 };
+  }
+  
+  record.count++;
+  return { allowed: true, remaining: RATE_LIMIT - record.count };
+}
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -15,10 +44,28 @@ serve(async (req) => {
   }
 
   try {
+    // Apply rate limiting to prevent abuse
+    const rateLimitKey = getRateLimitKey(req);
+    const rateCheck = checkRateLimit(rateLimitKey);
+    
+    if (!rateCheck.allowed) {
+      console.warn(`Rate limit exceeded for ${rateLimitKey}`);
+      return new Response(JSON.stringify({ error: 'Rate limit exceeded. Please try again later.' }), {
+        status: 429,
+        headers: { 
+          ...corsHeaders, 
+          'Content-Type': 'application/json',
+          'Retry-After': '60'
+        },
+      });
+    }
+
     const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
     if (!LOVABLE_API_KEY) {
       throw new Error('LOVABLE_API_KEY is not configured');
     }
+
+    console.log(`Processing request from ${rateLimitKey}, remaining: ${rateCheck.remaining}`);
 
     // Parse and validate request body
     let requestBody;
