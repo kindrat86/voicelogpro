@@ -202,8 +202,7 @@ Keep it realistic, specific, and under 200 words. Use realistic construction ter
 
   } catch (error) {
     console.error('Error in generate-daily-log:', error);
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
-    return new Response(JSON.stringify({ error: errorMessage }), {
+    return new Response(JSON.stringify({ error: 'Log generation failed. Please try again.' }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
