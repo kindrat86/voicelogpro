@@ -30,7 +30,8 @@ serve(async (req) => {
       throw new Error("Supabase credentials not configured");
     }
 
-    // Authenticate the request - must have valid anon key or service role key
+    // SECURITY: Only accept service role key for cron jobs
+    // The anon key is public and must NOT be allowed to trigger blog generation
     const authHeader = req.headers.get("Authorization");
     if (!authHeader) {
       console.warn("Unauthorized request: missing Authorization header");
@@ -41,10 +42,11 @@ serve(async (req) => {
     }
 
     const token = authHeader.replace("Bearer ", "");
-    const isValidAuth = token === SUPABASE_ANON_KEY || token === SUPABASE_SERVICE_ROLE_KEY;
     
-    if (!isValidAuth) {
-      console.warn("Unauthorized request: invalid token");
+    // CRITICAL: Only service role key can trigger cron jobs
+    // This prevents public anon key from being used to drain AI credits
+    if (token !== SUPABASE_SERVICE_ROLE_KEY) {
+      console.warn("Unauthorized request: only service role key allowed");
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
         status: 401,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
