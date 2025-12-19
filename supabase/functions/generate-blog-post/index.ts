@@ -380,21 +380,57 @@ serve(async (req) => {
     }
 
     // Sanitize database content before using in prompts (prevent prompt injection)
+    // SECURITY: Block common prompt injection patterns
+    const INJECTION_PATTERNS = [
+      /ignore\s+(previous|all|above)\s+(instructions?|prompts?)/gi,
+      /disregard\s+(previous|all|above)/gi,
+      /forget\s+(everything|all|previous)/gi,
+      /you\s+are\s+now/gi,
+      /act\s+as\s+(if\s+)?you/gi,
+      /pretend\s+(to\s+be|you\s+are)/gi,
+      /new\s+instructions?:/gi,
+      /system\s*prompt/gi,
+      /\[INST\]/gi,
+      /\[\/INST\]/gi,
+      /<\|im_start\|>/gi,
+      /<\|im_end\|>/gi,
+    ];
+    
     const sanitizeForPrompt = (str: string): string => {
-      return str
+      if (typeof str !== 'string') return '';
+      
+      let sanitized = str
         .replace(/```/g, '') // Remove code fences
         .replace(/\n{3,}/g, '\n\n') // Collapse multiple newlines
-        .substring(0, 500); // Limit length
+        .replace(/[<>{}[\]]/g, '') // Remove brackets that could break prompt structure
+        .trim();
+      
+      // Remove prompt injection patterns
+      for (const pattern of INJECTION_PATTERNS) {
+        sanitized = sanitized.replace(pattern, '[FILTERED]');
+      }
+      
+      return sanitized.substring(0, 500); // Limit length
     };
     
     const sanitizeArray = (arr: string[]): string[] => {
-      return arr.map(item => sanitizeForPrompt(item).substring(0, 100)).slice(0, 20);
+      if (!Array.isArray(arr)) return [];
+      return arr
+        .filter(item => typeof item === 'string')
+        .map(item => sanitizeForPrompt(item).substring(0, 100))
+        .slice(0, 20);
     };
+    
+    // Validate jurisdiction against allowed values
+    const ALLOWED_JURISDICTIONS = ['Texas', 'Virginia', 'United Kingdom', 'Florida', 'International'];
+    const safeJurisdiction = ALLOWED_JURISDICTIONS.includes(postConfig.jurisdiction) 
+      ? postConfig.jurisdiction 
+      : 'International';
 
     console.log(`Generating blog post: ${postConfig.post_id} for ${isServiceCall ? 'service-role' : userId}`);
 
-    // Get jurisdiction-specific system prompt
-    const jurisdictionPrompt = JURISDICTION_PROMPTS[postConfig.jurisdiction] || JURISDICTION_PROMPTS["International"];
+    // Get jurisdiction-specific system prompt (using validated jurisdiction)
+    const jurisdictionPrompt = JURISDICTION_PROMPTS[safeJurisdiction] || JURISDICTION_PROMPTS["International"];
 
     // Generate blog content using Lovable AI
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -434,7 +470,7 @@ GENERATE NOW:
 
 Title: ${sanitizeForPrompt(postConfig.title)}
 Target Audience: ${sanitizeForPrompt(postConfig.target_audience)}
-Jurisdiction: ${sanitizeForPrompt(postConfig.jurisdiction)}
+Jurisdiction: ${safeJurisdiction}
 Keywords: ${sanitizeArray(postConfig.keywords || []).join(", ")}
 Required Entities: ${sanitizeArray(postConfig.entity_pack || []).join(", ")}`
           }
