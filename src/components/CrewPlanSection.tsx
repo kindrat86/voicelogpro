@@ -23,7 +23,7 @@ export function CrewPlanSection() {
       <div className="max-w-4xl mx-auto">
         <h2 className="headline-section text-foreground mb-8 text-center">Choose your path</h2>
 
-        {/* Two-Option Grid */}
+        {/* Two-Option Grid - Navigation only, no forms */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* LEFT CARD — Free Gate (Solo Beta) */}
           <div className="card-industrial border-border">
@@ -50,7 +50,8 @@ export function CrewPlanSection() {
               ))}
             </ul>
 
-            <Link to="/crew-plan" onClick={vibrate}>
+            {/* CTA navigates to Solo Beta email page */}
+            <Link to="/beta" onClick={vibrate}>
               <Button variant="outline" size="lg" className="w-full">
                 Join Beta Free
               </Button>
@@ -88,6 +89,7 @@ export function CrewPlanSection() {
               ))}
             </ul>
 
+            {/* CTA navigates to Crew Plan email page */}
             <Link to="/crew-plan" onClick={vibrate}>
               <Button variant="cta" size="lg" className="w-full">
                 Get Crew Access
