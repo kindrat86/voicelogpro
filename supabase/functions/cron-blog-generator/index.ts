@@ -24,10 +24,34 @@ serve(async (req) => {
   try {
     const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
     const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY");
     
-    if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
+    if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !SUPABASE_ANON_KEY) {
       throw new Error("Supabase credentials not configured");
     }
+
+    // Authenticate the request - must have valid anon key or service role key
+    const authHeader = req.headers.get("Authorization");
+    if (!authHeader) {
+      console.warn("Unauthorized request: missing Authorization header");
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    const token = authHeader.replace("Bearer ", "");
+    const isValidAuth = token === SUPABASE_ANON_KEY || token === SUPABASE_SERVICE_ROLE_KEY;
+    
+    if (!isValidAuth) {
+      console.warn("Unauthorized request: invalid token");
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    console.log("Request authenticated successfully");
 
     const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
@@ -54,7 +78,7 @@ serve(async (req) => {
     console.log(`Selected post for generation: ${nextPost.post_id} (${nextPost.title})`);
     console.log(`Last generated: ${nextPost.last_generated_at || 'never'}, count: ${nextPost.generation_count}`);
 
-    // Call the generate-blog-post function
+    // Call the generate-blog-post function with service role key for internal auth
     const generateUrl = `${SUPABASE_URL}/functions/v1/generate-blog-post`;
     
     const response = await fetch(generateUrl, {
@@ -62,7 +86,6 @@ serve(async (req) => {
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
-        "x-cron-trigger": "true", // Mark as cron trigger to bypass user auth
       },
       body: JSON.stringify({ postId: nextPost.post_id }),
     });
