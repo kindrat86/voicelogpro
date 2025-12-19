@@ -314,6 +314,29 @@ serve(async (req) => {
       // If no body, we'll select the next scheduled post
     }
 
+    // Validate postId format if provided (alphanumeric, hyphens, max 100 chars)
+    if (postId !== undefined) {
+      if (typeof postId !== 'string') {
+        return new Response(JSON.stringify({ error: 'Invalid request' }), {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      if (postId.length > 100) {
+        return new Response(JSON.stringify({ error: 'Invalid request' }), {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+      // Only allow alphanumeric, hyphens, and underscores
+      if (!/^[a-zA-Z0-9_-]+$/.test(postId)) {
+        return new Response(JSON.stringify({ error: 'Invalid request' }), {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+    }
+
     // Use service role for database operations
     const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
@@ -328,7 +351,8 @@ serve(async (req) => {
         .single();
       
       if (error || !data) {
-        return new Response(JSON.stringify({ error: 'Invalid postId', validIds: [] }), {
+        console.warn(`Post not found: ${postId}`);
+        return new Response(JSON.stringify({ error: 'Post not found' }), {
           status: 404,
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
@@ -346,13 +370,26 @@ serve(async (req) => {
         .single();
       
       if (error || !data) {
-        return new Response(JSON.stringify({ error: 'No posts scheduled for generation' }), {
+        console.log('No posts scheduled for generation');
+        return new Response(JSON.stringify({ error: 'No posts available' }), {
           status: 404,
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
       }
       postConfig = data;
     }
+
+    // Sanitize database content before using in prompts (prevent prompt injection)
+    const sanitizeForPrompt = (str: string): string => {
+      return str
+        .replace(/```/g, '') // Remove code fences
+        .replace(/\n{3,}/g, '\n\n') // Collapse multiple newlines
+        .substring(0, 500); // Limit length
+    };
+    
+    const sanitizeArray = (arr: string[]): string[] => {
+      return arr.map(item => sanitizeForPrompt(item).substring(0, 100)).slice(0, 20);
+    };
 
     console.log(`Generating blog post: ${postConfig.post_id} for ${isServiceCall ? 'service-role' : userId}`);
 
@@ -385,7 +422,7 @@ TONE: Factual, direct, authoritative. No marketing fluff. Answers first, explana
 ${jurisdictionPrompt}
 
 ENTITY PACK (MUST INCLUDE ALL):
-${postConfig.entity_pack.join(', ')}`
+${sanitizeArray(postConfig.entity_pack || []).join(', ')}`
           },
           { 
             role: "user", 
@@ -395,11 +432,11 @@ ${postConfig.entity_pack.join(', ')}`
 
 GENERATE NOW:
 
-Title: ${postConfig.title}
-Target Audience: ${postConfig.target_audience}
-Jurisdiction: ${postConfig.jurisdiction}
-Keywords: ${postConfig.keywords.join(", ")}
-Required Entities: ${postConfig.entity_pack.join(", ")}`
+Title: ${sanitizeForPrompt(postConfig.title)}
+Target Audience: ${sanitizeForPrompt(postConfig.target_audience)}
+Jurisdiction: ${sanitizeForPrompt(postConfig.jurisdiction)}
+Keywords: ${sanitizeArray(postConfig.keywords || []).join(", ")}
+Required Entities: ${sanitizeArray(postConfig.entity_pack || []).join(", ")}`
           }
         ],
       }),
@@ -466,7 +503,10 @@ Required Entities: ${postConfig.entity_pack.join(", ")}`
       .select()
       .single();
 
-    if (dbError) throw new Error(`Database error: ${dbError.message}`);
+    if (dbError) {
+      console.error('Database error:', dbError);
+      throw new Error('Failed to save content');
+    }
 
     // Update schedule tracking
     await supabase
@@ -490,7 +530,7 @@ Required Entities: ${postConfig.entity_pack.join(", ")}`
     });
   } catch (error) {
     console.error("Error generating blog post:", error);
-    return new Response(JSON.stringify({ error: error instanceof Error ? error.message : "Unknown error" }), {
+    return new Response(JSON.stringify({ error: 'Content generation failed' }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });

@@ -98,7 +98,7 @@ serve(async (req) => {
       return new Response(JSON.stringify({ 
         success: false,
         postId: nextPost.post_id,
-        error: result.error,
+        error: 'Generation failed',
         duration: `${duration}ms`
       }), {
         status: response.status,
@@ -130,7 +130,7 @@ serve(async (req) => {
     
     return new Response(JSON.stringify({ 
       success: false,
-      error: error instanceof Error ? error.message : "Unknown error",
+      error: 'Blog generation failed',
       duration: `${duration}ms`
     }), {
       status: 500,
