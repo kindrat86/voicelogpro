@@ -72,6 +72,20 @@ export default function BlogPost() {
     );
   }
 
+  // Helper to validate URL is safe (blocks javascript:, data:, vbscript: protocols)
+  const isSafeUrl = (url: string): boolean => {
+    const trimmed = url.trim().toLowerCase();
+    // Block dangerous protocols
+    const dangerousProtocols = ['javascript:', 'data:', 'vbscript:', 'file:'];
+    for (const protocol of dangerousProtocols) {
+      if (trimmed.startsWith(protocol)) {
+        return false;
+      }
+    }
+    // Only allow http, https, or relative paths
+    return /^(https?:\/\/|\/[^\/])/.test(trimmed);
+  };
+
   // Helper to render inline markdown links
   const LINK_RE = /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g;
 
@@ -86,6 +100,14 @@ export default function BlogPost() {
       // Add text before the link
       if (index > lastIndex) {
         nodes.push(text.slice(lastIndex, index));
+      }
+      
+      // Security: Validate URL before rendering
+      if (!isSafeUrl(url)) {
+        // Render as plain text if URL is unsafe
+        nodes.push(label);
+        lastIndex = index + full.length;
+        continue;
       }
       
       const external = /^https?:\/\//.test(url);
