@@ -15,7 +15,7 @@ jobs:
           response=$(curl -s -w "\n%{http_code}" -X POST \
             "https://isethofkdawreiitpkdq.supabase.co/functions/v1/cron-blog-generator" \
             -H "Content-Type: application/json" \
-            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}")
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}")
           
           http_code=$(echo "$response" | tail -n1)
           body=$(echo "$response" | sed '$d')
