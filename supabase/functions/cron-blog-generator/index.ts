@@ -19,6 +19,7 @@ serve(async (req) => {
   }
 
   const startTime = Date.now();
+  console.log("Internal Supabase Cron Triggered");
   console.log(`[${new Date().toISOString()}] Cron blog generator triggered`);
 
   try {
