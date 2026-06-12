@@ -1,6 +1,7 @@
 import { hydrateRoot, createRoot } from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
+import './integrations/posthog';
 import './index.css';
 
 const container = document.getElementById('root');
