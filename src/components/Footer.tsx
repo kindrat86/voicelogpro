@@ -35,6 +35,15 @@ export function Footer() {
               <Link to="/blog" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 Blog
               </Link>
+              <Link to="/how-to" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                How-To Guides
+              </Link>
+              <Link to="/compare" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                Compare Alternatives
+              </Link>
+              <Link to="/for" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                For Your Trade
+              </Link>
               <Link to="/raken-vs-voice-log-pro" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 Raken vs Voice Log Pro
               </Link>

@@ -8,9 +8,17 @@ const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
 
+// SSR-safe storage: use a no-op adapter in Node.js context
+const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
+const ssrStorage = {
+  getItem: (key: string) => (isBrowser ? localStorage.getItem(key) : null),
+  setItem: (key: string, value: string) => { if (isBrowser) localStorage.setItem(key, value); },
+  removeItem: (key: string) => { if (isBrowser) localStorage.removeItem(key); },
+};
+
 export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
   auth: {
-    storage: localStorage,
+    storage: ssrStorage,
     persistSession: true,
     autoRefreshToken: true,
   }

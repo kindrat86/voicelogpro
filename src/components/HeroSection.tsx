@@ -1,10 +1,23 @@
 import { useEffect, useState } from "react";
-import { CTAButton } from "@/components/CTAButton";
+import { LeadMagnetForm } from "@/components/LeadMagnetForm";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 // Hero plumber image is preloaded from public folder for LCP optimization
 import heroElectrician from "@/assets/hero-electrician.jpg";
 import beforeMessyNotes from "@/assets/before-messy-notes.jpg";
 import afterCleanPdf from "@/assets/after-clean-pdf.jpg";
+import { Star } from "lucide-react";
+
+// Social proof bar — Brunson "mass influence" pattern
+const SocialProofBar = () => (
+  <div className="flex items-center justify-center gap-3 mb-6 animate-fade-up" style={{ animationDelay: "0.05s" }}>
+    <div className="flex">
+      {[0,1,2,3,4].map(i => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+    </div>
+    <span className="text-sm text-muted-foreground font-medium">
+      Built by subcontractors. Trusted on jobsites.
+    </span>
+  </div>
+);
 
 // Animated waveform component for voice-first trust signal
 const HeroWaveform = () => {
@@ -26,6 +39,7 @@ const HeroWaveform = () => {
       </div>
     </div>;
 };
+
 export function HeroSection() {
   return <section className="relative min-h-[100dvh] flex flex-col justify-center px-4 py-16 overflow-hidden">
       {/* Background gradient */}
@@ -44,6 +58,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         
+        <SocialProofBar />
         
         <h1 className="headline-primary text-foreground mb-6 animate-fade-up" style={{
         animationDelay: "0.1s"
@@ -69,14 +84,16 @@ export function HeroSection() {
           <span className="block mt-2">Built for subs who need to move fast — and prove work got done.</span>
         </p>
         
-        {/* CTA with waveform background */}
-        <div className="relative animate-fade-up mb-12" style={{
-        animationDelay: "0.3s"
-      }}>
+        {/* PRIMARY CTA: Lead magnet opt-in (Brunson squeeze in hero) */}
+        <div className="relative animate-fade-up mb-8" style={{ animationDelay: "0.3s" }}>
           <HeroWaveform />
-          <CTAButton variant="hero" className="text-4xl" />
+          <LeadMagnetForm ctaLabel="Get the Free Defense Kit" source="hero_lead_magnet" variant="hero" />
         </div>
 
+        <p className="text-sm text-muted-foreground mb-10 animate-fade-up" style={{ animationDelay: "0.35s" }}>
+          Or <a href="#crew-plan" className="text-primary font-bold underline">see the paid Crew Plan →</a>
+        </p>
+        
         {/* Before/After Slider */}
         <div className="animate-fade-up" style={{
         animationDelay: "0.4s"
