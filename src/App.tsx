@@ -28,6 +28,16 @@ const SmallElectricalBusinessSoftware = lazy(() => import("./pages/solutions/Sma
 // Comparison landing pages
 const RakenComparison = lazy(() => import("./pages/RakenComparison"));
 const FieldwireComparison = lazy(() => import("./pages/FieldwireComparison"));
+const ComparisonPage = lazy(() => import("./pages/ComparisonPage"));
+const ComparisonsHub = lazy(() => import("./pages/ComparisonsHub"));
+
+// How-to guides (search-intent prefix pages)
+const HowToPage = lazy(() => import("./pages/HowToPage"));
+const HowToHub = lazy(() => import("./pages/HowToHub"));
+
+// Trade vertical pages (niche landing pages)
+const TradePage = lazy(() => import("./pages/TradePage"));
+const TradesHub = lazy(() => import("./pages/TradesHub"));
 
 // Standalone conversion landing page
 const BetaSignup = lazy(() => import("./pages/BetaSignup"));
@@ -47,6 +57,8 @@ const App = () => (
               <Route path="/crew-plan" element={<CrewPlan />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
+              {/* Single blog post routes */}
+              <Route path="/blog/texas-lien-law" element={<TexasLienLaw2025 />} />
               {/* GEO-optimized blog posts */}
               <Route path="/blog/texas-property-code-chapter-53-guide-2025" element={<TexasLienLaw2025 />} />
               {/* Solutions pages - entity-specific landing pages */}
@@ -62,6 +74,19 @@ const App = () => (
               {/* Comparison landing pages */}
               <Route path="/raken-vs-voice-log-pro" element={<RakenComparison />} />
               <Route path="/fieldwire-vs-voice-log-pro" element={<FieldwireComparison />} />
+              {/* Programmatic SEO comparison pages */}
+              <Route path="/compare" element={<ComparisonsHub />} />
+              <Route path="/procore-vs-voice-log-pro" element={<ComparisonPage />} />
+              <Route path="/buildertrend-vs-voice-log-pro" element={<ComparisonPage />} />
+              <Route path="/contractor-foreman-vs-voice-log-pro" element={<ComparisonPage />} />
+              <Route path="/jobnimbus-vs-voice-log-pro" element={<ComparisonPage />} />
+              <Route path="/knowify-vs-voice-log-pro" element={<ComparisonPage />} />
+              {/* How-to guides (search-intent prefix pages) */}
+              <Route path="/how-to" element={<HowToHub />} />
+              <Route path="/how-to/:slug" element={<HowToPage />} />
+              {/* Trade vertical pages (niche landing pages) */}
+              <Route path="/for" element={<TradesHub />} />
+              <Route path="/for/:slug" element={<TradePage />} />
               {/* Standalone conversion landing page */}
               <Route path="/beta" element={<BetaSignup />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
