@@ -39,6 +39,8 @@ export const PRERENDER_ROUTES: string[] = [
   '/beta',
   '/blog/texas-lien-law',
   '/blog/texas-property-code-chapter-53-guide-2025',
+  '/about',
+  '/contact',
 ];
 
 /**
@@ -129,5 +131,15 @@ export const ROUTE_METADATA: Record<string, {
     title: 'Beta Access | Voice Log Pro',
     description: 'Get early beta access to Voice Log Pro. Join the waitlist for voice-first daily construction reports for subcontractors.',
     canonical: 'https://www.voicelogpro.com/beta',
+  },
+  '/about': {
+    title: 'About Voice Log Pro — Voice-to-PDF Daily Construction Reports',
+    description: 'Voice Log Pro turns voice notes into court-ready daily construction reports. Built by subcontractors who learned that missing reports cost more than bad work.',
+    canonical: 'https://www.voicelogpro.com/about',
+  },
+  '/contact': {
+    title: 'Contact Voice Log Pro | Daily Construction Reports Support',
+    description: 'Get in touch with Voice Log Pro. Questions about daily construction reports, partnership inquiries, or support. We answer fast.',
+    canonical: 'https://www.voicelogpro.com/contact',
   },
 };

@@ -63,6 +63,8 @@ import TradesHub from './pages/TradesHub';
 
 // Standalone
 import BetaSignup from './pages/BetaSignup';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 interface RenderResult {
   html: string;
@@ -123,6 +125,8 @@ export async function render(url: string): Promise<RenderResult> {
                 <Route path="/for" element={<TradesHub />} />
                 <Route path="/for/:slug" element={<TradePage />} />
                 <Route path="/beta" element={<BetaSignup />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>

@@ -44,5 +44,27 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/alternatives-to/:slug",
+      "destination": "/alternatives-to/:slug.html"
+    },
+    {
+      "source": "/vs/:slug",
+      "destination": "/vs/:slug.html"
+    },
+    {
+      "source": "/for/:slug",
+      "destination": "/for/:slug.html"
+    },
+    {
+      "source": "/glossary/:slug",
+      "destination": "/glossary/:slug.html"
+    },
+    {
+      "source": "/best/:slug",
+      "destination": "/best/:slug.html"
+    }
   ]
 }

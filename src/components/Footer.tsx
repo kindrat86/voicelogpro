@@ -54,6 +54,19 @@ export function Footer() {
               </Link>
             </nav>
           </div>
+
+          {/* Company */}
+          <div>
+            <p className="font-semibold text-foreground mb-3 text-sm">Company</p>
+            <nav className="flex flex-col gap-2">
+              <Link to="/about" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                About
+              </Link>
+              <Link to="/contact" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                Contact
+              </Link>
+            </nav>
+          </div>
         </div>
 
         {/* Language Switcher + Copyright */}

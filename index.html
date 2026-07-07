@@ -103,11 +103,32 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://www.voicelogpro.com/#organization",
       "name": "Voice Log Pro",
       "url": "https://www.voicelogpro.com",
+      "logo": "https://www.voicelogpro.com/favicon.png",
       "description": "Voice Log Pro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
       "foundingDate": "2024",
-      "sameAs": []
+      "sameAs": ["https://twitter.com/VoiceLogPro"]
+    }
+    </script>
+
+    <!-- WebSite Schema (with SearchAction) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.voicelogpro.com/#website",
+      "url": "https://www.voicelogpro.com",
+      "name": "Voice Log Pro",
+      "description": "AI-powered construction daily reporting tool that converts voice notes into legally defensible PDF reports for subcontractors.",
+      "publisher": { "@id": "https://www.voicelogpro.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.voicelogpro.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "en-US"
     }
     </script>
     
@@ -252,5 +273,51 @@
     
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+  
+<!-- pSEO Footer Navigation -->
+<style>
+.pseo-footer { max-width: 1200px; margin: 0 auto; padding: 40px 20px; border-top: 1px solid #e5e7eb; margin-top: 60px; }
+.pseo-footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+.pseo-footer-section h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6b7280; }
+.pseo-footer-section ul { list-style: none; padding: 0; margin: 0; }
+.pseo-footer-section li { margin-bottom: 6px; }
+.pseo-footer-section a { color: #374151; text-decoration: none; font-size: 14px; }
+.pseo-footer-section a:hover { color: #4f46e5; text-decoration: underline; }
+</style>
+<nav class="pseo-footer" aria-label="Resources">
+  <div class="pseo-footer-grid">
+    <div class="pseo-footer-section">
+      <h3>Alternatives</h3>
+      <ul>
+      <li><a href="/alternatives-to/otter-ai">Otter.ai</a></li>
+      <li><a href="/alternatives-to/rev">Rev</a></li>
+      <li><a href="/alternatives-to/descript">Descript</a></li>
+      <li><a href="/alternatives-to/trint">Trint</a></li>
+      <li><a href="/alternatives-to/sonix">Sonix</a></li>
+        <li><a href="/alternatives-to">View all</a></li>
+      </ul>
+    </div>
+    <div class="pseo-footer-section">
+      <h3>Industries</h3>
+      <ul>
+      <li><a href="/for/healthcare">Healthcare</a></li>
+      <li><a href="/for/legal">Legal</a></li>
+      <li><a href="/for/journalism">Journalism</a></li>
+      <li><a href="/for/construction">Construction</a></li>
+        <li><a href="/for">View all</a></li>
+      </ul>
+    </div>
+    <div class="pseo-footer-section">
+      <h3>Glossary</h3>
+      <ul>
+      <li><a href="/glossary/voice-logging">Voice Logging</a></li>
+      <li><a href="/glossary/transcription">Transcription</a></li>
+      <li><a href="/glossary/speaker-diarization">Speaker Diarization</a></li>
+        <li><a href="/glossary">View all</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</body>
 </html>

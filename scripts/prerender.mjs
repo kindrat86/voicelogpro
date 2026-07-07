@@ -56,6 +56,8 @@ const PRERENDER_ROUTES = [
   '/beta',
   '/blog/texas-lien-law',
   '/blog/texas-property-code-chapter-53-guide-2025',
+  '/about',
+  '/contact',
 ];
 
 function stripDefaultHeadTags(html) {
