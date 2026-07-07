@@ -7,8 +7,8 @@ import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { Mic, FileText, Clock, Shield, FileCheck, Users, Smartphone, CheckCircle, Loader2, Zap } from "lucide-react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
-import beforeImage from "@/assets/before-messy-notes.jpg";
-import afterImage from "@/assets/after-clean-pdf.jpg";
+import beforeImage from "@/assets/before-messy-notes.webp";
+import afterImage from "@/assets/after-clean-pdf.webp";
 
 const emailSchema = z.string().email("Please enter a valid email address");
 

@@ -2,24 +2,42 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+// SSR-safe: the supabase client is created lazily only when first accessed.
+// This prevents the SSR/prerender pipeline from choking on missing VITE env vars.
+// In browser context, env vars are available via Vite's import.meta.env.
+// In SSR context (Vite dev server), they may not be set, so we defer.
 
-// Import the supabase client like this:
-// import { supabase } from "@/integrations/supabase/client";
+let client: ReturnType<typeof createClient<Database>> | null = null;
 
-// SSR-safe storage: use a no-op adapter in Node.js context
-const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
-const ssrStorage = {
-  getItem: (key: string) => (isBrowser ? localStorage.getItem(key) : null),
-  setItem: (key: string, value: string) => { if (isBrowser) localStorage.setItem(key, value); },
-  removeItem: (key: string) => { if (isBrowser) localStorage.removeItem(key); },
-};
+function makeClient() {
+  // SSR-safe storage: use a no-op adapter in Node.js context
+  const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
+  const ssrStorage = {
+    getItem: (key: string) => (isBrowser ? localStorage.getItem(key) : null),
+    setItem: (key: string, value: string) => { if (isBrowser) localStorage.setItem(key, value); },
+    removeItem: (key: string) => { if (isBrowser) localStorage.removeItem(key); },
+  };
 
-export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
-  auth: {
-    storage: ssrStorage,
-    persistSession: true,
-    autoRefreshToken: true,
+  const url = import.meta.env.VITE_SUPABASE_URL;
+  const key = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+
+  return createClient<Database>(url || 'https://placeholder.supabase.co', key || 'placeholder-key', {
+    auth: {
+      storage: ssrStorage,
+      persistSession: true,
+      autoRefreshToken: true,
+    }
+  });
+}
+
+// Use a Proxy to lazily initialize the supabase client on first property access.
+// This way, importing this module doesn't immediately call createClient(),
+// which would throw in SSR when env vars are absent.
+export const supabase = new Proxy({} as ReturnType<typeof createClient<Database>>, {
+  get(_target, prop) {
+    if (!client) {
+      client = makeClient();
+    }
+    return (client as any)[prop];
   }
 });

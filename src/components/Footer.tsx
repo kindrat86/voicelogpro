@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+
 export function Footer() {
   return <footer className="border-t border-border py-12 px-4">
       <div className="max-w-4xl mx-auto">
@@ -53,10 +55,14 @@ export function Footer() {
             </nav>
           </div>
         </div>
-        
-        <div className="border-t border-border pt-8 text-center">
+
+        {/* Language Switcher + Copyright */}
+        <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
+          </div>
           <p className="text-muted-foreground text-sm">
-            Built for the crew. © {new Date().getFullYear()} All rights reserved.
+            Built for the crew. &copy; {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
       </div>

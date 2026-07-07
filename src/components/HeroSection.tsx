@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { LeadMagnetForm } from "@/components/LeadMagnetForm";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 // Hero plumber image is preloaded from public folder for LCP optimization
-import heroElectrician from "@/assets/hero-electrician.jpg";
-import beforeMessyNotes from "@/assets/before-messy-notes.jpg";
-import afterCleanPdf from "@/assets/after-clean-pdf.jpg";
+import heroElectrician from "@/assets/hero-electrician.webp";
+import beforeMessyNotes from "@/assets/before-messy-notes.webp";
+import afterCleanPdf from "@/assets/after-clean-pdf.webp";
 import { Star } from "lucide-react";
 
 // Social proof bar — Brunson "mass influence" pattern
@@ -48,7 +48,7 @@ export function HeroSection() {
       {/* Background images - mobile stacked, desktop side by side */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 md:w-1/2 md:left-0">
-          <img src="/images/hero-plumber.jpg" alt="Plumber working on construction site" className="w-full h-full object-cover" fetchPriority="high" />
+          <img src="/images/hero-plumber.webp" alt="Plumber working on construction site" className="w-full h-full object-cover" fetchPriority="high" />
         </div>
         <div className="hidden md:block absolute inset-0 w-1/2 right-0 left-auto">
           <img src={heroElectrician} alt="Electrician pulling wire" className="w-full h-full object-cover" />

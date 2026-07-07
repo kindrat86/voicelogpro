@@ -1,6 +1,6 @@
 import { CTAButton } from "@/components/CTAButton";
-import plumberCard from "@/assets/plumber-card.jpg";
-import electricianCard from "@/assets/electrician-card.jpg";
+import plumberCard from "@/assets/plumber-card.webp";
+import electricianCard from "@/assets/electrician-card.webp";
 
 const tradeCards = [
   {

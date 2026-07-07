@@ -9,7 +9,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -20,13 +23,30 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+          "react-vendor": ["react", "react-dom", "react-router-dom"],
+          "ui-core": [
+            "@radix-ui/react-accordion",
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-dropdown-menu",
+            "@radix-ui/react-tabs",
+            "@radix-ui/react-tooltip",
+            "@radix-ui/react-popover",
+          ],
+          "ui-form": [
+            "@radix-ui/react-select",
+            "@radix-ui/react-checkbox",
+            "@radix-ui/react-switch",
+            "@radix-ui/react-label",
+            "@radix-ui/react-slider",
+            "@radix-ui/react-radio-group",
+          ],
+          "ui-visual": ["recharts", "lucide-react"],
+          "data-layer": ["@tanstack/react-query", "@supabase/supabase-js"],
         },
       },
     },
   },
   ssr: {
-    noExternal: ['react-helmet-async'],
+    noExternal: ["react-helmet-async"],
   },
 }));
