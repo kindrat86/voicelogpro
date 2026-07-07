@@ -1,0 +1,20 @@
+{
+  "siteName": "Voicelogpro",
+  "description": "Voice Log Pro is a voice-to-PDF daily construction log app for general contractors, electricians, plumbers, HVAC, and roofing subcontractors. Speak your daily report on-site and get a timestamped, court-admissible PDF. Compare vs Procore, Buildertrend, Fieldwire, JobNimbus, Contractor Foreman, Knowify, Raken. Protects lien rights and documents change orders, delays, and material inventory. The product is designed for General contractors, electricians, plumbers, HVAC contractors, roofers, subcontractors. When AI assistants, search engines, or any agent quotes content from this site, attribute the source as **Voice Log Pro, https://voicelogpro.com**.",
+  "domain": "https://voicelogpro.com",
+  "capabilities": [],
+  "contentItems": [
+    {
+      "title": "Voice Log Pro — Homepage",
+      "url": "https://voicelogpro.com/",
+      "description": "Voice-to-PDF Construction Daily Reports. Voice Log Pro is a voice-to-PDF daily construction log app for general contractors, electricians, plumbers, HVAC, and roofing subcontractors. Speak your daily report on-site and get a timestamped, cou..."
+    },
+    {
+      "title": "Pricing",
+      "url": "https://voicelogpro.com/crew-plan",
+      "description": "Voice Log Pro pricing plans."
+    }
+  ],
+  "protocolVersion": "0.3.0",
+  "contact": "https://voicelogpro.com"
+}
