@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Voice Log Pro</title>
+    <link>https://voicelogpro.com</link>
+    <description>Voice-to-PDF daily construction log app for contractors.</description>
+    <language>en</language>
+    <lastBuildDate>Tue, 07 Jul 2026 14:57:21 GMT</lastBuildDate>
+    <atom:link href="https://voicelogpro.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homepage</title>
+      <link>https://voicelogpro.com/</link>
+      <guid isPermaLink="true">https://voicelogpro.com/</guid>
+      <description>Voice-to-PDF construction daily reports</description>
+    </item>
+    <item>
+      <title>Compare</title>
+      <link>https://voicelogpro.com/compare</link>
+      <guid isPermaLink="true">https://voicelogpro.com/compare</guid>
+      <description>Compare vs Procore, Buildertrend, Fieldwire</description>
+    </item>
+    <item>
+      <title>For Electricians</title>
+      <link>https://voicelogpro.com/for/electricians</link>
+      <guid isPermaLink="true">https://voicelogpro.com/for/electricians</guid>
+      <description>Daily logs for electricians</description>
+    </item>
+    <item>
+      <title>For Plumbers</title>
+      <link>https://voicelogpro.com/for/plumbers</link>
+      <guid isPermaLink="true">https://voicelogpro.com/for/plumbers</guid>
+      <description>Daily logs for plumbers</description>
+    </item>
+    <item>
+      <title>Protect Lien Rights</title>
+      <link>https://voicelogpro.com/how-to/protect-lien-rights-as-subcontractor</link>
+      <guid isPermaLink="true">https://voicelogpro.com/how-to/protect-lien-rights-as-subcontractor</guid>
+      <description>Guide</description>
+    </item>
+  </channel>
+</rss>

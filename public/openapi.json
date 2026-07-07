@@ -1,0 +1,23 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Voice Log Pro",
+    "description": "Voice-to-PDF daily construction log app for contractors.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://voicelogpro.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://voicelogpro.com"
+    }
+  ],
+  "paths": {},
+  "tags": [
+    {
+      "name": "content",
+      "description": "Site content"
+    }
+  ]
+}
