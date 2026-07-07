@@ -41,6 +41,8 @@ const TradesHub = lazy(() => import("./pages/TradesHub"));
 
 // Standalone conversion landing page
 const BetaSignup = lazy(() => import("./pages/BetaSignup"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 const queryClient = new QueryClient();
 
@@ -89,6 +91,9 @@ const App = () => (
               <Route path="/for/:slug" element={<TradePage />} />
               {/* Standalone conversion landing page */}
               <Route path="/beta" element={<BetaSignup />} />
+              {/* Trust pages */}
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
