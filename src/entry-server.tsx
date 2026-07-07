@@ -10,8 +10,14 @@ import { Toaster } from '@/components/ui/toaster';
 import { Toaster as Sonner } from '@/components/ui/sonner';
 import { Routes, Route } from 'react-router-dom';
 
+// i18n for server-side rendering
+import i18n from './i18n';
+import { I18nextProvider } from 'react-i18next';
+
 // React Helmet Async - dynamically loaded to avoid CJS/ESM interop issues
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let HelmetProvider: any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let Helmet: any;
 
 export async function initHelmet() {
@@ -68,6 +74,7 @@ export async function render(url: string): Promise<RenderResult> {
     await initHelmet();
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const helmetContext: Record<string, any> = {};
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -79,7 +86,8 @@ export async function render(url: string): Promise<RenderResult> {
   });
 
   const html = renderToString(
-    <HelmetProvider context={helmetContext}>
+    <I18nextProvider i18n={i18n}>
+      <HelmetProvider context={helmetContext}>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />
@@ -122,8 +130,10 @@ export async function render(url: string): Promise<RenderResult> {
         </TooltipProvider>
       </QueryClientProvider>
     </HelmetProvider>
+    </I18nextProvider>
   );
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const helmet = helmetContext.helmet as any;
 
   const head = helmet

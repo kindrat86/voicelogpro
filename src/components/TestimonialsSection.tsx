@@ -1,7 +1,7 @@
 import { CTAButton } from "@/components/CTAButton";
 import { AudioTestimonialButton } from "@/components/AudioTestimonialButton";
-import jasonImage from "@/assets/testimonial-jason.jpg";
-import mariaImage from "@/assets/testimonial-maria.jpg";
+import jasonImage from "@/assets/testimonial-jason.webp";
+import mariaImage from "@/assets/testimonial-maria.webp";
 
 const testimonials = [
   {

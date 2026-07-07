@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&display=swap');
+/* Fonts are preloaded via <link> tags in index.html with preconnect + crossorigin.
+   No @import URL needed — it would be render-blocking. The preload strategy
+   achieves faster font delivery than CSS @import. */
 
 @layer base {
   :root {
@@ -173,7 +175,6 @@
     }
   }
 
-  /* Waveform animation for voice-first UI */
   /* Voice waveform animation */
   .vl-animate-wave {
     animation: vl-wave 0.8s ease-in-out infinite;
