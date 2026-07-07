@@ -1,38 +1,30 @@
-# Voice Log Pro
-User-agent: *
+User-Agent: *
+Disallow: /api/auth/
+Disallow: /api/webhook/
+Disallow: /api/cron/
+Disallow: /dashboard/
+Disallow: /account/
+Disallow: /login/
+
+User-Agent: GPTBot
 Allow: /
 
-# Sitemap
-Sitemap: https://www.voicelogpro.com/sitemap.xml
-
-# AI Crawlers - Explicitly allowed
-User-agent: GPTBot
+User-Agent: ChatGPT-User
 Allow: /
 
-User-agent: ChatGPT-User
+User-Agent: PerplexityBot
 Allow: /
 
-User-agent: Claude-Web
+User-Agent: ClaudeBot
 Allow: /
 
-User-agent: Anthropic-AI
+User-Agent: anthropic-ai
 Allow: /
 
-User-agent: PerplexityBot
+User-Agent: Google-Extended
 Allow: /
 
-User-agent: Google-Extended
+User-Agent: Bingbot
 Allow: /
 
-# Standard crawlers
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+Sitemap: https://voicelogpro.com/sitemap.xml
