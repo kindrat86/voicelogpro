@@ -1,5 +1,61 @@
-const { readFileSync, existsSync } = require('fs');
-const { join } = require('path');
+const SITE_CONFIG = {
+  "protocolVersion": "0.3.0",
+  "name": "Voice Log Pro Agent",
+  "description": "Voice Log Pro is a voice-to-PDF daily construction log app for general contractors, electricians, plumbers, HVAC, and roofing subcontractors. Speak your daily report on-site and get a timestamped, court-admissible PDF. Compare vs Procore, Buildertrend, Fieldwire, JobNimbus, Contractor Foreman, Knowi",
+  "url": "https://voicelogpro.com",
+  "preferredTransport": "JSONRPC",
+  "iconUrl": "https://voicelogpro.com/icon.png",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "compare_field_apps",
+      "name": "Compare Field Apps",
+      "description": "Compare Voice Log Pro against Procore, Buildertrend, Fieldwire, JobNimbus, Contractor Foreman, Knowify, Raken on daily-log features and price.",
+      "tags": [
+        "construction daily log",
+        "voice daily report",
+        "field documentation",
+        "lien rights",
+        "change orders"
+      ],
+      "examples": []
+    }
+  ],
+  "attribution": "Voice Log Pro, https://voicelogpro.com",
+  "content": [
+    {
+      "title": "Voice Log Pro \u2014 Voice Daily Logs",
+      "url": "https://voicelogpro.com/",
+      "description": "Voice-first daily log app for construction. OSHA-compliant.",
+      "type": "homepage"
+    },
+    {
+      "title": "Voice Log Pro Pricing",
+      "url": "https://voicelogpro.com/crew-plan",
+      "description": "Per-seat pricing for construction teams.",
+      "type": "pricing"
+    },
+    {
+      "title": "Voice Log Pro vs Procore",
+      "url": "https://voicelogpro.com/alternatives/procore",
+      "description": "Compare Voice Log Pro daily logs vs Procore.",
+      "type": "comparison"
+    }
+  ]
+};
 
 module.exports = function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -8,29 +64,7 @@ module.exports = function handler(req, res) {
   
   if (req.method === 'OPTIONS') return res.status(200).end();
 
-  let siteConfig;
-  try {
-    const paths = [
-      join(process.cwd(), '.well-known', 'agent-card.json'),
-      join(process.cwd(), 'public', '.well-known', 'agent-card.json'),
-      join(process.cwd(), '..', '.well-known', 'agent-card.json'),
-    ];
-    for (const p of paths) {
-      if (existsSync(p)) {
-        siteConfig = JSON.parse(readFileSync(p, 'utf-8'));
-        break;
-      }
-    }
-    if (!siteConfig) throw new Error('not found');
-  } catch (e) {
-    return res.status(200).json({
-      name: require('path').basename(process.cwd()),
-      description: 'Site description not yet configured',
-      url: `https://${process.env.VERCEL_URL || 'example.com'}`,
-      capabilities: [],
-      content: []
-    });
-  }
+  const siteConfig = SITE_CONFIG;
 
   if (req.method === 'GET') {
     return res.status(200).json(siteConfig);
@@ -83,7 +117,7 @@ module.exports = function handler(req, res) {
     default:
       return res.status(200).json({
         jsonrpc: '2.0',
-        error: { code: -32601, message: `Method not found: ${method}` },
+        error: { code: -32601, message: 'Method not found: ' + method },
         id
       });
   }
