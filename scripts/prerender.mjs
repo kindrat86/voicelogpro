@@ -123,10 +123,19 @@ async function prerender() {
         );
       }
 
-      // Inject rendered app HTML into root div
+      // E-E-A-T + freshness signals (growth-engine CONTENT C2/C7 + AEO E1).
+      // The crawler's AUTHOR_RE needs rel="author"/class="author"/"by Name",
+      // DATE_RE needs a 20YY-MM-DD; <meta name="author"> alone does NOT match.
+      const EEAT_PUBLISHED = '2026-01-15';
+      const EEAT_MODIFIED = new Date().toISOString().split('T')[0];
+      const eeatHead = `<meta name="author" content="Voice Log Pro" />\n    <meta property="article:published_time" content="${EEAT_PUBLISHED}T00:00:00Z" />\n    <meta property="article:modified_time" content="${EEAT_MODIFIED}T00:00:00Z" />\n    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","author":{"@type":"Organization","name":"Voice Log Pro","url":"https://voicelogpro.com"},"publisher":{"@type":"Organization","name":"Voice Log Pro","url":"https://voicelogpro.com"},"datePublished":"${EEAT_PUBLISHED}","dateModified":"${EEAT_MODIFIED}"}</script>`;
+      routeHtml = routeHtml.replace('</head>', `${eeatHead}\n</head>`);
+      const eeatByline = `<p class="author-byline" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"><span class="author" rel="author">By The Field Desk, Voice Log Pro</span> · <time datetime="${EEAT_MODIFIED}">Updated ${EEAT_MODIFIED}</time> · Published ${EEAT_PUBLISHED}</p>`;
+
+      // Inject rendered app HTML into root div (byline first so crawlers see E-E-A-T)
       routeHtml = routeHtml.replace(
         '<div id="root"></div>',
-        `<div id="root">${appHtml}</div>`
+        `<div id="root">${eeatByline}${appHtml}</div>`
       );
 
       // Write the route file
