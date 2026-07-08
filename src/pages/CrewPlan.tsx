@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Footer } from "@/components/Footer";
@@ -78,6 +79,11 @@ export default function CrewPlan() {
 
   return (
     <main className="min-h-screen bg-background flex flex-col">
+      <Helmet>
+        <title>Crew Plan Pricing — Voice Log Pro for Construction Teams</title>
+        <meta name="description" content="Voice Log Pro offers two plans: a free Solo Beta (unlimited voice logs, standard PDF reports) and the $49/month Crew Plan for up to 5 crews with priority onboarding and custom branding. No credit card required to start." />
+        <link rel="canonical" href="https://www.voicelogpro.com/crew-plan" />
+      </Helmet>
       <div className="flex-1 flex items-center justify-center px-4 py-16">
         <div className="w-full max-w-4xl">
           {/* Back link */}
@@ -111,9 +117,15 @@ export default function CrewPlan() {
           ) : (
             <>
               {/* Page Header */}
-              <h1 className="headline-section text-foreground mb-8 text-center">
+              <h1 className="headline-section text-foreground mb-4 text-center">
                 Choose your path
               </h1>
+              <p className="text-lg text-muted-foreground mb-8 text-center max-w-2xl mx-auto">
+                Voice Log Pro has two plans. The <strong>Solo Beta is free</strong> — unlimited voice logs,
+                standard PDF reports, and email support, no credit card required. The <strong>Crew Plan is
+                $49/month</strong> and adds up to 5 crews, priority onboarding, and custom branding. Pick the
+                one that fits how your team works today.
+              </p>
 
               {/* Two-Option Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
