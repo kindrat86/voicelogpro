@@ -37,6 +37,9 @@ export function Footer() {
               <Link to="/blog" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 Blog
               </Link>
+              <Link to="/blog/texas-property-code-chapter-53-guide-2025" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                Texas Property Code Chapter 53 Guide
+              </Link>
               <Link to="/how-to" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 How-To Guides
               </Link>
