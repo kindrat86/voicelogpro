@@ -60,11 +60,27 @@ const PRERENDER_ROUTES = [
   '/contact',
 ];
 
-function stripDefaultHeadTags(html) {
+function stripDefaultHeadTags(html, helmetHead = '') {
   // Remove the default <title> tag
   html = html.replace(/<title>.*?<\/title>\n?/, '');
   // Remove the default <meta name="description">
   html = html.replace(/<meta name="description" content="[^"]*"[^>]*>\n?/, '');
+  // Remove the template's hardcoded homepage canonical / OG url+title / Twitter title
+  // ONLY when the route's Helmet provides its own — otherwise every prerendered route
+  // inherits the HOMEPAGE canonical + OG/Twitter tags and Helmet APPENDS a second copy,
+  // producing TWO canonicals per page (homepage one winning) + duplicate OG/Twitter
+  // titles. Stripping conditionally keeps a canonical on pages whose Helmet omits one.
+  // (growth-engine C5 dedupe_titles_metas + T6 canonical correctness)
+  if (/rel="canonical"/.test(helmetHead)) {
+    html = html.replace(/<link rel="canonical"[^>]*>\n?/, '');
+    html = html.replace(/<meta property="og:url"[^>]*>\n?/, '');
+  }
+  if (/property="og:title"/.test(helmetHead)) {
+    html = html.replace(/<meta property="og:title"[^>]*>\n?/, '');
+  }
+  if (/name="twitter:title"/.test(helmetHead)) {
+    html = html.replace(/<meta name="twitter:title"[^>]*>\n?/, '');
+  }
   return html;
 }
 
@@ -108,8 +124,9 @@ async function prerender() {
       // Build the route HTML from template:
       let routeHtml = baseTemplate;
 
-      // Strip default SEO tags from template — Helmet provides per-route ones
-      routeHtml = stripDefaultHeadTags(routeHtml);
+      // Strip default SEO tags from template — Helmet provides per-route ones.
+      // Pass helmetHead so we only strip template canonical/OG/Twitter that Helmet replaces.
+      routeHtml = stripDefaultHeadTags(routeHtml, helmetHead);
 
       // Inject helmet head tags before </head>
       // These include <title>, <meta name="description">, <link rel="canonical"> from each page's Helmet component
