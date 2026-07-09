@@ -11,7 +11,7 @@ export default function ComparisonsHub() {
       <Helmet>
         <title>Voice Log Pro vs Competitors | Construction Daily Report Comparisons</title>
         <meta name="description" content="See how Voice Log Pro compares to Procore, Buildertrend, Contractor Foreman, JobNimbus, and Knowify. Honest comparisons for subcontractors who need payment protection." />
-        <link rel="canonical" href="https://www.voicelogpro.com/compare" />
+        <link rel="canonical" href="https://voicelogpro.com/compare" />
       </Helmet>
 
       <main className="min-h-screen bg-background">

@@ -19,7 +19,7 @@ const TexasMechanicsLien = () => {
       <Helmet>
         <title>Texas Mechanics Lien Compliance | Property Code Chapter 53 | Voice Log Pro</title>
         <meta name="description" content="Automate Texas Property Code Chapter 53 compliance with Voice Log Pro. Generate monthly trapping notices and preserve lien rights with timestamped daily logs for Dallas-Fort Worth and Austin subcontractors." />
-        <link rel="canonical" href="https://www.voicelogpro.com/solutions/texas-mechanics-lien-compliance" />
+        <link rel="canonical" href="https://voicelogpro.com/solutions/texas-mechanics-lien-compliance" />
       </Helmet>
       <JsonLd schema={[softwareApplicationSchema, organizationSchema, texasLienDocumentationHowTo, texasLienFaqSchema]} />
       <main className="min-h-screen bg-background">

@@ -52,7 +52,7 @@ const FightUnfairDeductions = () => {
       <Helmet>
         <title>Fight Unfair GC Deductions | Deductive Change Order Defense | Voice Log Pro</title>
         <meta name="description" content="Stop letting GCs slash your invoice with unfair credits. Dispute deductive change orders and supervision fees with timestamped jobsite documentation." />
-        <link rel="canonical" href="https://www.voicelogpro.com/solutions/fight-unfair-gc-deductions" />
+        <link rel="canonical" href="https://voicelogpro.com/solutions/fight-unfair-gc-deductions" />
         <meta name="keywords" content="deductive change order, construction credit dispute, GC supervision fee, unfair back charges, subcontractor documentation" />
       </Helmet>
       <JsonLd schema={[softwareApplicationSchema, organizationSchema, faqSchema]} />

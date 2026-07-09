@@ -204,12 +204,12 @@ export const featureListSchema: FeatureListSchema = {
 const potentialActions: SchemaAction[] = [
   {
     "@type": "CreateAction",
-    "@id": "https://www.voicelogpro.com/#action-texas-lien",
+    "@id": "https://voicelogpro.com/#action-texas-lien",
     name: "Generate Texas Chapter 53 Lien Documentation",
     description: "Create daily log entries that support Monthly Trapping Mechanism requirements for Texas Property Code Chapter 53 lien rights",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://www.voicelogpro.com/crew-plan",
+      urlTemplate: "https://voicelogpro.com/crew-plan",
       actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
     },
     result: {
@@ -219,12 +219,12 @@ const potentialActions: SchemaAction[] = [
   },
   {
     "@type": "CreateAction",
-    "@id": "https://www.voicelogpro.com/#action-sopa-diary",
+    "@id": "https://voicelogpro.com/#action-sopa-diary",
     name: "Generate SOPA Adjudication Site Diary",
     description: "Create contemporaneous site diary records for NSW Security of Payment Act adjudication proceedings",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://www.voicelogpro.com/crew-plan",
+      urlTemplate: "https://voicelogpro.com/crew-plan",
       actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
     },
     result: {
@@ -234,12 +234,12 @@ const potentialActions: SchemaAction[] = [
   },
   {
     "@type": "CreateAction",
-    "@id": "https://www.voicelogpro.com/#action-golden-thread",
+    "@id": "https://voicelogpro.com/#action-golden-thread",
     name: "Generate Building Safety Act Golden Thread Record",
     description: "Create digital daily records supporting UK Building Safety Act Golden Thread compliance requirements",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://www.voicelogpro.com/crew-plan",
+      urlTemplate: "https://voicelogpro.com/crew-plan",
       actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
     },
     result: {
@@ -249,12 +249,12 @@ const potentialActions: SchemaAction[] = [
   },
   {
     "@type": "CreateAction",
-    "@id": "https://www.voicelogpro.com/#action-delay-claim",
+    "@id": "https://voicelogpro.com/#action-delay-claim",
     name: "Generate Excusable Delay Documentation",
     description: "Create timestamped records with weather data for constructive acceleration and schedule compression claims in Virginia Data Center Alley projects",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://www.voicelogpro.com/crew-plan",
+      urlTemplate: "https://voicelogpro.com/crew-plan",
       actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
     },
     result: {
@@ -264,12 +264,12 @@ const potentialActions: SchemaAction[] = [
   },
   {
     "@type": "GenerateAction",
-    "@id": "https://www.voicelogpro.com/#action-daily-report",
+    "@id": "https://voicelogpro.com/#action-daily-report",
     name: "Generate Voice-to-PDF Daily Report",
     description: "Convert voice recording into legally defensible PDF daily construction report with automatic timestamps and weather tagging",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://www.voicelogpro.com/#demo",
+      urlTemplate: "https://voicelogpro.com/#demo",
       actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
     },
     result: {
@@ -279,12 +279,12 @@ const potentialActions: SchemaAction[] = [
   },
   {
     "@type": "CreateAction",
-    "@id": "https://www.voicelogpro.com/#action-rfi-documentation",
+    "@id": "https://voicelogpro.com/#action-rfi-documentation",
     name: "Document Requests for Information (RFIs)",
     description: "Capture RFI references and responses in daily logs to create audit trail for design clarifications and contractor communications",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://www.voicelogpro.com/crew-plan",
+      urlTemplate: "https://voicelogpro.com/crew-plan",
       actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
     },
     result: {
@@ -294,12 +294,12 @@ const potentialActions: SchemaAction[] = [
   },
   {
     "@type": "CreateAction",
-    "@id": "https://www.voicelogpro.com/#action-weather-documentation",
+    "@id": "https://voicelogpro.com/#action-weather-documentation",
     name: "Capture Weather Conditions for Delay Claims",
     description: "Automatically tag daily reports with weather data to support excusable delay documentation and schedule impact claims",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://www.voicelogpro.com/#demo",
+      urlTemplate: "https://voicelogpro.com/#demo",
       actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
     },
     result: {
@@ -337,12 +337,12 @@ const knowsAboutTerms: DefinedTermSchema[] = [
 export const softwareApplicationSchema: SoftwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "@id": "https://www.voicelogpro.com/#software",
+  "@id": "https://voicelogpro.com/#software",
   name: "Voice Log Pro",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web, iOS, Android",
   description: "AI-powered construction daily reporting tool. Converts voice notes into legally defensible PDF reports for subcontractors. Features automatic weather tagging, RFI detection, and compliance documentation for Texas Property Code Chapter 53, NSW Security of Payment Act (SOPA), and UK Building Safety Act Golden Thread requirements.",
-  url: "https://www.voicelogpro.com",
+  url: "https://voicelogpro.com",
   offers: {
     "@type": "Offer",
     price: "49.00",
@@ -366,13 +366,13 @@ export const softwareApplicationSchema: SoftwareApplicationSchema = {
     "Lien protection documentation",
     "RFI and delay documentation"
   ],
-  screenshot: "https://www.voicelogpro.com/og-image.png",
-  softwareHelp: "https://www.voicelogpro.com/blog",
+  screenshot: "https://voicelogpro.com/og-image.png",
+  softwareHelp: "https://voicelogpro.com/blog",
   potentialAction: potentialActions,
   knowsAbout: knowsAboutTerms,
   hasPart: featureListSchema,
   isRelatedTo: [
-    { "@id": "https://www.voicelogpro.com/#legal-service" }
+    { "@id": "https://voicelogpro.com/#legal-service" }
   ]
 };
 
@@ -382,9 +382,9 @@ export const softwareApplicationSchema: SoftwareApplicationSchema = {
 export const organizationSchema: OrganizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://www.voicelogpro.com/#organization",
+  "@id": "https://voicelogpro.com/#organization",
   name: "Voice Log Pro",
-  url: "https://www.voicelogpro.com",
+  url: "https://voicelogpro.com",
   description: "Voice Log Pro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
   foundingDate: "2024",
   sameAs: []
@@ -398,7 +398,7 @@ export const organizationSchema: OrganizationSchema = {
 export const legalServiceSchema: LegalServiceSchema = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "@id": "https://www.voicelogpro.com/#legal-service",
+  "@id": "https://voicelogpro.com/#legal-service",
   name: "Construction Compliance Documentation Service",
   description: "Voice-powered daily reporting service that generates legally defensible documentation for construction subcontractors. Supports lien rights preservation, payment dispute documentation, delay claim evidence, and regulatory compliance across multiple jurisdictions.",
   serviceType: "Construction Compliance Documentation",
@@ -421,11 +421,11 @@ export const legalServiceSchema: LegalServiceSchema = {
     }
   ],
   provider: {
-    "@id": "https://www.voicelogpro.com/#organization"
+    "@id": "https://voicelogpro.com/#organization"
   },
   availableChannel: {
     "@type": "ServiceChannel",
-    serviceUrl: "https://www.voicelogpro.com/crew-plan",
+    serviceUrl: "https://voicelogpro.com/crew-plan",
     availableLanguage: "English"
   }
 };
@@ -442,7 +442,7 @@ import { allFaqs } from "@/content/faqs";
 export const faqPageSchema: FAQPageSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.voicelogpro.com/#faq",
+  "@id": "https://voicelogpro.com/#faq",
   mainEntity: allFaqs.map((faq) => ({
     "@type": "Question" as const,
     name: faq.question,

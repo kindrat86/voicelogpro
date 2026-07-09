@@ -50,7 +50,7 @@ export default function ComparisonPage() {
       <Helmet>
         <title>{comp.metaTitle}</title>
         <meta name="description" content={comp.metaDescription} />
-        <link rel="canonical" href={`https://www.voicelogpro.com/${comp.slug}-vs-voice-log-pro`} />
+        <link rel="canonical" href={`https://voicelogpro.com/${comp.slug}-vs-voice-log-pro`} />
       </Helmet>
 
       <main className="min-h-screen bg-background">

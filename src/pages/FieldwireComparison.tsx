@@ -102,7 +102,7 @@ export default function FieldwireComparison() {
           name="description"
           content="Compare Fieldwire vs Voice Log Pro. Fieldwire manages plans and tasks. Voice Log Pro protects subcontractors with court-ready voice logs, lien defense, and delay documentation."
         />
-        <link rel="canonical" href="https://www.voicelogpro.com/fieldwire-vs-voice-log-pro" />
+        <link rel="canonical" href="https://voicelogpro.com/fieldwire-vs-voice-log-pro" />
       </Helmet>
 
       <main className="min-h-screen bg-background">

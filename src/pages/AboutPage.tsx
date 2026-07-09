@@ -9,20 +9,20 @@ const aboutSchema = {
   name: "About Voice Log Pro",
   description:
     "Learn about Voice Log Pro — the voice-to-PDF daily construction log app built by subcontractors, for subcontractors.",
-  mainEntity: { "@type": "Organization", "@id": "https://www.voicelogpro.com/#organization" },
+  mainEntity: { "@type": "Organization", "@id": "https://voicelogpro.com/#organization" },
   significantLink: [
-    "https://www.voicelogpro.com/",
-    "https://www.voicelogpro.com/crew-plan",
-    "https://www.voicelogpro.com/blog",
+    "https://voicelogpro.com/",
+    "https://voicelogpro.com/crew-plan",
+    "https://voicelogpro.com/blog",
   ],
 };
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://www.voicelogpro.com/#organization",
+  "@id": "https://voicelogpro.com/#organization",
   name: "Voice Log Pro",
-  url: "https://www.voicelogpro.com",
+  url: "https://voicelogpro.com",
   logo: "https://storage.googleapis.com/gpt-engineer-file-uploads/4B8rhitxuFfh01PdeqSXDugsqvg2/uploads/1765892927118-VoiceLogProFavicon.png",
   description:
     "Voice Log Pro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
@@ -32,7 +32,7 @@ const organizationSchema = {
     "@type": "ContactPoint",
     contactType: "customer support",
     email: "hello@voicelogpro.com",
-    url: "https://www.voicelogpro.com/contact",
+    url: "https://voicelogpro.com/contact",
     availableLanguage: ["English"],
   },
 };
@@ -41,8 +41,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.voicelogpro.com/" },
-    { "@type": "ListItem", position: 2, name: "About", item: "https://www.voicelogpro.com/about" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://voicelogpro.com/" },
+    { "@type": "ListItem", position: 2, name: "About", item: "https://voicelogpro.com/about" },
   ],
 };
 
@@ -55,9 +55,9 @@ export default function AboutPage() {
           name="description"
           content="Voice Log Pro turns voice notes into court-ready daily construction reports. Built by subcontractors who learned that missing daily reports cost more than bad work. Learn our story."
         />
-        <link rel="canonical" href="https://www.voicelogpro.com/about" />
+        <link rel="canonical" href="https://voicelogpro.com/about" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.voicelogpro.com/about" />
+        <meta property="og:url" content="https://voicelogpro.com/about" />
         <meta property="og:title" content="About Voice Log Pro — Voice-to-PDF Daily Construction Reports" />
         <meta
           property="og:description"

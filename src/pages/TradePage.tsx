@@ -25,7 +25,7 @@ export default function TradePage() {
       <Helmet>
         <title>{trade.metaTitle}</title>
         <meta name="description" content={trade.metaDescription} />
-        <link rel="canonical" href={`https://www.voicelogpro.com/for/${trade.slug}`} />
+        <link rel="canonical" href={`https://voicelogpro.com/for/${trade.slug}`} />
       </Helmet>
 
       <main className="min-h-screen bg-background">

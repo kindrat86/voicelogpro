@@ -11,7 +11,7 @@ export default function TradesHub() {
       <Helmet>
         <title>Daily Construction Reports by Trade | Voice Log Pro</title>
         <meta name="description" content="Voice-first daily reports built for electricians, plumbers, HVAC contractors, roofers, and general contractors. Protect your payment with 30-second voice documentation." />
-        <link rel="canonical" href="https://www.voicelogpro.com/for" />
+        <link rel="canonical" href="https://voicelogpro.com/for" />
       </Helmet>
 
       <main className="min-h-screen bg-background">

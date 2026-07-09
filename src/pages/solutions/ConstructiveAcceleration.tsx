@@ -13,7 +13,7 @@ const ConstructiveAcceleration = () => {
       <Helmet>
         <title>Constructive Acceleration Defense | Virginia Data Center Evidence | Voice Log Pro</title>
         <meta name="description" content="Build evidence for constructive acceleration claims in Virginia Data Center Alley. Document excusable delays, schedule compression, and GC directives with timestamped daily logs." />
-        <link rel="canonical" href="https://www.voicelogpro.com/solutions/constructive-acceleration-defense" />
+        <link rel="canonical" href="https://voicelogpro.com/solutions/constructive-acceleration-defense" />
       </Helmet>
       <JsonLd schema={[softwareApplicationSchema, organizationSchema, delayDocumentationHowTo]} />
       <main className="min-h-screen bg-background">

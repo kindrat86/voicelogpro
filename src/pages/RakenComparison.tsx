@@ -100,7 +100,7 @@ export default function RakenComparison() {
           name="description"
           content="Compare Raken vs Voice Log Pro. Raken is built for GCs. Voice Log Pro is built for subcontractors to create court-ready proof, preserve lien rights, and protect payment—using voice."
         />
-        <link rel="canonical" href="https://www.voicelogpro.com/raken-vs-voice-log-pro" />
+        <link rel="canonical" href="https://voicelogpro.com/raken-vs-voice-log-pro" />
       </Helmet>
 
       <main className="min-h-screen bg-background">

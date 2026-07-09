@@ -11,7 +11,7 @@ export default function HowToHub() {
       <Helmet>
         <title>How-To Guides for Construction Documentation | Voice Log Pro</title>
         <meta name="description" content="Step-by-step guides on documenting construction delays, protecting lien rights, tracking materials, defending against deductions, and managing change orders." />
-        <link rel="canonical" href="https://www.voicelogpro.com/how-to" />
+        <link rel="canonical" href="https://voicelogpro.com/how-to" />
       </Helmet>
 
       <main className="min-h-screen bg-background">

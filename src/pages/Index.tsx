@@ -21,7 +21,7 @@ const Index = () => {
       <Helmet>
         <title>Voice Log Pro | Daily Construction Reports from Voice Notes</title>
         <meta name="description" content="Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands. Free Defense Kit + $49/month Crew Plan." />
-        <link rel="canonical" href="https://www.voicelogpro.com/" />
+        <link rel="canonical" href="https://voicelogpro.com/" />
       </Helmet>
       <main className="min-h-screen bg-background">
         {/* 1. Hero with inline squeeze opt-in */}

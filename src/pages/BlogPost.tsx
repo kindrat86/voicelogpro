@@ -284,7 +284,7 @@ export default function BlogPost() {
       <Helmet>
         <title>{post.title} | Voice Log Pro</title>
         <meta name="description" content={post.meta_description || post.excerpt || post.title} />
-        <link rel="canonical" href={`https://www.voicelogpro.com/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://voicelogpro.com/blog/${post.slug}`} />
         {post.keywords && <meta name="keywords" content={post.keywords.join(", ")} />}
         {post.faq_schema && (
           <script type="application/ld+json">
@@ -305,7 +305,7 @@ export default function BlogPost() {
             "publisher": {
               "@type": "Organization",
               "name": "Voice Log Pro",
-              "url": "https://www.voicelogpro.com"
+              "url": "https://voicelogpro.com"
             }
           })}
         </script>

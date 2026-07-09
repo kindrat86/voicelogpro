@@ -82,7 +82,7 @@ export default function CrewPlan() {
       <Helmet>
         <title>Crew Plan Pricing — Voice Log Pro for Construction Teams</title>
         <meta name="description" content="Voice Log Pro offers two plans: a free Solo Beta (unlimited voice logs, standard PDF reports) and the $49/month Crew Plan for up to 5 crews with priority onboarding and custom branding. No credit card required to start." />
-        <link rel="canonical" href="https://www.voicelogpro.com/crew-plan" />
+        <link rel="canonical" href="https://voicelogpro.com/crew-plan" />
       </Helmet>
       <div className="flex-1 flex items-center justify-center px-4 py-16">
         <div className="w-full max-w-4xl">

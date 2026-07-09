@@ -6,9 +6,9 @@ import { JsonLd } from "@/components/JsonLd";
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://www.voicelogpro.com/#organization",
+  "@id": "https://voicelogpro.com/#organization",
   name: "Voice Log Pro",
-  url: "https://www.voicelogpro.com",
+  url: "https://voicelogpro.com",
   logo: "https://storage.googleapis.com/gpt-engineer-file-uploads/4B8rhitxuFfh01PdeqSXDugsqvg2/uploads/1765892927118-VoiceLogProFavicon.png",
   description:
     "Voice Log Pro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
@@ -18,7 +18,7 @@ const organizationSchema = {
     "@type": "ContactPoint",
     contactType: "customer support",
     email: "hello@voicelogpro.com",
-    url: "https://www.voicelogpro.com/contact",
+    url: "https://voicelogpro.com/contact",
     availableLanguage: ["English"],
   },
 };
@@ -27,8 +27,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.voicelogpro.com/" },
-    { "@type": "ListItem", position: 2, name: "Contact", item: "https://www.voicelogpro.com/contact" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://voicelogpro.com/" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://voicelogpro.com/contact" },
   ],
 };
 
@@ -37,8 +37,8 @@ const contactPageSchema = {
   "@type": "ContactPage",
   name: "Contact Voice Log Pro",
   description: "Get in touch with the Voice Log Pro team. Questions about daily construction reporting, partnership inquiries, or support.",
-  mainEntity: { "@type": "Organization", "@id": "https://www.voicelogpro.com/#organization" },
-  significantLink: ["https://www.voicelogpro.com/"],
+  mainEntity: { "@type": "Organization", "@id": "https://voicelogpro.com/#organization" },
+  significantLink: ["https://voicelogpro.com/"],
 };
 
 export default function ContactPage() {
@@ -50,9 +50,9 @@ export default function ContactPage() {
           name="description"
           content="Get in touch with Voice Log Pro. Questions about daily construction reports, partnership inquiries, or need help getting started? We're here for the crew."
         />
-        <link rel="canonical" href="https://www.voicelogpro.com/contact" />
+        <link rel="canonical" href="https://voicelogpro.com/contact" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.voicelogpro.com/contact" />
+        <meta property="og:url" content="https://voicelogpro.com/contact" />
         <meta property="og:title" content="Contact Voice Log Pro" />
         <meta
           property="og:description"
@@ -131,8 +131,8 @@ export default function ContactPage() {
               <p className="text-sm text-muted-foreground mb-4">
                 Start with the home page to see how it works, then check the comparisons.
               </p>
-              <a href="https://www.voicelogpro.com" className="text-primary font-semibold hover:underline">
-                www.voicelogpro.com &rarr;
+              <a href="https://voicelogpro.com" className="text-primary font-semibold hover:underline">
+                voicelogpro.com &rarr;
               </a>
             </div>
             <div className="bg-card border border-border rounded-lg p-8 text-center">

@@ -10,7 +10,7 @@
  * - Do not invent legal claims or case citations not in source material
  */
 
-const BASE_URL = "https://www.voicelogpro.com";
+const BASE_URL = "https://voicelogpro.com";
 
 export interface HowToStepSchema {
   "@type": "HowToStep";

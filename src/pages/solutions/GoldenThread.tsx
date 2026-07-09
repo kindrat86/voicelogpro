@@ -19,7 +19,7 @@ const GoldenThread = () => {
       <Helmet>
         <title>Building Safety Act Golden Thread | UK Subcontractor Compliance | Voice Log Pro</title>
         <meta name="description" content="Meet UK Building Safety Act Golden Thread requirements with Voice Log Pro. Create digital daily records for Higher-Risk Buildings and demonstrate BS 8670 competence standards." />
-        <link rel="canonical" href="https://www.voicelogpro.com/solutions/building-safety-act-golden-thread" />
+        <link rel="canonical" href="https://voicelogpro.com/solutions/building-safety-act-golden-thread" />
       </Helmet>
       <JsonLd schema={[softwareApplicationSchema, organizationSchema, goldenThreadDocumentationHowTo, goldenThreadFaqSchema]} />
       <main className="min-h-screen bg-background">

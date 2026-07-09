@@ -40,7 +40,7 @@ export default function Blog() {
       <Helmet>
         <title>Construction Law & Compliance Blog | Voice Log Pro</title>
         <meta name="description" content="Expert guides on construction lien law, payment protection, and daily documentation for subcontractors and project managers." />
-        <link rel="canonical" href="https://www.voicelogpro.com/blog" />
+        <link rel="canonical" href="https://voicelogpro.com/blog" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

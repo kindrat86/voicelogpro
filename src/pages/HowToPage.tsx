@@ -25,7 +25,7 @@ export default function HowToPage() {
       <Helmet>
         <title>{guide.metaTitle}</title>
         <meta name="description" content={guide.metaDescription} />
-        <link rel="canonical" href={`https://www.voicelogpro.com/how-to/${guide.slug}`} />
+        <link rel="canonical" href={`https://voicelogpro.com/how-to/${guide.slug}`} />
       </Helmet>
 
       <main className="min-h-screen bg-background">
