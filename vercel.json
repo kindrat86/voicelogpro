@@ -197,5 +197,23 @@
       "destination": "/solutions/texas-mechanics-lien-compliance",
       "permanent": true
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.voicelogpro.com"
+        }
+      ],
+      "destination": "https://voicelogpro.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/solutions",
+      "destination": "/solutions/texas-mechanics-lien-compliance",
+      "permanent": true
+    }
   ]
 }
