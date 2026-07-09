@@ -40,7 +40,34 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://www.voicelogpro.com"
+          "value": "https://voicelogpro.com"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.html)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
         }
       ]
     }
@@ -121,6 +148,24 @@
     {
       "source": "/agents.md",
       "destination": "/agents.md"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.voicelogpro.com"
+        }
+      ],
+      "destination": "https://voicelogpro.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/solutions",
+      "destination": "/solutions/texas-mechanics-lien-compliance",
+      "permanent": true
     }
   ]
 }
