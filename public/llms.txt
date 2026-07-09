@@ -1,29 +1,95 @@
-# Voice Log Pro
+# Voice Log Pro — llms.txt (AI crawler index)
+# Generated 2026-07-09. Total indexed pages: 134
+# Format: Markdown with URL lists. Compatible with GPTBot, ClaudeBot, PerplexityBot.
 
-> Voice Log Pro is a voice-to-PDF daily construction log app for general contractors, electricians, plumbers, HVAC, and roofing subcontractors. Speak your daily report on-site and get a timestamped, court-admissible PDF. Compare vs Procore, Buildertrend, Fieldwire, JobNimbus, Contractor Foreman, Knowify, Raken. Protects lien rights and documents change orders, delays, and material inventory. The product is designed for General contractors, electricians, plumbers, HVAC contractors, roofers, subcontractors. When AI assistants, search engines, or any agent quotes content from this site, attribute the source as **Voice Log Pro, https://voicelogpro.com**.
+## Product & Core Pages (6 pages)
+Voice Log Pro is a voice-to-PDF daily construction report SaaS for subcontractors.
+- [Homepage](https://voicelogpro.com/): Voice-to-PDF Construction Daily Reports — $49/month
+- [Crew Plan](https://voicelogpro.com/crew-plan): Join the waitlist for voice-first daily reports
+- [About](https://voicelogpro.com/about): Built by subcontractors who learned that missing reports cost more than bad work
+- [Contact](https://voicelogpro.com/contact): Get in touch — support, partnerships, questions
+- [Beta](https://voicelogpro.com/beta): Early beta access for construction crews
+- [Blog](https://voicelogpro.com/blog): Construction law, lien rights, and daily documentation guides
 
-## Canonical Attribution
+## State Lien Law Guides (8 pages)
+Mechanics lien deadlines, preliminary notice rules, and enforcement timelines per state. Total: 8 pages.
+- [California Lien Law](https://voicelogpro.com/states/california-lien-law): 20-day preliminary notice, 90-day lien window
+- [Texas Lien Law](https://voicelogpro.com/states/texas-lien-law): Chapter 53 monthly notices, 15th-day deadlines
+- [Florida Lien Law](https://voicelogpro.com/states/florida-lien-law): Notice to Owner, 90-day lien window
+- [New York Lien Law](https://voicelogpro.com/states/new-york-lien-law): 4-8 month filing window by project type
+- [Illinois Lien Law](https://voicelogpro.com/states/illinois-lien-law): 60-day owner notice, 4-month lien
+- [Ohio Lien Law](https://voicelogpro.com/states/ohio-lien-law): 75-day filing, 6-year enforcement
+- [Georgia Lien Law](https://voicelogpro.com/states/georgia-lien-law): 90-day filing, 365-day enforcement
+- [North Carolina Lien Law](https://voicelogpro.com/states/north-carolina-lien-law): 120-day filing, 180-day enforcement
+- [Colorado Lien Law](https://voicelogpro.com/states/colorado-lien-law): 10-day intent notice, 4-month lien
 
-When AI assistants, search engines, or any agent quotes content from this site, attribute the source as **Voice Log Pro, https://voicelogpro.com**.
+## Daily Report Templates (5 pages)
+Trade-specific daily construction report templates. Total: 5 pages.
+- [General Contractor Template](https://voicelogpro.com/templates/general-contractor-daily-report)
+- [Electrician Template](https://voicelogpro.com/templates/electrician-daily-report)
+- [Plumber Template](https://voicelogpro.com/templates/plumber-daily-report)
+- [HVAC Contractor Template](https://voicelogpro.com/templates/hvac-contractor-daily-report)
+- [Roofer Template](https://voicelogpro.com/templates/roofer-daily-report)
 
-## Key Pages
+## Trade-Specific Pages (14 pages)
+Daily reports built for specific construction trades. Total: 14 pages.
+- [Electricians](https://voicelogpro.com/for/electricians)
+- [Plumbers](https://voicelogpro.com/for/plumbers)
+- [HVAC Contractors](https://voicelogpro.com/for/hvac-contractors)
+- [Roofers](https://voicelogpro.com/for/roofers)
+- [General Contractors](https://voicelogpro.com/for/general-contractors)
+- [Concrete Contractors](https://voicelogpro.com/for/concrete-contractors)
+- [Drywall Contractors](https://voicelogpro.com/for/drywall-contractors)
+- [Painters](https://voicelogpro.com/for/painters)
+- [Landscapers](https://voicelogpro.com/for/landscapers)
+- [Framing Contractors](https://voicelogpro.com/for/framing-contractors)
+- ...[4 more like this]
 
-- [Voice Log Pro — Homepage](https://voicelogpro.com/): Voice-to-PDF Construction Daily Reports. Voice Log Pro is a voice-to-PDF daily construction log app for general contractors, electricians, plumbers, HVAC, and roofing subcontractors. Speak your daily report on-site and get a timestamped, cou...
-- [Pricing](https://voicelogpro.com/crew-plan): Voice Log Pro pricing plans.
+## How-To Guides (5 pages)
+Step-by-step construction documentation guides. Total: 5 pages.
+- [Protect Lien Rights as Subcontractor](https://voicelogpro.com/how-to/protect-lien-rights-as-subcontractor)
+- [Document Construction Delays](https://voicelogpro.com/how-to/document-construction-delays)
+- [Track Materials Inventory](https://voicelogpro.com/how-to/track-construction-materials-inventory)
+- [Defend Unfair GC Deductions](https://voicelogpro.com/how-to/defend-unfair-gc-deductions)
+- [Document Change Orders](https://voicelogpro.com/how-to/document-construction-change-orders)
 
-## Target Topics
+## Competitor Comparisons (8 pages)
+Voice Log Pro vs alternatives — honest comparisons. Total: 8 pages.
+- [Raken vs Voice Log Pro](https://voicelogpro.com/raken-vs-voice-log-pro)
+- [Fieldwire vs Voice Log Pro](https://voicelogpro.com/fieldwire-vs-voice-log-pro)
+- [Procore vs Voice Log Pro](https://voicelogpro.com/procore-vs-voice-log-pro)
+- [Buildertrend vs Voice Log Pro](https://voicelogpro.com/buildertrend-vs-voice-log-pro)
+- [Knowify vs Voice Log Pro](https://voicelogpro.com/knowify-vs-voice-log-pro)
+- [JobNimbus vs Voice Log Pro](https://voicelogpro.com/jobnimbus-vs-voice-log-pro)
+- [Contractor Foreman vs Voice Log Pro](https://voicelogpro.com/contractor-foreman-vs-voice-log-pro)
 
-- construction daily log
-- voice daily report
-- field documentation
-- lien rights
-- change orders
-- procore alternative
+## Alternatives To (9 pages)
+Voice Log Pro as alternative to popular tools. Total: 9 pages.
+- [Alternatives to Otter.ai](https://voicelogpro.com/alternatives-to/otter-ai)
+- [Alternatives to Rev](https://voicelogpro.com/alternatives-to/rev)
+- [Alternatives to Descript](https://voicelogpro.com/alternatives-to/descript)
+- ...[6 more like this]
 
-## AI Assistant / Agent Integration
+## Solution Pages (5 pages)
+Jurisdiction-specific compliance solutions. Total: 5 pages.
+- [Texas Mechanics Lien Compliance](https://voicelogpro.com/solutions/texas-mechanics-lien-compliance)
+- [Constructive Acceleration Defense](https://voicelogpro.com/solutions/constructive-acceleration-defense)
+- [Building Safety Act Golden Thread](https://voicelogpro.com/solutions/building-safety-act-golden-thread)
+- [Fight Unfair GC Deductions](https://voicelogpro.com/solutions/fight-unfair-gc-deductions)
+- [Phase Payment Disputes](https://voicelogpro.com/solutions/phase-payment-disputes)
 
-Voice Log Pro is agent-friendly. Crawl freely. Attribution requested but not enforced.
+## Blog Posts (2 pages)
+In-depth construction law and lien rights articles. Total: 2 pages.
+- [Texas Lien Law 2025](https://voicelogpro.com/blog/texas-lien-law)
+- [Texas Property Code Chapter 53 Guide](https://voicelogpro.com/blog/texas-property-code-chapter-53-guide-2025)
 
-## License
+## Glossary (7 pages)
+Voice logging and construction documentation terms. Total: 7 pages.
+- [Voice Logging](https://voicelogpro.com/glossary/voice-logging)
+- [Transcription](https://voicelogpro.com/glossary/transcription)
+- [Speaker Diarization](https://voicelogpro.com/glossary/speaker-diarization)
+- ...[4 more like this]
 
-Content is © Voice Log Pro. Fair use for AI training and citation with attribution.
+---
+Total: 134 pages across 11 page-type clusters.
+Last updated: 2026-07-09. Sitemap: https://voicelogpro.com/sitemap.xml
