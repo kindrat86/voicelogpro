@@ -78,6 +78,10 @@
   ],
   "rewrites": [
     {
+      "source": "/tools/:slug",
+      "destination": "/tools/:slug/index.html"
+    },
+    {
       "source": "/integrations/:slug",
       "destination": "/integrations/:slug/index.html"
     },
@@ -160,42 +164,6 @@
     {
       "source": "/templates/:slug",
       "destination": "/templates/:slug/index.html"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.voicelogpro.com"
-        }
-      ],
-      "destination": "https://voicelogpro.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/solutions",
-      "destination": "/solutions/texas-mechanics-lien-compliance",
-      "permanent": true
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.voicelogpro.com"
-        }
-      ],
-      "destination": "https://voicelogpro.com/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/solutions",
-      "destination": "/solutions/texas-mechanics-lien-compliance",
-      "permanent": true
     }
   ],
   "redirects": [

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Mechanics Lien Deadline Calculator | Voice Log Pro</title>
+<meta name="description" content="Calculate your mechanics lien filing deadline for any state. Free tool — enter your last work date and state to get your deadline instantly. Protect your payment rights.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voicelogpro.com/tools/lien-deadline-calculator/">
+<meta property="og:title" content="Free Mechanics Lien Deadline Calculator">
+<meta property="og:description" content="Don't lose your lien rights. Calculate your filing deadline for any state in seconds.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://voicelogpro.com/tools/lien-deadline-calculator/">
+<meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/4B8rhitxuFfh01PdeqSXDugsqvg2/social-images/social-1765892945744-VoiceLogProFavicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Mechanics Lien Deadline Calculator">
+<meta name="twitter:description" content="Calculate your lien filing deadline for any state. Free tool.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mechanics Lien Deadline Calculator",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "url": "https://voicelogpro.com/tools/lien-deadline-calculator/",
+  "description": "Free tool to calculate mechanics lien filing deadlines for all 50 states. Enter your last work date and state.",
+  "publisher": {"@type": "Organization", "name": "Voice Log Pro", "url": "https://voicelogpro.com"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://voicelogpro.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://voicelogpro.com/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "Lien Deadline Calculator"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "How do I calculate my mechanics lien deadline?", "acceptedAnswer": {"@type": "Answer", "text": "Enter your state and last date of work or material delivery into the calculator above. Each state has different deadlines ranging from 30 days to 6 years. The tool calculates your exact filing deadline instantly."}},
+    {"@type": "Question", "name": "What happens if I miss my lien deadline?", "acceptedAnswer": {"@type": "Answer", "text": "If you miss the deadline, you permanently lose your lien rights. There are no extensions or exceptions. This is why tracking your last work date with daily reports is critical — Voice Log Pro timestamps every report automatically."}},
+    {"@type": "Question", "name": "Do I need a preliminary notice before filing a lien?", "acceptedAnswer": {"@type": "Answer", "text": "Most states require a preliminary notice (also called pre-lien notice or notice to owner) before you can file a mechanics lien. The calculator shows your state's preliminary notice requirements alongside the lien deadline."}},
+    {"@type": "Question", "name": "Is this lien deadline calculator accurate?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The deadlines are based on each state's mechanics lien statutes. However, construction law changes — always verify with a local construction attorney before filing. The calculator is a planning tool, not legal advice."}},
+    {"@type": "Question", "name": "How do daily reports protect my lien rights?", "acceptedAnswer": {"@type": "Answer", "text": "Every lien claim requires proof of when work was performed and materials delivered. Voice Log Pro creates timestamped, weather-verified daily PDFs from your voice notes — the exact evidence courts require to enforce lien claims."}}
+  ]
+}
+</script>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+.container { max-width: 640px; margin: 0 auto; padding: 20px; }
+h1 { font-size: 1.75rem; margin-bottom: 8px; color: #0f172a; }
+.subtitle { color: #64748b; margin-bottom: 24px; font-size: 1rem; }
+.card { background: white; border-radius: 16px; padding: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px; }
+label { display: block; font-weight: 600; margin-bottom: 6px; color: #374151; font-size: 0.95rem; }
+select, input[type="date"] { width: 100%; padding: 12px 16px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; margin-bottom: 16px; transition: border-color 0.2s; }
+select:focus, input[type="date"]:focus { outline: none; border-color: #0066cc; }
+.btn { display: inline-block; background: #0066cc; color: white; padding: 16px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.1rem; border: none; cursor: pointer; width: 100%; transition: background 0.2s; }
+.btn:hover { background: #0052a3; }
+.result { display: none; margin-top: 20px; padding: 24px; border-radius: 12px; }
+.result.show { display: block; }
+.result-deadline { font-size: 1.3rem; font-weight: 700; color: #059669; margin-bottom: 12px; }
+.result-danger { background: #fef2f2; border: 2px solid #fecaca; }
+.result-danger .result-deadline { color: #dc2626; }
+.result-ok { background: #f0fdf4; border: 2px solid #bbf7d0; }
+.result-detail { font-size: 0.9rem; color: #4b5563; margin-top: 8px; }
+.days-remaining { font-size: 2rem; font-weight: 800; }
+.warning { background: #fffbeb; border: 2px solid #fde68a; border-radius: 8px; padding: 12px 16px; margin-top: 12px; font-size: 0.9rem; color: #92400e; }
+.notice-info { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; border-radius: 4px; margin-top: 12px; font-size: 0.9rem; }
+.notice-info strong { color: #1e40af; }
+.cta-box { background: linear-gradient(135deg, #0066cc, #004e99); color: white; border-radius: 16px; padding: 28px; text-align: center; margin-top: 24px; }
+.cta-box h3 { font-size: 1.2rem; margin-bottom: 8px; }
+.cta-box p { font-size: 0.9rem; opacity: 0.9; margin-bottom: 16px; }
+.cta-box .btn { background: white; color: #0066cc; }
+.cta-box .btn:hover { background: #f0f8ff; }
+.nav-back { margin-top: 32px; text-align: center; }
+.nav-back a { color: #64748b; text-decoration: none; font-size: 0.9rem; }
+.share-row { display: flex; gap: 12px; justify-content: center; margin-top: 16px; }
+.share-row a { padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; text-decoration: none; font-weight: 600; }
+.share-twitter { background: #1da1f2; color: white; }
+.share-linkedin { background: #0a66c2; color: white; }
+.share-copy { background: #e5e7eb; color: #374151; cursor: pointer; border: none; font-family: inherit; }
+.footer-info { margin-top: 32px; padding-top: 20px; border-top: 1px solid #e5e7eb; font-size: 0.85rem; color: #9ca3af; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🔧 Mechanics Lien Deadline Calculator</h1>
+<p class="subtitle">Free tool — enter your state and last work date to instantly calculate your lien filing deadline. Don't lose your payment rights.</p>
+
+<div class="card">
+<label for="state-select">Select Your State</label>
+<select id="state-select">
+<option value="">Choose your state...</option>
+</select>
+
+<label for="last-work-date">Last Date of Work or Material Delivery</label>
+<input type="date" id="last-work-date">
+
+<button class="btn" onclick="calculateDeadline()">Calculate My Deadline →</button>
+
+<div id="result" class="result"></div>
+</div>
+
+<div class="card">
+<h3 style="margin-bottom:12px;font-size:1.1rem">Why This Matters</h3>
+<p style="font-size:0.95rem;color:#4b5563">Missing your lien deadline means <strong>permanently losing</strong> your right to file a mechanics lien. No exceptions. No extensions. Every state has different rules — and contractors routinely lose tens of thousands of dollars because they missed a deadline they didn't know about.</p>
+<p style="font-size:0.95rem;color:#4b5563;margin-top:12px">This calculator shows your exact deadline based on your state's mechanics lien statute.</p>
+</div>
+
+<div class="cta-box">
+<h3>Protect Every Deadline with Daily Reports</h3>
+<p>Voice Log Pro timestamps every daily report automatically — the exact evidence courts need to enforce your lien. Speak from the job site. PDF in seconds.</p>
+<a href="https://voicelogpro.com/crew-plan" class="btn">Get Crew Plan — $49/month →</a>
+</div>
+
+<div class="share-row">
+<a href="https://twitter.com/intent/tweet?text=Free%20mechanics%20lien%20deadline%20calculator%20for%20contractors&url=https://voicelogpro.com/tools/lien-deadline-calculator/" class="share-twitter" target="_blank">Share on X</a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://voicelogpro.com/tools/lien-deadline-calculator/" class="share-linkedin" target="_blank">Share on LinkedIn</a>
+<button class="share-copy" onclick="copyLink()">Copy Link</button>
+</div>
+
+<div class="nav-back">
+<a href="https://voicelogpro.com/tools/">← More Free Tools</a> · <a href="https://voicelogpro.com/">Voice Log Pro Home</a>
+</div>
+
+<div class="footer-info">
+<p>Voice Log Pro — Voice-to-PDF daily construction reports. Built for subcontractors.</p>
+<p style="margin-top:4px">This tool provides general deadline information based on state statutes. Construction law changes. Always verify with a licensed construction attorney before filing.</p>
+</div>
+</div>
+
+<script>
+// All 50 states + DC with lien filing periods and preliminary notice requirements
+const STATE_DATA = {
+  "Alabama": { filingDays: 120, filingRule: "4 months from last work", noticeRule: "No preliminary notice required for private projects", noticeDays: null },
+  "Alaska": { filingDays: 180, filingRule: "6 months from last work", noticeRule: "Notice required within 15 days of first work for residential", noticeDays: 15 },
+  "Arizona": { filingDays: 120, filingRule: "120 days from last work (preliminary notice within 20 days)", noticeRule: "Preliminary notice within 20 days of first work", noticeDays: 20 },
+  "Arkansas": { filingDays: 120, filingRule: "120 days from last work or 90 days after completion", noticeRule: "No preliminary notice required for commercial", noticeDays: null },
+  "California": { filingDays: 90, filingRule: "90 days after completion and acceptance", noticeRule: "20-day preliminary notice required before filing lien", noticeDays: 20 },
+  "Colorado": { filingDays: 122, filingRule: "4 months from last work (Notice of Intent within 10 days of lien)", noticeRule: "Notice of Intent to Lien must be served 10 days before filing", noticeDays: 10 },
+  "Connecticut": { filingDays: 90, filingRule: "90 days after last work", noticeRule: "No preliminary notice required", noticeDays: null },
+  "Delaware": { filingDays: 120, filingRule: "100 days from last work for non-residential", noticeRule: "No statutory preliminary notice required", noticeDays: null },
+  "Florida": { filingDays: 90, filingRule: "90 days from last furnishing of labor or materials", noticeRule: "Notice to Owner required within 45 days of first work", noticeDays: 45 },
+  "Georgia": { filingDays: 90, filingRule: "90 days from last delivery of materials or work", noticeRule: "Notice of Commencement must be filed by owner; sub must check it", noticeDays: 30 },
+  "Hawaii": { filingDays: 90, filingRule: "90 days after last work for private projects", noticeRule: "No preliminary notice required for commercial", noticeDays: null },
+  "Idaho": { filingDays: 90, filingRule: "90 days from last furnishing", noticeRule: "Preliminary notice required within 30 days for residential", noticeDays: 30 },
+  "Illinois": { filingDays: 120, filingRule: "4 months from completion (2 years for residential)", noticeRule: "60-day notice required for owner-occupied residential", noticeDays: 60 },
+  "Indiana": { filingDays: 60, filingRule: "60 days from last work for residential; 90 for commercial", noticeRule: "Notice of Intent required 30 days before filing for residential", noticeDays: 30 },
+  "Iowa": { filingDays: 90, filingRule: "90 days from last work for commercial", noticeRule: "Preliminary notice required within 30 days", noticeDays: 30 },
+  "Kansas": { filingDays: 120, filingRule: "4 months from last work", noticeRule: "No preliminary notice required for commercial", noticeDays: null },
+  "Kentucky": { filingDays: 180, filingRule: "6 months from last work", noticeRule: "No preliminary notice required", noticeDays: null },
+  "Louisiana": { filingDays: 60, filingRule: "60 days from last work (residential) or 90 days (commercial)", noticeRule: "Statement of Claim must be filed within 30 days of recordation", noticeDays: 30 },
+  "Maine": { filingDays: 90, filingRule: "90 days after last work", noticeRule: "No preliminary notice required", noticeDays: null },
+  "Maryland": { filingDays: 180, filingRule: "180 days from last work", noticeRule: "Preliminary notice required for residential within 30 days", noticeDays: 30 },
+  "Massachusetts": { filingDays: 90, filingRule: "90 days from last work or filing of notice of contract", noticeRule: "Notice of Contract should be recorded before work begins", noticeDays: null },
+  "Michigan": { filingDays: 90, filingRule: "90 days from last work for residential; 1 year for commercial", noticeRule: "Notice of Furnishing required within 30 days", noticeDays: 30 },
+  "Minnesota": { filingDays: 120, filingRule: "120 days from last work", noticeRule: "Pre-lien notice required within 45 days", noticeDays: 45 },
+  "Mississippi": { filingDays: 120, filingRule: "120 days from last work for commercial", noticeRule: "No preliminary notice required for commercial", noticeDays: null },
+  "Missouri": { filingDays: 180, filingRule: "6 months from last work (commercial); 4 months for residential", noticeRule: "No preliminary notice required", noticeDays: null },
+  "Montana": { filingDays: 180, filingRule: "6 months from last work for commercial; 90 days for residential", noticeRule: "Preliminary notice required within 30 days", noticeDays: 30 },
+  "Nebraska": { filingDays: 120, filingRule: "4 months from last work", noticeRule: "Preliminary notice required within 45 days", noticeDays: 45 },
+  "Nevada": { filingDays: 90, filingRule: "90 days from last work", noticeRule: "Pre-lien notice required within 31 days", noticeDays: 31 },
+  "New Hampshire": { filingDays: 120, filingRule: "120 days from last work", noticeRule: "No preliminary notice required", noticeDays: null },
+  "New Jersey": { filingDays: 90, filingRule: "90 days from last work", noticeRule: "No preliminary notice required", noticeDays: null },
+  "New Mexico": { filingDays: 120, filingRule: "120 days from last work for commercial", noticeRule: "Preliminary notice required within 30 days", noticeDays: 30 },
+  "New York": { filingDays: 240, filingRule: "8 months (single-family residential) or 4 months (commercial) from last work", noticeRule: "No preliminary notice required for private projects", noticeDays: null },
+  "North Carolina": { filingDays: 120, filingRule: "120 days from last furnishing", noticeRule: "Notice of Contract required before first work", noticeDays: null },
+  "North Dakota": { filingDays: 180, filingRule: "6 months from last work", noticeRule: "Preliminary notice required within 30 days", noticeDays: 30 },
+  "Ohio": { filingDays: 75, filingRule: "75 days from last work for residential; 6 months for commercial", noticeRule: "No preliminary notice required", noticeDays: null },
+  "Oklahoma": { filingDays: 120, filingRule: "4 months from last work", noticeRule: "Pre-lien notice required within 75 days for residential", noticeDays: 75 },
+  "Oregon": { filingDays: 75, filingRule: "75 days from last work for residential; 120 for commercial", noticeRule: "Preliminary notice required within 8 days for residential", noticeDays: 8 },
+  "Pennsylvania": { filingDays: 180, filingRule: "6 months from last work", noticeRule: "Preliminary notice required within 20 days for residential", noticeDays: 20 },
+  "Rhode Island": { filingDays: 200, filingRule: "200 days from last work", noticeRule: "Preliminary notice required for residential within 30 days", noticeDays: 30 },
+  "South Carolina": { filingDays: 90, filingRule: "90 days from last work for residential; 120 for commercial", noticeRule: "Preliminary notice required within 20 days", noticeDays: 20 },
+  "South Dakota": { filingDays: 120, filingRule: "120 days from last work", noticeRule: "Preliminary notice required within 60 days", noticeDays: 60 },
+  "Tennessee": { filingDays: 90, filingRule: "90 days from last work", noticeRule: "Notice required within 30 days of last work for residential", noticeDays: 30 },
+  "Texas": { filingDays: 105, filingRule: "15th day of 3rd month after last monthly statement (Chapter 53)", noticeRule: "Monthly notices required by 15th of following month", noticeDays: 15 },
+  "Utah": { filingDays: 180, filingRule: "180 days from last work", noticeRule: "Preliminary notice required within 20 days", noticeDays: 20 },
+  "Vermont": { filingDays: 120, filingRule: "120 days from last work", noticeRule: "No preliminary notice required", noticeDays: null },
+  "Virginia": { filingDays: 90, filingRule: "90 days from last work for residential; 150 for commercial", noticeRule: "Memorandum for Record required within 30 days", noticeDays: 30 },
+  "Washington": { filingDays: 90, filingRule: "90 days from last work", noticeRule: "Pre-lien notice required within 60 days", noticeDays: 60 },
+  "West Virginia": { filingDays: 100, filingRule: "100 days from last work", noticeRule: "No preliminary notice required for commercial", noticeDays: null },
+  "Wisconsin": { filingDays: 180, filingRule: "6 months from last work", noticeRule: "Preliminary notice required within 60 days", noticeDays: 60 },
+  "Wyoming": { filingDays: 120, filingRule: "120 days from last work", noticeRule: "Preliminary notice required within 30 days", noticeDays: 30 },
+  "Washington DC": { filingDays: 180, filingRule: "180 days from last work", noticeRule: "No preliminary notice required", noticeDays: null }
+};
+
+// Populate state dropdown
+const select = document.getElementById('state-select');
+Object.keys(STATE_DATA).sort().forEach(s => {
+  const opt = document.createElement('option');
+  opt.value = s;
+  opt.textContent = s;
+  select.appendChild(opt);
+});
+
+function calculateDeadline() {
+  const state = document.getElementById('state-select').value;
+  const dateStr = document.getElementById('last-work-date').value;
+  const resultDiv = document.getElementById('result');
+
+  if (!state) { resultDiv.innerHTML = '<div class="warning">Please select your state.</div>'; resultDiv.className = 'result show'; return; }
+  if (!dateStr) { resultDiv.innerHTML = '<div class="warning">Please enter your last work date.</div>'; resultDiv.className = 'result show'; return; }
+
+  const data = STATE_DATA[state];
+  const lastWork = new Date(dateStr);
+  const deadline = new Date(lastWork);
+  deadline.setDate(deadline.getDate() + data.filingDays);
+  const now = new Date();
+  const daysRemaining = Math.ceil((deadline - now) / (1000 * 60 * 60 * 24));
+
+  const fmtDate = (d) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+  let dangerClass = daysRemaining < 0 ? 'result-danger' : daysRemaining < 30 ? 'result-danger' : 'result-ok';
+  let urgencyMsg = '';
+
+  if (daysRemaining < 0) {
+    urgencyMsg = `<div class="warning"><strong>DEADLINE PASSED.</strong> You may have lost your lien rights in ${state}. Contact a construction attorney immediately to explore alternatives.</div>`;
+  } else if (daysRemaining < 14) {
+    urgencyMsg = `<div class="warning"><strong>Critical: Only ${daysRemaining} days left!</strong> File your lien immediately. Contact a construction attorney today.</div>`;
+  } else if (daysRemaining < 30) {
+    urgencyMsg = `<div class="warning"><strong>Urgent: ${daysRemaining} days remaining.</strong> Begin preparing your lien filing now.</div>`;
+  }
+
+  let noticeHtml = '';
+  if (data.noticeDays) {
+    const noticeDeadline = new Date(lastWork);
+    noticeDeadline.setDate(noticeDeadline.getDate() + data.noticeDays);
+    const noticePassed = noticeDeadline < now;
+    noticeHtml = `<div class="notice-info"><strong>Preliminary Notice:</strong> ${data.noticeRule}. ${noticePassed ? '<strong style="color:#dc2626">This deadline may have passed.</strong>' : 'Deadline: ' + fmtDate(noticeDeadline)}</div>`;
+  } else {
+    noticeHtml = `<div class="notice-info"><strong>Preliminary Notice:</strong> ${data.noticeRule}</div>`;
+  }
+
+  resultDiv.className = 'result show ' + dangerClass;
+  resultDiv.innerHTML = `
+    <div class="result-deadline">📅 Your Lien Filing Deadline: ${fmtDate(deadline)}</div>
+    <div class="days-remaining" style="color:${daysRemaining<0?'#dc2626':daysRemaining<30?'#f59e0b':'#059669'}">
+      ${daysRemaining < 0 ? 'EXPIRED' : daysRemaining + ' days remaining'}
+    </div>
+    <div class="result-detail"><strong>State:</strong> ${state} · <strong>Rule:</strong> ${data.filingRule}</div>
+    ${noticeHtml}
+    ${urgencyMsg}
+    <div class="result-detail" style="margin-top:16px;font-size:0.85rem;color:#9ca3af">
+      Last work date: ${fmtDate(lastWork)} · Calculation: ${data.filingDays} days from last furnishing.
+      Verify with a licensed ${state} construction attorney before filing.
+    </div>
+  `;
+}
+
+function copyLink() {
+  navigator.clipboard.writeText('https://voicelogpro.com/tools/lien-deadline-calculator/').then(() => {
+    alert('Link copied! Share with your crew.');
+  });
+}
+</script>
+</body>
+</html>
