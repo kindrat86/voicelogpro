@@ -78,6 +78,14 @@
   ],
   "rewrites": [
     {
+      "source": "/weekly-reports/:slug",
+      "destination": "/weekly-reports/:slug/index.html"
+    },
+    {
+      "source": "/faq/:slug",
+      "destination": "/faq/:slug/index.html"
+    },
+    {
       "source": "/tools/:slug",
       "destination": "/tools/:slug/index.html"
     },
@@ -164,6 +172,10 @@
     {
       "source": "/templates/:slug",
       "destination": "/templates/:slug/index.html"
+    },
+    {
+      "source": "/industries/:slug",
+      "destination": "/industries/:slug.html"
     }
   ],
   "redirects": [
