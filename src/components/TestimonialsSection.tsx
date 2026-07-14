@@ -1,7 +1,9 @@
 import { CTAButton } from "@/components/CTAButton";
 import { AudioTestimonialButton } from "@/components/AudioTestimonialButton";
-import jasonImage from "@/assets/testimonial-jason.webp";
-import mariaImage from "@/assets/testimonial-maria.webp";
+// Served from public/images so dev, SPA bundle, and prerendered HTML all
+// resolve the same URL (src/assets imports broke the prerendered pages).
+const jasonImage = "/images/testimonial-jason.webp";
+const mariaImage = "/images/testimonial-maria.webp";
 
 const testimonials = [
   {

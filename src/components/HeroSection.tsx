@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { LeadMagnetForm } from "@/components/LeadMagnetForm";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
-// Hero plumber image is preloaded from public folder for LCP optimization
-import heroElectrician from "@/assets/hero-electrician.webp";
-import beforeMessyNotes from "@/assets/before-messy-notes.webp";
-import afterCleanPdf from "@/assets/after-clean-pdf.webp";
 import { Star } from "lucide-react";
+
+// All hero images live in public/images so the SAME URL resolves in dev, the
+// production SPA bundle, AND the prerendered HTML. (Importing from src/assets
+// made the SSR prerender emit dev-only /src/assets/... URLs that 404 in prod.)
+const heroElectrician = "/images/hero-electrician.webp";
+const beforeMessyNotes = "/images/before-messy-notes.webp";
+const afterCleanPdf = "/images/after-clean-pdf.webp";
 
 // Social proof bar — Brunson "mass influence" pattern
 const SocialProofBar = () => (
@@ -48,10 +51,10 @@ export function HeroSection() {
       {/* Background images - mobile stacked, desktop side by side */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 md:w-1/2 md:left-0">
-          <img src="/images/hero-plumber.webp" alt="Plumber working on construction site" className="w-full h-full object-cover" fetchPriority="high" />
+          <img src="/images/hero-plumber.webp" alt="Plumber working on construction site" width={1024} height={768} className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
         </div>
         <div className="hidden md:block absolute inset-0 w-1/2 right-0 left-auto">
-          <img src={heroElectrician} alt="Electrician pulling wire" className="w-full h-full object-cover" />
+          <img src={heroElectrician} alt="Electrician pulling wire" width={1024} height={768} className="w-full h-full object-cover" loading="lazy" decoding="async" />
         </div>
       </div>
 

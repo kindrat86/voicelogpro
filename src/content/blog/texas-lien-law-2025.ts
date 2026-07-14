@@ -92,7 +92,7 @@ Original contractors do not need to send monthly notices. Derivative claimants m
 - [ ] Continue monthly notices for each subsequent billing period
 - [ ] Document all labor and materials in contemporaneous daily logs
 
-The Texas Secretary of State provides [official notice forms](https://www.sos.state.tx.us/statdoc/forms/2301.pdf) that satisfy statutory requirements.
+The full statutory notice requirements are published in [Texas Property Code Chapter 53](https://statutes.capitol.texas.gov/Docs/PR/htm/PR.53.htm) on the Texas Legislature's statutes site.
 
 ---
 
@@ -170,7 +170,7 @@ First furnishing date determines all subsequent deadlines. Disputes over this da
 | Delivery receipts | Medium | Signed, dated, job-site specific |
 | Verbal testimony | Low | Often contradicted by other evidence |
 
-Voice Log Pro captures timestamped entries with weather data, creating the type of contemporaneous record Texas courts require under [Texas Rule of Evidence 803(6)](https://www.txcourts.gov/media/1451073/texas-rules-of-evidence-effective-april-1-2020.pdf) (business records exception).
+Voice Log Pro captures timestamped entries with weather data, creating the type of contemporaneous record Texas courts require under [Texas Rule of Evidence 803(6)](https://www.txcourts.gov/rules-forms/rules-standards/) (business records exception).
 
 ---
 

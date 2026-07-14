@@ -1,6 +1,9 @@
 import { CTAButton } from "@/components/CTAButton";
-import plumberCard from "@/assets/plumber-card.webp";
-import electricianCard from "@/assets/electrician-card.webp";
+
+// Served from public/images so dev, SPA bundle, and prerendered HTML all
+// resolve the same URL (src/assets imports broke the prerendered pages).
+const plumberCard = "/images/plumber-card.webp";
+const electricianCard = "/images/electrician-card.webp";
 
 const tradeCards = [
   {
@@ -31,9 +34,13 @@ export function BuiltForJobsites() {
             className="min-w-[85vw] snap-center md:min-w-0 card-sunlight group overflow-hidden shrink-0 md:shrink"
           >
             <div className="aspect-[4/3] overflow-hidden mb-4 border-2 border-primary/50" style={{ borderRadius: 'var(--radius)' }}>
-              <img 
-                src={card.image} 
-                alt={card.alt} 
+              <img
+                src={card.image}
+                alt={card.alt}
+                width={1024}
+                height={768}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>

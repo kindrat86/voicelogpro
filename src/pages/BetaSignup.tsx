@@ -8,8 +8,10 @@ import { Mic, FileText, Clock, Shield, FileCheck, Users, Smartphone, CheckCircle
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { subscribeToSequence } from "@/lib/subscribe";
-import beforeImage from "@/assets/before-messy-notes.webp";
-import afterImage from "@/assets/after-clean-pdf.webp";
+// Served from public/images so dev, SPA bundle, and prerendered HTML all
+// resolve the same URL (src/assets imports broke the prerendered pages).
+const beforeImage = "/images/before-messy-notes.webp";
+const afterImage = "/images/after-clean-pdf.webp";
 
 const emailSchema = z.string().email("Please enter a valid email address");
 

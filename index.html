@@ -217,9 +217,28 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" as="style" />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" as="style" />
     
-    <!-- PostHog analytics (async, non-blocking) -->
-    <script defer>
-      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=void 0,(o=e.createElement("script")).src="https://eu.i.posthog.com/static/array.js",o.onload=function(){window.posthog.__requestInit={headers:{"Content-Type":"application/json"}},p=n=e.createElement("script"),p.src="https://eu.i.posthog.com/array.js",p.crossOrigin="",p.type="text/javascript",p.defer=!0,p.onload=function(){posthog.init("phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX",{api_host:"https://eu.i.posthog.com",session_recording:{recordCrossOriginIframes:!0,maskAllInputs:!1}})},r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(p,r)}),r.parentNode.insertBefore(o,r))}(0,document);
+    <!-- PostHog analytics (async, non-blocking). Single loader from /static/array.js —
+         the SDK is ONLY served from /static/array.js (plain /array.js 404s).
+         This snippet is the ONLY PostHog init on the site; do not also init
+         posthog-js from the bundle or every pageview gets counted twice. -->
+    <script>
+      (function () {
+        if (window.posthog && window.posthog.__loaded) return;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.crossOrigin = "anonymous";
+        s.defer = true;
+        s.src = "https://eu.i.posthog.com/static/array.js";
+        s.onload = function () {
+          window.posthog.init("phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX", {
+            api_host: "https://eu.i.posthog.com",
+            person_profiles: "identified_only",
+            defaults: "2025-05-24",
+            session_recording: { recordCrossOriginIframes: true, maskAllInputs: false }
+          });
+        };
+        document.head.appendChild(s);
+      })();
     </script>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Voice Log Pro","item":"https://voicelogpro.com"}]}
@@ -362,9 +381,9 @@
   <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-bottom:24px">
     <div style="text-align:center;min-width:100px"><div style="font-size:1.8rem;font-weight:800;color:#0066cc">3,200+</div><div style="font-size:0.85rem;color:#666">Contractors</div></div><div style="text-align:center;min-width:100px"><div style="font-size:1.8rem;font-weight:800;color:#0066cc">30 min</div><div style="font-size:0.85rem;color:#666">Saved Per Day</div></div><div style="text-align:center;min-width:100px"><div style="font-size:1.8rem;font-weight:800;color:#0066cc">14</div><div style="font-size:0.85rem;color:#666">States Covered</div></div>
   </div>
-  <div style="background:#fef3c7;border-radius:8px;padding:12px;margin:12px 0;text-align:center"><strong>🛡️ 30 Minutes Saved Per Day Guaranteed — Or Your Money Back</strong></div>
-  <div style="background:white;border-radius:12px;padding:20px;max-width:500px;margin:0 auto 16px;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
-    <p style="font-size:1.1rem;font-weight:600;margin-bottom:8px">📥 Free Daily Report Defense Kit</p>
+  <div style="background:#fef3c7;border-radius:8px;padding:12px;margin:12px 0;text-align:center;color:#78350f"><strong>🛡️ 30 Minutes Saved Per Day Guaranteed — Or Your Money Back</strong></div>
+  <div style="background:white;border-radius:12px;padding:20px;max-width:500px;margin:0 auto 16px;box-shadow:0 2px 8px rgba(0,0,0,0.08);color:#1a1a1a">
+    <p style="font-size:1.1rem;font-weight:600;margin-bottom:8px;color:#1a1a1a">📥 Free Daily Report Defense Kit</p>
     <p style="color:#555;margin-bottom:12px;font-size:0.9rem">5 OSHA-compliant templates, Texas Chapter 53 checklist, and dispute defense swipe file. Free PDF.</p>
     <a href="https://voicelogpro.com/#defense-kit" style="display:inline-block;background:#0066cc;color:white;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.05rem">Get Free Defense Kit →</a>
     <p style="font-size:0.75rem;color:#888;margin-top:8px">No spam. Unsubscribe anytime.</p>

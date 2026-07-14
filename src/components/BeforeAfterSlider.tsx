@@ -68,9 +68,12 @@ export function BeforeAfterSlider({
         <img
           src={afterImage}
           alt={afterLabel}
+          width={800}
+          height={512}
           className="absolute inset-0 w-full h-full object-cover"
           draggable={false}
           fetchPriority="high"
+          decoding="async"
         />
 
         {/* Before image (clipped layer, left side — matches the left-hand label) */}
@@ -81,7 +84,10 @@ export function BeforeAfterSlider({
           <img
             src={beforeImage}
             alt={beforeLabel}
+            width={800}
+            height={512}
             className="absolute inset-0 h-full object-cover"
+            decoding="async"
             style={{ 
               width: sliderValue > 0 ? `${10000 / sliderValue}%` : '100%',
               maxWidth: 'none'

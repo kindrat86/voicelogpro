@@ -2,7 +2,9 @@ import { hydrateRoot, createRoot } from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
 import './i18n';
 import App from './App';
-import './integrations/posthog';
+// PostHog is initialized by the inline snippet in index.html (loads
+// https://eu.i.posthog.com/static/array.js). Do NOT also init posthog-js
+// here — two instances double-count every pageview.
 import './index.css';
 
 const container = document.getElementById('root');

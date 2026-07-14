@@ -194,6 +194,11 @@
       "source": "/solutions",
       "destination": "/solutions/texas-mechanics-lien-compliance",
       "permanent": true
+    },
+    {
+      "source": "/states/texas-lien-law",
+      "destination": "/blog/texas-property-code-chapter-53-guide-2025",
+      "permanent": true
     }
   ]
 }

@@ -84,10 +84,8 @@ const App = () => (
               <Route path="/blog/texas-property-code-chapter-53-guide-2025" element={<TexasLienLaw2025 />} />
               {/* Solutions pages - entity-specific landing pages */}
               <Route path="/solutions/texas-mechanics-lien-compliance" element={<TexasMechanicsLien />} />
-              <Route path="/solutions/texas-lien-law" element={<TexasMechanicsLien />} />
               <Route path="/solutions/constructive-acceleration-defense" element={<ConstructiveAcceleration />} />
               <Route path="/solutions/building-safety-act-golden-thread" element={<GoldenThread />} />
-              <Route path="/solutions/uk-golden-thread" element={<GoldenThread />} />
               <Route path="/solutions/fight-unfair-gc-deductions" element={<FightUnfairDeductions />} />
               <Route path="/solutions/phase-payment-disputes" element={<PhasePaymentDisputes />} />
               <Route path="/solutions/electrical-inventory-tracking" element={<ElectricalInventoryTracking />} />

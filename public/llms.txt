@@ -14,7 +14,7 @@ Voice Log Pro is a voice-to-PDF daily construction report SaaS for subcontractor
 ## State Lien Law Guides (8 pages)
 Mechanics lien deadlines, preliminary notice rules, and enforcement timelines per state. Total: 8 pages.
 - [California Lien Law](https://voicelogpro.com/states/california-lien-law): 20-day preliminary notice, 90-day lien window
-- [Texas Lien Law](https://voicelogpro.com/states/texas-lien-law): Chapter 53 monthly notices, 15th-day deadlines
+- [Texas Lien Law](https://voicelogpro.com/blog/texas-property-code-chapter-53-guide-2025): Chapter 53 monthly notices, 15th-day deadlines
 - [Florida Lien Law](https://voicelogpro.com/states/florida-lien-law): Notice to Owner, 90-day lien window
 - [New York Lien Law](https://voicelogpro.com/states/new-york-lien-law): 4-8 month filing window by project type
 - [Illinois Lien Law](https://voicelogpro.com/states/illinois-lien-law): 60-day owner notice, 4-month lien
