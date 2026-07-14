@@ -47,7 +47,13 @@ def resend(path, method="GET", data=None):
     req = urllib.request.Request(
         f"https://api.resend.com{path}",
         data=json.dumps(data).encode() if data else None,
-        headers={"Authorization": f"Bearer {RESEND_KEY}", "Content-Type": "application/json"},
+        headers={
+            "Authorization": f"Bearer {RESEND_KEY}",
+            "Content-Type": "application/json",
+            # api.resend.com sits behind Cloudflare, which 1010-blocks
+            # urllib's default UA; any explicit UA passes.
+            "User-Agent": "voicelogpro-email-setup/1.0",
+        },
         method=method,
     )
     try:
