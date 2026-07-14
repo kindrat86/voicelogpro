@@ -10,7 +10,9 @@ interface CTAButtonProps {
   href?: string;
 }
 
-export function CTAButton({ className, variant = "cta", label = "Get the Free Defense Kit", href = "/crew-plan" }: CTAButtonProps) {
+// Default label stays congruent with the default destination (/crew-plan) —
+// a button that promises the free kit but lands on pricing burns trust.
+export function CTAButton({ className, variant = "cta", label = "Reserve My Beta Spot", href = "/crew-plan" }: CTAButtonProps) {
   // Use jobsite sizing on mobile for all primary CTAs
   const size = variant === "hero" ? "xl" : variant === "jobsite" ? "jobsite" : "lg";
   const buttonVariant = variant === "jobsite" ? "jobsite" : variant;

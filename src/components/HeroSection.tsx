@@ -98,7 +98,7 @@ export function HeroSection() {
         <div className="animate-fade-up" style={{
         animationDelay: "0.4s"
       }}>
-          <BeforeAfterSlider beforeImage={afterCleanPdf} afterImage={beforeMessyNotes} beforeLabel="Before: Messy notes" afterLabel="After: Clean PDF" />
+          <BeforeAfterSlider beforeImage={beforeMessyNotes} afterImage={afterCleanPdf} beforeLabel="Before: Messy notes" afterLabel="After: Clean PDF" />
         </div>
       </div>
 

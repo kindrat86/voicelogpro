@@ -64,23 +64,23 @@ export function BeforeAfterSlider({
         ref={containerRef}
         className="relative aspect-[16/10] overflow-hidden rounded-xl border-2 border-border bg-muted select-none touch-none"
       >
-        {/* Before Image (Base Layer) */}
+        {/* After image (base layer, revealed on the right — matches the right-hand label) */}
         <img
-          src={beforeImage}
-          alt="Before - messy handwritten notes"
+          src={afterImage}
+          alt={afterLabel}
           className="absolute inset-0 w-full h-full object-cover"
           draggable={false}
           fetchPriority="high"
         />
 
-        {/* After Image (Clipped Layer) */}
+        {/* Before image (clipped layer, left side — matches the left-hand label) */}
         <div
           className="absolute inset-0 overflow-hidden"
           style={{ width: `${sliderValue}%` }}
         >
           <img
-            src={afterImage}
-            alt="After - clean PDF report"
+            src={beforeImage}
+            alt={beforeLabel}
             className="absolute inset-0 h-full object-cover"
             style={{ 
               width: sliderValue > 0 ? `${10000 / sliderValue}%` : '100%',

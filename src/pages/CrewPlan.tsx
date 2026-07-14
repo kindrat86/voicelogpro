@@ -7,6 +7,7 @@ import { CheckCircle, Loader2, ArrowLeft, Zap, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
+import { subscribeToSequence } from "@/lib/subscribe";
 import { Badge } from "@/components/ui/badge";
 
 const emailSchema = z.string().email("Please enter a valid email address");
@@ -49,6 +50,8 @@ export default function CrewPlan() {
     }
     setStatus("loading");
     setIsDuplicate(false);
+    // Enroll in the email sequence in parallel — never blocks the signup UX.
+    void subscribeToSequence(email);
     try {
       const { error } = await supabase.from("waitlist").insert({
         email: email.toLowerCase().trim(),
@@ -163,6 +166,9 @@ export default function CrewPlan() {
                     <form onSubmit={(e) => handleSubmit(e, "free")} className="space-y-4">
                       <Input
                         type="email"
+                        autoComplete="email"
+                        inputMode="email"
+                        enterKeyHint="go"
                         placeholder="Enter your email"
                         value={freeEmail}
                         onChange={(e) => {
@@ -245,6 +251,9 @@ export default function CrewPlan() {
                     <form onSubmit={(e) => handleSubmit(e, "paid")} className="space-y-4">
                       <Input
                         type="email"
+                        autoComplete="email"
+                        inputMode="email"
+                        enterKeyHint="go"
                         placeholder="Enter your email"
                         value={paidEmail}
                         onChange={(e) => {

@@ -229,12 +229,23 @@
 
 /* Mobile Maximum: Sunlight-proof readability */
 @media (max-width: 768px) {
-  p, li, span:not(.sr-only) {
+  /* Boost body copy only. Spans that carry an explicit text-size utility
+     (price tags, stat numbers) keep their authored size, and spans inside
+     headings (hero second line) inherit the heading size instead. */
+  p, li,
+  span:not(.sr-only):not(.text-xs):not(.text-sm):not(.text-base):not(.text-lg):not(.text-xl):not(.text-2xl):not(.text-3xl):not(.text-4xl):not(.text-5xl) {
     font-weight: 500;
     font-size: 17px;
     line-height: 1.55;
   }
-  
+
+  /* !important needed: the :not() chain above carries 9 classes of specificity */
+  h1 span, h2 span, h3 span, h4 span {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+
   /* Darker muted text for direct sunlight readability */
   .text-muted-foreground {
     color: hsl(220 15% 78%);

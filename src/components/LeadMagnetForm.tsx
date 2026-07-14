@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Loader2, CheckCircle, Lock } from "lucide-react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
+import { subscribeToSequence } from "@/lib/subscribe";
+import { Link } from "react-router-dom";
 
 const emailSchema = z.string().email("Please enter a valid email address");
 
@@ -41,6 +43,8 @@ export function LeadMagnetForm({
     }
     setStatus("loading");
     setIsDuplicate(false);
+    // Enroll in the email sequence in parallel — never blocks the signup UX.
+    void subscribeToSequence(email);
     try {
       const { error } = await supabase.from("waitlist").insert({
         email: email.toLowerCase().trim(),
@@ -68,11 +72,20 @@ export function LeadMagnetForm({
           <CheckCircle className="w-7 h-7 text-success" />
         </div>
         <p className="text-success font-bold text-lg mb-1">
-          {isDuplicate ? "You're already on the list!" : "Defense Kit reserved!"}
+          {isDuplicate ? "You're already on the list!" : "Defense Kit unlocked!"}
         </p>
-        <p className="text-muted-foreground text-sm">
-          We'll send the Daily Log Defense Kit to your inbox. Your beta spot is locked in.
+        <p className="text-muted-foreground text-sm mb-4">
+          {isDuplicate
+            ? "Your beta spot is locked in — and the kit is yours below."
+            : "Check your inbox and confirm your email — the kit (plus the $40k story) lands there too. Your beta spot is locked in."}
         </p>
+        <Link
+          to="/defense-kit"
+          className="inline-flex items-center justify-center h-12 px-6 bg-primary text-primary-foreground font-bold uppercase tracking-wide hover:opacity-90 transition-opacity"
+          style={{ borderRadius: "var(--radius)", boxShadow: "var(--shadow-hard-primary)" }}
+        >
+          Open the Defense Kit now →
+        </Link>
       </div>
     );
   }
@@ -82,6 +95,9 @@ export function LeadMagnetForm({
       <div className="flex flex-col sm:flex-row gap-3">
         <Input
           type="email"
+          autoComplete="email"
+          inputMode="email"
+          enterKeyHint="go"
           placeholder={placeholder}
           value={email}
           onChange={(e) => {

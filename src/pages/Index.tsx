@@ -45,10 +45,8 @@ const Index = () => {
           <InteractiveVoiceDemo />
         </div>
 
-        {/* 6. Authority — compliance coverage */}
-        <div className="hidden md:block">
-          <ComplianceMatrix />
-        </div>
+        {/* 6. Authority — compliance coverage (table scrolls horizontally on mobile) */}
+        <ComplianceMatrix />
 
         {/* 7. How it works */}
         <HowItWorks />

@@ -1,9 +1,9 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { MobileBottomBar } from "@/components/MobileBottomBar";
 import Index from "./pages/Index";
 
@@ -41,10 +41,28 @@ const TradesHub = lazy(() => import("./pages/TradesHub"));
 
 // Standalone conversion landing page
 const BetaSignup = lazy(() => import("./pages/BetaSignup"));
+
+// Funnel delivery pages (lead magnet + double-opt-in confirmation)
+const DefenseKit = lazy(() => import("./pages/DefenseKit"));
+const Welcome = lazy(() => import("./pages/Welcome"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 const queryClient = new QueryClient();
+
+/** Scroll to the #hash target after SPA navigation (react-router doesn't). */
+const ScrollToHash = () => {
+  const { hash, pathname } = useLocation();
+  useEffect(() => {
+    if (!hash) return;
+    // Wait a tick so lazy routes have rendered their sections.
+    const t = setTimeout(() => {
+      document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+    return () => clearTimeout(t);
+  }, [hash, pathname]);
+  return null;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -52,6 +70,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToHash />
         <div className="pb-24 md:pb-0">
           <Suspense fallback={<div className="min-h-screen bg-background" />}>
             <Routes>
@@ -91,6 +110,9 @@ const App = () => (
               <Route path="/for/:slug" element={<TradePage />} />
               {/* Standalone conversion landing page */}
               <Route path="/beta" element={<BetaSignup />} />
+
+              <Route path="/defense-kit" element={<DefenseKit />} />
+              <Route path="/welcome" element={<Welcome />} />
               {/* Trust pages */}
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />

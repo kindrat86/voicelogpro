@@ -7,6 +7,7 @@ import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { Mic, FileText, Clock, Shield, FileCheck, Users, Smartphone, CheckCircle, Loader2, Zap } from "lucide-react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
+import { subscribeToSequence } from "@/lib/subscribe";
 import beforeImage from "@/assets/before-messy-notes.webp";
 import afterImage from "@/assets/after-clean-pdf.webp";
 
@@ -50,6 +51,8 @@ export default function BetaSignup() {
     }
     setStatus("loading");
     setIsDuplicate(false);
+    // Enroll in the email sequence in parallel — never blocks the signup UX.
+    void subscribeToSequence(email);
     try {
       const { error } = await supabase.from("waitlist").insert({
         email: email.toLowerCase().trim(),
@@ -336,6 +339,9 @@ export default function BetaSignup() {
                     <form onSubmit={(e) => handleSubmit(e, "free")} className="space-y-4">
                       <Input
                         type="email"
+                        autoComplete="email"
+                        inputMode="email"
+                        enterKeyHint="go"
                         placeholder="Enter your email"
                         value={freeEmail}
                         onChange={(e) => {
@@ -414,6 +420,9 @@ export default function BetaSignup() {
                     <form onSubmit={(e) => handleSubmit(e, "paid")} className="space-y-4">
                       <Input
                         type="email"
+                        autoComplete="email"
+                        inputMode="email"
+                        enterKeyHint="go"
                         placeholder="Enter your email"
                         value={paidEmail}
                         onChange={(e) => {

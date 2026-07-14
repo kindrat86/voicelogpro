@@ -54,6 +54,8 @@ const PRERENDER_ROUTES = [
   '/for/roofers',
   '/for/general-contractors',
   '/beta',
+  '/defense-kit',
+  '/welcome',
   '/blog/texas-lien-law',
   '/blog/texas-property-code-chapter-53-guide-2025',
   '/about',
