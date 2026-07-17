@@ -168,10 +168,14 @@ async function prerender() {
       routeHtml = routeHtml.replace('</head>', `${eeatHead}\n</head>`);
       const eeatByline = `<p class="author-byline" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"><span class="author" rel="author">By The Field Desk, Voice Log Pro</span> · <time datetime="${EEAT_MODIFIED}">Updated ${EEAT_MODIFIED}</time> · Published ${EEAT_PUBLISHED}</p>`;
 
-      // Inject rendered app HTML into root div (byline first so crawlers see E-E-A-T)
+      // Inject rendered app HTML into root div. The byline goes AFTER the app
+      // HTML: author/date regexes match anywhere on the page, but crawlers that
+      // take "the first <p> over 60 chars" as the answer-first opener were
+      // picking up the hidden byline instead of each page's real opening
+      // paragraph (growth-engine C1 answer-first).
       routeHtml = routeHtml.replace(
         '<div id="root"></div>',
-        `<div id="root">${eeatByline}${appHtml}</div>`
+        `<div id="root">${appHtml}${eeatByline}</div>`
       );
 
       // Write the route file
