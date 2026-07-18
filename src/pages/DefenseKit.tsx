@@ -158,7 +158,7 @@ export default function DefenseKit() {
   return (
     <main className="min-h-screen bg-background print:bg-white">
       <Helmet>
-        <title>Daily Log Defense Kit — Voice Log Pro</title>
+        <title>Daily Log Defense Kit — VoiceLogPro</title>
         <meta name="robots" content="noindex" />
         <link rel="canonical" href="https://voicelogpro.com/defense-kit" />
       </Helmet>
@@ -276,7 +276,7 @@ export default function DefenseKit() {
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="headline-section text-foreground mb-4">Now stop typing all of this</h2>
           <p className="body-large mb-8">
-            The kit works — if you fill it in every single day. Voice Log Pro fills it for you: press record,
+            The kit works — if you fill it in every single day. VoiceLogPro fills it for you: press record,
             speak, and get a timestamped, weather-stamped, court-ready PDF. Even offline.
           </p>
           <Link

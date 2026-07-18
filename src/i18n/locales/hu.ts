@@ -1,5 +1,5 @@
 /**
- * Hungarian locale for Voice Log Pro.
+ * Hungarian locale for VoiceLogPro.
  */
 const hu = {
   _meta: {
@@ -77,7 +77,7 @@ const hu = {
   },
 
   why: {
-    title: "Miért létezik a Voice Log Pro",
+    title: "Miért létezik a VoiceLogPro",
     backstory: "Éveket töltöttem valódi munkahelyeken — kábelcső az egyik kezemben, módosítási utasítások a másikban.",
     wallLabel: "A Nap, Ami Majdnem Elpusztított Minket",
     wallText: "2022-ben egy fővállalkozó egy dallasi adatközpont építésénél elutasította a 40 000 dolláros fizetési kérelmünket. A kifogása? „A napi naplóitok nem mutatják a 14-ei időjárási késést.” Voltak fényképeink. Voltak jegyzeteink. De szétszóródtak egy művezető kisteherautójában, egy WhatsApp csoportban és egy jegyzetfüzetben, amelyre kávé ömlött.",
@@ -90,7 +90,7 @@ const hu = {
     planLine2: "Nem irodai dolgozóknak. Nem nagy tech cégeknek. A csapatnak.",
     planLine3: "Nem változtatod meg, hogy hogyan dolgozol.",
     planLine4: "Megnyomod a felvételt, elmondod a frissítést, és továbblépsz.",
-    planLine5: "A Voice Log Pro bizonyítékértékű napi naplókká alakítja, amit mondasz, időbélyegekkel, időjárással és biztonsági megjegyzésekkel — dokumentáció, amely támogatja a fizetési vitáidat és zálogjogi jogaidat.",
+    planLine5: "A VoiceLogPro bizonyítékértékű napi naplókká alakítja, amit mondasz, időbélyegekkel, időjárással és biztonsági megjegyzésekkel — dokumentáció, amely támogatja a fizetési vitáidat és zálogjogi jogaidat.",
     planLine6: "Offline is működik.",
   },
 
@@ -117,14 +117,14 @@ const hu = {
     title: "Hogyan működik",
     subtitle: "Piszkos kesztyűkhöz és hosszú napokhoz építve.",
     step1: "Mondd el a frissítésed, miközben járod a munkahelyet",
-    step2: "A Voice Log Pro átírja és hozzáadja az időbélyegeket, időjárást és biztonsági címkéket",
+    step2: "A VoiceLogPro átírja és hozzáadja az időbélyegeket, időjárást és biztonsági címkéket",
     step3: "Egy használatra kész PDF jön létre — készen a küldésre",
     step4: "Offline működik — a naplók szinkronizálódnak, amikor újra online vagy",
   },
 
   demo: {
     title: "Nézd meg működés közben",
-    subtitle: "Előnézet, hogyan alakítja át a Voice Log Pro a hangot használatra kész naplókká.",
+    subtitle: "Előnézet, hogyan alakítja át a VoiceLogPro a hangot használatra kész naplókká.",
     badgeText: "Beta Demó — Szimulált kimenet, nem valódi átírás",
     recordButton: "Tesztnapló rögzítése",
     recording: "Rögzítés...",
@@ -140,11 +140,11 @@ const hu = {
 
   compliance: {
     title: "Megfelelési lefedettség",
-    subtitle: "A Voice Log Pro közvetlenül leképezi a joghatóság-specifikus jogi követelményeket.",
+    subtitle: "A VoiceLogPro közvetlenül leképezi a joghatóság-specifikus jogi követelményeket.",
     thFeature: "Funkció",
     thJurisdiction: "Joghatóság",
     thRequirement: "Jogi követelmény",
-    thSolution: "Hogyan oldja meg a Voice Log Pro",
+    thSolution: "Hogyan oldja meg a VoiceLogPro",
     row1Feature: "Havi értesítések",
     row1Jurisdiction: "Texas",
     row1Requirement: "Texas Property Code 53. Fejezet",
@@ -163,10 +163,10 @@ const hu = {
     title: "Mit mondanak a csapatok",
     jasonName: "Jason T.",
     jasonRole: "Villanyszerelő művezető",
-    jasonQuote: "Egy GC megpróbált hibáztatni minket egy késésért. Előhúztam a napi naplót időbélyegekkel és fotókkal — ügy lezárva. A Voice Log Pro védi a hátam.",
+    jasonQuote: "Egy GC megpróbált hibáztatni minket egy késésért. Előhúztam a napi naplót időbélyegekkel és fotókkal — ügy lezárva. A VoiceLogPro védi a hátam.",
     mariaName: "Maria R.",
     mariaRole: "Vízvezeték-szerelő vezető",
-    mariaQuote: "Szkeprikus voltam — a beta eszközök általában elromlanak. De a Voice Log Pro simán működött. Heti órákat spórol a csapatunknak.",
+    mariaQuote: "Szkeprikus voltam — a beta eszközök általában elromlanak. De a VoiceLogPro simán működött. Heti órákat spórol a csapatunknak.",
   },
 
   valueLadder: {
@@ -221,7 +221,7 @@ const hu = {
     reserveCrew: "Crew helyem lefoglalása",
     successCrewBump: "Crew Csomag + Vitára Kész Audit Nyomvonal lefoglalva. Jelentkezünk, amint a beta helyed megnyílik.",
     successCrew: "Crew Csomag lefoglalva. Jelentkezünk, amikor a beta helyed megnyílik.",
-    loIText: "Ez egy Szándéknyilatkozat volt — azt mondod, hogy fizetni fogsz a Voice Log Pro-ért, amikor elkészül. Nem lesz 18 000 Ft/hó kiszámlázva, amíg nem regisztrálsz az indulás után.",
+    loIText: "Ez egy Szándéknyilatkozat volt — azt mondod, hogy fizetni fogsz a VoiceLogPro-ért, amikor elkészül. Nem lesz 18 000 Ft/hó kiszámlázva, amíg nem regisztrálsz az indulás után.",
     cancelGuaranteeNote: "Ma nincs díj. Lemondás bármikor. 30 napos pénzvisszafizetési garancia induláskor.",
     reservingNote: "Helyet foglalsz — nem fizetsz. Emailt küldünk, amikor a hozzáférés megnyílik.",
   },
@@ -230,7 +230,7 @@ const hu = {
     title: "Csatlakozz nulla kockázattal",
     subtitle: "Minden okot eltávolítunk, hogy azt mond „még nem.”",
     g1Title: "Nincs díj az indulásig",
-    g1Desc: "Foglald le a helyed ingyen. Csak akkor fizetsz 18 000 Ft/hó-t, ha a Voice Log Pro elindul és úgy döntesz, előfizetsz.",
+    g1Desc: "Foglald le a helyed ingyen. Csak akkor fizetsz 18 000 Ft/hó-t, ha a VoiceLogPro elindul és úgy döntesz, előfizetsz.",
     g2Title: "30 napos pénzvisszafizetés",
     g2Desc: "Induláskor, ha nem spórol órákat és nem segít vitákat nyerni az első 30 napban, minden fillért visszatérítünk.",
     g3Title: "Az adataid a tieid maradnak",
@@ -242,36 +242,36 @@ const hu = {
   limitedBeta: {
     badge: "Már csak 3 Beta Hely Maradt",
     title: "Szándékosan tartjuk kicsiben a Beta-t",
-    body: "A Voice Log Pro-t egy dolgozó csapat építi, nem egy venture-tőkés startup. Egyszerre 3 új csapatot veszünk fel, hogy minden beta partner valódi támogatást kapjon — nem egy helpdesk jegyet.",
+    body: "A VoiceLogPro-t egy dolgozó csapat építi, nem egy venture-tőkés startup. Egyszerre 3 új csapatot veszünk fel, hogy minden beta partner valódi támogatást kapjon — nem egy helpdesk jegyet.",
     nextBatch: "Amint ez a 3 hely betelik, a következő kör ~30 napig nem nyílik meg.",
     closing: "Ha komolyan gondolod a rendes jelentéskészítést — foglald le most.",
   },
 
   faq: {
     title: "Gyakran Ismételt Kérdések",
-    subtitle: "Gyors válaszok a Voice Log Pro-ról és az építési megfelelőségi dokumentációról.",
+    subtitle: "Gyors válaszok a VoiceLogPro-ról és az építési megfelelőségi dokumentációról.",
     basicsHeader: "Alapok",
     legalHeader: "Megfelelés & Jogi",
-    offlineQuestion: "Működik a Voice Log Pro offline?",
+    offlineQuestion: "Működik a VoiceLogPro offline?",
     offlineAnswer: "Igen. Hangjegyzeteket rögzíthetsz kapcsolat nélkül is. A jelentések automatikusan szinkronizálódnak, amikor újra online vagy.",
     costQuestion: "Mennyibe kerül?",
     costAnswer: "18 000 Ft/hó a Crew Csomagért. Korlátlan napi jelentéseket, automatikus időbélyegeket, időjárás-integrációt, fényképcsatolmányokat és bíróságra kész PDF exportokat tartalmaz.",
     courtReadyQuestion: "Használhatók ezek a jelentések bíróságon?",
-    courtReadyAnswer: "Igen. A Voice Log Pro időbélyegekkel, időjárási adatokkal és fényképekkel ellátott PDF jelentéseket hoz létre, amelyek kortársi dokumentációként szolgálnak. Ezek a jelentések támogatják a zálogjogi igényeket, késedelmi vitákat és fizetésvédelmi eseteket.",
+    courtReadyAnswer: "Igen. A VoiceLogPro időbélyegekkel, időjárási adatokkal és fényképekkel ellátott PDF jelentéseket hoz létre, amelyek kortársi dokumentációként szolgálnak. Ezek a jelentések támogatják a zálogjogi igényeket, késedelmi vitákat és fizetésvédelmi eseteket.",
     texasTrappingQuestion: "Segít ez a texasi havi alapbefagyasztási mechanizmussal?",
-    texasTrappingAnswer: "Igen. A Voice Log Pro a számlázási hónappal címkézi a jelentéseket, amely szükséges az értesítések második hónap 15. napjáig történő elküldéséhez a Texas Property Code 53. Fejezete szerint.",
+    texasTrappingAnswer: "Igen. A VoiceLogPro a számlázási hónappal címkézi a jelentéseket, amely szükséges az értesítések második hónap 15. napjáig történő elküldéséhez a Texas Property Code 53. Fejezete szerint.",
     texasLienQuestion: "Használhatók ezek a jelentések zálogjogi jogvédelemre?",
     texasLienAnswer: "Igen. Az alkalmazás kortársi, időbélyegzett feljegyzéseket hoz létre a szállított munkáról és anyagokról a mechanikai zálogjog dokumentáció támogatására Texasban.",
     virginiaQuestion: "Hogyan támogatja ez a Konstruktív Gyorsítási igényeket?",
     virginiaAnswer: "A munkahelyi körülmények valós idejű rögzítésével dokumentálod a mentesíthető késést és megkülönbözteted a belső hatékonytalanságtól. Az időjárási adatok és időbélyegek bizonyítják, hogy külső tényezők befolyásolták az ütemtervet.",
     nswSopaQuestion: "Érvényesek a hangfeljegyzések a SOPA Eljárásokban?",
-    nswSopaAnswer: "Igen. Az eljárók előnyben részesítik a kortársi feljegyzéseket a későbbi tanúvallomásokkal szemben a Fizetés Biztonsága ügyekben. A Voice Log Pro időbélyegzett munkahelyi naplókat hoz létre, amelyek bizonyító erővel bírnak.",
+    nswSopaAnswer: "Igen. Az eljárók előnyben részesítik a kortársi feljegyzéseket a későbbi tanúvallomásokkal szemben a Fizetés Biztonsága ügyekben. A VoiceLogPro időbélyegzett munkahelyi naplókat hoz létre, amelyek bizonyító erővel bírnak.",
     ukGoldenThreadQuestion: "Mi az a Golden Thread?",
     ukGoldenThreadAnswer: "A Golden Thread egy digitális nyilvántartási követelmény az UK Building Safety Act alapján. Előírja, hogy az épülettel kapcsolatos összes információt tárolni, kezelni és hozzáférhetővé kell tenni az épület teljes életciklusa alatt.",
     learnMore: "Tudj meg többet",
     seeTexasGuide: "Teljes texasi útmutató megtekintése",
     seeVirginiaGuide: "Teljes virginiai útmutató megtekintése",
-    getStarted: "Kezdj neki a Voice Log Pro-val",
+    getStarted: "Kezdj neki a VoiceLogPro-val",
     seeUkGuide: "Teljes UK útmutató megtekintése",
   },
 
@@ -282,8 +282,8 @@ const hu = {
     constructiveAccel: "Konstruktív Gyorsítás Védelem",
     ukGoldenThread: "UK Golden Thread",
     resourcesHeader: "Erőforrások",
-    rakenVs: "Raken vs Voice Log Pro",
-    fieldwireVs: "Fieldwire vs Voice Log Pro",
+    rakenVs: "Raken vs VoiceLogPro",
+    fieldwireVs: "Fieldwire vs VoiceLogPro",
     copyright: "A csapatnak építve.",
     allRightsReserved: "Minden jog fenntartva.",
   },
@@ -297,7 +297,7 @@ const hu = {
     soloBeta: "Solo Beta",
     crewPlan: "Crew Csomag",
     securedFree: "Biztosítottad az ingyenes beta helyedet. Értesítünk, amikor a hozzáférés megnyílik.",
-    loiText: "Ez egy Szándéknyilatkozat volt — egyszerűen csak azt mondod, hogy fizetnél a Voice Log Pro-ért, amikor elkészül. Nem lesz 18 000 Ft/hó kiszámlázva, amíg nem regisztrálsz az indulás után.",
+    loiText: "Ez egy Szándéknyilatkozat volt — egyszerűen csak azt mondod, hogy fizetnél a VoiceLogPro-ért, amikor elkészül. Nem lesz 18 000 Ft/hó kiszámlázva, amíg nem regisztrálsz az indulás után.",
     soloBetaPrice: "0 Ft",
     soloBetaPriceSub: "/ Ingyenes",
     noCreditCard: "Nincs szükség hitelkártyára",

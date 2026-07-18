@@ -25,7 +25,7 @@ function ComparisonCTA({ location }: { location: string }) {
     <div className="flex flex-col items-center gap-2">
       <Link to="/crew-plan" onClick={() => trackCTAClick(location)}>
         <Button variant="cta" size="lg" className="min-h-[60px] text-lg font-bold touch-manipulation active:scale-95 transition-transform duration-100">
-          Access Voice Log Pro
+          Access VoiceLogPro
           <ChevronRight className="w-5 h-5 ml-1" />
         </Button>
       </Link>
@@ -53,7 +53,7 @@ function ComparisonTable() {
           <tr className="border-b-2 border-border">
             <th className="text-left p-4 font-display text-lg uppercase"></th>
             <th className="text-center p-4 font-display text-lg uppercase text-muted-foreground">Fieldwire</th>
-            <th className="text-center p-4 font-display text-lg uppercase text-primary">Voice Log Pro</th>
+            <th className="text-center p-4 font-display text-lg uppercase text-primary">VoiceLogPro</th>
           </tr>
         </thead>
         <tbody>
@@ -77,19 +77,19 @@ const faqs = [
   },
   {
     q: "What is the best Fieldwire alternative for subcontractors?",
-    a: "For subcontractors focused on payment protection rather than project management, Voice Log Pro is the best alternative. It creates court-ready documentation in seconds using voice—no typing, no pins, no plan navigation required.",
+    a: "For subcontractors focused on payment protection rather than project management, VoiceLogPro is the best alternative. It creates court-ready documentation in seconds using voice—no typing, no pins, no plan navigation required.",
   },
   {
     q: "How do subcontractors document delays?",
-    a: "Effective delay documentation requires contemporaneous records with timestamps, weather data, and specific details. Voice Log Pro automatically captures this information with every voice log, creating excusable delay evidence that holds up in disputes.",
+    a: "Effective delay documentation requires contemporaneous records with timestamps, weather data, and specific details. VoiceLogPro automatically captures this information with every voice log, creating excusable delay evidence that holds up in disputes.",
   },
   {
     q: "How do subcontractors protect lien rights?",
-    a: "Lien rights are protected through proper documentation of work performed, materials delivered, and timeline compliance. Voice Log Pro is engineered to support Texas 'Monthly Trapping' requirements and jurisdiction-specific notice deadlines—the documentation most subcontractors miss.",
+    a: "Lien rights are protected through proper documentation of work performed, materials delivered, and timeline compliance. VoiceLogPro is engineered to support Texas 'Monthly Trapping' requirements and jurisdiction-specific notice deadlines—the documentation most subcontractors miss.",
   },
   {
-    q: "Is Voice Log Pro project management software?",
-    a: "No. Voice Log Pro is not project management software and doesn't compete with Fieldwire. It's a legal defense and payment protection tool that converts voice notes into court-ready PDFs with timestamps and weather data.",
+    q: "Is VoiceLogPro project management software?",
+    a: "No. VoiceLogPro is not project management software and doesn't compete with Fieldwire. It's a legal defense and payment protection tool that converts voice notes into court-ready PDFs with timestamps and weather data.",
   },
 ];
 
@@ -97,10 +97,10 @@ export default function FieldwireComparison() {
   return (
     <>
       <Helmet>
-        <title>Fieldwire vs Voice Log Pro | Payment Protection for Subcontractors</title>
+        <title>Fieldwire vs VoiceLogPro | Payment Protection for Subcontractors</title>
         <meta
           name="description"
-          content="Compare Fieldwire vs Voice Log Pro. Fieldwire manages plans and tasks. Voice Log Pro protects subcontractors with court-ready voice logs, lien defense, and delay documentation."
+          content="Compare Fieldwire vs VoiceLogPro. Fieldwire manages plans and tasks. VoiceLogPro protects subcontractors with court-ready voice logs, lien defense, and delay documentation."
         />
         <link rel="canonical" href="https://voicelogpro.com/fieldwire-vs-voice-log-pro" />
       </Helmet>
@@ -109,11 +109,11 @@ export default function FieldwireComparison() {
         {/* Hero */}
         <section className="section-container text-center">
           <h1 className="headline-primary text-foreground mb-6 max-w-4xl mx-auto">
-            Fieldwire vs. Voice Log Pro: Managing the Job vs. Protecting the Paycheck
+            Fieldwire vs. VoiceLogPro: Managing the Job vs. Protecting the Paycheck
           </h1>
           <p className="body-large max-w-3xl mx-auto mb-8">
             Fieldwire helps manage the project.<br />
-            Voice Log Pro protects subcontractors from unpaid work, delay claims, and lost lien rights.
+            VoiceLogPro protects subcontractors from unpaid work, delay claims, and lost lien rights.
           </p>
           <ComparisonCTA location="hero" />
         </section>
@@ -121,20 +121,20 @@ export default function FieldwireComparison() {
         {/* Two Tools, Two Problems */}
         <section className="section-container bg-secondary/30">
           <h2 className="headline-section text-foreground mb-8 text-center">Two Tools. Two Completely Different Problems.</h2>
-          <p className="body-large text-center mb-8">Fieldwire and Voice Log Pro are not competitors — they solve fundamentally different problems.</p>
+          <p className="body-large text-center mb-8">Fieldwire and VoiceLogPro are not competitors — they solve fundamentally different problems.</p>
           
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
             <div className="card-industrial">
               <p className="text-lg text-muted-foreground"><span className="text-foreground font-semibold">Fieldwire</span> is a Project Operating System.</p>
             </div>
             <div className="card-sunlight">
-              <p className="text-lg text-foreground"><span className="text-primary font-semibold">Voice Log Pro</span> is a Legal Defense Weapon.</p>
+              <p className="text-lg text-foreground"><span className="text-primary font-semibold">VoiceLogPro</span> is a Legal Defense Weapon.</p>
             </div>
           </div>
           
           <p className="text-center text-foreground text-lg">
             Fieldwire is excellent for seeing <strong>what needs to be done</strong>.<br />
-            Voice Log Pro is built to prove <strong>what was actually done</strong> — and why it took longer.
+            VoiceLogPro is built to prove <strong>what was actually done</strong> — and why it took longer.
           </p>
         </section>
 
@@ -180,10 +180,10 @@ export default function FieldwireComparison() {
           </div>
         </section>
 
-        {/* Voice Log Pro Section */}
+        {/* VoiceLogPro Section */}
         <section className="section-container bg-secondary/30">
-          <h2 className="headline-section text-foreground mb-4">Voice Log Pro — The Subcontractor's Black Box</h2>
-          <p className="body-large mb-6">Voice Log Pro removes reporting friction entirely.</p>
+          <h2 className="headline-section text-foreground mb-4">VoiceLogPro — The Subcontractor's Black Box</h2>
+          <p className="body-large mb-6">VoiceLogPro removes reporting friction entirely.</p>
           <p className="text-foreground text-lg mb-8">
             It's designed for electrical, plumbing, and HVAC foremen who don't have time to type — and can't afford to forget delay details.
           </p>
@@ -200,9 +200,9 @@ export default function FieldwireComparison() {
           </div>
         </section>
 
-        {/* Why Subcontractors Choose Voice Log Pro */}
+        {/* Why Subcontractors Choose VoiceLogPro */}
         <section className="section-container">
-          <h2 className="headline-section text-foreground mb-8 text-center">Why Subcontractors Choose Voice Log Pro</h2>
+          <h2 className="headline-section text-foreground mb-8 text-center">Why Subcontractors Choose VoiceLogPro</h2>
           
           <div className="space-y-6">
             <div className="card-industrial">
@@ -216,7 +216,7 @@ export default function FieldwireComparison() {
               <blockquote className="border-l-4 border-primary pl-4 text-foreground italic mb-4">
                 "Blocked in Zone A by framing crew. Standby for two hours."
               </blockquote>
-              <p className="text-primary font-semibold">Voice Log Pro instantly converts this into a claim-ready, structured report.</p>
+              <p className="text-primary font-semibold">VoiceLogPro instantly converts this into a claim-ready, structured report.</p>
             </div>
 
             <div className="card-industrial">
@@ -245,7 +245,7 @@ export default function FieldwireComparison() {
                 <h3 className="font-display text-lg uppercase text-foreground">3. Lien Right Security</h3>
               </div>
               <p className="text-muted-foreground mb-4">Fieldwire reports are generic.</p>
-              <p className="text-foreground mb-4">Voice Log Pro logs are engineered to support:</p>
+              <p className="text-foreground mb-4">VoiceLogPro logs are engineered to support:</p>
               <ul className="space-y-2 mb-4">
                 <li className="flex items-center gap-2 text-foreground"><Check className="w-4 h-4 text-primary" /> Texas "Monthly Trapping Mechanism"</li>
                 <li className="flex items-center gap-2 text-foreground"><Check className="w-4 h-4 text-primary" /> Jurisdiction-specific lien notice requirements</li>
@@ -262,7 +262,7 @@ export default function FieldwireComparison() {
               </div>
               <p className="text-muted-foreground mb-4">Fieldwire data is typically owned by the GC.</p>
               <p className="text-foreground">
-                Voice Log Pro keeps the evidence in the <strong>subcontractor's control</strong>, ensuring you have your own paper trail when disputes happen.
+                VoiceLogPro keeps the evidence in the <strong>subcontractor's control</strong>, ensuring you have your own paper trail when disputes happen.
               </p>
             </div>
 
@@ -276,7 +276,7 @@ export default function FieldwireComparison() {
               <p className="text-muted-foreground mb-4">
                 Courts in the UK and Australia prioritize contemporaneous site diaries over retroactive task lists.
               </p>
-              <p className="text-primary font-semibold">Voice Log Pro automatically creates this evidentiary standard.</p>
+              <p className="text-primary font-semibold">VoiceLogPro automatically creates this evidentiary standard.</p>
             </div>
           </div>
         </section>
@@ -306,7 +306,7 @@ export default function FieldwireComparison() {
             </div>
             
             <div className="card-sunlight">
-              <p className="text-lg text-foreground mb-2"><strong>Use Voice Log Pro to protect the business.</strong></p>
+              <p className="text-lg text-foreground mb-2"><strong>Use VoiceLogPro to protect the business.</strong></p>
               <p className="text-foreground">It's the only tool that lets a foreman generate legally defensible proof in under 60 seconds a day.</p>
             </div>
             
@@ -314,7 +314,7 @@ export default function FieldwireComparison() {
               <p className="text-foreground text-lg">
                 <strong>For subcontractors:</strong><br />
                 Fieldwire tells you <span className="text-muted-foreground">what to do</span>.<br />
-                Voice Log Pro ensures you <span className="text-primary font-semibold">get paid for doing it</span>.
+                VoiceLogPro ensures you <span className="text-primary font-semibold">get paid for doing it</span>.
               </p>
             </div>
           </div>
@@ -323,7 +323,7 @@ export default function FieldwireComparison() {
         {/* Closing */}
         <section className="section-container text-center">
           <p className="text-2xl md:text-3xl font-display uppercase text-foreground mb-8">
-            Voice Log Pro is payment insurance for the trades.
+            VoiceLogPro is payment insurance for the trades.
           </p>
           
           <h2 className="headline-section text-foreground mb-6">Ready to Protect Your Paycheck?</h2>

@@ -1,5 +1,5 @@
 /**
- * Danish locale for Voice Log Pro.
+ * Danish locale for VoiceLogPro.
  */
 const da = {
   _meta: {
@@ -77,7 +77,7 @@ const da = {
   },
 
   why: {
-    title: "Hvorfor Voice Log Pro findes",
+    title: "Hvorfor VoiceLogPro findes",
     backstory: "Jeg tilbragte år på rigtige byggepladser — kabelrør i den ene hånd, ændringsordrer i den anden.",
     wallLabel: "Dagen der næsten dræbte os",
     wallText: "I 2022 afviste en hovedentreprenør på et datacenterbyggeri i Dallas 40.000 USD af vores betalingsansøgning. Hans undskyldning? 'Dine daglige logs viser ikke vejrforsinkelsen den 14.' Vi havde billederne. Vi havde notaterne. Men de var spredt ud over en formands lastbil, en WhatsApp-gruppe og en notesbog, der havde kaffe på sig.",
@@ -90,7 +90,7 @@ const da = {
     planLine2: "Ikke kontoransatte. Ikke stor teknologi. Holdet.",
     planLine3: "Du ændrer ikke, hvordan du arbejder.",
     planLine4: "Du trykker på optag, siger din opdatering og går videre.",
-    planLine5: "Voice Log Pro gør det, du siger, til bevisværdige daglige logs med tidsstempler, vejr og sikkerhedsnotater — dokumentation, der understøtter dine betalingstvister og panterettigheder.",
+    planLine5: "VoiceLogPro gør det, du siger, til bevisværdige daglige logs med tidsstempler, vejr og sikkerhedsnotater — dokumentation, der understøtter dine betalingstvister og panterettigheder.",
     planLine6: "Fungerer også offline.",
   },
 
@@ -117,14 +117,14 @@ const da = {
     title: "Sådan fungerer det",
     subtitle: "Bygget til beskidte handsker og lange dage.",
     step1: "Sig din opdatering, mens du går rundt på byggepladsen",
-    step2: "Voice Log Pro transskriberer og tilføjer tidsstempler, vejr og sikkerhedstags",
+    step2: "VoiceLogPro transskriberer og tilføjer tidsstempler, vejr og sikkerhedstags",
     step3: "En jobklar PDF genereres — klar til at sende",
     step4: "Fungerer offline — logs synkroniseres, når du er online igen",
   },
 
   demo: {
     title: "Se det i aktion",
-    subtitle: "Forhåndsvis, hvordan Voice Log Pro forvandler stemme til jobklare logs.",
+    subtitle: "Forhåndsvis, hvordan VoiceLogPro forvandler stemme til jobklare logs.",
     badgeText: "Beta-demo — simuleret output, ikke faktisk transskription",
     recordButton: "Optag en testlog",
     recording: "Optager...",
@@ -140,11 +140,11 @@ const da = {
 
   compliance: {
     title: "Overholdelsesdækning",
-    subtitle: "Voice Log Pro kortlægger direkte jurisdiktionsspecifikke juridiske krav.",
+    subtitle: "VoiceLogPro kortlægger direkte jurisdiktionsspecifikke juridiske krav.",
     thFeature: "Funktion",
     thJurisdiction: "Jurisdiktion",
     thRequirement: "Juridisk krav",
-    thSolution: "Hvordan Voice Log Pro løser det",
+    thSolution: "Hvordan VoiceLogPro løser det",
     row1Feature: "Månedlige meddelelser",
     row1Jurisdiction: "Texas",
     row1Requirement: "Texas Property Code Kapitel 53",
@@ -163,10 +163,10 @@ const da = {
     title: "Hvad hold siger",
     jasonName: "Jason T.",
     jasonRole: "Elektroformand",
-    jasonQuote: "En GC prøvede at skyde skylden for en forsinkelse på os. Trak den daglige log frem med tidsstempler og billeder — sag lukket. Voice Log Pro dækker min ryg.",
+    jasonQuote: "En GC prøvede at skyde skylden for en forsinkelse på os. Trak den daglige log frem med tidsstempler og billeder — sag lukket. VoiceLogPro dækker min ryg.",
     mariaName: "Maria R.",
     mariaRole: "VVS-leder",
-    mariaQuote: "Jeg var skeptisk — beta-værktøjer går som regel i stykker. Men Voice Log Pro kørte glat. Det sparer vores hold for timer hver uge.",
+    mariaQuote: "Jeg var skeptisk — beta-værktøjer går som regel i stykker. Men VoiceLogPro kørte glat. Det sparer vores hold for timer hver uge.",
   },
 
   valueLadder: {
@@ -221,7 +221,7 @@ const da = {
     reserveCrew: "Reserver min Crew-plads",
     successCrewBump: "Crew-plan + Tvisteklar revisionsspor reserveret. Vi kontakter dig, så snart din betaplads åbnes.",
     successCrew: "Crew-plan reserveret. Vi kontakter dig, når din betaplads åbnes.",
-    loIText: "Dette var en hensigtserklæring — du fortæller os, at du vil betale for Voice Log Pro, når det er klar. Du vil ikke blive faktureret 399 kr/måned, før du tilmelder dig efter lancering.",
+    loIText: "Dette var en hensigtserklæring — du fortæller os, at du vil betale for VoiceLogPro, når det er klar. Du vil ikke blive faktureret 399 kr/måned, før du tilmelder dig efter lancering.",
     cancelGuaranteeNote: "Ingen betaling i dag. Afmeld når som helst. 30-dages pengene-tilbage-garanti ved lancering.",
     reservingNote: "Du reserverer en plads — betaler ikke. Vi sender dig en e-mail, når adgangen åbnes.",
   },
@@ -230,7 +230,7 @@ const da = {
     title: "Bliv med uden risiko",
     subtitle: "Vi fjerner enhver grund til at sige 'ikke endnu.'",
     g1Title: "Ingen betaling før lancering",
-    g1Desc: "Reserver din plads gratis. Du betaler kun 399 kr/måned, når Voice Log Pro lanceres, og du vælger at abonnere.",
+    g1Desc: "Reserver din plads gratis. Du betaler kun 399 kr/måned, når VoiceLogPro lanceres, og du vælger at abonnere.",
     g2Title: "30-dages pengene tilbage",
     g2Desc: "Ved lancering, hvis det ikke sparer dig for timer og hjælper dig med at vinde tvister i de første 30 dage, refunderer vi hver eneste krone.",
     g3Title: "Dine data forbliver dine",
@@ -242,36 +242,36 @@ const da = {
   limitedBeta: {
     badge: "Kun 3 betapladser tilbage",
     title: "Vi holder betaen bevidst lille",
-    body: "Voice Log Pro bygges af et arbejdende hold, ikke en venture-finansieret startup. Vi onboarder 3 nye hold ad gangen, så hver betapartner får ægte support — ikke en helpdesk-billet.",
+    body: "VoiceLogPro bygges af et arbejdende hold, ikke en venture-finansieret startup. Vi onboarder 3 nye hold ad gangen, så hver betapartner får ægte support — ikke en helpdesk-billet.",
     nextBatch: "Når disse 3 pladser er fyldt, åbnes næste batch først om ~30 dage.",
     closing: "Hvis du er seriøs omkring rapportering gjort rigtigt — lås ind nu.",
   },
 
   faq: {
     title: "Ofte stillede spørgsmål",
-    subtitle: "Hurtige svar om Voice Log Pro og byggeoverholdelsesdokumentation.",
+    subtitle: "Hurtige svar om VoiceLogPro og byggeoverholdelsesdokumentation.",
     basicsHeader: "Grundlæggende",
     legalHeader: "Overholdelse & Juridisk",
-    offlineQuestion: "Fungerer Voice Log Pro offline?",
+    offlineQuestion: "Fungerer VoiceLogPro offline?",
     offlineAnswer: "Ja. Du kan optage stemmenotater uden forbindelse. Rapporter synkroniseres automatisk, når du er online igen.",
     costQuestion: "Hvor meget koster det?",
     costAnswer: "399 kr/måned for Crew-planen. Inkluderer ubegrænsede daglige rapporter, automatiske tidsstempler, vejrintegration, fotovedhæftninger og retsklare PDF-eksporter.",
     courtReadyQuestion: "Kan disse rapporter bruges i retten?",
-    courtReadyAnswer: "Ja. Voice Log Pro genererer PDF-rapporter med tidsstempler, vejrdata og billeder, der fungerer som samtidig dokumentation. Disse rapporter understøtter panteretskrav, forsinkelsestvister og betalingsbeskyttelsessager.",
+    courtReadyAnswer: "Ja. VoiceLogPro genererer PDF-rapporter med tidsstempler, vejrdata og billeder, der fungerer som samtidig dokumentation. Disse rapporter understøtter panteretskrav, forsinkelsestvister og betalingsbeskyttelsessager.",
     texasTrappingQuestion: "Hjælper dette med den månedlige Texas-fangstmekanisme?",
-    texasTrappingAnswer: "Ja. Voice Log Pro markerer rapporter med faktureringsmåneden, der er nødvendig for at sende meddelelser senest den 15. dag i den anden måned i henhold til Texas Property Code Kapitel 53.",
+    texasTrappingAnswer: "Ja. VoiceLogPro markerer rapporter med faktureringsmåneden, der er nødvendig for at sende meddelelser senest den 15. dag i den anden måned i henhold til Texas Property Code Kapitel 53.",
     texasLienQuestion: "Kan disse rapporter bruges til panteretsbeskyttelse?",
     texasLienAnswer: "Ja. Appen opretter samtidige, tidsstemplede registreringer af arbejde og materialer leveret til at understøtte mekanisk panteretsdokumentation i Texas.",
     virginiaQuestion: "Hvordan understøtter dette krav om Konstruktiv Acceleration?",
     virginiaAnswer: "Ved at registrere stedforhold i realtid dokumenterer du undskyldelig forsinkelse og adskiller den fra intern ineffektivitet. Vejrdata og tidsstempler beviser, at eksterne faktorer påvirkede tidsplanen.",
     nswSopaQuestion: "Er stemmenotater gyldige i SOPA-adjudikationer?",
-    nswSopaAnswer: "Ja. Adjudikatorer prioriterer samtidige registreringer frem for senere vidneforklaringer i betalingssikkerhedssager. Voice Log Pro opretter tidsstemplede stedsdagbøger, der har bevisvægt.",
+    nswSopaAnswer: "Ja. Adjudikatorer prioriterer samtidige registreringer frem for senere vidneforklaringer i betalingssikkerhedssager. VoiceLogPro opretter tidsstemplede stedsdagbøger, der har bevisvægt.",
     ukGoldenThreadQuestion: "Hvad er Golden Thread?",
     ukGoldenThreadAnswer: "Golden Thread er et digitalt journalføringskrav under UK Building Safety Act. Det kræver, at alle bygningsoplysninger lagres, administreres og er tilgængelige gennem en bygnings livscyklus.",
     learnMore: "Lær mere",
     seeTexasGuide: "Se hele Texas-guiden",
     seeVirginiaGuide: "Se hele Virginia-guiden",
-    getStarted: "Kom i gang med Voice Log Pro",
+    getStarted: "Kom i gang med VoiceLogPro",
     seeUkGuide: "Se hele UK-guiden",
   },
 
@@ -282,8 +282,8 @@ const da = {
     constructiveAccel: "Konstruktiv Accelerationsforsvar",
     ukGoldenThread: "UK Golden Thread",
     resourcesHeader: "Ressourcer",
-    rakenVs: "Raken vs Voice Log Pro",
-    fieldwireVs: "Fieldwire vs Voice Log Pro",
+    rakenVs: "Raken vs VoiceLogPro",
+    fieldwireVs: "Fieldwire vs VoiceLogPro",
     copyright: "Bygget til holdet.",
     allRightsReserved: "Alle rettigheder forbeholdes.",
   },
@@ -297,7 +297,7 @@ const da = {
     soloBeta: "Solo Beta",
     crewPlan: "Crew-plan",
     securedFree: "Du har sikret din gratis betaplads. Vi giver dig besked, når adgangen åbnes.",
-    loiText: "Dette var en hensigtserklæring — du fortæller os ganske enkelt, at du ville betale for Voice Log Pro, når det er klar. Du vil ikke blive faktureret 399 kr/måned, før du tilmelder dig efter lancering.",
+    loiText: "Dette var en hensigtserklæring — du fortæller os ganske enkelt, at du ville betale for VoiceLogPro, når det er klar. Du vil ikke blive faktureret 399 kr/måned, før du tilmelder dig efter lancering.",
     soloBetaPrice: "0 kr",
     soloBetaPriceSub: "/ Gratis",
     noCreditCard: "Intet kreditkort påkrævet",

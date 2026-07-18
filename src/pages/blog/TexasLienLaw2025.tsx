@@ -10,7 +10,7 @@ export default function TexasLienLaw2025Page() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{texasLienLaw2025.title} | Voice Log Pro</title>
+        <title>{texasLienLaw2025.title} | VoiceLogPro</title>
         <meta name="description" content={texasLienLaw2025.metaDescription} />
         <meta name="keywords" content={texasLienLaw2025.keywords.join(", ")} />
         <link rel="canonical" href={`https://voicelogpro.com/blog/${texasLienLaw2025.slug}`} />
@@ -87,10 +87,10 @@ export default function TexasLienLaw2025Page() {
             Protect Your Texas Lien Rights
           </h2>
           <p className="text-muted-foreground mb-6">
-            Voice Log Pro creates the timestamped daily records you need to prove first furnishing dates and support lien claims.
+            VoiceLogPro creates the timestamped daily records you need to prove first furnishing dates and support lien claims.
           </p>
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <Link to="/crew-plan">Get Voice Log Pro — $49/month</Link>
+            <Link to="/crew-plan">Get VoiceLogPro — $49/month</Link>
           </Button>
         </section>
 

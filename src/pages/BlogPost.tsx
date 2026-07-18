@@ -282,7 +282,7 @@ export default function BlogPost() {
   return (
     <>
       <Helmet>
-        <title>{post.title} | Voice Log Pro</title>
+        <title>{post.title} | VoiceLogPro</title>
         <meta name="description" content={post.meta_description || post.excerpt || post.title} />
         <link rel="canonical" href={`https://voicelogpro.com/blog/${post.slug}`} />
         {post.keywords && <meta name="keywords" content={post.keywords.join(", ")} />}
@@ -300,11 +300,11 @@ export default function BlogPost() {
             "datePublished": post.published_at,
             "author": {
               "@type": "Organization",
-              "name": "Voice Log Pro"
+              "name": "VoiceLogPro"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Voice Log Pro",
+              "name": "VoiceLogPro",
               "url": "https://voicelogpro.com"
             }
           })}
@@ -315,7 +315,7 @@ export default function BlogPost() {
         <header className="border-b border-border">
           <div className="max-w-4xl mx-auto px-4 py-6 flex items-center justify-between">
             <Link to="/" className="font-display text-2xl uppercase text-foreground hover:text-primary transition-colors">
-              Voice Log Pro
+              VoiceLogPro
             </Link>
             <nav className="flex gap-6">
               <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -366,7 +366,7 @@ export default function BlogPost() {
                 Protect Your Payment Rights
               </h3>
               <p className="text-muted-foreground mb-6">
-                Voice Log Pro turns your voice notes into court-ready daily reports with timestamps and photos.
+                VoiceLogPro turns your voice notes into court-ready daily reports with timestamps and photos.
               </p>
               <CTAButton />
             </div>

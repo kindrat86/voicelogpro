@@ -9,7 +9,7 @@ export default function TradesHub() {
   return (
     <>
       <Helmet>
-        <title>Daily Construction Reports by Trade | Voice Log Pro</title>
+        <title>Daily Construction Reports by Trade | VoiceLogPro</title>
         <meta name="description" content="Voice-first daily reports built for electricians, plumbers, HVAC contractors, roofers, and general contractors. Protect your payment with 30-second voice documentation." />
         <link rel="canonical" href="https://voicelogpro.com/for" />
       </Helmet>
@@ -20,7 +20,7 @@ export default function TradesHub() {
             Daily Reports Built for Your Trade
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Voice Log Pro is purpose-built for the way trades work. See how your trade benefits from voice-first daily documentation.
+            VoiceLogPro is purpose-built for the way trades work. See how your trade benefits from voice-first daily documentation.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">

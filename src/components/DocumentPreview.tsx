@@ -25,7 +25,7 @@ export function DocumentPreview() {
             <FileText className="w-5 h-5 text-white" />
             <span className="text-white font-semibold text-sm">Daily Field Log</span>
           </div>
-          <div className="text-slate-300 text-xs mt-1">Voice Log Pro — Automated Report</div>
+          <div className="text-slate-300 text-xs mt-1">VoiceLogPro — Automated Report</div>
         </div>
 
         {/* Document Content Skeleton */}

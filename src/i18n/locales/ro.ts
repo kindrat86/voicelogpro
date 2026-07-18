@@ -1,5 +1,5 @@
 /**
- * Romanian locale for Voice Log Pro.
+ * Romanian locale for VoiceLogPro.
  */
 const ro = {
   _meta: {
@@ -77,7 +77,7 @@ const ro = {
   },
 
   why: {
-    title: "De ce există Voice Log Pro",
+    title: "De ce există VoiceLogPro",
     backstory: "Am petrecut ani pe șantiere reale — conductă într-o mână, ordine de modificare în cealaltă.",
     wallLabel: "Ziua care aproape ne-a distrus",
     wallText: "În 2022, un antreprenor general pe un proiect de centru de date din Dallas a respins 40.000 de dolari din cererea noastră de plată. Scuza lui? „Jurnalele voastre zilnice nu arată întârzierea din cauza vremii pe data de 14.” Aveam pozele. Aveam notițele. Dar erau împrăștiate în camionul unui maiștr, într-un grup WhatsApp și într-un carnețel pe care se vărsase cafea.",
@@ -90,7 +90,7 @@ const ro = {
     planLine2: "Nu pentru personal de birou. Nu pentru big tech. Pentru echipă.",
     planLine3: "Nu schimbi modul în care lucrezi.",
     planLine4: "Apeși înregistrare, spui actualizarea și treci mai departe.",
-    planLine5: "Voice Log Pro transformă ceea ce spui în jurnale zilnice de calitate probatorie cu marcaje temporale, vreme și note de siguranță — documentație care îți susține disputele de plată și drepturile de privilegiu.",
+    planLine5: "VoiceLogPro transformă ceea ce spui în jurnale zilnice de calitate probatorie cu marcaje temporale, vreme și note de siguranță — documentație care îți susține disputele de plată și drepturile de privilegiu.",
     planLine6: "Funcționează chiar și offline.",
   },
 
@@ -117,14 +117,14 @@ const ro = {
     title: "Cum funcționează",
     subtitle: "Construit pentru mănuși murdare și zile lungi.",
     step1: "Spune actualizarea în timp ce mergi pe șantier",
-    step2: "Voice Log Pro transcrie și adaugă marcaje temporale, vreme și etichete de siguranță",
+    step2: "VoiceLogPro transcrie și adaugă marcaje temporale, vreme și etichete de siguranță",
     step3: "Se generează un PDF gata de utilizare — gata de trimis",
     step4: "Funcționează offline — jurnalele se sincronizează când te întorci online",
   },
 
   demo: {
     title: "Vezi în acțiune",
-    subtitle: "Previzualizează cum Voice Log Pro transformă vocea în jurnale gata de utilizare.",
+    subtitle: "Previzualizează cum VoiceLogPro transformă vocea în jurnale gata de utilizare.",
     badgeText: "Demo Beta — Rezultat simulat, nu transcriere reală",
     recordButton: "Înregistrează un Jurnal de Test",
     recording: "Se înregistrează...",
@@ -140,11 +140,11 @@ const ro = {
 
   compliance: {
     title: "Acoperirea Conformității",
-    subtitle: "Voice Log Pro se aliniază direct cerințelor legale specifice jurisdicției.",
+    subtitle: "VoiceLogPro se aliniază direct cerințelor legale specifice jurisdicției.",
     thFeature: "Caracteristică",
     thJurisdiction: "Jurisdicție",
     thRequirement: "Cerință Legală",
-    thSolution: "Cum o Rezolvă Voice Log Pro",
+    thSolution: "Cum o Rezolvă VoiceLogPro",
     row1Feature: "Notificări Lunare",
     row1Jurisdiction: "Texas",
     row1Requirement: "Codul Proprietății Texas Capitolul 53",
@@ -163,10 +163,10 @@ const ro = {
     title: "Ce spun echipele",
     jasonName: "Jason T.",
     jasonRole: "Maistru Electrician",
-    jasonQuote: "Un antreprenor general a încercat să ne învinovățească pentru o întârziere. Am scos jurnalul zilnic cu marcaje temporale și poze — caz închis. Voice Log Pro mă acoperă.",
+    jasonQuote: "Un antreprenor general a încercat să ne învinovățească pentru o întârziere. Am scos jurnalul zilnic cu marcaje temporale și poze — caz închis. VoiceLogPro mă acoperă.",
     mariaName: "Maria R.",
     mariaRole: "Șefă Instalatori",
-    mariaQuote: "Eram sceptică — instrumentele beta de obicei se strică. Dar Voice Log Pro a funcționat fără probleme. Ne salvează echipajului ore întregi în fiecare săptămână.",
+    mariaQuote: "Eram sceptică — instrumentele beta de obicei se strică. Dar VoiceLogPro a funcționat fără probleme. Ne salvează echipajului ore întregi în fiecare săptămână.",
   },
 
   valueLadder: {
@@ -221,7 +221,7 @@ const ro = {
     reserveCrew: "Rezervă-mi Locul Echipă",
     successCrewBump: "Planul Echipă + Traseul de Audit Gata de Dispute rezervate. Vom contacta imediat ce locul tău beta se deschide.",
     successCrew: "Planul Echipă rezervat. Vom contacta când locul tău beta se deschide.",
-    loIText: "Aceasta a fost o Scrisoare de Intenție — ne spui că vei plăti pentru Voice Log Pro când este gata. Nu vei fi facturat cu 49 lei/lună până nu te înscrii după lansare.",
+    loIText: "Aceasta a fost o Scrisoare de Intenție — ne spui că vei plăti pentru VoiceLogPro când este gata. Nu vei fi facturat cu 49 lei/lună până nu te înscrii după lansare.",
     cancelGuaranteeNote: "Fără taxă astăzi. Anulează oricând. Garanție de 30 de zile rambursare la lansare.",
     reservingNote: "Rezervi un loc — nu plătești. Îți trimitem un email când se deschide accesul.",
   },
@@ -230,7 +230,7 @@ const ro = {
     title: "Alătură-te cu Risc Zero",
     subtitle: "Înlăturăm orice motiv să spui „nu încă.”",
     g1Title: "Fără Taxă Până la Lansare",
-    g1Desc: "Rezervă-ți locul gratuit. Plătești doar 49 lei/lună odată ce Voice Log Pro este lansat și alegi să te abonezi.",
+    g1Desc: "Rezervă-ți locul gratuit. Plătești doar 49 lei/lună odată ce VoiceLogPro este lansat și alegi să te abonezi.",
     g2Title: "Rambursare de 30 de Zile",
     g2Desc: "La lansare, dacă nu îți economisește ore și nu te ajută să câștigi dispute în primele 30 de zile, rambursăm fiecare bănuț.",
     g3Title: "Datele Tale Rămân Ale Tale",
@@ -242,36 +242,36 @@ const ro = {
   limitedBeta: {
     badge: "Au Mai Rămas Doar 3 Locuri Beta",
     title: "Păstrăm Beta-ul Mic Intenționat",
-    body: "Voice Log Pro este construit de o echipă care lucrează, nu de un startup finanțat de venture capital. Integrăm câte 3 echipe noi odată, astfel încât fiecare partener beta să primească sprijin real — nu un bilet de help-desk.",
+    body: "VoiceLogPro este construit de o echipă care lucrează, nu de un startup finanțat de venture capital. Integrăm câte 3 echipe noi odată, astfel încât fiecare partener beta să primească sprijin real — nu un bilet de help-desk.",
     nextBatch: "Odată ce aceste 3 locuri se ocupă, următorul lot nu se va deschide timp de ~30 de zile.",
     closing: "Dacă ești serios în privința raportării făcute corect — blochează-ți locul acum.",
   },
 
   faq: {
     title: "Întrebări Frecvente",
-    subtitle: "Răspunsuri rapide despre Voice Log Pro și documentația de conformitate în construcții.",
+    subtitle: "Răspunsuri rapide despre VoiceLogPro și documentația de conformitate în construcții.",
     basicsHeader: "Noțiuni de bază",
     legalHeader: "Conformitate & Legal",
-    offlineQuestion: "Funcționează Voice Log Pro offline?",
+    offlineQuestion: "Funcționează VoiceLogPro offline?",
     offlineAnswer: "Da. Poți înregistra notițe vocale fără conexiune. Rapoartele se sincronizează automat când te întorci online.",
     costQuestion: "Cât costă?",
     costAnswer: "49 lei/lună pentru Planul Echipă. Include rapoarte zilnice nelimitate, marcaje temporale automate, integrare meteo, atașamente foto și exporturi PDF gata de instanță.",
     courtReadyQuestion: "Pot fi folosite aceste rapoarte în instanță?",
-    courtReadyAnswer: "Da. Voice Log Pro generează rapoarte PDF cu marcaje temporale, date meteo și fotografii care servesc ca documentație contemporană. Aceste rapoarte sprijină cererile de privilegiu, disputele de întârziere și cazurile de protecție a plății.",
+    courtReadyAnswer: "Da. VoiceLogPro generează rapoarte PDF cu marcaje temporale, date meteo și fotografii care servesc ca documentație contemporană. Aceste rapoarte sprijină cererile de privilegiu, disputele de întârziere și cazurile de protecție a plății.",
     texasTrappingQuestion: "Ajută cu Mecanismul Lunar de Captare din Texas?",
-    texasTrappingAnswer: "Da. Voice Log Pro etichetează rapoartele cu luna de facturare necesară pentru a trimite notificări până în ziua a 15-a a celei de-a doua luni conform Codului Proprietății Texas Capitolul 53.",
+    texasTrappingAnswer: "Da. VoiceLogPro etichetează rapoartele cu luna de facturare necesară pentru a trimite notificări până în ziua a 15-a a celei de-a doua luni conform Codului Proprietății Texas Capitolul 53.",
     texasLienQuestion: "Pot fi folosite aceste rapoarte pentru protecția drepturilor de privilegiu?",
     texasLienAnswer: "Da. Aplicația creează înregistrări contemporane, cu marcaj temporal, ale forței de muncă și materialelor furnizate pentru a sprijini documentația privilegiului material în Texas.",
     virginiaQuestion: "Cum sprijină acest lucru cererile de Accelerare Constructivă?",
     virginiaAnswer: "Prin înregistrarea condițiilor de șantier în timp real, documentezi întârzierea scuzabilă și o deosebești de ineficiența internă. Datele meteo și marcajele temporale dovedesc că factorii externi au afectat programul.",
     nswSopaQuestion: "Sunt valabile notițele vocale în Adjudecările SOPA?",
-    nswSopaAnswer: "Da. Adjudecătorii prioritizează înregistrările contemporane față de declarațiile ulterioare ale martorilor în cazurile de Securitate a Plății. Voice Log Pro creează jurnale de șantier cu marcaj temporal care au greutate probatorie.",
+    nswSopaAnswer: "Da. Adjudecătorii prioritizează înregistrările contemporane față de declarațiile ulterioare ale martorilor în cazurile de Securitate a Plății. VoiceLogPro creează jurnale de șantier cu marcaj temporal care au greutate probatorie.",
     ukGoldenThreadQuestion: "Ce este Golden Thread?",
     ukGoldenThreadAnswer: "Golden Thread este o cerință de păstrare digitală a înregistrărilor conform UK Building Safety Act. Impune ca toate informațiile despre construcție să fie stocate, gestionate și accesibile pe tot parcursul ciclului de viață al clădirii.",
     learnMore: "Află mai multe",
     seeTexasGuide: "Vezi ghidul complet Texas",
     seeVirginiaGuide: "Vezi ghidul complet Virginia",
-    getStarted: "Începe cu Voice Log Pro",
+    getStarted: "Începe cu VoiceLogPro",
     seeUkGuide: "Vezi ghidul complet UK",
   },
 
@@ -282,8 +282,8 @@ const ro = {
     constructiveAccel: "Apărare împotriva Accelerării Constructive",
     ukGoldenThread: "UK Golden Thread",
     resourcesHeader: "Resurse",
-    rakenVs: "Raken vs Voice Log Pro",
-    fieldwireVs: "Fieldwire vs Voice Log Pro",
+    rakenVs: "Raken vs VoiceLogPro",
+    fieldwireVs: "Fieldwire vs VoiceLogPro",
     copyright: "Construit pentru echipă.",
     allRightsReserved: "Toate drepturile rezervate.",
   },
@@ -297,7 +297,7 @@ const ro = {
     soloBeta: "Solo Beta",
     crewPlan: "Planul Echipă",
     securedFree: "Ți-ai asigurat locul beta gratuit. Te vom notifica când accesul se deschide.",
-    loiText: "Aceasta a fost o Scrisoare de Intenție — ne spui pur și simplu că ai plăti pentru Voice Log Pro când este gata. Nu vei fi facturat cu 49 lei/lună până nu te înscrii după lansare.",
+    loiText: "Aceasta a fost o Scrisoare de Intenție — ne spui pur și simplu că ai plăti pentru VoiceLogPro când este gata. Nu vei fi facturat cu 49 lei/lună până nu te înscrii după lansare.",
     soloBetaPrice: "0 lei",
     soloBetaPriceSub: "/ Gratuit",
     noCreditCard: "Fără Card de Credit Necesar",

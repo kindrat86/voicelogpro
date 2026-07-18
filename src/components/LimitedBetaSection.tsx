@@ -21,7 +21,7 @@ export function LimitedBetaSection() {
         </h2>
 
         <p className="body-large mb-4">
-          Voice Log Pro is built by a working crew, not a venture-funded startup.
+          VoiceLogPro is built by a working crew, not a venture-funded startup.
           We onboard <span className="text-foreground font-semibold">3 new crews at a time</span> so every
           beta partner gets real support — not a help-desk ticket.
         </p>

@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "name_for_human": "Voice Log Pro",
+  "name_for_human": "VoiceLogPro",
   "name_for_model": "voicelogpro",
   "description_for_human": "Voice-to-PDF daily construction log app for contractors.",
   "description_for_model": "Voice-to-PDF daily construction log app for contractors.",

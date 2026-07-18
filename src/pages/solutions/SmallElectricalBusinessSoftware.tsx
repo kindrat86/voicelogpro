@@ -6,8 +6,8 @@ import { Footer } from "@/components/Footer";
 
 const faqs = [
   {
-    question: "Is Voice Log Pro really enough for a small electrical shop?",
-    answer: "Yes. Most 1–5 person crews don't need project management, RFIs, or Gantt charts. What they need is consistent documentation that backs up invoices and protects change orders. That's exactly what Voice Log Pro does."
+    question: "Is VoiceLogPro really enough for a small electrical shop?",
+    answer: "Yes. Most 1–5 person crews don't need project management, RFIs, or Gantt charts. What they need is consistent documentation that backs up invoices and protects change orders. That's exactly what VoiceLogPro does."
   },
   {
     question: "What if I grow and need more features later?",
@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "How is this different from just taking notes on my phone?",
-    answer: "Phone notes aren't structured, time-stamped, or professional. Voice Log Pro converts your spoken logs into clean daily reports that look like they came from an established operation — because they did."
+    answer: "Phone notes aren't structured, time-stamped, or professional. VoiceLogPro converts your spoken logs into clean daily reports that look like they came from an established operation — because they did."
   },
   {
     question: "Can I cancel anytime?",
@@ -40,10 +40,10 @@ export default function SmallElectricalBusinessSoftware() {
   return (
     <>
       <Helmet>
-        <title>Small Electrical Business Software | Voice Log Pro</title>
+        <title>Small Electrical Business Software | VoiceLogPro</title>
         <meta 
           name="description" 
-          content="Skip the enterprise software trap. Voice Log Pro gives small electrical shops professional documentation for $49/month. No Procore. No consultants. Just clean logs that protect your margins." 
+          content="Skip the enterprise software trap. VoiceLogPro gives small electrical shops professional documentation for $49/month. No Procore. No consultants. Just clean logs that protect your margins." 
         />
         <meta name="keywords" content="small electrical business software, electrical contractor software, construction documentation, daily logs, change order protection" />
         <link rel="canonical" href="https://voicelogpro.com/solutions/small-electrical-business-software" />
@@ -151,7 +151,7 @@ export default function SmallElectricalBusinessSoftware() {
             
             <div className="bg-background border border-border rounded-xl p-6 md:p-8 text-center">
               <p className="text-xl font-bold text-primary">
-                Voice Log Pro is built for the 2-person shop, not the enterprise.
+                VoiceLogPro is built for the 2-person shop, not the enterprise.
               </p>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default function SmallElectricalBusinessSoftware() {
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="bg-secondary/50 border border-border rounded-2xl p-8 md:p-10">
               <blockquote className="text-lg md:text-xl text-foreground mb-6 leading-relaxed">
-                "I almost spent eight grand on construction management software for my three-man crew. Another contractor told me to stay lean. I use Voice Log Pro for $49 a month, and my invoices get paid faster because everything's documented."
+                "I almost spent eight grand on construction management software for my three-man crew. Another contractor told me to stay lean. I use VoiceLogPro for $49 a month, and my invoices get paid faster because everything's documented."
               </blockquote>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -316,7 +316,7 @@ export default function SmallElectricalBusinessSoftware() {
             <Link to="/crew-plan">
               <Button size="lg" className="text-xl px-10 py-7 font-bold mb-4">
                 <DollarSign className="w-6 h-6 mr-2" />
-                Get Voice Log Pro — $49/month
+                Get VoiceLogPro — $49/month
               </Button>
             </Link>
             

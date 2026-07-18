@@ -21,10 +21,10 @@ export const trades: TradeEntry[] = [
     slug: "electricians",
     tradeName: "Electrician",
     tradePlural: "Electricians",
-    metaTitle: "Daily Construction Reports for Electricians | Voice Log Pro",
+    metaTitle: "Daily Construction Reports for Electricians | VoiceLogPro",
     metaDescription: "Voice-first daily reports built for electricians. Track conduit runs, cable pulls, panel installations, and change orders with 30-second voice notes. Court-ready PDFs in seconds.",
     h1: "Daily Construction Reports Built for Electricians",
-    intro: "Electricians work with their hands, not keyboards. Between pulling cable, terminating panels, and troubleshooting circuits, there's no time to fill out forms. Voice Log Pro turns a 30-second voice recording into a professional, court-ready daily report — so you can document without stopping work.",
+    intro: "Electricians work with their hands, not keyboards. Between pulling cable, terminating panels, and troubleshooting circuits, there's no time to fill out forms. VoiceLogPro turns a 30-second voice recording into a professional, court-ready daily report — so you can document without stopping work.",
     painPoints: [
       "Typing reports at the end of the day after a full shift of physical work",
       "Forgetting details about specific circuits, panels, or conduit runs hours later",
@@ -44,29 +44,29 @@ export const trades: TradeEntry[] = [
     useCaseExamples: [
       {
         situation: "You complete a panel changeout but the GC claims it wasn't finished",
-        howVlpHelps: "Your Voice Log Pro entry from that day includes a timestamped voice note describing the completed work plus photos of the finished panel with geotags — irrefutable proof the work was done.",
+        howVlpHelps: "Your VoiceLogPro entry from that day includes a timestamped voice note describing the completed work plus photos of the finished panel with geotags — irrefutable proof the work was done.",
       },
       {
         situation: "You're asked to pull extra circuits as a verbal change order",
-        howVlpHelps: "Record a voice note at the time of the request describing the extra work. Later, Voice Log Pro compiles all change order entries into a single report supporting your invoice.",
+        howVlpHelps: "Record a voice note at the time of the request describing the extra work. Later, VoiceLogPro compiles all change order entries into a single report supporting your invoice.",
       },
       {
         situation: "Weather delays your rooftop conduit installation",
-        howVlpHelps: "Your voice note captures the weather condition, and Voice Log Pro automatically tags it with historical weather data. This creates excusable delay evidence without any extra effort.",
+        howVlpHelps: "Your voice note captures the weather condition, and VoiceLogPro automatically tags it with historical weather data. This creates excusable delay evidence without any extra effort.",
       },
     ],
     faqs: [
       {
-        question: "Is Voice Log Pro designed for electricians specifically?",
-        answer: "Yes. Voice Log Pro was built with input from electrical subcontractors. The voice-first interface is designed for electricians who need to document while keeping their hands free and their tools accessible. No typing, no forms, no stopping work to fill out paperwork.",
+        question: "Is VoiceLogPro designed for electricians specifically?",
+        answer: "Yes. VoiceLogPro was built with input from electrical subcontractors. The voice-first interface is designed for electricians who need to document while keeping their hands free and their tools accessible. No typing, no forms, no stopping work to fill out paperwork.",
       },
       {
         question: "Can I document electrical change orders easily?",
-        answer: "Yes. Just record a voice note when the change order is requested, describing the extra work, materials, and location. Voice Log Pro creates a timestamped entry that supports your change order pricing. Multiple change order entries can be compiled into a single report.",
+        answer: "Yes. Just record a voice note when the change order is requested, describing the extra work, materials, and location. VoiceLogPro creates a timestamped entry that supports your change order pricing. Multiple change order entries can be compiled into a single report.",
       },
       {
-        question: "Does Voice Log Pro help with electrical lien rights?",
-        answer: "Yes. Electrical subcontractors have strong lien rights in most states, but they depend on proper documentation. Voice Log Pro creates the contemporaneous records that prove labor and materials were furnished — the foundation of any mechanics lien claim.",
+        question: "Does VoiceLogPro help with electrical lien rights?",
+        answer: "Yes. Electrical subcontractors have strong lien rights in most states, but they depend on proper documentation. VoiceLogPro creates the contemporaneous records that prove labor and materials were furnished — the foundation of any mechanics lien claim.",
       },
     ],
   },
@@ -74,10 +74,10 @@ export const trades: TradeEntry[] = [
     slug: "plumbers",
     tradeName: "Plumber",
     tradePlural: "Plumbers",
-    metaTitle: "Daily Construction Reports for Plumbers | Voice Log Pro",
+    metaTitle: "Daily Construction Reports for Plumbers | VoiceLogPro",
     metaDescription: "Voice-first daily reports for plumbing contractors. Document pipe runs, fixture installations, and material usage with voice notes. Protect your payment with court-ready PDFs.",
     h1: "Daily Construction Reports Built for Plumbers",
-    intro: "Plumbers are on their feet all day — in crawl spaces, on rooftops, and behind walls. The last thing you want to do at the end of a shift is type up reports. Voice Log Pro captures your day in 30 seconds of speaking while you're standing at the job.",
+    intro: "Plumbers are on their feet all day — in crawl spaces, on rooftops, and behind walls. The last thing you want to do at the end of a shift is type up reports. VoiceLogPro captures your day in 30 seconds of speaking while you're standing at the job.",
     painPoints: [
       "Typing reports after a long day of physical installation work",
       "Forgetting pipe run details, fixture specs, or material counts later",
@@ -97,7 +97,7 @@ export const trades: TradeEntry[] = [
     useCaseExamples: [
       {
         situation: "Your rough-in inspection is delayed, pushing your schedule",
-        howVlpHelps: "Record the delay with details about the inspection issue. Voice Log Pro tags it with time and weather data, creating contemporaneous evidence for excusable delay claims.",
+        howVlpHelps: "Record the delay with details about the inspection issue. VoiceLogPro tags it with time and weather data, creating contemporaneous evidence for excusable delay claims.",
       },
       {
         situation: "The GC asks you to add an extra bathroom rough-in verbally",
@@ -110,15 +110,15 @@ export const trades: TradeEntry[] = [
     ],
     faqs: [
       {
-        question: "Can plumbers use Voice Log Pro without stopping work?",
-        answer: "Absolutely. That's exactly what it was designed for. Record a 30-second voice note while you're working — hands-free. Voice Log Pro transcribes it and formats it into a professional daily report automatically.",
+        question: "Can plumbers use VoiceLogPro without stopping work?",
+        answer: "Absolutely. That's exactly what it was designed for. Record a 30-second voice note while you're working — hands-free. VoiceLogPro transcribes it and formats it into a professional daily report automatically.",
       },
       {
-        question: "Does Voice Log Pro track plumbing materials?",
-        answer: "Yes. Record voice notes describing materials you install: pipe type and size, fittings, fixtures, valves. This creates a usage record that supports your material billing and change order pricing. Voice Log Pro also tracks photos of material delivery.",
+        question: "Does VoiceLogPro track plumbing materials?",
+        answer: "Yes. Record voice notes describing materials you install: pipe type and size, fittings, fixtures, valves. This creates a usage record that supports your material billing and change order pricing. VoiceLogPro also tracks photos of material delivery.",
       },
       {
-        question: "How does Voice Log Pro help plumbers get paid faster?",
+        question: "How does VoiceLogPro help plumbers get paid faster?",
         answer: "By creating complete, contemporaneous documentation that eliminates disputes. Completed work is proven by timestamped voice notes and photos. Change orders are documented at the time of request. Delays are recorded with weather data. This documentation accelerates payment approvals and defeats deduction attempts.",
       },
     ],
@@ -127,10 +127,10 @@ export const trades: TradeEntry[] = [
     slug: "hvac-contractors",
     tradeName: "HVAC Contractor",
     tradePlural: "HVAC Contractors",
-    metaTitle: "Daily Construction Reports for HVAC Contractors | Voice Log Pro",
+    metaTitle: "Daily Construction Reports for HVAC Contractors | VoiceLogPro",
     metaDescription: "Voice-first daily reports for HVAC contractors. Document ductwork, equipment installations, and commissioning with voice notes. Protect payment with court-ready PDF documentation.",
     h1: "Daily Construction Reports Built for HVAC Contractors",
-    intro: "HVAC work is complex — ductwork runs, equipment installations, refrigerant lines, and commissioning. Documentation is critical for payment and liability protection, but typing reports between jobs is impractical. Voice Log Pro lets you document while you work.",
+    intro: "HVAC work is complex — ductwork runs, equipment installations, refrigerant lines, and commissioning. Documentation is critical for payment and liability protection, but typing reports between jobs is impractical. VoiceLogPro lets you document while you work.",
     painPoints: [
       "Complex installations that are hard to document hours later from memory",
       "Commissioning records that need detailed descriptions of system parameters",
@@ -163,16 +163,16 @@ export const trades: TradeEntry[] = [
     ],
     faqs: [
       {
-        question: "Is Voice Log Pro useful for HVAC commissioning records?",
-        answer: "Yes. Commissioning documentation is critical for warranty validation and liability protection. Voice Log Pro creates timestamped records of system startup, parameter readings, and testing — all captured while you're at the equipment, not hours later from memory.",
+        question: "Is VoiceLogPro useful for HVAC commissioning records?",
+        answer: "Yes. Commissioning documentation is critical for warranty validation and liability protection. VoiceLogPro creates timestamped records of system startup, parameter readings, and testing — all captured while you're at the equipment, not hours later from memory.",
       },
       {
-        question: "Can I document equipment serial numbers with Voice Log Pro?",
-        answer: "Yes. Record a voice note with the model and serial numbers at the equipment, or take a photo of the nameplate. Voice Log Pro attaches this documentation to your daily report with automatic timestamps and project association.",
+        question: "Can I document equipment serial numbers with VoiceLogPro?",
+        answer: "Yes. Record a voice note with the model and serial numbers at the equipment, or take a photo of the nameplate. VoiceLogPro attaches this documentation to your daily report with automatic timestamps and project association.",
       },
       {
-        question: "Does Voice Log Pro help with HVAC lien rights?",
-        answer: "Yes. HVAC contractors have strong lien rights for equipment and labor furnished. Voice Log Pro creates the contemporaneous records proving you delivered and installed equipment — the foundation of any lien claim for unpaid HVAC work.",
+        question: "Does VoiceLogPro help with HVAC lien rights?",
+        answer: "Yes. HVAC contractors have strong lien rights for equipment and labor furnished. VoiceLogPro creates the contemporaneous records proving you delivered and installed equipment — the foundation of any lien claim for unpaid HVAC work.",
       },
     ],
   },
@@ -180,10 +180,10 @@ export const trades: TradeEntry[] = [
     slug: "roofers",
     tradeName: "Roofer",
     tradePlural: "Roofers",
-    metaTitle: "Daily Construction Reports for Roofers | Voice Log Pro",
+    metaTitle: "Daily Construction Reports for Roofers | VoiceLogPro",
     metaDescription: "Voice-first daily reports for roofing contractors. Document tear-offs, underlayment, and final roofing with voice notes. Protect payment with weather-tagged, court-ready PDFs.",
     h1: "Daily Construction Reports Built for Roofers",
-    intro: "Roofing work is weather-dependent, physical, and time-sensitive. The last thing a roofer wants at the end of a day on a hot roof is more paperwork. Voice Log Pro captures your daily documentation in 30 seconds — and automatically tags it with the weather data that protects your delay claims.",
+    intro: "Roofing work is weather-dependent, physical, and time-sensitive. The last thing a roofer wants at the end of a day on a hot roof is more paperwork. VoiceLogPro captures your daily documentation in 30 seconds — and automatically tags it with the weather data that protects your delay claims.",
     painPoints: [
       "Weather conditions that constantly disrupt schedules and need documentation",
       "Tear-off records and debris disposal documentation for compliance",
@@ -203,7 +203,7 @@ export const trades: TradeEntry[] = [
     useCaseExamples: [
       {
         situation: "A rain day forces you off the roof, pushing the schedule",
-        howVlpHelps: "Your voice note says 'rain delay' and Voice Log Pro automatically tags it with the actual precipitation data. This creates objective excusable delay evidence that prevents the GC from charging you for schedule impact.",
+        howVlpHelps: "Your voice note says 'rain delay' and VoiceLogPro automatically tags it with the actual precipitation data. This creates objective excusable delay evidence that prevents the GC from charging you for schedule impact.",
       },
       {
         situation: "The GC claims the tear-off wasn't complete before your crew arrived",
@@ -211,21 +211,21 @@ export const trades: TradeEntry[] = [
       },
       {
         situation: "Shingles are delivered short, stopping your installation",
-        howVlpHelps: "Record your material count on arrival. Voice Log Pro creates a delivery record. When shingles are short, the record supports your delay claim against the supplier and protects you from GC schedule penalties.",
+        howVlpHelps: "Record your material count on arrival. VoiceLogPro creates a delivery record. When shingles are short, the record supports your delay claim against the supplier and protects you from GC schedule penalties.",
       },
     ],
     faqs: [
       {
-        question: "Can roofers use Voice Log Pro on the roof?",
+        question: "Can roofers use VoiceLogPro on the roof?",
         answer: "Yes. Voice recording works one-handed and doesn't require looking at a screen. You can record a daily note while standing on the roof without stopping work or risking your balance by typing on a phone.",
       },
       {
         question: "How does weather tagging help roofers?",
-        answer: "Weather is the #1 variable in roofing schedules. Voice Log Pro automatically records temperature, precipitation, and wind for every daily entry. This creates objective evidence that weather — not your crew — caused schedule delays, protecting you from backcharges and liquidated damages.",
+        answer: "Weather is the #1 variable in roofing schedules. VoiceLogPro automatically records temperature, precipitation, and wind for every daily entry. This creates objective evidence that weather — not your crew — caused schedule delays, protecting you from backcharges and liquidated damages.",
       },
       {
-        question: "Does Voice Log Pro help with roofing lien rights?",
-        answer: "Yes. Roofing suppliers and contractors have strong lien rights in most states. Voice Log Pro creates the contemporaneous records proving labor and materials were furnished — essential for any mechanics lien filing on unpaid roofing work.",
+        question: "Does VoiceLogPro help with roofing lien rights?",
+        answer: "Yes. Roofing suppliers and contractors have strong lien rights in most states. VoiceLogPro creates the contemporaneous records proving labor and materials were furnished — essential for any mechanics lien filing on unpaid roofing work.",
       },
     ],
   },
@@ -233,10 +233,10 @@ export const trades: TradeEntry[] = [
     slug: "general-contractors",
     tradeName: "General Contractor",
     tradePlural: "General Contractors",
-    metaTitle: "Daily Construction Reports for General Contractors | Voice Log Pro",
+    metaTitle: "Daily Construction Reports for General Contractors | VoiceLogPro",
     metaDescription: "Voice-first daily reports for GCs managing trade crews. Document sitewide conditions, track subcontractor progress, and maintain project records with 30-second voice notes.",
     h1: "Daily Construction Reports Built for General Contractors",
-    intro: "General Contractors juggle multiple trades, changing conditions, and constant communication demands. You need documentation from every corner of the site, but you're not the one doing the typing. Voice Log Pro lets you capture sitewide conditions, crew progress, and issues in seconds — by voice, while walking the job.",
+    intro: "General Contractors juggle multiple trades, changing conditions, and constant communication demands. You need documentation from every corner of the site, but you're not the one doing the typing. VoiceLogPro lets you capture sitewide conditions, crew progress, and issues in seconds — by voice, while walking the job.",
     painPoints: [
       "Walking the site and needing to remember details for end-of-day reports",
       "Subcontractor disputes about who was on site and what they did",
@@ -260,7 +260,7 @@ export const trades: TradeEntry[] = [
       },
       {
         situation: "A subcontractor claims they weren't on site when they were",
-        howVlpHelps: "Your daily log has timestamped entries noting every crew on site. The Voice Log Pro record proves who was there, when, and what they were doing.",
+        howVlpHelps: "Your daily log has timestamped entries noting every crew on site. The VoiceLogPro record proves who was there, when, and what they were doing.",
       },
       {
         situation: "Weather delays multiple work areas simultaneously",
@@ -269,16 +269,16 @@ export const trades: TradeEntry[] = [
     ],
     faqs: [
       {
-        question: "Is Voice Log Pro useful for GCs or just subcontractors?",
-        answer: "Both. While Voice Log Pro was designed with subcontractors in mind, GCs benefit from the same voice-first documentation. Walking the site and recording observations by voice is faster and more natural than typing notes. The court-ready PDFs serve owner reporting and project documentation needs equally well.",
+        question: "Is VoiceLogPro useful for GCs or just subcontractors?",
+        answer: "Both. While VoiceLogPro was designed with subcontractors in mind, GCs benefit from the same voice-first documentation. Walking the site and recording observations by voice is faster and more natural than typing notes. The court-ready PDFs serve owner reporting and project documentation needs equally well.",
       },
       {
-        question: "Can GCs track multiple subcontractors with Voice Log Pro?",
+        question: "Can GCs track multiple subcontractors with VoiceLogPro?",
         answer: "Yes. Your daily log can include observations about each trade on site — who was working, what they were doing, and any issues. This creates a sitewide picture that's invaluable for progress tracking and dispute resolution.",
       },
       {
-        question: "Does Voice Log Pro replace project management software?",
-        answer: "No. Voice Log Pro replaces paper daily logs and typed daily reports — it's a documentation tool, not a project management system. It complements tools like Procore or Buildertrend by providing voice-first field documentation that feeds into your broader project management workflow.",
+        question: "Does VoiceLogPro replace project management software?",
+        answer: "No. VoiceLogPro replaces paper daily logs and typed daily reports — it's a documentation tool, not a project management system. It complements tools like Procore or Buildertrend by providing voice-first field documentation that feeds into your broader project management workflow.",
       },
     ],
   },

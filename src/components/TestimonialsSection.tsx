@@ -10,7 +10,7 @@ const testimonials = [
     name: "Jason T.",
     role: "Electrical Foreman",
     image: jasonImage,
-    quote: "Had a GC try to blame us for a delay. Pulled up the daily log with timestamps and photos — case closed. Voice Log Pro has my back.",
+    quote: "Had a GC try to blame us for a delay. Pulled up the daily log with timestamps and photos — case closed. VoiceLogPro has my back.",
     hasAudio: true,
     audioDuration: "12s",
   },
@@ -18,7 +18,7 @@ const testimonials = [
     name: "Maria R.",
     role: "Plumbing Lead",
     image: mariaImage,
-    quote: "I was skeptical — beta tools usually break. But Voice Log Pro ran smooth. It's saving our crew hours every week.",
+    quote: "I was skeptical — beta tools usually break. But VoiceLogPro ran smooth. It's saving our crew hours every week.",
     hasAudio: false,
   },
 ];

@@ -50,7 +50,7 @@ const FightUnfairDeductions = () => {
   return (
     <>
       <Helmet>
-        <title>Fight Unfair GC Deductions | Deductive Change Order Defense | Voice Log Pro</title>
+        <title>Fight Unfair GC Deductions | Deductive Change Order Defense | VoiceLogPro</title>
         <meta name="description" content="Stop letting GCs slash your invoice with unfair credits. Dispute deductive change orders and supervision fees with timestamped jobsite documentation." />
         <link rel="canonical" href="https://voicelogpro.com/solutions/fight-unfair-gc-deductions" />
         <meta name="keywords" content="deductive change order, construction credit dispute, GC supervision fee, unfair back charges, subcontractor documentation" />
@@ -157,7 +157,7 @@ const FightUnfairDeductions = () => {
 
             <div className="bg-muted/30 border rounded-lg p-6 mb-8">
               <p className="text-lg text-foreground mb-6">
-                <strong>Voice Log Pro</strong> allows subcontractors to create defensible, time-stamped jobsite records using short voice notes.
+                <strong>VoiceLogPro</strong> allows subcontractors to create defensible, time-stamped jobsite records using short voice notes.
               </p>
               
               <h3 className="font-semibold text-foreground mb-4">Example Log Entries:</h3>
@@ -201,7 +201,7 @@ const FightUnfairDeductions = () => {
             <div className="border rounded-lg p-8 bg-muted/20">
               <Quote className="h-10 w-10 text-primary mb-6" />
               <blockquote className="text-xl text-foreground mb-6 leading-relaxed">
-                "GC tried to hit us with a $5,000 credit for 'supervision and coordination' on a bathroom rough-in. Said it was standard. I pulled up three weeks of Voice Log Pro transcripts — every single one noted 'GC superintendent not present.' Sent them over. Never heard about that credit again."
+                "GC tried to hit us with a $5,000 credit for 'supervision and coordination' on a bathroom rough-in. Said it was standard. I pulled up three weeks of VoiceLogPro transcripts — every single one noted 'GC superintendent not present.' Sent them over. Never heard about that credit again."
               </blockquote>
               <div>
                 <p className="font-bold text-foreground">Marcus D.</p>
@@ -264,7 +264,7 @@ const FightUnfairDeductions = () => {
             </p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold text-lg px-8 py-6">
-                Get Voice Log Pro — $49/month
+                Get VoiceLogPro — $49/month
               </Button>
             </Link>
             <p className="text-muted-foreground mt-4">
@@ -277,7 +277,7 @@ const FightUnfairDeductions = () => {
         <section className="py-8 px-4 border-t border-border">
           <div className="max-w-4xl mx-auto">
             <p className="text-sm text-muted-foreground">
-              <strong>Disclaimer:</strong> Voice Log Pro provides documentation tools to support your record-keeping. This information is for educational purposes only and does not constitute legal advice. Consult a licensed attorney for specific guidance on contract disputes and construction law.
+              <strong>Disclaimer:</strong> VoiceLogPro provides documentation tools to support your record-keeping. This information is for educational purposes only and does not constitute legal advice. Consult a licensed attorney for specific guidance on contract disputes and construction law.
             </p>
           </div>
         </section>

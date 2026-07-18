@@ -11,7 +11,7 @@ const steps = [
   {
     icon: FileText,
     number: "02",
-    text: "Voice Log Pro transcribes and adds timestamps, weather, and safety tags",
+    text: "VoiceLogPro transcribes and adds timestamps, weather, and safety tags",
   },
   {
     icon: Send,

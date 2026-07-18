@@ -6,9 +6,9 @@ import { JsonLd } from "@/components/JsonLd";
 const aboutSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  name: "About Voice Log Pro",
+  name: "About VoiceLogPro",
   description:
-    "Learn about Voice Log Pro — the voice-to-PDF daily construction log app built by subcontractors, for subcontractors.",
+    "Learn about VoiceLogPro — the voice-to-PDF daily construction log app built by subcontractors, for subcontractors.",
   mainEntity: { "@type": "Organization", "@id": "https://voicelogpro.com/#organization" },
   significantLink: [
     "https://voicelogpro.com/",
@@ -21,11 +21,11 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://voicelogpro.com/#organization",
-  name: "Voice Log Pro",
+  name: "VoiceLogPro",
   url: "https://voicelogpro.com",
   logo: "https://storage.googleapis.com/gpt-engineer-file-uploads/4B8rhitxuFfh01PdeqSXDugsqvg2/uploads/1765892927118-VoiceLogProFavicon.png",
   description:
-    "Voice Log Pro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
+    "VoiceLogPro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
   foundingDate: "2024",
   sameAs: [],
   contactPoint: {
@@ -50,25 +50,25 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About Voice Log Pro — Voice-to-PDF Daily Construction Reports</title>
+        <title>About VoiceLogPro — Voice-to-PDF Daily Construction Reports</title>
         <meta
           name="description"
-          content="Voice Log Pro turns voice notes into court-ready daily construction reports. Built by subcontractors who learned that missing daily reports cost more than bad work. Learn our story."
+          content="VoiceLogPro turns voice notes into court-ready daily construction reports. Built by subcontractors who learned that missing daily reports cost more than bad work. Learn our story."
         />
         <link rel="canonical" href="https://voicelogpro.com/about" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://voicelogpro.com/about" />
-        <meta property="og:title" content="About Voice Log Pro — Voice-to-PDF Daily Construction Reports" />
+        <meta property="og:title" content="About VoiceLogPro — Voice-to-PDF Daily Construction Reports" />
         <meta
           property="og:description"
-          content="Voice Log Pro turns voice notes into court-ready daily construction reports. Built by subcontractors who learned that missing reports cost more than bad work."
+          content="VoiceLogPro turns voice notes into court-ready daily construction reports. Built by subcontractors who learned that missing reports cost more than bad work."
         />
         <meta
           property="og:image"
           content="https://storage.googleapis.com/gpt-engineer-file-uploads/4B8rhitxuFfh01PdeqSXDugsqvg2/social-images/social-1765892945744-VoiceLogProFavicon.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Voice Log Pro" />
+        <meta name="twitter:title" content="About VoiceLogPro" />
         <meta
           name="twitter:description"
           content="Voice-to-PDF daily reports built by subcontractors who learned the hard way."
@@ -85,7 +85,7 @@ export default function AboutPage() {
               to="/"
               className="font-display text-2xl uppercase text-foreground hover:text-primary transition-colors"
             >
-              Voice Log Pro
+              VoiceLogPro
             </Link>
             <nav className="flex gap-6">
               <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -106,12 +106,12 @@ export default function AboutPage() {
 
         {/* Hero */}
         <section className="max-w-4xl mx-auto px-4 py-16 md:py-24 text-center">
-          <p className="text-xs uppercase tracking-wider text-primary font-bold mb-4">About Voice Log Pro</p>
+          <p className="text-xs uppercase tracking-wider text-primary font-bold mb-4">About VoiceLogPro</p>
           <h1 className="font-display text-4xl md:text-6xl uppercase text-foreground mb-6 leading-tight">
             Built for the <span className="text-primary">crew</span> who works with their hands
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Voice Log Pro turns voice notes into timestamped, court-ready daily construction reports.
+            VoiceLogPro turns voice notes into timestamped, court-ready daily construction reports.
             It was built by subcontractors who learned the hard way that what kills your pay isn't bad
             work — it's late or missing paperwork.
           </p>
@@ -160,7 +160,7 @@ export default function AboutPage() {
               </p>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Voice Log Pro was born on actual jobsites — not in a Silicon Valley accelerator. The
+              VoiceLogPro was born on actual jobsites — not in a Silicon Valley accelerator. The
               founder was an electrical foreman who got tired of fighting backcharges and defending
               completed work against GCs who claimed it never happened.
             </p>
@@ -168,14 +168,14 @@ export default function AboutPage() {
               After researching the legal frameworks — Texas Property Code Chapter 53, the NSW
               Security of Payment Act, the UK Building Safety Act — it became clear that contemporaneous
               daily logs are the single most important piece of evidence in any payment dispute. The
-              problem was that nobody had time to type them. Voice Log Pro was built to solve that.
+              problem was that nobody had time to type them. VoiceLogPro was built to solve that.
             </p>
           </div>
         </section>
 
         {/* What We Do */}
         <section className="max-w-4xl mx-auto px-4 py-16">
-          <h2 className="font-display text-3xl uppercase text-foreground mb-8 text-center">What Voice Log Pro Does</h2>
+          <h2 className="font-display text-3xl uppercase text-foreground mb-8 text-center">What VoiceLogPro Does</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-card border border-border rounded-lg p-6">
               <h3 className="font-bold text-foreground mb-2">&#127897; Voice-to-PDF in 30 Seconds</h3>
@@ -211,7 +211,7 @@ export default function AboutPage() {
         {/* Trust Signals */}
         <section className="bg-muted/30 border-y border-border py-16">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="font-display text-3xl uppercase text-foreground mb-4">Why Trust Voice Log Pro?</h2>
+            <h2 className="font-display text-3xl uppercase text-foreground mb-4">Why Trust VoiceLogPro?</h2>
             <div className="grid md:grid-cols-4 gap-6 mt-8">
               <div>
                 <div className="text-primary font-display text-4xl font-bold mb-2">49+</div>

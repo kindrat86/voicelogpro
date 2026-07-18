@@ -56,7 +56,7 @@ export default function HowToPage() {
 
           <Link to="/crew-plan">
             <Button size="lg" className="font-semibold">
-              Start Using Voice Log Pro — $49/month
+              Start Using VoiceLogPro — $49/month
               <ChevronRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
@@ -98,11 +98,11 @@ export default function HowToPage() {
         <section className="section-container bg-primary/10 py-16 text-center">
           <h2 className="text-2xl font-display font-bold text-foreground mb-4">Ready to Start Documenting?</h2>
           <p className="text-lg text-muted-foreground mb-6">
-            Voice Log Pro makes all of the above automatic. Record your day in 30 seconds.
+            VoiceLogPro makes all of the above automatic. Record your day in 30 seconds.
           </p>
           <Link to="/crew-plan">
             <Button size="lg" className="font-semibold">
-              Get Voice Log Pro — $49/month
+              Get VoiceLogPro — $49/month
               <ChevronRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>

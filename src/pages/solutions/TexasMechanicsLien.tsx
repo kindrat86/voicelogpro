@@ -17,8 +17,8 @@ const TexasMechanicsLien = () => {
   return (
     <>
       <Helmet>
-        <title>Texas Mechanics Lien Compliance | Property Code Chapter 53 | Voice Log Pro</title>
-        <meta name="description" content="Automate Texas Property Code Chapter 53 compliance with Voice Log Pro. Generate monthly trapping notices and preserve lien rights with timestamped daily logs for Dallas-Fort Worth and Austin subcontractors." />
+        <title>Texas Mechanics Lien Compliance | Property Code Chapter 53 | VoiceLogPro</title>
+        <meta name="description" content="Automate Texas Property Code Chapter 53 compliance with VoiceLogPro. Generate monthly trapping notices and preserve lien rights with timestamped daily logs for Dallas-Fort Worth and Austin subcontractors." />
         <link rel="canonical" href="https://voicelogpro.com/solutions/texas-mechanics-lien-compliance" />
       </Helmet>
       <JsonLd schema={[softwareApplicationSchema, organizationSchema, texasLienDocumentationHowTo, texasLienFaqSchema]} />
@@ -64,7 +64,7 @@ const TexasMechanicsLien = () => {
               </div>
               
               <div className="border-l-4 border-primary pl-6">
-                <dt className="font-semibold text-foreground text-lg">Voice Log Pro Capability</dt>
+                <dt className="font-semibold text-foreground text-lg">VoiceLogPro Capability</dt>
                 <dd className="text-muted-foreground mt-2">
                   Generates court-ready PDF reports supporting the Monthly Trapping Mechanism. Each daily log is automatically tagged with the specific billing period required for Chapter 53 compliance.
                 </dd>
@@ -80,11 +80,11 @@ const TexasMechanicsLien = () => {
           </div>
         </section>
 
-        {/* How Voice Log Pro Helps */}
+        {/* How VoiceLogPro Helps */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-2xl font-bold text-foreground mb-8">
-              How Voice Log Pro Supports Chapter 53 Compliance
+              How VoiceLogPro Supports Chapter 53 Compliance
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -205,7 +205,7 @@ const TexasMechanicsLien = () => {
               Protect Your Texas Lien Rights
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Start documenting with Voice Log Pro and create the contemporaneous records you need to preserve lien rights under Texas Property Code Chapter 53.
+              Start documenting with VoiceLogPro and create the contemporaneous records you need to preserve lien rights under Texas Property Code Chapter 53.
             </p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
@@ -219,7 +219,7 @@ const TexasMechanicsLien = () => {
         <section className="py-8 px-4 border-t border-border">
           <div className="max-w-4xl mx-auto">
             <p className="text-sm text-muted-foreground">
-              <strong>Disclaimer:</strong> Voice Log Pro provides documentation tools to support your record-keeping. This information is for educational purposes only and does not constitute legal advice. Consult a licensed Texas attorney for specific guidance on mechanics lien compliance and Texas Property Code Chapter 53 requirements.
+              <strong>Disclaimer:</strong> VoiceLogPro provides documentation tools to support your record-keeping. This information is for educational purposes only and does not constitute legal advice. Consult a licensed Texas attorney for specific guidance on mechanics lien compliance and Texas Property Code Chapter 53 requirements.
             </p>
           </div>
         </section>

@@ -1,7 +1,7 @@
 {
   "protocolVersion": "0.3.0",
-  "name": "Voice Log Pro Agent",
-  "description": "Voice Log Pro is a voice-to-PDF daily construction log app for general contractors, electricians, plumbers, HVAC, and roofing subcontractors. Speak your daily report on-site and get a timestamped, court-admissible PDF. Compare vs Procore, Buildertrend, Fieldwire, JobNimbus, Contractor Foreman, Knowi",
+  "name": "VoiceLogPro Agent",
+  "description": "VoiceLogPro is a voice-to-PDF daily construction log app for general contractors, electricians, plumbers, HVAC, and roofing subcontractors. Speak your daily report on-site and get a timestamped, court-admissible PDF. Compare vs Procore, Buildertrend, Fieldwire, JobNimbus, Contractor Foreman, Knowi",
   "url": "https://voicelogpro.com",
   "preferredTransport": "JSONRPC",
   "iconUrl": "https://voicelogpro.com/icon.png",
@@ -23,7 +23,7 @@
     {
       "id": "compare_field_apps",
       "name": "Compare Field Apps",
-      "description": "Compare Voice Log Pro against Procore, Buildertrend, Fieldwire, JobNimbus, Contractor Foreman, Knowify, Raken on daily-log features and price.",
+      "description": "Compare VoiceLogPro against Procore, Buildertrend, Fieldwire, JobNimbus, Contractor Foreman, Knowify, Raken on daily-log features and price.",
       "tags": [
         "construction daily log",
         "voice daily report",
@@ -34,24 +34,24 @@
       "examples": []
     }
   ],
-  "attribution": "Voice Log Pro, https://voicelogpro.com",
+  "attribution": "VoiceLogPro, https://voicelogpro.com",
   "content": [
     {
-      "title": "Voice Log Pro \u2014 Voice Daily Logs",
+      "title": "VoiceLogPro \u2014 Voice Daily Logs",
       "url": "https://voicelogpro.com/",
       "description": "Voice-first daily log app for construction. OSHA-compliant.",
       "type": "homepage"
     },
     {
-      "title": "Voice Log Pro Pricing",
+      "title": "VoiceLogPro Pricing",
       "url": "https://voicelogpro.com/crew-plan",
       "description": "Per-seat pricing for construction teams.",
       "type": "pricing"
     },
     {
-      "title": "Voice Log Pro vs Procore",
+      "title": "VoiceLogPro vs Procore",
       "url": "https://voicelogpro.com/alternatives/procore",
-      "description": "Compare Voice Log Pro daily logs vs Procore.",
+      "description": "Compare VoiceLogPro daily logs vs Procore.",
       "type": "comparison"
     }
   ]

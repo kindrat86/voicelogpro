@@ -302,7 +302,7 @@ export default function BetaSignup() {
                   <p>
                     {submittedPlan === "free" 
                       ? "You've secured your free beta spot. We'll notify you when access opens."
-                      : "This was a Letter of Intent — you're simply telling us you'd pay for Voice Log Pro when it's ready."}
+                      : "This was a Letter of Intent — you're simply telling us you'd pay for VoiceLogPro when it's ready."}
                   </p>
                 </div>
               </div>

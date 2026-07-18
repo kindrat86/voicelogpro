@@ -17,8 +17,8 @@ const GoldenThread = () => {
   return (
     <>
       <Helmet>
-        <title>Building Safety Act Golden Thread | UK Subcontractor Compliance | Voice Log Pro</title>
-        <meta name="description" content="Meet UK Building Safety Act Golden Thread requirements with Voice Log Pro. Create digital daily records for Higher-Risk Buildings and demonstrate BS 8670 competence standards." />
+        <title>Building Safety Act Golden Thread | UK Subcontractor Compliance | VoiceLogPro</title>
+        <meta name="description" content="Meet UK Building Safety Act Golden Thread requirements with VoiceLogPro. Create digital daily records for Higher-Risk Buildings and demonstrate BS 8670 competence standards." />
         <link rel="canonical" href="https://voicelogpro.com/solutions/building-safety-act-golden-thread" />
       </Helmet>
       <JsonLd schema={[softwareApplicationSchema, organizationSchema, goldenThreadDocumentationHowTo, goldenThreadFaqSchema]} />
@@ -78,7 +78,7 @@ const GoldenThread = () => {
               </div>
               
               <div className="border-l-4 border-primary pl-6">
-                <dt className="font-semibold text-foreground text-lg">Voice Log Pro Capability</dt>
+                <dt className="font-semibold text-foreground text-lg">VoiceLogPro Capability</dt>
                 <dd className="text-muted-foreground mt-2">
                   Creates timestamped digital daily records that can form part of the Golden Thread. Voice logs capture decisions, changes, and compliance documentation in a searchable, auditable format suitable for Higher-Risk Building projects.
                 </dd>
@@ -157,7 +157,7 @@ const GoldenThread = () => {
         <section className="py-16 px-4 bg-muted/30">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-2xl font-bold text-foreground mb-8">
-              How Voice Log Pro Supports Golden Thread Compliance
+              How VoiceLogPro Supports Golden Thread Compliance
             </h2>
             
             <div className="space-y-6">
@@ -265,7 +265,7 @@ const GoldenThread = () => {
               Start Building Your Golden Thread Records
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Voice Log Pro helps UK subcontractors create the digital daily records needed to support Golden Thread compliance on Higher-Risk Buildings.
+              VoiceLogPro helps UK subcontractors create the digital daily records needed to support Golden Thread compliance on Higher-Risk Buildings.
             </p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
@@ -279,7 +279,7 @@ const GoldenThread = () => {
         <section className="py-8 px-4 border-t border-border">
           <div className="max-w-4xl mx-auto">
             <p className="text-sm text-muted-foreground">
-              <strong>Disclaimer:</strong> Voice Log Pro provides documentation tools to support your record-keeping. This information is for educational purposes only and does not constitute legal or regulatory advice. The Building Safety Act requirements are complex and vary by building type. Consult with qualified professionals for specific guidance on Golden Thread compliance and Building Safety Act requirements.
+              <strong>Disclaimer:</strong> VoiceLogPro provides documentation tools to support your record-keeping. This information is for educational purposes only and does not constitute legal or regulatory advice. The Building Safety Act requirements are complex and vary by building type. Consult with qualified professionals for specific guidance on Golden Thread compliance and Building Safety Act requirements.
             </p>
           </div>
         </section>

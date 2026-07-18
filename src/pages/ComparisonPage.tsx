@@ -26,7 +26,7 @@ function ComparisonCTA({ location }: { location: string }) {
     <div className="flex flex-col items-center gap-2">
       <Link to="/crew-plan" onClick={() => trackCTAClick(location)}>
         <Button variant="cta" size="lg" className="min-h-[60px] text-lg font-bold touch-manipulation active:scale-95 transition-transform duration-100">
-          Access Voice Log Pro
+          Access VoiceLogPro
           <ChevronRight className="w-5 h-5 ml-1" />
         </Button>
       </Link>
@@ -92,7 +92,7 @@ export default function ComparisonPage() {
               <div className="card-sunlight p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Check className="w-6 h-6 text-primary" />
-                  <h3 className="font-display text-lg uppercase text-primary">Voice Log Pro</h3>
+                  <h3 className="font-display text-lg uppercase text-primary">VoiceLogPro</h3>
                 </div>
                 <ul className="space-y-3">
                   {comp.vlpStrengths.map((s, i) => (
@@ -117,7 +117,7 @@ export default function ComparisonPage() {
                   <tr className="border-b-2 border-border bg-secondary/30">
                     <th className="text-left p-4 font-display uppercase text-sm"></th>
                     <th className="text-center p-4 font-display uppercase text-sm text-muted-foreground">{comp.name}</th>
-                    <th className="text-center p-4 font-display uppercase text-sm text-primary">Voice Log Pro</th>
+                    <th className="text-center p-4 font-display uppercase text-sm text-primary">VoiceLogPro</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -155,19 +155,19 @@ export default function ComparisonPage() {
                 </p>
               </div>
               <div className="card-sunlight p-6">
-                <h3 className="font-display text-xl uppercase text-primary mb-3">Bottom-Up Defense (Voice Log Pro)</h3>
+                <h3 className="font-display text-xl uppercase text-primary mb-3">Bottom-Up Defense (VoiceLogPro)</h3>
                 <p className="text-foreground">
-                  Voice Log Pro protects subcontractors from the bottom up. You create documentation you own, optimized for legal defense, payment disputes, and lien rights — not a GC's dashboard.
+                  VoiceLogPro protects subcontractors from the bottom up. You create documentation you own, optimized for legal defense, payment disputes, and lien rights — not a GC's dashboard.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Why Subs Choose Voice Log Pro */}
+        {/* Why Subs Choose VoiceLogPro */}
         <section className="section-container py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-display font-bold text-foreground mb-8 text-center">Why Subcontractors Choose Voice Log Pro Over {comp.name}</h2>
+            <h2 className="text-2xl font-display font-bold text-foreground mb-8 text-center">Why Subcontractors Choose VoiceLogPro Over {comp.name}</h2>
             
             <div className="grid md:grid-cols-2 gap-6">
               <div className="card-industrial p-6">
@@ -175,7 +175,7 @@ export default function ComparisonPage() {
                   <Mic className="w-6 h-6 text-primary" />
                   <h3 className="font-display text-lg uppercase text-foreground">1. Voice-First, Glove-On Usability</h3>
                 </div>
-                <p className="text-muted-foreground text-sm">Built for crews with tools in their hands. Speak for 30 seconds — Voice Log Pro structures the report automatically.</p>
+                <p className="text-muted-foreground text-sm">Built for crews with tools in their hands. Speak for 30 seconds — VoiceLogPro structures the report automatically.</p>
               </div>
               
               <div className="card-industrial p-6">
@@ -230,7 +230,7 @@ export default function ComparisonPage() {
               </div>
               
               <div className="card-sunlight p-6">
-                <h3 className="font-display text-xl uppercase text-primary mb-4">Use Voice Log Pro If:</h3>
+                <h3 className="font-display text-xl uppercase text-primary mb-4">Use VoiceLogPro If:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2 text-foreground text-sm">
                     <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />

@@ -138,7 +138,7 @@ async function prerender() {
         // Fallback: if Helmet didn't produce output, re-add the default title
         routeHtml = routeHtml.replace(
           '<meta charset="UTF-8" />',
-          `<meta charset="UTF-8" />\n    <title>Voice Log Pro | Daily Construction Reports</title>`
+          `<meta charset="UTF-8" />\n    <title>VoiceLogPro | Daily Construction Reports</title>`
         );
       }
 
@@ -153,20 +153,20 @@ async function prerender() {
       // template/default) so the headline is always the page's real title.
       const titleMatch = (helmetHead && helmetHead.match(/<title[^>]*>([^<]*)<\/title>/))
         || routeHtml.match(/<title[^>]*>([^<]*)<\/title>/);
-      const EEAT_HEADLINE = ((titleMatch && titleMatch[1]) || 'Voice Log Pro | Daily Construction Reports')
+      const EEAT_HEADLINE = ((titleMatch && titleMatch[1]) || 'VoiceLogPro | Daily Construction Reports')
         .replace(/&amp;/g, '&').replace(/&#x27;/g, "'").replace(/&quot;/g, '"').replace(/&#39;/g, "'")
         .trim().replace(/\s+/g, ' ').slice(0, 110);
-      const eeatHead = `<meta name="author" content="Voice Log Pro" />\n    <meta property="article:published_time" content="${EEAT_PUBLISHED}T00:00:00Z" />\n    <meta property="article:modified_time" content="${EEAT_MODIFIED}T00:00:00Z" />\n    <script type="application/ld+json">${JSON.stringify({
+      const eeatHead = `<meta name="author" content="VoiceLogPro" />\n    <meta property="article:published_time" content="${EEAT_PUBLISHED}T00:00:00Z" />\n    <meta property="article:modified_time" content="${EEAT_MODIFIED}T00:00:00Z" />\n    <script type="application/ld+json">${JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: EEAT_HEADLINE,
-        author: { '@type': 'Organization', name: 'Voice Log Pro', url: 'https://voicelogpro.com' },
-        publisher: { '@type': 'Organization', name: 'Voice Log Pro', url: 'https://voicelogpro.com' },
+        author: { '@type': 'Organization', name: 'VoiceLogPro', url: 'https://voicelogpro.com' },
+        publisher: { '@type': 'Organization', name: 'VoiceLogPro', url: 'https://voicelogpro.com' },
         datePublished: EEAT_PUBLISHED,
         dateModified: EEAT_MODIFIED,
       })}</script>`;
       routeHtml = routeHtml.replace('</head>', `${eeatHead}\n</head>`);
-      const eeatByline = `<p class="author-byline" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"><span class="author" rel="author">By The Field Desk, Voice Log Pro</span> · <time datetime="${EEAT_MODIFIED}">Updated ${EEAT_MODIFIED}</time> · Published ${EEAT_PUBLISHED}</p>`;
+      const eeatByline = `<p class="author-byline" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"><span class="author" rel="author">By The Field Desk, VoiceLogPro</span> · <time datetime="${EEAT_MODIFIED}">Updated ${EEAT_MODIFIED}</time> · Published ${EEAT_PUBLISHED}</p>`;
 
       // Inject rendered app HTML into root div. The byline goes AFTER the app
       // HTML: author/date regexes match anywhere on the page, but crawlers that

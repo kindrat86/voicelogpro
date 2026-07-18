@@ -12,7 +12,7 @@ export default function Welcome() {
   return (
     <main className="min-h-screen bg-background">
       <Helmet>
-        <title>You're in — Voice Log Pro</title>
+        <title>You're in — VoiceLogPro</title>
         <meta name="robots" content="noindex" />
         <link rel="canonical" href="https://voicelogpro.com/welcome" />
       </Helmet>
@@ -50,7 +50,7 @@ export default function Welcome() {
             <span className="font-semibold uppercase tracking-wide text-sm">While you're here — 3 beta seats open</span>
           </div>
           <h2 className="headline-section text-foreground mb-4">
-            The kit documents your day.<br />Voice Log Pro does it for you.
+            The kit documents your day.<br />VoiceLogPro does it for you.
           </h2>
           <p className="body-large mb-6">
             Press record, speak your update, and get a timestamped, weather-stamped, court-ready PDF —

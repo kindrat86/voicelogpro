@@ -49,21 +49,21 @@ export const delayDocumentationHowTo: HowToSchema = {
   totalTime: "PT5M",
   tool: {
     "@type": "HowToTool",
-    name: "Voice Log Pro"
+    name: "VoiceLogPro"
   },
   step: [
     {
       "@type": "HowToStep",
       position: 1,
       name: "Record Contemporaneous Evidence",
-      text: "Use Voice Log Pro to record site conditions immediately when a delay occurs. Contemporaneous site records created at the time of the event carry greater evidentiary weight than later witness recollection in adjudication proceedings.",
+      text: "Use VoiceLogPro to record site conditions immediately when a delay occurs. Contemporaneous site records created at the time of the event carry greater evidentiary weight than later witness recollection in adjudication proceedings.",
       url: `${BASE_URL}/solutions/constructive-acceleration-defense`
     },
     {
       "@type": "HowToStep",
       position: 2,
       name: "Capture Weather Conditions",
-      text: "Voice Log Pro automatically tags reports with weather data including temperature, precipitation, and conditions. This creates independent verification of weather-related excusable delays for schedule compression claims.",
+      text: "VoiceLogPro automatically tags reports with weather data including temperature, precipitation, and conditions. This creates independent verification of weather-related excusable delays for schedule compression claims.",
       url: `${BASE_URL}/solutions/constructive-acceleration-defense`
     },
     {
@@ -98,14 +98,14 @@ export const texasLienDocumentationHowTo: HowToSchema = {
   totalTime: "PT2M",
   tool: {
     "@type": "HowToTool",
-    name: "Voice Log Pro"
+    name: "VoiceLogPro"
   },
   step: [
     {
       "@type": "HowToStep",
       position: 1,
       name: "Record Daily Work Performed",
-      text: "At the end of each workday, record a voice note describing work completed. Include specific tasks, areas of the project, and materials used. Voice Log Pro automatically timestamps each entry to establish when work was performed.",
+      text: "At the end of each workday, record a voice note describing work completed. Include specific tasks, areas of the project, and materials used. VoiceLogPro automatically timestamps each entry to establish when work was performed.",
       url: `${BASE_URL}/solutions/texas-mechanics-lien-compliance`
     },
     {
@@ -119,7 +119,7 @@ export const texasLienDocumentationHowTo: HowToSchema = {
       "@type": "HowToStep",
       position: 3,
       name: "Organize by Billing Period",
-      text: "Voice Log Pro automatically organizes daily logs by month, supporting the Monthly Trapping Mechanism that requires subcontractors to tie work to specific billing periods for Texas Property Code Chapter 53 compliance.",
+      text: "VoiceLogPro automatically organizes daily logs by month, supporting the Monthly Trapping Mechanism that requires subcontractors to tie work to specific billing periods for Texas Property Code Chapter 53 compliance.",
       url: `${BASE_URL}/solutions/texas-mechanics-lien-compliance`
     },
     {
@@ -146,7 +146,7 @@ export const goldenThreadDocumentationHowTo: HowToSchema = {
   totalTime: "PT3M",
   tool: {
     "@type": "HowToTool",
-    name: "Voice Log Pro"
+    name: "VoiceLogPro"
   },
   step: [
     {
@@ -190,16 +190,16 @@ export const texasLienFaqs = [
     answer: "The Monthly Trapping Mechanism requires subcontractors to serve notices by the 15th day of the second or third month following the month work was performed. This ties work to a specific billing period to preserve lien rights under Texas Property Code Chapter 53."
   },
   {
-    question: "How does Voice Log Pro help with Texas lien compliance?",
-    answer: "Voice Log Pro automatically timestamps daily logs with the date work was performed, creating contemporaneous records that tie work to specific billing periods. This supports the Monthly Trapping Mechanism required for Texas Property Code Chapter 53 compliance."
+    question: "How does VoiceLogPro help with Texas lien compliance?",
+    answer: "VoiceLogPro automatically timestamps daily logs with the date work was performed, creating contemporaneous records that tie work to specific billing periods. This supports the Monthly Trapping Mechanism required for Texas Property Code Chapter 53 compliance."
   },
   {
     question: "What documentation do I need for a Texas mechanics lien?",
-    answer: "You need contemporaneous records showing when work was performed, what work was done, and the materials furnished. Voice Log Pro creates timestamped daily logs with photos that serve as evidence for lien claims."
+    answer: "You need contemporaneous records showing when work was performed, what work was done, and the materials furnished. VoiceLogPro creates timestamped daily logs with photos that serve as evidence for lien claims."
   },
   {
-    question: "Can Voice Log Pro reports be used in court for Texas lien claims?",
-    answer: "Yes. Voice Log Pro generates PDF reports with timestamps, weather data, and photos that serve as contemporaneous documentation. These reports support lien claims and payment disputes under Texas Property Code Chapter 53."
+    question: "Can VoiceLogPro reports be used in court for Texas lien claims?",
+    answer: "Yes. VoiceLogPro generates PDF reports with timestamps, weather data, and photos that serve as contemporaneous documentation. These reports support lien claims and payment disputes under Texas Property Code Chapter 53."
   }
 ];
 
@@ -231,12 +231,12 @@ export const goldenThreadFaqs = [
     answer: "Higher-Risk Buildings are buildings at least 18 metres in height or with at least 7 storeys, containing at least 2 residential units. These buildings are subject to enhanced regulatory requirements under the Building Safety Act, including Golden Thread compliance."
   },
   {
-    question: "What is BS 8670 and how does Voice Log Pro help?",
-    answer: "BS 8670 establishes competence requirements for individuals working on Higher-Risk Buildings. Voice Log Pro creates daily logs documenting safe work practices and quality checks, which support demonstrating BS 8670 competence."
+    question: "What is BS 8670 and how does VoiceLogPro help?",
+    answer: "BS 8670 establishes competence requirements for individuals working on Higher-Risk Buildings. VoiceLogPro creates daily logs documenting safe work practices and quality checks, which support demonstrating BS 8670 competence."
   },
   {
-    question: "How does Voice Log Pro support Golden Thread compliance?",
-    answer: "Voice Log Pro creates timestamped digital daily records that can form part of the Golden Thread. Voice logs capture decisions, changes, and compliance documentation in a searchable, auditable format suitable for Higher-Risk Building projects."
+    question: "How does VoiceLogPro support Golden Thread compliance?",
+    answer: "VoiceLogPro creates timestamped digital daily records that can form part of the Golden Thread. Voice logs capture decisions, changes, and compliance documentation in a searchable, auditable format suitable for Higher-Risk Building projects."
   }
 ];
 

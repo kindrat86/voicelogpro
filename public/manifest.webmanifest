@@ -1,6 +1,6 @@
 {
-  "name": "Voice Log Pro",
-  "short_name": "Voice Log Pro",
+  "name": "VoiceLogPro",
+  "short_name": "VoiceLogPro",
   "description": "Voice-to-PDF daily construction log app for contractors.",
   "start_url": "/",
   "display": "standalone",

@@ -33,15 +33,15 @@ export const ComplianceMatrix = () => {
             Compliance Coverage
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-medium">
-            Voice Log Pro maps directly to jurisdiction-specific legal requirements.
+            VoiceLogPro maps directly to jurisdiction-specific legal requirements.
           </p>
         </div>
 
         {/* Entity Tuple Intro - High semantic density for LLMs */}
         <div className="mb-6 text-sm text-muted-foreground space-y-1 font-mono bg-background border-2 border-dashed border-border p-4" style={{ borderRadius: 'var(--radius)' }}>
-          <p>Voice Log Pro → Texas → Chapter 53 → Monthly notice documentation</p>
-          <p>Voice Log Pro → Virginia → AIA A401 → Excusable delay evidence</p>
-          <p>Voice Log Pro → UK → Building Safety Act → Golden Thread records</p>
+          <p>VoiceLogPro → Texas → Chapter 53 → Monthly notice documentation</p>
+          <p>VoiceLogPro → Virginia → AIA A401 → Excusable delay evidence</p>
+          <p>VoiceLogPro → UK → Building Safety Act → Golden Thread records</p>
         </div>
 
         {/* Semantic HTML Table */}
@@ -52,7 +52,7 @@ export const ComplianceMatrix = () => {
         >
           <table className="w-full min-w-[600px]">
             <caption className="sr-only">
-              Construction compliance requirements by jurisdiction showing how Voice Log Pro addresses each legal requirement
+              Construction compliance requirements by jurisdiction showing how VoiceLogPro addresses each legal requirement
             </caption>
             <thead>
               <tr className="bg-secondary border-b-2 border-border">
@@ -66,7 +66,7 @@ export const ComplianceMatrix = () => {
                   Legal Requirement
                 </th>
                 <th scope="col" className="text-left p-4 font-bold text-foreground uppercase text-sm tracking-wide">
-                  How Voice Log Pro Solves It
+                  How VoiceLogPro Solves It
                 </th>
               </tr>
             </thead>
@@ -104,19 +104,19 @@ export const ComplianceMatrix = () => {
           <div className="p-4 bg-background border-2 border-border" style={{ borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-hard)' }}>
             <dt className="font-bold text-foreground mb-1 uppercase text-xs tracking-wide">Texas Subcontractor</dt>
             <dd className="text-muted-foreground font-medium">
-              Uses Voice Log Pro to document monthly billing periods for Chapter 53 fund trapping compliance.
+              Uses VoiceLogPro to document monthly billing periods for Chapter 53 fund trapping compliance.
             </dd>
           </div>
           <div className="p-4 bg-background border-2 border-border" style={{ borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-hard)' }}>
             <dt className="font-bold text-foreground mb-1 uppercase text-xs tracking-wide">Virginia Data Center PM</dt>
             <dd className="text-muted-foreground font-medium">
-              Uses Voice Log Pro to timestamp weather conditions for AIA A401 excusable delay claims.
+              Uses VoiceLogPro to timestamp weather conditions for AIA A401 excusable delay claims.
             </dd>
           </div>
           <div className="p-4 bg-background border-2 border-border" style={{ borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-hard)' }}>
             <dt className="font-bold text-foreground mb-1 uppercase text-xs tracking-wide">UK Subcontractor</dt>
             <dd className="text-muted-foreground font-medium">
-              Uses Voice Log Pro to create Golden Thread digital records under the Building Safety Act.
+              Uses VoiceLogPro to create Golden Thread digital records under the Building Safety Act.
             </dd>
           </div>
         </dl>

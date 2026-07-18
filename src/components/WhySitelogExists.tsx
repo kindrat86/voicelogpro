@@ -8,7 +8,7 @@ import { CTAButton } from "@/components/CTAButton";
 export function WhySitelogExists() {
   return <section className="section-container bg-secondary/30">
       <div className="max-w-3xl mx-auto">
-        <h2 className="headline-section text-foreground mb-8 text-center">Why Voice Log Pro Exists</h2>
+        <h2 className="headline-section text-foreground mb-8 text-center">Why VoiceLogPro Exists</h2>
         
         {/* Backstory */}
         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
@@ -45,7 +45,7 @@ export function WhySitelogExists() {
           </p>
           
           <p>
-            Voice Log Pro turns what you say into evidence-grade daily logs with timestamps, weather, and safety notes — documentation that supports your payment disputes and lien rights.
+            VoiceLogPro turns what you say into evidence-grade daily logs with timestamps, weather, and safety notes — documentation that supports your payment disputes and lien rights.
             <span className="block font-semibold text-primary">Even works offline.</span>
           </p>
         </div>

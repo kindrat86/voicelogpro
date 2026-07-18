@@ -11,7 +11,7 @@ const ConstructiveAcceleration = () => {
   return (
     <>
       <Helmet>
-        <title>Constructive Acceleration Defense | Virginia Data Center Evidence | Voice Log Pro</title>
+        <title>Constructive Acceleration Defense | Virginia Data Center Evidence | VoiceLogPro</title>
         <meta name="description" content="Build evidence for constructive acceleration claims in Virginia Data Center Alley. Document excusable delays, schedule compression, and GC directives with timestamped daily logs." />
         <link rel="canonical" href="https://voicelogpro.com/solutions/constructive-acceleration-defense" />
       </Helmet>
@@ -79,7 +79,7 @@ const ConstructiveAcceleration = () => {
               </div>
               
               <div className="border-l-4 border-primary pl-6">
-                <dt className="font-semibold text-foreground text-lg">Voice Log Pro Capability</dt>
+                <dt className="font-semibold text-foreground text-lg">VoiceLogPro Capability</dt>
                 <dd className="text-muted-foreground mt-2">
                   Creates contemporaneous evidence (timestamp + weather + work description) to prove excusable delay. Daily logs document GC directives and schedule impacts aligned with AIA A401 documentation expectations.
                 </dd>
@@ -139,7 +139,7 @@ const ConstructiveAcceleration = () => {
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Excusable Delay Occurred</h3>
                   <p className="text-muted-foreground">
-                    Timestamped daily logs documenting the delay event, cause, and impact on schedule. Voice Log Pro automatically captures date, time, and weather conditions.
+                    Timestamped daily logs documenting the delay event, cause, and impact on schedule. VoiceLogPro automatically captures date, time, and weather conditions.
                   </p>
                 </div>
               </div>
@@ -183,7 +183,7 @@ const ConstructiveAcceleration = () => {
           </div>
         </section>
 
-        {/* How Voice Log Pro Helps */}
+        {/* How VoiceLogPro Helps */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-2xl font-bold text-foreground mb-8">
@@ -200,7 +200,7 @@ const ConstructiveAcceleration = () => {
                   Record a voice note describing the delay: "Rain delay today, couldn't run conduit in Building C due to standing water. Started at 6 AM, rain began at 7:30 AM, crew stood down at 8 AM."
                 </p>
                 <p className="text-sm text-muted-foreground italic">
-                  Voice Log Pro automatically adds timestamp (6:15 AM) and weather data (0.8" rainfall, 48°F).
+                  VoiceLogPro automatically adds timestamp (6:15 AM) and weather data (0.8" rainfall, 48°F).
                 </p>
               </div>
               
@@ -240,7 +240,7 @@ const ConstructiveAcceleration = () => {
               Protect Your Acceleration Claims
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Start documenting with Voice Log Pro and create the contemporaneous evidence you need to prove constructive acceleration in Virginia Data Center Alley projects.
+              Start documenting with VoiceLogPro and create the contemporaneous evidence you need to prove constructive acceleration in Virginia Data Center Alley projects.
             </p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
@@ -254,7 +254,7 @@ const ConstructiveAcceleration = () => {
         <section className="py-8 px-4 border-t border-border">
           <div className="max-w-4xl mx-auto">
             <p className="text-sm text-muted-foreground">
-              <strong>Disclaimer:</strong> Voice Log Pro provides documentation tools to support your record-keeping. This information is for educational purposes only and does not constitute legal advice. Consult a licensed attorney for specific guidance on constructive acceleration claims and contract interpretation.
+              <strong>Disclaimer:</strong> VoiceLogPro provides documentation tools to support your record-keeping. This information is for educational purposes only and does not constitute legal advice. Consult a licensed attorney for specific guidance on constructive acceleration claims and contract interpretation.
             </p>
           </div>
         </section>

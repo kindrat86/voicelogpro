@@ -1,9 +1,9 @@
-# Voice Log Pro — llms.txt (AI crawler index)
+# VoiceLogPro — llms.txt (AI crawler index)
 # Generated 2026-07-09. Total indexed pages: 134
 # Format: Markdown with URL lists. Compatible with GPTBot, ClaudeBot, PerplexityBot.
 
 ## Product & Core Pages (6 pages)
-Voice Log Pro is a voice-to-PDF daily construction report SaaS for subcontractors.
+VoiceLogPro is a voice-to-PDF daily construction report SaaS for subcontractors.
 - [Homepage](https://voicelogpro.com/): Voice-to-PDF Construction Daily Reports — $49/month
 - [Crew Plan](https://voicelogpro.com/crew-plan): Join the waitlist for voice-first daily reports
 - [About](https://voicelogpro.com/about): Built by subcontractors who learned that missing reports cost more than bad work
@@ -54,17 +54,17 @@ Step-by-step construction documentation guides. Total: 5 pages.
 - [Document Change Orders](https://voicelogpro.com/how-to/document-construction-change-orders)
 
 ## Competitor Comparisons (8 pages)
-Voice Log Pro vs alternatives — honest comparisons. Total: 8 pages.
-- [Raken vs Voice Log Pro](https://voicelogpro.com/raken-vs-voice-log-pro)
-- [Fieldwire vs Voice Log Pro](https://voicelogpro.com/fieldwire-vs-voice-log-pro)
-- [Procore vs Voice Log Pro](https://voicelogpro.com/procore-vs-voice-log-pro)
-- [Buildertrend vs Voice Log Pro](https://voicelogpro.com/buildertrend-vs-voice-log-pro)
-- [Knowify vs Voice Log Pro](https://voicelogpro.com/knowify-vs-voice-log-pro)
-- [JobNimbus vs Voice Log Pro](https://voicelogpro.com/jobnimbus-vs-voice-log-pro)
-- [Contractor Foreman vs Voice Log Pro](https://voicelogpro.com/contractor-foreman-vs-voice-log-pro)
+VoiceLogPro vs alternatives — honest comparisons. Total: 8 pages.
+- [Raken vs VoiceLogPro](https://voicelogpro.com/raken-vs-voice-log-pro)
+- [Fieldwire vs VoiceLogPro](https://voicelogpro.com/fieldwire-vs-voice-log-pro)
+- [Procore vs VoiceLogPro](https://voicelogpro.com/procore-vs-voice-log-pro)
+- [Buildertrend vs VoiceLogPro](https://voicelogpro.com/buildertrend-vs-voice-log-pro)
+- [Knowify vs VoiceLogPro](https://voicelogpro.com/knowify-vs-voice-log-pro)
+- [JobNimbus vs VoiceLogPro](https://voicelogpro.com/jobnimbus-vs-voice-log-pro)
+- [Contractor Foreman vs VoiceLogPro](https://voicelogpro.com/contractor-foreman-vs-voice-log-pro)
 
 ## Alternatives To (9 pages)
-Voice Log Pro as alternative to popular tools. Total: 9 pages.
+VoiceLogPro as alternative to popular tools. Total: 9 pages.
 - [Alternatives to Otter.ai](https://voicelogpro.com/alternatives-to/otter-ai)
 - [Alternatives to Rev](https://voicelogpro.com/alternatives-to/rev)
 - [Alternatives to Descript](https://voicelogpro.com/alternatives-to/descript)

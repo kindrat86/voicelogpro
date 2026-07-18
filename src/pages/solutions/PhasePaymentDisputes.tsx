@@ -22,15 +22,15 @@ const PhasePaymentDisputes = () => {
         "name": "How do I prove a contractor billed for incomplete work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Timestamped site documentation with photos, voice logs, and GPS location data creates irrefutable evidence of actual site conditions. Voice Log Pro generates immutable records that show exactly what existed—or didn't—at any point during construction."
+          "text": "Timestamped site documentation with photos, voice logs, and GPS location data creates irrefutable evidence of actual site conditions. VoiceLogPro generates immutable records that show exactly what existed—or didn't—at any point during construction."
         }
       },
       {
         "@type": "Question",
-        "name": "Can subcontractors use Voice Log Pro to protect against GC disputes?",
+        "name": "Can subcontractors use VoiceLogPro to protect against GC disputes?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Subcontractors use Voice Log Pro to document daily progress, creating separation between their completed work and upstream failures. When a GC is terminated, subcontractor evidence remains intact for payment claims."
+          "text": "Yes. Subcontractors use VoiceLogPro to document daily progress, creating separation between their completed work and upstream failures. When a GC is terminated, subcontractor evidence remains intact for payment claims."
         }
       },
       {
@@ -38,7 +38,7 @@ const PhasePaymentDisputes = () => {
         "name": "What happens if the contractor alters or removes work after I document it?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Voice Log Pro syncs instantly to the cloud. Even if work is altered, damaged, or removed after documentation, the timestamped record of what existed remains intact and dispute-ready."
+          "text": "VoiceLogPro syncs instantly to the cloud. Even if work is altered, damaged, or removed after documentation, the timestamped record of what existed remains intact and dispute-ready."
         }
       }
     ]
@@ -47,10 +47,10 @@ const PhasePaymentDisputes = () => {
   return (
     <>
       <Helmet>
-        <title>Phase Payment Disputes | Construction Dispute Defense Kit | Voice Log Pro</title>
+        <title>Phase Payment Disputes | Construction Dispute Defense Kit | VoiceLogPro</title>
         <meta 
           name="description" 
-          content="Stop contractors billing for incomplete work. Voice Log Pro creates timestamped site evidence for phase payment disputes, failed inspections, and unauthorized change orders." 
+          content="Stop contractors billing for incomplete work. VoiceLogPro creates timestamped site evidence for phase payment disputes, failed inspections, and unauthorized change orders." 
         />
         <meta name="keywords" content="phase payment dispute, construction billing dispute, contractor incomplete work, failed inspection documentation, change order abuse" />
         <link rel="canonical" href="https://voicelogpro.com/solutions/phase-payment-disputes" />
@@ -64,7 +64,7 @@ const PhasePaymentDisputes = () => {
         <nav className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="container mx-auto px-4 py-4">
             <Link to="/" className="text-xl font-bold text-foreground">
-              Voice Log Pro
+              VoiceLogPro
             </Link>
           </div>
         </nav>
@@ -187,7 +187,7 @@ const PhasePaymentDisputes = () => {
                 He Said / She Said Fails. Site Logs Don't.
               </h2>
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                Voice Log Pro turns your phone into a dispute-ready documentation system.
+                VoiceLogPro turns your phone into a dispute-ready documentation system.
               </p>
               
               <div className="space-y-8">
@@ -324,7 +324,7 @@ const PhasePaymentDisputes = () => {
               
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 text-lg mb-4">
                 <Link to="/crew-plan">
-                  Get Voice Log Pro — Monthly Protection Plan
+                  Get VoiceLogPro — Monthly Protection Plan
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

@@ -18,7 +18,7 @@ export interface HowToEntry {
 export const howToGuides: HowToEntry[] = [
   {
     slug: "document-construction-delays",
-    metaTitle: "How to Document Construction Delays for Payment Claims | Voice Log Pro",
+    metaTitle: "How to Document Construction Delays for Payment Claims | VoiceLogPro",
     metaDescription: "Learn how to document construction delays properly for payment claims and dispute resolution. Step-by-step guide with voice recording, timestamps, and weather data.",
     h1: "How to Document Construction Delays for Payment Claims",
     intro: "Construction delays cost subcontractors billions in unpaid claims every year. The difference between a successful delay claim and a rejected one is documentation — specifically, contemporaneous evidence created at the time the delay occurred. Here's how to do it right.",
@@ -30,7 +30,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Capture weather conditions automatically",
-        outcome: "Weather is one of the most common excusable delay factors. Use Voice Log Pro's automatic weather tagging to record temperature, precipitation, and wind conditions at the time of recording. This creates objective evidence that conditions were outside normal working parameters.",
+        outcome: "Weather is one of the most common excusable delay factors. Use VoiceLogPro's automatic weather tagging to record temperature, precipitation, and wind conditions at the time of recording. This creates objective evidence that conditions were outside normal working parameters.",
       },
       {
         task: "Document the impact on your schedule",
@@ -38,7 +38,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Include photo evidence with timestamps",
-        outcome: "Take photos showing the site conditions causing the delay. Voice Log Pro embeds photos with geolocation and timestamps directly into the daily report, creating a visual and data-rich record that leaves no room for dispute.",
+        outcome: "Take photos showing the site conditions causing the delay. VoiceLogPro embeds photos with geolocation and timestamps directly into the daily report, creating a visual and data-rich record that leaves no room for dispute.",
       },
       {
         task: "Reference RFI or change order numbers",
@@ -46,7 +46,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Generate and distribute the daily report",
-        outcome: "At the end of the day, Voice Log Pro converts your voice notes into a court-ready PDF with all timestamps, weather data, and photos embedded. Send a copy to your project manager and save a copy for your records. This becomes your contemporaneous evidence package.",
+        outcome: "At the end of the day, VoiceLogPro converts your voice notes into a court-ready PDF with all timestamps, weather data, and photos embedded. Send a copy to your project manager and save a copy for your records. This becomes your contemporaneous evidence package.",
       },
     ],
     keyPoints: [
@@ -64,11 +64,11 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         question: "How soon after a delay should I document it?",
-        answer: "Immediately. Contemporaneous documentation — records created at the time of the event — carries significantly more evidentiary weight in disputes and adjudications than notes written hours or days later. Voice Log Pro makes instant documentation easy with voice recording.",
+        answer: "Immediately. Contemporaneous documentation — records created at the time of the event — carries significantly more evidentiary weight in disputes and adjudications than notes written hours or days later. VoiceLogPro makes instant documentation easy with voice recording.",
       },
       {
         question: "Can voice notes really be used as evidence?",
-        answer: "Yes. Voice Log Pro converts voice notes into timestamped, transcribed PDF reports that serve as contemporaneous business records. Courts and adjudicators (including SOPA adjudicators in NSW) consistently prioritize contemporaneous records over later witness statements or reconstructed timelines.",
+        answer: "Yes. VoiceLogPro converts voice notes into timestamped, transcribed PDF reports that serve as contemporaneous business records. Courts and adjudicators (including SOPA adjudicators in NSW) consistently prioritize contemporaneous records over later witness statements or reconstructed timelines.",
       },
       {
         question: "What should I include in a delay documentation entry?",
@@ -78,7 +78,7 @@ export const howToGuides: HowToEntry[] = [
   },
   {
     slug: "protect-lien-rights-as-subcontractor",
-    metaTitle: "How to Protect Your Lien Rights as a Subcontractor | Voice Log Pro",
+    metaTitle: "How to Protect Your Lien Rights as a Subcontractor | VoiceLogPro",
     metaDescription: "Complete guide to protecting mechanics lien rights. Learn monthly trapping notices, contemporaneous documentation, and how daily reports preserve your lien claims.",
     h1: "How to Protect Your Lien Rights as a Subcontractor",
     intro: "Mechanics liens are the most powerful tool subcontractors have to get paid. But lien rights are time-sensitive and easily lost through poor documentation. Most lien claims fail not because the work wasn't done — but because the paperwork wasn't right. Here's how to protect your rights from day one.",
@@ -90,15 +90,15 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Create a daily log the first day you start work",
-        outcome: "Don't wait until there's a problem. Start documenting on day one. Record the date you first furnished labor or materials — this establishes the timeline for all subsequent notice periods. Voice Log Pro automatically timestamps every entry for a complete audit trail.",
+        outcome: "Don't wait until there's a problem. Start documenting on day one. Record the date you first furnished labor or materials — this establishes the timeline for all subsequent notice periods. VoiceLogPro automatically timestamps every entry for a complete audit trail.",
       },
       {
         task: "Document labor and materials furnished every day",
-        outcome: "Lien claims require proof that labor or materials were furnished on specific dates. Voice Log Pro creates a daily report for each day you work, documenting crew size, hours worked, materials installed, and equipment used. This creates an irrefutable record of your contribution to the project.",
+        outcome: "Lien claims require proof that labor or materials were furnished on specific dates. VoiceLogPro creates a daily report for each day you work, documenting crew size, hours worked, materials installed, and equipment used. This creates an irrefutable record of your contribution to the project.",
       },
       {
         task: "Track billing periods for monthly notice requirements",
-        outcome: "In states like Texas, you must serve notice by the 15th day of the second month following the month work was performed. Voice Log Pro tags each report with the billing month, making it easy to identify when notices are due and preventing missed deadlines.",
+        outcome: "In states like Texas, you must serve notice by the 15th day of the second month following the month work was performed. VoiceLogPro tags each report with the billing month, making it easy to identify when notices are due and preventing missed deadlines.",
       },
       {
         task: "Serve preliminary and monthly notices on time",
@@ -106,7 +106,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Generate and save court-ready PDF reports",
-        outcome: "Voice Log Pro generates PDF reports with timestamps, weather data, geolocation, and photo attachments — all the metadata that makes a contemporaneous record court-ready. Store these reports for each month of work. If a payment dispute arises, you have complete, verifiable evidence of every day you worked.",
+        outcome: "VoiceLogPro generates PDF reports with timestamps, weather data, geolocation, and photo attachments — all the metadata that makes a contemporaneous record court-ready. Store these reports for each month of work. If a payment dispute arises, you have complete, verifiable evidence of every day you worked.",
       },
     ],
     keyPoints: [
@@ -115,7 +115,7 @@ export const howToGuides: HowToEntry[] = [
       "Monthly notice deadlines are strict — missed by one day can mean lost rights",
       "Contemporaneous records (created on the day of work) are far more valuable than after-the-fact spreadsheets",
       "Photo evidence with timestamps proves site presence and work completion",
-      "A subscription to Voice Log Pro costs $49/month — losing a lien claim costs thousands",
+      "A subscription to VoiceLogPro costs $49/month — losing a lien claim costs thousands",
     ],
     faqs: [
       {
@@ -124,21 +124,21 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         question: "What documentation do I need to file a lien?",
-        answer: "You need: proof that labor or materials were furnished (daily logs, delivery receipts, photos), dates of work, the contract or purchase order amount, the amount unpaid, a description of work performed, and the property owner's name and address. Contemporaneous daily reports like those from Voice Log Pro serve as primary evidence.",
+        answer: "You need: proof that labor or materials were furnished (daily logs, delivery receipts, photos), dates of work, the contract or purchase order amount, the amount unpaid, a description of work performed, and the property owner's name and address. Contemporaneous daily reports like those from VoiceLogPro serve as primary evidence.",
       },
       {
         question: "Can I lose my lien rights even if I did the work?",
         answer: "Yes, absolutely. Lien rights are statutory privileges, not automatic rights. You can lose them by: failing to serve a preliminary notice, missing a monthly notice deadline, filing after the statutory deadline, or failing to properly document your labor and materials. Good documentation is your safety net.",
       },
       {
-        question: "Does Voice Log Pro automatically file liens?",
-        answer: "No, Voice Log Pro is a documentation tool, not a legal filing service. We generate the court-ready evidence and compliance records you need to support a lien claim. You should consult with a construction attorney for actual lien filings and legal strategy. We provide the proof — they provide the legal representation.",
+        question: "Does VoiceLogPro automatically file liens?",
+        answer: "No, VoiceLogPro is a documentation tool, not a legal filing service. We generate the court-ready evidence and compliance records you need to support a lien claim. You should consult with a construction attorney for actual lien filings and legal strategy. We provide the proof — they provide the legal representation.",
       },
     ],
   },
   {
     slug: "document-construction-change-orders",
-    metaTitle: "How to Document Construction Change Orders for Payment | Voice Log Pro",
+    metaTitle: "How to Document Construction Change Orders for Payment | VoiceLogPro",
     metaDescription: "Learn how to document construction change orders properly. Voice-first daily reports that capture extra work, materials, and time for seamless change order approval.",
     h1: "How to Document Construction Change Orders for Payment",
     intro: "Unpaid change orders are the #1 source of profit erosion for subcontractors. The problem isn't usually that the work wasn't authorized — it's that the documentation wasn't sufficient to prove the extra work was done. Here's a documentation system that protects every dollar of change order work.",
@@ -150,7 +150,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Document before-and-after site conditions",
-        outcome: "Take photos before you start the additional work and after completion. This visual evidence proves the scope change and the work performed. Voice Log Pro embeds photos with timestamps and geolocation directly into the daily report.",
+        outcome: "Take photos before you start the additional work and after completion. This visual evidence proves the scope change and the work performed. VoiceLogPro embeds photos with timestamps and geolocation directly into the daily report.",
       },
       {
         task: "Track additional materials and labor separately",
@@ -162,7 +162,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Generate a consolidated change order report",
-        outcome: "Voice Log Pro can compile all entries related to a specific change order into a single report. This gives you a complete, timestamped evidence package: the original request, the materials used, the labor hours, the before/after photos, and the site conditions during the work.",
+        outcome: "VoiceLogPro can compile all entries related to a specific change order into a single report. This gives you a complete, timestamped evidence package: the original request, the materials used, the labor hours, the before/after photos, and the site conditions during the work.",
       },
     ],
     keyPoints: [
@@ -184,13 +184,13 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         question: "How do I track change order materials separately?",
-        answer: "Voice Log Pro lets you tag entries by category. Create a 'change order' tag and use it for any entry related to extra work. This automatically groups all related voice notes, photos, and materials into a change order package. At billing time, you have a complete, organized evidence file.",
+        answer: "VoiceLogPro lets you tag entries by category. Create a 'change order' tag and use it for any entry related to extra work. This automatically groups all related voice notes, photos, and materials into a change order package. At billing time, you have a complete, organized evidence file.",
       },
     ],
   },
   {
     slug: "defend-unfair-gc-deductions",
-    metaTitle: "How to Defend Against Unfair GC Deductions | Voice Log Pro",
+    metaTitle: "How to Defend Against Unfair GC Deductions | VoiceLogPro",
     metaDescription: "Learn how to defend against unfair GC deductions and backcharges. Document completed work with timestamped daily reports and protect your payment from disputed deductions.",
     h1: "How to Defend Against Unfair GC Deductions and Backcharges",
     intro: "Backcharges and deductions are one of the most common ways subcontractors lose money. A GC claims work was defective, incomplete, or late — and deducts from your payment. Often, these deductions are based on incomplete information or shifted blame. The only effective defense is proof — and that means documentation created before the dispute arises.",
@@ -202,7 +202,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Take completion photos with geotags",
-        outcome: "Photograph completed work from multiple angles. Voice Log Pro embeds these photos with timestamps and geolocation in your daily report. If a GC later claims work was 'never finished' or 'poorly done,' your photos prove otherwise with irrefutable metadata.",
+        outcome: "Photograph completed work from multiple angles. VoiceLogPro embeds these photos with timestamps and geolocation in your daily report. If a GC later claims work was 'never finished' or 'poorly done,' your photos prove otherwise with irrefutable metadata.",
       },
       {
         task: "Document site conditions outside your control",
@@ -210,7 +210,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Maintain a daily record of crew hours on site",
-        outcome: "Backcharges sometimes claim you 'didn't have enough crew' or 'took too long.' Your daily logs with crew counts, hours worked, and tasks completed prove your actual resource allocation. Voice Log Pro tracks this automatically through your daily voice reports.",
+        outcome: "Backcharges sometimes claim you 'didn't have enough crew' or 'took too long.' Your daily logs with crew counts, hours worked, and tasks completed prove your actual resource allocation. VoiceLogPro tracks this automatically through your daily voice reports.",
       },
       {
         task: "Save all correspondence related to the scope",
@@ -223,7 +223,7 @@ export const howToGuides: HowToEntry[] = [
       "Documenting conditions outside your control preemptively defeats blame-shifting",
       "Crew time records disprove 'not enough labor' claims",
       "Correspondence records in daily logs create a complete project timeline",
-      "Voice Log Pro costs $49/month — a single unfair deduction can cost thousands",
+      "VoiceLogPro costs $49/month — a single unfair deduction can cost thousands",
     ],
     faqs: [
       {
@@ -232,7 +232,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         question: "Can photos really protect me from backcharges?",
-        answer: "Yes — but only if the photos have verifiable metadata. A photo file with embedded timestamps and geolocation creates an objective record of site conditions on a specific date. Voice Log Pro embeds this metadata automatically. A photo without metadata can be disputed as 'taken at a different time or location.'",
+        answer: "Yes — but only if the photos have verifiable metadata. A photo file with embedded timestamps and geolocation creates an objective record of site conditions on a specific date. VoiceLogPro embeds this metadata automatically. A photo without metadata can be disputed as 'taken at a different time or location.'",
       },
       {
         question: "What should I do if I receive an unfair deduction?",
@@ -242,7 +242,7 @@ export const howToGuides: HowToEntry[] = [
   },
   {
     slug: "track-construction-materials-inventory",
-    metaTitle: "How to Track Construction Materials Inventory | Voice Log Pro",
+    metaTitle: "How to Track Construction Materials Inventory | VoiceLogPro",
     metaDescription: "Learn how to track construction materials with voice notes. Real-time inventory management for electrical, plumbing, and HVAC materials on job sites.",
     h1: "How to Track Construction Materials Inventory with Voice Notes",
     intro: "Materials tracking is one of the most overlooked aspects of construction documentation. Lost materials, incorrect counts, and unaccounted deliveries cost subcontractors thousands in waste and disputes. Voice-first inventory tracking is faster than spreadsheets and more reliable than memory.",
@@ -254,7 +254,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Photograph materials on delivery with geotags",
-        outcome: "Take photos of delivered materials showing their condition and storage location. Voice Log Pro embeds these photos with timestamps and geolocation in your daily report. This creates visual proof that materials arrived undamaged and were properly stored.",
+        outcome: "Take photos of delivered materials showing their condition and storage location. VoiceLogPro embeds these photos with timestamps and geolocation in your daily report. This creates visual proof that materials arrived undamaged and were properly stored.",
       },
       {
         task: "Log materials as they're installed",
@@ -266,7 +266,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Generate weekly inventory summary reports",
-        outcome: "Voice Log Pro compiles your daily material entries into weekly summaries showing deliveries, installations, and discrepancies. This gives you a real-time inventory picture without manual spreadsheet work.",
+        outcome: "VoiceLogPro compiles your daily material entries into weekly summaries showing deliveries, installations, and discrepancies. This gives you a real-time inventory picture without manual spreadsheet work.",
       },
     ],
     keyPoints: [
@@ -279,12 +279,12 @@ export const howToGuides: HowToEntry[] = [
     ],
     faqs: [
       {
-        question: "Can I track materials per project in Voice Log Pro?",
+        question: "Can I track materials per project in VoiceLogPro?",
         answer: "Yes. Each daily report is project-specific, so all material entries are organized by project. You can review material deliveries, installations, and discrepancies per project, creating a complete materials audit trail without additional data entry.",
       },
       {
         question: "What if materials are stolen from the job site?",
-        answer: "Record the theft immediately in Voice Log Pro with details of what was taken, estimated value, and any security observations. Your timestamped report supports insurance claims and GC responsibility discussions. Combined with delivery records showing what was on site, you have complete theft documentation.",
+        answer: "Record the theft immediately in VoiceLogPro with details of what was taken, estimated value, and any security observations. Your timestamped report supports insurance claims and GC responsibility discussions. Combined with delivery records showing what was on site, you have complete theft documentation.",
       },
       {
         question: "How does material tracking help with payment?",

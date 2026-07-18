@@ -25,7 +25,7 @@ function ComparisonCTA({ location }: { location: string }) {
     <div className="flex flex-col items-center gap-2">
       <Link to="/crew-plan" onClick={() => trackCTAClick(location)}>
         <Button variant="cta" size="lg" className="min-h-[60px] text-lg font-bold touch-manipulation active:scale-95 transition-transform duration-100">
-          Access Voice Log Pro
+          Access VoiceLogPro
           <ChevronRight className="w-5 h-5 ml-1" />
         </Button>
       </Link>
@@ -51,7 +51,7 @@ function ComparisonTable() {
           <tr className="border-b-2 border-border">
             <th className="text-left p-4 font-display text-lg uppercase"></th>
             <th className="text-center p-4 font-display text-lg uppercase text-muted-foreground">Raken</th>
-            <th className="text-center p-4 font-display text-lg uppercase text-primary">Voice Log Pro</th>
+            <th className="text-center p-4 font-display text-lg uppercase text-primary">VoiceLogPro</th>
           </tr>
         </thead>
         <tbody>
@@ -75,19 +75,19 @@ const faqs = [
   },
   {
     q: "What is the best daily report app for subcontractors?",
-    a: "The best daily report app for subcontractors is one that creates legally defensible documentation you own. Voice Log Pro is built specifically for subcontractors—voice-first input, court-ready PDFs with timestamps and weather data, and automatic lien right protection.",
+    a: "The best daily report app for subcontractors is one that creates legally defensible documentation you own. VoiceLogPro is built specifically for subcontractors—voice-first input, court-ready PDFs with timestamps and weather data, and automatic lien right protection.",
   },
   {
     q: "How do subcontractors protect lien rights?",
-    a: "Subcontractors protect lien rights through contemporaneous documentation—daily logs with timestamps, photos, and weather conditions. Voice Log Pro automatically generates this evidence and supports compliance with Texas Property Code Chapter 53 and monthly notice requirements.",
+    a: "Subcontractors protect lien rights through contemporaneous documentation—daily logs with timestamps, photos, and weather conditions. VoiceLogPro automatically generates this evidence and supports compliance with Texas Property Code Chapter 53 and monthly notice requirements.",
   },
   {
     q: "How do you document delays in construction?",
-    a: "Effective delay documentation requires timestamped records created at the time of the event. Voice Log Pro automatically tags every log with time, location, and historical weather data—creating excusable delay evidence that holds up in disputes and adjudications.",
+    a: "Effective delay documentation requires timestamped records created at the time of the event. VoiceLogPro automatically tags every log with time, location, and historical weather data—creating excusable delay evidence that holds up in disputes and adjudications.",
   },
   {
-    q: "Is Voice Log Pro a project management tool?",
-    a: "No. Voice Log Pro is not project management software. It's a legal defense and compliance engine that converts your voice notes into court-ready documentation. It protects payment, not manages projects.",
+    q: "Is VoiceLogPro a project management tool?",
+    a: "No. VoiceLogPro is not project management software. It's a legal defense and compliance engine that converts your voice notes into court-ready documentation. It protects payment, not manages projects.",
   },
 ];
 
@@ -95,10 +95,10 @@ export default function RakenComparison() {
   return (
     <>
       <Helmet>
-        <title>Raken vs Voice Log Pro | Payment Protection for Subcontractors</title>
+        <title>Raken vs VoiceLogPro | Payment Protection for Subcontractors</title>
         <meta
           name="description"
-          content="Compare Raken vs Voice Log Pro. Raken is built for GCs. Voice Log Pro is built for subcontractors to create court-ready proof, preserve lien rights, and protect payment—using voice."
+          content="Compare Raken vs VoiceLogPro. Raken is built for GCs. VoiceLogPro is built for subcontractors to create court-ready proof, preserve lien rights, and protect payment—using voice."
         />
         <link rel="canonical" href="https://voicelogpro.com/raken-vs-voice-log-pro" />
       </Helmet>
@@ -107,10 +107,10 @@ export default function RakenComparison() {
         {/* Hero */}
         <section className="section-container text-center">
           <h1 className="headline-primary text-foreground mb-6 max-w-4xl mx-auto">
-            Raken vs. Voice Log Pro: Why Subcontractors Need Payment Defense — Not Oversight
+            Raken vs. VoiceLogPro: Why Subcontractors Need Payment Defense — Not Oversight
           </h1>
           <p className="body-large max-w-3xl mx-auto mb-8">
-            Raken monitors jobsites for General Contractors. Voice Log Pro protects subcontractors from unpaid work, delay claims, and lost lien rights.
+            Raken monitors jobsites for General Contractors. VoiceLogPro protects subcontractors from unpaid work, delay claims, and lost lien rights.
           </p>
           <ComparisonCTA location="hero" />
         </section>
@@ -128,7 +128,7 @@ export default function RakenComparison() {
               </p>
             </div>
             <div className="card-sunlight">
-              <h3 className="font-display text-xl uppercase text-primary mb-3">Bottom-Up Defense (Voice Log Pro)</h3>
+              <h3 className="font-display text-xl uppercase text-primary mb-3">Bottom-Up Defense (VoiceLogPro)</h3>
               <p className="text-foreground">
                 Built for subcontractors to create legally defensible proof of delays, extra work, and site conditions — automatically, using voice.
               </p>
@@ -171,10 +171,10 @@ export default function RakenComparison() {
           </p>
         </section>
 
-        {/* What Voice Log Pro Does Differently */}
+        {/* What VoiceLogPro Does Differently */}
         <section className="section-container bg-secondary/30">
-          <h2 className="headline-section text-foreground mb-4">What Voice Log Pro Does Differently</h2>
-          <p className="body-large mb-6">Voice Log Pro is not field management software.</p>
+          <h2 className="headline-section text-foreground mb-4">What VoiceLogPro Does Differently</h2>
+          <p className="body-large mb-6">VoiceLogPro is not field management software.</p>
           <p className="text-foreground font-semibold text-lg mb-8">
             It is a legal defense and compliance engine designed for Electrical, Plumbing, and HVAC subcontractors.
           </p>
@@ -185,15 +185,15 @@ export default function RakenComparison() {
               <h3 className="font-display text-2xl uppercase text-foreground">Compliance in Your Pocket</h3>
             </div>
             <p className="text-foreground text-lg mb-4">
-              Speak for 30 seconds. Voice Log Pro converts your voice into a court-ready, timestamped PDF.
+              Speak for 30 seconds. VoiceLogPro converts your voice into a court-ready, timestamped PDF.
             </p>
             <p className="text-primary font-bold">No typing. No forms. No chasing foremen.</p>
           </div>
         </section>
 
-        {/* Why Subcontractors Use Voice Log Pro */}
+        {/* Why Subcontractors Use VoiceLogPro */}
         <section className="section-container">
-          <h2 className="headline-section text-foreground mb-8 text-center">Why Subcontractors Use Voice Log Pro</h2>
+          <h2 className="headline-section text-foreground mb-8 text-center">Why Subcontractors Use VoiceLogPro</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
             <div className="card-industrial">
@@ -235,7 +235,7 @@ export default function RakenComparison() {
                 </div>
                 <h3 className="font-display text-lg uppercase text-foreground">3. Lien Right Protection by Design</h3>
               </div>
-              <p className="text-muted-foreground mb-4">Voice Log Pro is engineered to support:</p>
+              <p className="text-muted-foreground mb-4">VoiceLogPro is engineered to support:</p>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-foreground"><Check className="w-4 h-4 text-primary" /> Texas Property Code Chapter 53</li>
                 <li className="flex items-center gap-2 text-foreground"><Check className="w-4 h-4 text-primary" /> Monthly notice ("trapping") requirements</li>
@@ -309,7 +309,7 @@ export default function RakenComparison() {
             </div>
             
             <div className="card-sunlight">
-              <h3 className="font-display text-xl uppercase text-primary mb-4">Use Voice Log Pro If:</h3>
+              <h3 className="font-display text-xl uppercase text-primary mb-4">Use VoiceLogPro If:</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2 text-foreground">
                   <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
@@ -335,7 +335,7 @@ export default function RakenComparison() {
         {/* Closing */}
         <section className="section-container text-center">
           <p className="text-2xl md:text-3xl font-display uppercase text-foreground mb-8">
-            Voice Log Pro is payment insurance for the trades.
+            VoiceLogPro is payment insurance for the trades.
           </p>
           
           <h2 className="headline-section text-foreground mb-6">Ready to Protect Your Payment?</h2>

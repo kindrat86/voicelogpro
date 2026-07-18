@@ -1,5 +1,5 @@
 /**
- * Finnish locale for Voice Log Pro.
+ * Finnish locale for VoiceLogPro.
  */
 const fi = {
   _meta: {
@@ -77,7 +77,7 @@ const fi = {
   },
 
   why: {
-    title: "Miksi Voice Log Pro on olemassa",
+    title: "Miksi VoiceLogPro on olemassa",
     backstory: "Vietin vuosia oikeilla työmailla — kaapeliputki toisessa kädessä, muutostilaukset toisessa.",
     wallLabel: "Päivä, joka melkein tappoi meidät",
     wallText: "Vuonna 2022 hylkäsi pääurakoitsija Dallasin datakeskusrakennuksella 40 000 dollaria maksuhakemuksestamme. Hänen tekosyynsä? 'Päivittäiset lokinne eivät näytä 14. päivän sääviivästystä.' Meillä oli kuvat. Meillä oli muistiinpanot. Mutta ne olivat hajallaan työnjohtajan pakussa, WhatsApp-ryhmässä ja muistikirjassa, johon oli läikkynyt kahvia.",
@@ -90,7 +90,7 @@ const fi = {
     planLine2: "Ei toimistoväelle. Ei suurteknologialle. Tiimille.",
     planLine3: "Et muuta tapaasi työskennellä.",
     planLine4: "Painat nauhoitusta, sanot päivityksesi ja jatkat eteenpäin.",
-    planLine5: "Voice Log Pro muuttaa sanomasi todistusarvoisiksi päivittäisiksi lokeiksi, joissa on aikaleimat, sää ja turvallisuusmuistiinpanot — dokumentaatio, joka tukee maksukiistojasi ja panttioikeuksiasi.",
+    planLine5: "VoiceLogPro muuttaa sanomasi todistusarvoisiksi päivittäisiksi lokeiksi, joissa on aikaleimat, sää ja turvallisuusmuistiinpanot — dokumentaatio, joka tukee maksukiistojasi ja panttioikeuksiasi.",
     planLine6: "Toimii myös offline-tilassa.",
   },
 
@@ -117,14 +117,14 @@ const fi = {
     title: "Miten se toimii",
     subtitle: "Rakennettu likaisille käsineille ja pitkille päiville.",
     step1: "Kerro päivityksesi kävellessäsi työmaalla",
-    step2: "Voice Log Pro litteroi ja lisää aikaleimat, sää- ja turvallisuustunnisteet",
+    step2: "VoiceLogPro litteroi ja lisää aikaleimat, sää- ja turvallisuustunnisteet",
     step3: "Työvalmis PDF luodaan — valmis lähetettäväksi",
     step4: "Toimii offline-tilassa — lokit synkronoituvat, kun olet taas verkossa",
   },
 
   demo: {
     title: "Katso toiminnassa",
-    subtitle: "Esikatsele, miten Voice Log Pro muuttaa äänen työvalmiiksi lokeiksi.",
+    subtitle: "Esikatsele, miten VoiceLogPro muuttaa äänen työvalmiiksi lokeiksi.",
     badgeText: "Beta-demo — Simuloitu tulos, ei todellinen litterointi",
     recordButton: "Tallenna testiloki",
     recording: "Tallennetaan...",
@@ -140,11 +140,11 @@ const fi = {
 
   compliance: {
     title: "Vaatimustenmukaisuuden kattavuus",
-    subtitle: "Voice Log Pro kartoittaa suoraan aluekohtaiset lakisääteiset vaatimukset.",
+    subtitle: "VoiceLogPro kartoittaa suoraan aluekohtaiset lakisääteiset vaatimukset.",
     thFeature: "Ominaisuus",
     thJurisdiction: "Alue",
     thRequirement: "Lakisääteinen vaatimus",
-    thSolution: "Miten Voice Log Pro ratkaisee sen",
+    thSolution: "Miten VoiceLogPro ratkaisee sen",
     row1Feature: "Kuukausittaiset ilmoitukset",
     row1Jurisdiction: "Texas",
     row1Requirement: "Texas Property Code Luku 53",
@@ -163,10 +163,10 @@ const fi = {
     title: "Mitä tiimit sanovat",
     jasonName: "Jason T.",
     jasonRole: "Sähkötyönjohtaja",
-    jasonQuote: "GC yritti syyttää meitä viivästyksestä. Vedin esiin päivittäisen lokin aikaleimoineen ja kuvineen — tapaus selvitetty. Voice Log Pro peittää selkäni.",
+    jasonQuote: "GC yritti syyttää meitä viivästyksestä. Vedin esiin päivittäisen lokin aikaleimoineen ja kuvineen — tapaus selvitetty. VoiceLogPro peittää selkäni.",
     mariaName: "Maria R.",
     mariaRole: "Putkityönjohtaja",
-    mariaQuote: "Olin skeptinen — beta-työkalut yleensä hajoavat. Mutta Voice Log Pro toimi moitteettomasti. Se säästää tiimiltämme tunteja joka viikko.",
+    mariaQuote: "Olin skeptinen — beta-työkalut yleensä hajoavat. Mutta VoiceLogPro toimi moitteettomasti. Se säästää tiimiltämme tunteja joka viikko.",
   },
 
   valueLadder: {
@@ -221,7 +221,7 @@ const fi = {
     reserveCrew: "Varaa tiimipaikkani",
     successCrewBump: "Crew-suunnitelma + riitavalmis audit trail varattu. Otamme yhteyttä heti, kun beta-paikkasi avautuu.",
     successCrew: "Crew-suunnitelma varattu. Otamme yhteyttä, kun beta-paikkasi avautuu.",
-    loIText: "Tämä oli aieasiakirja — kerrot meille maksavasi Voice Log Pro:sta, kun se on valmis. Sinua ei veloiteta 49 €/kk ennen kuin rekisteröidyt julkaisun jälkeen.",
+    loIText: "Tämä oli aieasiakirja — kerrot meille maksavasi VoiceLogPro:sta, kun se on valmis. Sinua ei veloiteta 49 €/kk ennen kuin rekisteröidyt julkaisun jälkeen.",
     cancelGuaranteeNote: "Ei veloitusta tänään. Peruuta milloin tahansa. 30 päivän rahat takaisin -takuu julkaisussa.",
     reservingNote: "Varaat paikkaa — et maksa. Lähetämme sähköpostia, kun pääsy avautuu.",
   },
@@ -230,7 +230,7 @@ const fi = {
     title: "Liity ilman riskiä",
     subtitle: "Poistamme jokaisen syyn sanoa 'ei vielä.'",
     g1Title: "Ei veloitusta ennen julkaisua",
-    g1Desc: "Varaa paikkasi ilmaiseksi. Maksat vain 49 €/kk, kun Voice Log Pro julkaistaan ja valitset tilata sen.",
+    g1Desc: "Varaa paikkasi ilmaiseksi. Maksat vain 49 €/kk, kun VoiceLogPro julkaistaan ja valitset tilata sen.",
     g2Title: "30 päivän rahat takaisin",
     g2Desc: "Julkaisussa, jos se ei säästä tuntejasi ja auta voittamaan riitoja ensimmäisten 30 päivän aikana, hyvitämme jokaisen sentin.",
     g3Title: "Tietosi pysyvät sinun",
@@ -242,36 +242,36 @@ const fi = {
   limitedBeta: {
     badge: "Vain 3 beta-paikkaa jäljellä",
     title: "Pidämme betan tarkoituksella pienenä",
-    body: "Voice Log Pron rakentaa työskentelevä tiimi, ei venture-rahoitettu startup. Otamme 3 uutta tiimiä kerrallaan, joten jokainen beta-kumppani saa todellista tukea — ei helpdesk-lippua.",
+    body: "VoiceLogPron rakentaa työskentelevä tiimi, ei venture-rahoitettu startup. Otamme 3 uutta tiimiä kerrallaan, joten jokainen beta-kumppani saa todellista tukea — ei helpdesk-lippua.",
     nextBatch: "Kun nämä 3 paikkaa täyttyvät, seuraava erä ei aukea ~30 päivään.",
     closing: "Jos olet tosissasi raportoinnin tekemisestä oikein — lukitse nyt.",
   },
 
   faq: {
     title: "Usein kysytyt kysymykset",
-    subtitle: "Nopeita vastauksia Voice Log Prosta ja rakennusvaatimustenmukaisuusdokumentaatiosta.",
+    subtitle: "Nopeita vastauksia VoiceLogProsta ja rakennusvaatimustenmukaisuusdokumentaatiosta.",
     basicsHeader: "Perusteet",
     legalHeader: "Vaatimustenmukaisuus & Laki",
-    offlineQuestion: "Toimiiko Voice Log Pro offline-tilassa?",
+    offlineQuestion: "Toimiiko VoiceLogPro offline-tilassa?",
     offlineAnswer: "Kyllä. Voit tallentaa äänimuistiinpanoja ilman yhteyttä. Raportit synkronoituvat automaattisesti, kun olet taas verkossa.",
     costQuestion: "Paljonko se maksaa?",
     costAnswer: "49 €/kk Crew-suunnitelmasta. Sisältää rajattomat päivittäiset raportit, automaattiset aikaleimat, sääintegraation, kuvaliitteet ja oikeusvalmiit PDF-viennit.",
     courtReadyQuestion: "Voidaanko näitä raportteja käyttää tuomioistuimessa?",
-    courtReadyAnswer: "Kyllä. Voice Log Pro luo PDF-raportteja aikaleimoineen, säätietoineen ja kuvineen, jotka toimivat samanaikaisena dokumentaationa. Nämä raportit tukevat panttioikeusvaatimuksia, viivästysriitoja ja maksunsuojatapauksia.",
+    courtReadyAnswer: "Kyllä. VoiceLogPro luo PDF-raportteja aikaleimoineen, säätietoineen ja kuvineen, jotka toimivat samanaikaisena dokumentaationa. Nämä raportit tukevat panttioikeusvaatimuksia, viivästysriitoja ja maksunsuojatapauksia.",
     texasTrappingQuestion: "Auttaako tämä Texasin kuukausittaisessa varojen loukkuun saamisen mekanismissa?",
-    texasTrappingAnswer: "Kyllä. Voice Log Pro merkitsee raportit laskutuskuukaudella, joka tarvitaan ilmoitusten lähettämiseen toisen kuukauden 15. päivään mennessä Texas Property Code Luku 53:n mukaisesti.",
+    texasTrappingAnswer: "Kyllä. VoiceLogPro merkitsee raportit laskutuskuukaudella, joka tarvitaan ilmoitusten lähettämiseen toisen kuukauden 15. päivään mennessä Texas Property Code Luku 53:n mukaisesti.",
     texasLienQuestion: "Voidaanko näitä raportteja käyttää panttioikeuksien suojaamiseen?",
     texasLienAnswer: "Kyllä. Sovellus luo samanaikaisia, aikaleimattuja tallenteita toimitetusta työstä ja materiaaleista tukeakseen mekaanisen panttioikeuden dokumentaatiota Texasissa.",
     virginiaQuestion: "Miten tämä tukee Rakentavan Nopeuttamisen vaatimuksia?",
     virginiaAnswer: "Tallentamalla työmaaolosuhteet reaaliajassa dokumentoit anteeksiannettavan viivästyksen ja erotat sen sisäisestä tehottomuudesta. Säädata ja aikaleimat todistavat ulkoisten tekijöiden vaikuttaneen aikatauluun.",
     nswSopaQuestion: "Ovatko äänimuistiinpanot päteviä SOPA-ratkaisuissa?",
-    nswSopaAnswer: "Kyllä. Ratkaisijat priorisoivat samanaikaiset tallenteet myöhempien todistajanlausuntojen edelle Maksun Turvallisuus -asioissa. Voice Log Pro luo aikaleimattuja työmaapäiväkirjoja, joilla on todistusarvoa.",
+    nswSopaAnswer: "Kyllä. Ratkaisijat priorisoivat samanaikaiset tallenteet myöhempien todistajanlausuntojen edelle Maksun Turvallisuus -asioissa. VoiceLogPro luo aikaleimattuja työmaapäiväkirjoja, joilla on todistusarvoa.",
     ukGoldenThreadQuestion: "Mikä on Golden Thread?",
     ukGoldenThreadAnswer: "Golden Thread on digitaalinen arkistointivaatimus UK Building Safety Actin mukaisesti. Se edellyttää, että kaikki rakennustiedot tallennetaan, hallitaan ja ovat saatavilla rakennuksen koko elinkaaren ajan.",
     learnMore: "Lue lisää",
     seeTexasGuide: "Katso koko Texas-opas",
     seeVirginiaGuide: "Katso koko Virginia-opas",
-    getStarted: "Aloita Voice Log Pron kanssa",
+    getStarted: "Aloita VoiceLogPron kanssa",
     seeUkGuide: "Katso koko UK-opas",
   },
 
@@ -282,8 +282,8 @@ const fi = {
     constructiveAccel: "Rakentavan Nopeuttamisen Puolustus",
     ukGoldenThread: "UK Golden Thread",
     resourcesHeader: "Resurssit",
-    rakenVs: "Raken vs Voice Log Pro",
-    fieldwireVs: "Fieldwire vs Voice Log Pro",
+    rakenVs: "Raken vs VoiceLogPro",
+    fieldwireVs: "Fieldwire vs VoiceLogPro",
     copyright: "Rakennettu tiimille.",
     allRightsReserved: "Kaikki oikeudet pidätetään.",
   },
@@ -297,7 +297,7 @@ const fi = {
     soloBeta: "Solo Beta",
     crewPlan: "Crew-suunnitelma",
     securedFree: "Olet varmistanut ilmaisen beta-paikkasi. Ilmoitamme sinulle, kun pääsy avautuu.",
-    loiText: "Tämä oli aieasiakirja — kerrot meille yksinkertaisesti maksavasi Voice Log Pro:sta, kun se on valmis. Sinua ei veloiteta 49 €/kk ennen kuin rekisteröidyt julkaisun jälkeen.",
+    loiText: "Tämä oli aieasiakirja — kerrot meille yksinkertaisesti maksavasi VoiceLogPro:sta, kun se on valmis. Sinua ei veloiteta 49 €/kk ennen kuin rekisteröidyt julkaisun jälkeen.",
     soloBetaPrice: "0 €",
     soloBetaPriceSub: "/ Ilmainen",
     noCreditCard: "Ei luottokorttia vaadita",

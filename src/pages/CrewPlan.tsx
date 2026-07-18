@@ -83,8 +83,8 @@ export default function CrewPlan() {
   return (
     <main className="min-h-screen bg-background flex flex-col">
       <Helmet>
-        <title>Crew Plan Pricing — Voice Log Pro for Construction Teams</title>
-        <meta name="description" content="Voice Log Pro offers two plans: a free Solo Beta (unlimited voice logs, standard PDF reports) and the $49/month Crew Plan for up to 5 crews with priority onboarding and custom branding. No credit card required to start." />
+        <title>Crew Plan Pricing — VoiceLogPro for Construction Teams</title>
+        <meta name="description" content="VoiceLogPro offers two plans: a free Solo Beta (unlimited voice logs, standard PDF reports) and the $49/month Crew Plan for up to 5 crews with priority onboarding and custom branding. No credit card required to start." />
         <link rel="canonical" href="https://voicelogpro.com/crew-plan" />
       </Helmet>
       <div className="flex-1 flex items-center justify-center px-4 py-16">
@@ -113,7 +113,7 @@ export default function CrewPlan() {
                 <p>
                   {submittedPlan === "free" 
                     ? "You've secured your free beta spot. We'll notify you when access opens."
-                    : "This was a Letter of Intent — you're simply telling us you'd pay for Voice Log Pro when it's ready. You will not be billed $49/month until you sign up after launch."}
+                    : "This was a Letter of Intent — you're simply telling us you'd pay for VoiceLogPro when it's ready. You will not be billed $49/month until you sign up after launch."}
                 </p>
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function CrewPlan() {
                 Choose your path
               </h1>
               <p className="text-lg text-muted-foreground mb-8 text-center max-w-2xl mx-auto">
-                Voice Log Pro has two plans. The <strong>Solo Beta is free</strong> — unlimited voice logs,
+                VoiceLogPro has two plans. The <strong>Solo Beta is free</strong> — unlimited voice logs,
                 standard PDF reports, and email support, no credit card required. The <strong>Crew Plan is
                 $49/month</strong> and adds up to 5 crews, priority onboarding, and custom branding. Pick the
                 one that fits how your team works today.

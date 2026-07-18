@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <p className="font-display text-2xl text-primary mb-2">Voice Log Pro</p>
+            <p className="font-display text-2xl text-primary mb-2">VoiceLogPro</p>
             <p className="text-muted-foreground text-sm">
               Voice-to-PDF daily reports for subcontractors.
             </p>
@@ -50,10 +50,10 @@ export function Footer() {
                 For Your Trade
               </Link>
               <Link to="/raken-vs-voice-log-pro" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                Raken vs Voice Log Pro
+                Raken vs VoiceLogPro
               </Link>
               <Link to="/fieldwire-vs-voice-log-pro" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                Fieldwire vs Voice Log Pro
+                Fieldwire vs VoiceLogPro
               </Link>
             </nav>
           </div>

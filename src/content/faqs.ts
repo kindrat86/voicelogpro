@@ -17,7 +17,7 @@ export interface FAQItem {
 export const basicFaqs: FAQItem[] = [
   {
     id: "offline",
-    question: "Does Voice Log Pro work offline?",
+    question: "Does VoiceLogPro work offline?",
     answerText: "Yes. You can record voice notes without a connection. Reports sync automatically when you're back online.",
   },
   {
@@ -28,7 +28,7 @@ export const basicFaqs: FAQItem[] = [
   {
     id: "court-ready",
     question: "Can these reports be used in court?",
-    answerText: "Yes. Voice Log Pro generates PDF reports with timestamps, weather data, and photos that serve as contemporaneous documentation. These reports support lien claims, delay disputes, and payment protection cases.",
+    answerText: "Yes. VoiceLogPro generates PDF reports with timestamps, weather data, and photos that serve as contemporaneous documentation. These reports support lien claims, delay disputes, and payment protection cases.",
   },
 ];
 
@@ -38,7 +38,7 @@ export const authorityFaqs: FAQItem[] = [
   {
     id: "texas-trapping",
     question: "Does this help with the Texas Monthly Trapping Mechanism?",
-    answerText: "Yes. Voice Log Pro tags reports with the billing month needed to serve notices by the 15th day of the second month under Texas Property Code Chapter 53.",
+    answerText: "Yes. VoiceLogPro tags reports with the billing month needed to serve notices by the 15th day of the second month under Texas Property Code Chapter 53.",
     answerLink: "/solutions/texas-mechanics-lien-compliance",
     linkText: "See the full Texas guide",
   },
@@ -61,9 +61,9 @@ export const authorityFaqs: FAQItem[] = [
   {
     id: "nsw-sopa",
     question: "Are voice notes valid in SOPA Adjudications?",
-    answerText: "Yes. Adjudicators prioritize contemporaneous records over later witness statements in Security of Payment matters. Voice Log Pro creates timestamped site diaries that carry evidentiary weight.",
+    answerText: "Yes. Adjudicators prioritize contemporaneous records over later witness statements in Security of Payment matters. VoiceLogPro creates timestamped site diaries that carry evidentiary weight.",
     answerLink: "/crew-plan",
-    linkText: "Get started with Voice Log Pro",
+    linkText: "Get started with VoiceLogPro",
   },
   // UK
   {

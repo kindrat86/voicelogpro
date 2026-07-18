@@ -71,7 +71,7 @@ export default function TradePage() {
         {/* How VLP Helps */}
         <section className="section-container max-w-4xl mx-auto py-16 px-4">
           <h2 className="text-2xl font-display font-bold text-foreground mb-2 text-center">
-            How Voice Log Pro Helps {trade.tradePlural}
+            How VoiceLogPro Helps {trade.tradePlural}
           </h2>
           <p className="text-muted-foreground text-center mb-8">
             Purpose-built for the way trades work.
@@ -115,7 +115,7 @@ export default function TradePage() {
                       <h3 className="font-semibold text-foreground mb-1">The Situation</h3>
                       <p className="text-muted-foreground mb-4">{ex.situation}</p>
                       <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg">
-                        <p className="text-foreground text-sm"><span className="font-semibold">How Voice Log Pro Helps:</span> {ex.howVlpHelps}</p>
+                        <p className="text-foreground text-sm"><span className="font-semibold">How VoiceLogPro Helps:</span> {ex.howVlpHelps}</p>
                       </div>
                     </div>
                   </div>
@@ -135,7 +135,7 @@ export default function TradePage() {
           </p>
           <Link to="/crew-plan">
             <Button size="lg" className="font-semibold">
-              Get Voice Log Pro — $49/month
+              Get VoiceLogPro — $49/month
               <ChevronRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>

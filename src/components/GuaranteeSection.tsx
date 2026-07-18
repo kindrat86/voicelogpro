@@ -4,7 +4,7 @@ const guarantees = [
   {
     icon: Shield,
     title: "No Charge Until Launch",
-    description: "Reserve your seat for free. You only pay $49/mo once Voice Log Pro ships and you choose to subscribe.",
+    description: "Reserve your seat for free. You only pay $49/mo once VoiceLogPro ships and you choose to subscribe.",
   },
   {
     icon: RotateCcw,

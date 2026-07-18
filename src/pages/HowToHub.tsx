@@ -9,7 +9,7 @@ export default function HowToHub() {
   return (
     <>
       <Helmet>
-        <title>How-To Guides for Construction Documentation | Voice Log Pro</title>
+        <title>How-To Guides for Construction Documentation | VoiceLogPro</title>
         <meta name="description" content="Step-by-step guides on documenting construction delays, protecting lien rights, tracking materials, defending against deductions, and managing change orders." />
         <link rel="canonical" href="https://voicelogpro.com/how-to" />
       </Helmet>
@@ -49,7 +49,7 @@ export default function HowToHub() {
           <div className="mt-12 text-center">
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
-                Start Documenting with Voice Log Pro
+                Start Documenting with VoiceLogPro
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>

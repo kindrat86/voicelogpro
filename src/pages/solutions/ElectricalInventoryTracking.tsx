@@ -6,7 +6,7 @@ import { Mic, Package, ClipboardCheck, TrendingDown, Hand, Quote } from "lucide-
 
 const faqs = [
   {
-    question: "How does Voice Log Pro handle electrical material naming?",
+    question: "How does VoiceLogPro handle electrical material naming?",
     answer: "The system recognizes standard electrical terminology — MC cable, Romex, mud rings, wire nuts, breakers, and more. Foremen speak naturally, and the system structures it into usable material records."
   },
   {
@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     question: "Does this replace my existing inventory system?",
-    answer: "No. Voice Log Pro captures field usage data in real-time. It feeds accurate information into whatever system you already use for purchasing and inventory management."
+    answer: "No. VoiceLogPro captures field usage data in real-time. It feeds accurate information into whatever system you already use for purchasing and inventory management."
   },
   {
     question: "How quickly does the office see the logs?",
@@ -44,10 +44,10 @@ export default function ElectricalInventoryTracking() {
   return (
     <>
       <Helmet>
-        <title>Field-First Material Log for Electrical Shops | Voice Log Pro</title>
+        <title>Field-First Material Log for Electrical Shops | VoiceLogPro</title>
         <meta 
           name="description" 
-          content="Stop chasing foremen for material counts. Voice Log Pro captures electrical material usage in the field — no typing, no spreadsheets, no end-of-day guessing." 
+          content="Stop chasing foremen for material counts. VoiceLogPro captures electrical material usage in the field — no typing, no spreadsheets, no end-of-day guessing." 
         />
         <link rel="canonical" href="https://voicelogpro.com/solutions/electrical-inventory-tracking" />
         <script type="application/ld+json">
@@ -69,7 +69,7 @@ export default function ElectricalInventoryTracking() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg">
-                <Link to="/crew-plan">Get Voice Log Pro</Link>
+                <Link to="/crew-plan">Get VoiceLogPro</Link>
               </Button>
               <a href="#how-it-works" className="text-muted-foreground hover:text-foreground underline underline-offset-4 transition-colors">
                 See How It Works in 30 Seconds →
@@ -113,7 +113,7 @@ export default function ElectricalInventoryTracking() {
                 <ul className="space-y-2 text-foreground font-medium">
                   <li>Plans → Fieldwire</li>
                   <li>Tools → ShareMyToolbox</li>
-                  <li>Material usage → Voice Log Pro</li>
+                  <li>Material usage → VoiceLogPro</li>
                 </ul>
               </div>
             </div>
@@ -239,7 +239,7 @@ export default function ElectricalInventoryTracking() {
             <div className="bg-background border border-border rounded-xl p-8 md:p-10">
               <Quote className="w-10 h-10 text-primary/30 mb-4" />
               <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-6">
-                "We tried forcing a full inventory app on our guys. Nobody used it. We switched to Voice Log Pro, and now we get accurate material logs every day — without chasing anyone."
+                "We tried forcing a full inventory app on our guys. Nobody used it. We switched to VoiceLogPro, and now we get accurate material logs every day — without chasing anyone."
               </blockquote>
               <footer className="text-muted-foreground font-medium">
                 — Mark D., Master Electrician
@@ -278,7 +278,7 @@ export default function ElectricalInventoryTracking() {
             </h2>
             
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 text-lg mb-4">
-              <Link to="/crew-plan">Get Voice Log Pro</Link>
+              <Link to="/crew-plan">Get VoiceLogPro</Link>
             </Button>
             
             <p className="text-muted-foreground">

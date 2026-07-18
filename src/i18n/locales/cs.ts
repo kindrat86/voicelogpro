@@ -1,5 +1,5 @@
 /**
- * Czech locale for Voice Log Pro.
+ * Czech locale for VoiceLogPro.
  */
 const cs = {
   _meta: {
@@ -77,7 +77,7 @@ const cs = {
   },
 
   why: {
-    title: "Proč Voice Log Pro existuje",
+    title: "Proč VoiceLogPro existuje",
     backstory: "Strávil jsem roky na skutečných stavbách — kabelovod v jedné ruce, dodatky v druhé.",
     wallLabel: "Den, který nás málem zničil",
     wallText: "V roce 2022 generální dodavatel na stavbě datového centra v Dallasu zamítl 40 000 dolarů z naší žádosti o platbu. Jeho výmluva? „Vaše denní logy neukazují zpoždění kvůli počasí 14. dne.“ Měli jsme fotky. Měli jsme poznámky. Ale byly rozházené po dodávce mistra, WhatsApp skupině a notesu s kávou.",
@@ -90,7 +90,7 @@ const cs = {
     planLine2: "Ne pro kancelářské pracovníky. Ne pro velké technologie. Pro tým.",
     planLine3: "Neměníte způsob, jakým pracujete.",
     planLine4: "Stisknete nahrávání, řeknete svou aktualizaci a jdete dál.",
-    planLine5: "Voice Log Pro promění to, co říkáte, v denní logy důkazní kvality s časovými razítky, počasím a bezpečnostními poznámkami — dokumentace, která podporuje vaše platební spory a zástavní práva.",
+    planLine5: "VoiceLogPro promění to, co říkáte, v denní logy důkazní kvality s časovými razítky, počasím a bezpečnostními poznámkami — dokumentace, která podporuje vaše platební spory a zástavní práva.",
     planLine6: "Funguje i offline.",
   },
 
@@ -117,14 +117,14 @@ const cs = {
     title: "Jak to funguje",
     subtitle: "Postaveno pro špinavé rukavice a dlouhé dny.",
     step1: "Řekněte svou aktualizaci při procházce stavbou",
-    step2: "Voice Log Pro přepíše a přidá časová razítka, počasí a bezpečnostní štítky",
+    step2: "VoiceLogPro přepíše a přidá časová razítka, počasí a bezpečnostní štítky",
     step3: "Vygeneruje se PDF připravené k použití — připravené k odeslání",
     step4: "Funguje offline — logy se synchronizují, když jste znovu online",
   },
 
   demo: {
     title: "Podívejte se v akci",
-    subtitle: "Ukázka, jak Voice Log Pro promění hlas v denní logy připravené k použití.",
+    subtitle: "Ukázka, jak VoiceLogPro promění hlas v denní logy připravené k použití.",
     badgeText: "Beta demo — Simulovaný výstup, ne skutečný přepis",
     recordButton: "Nahrát testovací log",
     recording: "Nahrávání...",
@@ -140,11 +140,11 @@ const cs = {
 
   compliance: {
     title: "Pokrytí souladu",
-    subtitle: "Voice Log Pro přímo mapuje právní požadavky specifické pro jurisdikci.",
+    subtitle: "VoiceLogPro přímo mapuje právní požadavky specifické pro jurisdikci.",
     thFeature: "Funkce",
     thJurisdiction: "Jurisdikce",
     thRequirement: "Právní požadavek",
-    thSolution: "Jak Voice Log Pro řeší",
+    thSolution: "Jak VoiceLogPro řeší",
     row1Feature: "Měsíční oznámení",
     row1Jurisdiction: "Texas",
     row1Requirement: "Texaský majetkový zákoník Kapitola 53",
@@ -163,10 +163,10 @@ const cs = {
     title: "Co říkají týmy",
     jasonName: "Jason T.",
     jasonRole: "Vedoucí elektrikář",
-    jasonQuote: "GC se nás snažil obvinit ze zpoždění. Vytáhl jsem denní log s časovými razítky a fotkami — případ uzavřen. Voice Log Pro mě kryje.",
+    jasonQuote: "GC se nás snažil obvinit ze zpoždění. Vytáhl jsem denní log s časovými razítky a fotkami — případ uzavřen. VoiceLogPro mě kryje.",
     mariaName: "Maria R.",
     mariaRole: "Vedoucí instalatérů",
-    mariaQuote: "Byla jsem skeptická — beta nástroje se obvykle kazí. Ale Voice Log Pro běžel hladce. Šetří našemu týmu hodiny každý týden.",
+    mariaQuote: "Byla jsem skeptická — beta nástroje se obvykle kazí. Ale VoiceLogPro běžel hladce. Šetří našemu týmu hodiny každý týden.",
   },
 
   valueLadder: {
@@ -221,7 +221,7 @@ const cs = {
     reserveCrew: "Rezervovat moje Crew místo",
     successCrewBump: "Crew plán + auditní stopa připravená pro spory rezervovány Ozveme se, jakmile se otevře vaše beta místo.",
     successCrew: "Crew plán rezervován. Ozveme se, až se otevře vaše beta místo.",
-    loIText: "Toto byl Dopis o záměru — říkáte nám, že zaplatíte za Voice Log Pro, až bude hotový. Nebude vám účtováno 1 199 Kč/měsíc, dokud se nezaregistrujete po spuštění.",
+    loIText: "Toto byl Dopis o záměru — říkáte nám, že zaplatíte za VoiceLogPro, až bude hotový. Nebude vám účtováno 1 199 Kč/měsíc, dokud se nezaregistrujete po spuštění.",
     cancelGuaranteeNote: "Dnes bez poplatku. Zrušení kdykoli. 30denní záruka vrácení peněz při spuštění.",
     reservingNote: "Rezervujete si místo — neplatíte. Pošleme vám email, až se otevře přístup.",
   },
@@ -230,7 +230,7 @@ const cs = {
     title: "Připojte se s nulovým rizikem",
     subtitle: "Odstraňujeme každý důvod říct „ještě ne.”",
     g1Title: "Bez poplatku až do spuštění",
-    g1Desc: "Rezervujte si místo zdarma. Platíte pouze 1 199 Kč/měsíc, jakmile Voice Log Pro vyjde a vy se rozhodnete přihlásit.",
+    g1Desc: "Rezervujte si místo zdarma. Platíte pouze 1 199 Kč/měsíc, jakmile VoiceLogPro vyjde a vy se rozhodnete přihlásit.",
     g2Title: "30denní záruka vrácení peněz",
     g2Desc: "Při spuštění, pokud vám neušetří hodiny a nepomůže vyhrát spory v prvních 30 dnech, vrátíme každou korunu.",
     g3Title: "Vaše data zůstávají vaše",
@@ -242,36 +242,36 @@ const cs = {
   limitedBeta: {
     badge: "Zbývají pouze 3 beta místa",
     title: "Beta záměrně udržujeme malou",
-    body: "Voice Log Pro staví pracovní tým, ne venture-financovaný startup. Nabíráme vždy 3 nové týmy, aby každý beta partner dostal skutečnou podporu — ne lístek na help-desk.",
+    body: "VoiceLogPro staví pracovní tým, ne venture-financovaný startup. Nabíráme vždy 3 nové týmy, aby každý beta partner dostal skutečnou podporu — ne lístek na help-desk.",
     nextBatch: "Jakmile se tato 3 místa zaplní, další várka se otevře až za ~30 dní.",
     closing: "Pokud to s reportováním myslíte vážně — zafixujte si místo nyní.",
   },
 
   faq: {
     title: "Často kladené otázky",
-    subtitle: "Rychlé odpovědi o Voice Log Pro a stavební dokumentaci souladu.",
+    subtitle: "Rychlé odpovědi o VoiceLogPro a stavební dokumentaci souladu.",
     basicsHeader: "Základy",
     legalHeader: "Soulad & Právní",
-    offlineQuestion: "Funguje Voice Log Pro offline?",
+    offlineQuestion: "Funguje VoiceLogPro offline?",
     offlineAnswer: "Ano. Hlasové poznámky můžete nahrávat bez připojení. Hlášení se automaticky synchronizují, když jste znovu online.",
     costQuestion: "Kolik to stojí?",
     costAnswer: "1 199 Kč/měsíc pro Crew plán. Zahrnuje neomezené denní reporty, automatická časová razítka, integraci počasí, přílohy fotografií a exporty PDF připravené pro soud.",
     courtReadyQuestion: "Lze tyto reporty použít u soudu?",
-    courtReadyAnswer: "Ano. Voice Log Pro vytváří PDF reporty s časovými razítky, údaji o počasí a fotografiemi, které slouží jako souběžná dokumentace. Tyto reporty podporují zástavní nároky, spory o zpoždění a případy ochrany plateb.",
+    courtReadyAnswer: "Ano. VoiceLogPro vytváří PDF reporty s časovými razítky, údaji o počasí a fotografiemi, které slouží jako souběžná dokumentace. Tyto reporty podporují zástavní nároky, spory o zpoždění a případy ochrany plateb.",
     texasTrappingQuestion: "Pomáhá to s texaským měsíčním mechanismem zachycení?",
-    texasTrappingAnswer: "Ano. Voice Log Pro označuje reporty fakturačním měsícem potřebným k odeslání oznámení do 15. dne druhého měsíce podle Texaského majetkového zákoníku Kapitola 53.",
+    texasTrappingAnswer: "Ano. VoiceLogPro označuje reporty fakturačním měsícem potřebným k odeslání oznámení do 15. dne druhého měsíce podle Texaského majetkového zákoníku Kapitola 53.",
     texasLienQuestion: "Lze tyto reporty použít pro ochranu zástavních práv?",
     texasLienAnswer: "Ano. Aplikace vytváří souběžné, časově označené záznamy o práci a materiálech dodaných na podporu dokumentace mechanického zástavního práva v Texasu.",
     virginiaQuestion: "Jak to podporuje nároky na Konstruktivní urychlení?",
     virginiaAnswer: "Zaznamenáváním podmínek na staveništi v reálném čase dokumentujete omluvitelné zpoždění a odlišujete ho od vnitřní neefektivity. Údaje o počasí a časová razítka dokazují, že harmonogram ovlivnily vnější faktory.",
     nswSopaQuestion: "Jsou hlasové poznámky platné v SOPA adjudikacích?",
-    nswSopaAnswer: "Ano. Rozhodci upřednostňují souběžné záznamy před pozdějšími výpověďmi svědků v záležitostech Bezpečnosti plateb. Voice Log Pro vytváří časově označené stavební deníky, které mají důkazní váhu.",
+    nswSopaAnswer: "Ano. Rozhodci upřednostňují souběžné záznamy před pozdějšími výpověďmi svědků v záležitostech Bezpečnosti plateb. VoiceLogPro vytváří časově označené stavební deníky, které mají důkazní váhu.",
     ukGoldenThreadQuestion: "Co je Golden Thread?",
     ukGoldenThreadAnswer: "Golden Thread je požadavek na digitální vedení záznamů podle UK Building Safety Act. Nařizuje, aby všechny informace o budově byly ukládány, spravovány a přístupné po celou dobu životnosti budovy.",
     learnMore: "Zjistit více",
     seeTexasGuide: "Zobrazit celý texaský průvodce",
     seeVirginiaGuide: "Zobrazit celý virginský průvodce",
-    getStarted: "Začněte s Voice Log Pro",
+    getStarted: "Začněte s VoiceLogPro",
     seeUkGuide: "Zobrazit celý UK průvodce",
   },
 
@@ -282,8 +282,8 @@ const cs = {
     constructiveAccel: "Obrana proti konstruktivnímu urychlení",
     ukGoldenThread: "UK Golden Thread",
     resourcesHeader: "Zdroje",
-    rakenVs: "Raken vs Voice Log Pro",
-    fieldwireVs: "Fieldwire vs Voice Log Pro",
+    rakenVs: "Raken vs VoiceLogPro",
+    fieldwireVs: "Fieldwire vs VoiceLogPro",
     copyright: "Postaveno pro tým.",
     allRightsReserved: "Všechna práva vyhrazena.",
   },
@@ -297,7 +297,7 @@ const cs = {
     soloBeta: "Solo Beta",
     crewPlan: "Crew plán",
     securedFree: "Zajistili jste si své bezplatné beta místo. Upozorníme vás, až se otevře přístup.",
-    loiText: "Toto byl Dopis o záměru — jednoduše nám říkáte, že byste za Voice Log Pro zaplatili, až bude hotový. Nebude vám účtováno 1 199 Kč/měsíc, dokud se nezaregistrujete po spuštění.",
+    loiText: "Toto byl Dopis o záměru — jednoduše nám říkáte, že byste za VoiceLogPro zaplatili, až bude hotový. Nebude vám účtováno 1 199 Kč/měsíc, dokud se nezaregistrujete po spuštění.",
     soloBetaPrice: "0 Kč",
     soloBetaPriceSub: "/ Zdarma",
     noCreditCard: "Není vyžadována kreditní karta",

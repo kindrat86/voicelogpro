@@ -38,7 +38,7 @@ export default function Blog() {
   return (
     <>
       <Helmet>
-        <title>Construction Law & Compliance Blog | Voice Log Pro</title>
+        <title>Construction Law & Compliance Blog | VoiceLogPro</title>
         <meta name="description" content="Expert guides on construction lien law, payment protection, and daily documentation for subcontractors and project managers." />
         <link rel="canonical" href="https://voicelogpro.com/blog" />
       </Helmet>
@@ -47,7 +47,7 @@ export default function Blog() {
         <header className="border-b border-border">
           <div className="max-w-4xl mx-auto px-4 py-6 flex items-center justify-between">
             <Link to="/" className="font-display text-2xl uppercase text-foreground hover:text-primary transition-colors">
-              Voice Log Pro
+              VoiceLogPro
             </Link>
             <nav className="flex gap-6">
               <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">

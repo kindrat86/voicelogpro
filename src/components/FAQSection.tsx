@@ -38,7 +38,7 @@ export const FAQSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-muted-foreground text-lg font-medium">
-            Quick answers about Voice Log Pro and construction compliance documentation.
+            Quick answers about VoiceLogPro and construction compliance documentation.
           </p>
         </div>
 

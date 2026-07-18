@@ -30,7 +30,7 @@ async function verifyPrerender() {
   // Required strings that should appear in prerendered HTML
   const requiredStrings = [
     // Hero section content
-    'Voice Log Pro',
+    'VoiceLogPro',
     'Daily report',
     // Value proposition
     'court-ready',
@@ -68,7 +68,7 @@ async function verifyPrerender() {
   console.log('\n🔍 Checking SEO meta tags...');
   
   const seoChecks = [
-    { name: 'Title tag', regex: /<title>.*Voice Log Pro.*<\/title>/i },
+    { name: 'Title tag', regex: /<title>.*VoiceLogPro.*<\/title>/i },
     { name: 'Meta description', regex: /<meta\s+name="description"[^>]*>/i },
     { name: 'Canonical link', regex: /<link\s+rel="canonical"[^>]*>/i },
   ];
