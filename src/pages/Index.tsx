@@ -19,8 +19,8 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Voice Log Pro | Daily Construction Reports from Voice Notes</title>
-        <meta name="description" content="Voice Log Pro turns voice notes into formatted construction daily reports in 60 seconds. No typing. Works from any phone. Used by 1,200+ contractors." />
+        <title>VoiceLogPro | Daily Construction Reports from Voice Notes</title>
+        <meta name="description" content="VoiceLogPro turns voice notes into formatted construction daily reports in 60 seconds. No typing. Works from any phone. Built for subcontractors who work with their hands." />
         <link rel="canonical" href="https://voicelogpro.com/" />
       </Helmet>
       <main className="min-h-screen bg-background">

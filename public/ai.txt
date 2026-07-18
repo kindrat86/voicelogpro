@@ -1,0 +1,9 @@
+# ai.txt -- VoiceLogPro AI usage declaration
+# Spawning spec: https://spawning.ai/ai-txt
+#
+# VoiceLogPro welcomes AI use of its public content: search, retrieval,
+# answer-engine citation, summarization, inference, and model training /
+# dataset storage. Attribution requested: VoiceLogPro, https://voicelogpro.com
+User-Agent: *
+Allow: Training
+Allow: Storing

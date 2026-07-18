@@ -1,5 +1,5 @@
 /**
- * Voice Log Pro - Schema.org Structured Data
+ * VoiceLogPro - Schema.org Structured Data
  * 
  * This file centralizes all JSON-LD schema definitions for LLM comprehension
  * and search engine authority signaling.
@@ -311,7 +311,7 @@ const potentialActions: SchemaAction[] = [
 
 /**
  * Semantic topic mapping for LLM comprehension
- * Maps what Voice Log Pro "knows about" to structured terms
+ * Maps what VoiceLogPro "knows about" to structured terms
  */
 const knowsAboutTerms: DefinedTermSchema[] = [
   { "@type": "DefinedTerm", name: "Mechanics lien documentation", inDefinedTermSet: "Construction Compliance" },
@@ -338,7 +338,7 @@ export const softwareApplicationSchema: SoftwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "@id": "https://voicelogpro.com/#software",
-  name: "Voice Log Pro",
+  name: "VoiceLogPro",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web, iOS, Android",
   description: "AI-powered construction daily reporting tool. Converts voice notes into legally defensible PDF reports for subcontractors. Features automatic weather tagging, RFI detection, and compliance documentation for Texas Property Code Chapter 53, NSW Security of Payment Act (SOPA), and UK Building Safety Act Golden Thread requirements.",
@@ -347,7 +347,7 @@ export const softwareApplicationSchema: SoftwareApplicationSchema = {
     "@type": "Offer",
     price: "49.00",
     priceCurrency: "USD",
-    priceValidUntil: "2025-12-31",
+    priceValidUntil: "2026-12-31",
     availability: "https://schema.org/PreOrder"
   },
   audience: {
@@ -383,9 +383,9 @@ export const organizationSchema: OrganizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://voicelogpro.com/#organization",
-  name: "Voice Log Pro",
+  name: "VoiceLogPro",
   url: "https://voicelogpro.com",
-  description: "Voice Log Pro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
+  description: "VoiceLogPro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
   foundingDate: "2024",
   sameAs: []
 };
@@ -456,7 +456,7 @@ export const faqPageSchema: FAQPageSchema = {
 /**
  * Compliance Frameworks Reference
  * 
- * This list defines the legal frameworks Voice Log Pro explicitly supports.
+ * This list defines the legal frameworks VoiceLogPro explicitly supports.
  * Adding a new framework here requires:
  * 1. Adding to featureList in softwareApplicationSchema
  * 2. Creating corresponding legislative landing page
