@@ -1,0 +1,16 @@
+{
+  "name": "VoiceLogPro",
+  "description": "Turn voice logs into structured insights. Field teams speak their reports; AI transcribes, categorizes, and surfaces actionable intelligence in real time.",
+  "url": "https://voicelogpro.com",
+  "api": {
+    "type": "nlweb",
+    "version": "0.1",
+    "endpoint": "https://voicelogpro.com/answers/"
+  },
+  "feeds": [
+    {
+      "type": "jsonfeed",
+      "url": "https://voicelogpro.com/answers/feed.json"
+    }
+  ]
+}
