@@ -10,6 +10,12 @@
   "trailingSlash": false,
   "buildCommand": "npm run build:all",
   "outputDirectory": "dist",
+  "rewrites": [
+    {"source": "/embed", "destination": "/embed.html"},
+    {"source": "/embed/tools/:path*", "destination": "/embed/tools/:path*"},
+    {"source": "/research", "destination": "/research/index.html"},
+    {"source": "/research/:path*", "destination": "/research/:path*"}
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -95,6 +101,22 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/embed",
+      "destination": "/embed.html"
+    },
+    {
+      "source": "/embed/tools/:path*",
+      "destination": "/embed/tools/:path*"
+    },
+    {
+      "source": "/research",
+      "destination": "/research/index.html"
+    },
+    {
+      "source": "/research/:path*",
+      "destination": "/research/:path*"
+    },
     {
       "source": "/cities/:slug",
       "destination": "/cities/:slug/index.html"
