@@ -24,9 +24,33 @@ Allow: /
 User-Agent: Google-Extended
 Allow: /
 
+User-Agent: OAI-SearchBot
+Allow: /
+
+User-Agent: Cohere-AI
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: FacebookBot
+Allow: /
+
+User-Agent: Applebot
+Allow: /
+
+User-Agent: Bytespider
+Allow: /
+
 User-Agent: Bingbot
 Allow: /
 
 Sitemap: https://voicelogpro.com/sitemap.xml
 
 Sitemap: https://voicelogpro.com/sitemap-index.xml
+
+# AI crawler discovery surfaces
+LLMs.txt: https://voicelogpro.com/llms.txt
+LLMs-full.txt: https://voicelogpro.com/llms-full.txt
+Knowledge-Graph: https://voicelogpro.com/knowledge-graph.json
+QA: https://voicelogpro.com/qa.jsonl
