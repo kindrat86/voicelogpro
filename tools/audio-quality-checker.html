@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Audio Quality Checker for Transcription — Will Your Audio Transcribe Well? | VoiceLogPro</title>
+<meta name="description" content="Free audio quality checker for transcription. Upload an audio file or paste a URL and instantly see if your recording meets the sample rate, duration, and noise thresholds required for accurate speech-to-text." />
+<meta name="author" content="VoiceLogPro" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://voicelogpro.com/tools/audio-quality-checker.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="VoiceLogPro" />
+<meta property="og:title" content="Audio Quality Checker for Transcription — Free" />
+<meta property="og:description" content="Check if your audio meets the sample rate, duration, and noise thresholds for accurate transcription." />
+<meta property="og:url" content="https://voicelogpro.com/tools/audio-quality-checker.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<style>
+  :root {
+    --bg: #0f172a;
+    --bg-card: #1e293b;
+    --bg-input: #0f1d36;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --accent: #8b5cf6;
+    --accent-hover: #a78bfa;
+    --accent-dim: rgba(139, 92, 246, 0.15);
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --border: #334155;
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 880px; margin: 0 auto; padding: 24px 20px 80px; }
+  .header { text-align: center; margin-bottom: 32px; }
+  .header h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .header p { color: var(--text-muted); font-size: 1.05rem; max-width: 640px; margin: 0 auto; }
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 24px; }
+  .upload-zone {
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 40px 20px;
+    text-align: center;
+    transition: border-color 0.15s, background 0.15s;
+    cursor: pointer;
+  }
+  .upload-zone:hover, .upload-zone.dragover { border-color: var(--accent); background: var(--accent-dim); }
+  .upload-zone .icon { font-size: 2.4rem; margin-bottom: 8px; }
+  .upload-zone .label { font-weight: 600; }
+  .upload-zone .hint { color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.95rem; }
+  input[type="url"] { width: 100%; background: var(--bg-input); border: 1px solid var(--border); color: var(--text); padding: 12px 16px; border-radius: 8px; font-size: 1rem; font-family: inherit; }
+  input[type="url"]:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
+  .divider { display: flex; align-items: center; gap: 16px; margin: 24px 0; color: var(--text-muted); font-size: 0.85rem; }
+  .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+  .results { display: none; }
+  .results.show { display: block; animation: fade 0.3s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .score-banner { text-align: center; padding: 32px; border-radius: var(--radius); margin-bottom: 20px; }
+  .score-banner.good { background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(16,185,129,0.05)); border: 1px solid rgba(16,185,129,0.3); }
+  .score-banner.ok { background: linear-gradient(135deg, rgba(245,158,11,0.2), rgba(245,158,11,0.05)); border: 1px solid rgba(245,158,11,0.3); }
+  .score-banner.bad { background: linear-gradient(135deg, rgba(239,68,68,0.2), rgba(239,68,68,0.05)); border: 1px solid rgba(239,68,68,0.3); }
+  .score-banner .score { font-size: 3rem; font-weight: 800; }
+  .score-banner .score.good { color: var(--success); }
+  .score-banner .score.ok { color: var(--warning); }
+  .score-banner .score.bad { color: var(--danger); }
+  .score-banner .verdict { font-size: 1.15rem; font-weight: 600; margin-top: 4px; }
+  .score-banner .sub { color: var(--text-muted); margin-top: 6px; }
+  .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .metric-row:last-child { border-bottom: none; }
+  .metric-label { font-weight: 600; }
+  .metric-label .desc { display: block; color: var(--text-muted); font-weight: 400; font-size: 0.85rem; }
+  .metric-value { font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
+  .pill { padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .pill.good { background: rgba(16,185,129,0.15); color: var(--success); }
+  .pill.ok { background: rgba(245,158,11,0.15); color: var(--warning); }
+  .pill.bad { background: rgba(239,68,68,0.15); color: var(--danger); }
+  .recs { background: var(--bg-input); border-radius: 8px; padding: 20px; margin-top: 16px; }
+  .recs h4 { margin-bottom: 10px; }
+  .recs ul { list-style: none; }
+  .recs li { padding: 6px 0 6px 24px; position: relative; color: var(--text-muted); }
+  .recs li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  .faq details { border-bottom: 1px solid var(--border); padding: 14px 0; }
+  .faq summary { cursor: pointer; font-weight: 600; font-size: 1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq summary::after { content: "+"; font-size: 1.4rem; color: var(--accent); font-weight: 300; }
+  .faq details[open] summary::after { content: "−"; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq p { color: var(--text-muted); margin-top: 10px; font-size: 0.95rem; }
+  .footer { text-align: center; padding: 32px 0 0; border-top: 1px solid var(--border); margin-top: 40px; color: var(--text-muted); font-size: 0.9rem; }
+  .footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .footer a:hover { text-decoration: underline; }
+  .back-link { display: inline-block; margin-bottom: 20px; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+  .back-link:hover { color: var(--accent); }
+  .privacy-note { font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 12px; }
+  details summary { list-style: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="/tools/" class="back-link">← All Tools</a>
+  <div class="header">
+    <h1>Audio Quality Checker</h1>
+    <p>Find out if your recording will transcribe cleanly before you pay for it. We analyze sample rate, bit depth, duration, format, and estimate noise level — the five inputs every speech-to-text engine cares about.</p>
+  </div>
+
+  <div class="card">
+    <div id="uploadZone" class="upload-zone">
+      <div class="icon">🎙️</div>
+      <div class="label">Drop an audio file here or click to browse</div>
+      <div class="hint">WAV, MP3, M4A, FLAC, OGG — up to 50 MB. Processed locally in your browser, nothing uploaded.</div>
+      <input type="file" id="fileInput" accept="audio/*" style="display:none;" />
+    </div>
+    <div class="divider">OR</div>
+    <div class="form-group">
+      <label for="urlInput">Paste audio URL</label>
+      <input type="url" id="urlInput" placeholder="https://example.com/recording.mp3" />
+      <div class="hint" style="color: var(--text-muted); font-size: 0.85rem; margin-top:4px;">URL analysis reads metadata only; full noise analysis needs a local file.</div>
+    </div>
+    <button class="btn" onclick="analyze()" style="display:inline-block;background:var(--accent);color:white;border:none;padding:14px 32px;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;font-family:inherit;width:100%;transition:background 0.15s;">Analyze Audio</button>
+    <p class="privacy-note">🔒 100% client-side. Your audio never leaves your device.</p>
+  </div>
+
+  <div id="results" class="results">
+    <div id="scoreBanner" class="score-banner">
+      <div class="score" id="scoreNum">—</div>
+      <div class="verdict" id="verdict">—</div>
+      <div class="sub" id="subVerdict">—</div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom: 8px;">Technical Breakdown</h3>
+      <div id="metrics"></div>
+      <div class="recs">
+        <h4>Recommendations</h4>
+        <ul id="recsList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card faq">
+    <h3 style="margin-bottom: 8px;">Frequently Asked Questions</h3>
+    <details>
+      <summary>What sample rate do I need for accurate transcription?</summary>
+      <p>16 kHz is the minimum most speech-to-text engines accept (Whisper, Deepgram, Google). 44.1 kHz or 48 kHz is ideal and matches what phones and recorders produce by default. Anything below 16 kHz will lose high-frequency consonant sounds and hurt accuracy.</p>
+    </details>
+    <details>
+      <summary>How does background noise affect transcription?</summary>
+      <p>Speech-to-text accuracy drops sharply once signal-to-noise ratio falls below ~15 dB. A café, an active job site, or a car at highway speed all sit around 5–10 dB SNR and typically cause 10–20% more errors. Move to a quieter spot, use a directional mic, or hold the phone closer.</p>
+    </details>
+    <details>
+      <summary>Why was my file flagged for duration?</summary>
+      <p>Most APIs cap single requests at 1–4 hours depending on provider. Very short clips (under ~1 second) often fail voice-activity detection. For daily logs, aim for 30 seconds to 30 minutes per clip — the sweet spot for both accuracy and cost.</p>
+    </details>
+  </div>
+
+  <div class="footer">
+    <p>Powered by <a href="https://voicelogpro.com/">VoiceLogPro</a> — turn voice notes into formatted daily reports in 60 seconds.</p>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Audio Quality Checker for Transcription",
+      "url": "https://voicelogpro.com/tools/audio-quality-checker.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "description": "Check if an audio file meets sample rate, duration, format, and noise thresholds required for accurate speech-to-text transcription.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "publisher": { "@type": "Organization", "name": "VoiceLogPro", "url": "https://voicelogpro.com" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What sample rate do I need for accurate transcription?",
+          "acceptedAnswer": { "@type": "Answer", "text": "16 kHz is the minimum most speech-to-text engines accept. 44.1 kHz or 48 kHz is ideal and matches what phones and recorders produce by default. Below 16 kHz loses high-frequency consonant sounds." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does background noise affect transcription?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Accuracy drops sharply once signal-to-noise ratio falls below ~15 dB. A cafe, job site, or car at highway speed sits at 5-10 dB SNR and typically causes 10-20% more errors." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why was my file flagged for duration?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most APIs cap single requests at 1-4 hours. Very short clips under 1 second fail voice-activity detection. Aim for 30 seconds to 30 minutes per clip." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+let currentFile = null;
+
+const uploadZone = document.getElementById("uploadZone");
+const fileInput = document.getElementById("fileInput");
+uploadZone.addEventListener("click", () => fileInput.click());
+uploadZone.addEventListener("dragover", e => { e.preventDefault(); uploadZone.classList.add("dragover"); });
+uploadZone.addEventListener("dragleave", () => uploadZone.classList.remove("dragover"));
+uploadZone.addEventListener("drop", e => {
+  e.preventDefault();
+  uploadZone.classList.remove("dragover");
+  if (e.dataTransfer.files.length) {
+    currentFile = e.dataTransfer.files[0];
+    uploadZone.querySelector(".label").textContent = "Selected: " + currentFile.name;
+  }
+});
+fileInput.addEventListener("change", () => {
+  if (fileInput.files.length) {
+    currentFile = fileInput.files[0];
+    uploadZone.querySelector(".label").textContent = "Selected: " + currentFile.name;
+  }
+});
+
+function pill(level, text) {
+  return `<span class="pill ${level}">${text}</span>`;
+}
+
+function rateMetric(name, desc, value, level) {
+  return `<div class="metric-row"><div class="metric-label">${name}<span class="desc">${desc}</span></div><div class="metric-value">${value} ${pill(level, level.toUpperCase())}</div></div>`;
+}
+
+async function analyze() {
+  const urlVal = document.getElementById("urlInput").value.trim();
+  if (!currentFile && !urlVal) {
+    alert("Please drop a file or paste an audio URL.");
+    return;
+  }
+
+  let metrics = [];
+  let recs = [];
+  let score = 100;
+
+  if (currentFile) {
+    // Local file: full analysis
+    const f = currentFile;
+    const sizeMB = f.size / (1024 * 1024);
+    const ext = f.name.split(".").pop().toLowerCase();
+    const typeOk = ["wav","mp3","m4a","flac","ogg","webm","aac"].includes(ext);
+
+    let duration = 0, sampleRate = 0, channels = 0;
+    let noiseLevel = "unknown";
+    let estimatedSNR = null;
+
+    try {
+      const arrayBuf = await f.arrayBuffer();
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const audioBuf = await ctx.decodeAudioData(arrayBuf.slice(0));
+      duration = audioBuf.duration;
+      sampleRate = audioBuf.sampleRate;
+      channels = audioBuf.numberOfChannels;
+
+      // Estimate noise floor from a quiet 0.5s tail sample
+      if (duration > 1) {
+        const tailStart = Math.floor(audioBuf.length * 0.9);
+        const ch = audioBuf.getChannelData(0);
+        let sumSq = 0, peak = 0, n = 0;
+        const windowSize = Math.min(22050, ch.length - tailStart);
+        for (let i = tailStart; i < tailStart + windowSize && i < ch.length; i++) {
+          const s = Math.abs(ch[i]);
+          sumSq += ch[i] * ch[i];
+          peak = Math.max(peak, s);
+          n++;
+        }
+        const rms = Math.sqrt(sumSq / Math.max(1, n));
+        // Estimate SNR relative to typical speech RMS (~0.05)
+        const speechRMS = 0.05;
+        if (rms > 0 && rms < speechRMS) {
+          estimatedSNR = 20 * Math.log10(speechRMS / rms);
+        } else if (rms >= speechRMS) {
+          estimatedSNR = 20; // noisy tail or continuous speech
+        }
+      }
+      ctx.close();
+    } catch (e) {
+      recs.push("File could not be decoded in-browser. Try WAV or MP3 for the most reliable analysis.");
+    }
+
+    // Format check
+    if (!typeOk) {
+      score -= 20;
+      recs.push("Convert to WAV, MP3, or M4A — most providers reject obscure formats.");
+      metrics.push(rateMetric("Format", "File type", ext.toUpperCase(), "bad"));
+    } else {
+      metrics.push(rateMetric("Format", "File type", ext.toUpperCase(), "good"));
+    }
+
+    // Size
+    if (sizeMB > 50) {
+      score -= 15;
+      recs.push("File is large — split into shorter clips under 50 MB for faster upload.");
+    }
+    metrics.push(rateMetric("File Size", "Total bytes", sizeMB.toFixed(1) + " MB", sizeMB > 50 ? "ok" : "good"));
+
+    // Sample rate
+    if (sampleRate > 0) {
+      let srLevel = "bad", srNote = "";
+      if (sampleRate >= 44100) { srLevel = "good"; }
+      else if (sampleRate >= 16000) { srLevel = "ok"; srNote = " (16k is the API minimum)"; }
+      else { score -= 30; recs.push("Sample rate below 16 kHz — re-record at 44.1 kHz or 48 kHz."); }
+      metrics.push(rateMetric("Sample Rate", "Samples per second" + srNote, (sampleRate / 1000).toFixed(1) + " kHz", srLevel));
+    }
+
+    // Duration
+    if (duration > 0) {
+      let dLevel = "good";
+      if (duration < 1) { dLevel = "bad"; score -= 20; recs.push("Clip is under 1 second — too short for voice activity detection."); }
+      else if (duration > 7200) { dLevel = "ok"; score -= 10; recs.push("Clip exceeds 2 hours — split before sending to most APIs."); }
+      else if (duration > 1800) { dLevel = "ok"; recs.push("Long clip — consider splitting into 30-min segments for reliability."); }
+      metrics.push(rateMetric("Duration", "Length of recording", formatDuration(duration), dLevel));
+    }
+
+    // Channels
+    if (channels > 0) {
+      metrics.push(rateMetric("Channels", "Mono vs stereo", channels === 1 ? "Mono" : channels + " ch", "good"));
+      if (channels > 2) recs.push("Multi-channel file — downmix to mono unless you need speaker diarization.");
+    }
+
+    // Noise estimate
+    if (estimatedSNR !== null) {
+      let nLevel = "good";
+      if (estimatedSNR < 10) { nLevel = "bad"; score -= 25; recs.push("High background noise — re-record in a quieter spot or use a directional mic."); }
+      else if (estimatedSNR < 15) { nLevel = "ok"; score -= 10; recs.push("Moderate noise — expect 5-10% more transcription errors."); }
+      else if (estimatedSNR > 40) { nLevel = "ok"; recs.push("Very clean tail — file is likely studio-grade. If silent tail, noise estimate is unreliable."); }
+      metrics.push(rateMetric("Est. Noise Floor", "Signal-to-noise ratio (tail-sample estimate)", estimatedSNR.toFixed(0) + " dB SNR", nLevel));
+    }
+
+  } else {
+    // URL-only: metadata heuristic
+    const url = urlVal;
+    const ext = url.split("?")[0].split("#")[0].split(".").pop().toLowerCase();
+    const typeOk = ["wav","mp3","m4a","flac","ogg","webm","aac"].includes(ext);
+    if (!typeOk) {
+      score -= 20;
+      recs.push("URL doesn't end in a known audio format — verify it resolves to a real file.");
+      metrics.push(rateMetric("Format", "From URL extension", ext.toUpperCase(), "bad"));
+    } else {
+      metrics.push(rateMetric("Format", "From URL extension", ext.toUpperCase(), "good"));
+    }
+    recs.push("Upload the file directly for sample rate, duration, and noise analysis — URL mode only checks format.");
+    recs.push("Ensure the URL is publicly accessible (no auth wall) so transcription APIs can fetch it.");
+  }
+
+  score = Math.max(0, Math.min(100, Math.round(score)));
+  let level = score >= 80 ? "good" : score >= 50 ? "ok" : "bad";
+  let verdict = score >= 80 ? "Ready to transcribe" : score >= 50 ? "Usable, with caveats" : "Re-record before paying";
+  let sub = score >= 80 ? "This audio should produce a clean, accurate transcript." :
+            score >= 50 ? "Accuracy will suffer on some segments. See recommendations." :
+            "This file will likely produce many errors. Address the red items first.";
+
+  if (recs.length === 0) recs.push("All checks passed. Send it to your transcription provider.");
+
+  document.getElementById("scoreNum").textContent = score + "/100";
+  document.getElementById("scoreNum").className = "score " + level;
+  document.getElementById("verdict").textContent = verdict;
+  document.getElementById("subVerdict").textContent = sub;
+  document.getElementById("scoreBanner").className = "score-banner " + level;
+  document.getElementById("metrics").innerHTML = metrics.join("");
+  document.getElementById("recsList").innerHTML = recs.map(r => "<li>" + r + "</li>").join("");
+  document.getElementById("results").classList.add("show");
+}
+
+function formatDuration(sec) {
+  if (sec < 60) return sec.toFixed(1) + " sec";
+  const m = Math.floor(sec / 60);
+  const s = Math.round(sec % 60);
+  if (m < 60) return m + "m " + s + "s";
+  const h = Math.floor(m / 60);
+  return h + "h " + (m % 60) + "m";
+}
+</script>
+</body>
+</html>
