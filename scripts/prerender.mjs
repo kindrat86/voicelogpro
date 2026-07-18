@@ -27,6 +27,7 @@ const PRERENDER_ROUTES = [
   '/crew-plan',
   '/blog',
   '/compare',
+  '/court-ready-daily-logs',
   '/how-to',
   '/for',
   '/solutions/texas-mechanics-lien-compliance',
@@ -164,6 +165,11 @@ async function prerender() {
         publisher: { '@type': 'Organization', name: 'VoiceLogPro', url: 'https://voicelogpro.com' },
         datePublished: EEAT_PUBLISHED,
         dateModified: EEAT_MODIFIED,
+      })}</script>
+    <script type="application/ld+json">${JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', 'h2', 'p'],
       })}</script>`;
       routeHtml = routeHtml.replace('</head>', `${eeatHead}\n</head>`);
       const eeatByline = `<p class="author-byline" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"><span class="author" rel="author">By The Field Desk, VoiceLogPro</span> · <time datetime="${EEAT_MODIFIED}">Updated ${EEAT_MODIFIED}</time> · Published ${EEAT_PUBLISHED}</p>`;

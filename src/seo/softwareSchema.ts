@@ -387,7 +387,17 @@ export const organizationSchema: OrganizationSchema = {
   url: "https://voicelogpro.com",
   description: "VoiceLogPro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
   foundingDate: "2024",
-  sameAs: []
+  sameAs: ["https://github.com/kindrat86"],
+  knowsAbout: [
+    "Construction Daily Reporting",
+    "Voice-to-PDF Documentation",
+    "Texas Property Code Chapter 53",
+    "NSW Security of Payment Act",
+    "UK Building Safety Act Golden Thread",
+    "Mechanics Lien Documentation",
+    "Construction Compliance",
+    "AI-Powered Construction Software"
+  ]
 };
 
 /**
