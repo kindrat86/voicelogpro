@@ -6,6 +6,11 @@ Disallow: /dashboard/
 Disallow: /account/
 Disallow: /login/
 
+max-image-preview:large
+max-video-preview:-1
+max-snippet:-1
+max-image-render:Standard
+
 User-Agent: GPTBot
 Allow: /
 
@@ -46,11 +51,4 @@ User-Agent: Bingbot
 Allow: /
 
 Sitemap: https://voicelogpro.com/sitemap.xml
-
-Sitemap: https://voicelogpro.com/sitemap-index.xml
-
-# AI crawler discovery surfaces
-LLMs.txt: https://voicelogpro.com/llms.txt
-LLMs-full.txt: https://voicelogpro.com/llms-full.txt
-Knowledge-Graph: https://voicelogpro.com/knowledge-graph.json
-QA: https://voicelogpro.com/qa.jsonl
+Sitemap: https://voicelogpro.com/image-sitemap.xml
