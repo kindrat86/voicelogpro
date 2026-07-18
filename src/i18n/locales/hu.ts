@@ -259,7 +259,7 @@ const hu = {
     courtReadyQuestion: "Használhatók ezek a jelentések bíróságon?",
     courtReadyAnswer: "Igen. A VoiceLogPro időbélyegekkel, időjárási adatokkal és fényképekkel ellátott PDF jelentéseket hoz létre, amelyek kortársi dokumentációként szolgálnak. Ezek a jelentések támogatják a zálogjogi igényeket, késedelmi vitákat és fizetésvédelmi eseteket.",
     texasTrappingQuestion: "Segít ez a texasi havi alapbefagyasztási mechanizmussal?",
-    texasTrappingAnswer: "Igen. A VoiceLogPro a számlázási hónappal címkézi a jelentéseket, amely szükséges az értesítések második hónap 15. napjáig történő elküldéséhez a Texas Property Code 53. Fejezete szerint.",
+    texasTrappingAnswer: "Igen. A VoiceLogPro a számlázási hónappal címkézi a jelentéseket, amely az értesítés elküldéséhez szükséges minden ki nem fizetett munkával töltött hónapot követő harmadik hónap 15. napjáig, a Texas Property Code 53. fejezete szerint (a HB 2237 által módosítva, 2022-től hatályos).",
     texasLienQuestion: "Használhatók ezek a jelentések zálogjogi jogvédelemre?",
     texasLienAnswer: "Igen. Az alkalmazás kortársi, időbélyegzett feljegyzéseket hoz létre a szállított munkáról és anyagokról a mechanikai zálogjog dokumentáció támogatására Texasban.",
     virginiaQuestion: "Hogyan támogatja ez a Konstruktív Gyorsítási igényeket?",

@@ -23,11 +23,13 @@ const organizationSchema = {
   "@id": "https://voicelogpro.com/#organization",
   name: "VoiceLogPro",
   url: "https://voicelogpro.com",
-  logo: "https://storage.googleapis.com/gpt-engineer-file-uploads/4B8rhitxuFfh01PdeqSXDugsqvg2/uploads/1765892927118-VoiceLogProFavicon.png",
+  logo: "https://voicelogpro.com/images/og-card.jpg",
   description:
     "VoiceLogPro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
+  disambiguatingDescription:
+    "VoiceLogPro is a voice-to-PDF daily construction log app (voice on-site → timestamped, court-admissible daily-report PDF) — not a general-purpose meeting/voice-transcription tool (Otter, Rev, Fireflies), and not a full construction-management platform (Procore, Raken).",
   foundingDate: "2024",
-  sameAs: [],
+  sameAs: ["https://github.com/kindrat86"],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",

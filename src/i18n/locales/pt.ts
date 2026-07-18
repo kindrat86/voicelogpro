@@ -259,7 +259,7 @@ const pt = {
     courtReadyQuestion: "Esses relatórios podem ser usados em tribunal?",
     courtReadyAnswer: "Sim. O VoiceLogPro gera relatórios PDF com carimbos de data/hora, dados climáticos e fotos que servem como documentação contemporânea. Esses relatórios apoiam reivindicações de gravame, disputas de atraso e casos de proteção de pagamento.",
     texasTrappingQuestion: "Isso ajuda com o Mecanismo Mensal de Captura de Fundos do Texas?",
-    texasTrappingAnswer: "Sim. O VoiceLogPro marca os relatórios com o mês de faturamento necessário para enviar avisos até o 15º dia do segundo mês, de acordo com o Capítulo 53 do Código de Propriedade do Texas.",
+    texasTrappingAnswer: "Sim. O VoiceLogPro marca os relatórios com o mês de faturamento necessário para enviar o aviso até o 15º dia do terceiro mês seguinte a cada mês de trabalho não pago, de acordo com o Capítulo 53 do Código de Propriedade do Texas (alterado pela HB 2237, em vigor desde 2022).",
     texasLienQuestion: "Esses relatórios podem ser usados para proteção de direitos de gravame?",
     texasLienAnswer: "Sim. O aplicativo cria registros contemporâneos carimbados de mão de obra e materiais fornecidos para apoiar a documentação de gravame de mecânico no Texas.",
     virginiaQuestion: "Como isso apoia reivindicações de Aceleração Construtiva?",

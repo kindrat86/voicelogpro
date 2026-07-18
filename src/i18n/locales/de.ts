@@ -259,7 +259,7 @@ const de = {
     courtReadyQuestion: "Können diese Berichte vor Gericht verwendet werden?",
     courtReadyAnswer: "Ja. VoiceLogPro erstellt PDF-Berichte mit Zeitstempeln, Wetterdaten und Fotos, die als zeitgleiche Dokumentation dienen. Diese Berichte unterstützen Pfandrechtsansprüche, Verzögerungsstreitigkeiten und Zahlungsschutzfälle.",
     texasTrappingQuestion: "Hilft das beim Texas Monthly Trapping Mechanism?",
-    texasTrappingAnswer: "Ja. VoiceLogPro kennzeichnet Berichte mit dem Abrechnungsmonat, der benötigt wird, um Mitteilungen bis zum 15. des zweiten Monats gemäß Texas Property Code Chapter 53 zuzustellen.",
+    texasTrappingAnswer: "Ja. VoiceLogPro kennzeichnet Berichte mit dem Abrechnungsmonat, der benötigt wird, um die Mitteilung bis zum 15. Tag des dritten Monats nach jedem Monat mit unbezahlter Arbeit gemäß Texas Property Code Chapter 53 (geändert durch HB 2237, gültig ab 2022) zuzustellen.",
     texasLienQuestion: "Können diese Berichte zum Schutz von Pfandrechten verwendet werden?",
     texasLienAnswer: "Ja. Die App erstellt zeitgleiche, mit Zeitstempel versehene Aufzeichnungen von Arbeit und gelieferten Materialien zur Unterstützung der Mechanikerpfandrechtsdokumentation in Texas.",
     virginiaQuestion: "Wie unterstützt das Constructive Acceleration-Ansprüche?",

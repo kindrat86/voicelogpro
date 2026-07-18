@@ -259,7 +259,7 @@ const es = {
     courtReadyQuestion: "¿Se pueden usar estos informes en la corte?",
     courtReadyAnswer: "Sí. VoiceLogPro genera informes PDF con marcas de tiempo, datos climáticos y fotos que sirven como documentación contemporánea. Estos informes respaldan reclamos de gravamen, disputas por demora y casos de protección de pago.",
     texasTrappingQuestion: "¿Esto ayuda con el Mecanismo Mensual de Captura de Texas?",
-    texasTrappingAnswer: "Sí. VoiceLogPro etiqueta los informes con el mes de facturación necesario para enviar avisos antes del día 15 del segundo mes según el Capítulo 53 del Código de Propiedad de Texas.",
+    texasTrappingAnswer: "Sí. VoiceLogPro etiqueta los informes con el mes de facturación necesario para enviar el aviso antes del día 15 del tercer mes siguiente a cada mes de trabajo no pagado, según el Capítulo 53 del Código de Propiedad de Texas (modificado por la HB 2237, vigente desde 2022).",
     texasLienQuestion: "¿Se pueden usar estos informes para la protección de derechos de gravamen?",
     texasLienAnswer: "Sí. La aplicación crea registros contemporáneos con marca de tiempo de la mano de obra y materiales suministrados para respaldar la documentación de gravamen de mecánico en Texas.",
     virginiaQuestion: "¿Cómo respalda esto los reclamos de Aceleración Constructiva?",

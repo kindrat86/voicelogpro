@@ -52,14 +52,14 @@ const TexasMechanicsLien = () => {
               <div className="border-l-4 border-primary pl-6">
                 <dt className="font-semibold text-foreground text-lg">Monthly Trapping Mechanism</dt>
                 <dd className="text-muted-foreground mt-2">
-                  A legal requirement under Texas Property Code Chapter 53 that requires subcontractors to serve notices by the 15th day of the second or third month following the month work was performed. This "traps" the work to a specific billing period to preserve lien rights.
+                  A legal requirement under Texas Property Code Chapter 53 that requires subcontractors to serve a single monthly notice on the property owner and original contractor by the 15th day of the third month following each month in which unpaid labor or materials were provided. This "traps" the work to a specific billing period to preserve lien rights. (Texas HB 2237, effective January 1, 2022, consolidated the former second-month and third-month notices into this single third-month notice.)
                 </dd>
               </div>
               
               <div className="border-l-4 border-primary pl-6">
                 <dt className="font-semibold text-foreground text-lg">Texas Property Code Chapter 53 Requirement</dt>
                 <dd className="text-muted-foreground mt-2">
-                  Mandates monthly notices by the 15th of the second month to preserve lien rights. Subcontractors must document work performed each month with contemporaneous records.
+                  Mandates a monthly notice by the 15th day of the third month following the month of unpaid work to preserve lien rights (Section 53.056, as amended by HB 2237 in 2022). Subcontractors must document work performed each month with contemporaneous records.
                 </dd>
               </div>
               
@@ -142,33 +142,42 @@ const TexasMechanicsLien = () => {
         {/* Key Requirements Table */}
         <section className="py-16 px-4 bg-muted/30">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-2xl font-bold text-foreground mb-8">
+            <h2 className="font-display text-2xl font-bold text-foreground mb-4">
               Texas Chapter 53 Notice Deadlines
             </h2>
-            
+
+            <div className="mb-8 rounded-lg border border-primary/30 bg-primary/5 px-5 py-4">
+              <p className="text-sm text-foreground">
+                <strong>Updated July 2026 — reflects Texas HB 2237 (effective January 1, 2022).</strong>{" "}
+                HB 2237 eliminated the old second-month notice and consolidated subcontractor notices into a
+                single deadline: the 15th day of the third month following each month of unpaid labor or
+                materials. Verify exact dates for your project with a licensed Texas attorney.
+              </p>
+            </div>
+
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b border-border">
-                    <th className="text-left py-4 px-4 font-semibold text-foreground">Work Performed</th>
-                    <th className="text-left py-4 px-4 font-semibold text-foreground">Notice Deadline</th>
+                    <th className="text-left py-4 px-4 font-semibold text-foreground">Month of Unpaid Work</th>
+                    <th className="text-left py-4 px-4 font-semibold text-foreground">Notice Deadline (15th of 3rd month after)</th>
                     <th className="text-left py-4 px-4 font-semibold text-foreground">Required Documentation</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-border">
-                    <td className="py-4 px-4 text-muted-foreground">Month 1 (e.g., January)</td>
-                    <td className="py-4 px-4 text-muted-foreground">15th of Month 2 or 3 (February or March)</td>
+                    <td className="py-4 px-4 text-muted-foreground">January</td>
+                    <td className="py-4 px-4 text-muted-foreground">April 15</td>
                     <td className="py-4 px-4 text-muted-foreground">Daily logs with timestamps, work descriptions</td>
                   </tr>
                   <tr className="border-b border-border">
-                    <td className="py-4 px-4 text-muted-foreground">Month 2 (e.g., February)</td>
-                    <td className="py-4 px-4 text-muted-foreground">15th of Month 3 or 4 (March or April)</td>
+                    <td className="py-4 px-4 text-muted-foreground">February</td>
+                    <td className="py-4 px-4 text-muted-foreground">May 15</td>
                     <td className="py-4 px-4 text-muted-foreground">Daily logs with timestamps, work descriptions</td>
                   </tr>
                   <tr>
-                    <td className="py-4 px-4 text-muted-foreground">Ongoing work</td>
-                    <td className="py-4 px-4 text-muted-foreground">Rolling monthly deadlines</td>
+                    <td className="py-4 px-4 text-muted-foreground">Each ongoing month</td>
+                    <td className="py-4 px-4 text-muted-foreground">15th of the 3rd month after that month</td>
                     <td className="py-4 px-4 text-muted-foreground">Continuous daily documentation</td>
                   </tr>
                 </tbody>

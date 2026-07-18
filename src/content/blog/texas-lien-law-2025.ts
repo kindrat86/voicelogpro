@@ -5,19 +5,22 @@
 
 export const texasLienLaw2025 = {
   slug: "texas-property-code-chapter-53-guide-2025",
-  title: "Texas Property Code Chapter 53: The 2025 Guide for Electrical Subcontractors",
-  metaDescription: "Complete guide to Texas mechanics lien rights under Chapter 53. Monthly notice deadlines, fund trapping procedures, and documentation requirements for subcontractors.",
-  keywords: ["Texas mechanics lien", "Texas Property Code Chapter 53", "monthly notice requirement", "fund trapping", "construction daily log", "subcontractor lien rights"],
+  title: "Texas Property Code Chapter 53: The 2026 Guide for Electrical Subcontractors",
+  metaDescription: "Complete guide to Texas mechanics lien rights under Chapter 53, updated for the HB 2237 (2022) reforms. Monthly notice deadlines, fund trapping procedures, and documentation requirements for subcontractors.",
+  keywords: ["Texas mechanics lien", "Texas Property Code Chapter 53", "monthly notice requirement", "fund trapping", "construction daily log", "subcontractor lien rights", "HB 2237"],
   jurisdiction: "Texas",
   targetAudience: "Texas Electrical Subcontractor",
   publishedAt: "2025-01-15",
-  
-  content: `# Texas Property Code Chapter 53: The 2025 Guide for Electrical Subcontractors
+  updatedAt: "2026-07-18",
+
+  content: `# Texas Property Code Chapter 53: The 2026 Guide for Electrical Subcontractors
+
+> **Last updated: July 2026.** This guide reflects Texas HB 2237, effective January 1, 2022, which consolidated the former second-month and third-month subcontractor notices into a single third-month notice. Deadlines below use the current rule. Always confirm exact dates for your project with a licensed Texas construction attorney.
 
 ## TL;DR
 
-- Texas subcontractors must send monthly notices to retain lien rights—miss a deadline and you lose protection for that billing period.
-- The GC deadline is the 15th of the second month following first labor or materials; the owner deadline is the 15th of the third month.
+- Texas subcontractors must send monthly fund-trapping notices to retain lien rights—miss a deadline and you lose protection for that billing period.
+- Since HB 2237 (effective January 1, 2022) there is a single notice deadline: the 15th day of the third month following each month of unpaid labor or materials, sent to both the property owner and the original contractor. The older separate second-month notice to the GC was eliminated.
 - Fund trapping freezes owner payments to the GC, securing your unpaid invoices.
 - Daily logs with timestamps serve as primary evidence for first furnishing dates and lien amount calculations.
 - Filing a mechanics lien affidavit must occur by the 15th of the fourth month after the month you last furnished labor or materials.
@@ -74,19 +77,18 @@ Original contractors do not need to send monthly notices. Derivative claimants m
 
 ## What are the monthly notice deadlines for Texas subcontractors?
 
-**Short answer:** Texas subcontractors must send the first monthly notice to the GC by the 15th day of the second month following first furnishing, and to the owner by the 15th day of the third month following first furnishing.
+**Short answer:** Texas subcontractors must send a single monthly notice to both the property owner and the original contractor by the 15th day of the third month following each month in which they provided unpaid labor or materials. HB 2237 (effective January 1, 2022) consolidated the former second-month and third-month notices into this one third-month notice.
 
-| Recipient | Deadline | Example (First Furnishing: January 5) | Statute Reference |
-|-----------|----------|---------------------------------------|-------------------|
-| General Contractor | 15th of 2nd month after first furnishing | March 15 | Section 53.056(b) |
-| Property Owner | 15th of 3rd month after first furnishing | April 15 | Section 53.056(c) |
-| Subsequent Monthly Notices | 15th of 2nd month after each billing period | Ongoing monthly | Section 53.056(e) |
+| Recipient | Deadline | Example (unpaid work in January) | Statute Reference |
+|-----------|----------|----------------------------------|-------------------|
+| Property Owner and Original Contractor | 15th day of the 3rd month after each month of unpaid work | April 15 | Section 53.056 (as amended by HB 2237, 2022) |
+| Each subsequent month of unpaid work | 15th day of the 3rd month after that billing month | Ongoing monthly | Section 53.056 |
 
 ### Monthly Notice Compliance Checklist
 
 - [ ] Record exact first furnishing date in daily log with timestamp
-- [ ] Calendar the GC notice deadline (15th of 2nd month)
-- [ ] Calendar the owner notice deadline (15th of 3rd month)
+- [ ] Calendar the single notice deadline: 15th day of the 3rd month after each month of unpaid work
+- [ ] Send the notice to both the property owner and the original contractor
 - [ ] Send notices via certified mail, return receipt requested
 - [ ] Retain proof of mailing with postmark date
 - [ ] Continue monthly notices for each subsequent billing period
@@ -264,7 +266,7 @@ Maintaining lien rights requires systematic documentation. The following records
 
 ### Does Texas require a preliminary notice like California?
 
-**Short answer:** No. Texas does not require a single preliminary notice. Instead, Texas requires ongoing monthly notices for each billing period. The first notice deadline is the 15th of the second month after first furnishing.
+**Short answer:** No. Texas does not require a single preliminary notice. Instead, Texas requires ongoing monthly notices for each billing period, each due the 15th day of the third month following the month of unpaid labor or materials — a single notice to the property owner and original contractor since HB 2237 took effect on January 1, 2022.
 
 ### How long do I have to sue after filing a lien?
 
@@ -296,7 +298,7 @@ Maintaining lien rights requires systematic documentation. The following records
         "name": "What are the monthly notice deadlines for Texas subcontractors?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Texas subcontractors must send the first monthly notice to the GC by the 15th day of the second month following first furnishing, and to the owner by the 15th day of the third month following first furnishing."
+          "text": "Texas subcontractors must send a single monthly notice to both the property owner and the original contractor by the 15th day of the third month following each month of unpaid labor or materials. HB 2237 (effective January 1, 2022) consolidated the former second-month and third-month notices into this single third-month notice."
         }
       },
       {
@@ -344,7 +346,7 @@ Maintaining lien rights requires systematic documentation. The following records
         "name": "Does Texas require a preliminary notice like California?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Texas does not require a single preliminary notice. Instead, Texas requires ongoing monthly notices for each billing period, with the first deadline on the 15th of the second month after first furnishing."
+          "text": "No. Texas does not require a single preliminary notice. Instead, Texas requires ongoing monthly notices for each billing period, each due the 15th day of the third month following the month of unpaid labor or materials (a single notice to the owner and original contractor since HB 2237 took effect in 2022)."
         }
       }
     ]

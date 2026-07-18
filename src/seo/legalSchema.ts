@@ -26,6 +26,7 @@ export interface HowToSchema {
   "@id": string;
   name: string;
   description: string;
+  dateModified?: string;
   totalTime?: string;
   tool?: {
     "@type": "HowToTool";
@@ -46,6 +47,7 @@ export const delayDocumentationHowTo: HowToSchema = {
   "@id": `${BASE_URL}/#howto-delay-documentation`,
   name: "How to Document Construction Delays for Legal Defense",
   description: "Step-by-step process for creating contemporaneous evidence of construction delays using voice-to-PDF daily reporting. Supports excusable delay claims, constructive acceleration defense, and payment dispute resolution.",
+  dateModified: "2026-07-18",
   totalTime: "PT5M",
   tool: {
     "@type": "HowToTool",
@@ -95,6 +97,7 @@ export const texasLienDocumentationHowTo: HowToSchema = {
   "@id": `${BASE_URL}/#howto-texas-lien`,
   name: "How to Document Work for Texas Mechanics Lien Protection",
   description: "Daily documentation workflow to support the Monthly Trapping Mechanism required for Texas Property Code Chapter 53 lien rights preservation. Creates timestamped records tying work to specific billing periods.",
+  dateModified: "2026-07-18",
   totalTime: "PT2M",
   tool: {
     "@type": "HowToTool",
@@ -126,7 +129,7 @@ export const texasLienDocumentationHowTo: HowToSchema = {
       "@type": "HowToStep",
       position: 4,
       name: "Export Monthly Summary",
-      text: "Generate PDF reports summarizing work performed each month. Use these contemporaneous records to support monthly notices required by the 15th of the second or third month following the month work was performed.",
+      text: "Generate PDF reports summarizing work performed each month. Use these contemporaneous records to support the monthly fund-trapping notice, which Texas Property Code Section 53.056 (as amended by HB 2237, effective January 1, 2022) requires be sent to the owner and original contractor by the 15th day of the third month following each month in which unpaid labor or materials were provided.",
       url: `${BASE_URL}/solutions/texas-mechanics-lien-compliance`
     }
   ]
@@ -187,7 +190,7 @@ export const goldenThreadDocumentationHowTo: HowToSchema = {
 export const texasLienFaqs = [
   {
     question: "What is the Monthly Trapping Mechanism under Texas Property Code Chapter 53?",
-    answer: "The Monthly Trapping Mechanism requires subcontractors to serve notices by the 15th day of the second or third month following the month work was performed. This ties work to a specific billing period to preserve lien rights under Texas Property Code Chapter 53."
+    answer: "The Monthly Trapping Mechanism requires subcontractors to serve a single monthly notice on the property owner and original contractor by the 15th day of the third month following each month in which unpaid labor or materials were provided. Texas HB 2237 (effective January 1, 2022) consolidated the former second-month and third-month notices into this single third-month notice. Timely notice ties the work to a specific billing period and preserves lien rights under Texas Property Code Chapter 53."
   },
   {
     question: "How does VoiceLogPro help with Texas lien compliance?",
@@ -207,6 +210,7 @@ export const texasLienFaqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": `${BASE_URL}/solutions/texas-mechanics-lien-compliance#faq`,
+  dateModified: "2026-07-18",
   mainEntity: texasLienFaqs.map(faq => ({
     "@type": "Question",
     name: faq.question,

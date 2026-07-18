@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useParams, Navigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
+import { JsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Check, Mic, Shield, ChevronRight, Wifi, Image } from "lucide-react";
 import {
@@ -20,13 +21,26 @@ export default function TradePage() {
   const trade = trades.find((t) => t.slug === slug);
   if (!trade) return <Navigate to="/for" replace />;
 
+  const canonical = `https://voicelogpro.com/for/${trade.slug}`;
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${canonical}#faq`,
+    mainEntity: trade.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <>
       <Helmet>
         <title>{trade.metaTitle}</title>
         <meta name="description" content={trade.metaDescription} />
-        <link rel="canonical" href={`https://voicelogpro.com/for/${trade.slug}`} />
+        <link rel="canonical" href={canonical} />
       </Helmet>
+      <JsonLd schema={faqSchema} />
 
       <main className="min-h-screen bg-background">
         {/* Hero */}

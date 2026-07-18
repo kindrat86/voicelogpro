@@ -61,8 +61,13 @@ import HowToHub from './pages/HowToHub';
 import TradePage from './pages/TradePage';
 import TradesHub from './pages/TradesHub';
 
+// Flagship topic pillar
+import CourtReadyDailyLogs from './pages/CourtReadyDailyLogs';
+
 // Standalone
 import BetaSignup from './pages/BetaSignup';
+import DefenseKit from './pages/DefenseKit';
+import Welcome from './pages/Welcome';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 
@@ -118,11 +123,14 @@ export async function render(url: string): Promise<RenderResult> {
                 <Route path="/contractor-foreman-vs-voice-log-pro" element={<ComparisonPage />} />
                 <Route path="/jobnimbus-vs-voice-log-pro" element={<ComparisonPage />} />
                 <Route path="/knowify-vs-voice-log-pro" element={<ComparisonPage />} />
+                <Route path="/court-ready-daily-logs" element={<CourtReadyDailyLogs />} />
                 <Route path="/how-to" element={<HowToHub />} />
                 <Route path="/how-to/:slug" element={<HowToPage />} />
                 <Route path="/for" element={<TradesHub />} />
                 <Route path="/for/:slug" element={<TradePage />} />
                 <Route path="/beta" element={<BetaSignup />} />
+                <Route path="/defense-kit" element={<DefenseKit />} />
+                <Route path="/welcome" element={<Welcome />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="*" element={<NotFound />} />

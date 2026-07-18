@@ -259,7 +259,7 @@ const fr = {
     courtReadyQuestion: "Ces rapports peuvent-ils être utilisés au tribunal ?",
     courtReadyAnswer: "Oui. VoiceLogPro génère des rapports PDF avec horodatages, données météo et photos qui servent de documentation contemporaine. Ces rapports soutiennent les réclamations de privilège, les litiges de retard et les cas de protection de paiement.",
     texasTrappingQuestion: "Est-ce que cela aide avec le Mécanisme Mensuel de Piégeage du Texas ?",
-    texasTrappingAnswer: "Oui. VoiceLogPro étiquette les rapports avec le mois de facturation nécessaire pour signifier les avis avant le 15e jour du deuxième mois selon le Chapitre 53 du Code de la Propriété du Texas.",
+    texasTrappingAnswer: "Oui. VoiceLogPro étiquette les rapports avec le mois de facturation nécessaire pour signifier l'avis avant le 15e jour du troisième mois suivant chaque mois de travail impayé, selon le Chapitre 53 du Code de la Propriété du Texas (modifié par la HB 2237, en vigueur depuis 2022).",
     texasLienQuestion: "Ces rapports peuvent-ils être utilisés pour la protection des droits de privilège ?",
     texasLienAnswer: "Oui. L'application crée des enregistrements contemporains horodatés de la main-d'œuvre et des matériaux fournis pour soutenir la documentation de privilège de mécanicien au Texas.",
     virginiaQuestion: "Comment cela soutient-il les réclamations d'Accélération Constructive ?",

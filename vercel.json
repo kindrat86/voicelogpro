@@ -96,6 +96,14 @@
   ],
   "rewrites": [
     {
+      "source": "/cities/:slug",
+      "destination": "/cities/:slug/index.html"
+    },
+    {
+      "source": "/alternatives/:slug",
+      "destination": "/alternatives/:slug/index.html"
+    },
+    {
       "source": "/weekly-reports/:slug",
       "destination": "/weekly-reports/:slug/index.html"
     },
@@ -216,6 +224,26 @@
     {
       "source": "/states/texas-lien-law",
       "destination": "/blog/texas-property-code-chapter-53-guide-2025",
+      "permanent": true
+    },
+    {
+      "source": "/pricing",
+      "destination": "/crew-plan",
+      "permanent": true
+    },
+    {
+      "source": "/features",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/integrations",
+      "destination": "/integrations/autodesk",
+      "permanent": true
+    },
+    {
+      "source": "/integration",
+      "destination": "/integrations/autodesk",
       "permanent": true
     }
   ]

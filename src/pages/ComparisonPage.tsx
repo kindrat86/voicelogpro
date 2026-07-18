@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useLocation, Navigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
+import { JsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Check, X, Mic, Shield, ChevronRight, FileText, Wifi } from "lucide-react";
 import {
@@ -36,22 +37,38 @@ function ComparisonCTA({ location }: { location: string }) {
 }
 
 export default function ComparisonPage() {
-  const { slug } = useParams<{ slug: string }>();
-  useEffect(() => { window.scrollTo(0, 0); }, [slug]);
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
 
-  if (!slug) return <Navigate to="/blog" replace />;
+  // These comparison routes are registered as static paths (e.g.
+  // /procore-vs-voice-log-pro), not param routes, so useParams() returns no
+  // slug. Derive the competitor slug from the pathname instead — works in both
+  // the client BrowserRouter and the SSR StaticRouter used for prerendering.
+  const slug = pathname.replace(/^\/+/, "").replace(/-vs-voice-log-pro\/?$/, "");
   const comp = competitors.find((c) => c.slug === slug);
   if (!comp) return <Navigate to="/blog" replace />;
 
   const competitorUrl = `https://${comp.website}`;
+  const canonical = `https://voicelogpro.com/${comp.slug}-vs-voice-log-pro`;
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${canonical}#faq`,
+    mainEntity: comp.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
 
   return (
     <>
       <Helmet>
         <title>{comp.metaTitle}</title>
         <meta name="description" content={comp.metaDescription} />
-        <link rel="canonical" href={`https://voicelogpro.com/${comp.slug}-vs-voice-log-pro`} />
+        <link rel="canonical" href={canonical} />
       </Helmet>
+      <JsonLd schema={faqSchema} />
 
       <main className="min-h-screen bg-background">
         {/* Hero */}

@@ -38,7 +38,7 @@ export const authorityFaqs: FAQItem[] = [
   {
     id: "texas-trapping",
     question: "Does this help with the Texas Monthly Trapping Mechanism?",
-    answerText: "Yes. VoiceLogPro tags reports with the billing month needed to serve notices by the 15th day of the second month under Texas Property Code Chapter 53.",
+    answerText: "Yes. VoiceLogPro tags reports with the billing month needed to serve the notice by the 15th day of the third month following each month of unpaid work under Texas Property Code Chapter 53 (as amended by HB 2237, effective 2022).",
     answerLink: "/solutions/texas-mechanics-lien-compliance",
     linkText: "See the full Texas guide",
   },

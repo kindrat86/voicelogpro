@@ -259,7 +259,7 @@ const pl = {
     courtReadyQuestion: "Czy te raporty mogą być użyte w sądzie?",
     courtReadyAnswer: "Tak. VoiceLogPro generuje raporty PDF z datownikami, danymi pogodowymi i zdjęciami, które służą jako bieżąca dokumentacja. Raporty te wspierają roszczenia o zastaw, spory o opóźnienia i sprawy ochrony płatności.",
     texasTrappingQuestion: "Czy to pomaga z Texas Monthly Trapping Mechanism?",
-    texasTrappingAnswer: "Tak. VoiceLogPro oznacza raporty miesiącem rozliczeniowym potrzebnym do doręczenia zawiadomień do 15 dnia drugiego miesiąca zgodnie z Texas Property Code Chapter 53.",
+    texasTrappingAnswer: "Tak. VoiceLogPro oznacza raporty miesiącem rozliczeniowym potrzebnym do doręczenia zawiadomienia do 15. dnia trzeciego miesiąca następującego po każdym miesiącu niezapłaconej pracy zgodnie z Texas Property Code Chapter 53 (zmienionym przez HB 2237, obowiązującym od 2022 r.).",
     texasLienQuestion: "Czy te raporty mogą być użyte do ochrony praw do zastawu?",
     texasLienAnswer: "Tak. Aplikacja tworzy bieżące, datowane zapisy pracy i dostarczonych materiałów wspierające dokumentację zastawu mechanika w Teksasie.",
     virginiaQuestion: "W jaki sposób wspiera to roszczenia Constructive Acceleration?",

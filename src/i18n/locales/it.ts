@@ -259,7 +259,7 @@ const it = {
     courtReadyQuestion: "Questi report possono essere usati in tribunale?",
     courtReadyAnswer: "Sì. VoiceLogPro genera report PDF con timestamp, dati meteorologici e foto che fungono da documentazione contestuale. Questi report supportano richieste di privilegio, controversie sui ritardi e casi di protezione dei pagamenti.",
     texasTrappingQuestion: "Questo aiuta con il Meccanismo di Intrappolamento Mensile del Texas?",
-    texasTrappingAnswer: "Sì. VoiceLogPro tagga i report con il mese di fatturazione necessario per inviare avvisi entro il 15° giorno del secondo mese ai sensi del Codice della Proprietà del Texas Capitolo 53.",
+    texasTrappingAnswer: "Sì. VoiceLogPro tagga i report con il mese di fatturazione necessario per inviare l'avviso entro il 15° giorno del terzo mese successivo a ogni mese di lavoro non pagato, ai sensi del Codice della Proprietà del Texas Capitolo 53 (modificato dalla HB 2237, in vigore dal 2022).",
     texasLienQuestion: "Questi report possono essere usati per la protezione dei diritti di privilegio?",
     texasLienAnswer: "Sì. L'app crea registri contestuali e timestampati della manodopera e dei materiali forniti per supportare la documentazione del privilegio meccanico in Texas.",
     virginiaQuestion: "Come supporta questa funzione le richieste di Accelerazione Costruttiva?",

@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://voicelogpro.com/#organization",
+  "name": "VoiceLogPro",
+  "url": "https://voicelogpro.com",
+  "description": "VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors — general contractors, electricians, plumbers, HVAC, and roofers speak their on-site daily report and it becomes a timestamped, court-admissible PDF with fields for weather, crew, work performed, and materials, protecting mechanic's-lien and delay claims.",
+  "disambiguatingDescription": "VoiceLogPro is a voice-to-PDF daily construction log app (voice on-site → timestamped, court-admissible daily-report PDF) — not a general-purpose meeting/voice-transcription tool (Otter, Rev, Fireflies), and not a full construction-management platform (Procore, Raken).",
+  "logo": "https://voicelogpro.com/images/og-card.jpg",
+  "foundingDate": "2024",
+  "sameAs": [
+    "https://github.com/kindrat86"
+  ],
+  "knowsAbout": [
+    "Construction Daily Reports",
+    "Voice-to-PDF Documentation",
+    "Mechanics Lien Protection",
+    "Texas Property Code Chapter 53",
+    "NSW Security of Payment Act",
+    "UK Building Safety Act Golden Thread",
+    "Subcontractor Payment Protection",
+    "Construction Compliance Documentation",
+    "Court-Admissible Daily Logs",
+    "Voice-First Construction Reporting"
+  ],
+  "subjectOf": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "VoiceLogPro",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "49.00",
+        "priceCurrency": "USD"
+      }
+    }
+  ]
+}

@@ -259,7 +259,7 @@ const fi = {
     courtReadyQuestion: "Voidaanko näitä raportteja käyttää tuomioistuimessa?",
     courtReadyAnswer: "Kyllä. VoiceLogPro luo PDF-raportteja aikaleimoineen, säätietoineen ja kuvineen, jotka toimivat samanaikaisena dokumentaationa. Nämä raportit tukevat panttioikeusvaatimuksia, viivästysriitoja ja maksunsuojatapauksia.",
     texasTrappingQuestion: "Auttaako tämä Texasin kuukausittaisessa varojen loukkuun saamisen mekanismissa?",
-    texasTrappingAnswer: "Kyllä. VoiceLogPro merkitsee raportit laskutuskuukaudella, joka tarvitaan ilmoitusten lähettämiseen toisen kuukauden 15. päivään mennessä Texas Property Code Luku 53:n mukaisesti.",
+    texasTrappingAnswer: "Kyllä. VoiceLogPro merkitsee raportit laskutuskuukaudella, joka tarvitaan ilmoituksen lähettämiseen kolmannen kuukauden 15. päivään mennessä jokaisen maksamattoman työkuukauden jälkeen Texas Property Code Luku 53:n mukaisesti (muutettu HB 2237:llä, voimassa vuodesta 2022).",
     texasLienQuestion: "Voidaanko näitä raportteja käyttää panttioikeuksien suojaamiseen?",
     texasLienAnswer: "Kyllä. Sovellus luo samanaikaisia, aikaleimattuja tallenteita toimitetusta työstä ja materiaaleista tukeakseen mekaanisen panttioikeuden dokumentaatiota Texasissa.",
     virginiaQuestion: "Miten tämä tukee Rakentavan Nopeuttamisen vaatimuksia?",

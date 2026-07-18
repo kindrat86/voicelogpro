@@ -13,6 +13,9 @@ export interface HowToEntry {
   totalTime: string;
   keyPoints: string[];
   faqs: { question: string; answer: string }[];
+  /** ISO date (YYYY-MM-DD) of the last meaningful content review. Drives the
+   *  visible "Last reviewed" line and schema dateModified for freshness. */
+  lastReviewed?: string;
 }
 
 export const howToGuides: HowToEntry[] = [
@@ -21,8 +24,9 @@ export const howToGuides: HowToEntry[] = [
     metaTitle: "How to Document Construction Delays for Payment Claims | VoiceLogPro",
     metaDescription: "Learn how to document construction delays properly for payment claims and dispute resolution. Step-by-step guide with voice recording, timestamps, and weather data.",
     h1: "How to Document Construction Delays for Payment Claims",
-    intro: "Construction delays cost subcontractors billions in unpaid claims every year. The difference between a successful delay claim and a rejected one is documentation — specifically, contemporaneous evidence created at the time the delay occurred. Here's how to do it right.",
+    intro: "To document a construction delay so it survives a payment dispute, capture contemporaneous evidence the moment the delay happens: a timestamped voice note describing the cause and impact, automatic weather data, and geotagged photos — not a summary written at end of day. Records created at the time of the event carry far more evidentiary weight than reconstructed notes. Construction delays cost subcontractors billions in unpaid claims every year; this guide walks through the exact steps to protect yours.",
     totalTime: "PT10M",
+    lastReviewed: "2026-07-18",
     steps: [
       {
         task: "Record site conditions immediately when the delay occurs",
@@ -81,12 +85,13 @@ export const howToGuides: HowToEntry[] = [
     metaTitle: "How to Protect Your Lien Rights as a Subcontractor | VoiceLogPro",
     metaDescription: "Complete guide to protecting mechanics lien rights. Learn monthly trapping notices, contemporaneous documentation, and how daily reports preserve your lien claims.",
     h1: "How to Protect Your Lien Rights as a Subcontractor",
-    intro: "Mechanics liens are the most powerful tool subcontractors have to get paid. But lien rights are time-sensitive and easily lost through poor documentation. Most lien claims fail not because the work wasn't done — but because the paperwork wasn't right. Here's how to protect your rights from day one.",
+    intro: "To protect your mechanics-lien rights as a subcontractor, do two things from day one: record the exact date you first furnished labor or materials, and keep a daily, timestamped log of everything you install. Lien claims are lost on missed statutory deadlines and thin paperwork — not on unfinished work. Mechanics liens are the most powerful tool subcontractors have to get paid; here's how to keep yours enforceable from day one.",
     totalTime: "PT15M",
+    lastReviewed: "2026-07-18",
     steps: [
       {
         task: "Check your state's lien laws before starting work",
-        outcome: "Every state has different notice deadlines, filing periods, and documentation requirements. Texas requires monthly trapping notices by the 15th of the second month. California has preliminary notice requirements within 20 days of first furnishing labor. Know your state's rules before you break ground.",
+        outcome: "Every state has different notice deadlines, filing periods, and documentation requirements. In Texas, a subcontractor's fund-trapping notice is due by the 15th day of the third month following each month of unpaid labor or materials — HB 2237 (effective January 1, 2022) eliminated the older second-month notice and consolidated it into this single third-month notice. California has preliminary notice requirements within 20 days of first furnishing labor. Know your state's current rules before you break ground.",
       },
       {
         task: "Create a daily log the first day you start work",
@@ -98,7 +103,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Track billing periods for monthly notice requirements",
-        outcome: "In states like Texas, you must serve notice by the 15th day of the second month following the month work was performed. VoiceLogPro tags each report with the billing month, making it easy to identify when notices are due and preventing missed deadlines.",
+        outcome: "In Texas, you must serve the fund-trapping notice by the 15th day of the third month following each month in which you provided unpaid labor or materials (Texas Property Code Section 53.056, as amended by HB 2237 in 2022). VoiceLogPro tags each report with the billing month, making it easy to identify when notices are due and preventing missed deadlines.",
       },
       {
         task: "Serve preliminary and monthly notices on time",

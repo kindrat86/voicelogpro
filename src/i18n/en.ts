@@ -278,7 +278,7 @@ const en = {
     courtReadyQuestion: "Can these reports be used in court?",
     courtReadyAnswer: "Yes. VoiceLogPro generates PDF reports with timestamps, weather data, and photos that serve as contemporaneous documentation. These reports support lien claims, delay disputes, and payment protection cases.",
     texasTrappingQuestion: "Does this help with the Texas Monthly Trapping Mechanism?",
-    texasTrappingAnswer: "Yes. VoiceLogPro tags reports with the billing month needed to serve notices by the 15th day of the second month under Texas Property Code Chapter 53.",
+    texasTrappingAnswer: "Yes. VoiceLogPro tags reports with the billing month needed to serve the notice by the 15th day of the third month following each month of unpaid work under Texas Property Code Chapter 53 (as amended by HB 2237, effective 2022).",
     texasLienQuestion: "Can these reports be used for lien rights protection?",
     texasLienAnswer: "Yes. The app creates contemporaneous, timestamped records of labor and materials furnished to support mechanics lien documentation in Texas.",
     virginiaQuestion: "How does this support Constructive Acceleration claims?",

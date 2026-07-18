@@ -259,7 +259,7 @@ const no = {
     courtReadyQuestion: "Kan disse rapportene brukes i retten?",
     courtReadyAnswer: "Ja. VoiceLogPro genererer PDF-rapporter med tidsstempler, værdata og bilder som fungerer som samtidig dokumentasjon. Disse rapportene støtter panterettskrav, forsinkelsestvister og betalingsbeskyttelsessaker.",
     texasTrappingQuestion: "Hjelper dette med den månedlige Texas-fangstmekanismen?",
-    texasTrappingAnswer: "Ja. VoiceLogPro merker rapporter med faktureringsmåneden som trengs for å sende varsler innen den 15. dagen i den andre måneden i henhold til Texas Property Code Kapittel 53.",
+    texasTrappingAnswer: "Ja. VoiceLogPro merker rapporter med faktureringsmåneden som trengs for å sende varselet innen den 15. dagen i den tredje måneden etter hver måned med ubetalt arbeid i henhold til Texas Property Code Kapittel 53 (endret ved HB 2237, gjeldende fra 2022).",
     texasLienQuestion: "Kan disse rapportene brukes til panterettsbeskyttelse?",
     texasLienAnswer: "Ja. Appen oppretter samtidige, tidsstemplede registreringer av arbeid og materialer levert for å støtte mekanisk panterettsdokumentasjon i Texas.",
     virginiaQuestion: "Hvordan støtter dette krav om Konstruktiv Akselerasjon?",

@@ -259,7 +259,7 @@ const zhCN = {
     courtReadyQuestion: "这些报告可以在法庭上使用吗？",
     courtReadyAnswer: "可以。VoiceLogPro生成的PDF报告包含时间戳、天气数据和照片，作为同时期文件记录。这些报告支持留置权索赔、延误争议和付款保护案件。",
     texasTrappingQuestion: "这有助于德克萨斯州月度资金陷阱机制吗？",
-    texasTrappingAnswer: "是的。VoiceLogPro将报告标记为需要在一月第二个月的第15天之前送达通知的记账月份，符合德州财产法第53章。",
+    texasTrappingAnswer: "是的。VoiceLogPro 会用报告所需的账单月份进行标记，以便根据《德克萨斯州财产法》第53章（经2022年生效的 HB 2237 修订），在每个未付款工作月份之后第三个月的15日之前送达通知。",
     texasLienQuestion: "这些报告可以用于保护留置权吗？",
     texasLienAnswer: "可以。该应用生成同时期的、带时间戳的劳工和材料记录，以支持德克萨斯州的机械师留置权文件。",
     virginiaQuestion: "这如何支持建设性加速索赔？",

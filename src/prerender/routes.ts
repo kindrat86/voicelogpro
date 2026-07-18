@@ -10,6 +10,7 @@ export const PRERENDER_ROUTES: string[] = [
   '/crew-plan',
   '/blog',
   '/compare',
+  '/court-ready-daily-logs',
   '/how-to',
   '/for',
   '/solutions/texas-mechanics-lien-compliance',

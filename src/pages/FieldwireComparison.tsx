@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Check, Mic, Clock, Shield, FileText, WifiOff, ChevronRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
+import { JsonLd } from "@/components/JsonLd";
 import {
   Accordion,
   AccordionContent,
@@ -104,6 +105,18 @@ export default function FieldwireComparison() {
         />
         <link rel="canonical" href="https://voicelogpro.com/fieldwire-vs-voice-log-pro" />
       </Helmet>
+      <JsonLd
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "@id": "https://voicelogpro.com/fieldwire-vs-voice-log-pro#faq",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }}
+      />
 
       <main className="min-h-screen bg-background">
         {/* Hero */}

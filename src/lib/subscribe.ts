@@ -9,12 +9,17 @@
  */
 const ENGINE_URL = "https://email-engine-fawn.vercel.app";
 
-export async function subscribeToSequence(email: string): Promise<boolean> {
+export async function subscribeToSequence(email: string, heardFrom?: string): Promise<boolean> {
   try {
     const res = await fetch(`${ENGINE_URL}/api/subscribe`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ product: "voicelogpro", email: email.toLowerCase().trim() }),
+      body: JSON.stringify({
+        product: "voicelogpro",
+        email: email.toLowerCase().trim(),
+        // Attribution passthrough — harmless if the engine ignores it.
+        ...(heardFrom ? { heard_from: heardFrom } : {}),
+      }),
     });
     return res.ok;
   } catch {

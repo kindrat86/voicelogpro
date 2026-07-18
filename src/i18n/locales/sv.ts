@@ -259,7 +259,7 @@ const sv = {
     courtReadyQuestion: "Kan dessa rapporter användas i domstol?",
     courtReadyAnswer: "Ja. VoiceLogPro genererar PDF-rapporter med tidsstämplar, väderdata och foton som fungerar som samtida dokumentation. Dessa rapporter stödjer panträttsanspråk, förseningstvister och betalningsskyddsärenden.",
     texasTrappingQuestion: "Hjälper detta med den månatliga Texas-fångstmekanismen?",
-    texasTrappingAnswer: "Ja. VoiceLogPro märker rapporter med faktureringsmånaden som behövs för att skicka meddelanden senast den 15:e dagen i den andra månaden enligt Texas Property Code Kapitel 53.",
+    texasTrappingAnswer: "Ja. VoiceLogPro märker rapporter med faktureringsmånaden som behövs för att skicka meddelandet senast den 15:e dagen i den tredje månaden efter varje månad med obetalt arbete enligt Texas Property Code Kapitel 53 (ändrad genom HB 2237, gäller från 2022).",
     texasLienQuestion: "Kan dessa rapporter användas för panträttsskydd?",
     texasLienAnswer: "Ja. Appen skapar samtida, tidsstämplade register över utfört arbete och levererade material för att stödja mekanisk panträttsdokumentation i Texas.",
     virginiaQuestion: "Hur stödjer detta Konstruktiv Acceleration-anspråk?",

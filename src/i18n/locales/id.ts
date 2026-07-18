@@ -276,7 +276,7 @@ const id = {
     courtReadyQuestion: "Bisakah laporan ini digunakan di pengadilan?",
     courtReadyAnswer: "Ya. VoiceLogPro menghasilkan laporan PDF dengan stempel waktu, data cuaca, dan foto yang berfungsi sebagai dokumentasi kontemporer. Laporan ini mendukung klaim lien, sengketa keterlambatan, dan kasus perlindungan pembayaran.",
     texasTrappingQuestion: "Apakah ini membantu dengan Mekanisme Trapping Bulanan Texas?",
-    texasTrappingAnswer: "Ya. VoiceLogPro menandai laporan dengan bulan penagihan yang diperlukan untuk mengirimkan pemberitahuan selambatnya tanggal 15 bulan kedua berdasarkan Texas Property Code Chapter 53.",
+    texasTrappingAnswer: "Ya. VoiceLogPro menandai laporan dengan bulan penagihan yang diperlukan untuk mengirimkan pemberitahuan selambatnya tanggal 15 bulan ketiga setelah setiap bulan pekerjaan yang belum dibayar berdasarkan Texas Property Code Chapter 53 (sebagaimana diubah oleh HB 2237, berlaku sejak 2022).",
     texasLienQuestion: "Bisakah laporan ini digunakan untuk perlindungan hak lien?",
     texasLienAnswer: "Ya. Aplikasi ini membuat catatan kontemporer berstempel waktu dari tenaga kerja dan material yang disediakan untuk mendukung dokumentasi mechanics lien di Texas.",
     virginiaQuestion: "Bagaimana ini mendukung klaim Akselerasi Konstruktif?",

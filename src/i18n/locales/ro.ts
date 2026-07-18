@@ -259,7 +259,7 @@ const ro = {
     courtReadyQuestion: "Pot fi folosite aceste rapoarte în instanță?",
     courtReadyAnswer: "Da. VoiceLogPro generează rapoarte PDF cu marcaje temporale, date meteo și fotografii care servesc ca documentație contemporană. Aceste rapoarte sprijină cererile de privilegiu, disputele de întârziere și cazurile de protecție a plății.",
     texasTrappingQuestion: "Ajută cu Mecanismul Lunar de Captare din Texas?",
-    texasTrappingAnswer: "Da. VoiceLogPro etichetează rapoartele cu luna de facturare necesară pentru a trimite notificări până în ziua a 15-a a celei de-a doua luni conform Codului Proprietății Texas Capitolul 53.",
+    texasTrappingAnswer: "Da. VoiceLogPro etichetează rapoartele cu luna de facturare necesară pentru a trimite notificarea până în ziua a 15-a a celei de-a treia luni după fiecare lună de muncă neplătită, conform Codului Proprietății Texas Capitolul 53 (modificat prin HB 2237, în vigoare din 2022).",
     texasLienQuestion: "Pot fi folosite aceste rapoarte pentru protecția drepturilor de privilegiu?",
     texasLienAnswer: "Da. Aplicația creează înregistrări contemporane, cu marcaj temporal, ale forței de muncă și materialelor furnizate pentru a sprijini documentația privilegiului material în Texas.",
     virginiaQuestion: "Cum sprijină acest lucru cererile de Accelerare Constructivă?",

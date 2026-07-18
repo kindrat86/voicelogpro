@@ -259,7 +259,7 @@ const cs = {
     courtReadyQuestion: "Lze tyto reporty použít u soudu?",
     courtReadyAnswer: "Ano. VoiceLogPro vytváří PDF reporty s časovými razítky, údaji o počasí a fotografiemi, které slouží jako souběžná dokumentace. Tyto reporty podporují zástavní nároky, spory o zpoždění a případy ochrany plateb.",
     texasTrappingQuestion: "Pomáhá to s texaským měsíčním mechanismem zachycení?",
-    texasTrappingAnswer: "Ano. VoiceLogPro označuje reporty fakturačním měsícem potřebným k odeslání oznámení do 15. dne druhého měsíce podle Texaského majetkového zákoníku Kapitola 53.",
+    texasTrappingAnswer: "Ano. VoiceLogPro označuje reporty fakturačním měsícem potřebným k doručení oznámení do 15. dne třetího měsíce následujícího po každém měsíci neplacené práce podle Texaského majetkového zákoníku Kapitola 53 (ve znění HB 2237, účinného od roku 2022).",
     texasLienQuestion: "Lze tyto reporty použít pro ochranu zástavních práv?",
     texasLienAnswer: "Ano. Aplikace vytváří souběžné, časově označené záznamy o práci a materiálech dodaných na podporu dokumentace mechanického zástavního práva v Texasu.",
     virginiaQuestion: "Jak to podporuje nároky na Konstruktivní urychlení?",

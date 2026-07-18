@@ -259,7 +259,7 @@ const tr = {
     courtReadyQuestion: "Bu raporlar mahkemede kullanılabilir mi?",
     courtReadyAnswer: "Evet. VoiceLogPro, eşzamanlı belgeleme işlevi gören zaman damgalı, hava durumu verili ve fotoğraflı PDF raporları oluşturur. Bu raporlar, haciz taleplerini, gecikme anlaşmazlıklarını ve ödeme koruma davalarını destekler.",
     texasTrappingQuestion: "Bu, Teksas Aylık Tuzak Mekanizması'na yardımcı olur mu?",
-    texasTrappingAnswer: "Evet. VoiceLogPro, Teksas Emlak Kanunu Bölüm 53 kapsamında ikinci ayın 15. gününe kadar bildirim göndermek için gereken fatura ayıyla raporları etiketler.",
+    texasTrappingAnswer: "Evet. VoiceLogPro, Teksas Emlak Kanunu Bölüm 53 kapsamında (2022'de yürürlüğe giren HB 2237 ile değiştirilmiştir) ödenmemiş her çalışma ayını izleyen üçüncü ayın 15. gününe kadar bildirimi göndermek için gereken fatura ayıyla raporları etiketler.",
     texasLienQuestion: "Bu raporlar haciz haklarının korunması için kullanılabilir mi?",
     texasLienAnswer: "Evet. Uygulama, Teksas'ta mekanik haciz belgelerini desteklemek için sağlanan işçilik ve malzemenin eşzamanlı, zaman damgalı kayıtlarını oluşturur.",
     virginiaQuestion: "Bu, Yapıcı Hızlandırma taleplerini nasıl destekler?",

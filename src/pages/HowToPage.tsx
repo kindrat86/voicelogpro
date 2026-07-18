@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useParams, Navigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
+import { JsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Check, ChevronRight, Clock } from "lucide-react";
 import {
@@ -20,6 +21,39 @@ export default function HowToPage() {
   const guide = howToGuides.find((g) => g.slug === slug);
   if (!guide) return <Navigate to="/how-to" replace />;
 
+  const reviewedLabel = guide.lastReviewed
+    ? new Date(guide.lastReviewed).toLocaleDateString("en-US", { month: "long", year: "numeric" })
+    : null;
+
+  // HowTo + FAQPage structured data (built from the same content the page renders,
+  // so it always matches). dateModified carries the freshness signal for AI.
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: guide.h1,
+    description: guide.metaDescription,
+    ...(guide.lastReviewed ? { dateModified: guide.lastReviewed } : {}),
+    totalTime: guide.totalTime,
+    tool: { "@type": "HowToTool", name: "VoiceLogPro" },
+    step: guide.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.task,
+      text: s.outcome,
+    })),
+  };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `https://voicelogpro.com/how-to/${guide.slug}#faq`,
+    ...(guide.lastReviewed ? { dateModified: guide.lastReviewed } : {}),
+    mainEntity: guide.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <>
       <Helmet>
@@ -27,6 +61,7 @@ export default function HowToPage() {
         <meta name="description" content={guide.metaDescription} />
         <link rel="canonical" href={`https://voicelogpro.com/how-to/${guide.slug}`} />
       </Helmet>
+      <JsonLd schema={[howToSchema, faqSchema]} />
 
       <main className="min-h-screen bg-background">
         {/* Breadcrumb + Hero */}
@@ -38,6 +73,13 @@ export default function HowToPage() {
             <span className="mx-2">›</span>
             <span className="text-foreground">{guide.h1}</span>
           </nav>
+          <p className="text-sm text-muted-foreground mb-6">
+            Part of our guide to{" "}
+            <Link to="/court-ready-daily-logs" className="text-primary hover:underline">
+              court-ready construction daily logs
+            </Link>
+            .
+          </p>
 
           <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
             {guide.h1}
@@ -52,6 +94,12 @@ export default function HowToPage() {
               <Clock className="w-4 h-4 text-primary" />
               {guide.steps.length} steps · ~{Math.ceil(guide.steps.length * 1.5)} min read
             </div>
+            {reviewedLabel && (
+              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-secondary/50 px-4 py-2 rounded-full">
+                <Check className="w-4 h-4 text-primary" />
+                Last reviewed {reviewedLabel}
+              </div>
+            )}
           </div>
 
           <Link to="/crew-plan">

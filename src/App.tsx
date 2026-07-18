@@ -39,6 +39,9 @@ const HowToHub = lazy(() => import("./pages/HowToHub"));
 const TradePage = lazy(() => import("./pages/TradePage"));
 const TradesHub = lazy(() => import("./pages/TradesHub"));
 
+// Flagship topic pillar (claims the "court-ready daily log" wedge)
+const CourtReadyDailyLogs = lazy(() => import("./pages/CourtReadyDailyLogs"));
+
 // Standalone conversion landing page
 const BetaSignup = lazy(() => import("./pages/BetaSignup"));
 
@@ -100,6 +103,8 @@ const App = () => (
               <Route path="/contractor-foreman-vs-voice-log-pro" element={<ComparisonPage />} />
               <Route path="/jobnimbus-vs-voice-log-pro" element={<ComparisonPage />} />
               <Route path="/knowify-vs-voice-log-pro" element={<ComparisonPage />} />
+              {/* Flagship topic pillar */}
+              <Route path="/court-ready-daily-logs" element={<CourtReadyDailyLogs />} />
               {/* How-to guides (search-intent prefix pages) */}
               <Route path="/how-to" element={<HowToHub />} />
               <Route path="/how-to/:slug" element={<HowToPage />} />

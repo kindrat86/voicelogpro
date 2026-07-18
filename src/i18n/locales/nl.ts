@@ -259,7 +259,7 @@ const nl = {
     courtReadyQuestion: "Kunnen deze rapporten in de rechtbank worden gebruikt?",
     courtReadyAnswer: "Ja. VoiceLogPro genereert PDF-rapporten met tijdstempels, weersgegevens en foto's die dienen als contemporaine documentatie. Deze rapporten ondersteunen pandrechten, vertragingsgeschillen en betalingsbeschermingszaken.",
     texasTrappingQuestion: "Helpt dit met het Texas Monthly Trapping Mechanism?",
-    texasTrappingAnswer: "Ja. VoiceLogPro markeert rapporten met de factuurmaand die nodig is om kennisgevingen te versturen vóór de 15e van de tweede maand volgens Texas Property Code Chapter 53.",
+    texasTrappingAnswer: "Ja. VoiceLogPro markeert rapporten met de factuurmaand die nodig is om de kennisgeving te versturen vóór de 15e dag van de derde maand na elke maand met onbetaald werk, volgens Texas Property Code Chapter 53 (gewijzigd bij HB 2237, van kracht sinds 2022).",
     texasLienQuestion: "Kunnen deze rapporten worden gebruikt voor pandrechtbescherming?",
     texasLienAnswer: "Ja. De app creëert contemporaine, tijdgestempelde vastleggingen van geleverde arbeid en materialen ter ondersteuning van pandrechtdocumentatie in Texas.",
     virginiaQuestion: "Hoe ondersteunt dit Constructive Acceleration-claims?",

@@ -30,6 +30,19 @@ const paidFeatures = [
   "Custom Branding",
 ];
 
+// "How did you hear about us?" — attribution options for AEO measurement.
+// AI-search options come first because tying a signup to an AI mention is the
+// whole point (self-reported attribution is the most reliable AI-visibility signal).
+const HEARD_FROM_OPTIONS = [
+  "AI assistant (ChatGPT, Claude, Gemini, Copilot)",
+  "Perplexity",
+  "AI search / Google AI Overviews",
+  "Google search",
+  "Referral / friend",
+  "Social media",
+  "Other",
+];
+
 export default function BetaSignup() {
   const [activePlan, setActivePlan] = useState<ActivePlan>(null);
   const [freeEmail, setFreeEmail] = useState("");
@@ -38,6 +51,8 @@ export default function BetaSignup() {
   const [errorMessage, setErrorMessage] = useState("");
   const [isDuplicate, setIsDuplicate] = useState(false);
   const [submittedPlan, setSubmittedPlan] = useState<"free" | "paid" | null>(null);
+  // AEO attribution — "How did you hear about us?" (shared; only one form is active at a time).
+  const [heardFrom, setHeardFrom] = useState("");
 
   const handleSubmit = async (e: React.FormEvent, planType: "free" | "paid") => {
     e.preventDefault();
@@ -53,13 +68,35 @@ export default function BetaSignup() {
     }
     setStatus("loading");
     setIsDuplicate(false);
-    // Enroll in the email sequence in parallel — never blocks the signup UX.
-    void subscribeToSequence(email);
+    const cleanEmail = email.toLowerCase().trim();
+    const plan = planType === "free" ? "beta_free" : "crew_plan";
+    const attribution = heardFrom || "not_specified";
+    // Record attribution to PostHog first — zero DB dependency, so it lands even
+    // if the waitlist insert fails. This is the AEO measurement signal.
     try {
-      const { error } = await supabase.from("waitlist").insert({
-        email: email.toLowerCase().trim(),
-        source: planType === "free" ? "beta_free" : "crew_plan"
+      const ph = (window as { posthog?: { capture?: (e: string, p?: unknown) => void; setPersonProperties?: (p: unknown) => void } }).posthog;
+      ph?.capture?.("beta_signup", { plan, heard_from: attribution });
+      ph?.setPersonProperties?.({ heard_from: attribution, signup_plan: plan });
+    } catch {
+      /* analytics must never break signup */
+    }
+    // Enroll in the email sequence in parallel — never blocks the signup UX.
+    void subscribeToSequence(cleanEmail, attribution);
+    try {
+      let { error } = await supabase.from("waitlist").insert({
+        email: cleanEmail,
+        source: plan,
+        heard_from: attribution,
       });
+      // If the heard_from column isn't in the live schema yet (migration not
+      // applied), retry without it so signup never breaks. PGRST204 = column
+      // missing from PostgREST's schema cache; 42703 = undefined_column.
+      if (error && (error.code === "PGRST204" || error.code === "42703")) {
+        ({ error } = await supabase.from("waitlist").insert({
+          email: cleanEmail,
+          source: plan,
+        }));
+      }
       if (error) {
         if (error.code === "23505") {
           setIsDuplicate(true);
@@ -354,6 +391,18 @@ export default function BetaSignup() {
                         disabled={status === "loading"}
                         autoFocus
                       />
+                      <select
+                        aria-label="How did you hear about us?"
+                        value={heardFrom}
+                        onChange={(e) => setHeardFrom(e.target.value)}
+                        className="w-full h-12 px-3 rounded-md text-base bg-input border border-border text-foreground focus:border-primary focus:outline-none"
+                        disabled={status === "loading"}
+                      >
+                        <option value="">How did you hear about us? (optional)</option>
+                        {HEARD_FROM_OPTIONS.map((opt) => (
+                          <option key={opt} value={opt}>{opt}</option>
+                        ))}
+                      </select>
                       {status === "error" && errorMessage && (
                         <p className="text-destructive text-sm">{errorMessage}</p>
                       )}
@@ -435,6 +484,18 @@ export default function BetaSignup() {
                         disabled={status === "loading"}
                         autoFocus
                       />
+                      <select
+                        aria-label="How did you hear about us?"
+                        value={heardFrom}
+                        onChange={(e) => setHeardFrom(e.target.value)}
+                        className="w-full h-12 px-3 rounded-md text-base bg-input border border-border text-foreground focus:border-primary focus:outline-none"
+                        disabled={status === "loading"}
+                      >
+                        <option value="">How did you hear about us? (optional)</option>
+                        {HEARD_FROM_OPTIONS.map((opt) => (
+                          <option key={opt} value={opt}>{opt}</option>
+                        ))}
+                      </select>
                       {status === "error" && errorMessage && (
                         <p className="text-destructive text-sm">{errorMessage}</p>
                       )}

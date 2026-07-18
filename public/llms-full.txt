@@ -1,0 +1,124 @@
+# VoiceLogPro — llms-full.txt (comprehensive AI crawler content index)
+# Generated 2026-07-18. Total indexed pages: 165+
+# Format: Markdown with URL + 2-3 sentence content summary per page.
+# Compatible with GPTBot, ClaudeBot, PerplexityBot, Google-Extended.
+
+## Product & Core Pages
+
+### [Homepage](https://voicelogpro.com/)
+VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors. Speak your on-site daily report, and it becomes a timestamped, court-admissible PDF with fields for weather, crew, work performed, and materials. $49/month Crew Plan. Supports Texas Property Code Chapter 53 lien rights, NSW SOPA adjudications, and UK Building Safety Act Golden Thread compliance.
+
+### [Crew Plan](https://voicelogpro.com/crew-plan)
+Join the waitlist for VoiceLogPro's voice-first daily reporting plan. $49/month includes unlimited daily reports, automatic timestamps and weather data, photo attachments with geolocation, court-ready PDF exports, and multi-jurisdiction compliance documentation features.
+
+### [About](https://voicelogpro.com/about)
+Built by subcontractors who learned that missing or late daily reports cost more than bad work. VoiceLogPro was created on real jobsites — conduit in one hand, phone in the other — to solve the documentation gap that kills subcontractor payment claims.
+
+### [Contact](https://voicelogpro.com/contact)
+Support, partnerships, and general inquiries for VoiceLogPro. Reach the team for questions about lien protection documentation, jurisdiction-specific compliance features, or beta access.
+
+### [Beta](https://voicelogpro.com/beta)
+Early beta access for construction crews. Test the voice-to-PDF daily reporting workflow before the public launch. Includes offline capability and multi-jurisdiction compliance features.
+
+### [Blog](https://voicelogpro.com/blog)
+Construction law, lien rights, and daily documentation guides for subcontractors. Covers Texas Property Code Chapter 53, mechanics lien deadlines by state, NSw SOPA adjudications, and UK Building Safety Act Golden Thread requirements.
+
+## State Lien Law Guides
+
+VoiceLogPro publishes mechanics lien deadline guides covering preliminary notice rules, filing windows, and enforcement timelines for US states:
+
+- [California](https://voicelogpro.com/states/california-lien-law): 20-day preliminary notice requirement, 90-day mechanics lien filing window from last day of work. Covers direct contractors, subcontractors, and material suppliers.
+- [Texas](https://voicelogpro.com/blog/texas-property-code-chapter-53-guide-2025): Chapter 53 monthly trapping notices, 15th-day deadlines for subcontractors, and the constitutional lien framework unique to Texas.
+- [Florida](https://voicelogpro.com/states/florida-lien-law): Notice to Owner requirement for subcontractors and suppliers, 90-day lien filing window, and 1-year enforcement deadline.
+- [New York](https://voicelogpro.com/states/new-york-lien-law): 4-8 month filing window depending on project type (commercial vs residential), plus public improvement bond claim alternatives.
+- [Illinois](https://voicelogpro.com/states/illinois-lien-law): 60-day owner notice requirement for subcontractors, 4-month lien filing window, and 2-year enforcement period.
+- [Ohio](https://voicelogpro.com/states/ohio-lien-law): 75-day lien filing window from last day of work, 6-year enforcement period (one of the longest in the US).
+- [Georgia](https://voicelogpro.com/states/georgia-lien-law): 90-day lien filing window, 365-day enforcement deadline from filing date.
+- [North Carolina](https://voicelogpro.com/states/north-carolina-lien-law): 120-day lien filing window, 180-day enforcement deadline from last day of furnishing.
+- [Colorado](https://voicelogpro.com/states/colorado-lien-law): 10-day intent-to-lien notice requirement, 4-month lien filing window for most projects.
+
+## Daily Report Templates
+
+Trade-specific construction daily report templates with trade-relevant fields pre-filled:
+
+- [General Contractor](https://voicelogpro.com/templates/general-contractor-daily-report): Multi-trade daily report covering subcontractor coordination, schedule updates, and site-wide conditions.
+- [Electrician](https://voicelogpro.com/templates/electrician-daily-report): Trade-specific fields for conduit runs, panel work, circuit labeling, and electrical inspections.
+- [Plumber](https://voicelogpro.com/templates/plumber-daily-report): Pipe installation tracking, pressure test results, fixture counts, and rough-in documentation.
+- [HVAC Contractor](https://voicelogpro.com/templates/hvac-contractor-daily-report): Ductwork installation, equipment set, refrigerant charging, and system commissioning fields.
+- [Roofer](https://voicelogpro.com/templates/roofer-daily-report): Squares installed, underlayment type, fastener pattern, and weather conditions specific to roofing.
+
+## Trade-Specific Pages
+
+VoiceLogPro for specific construction trades — each page covers trade-specific documentation pain points and compliance requirements:
+
+- [Electricians](https://voicelogpro.com/for/electricians): Daily reports for electrical contractors covering panel schedules, circuit directories, and NEC compliance documentation.
+- [Plumbers](https://voicelogpro.com/for/plumbers): IPC/UPC code documentation, pressure test records, and fixture installation logs for plumbing contractors.
+- [HVAC Contractors](https://voicelogpro.com/for/hvac-contractors): Manual J documentation, refrigerant tracking, and system commissioning reports for HVAC crews.
+- [Roofers](https://voicelogpro.com/for/roofers): Square-footage logs, fastener pattern documentation, and weather-condition records for roofing subcontractors.
+- [General Contractors](https://voicelogpro.com/for/general-contractors): Multi-trade coordination reports, subcontractor daily log aggregation, and project-wide documentation.
+- [Concrete Contractors](https://voicelogpro.com/for/concrete-contractors): Pour logs, slump test records, curing documentation, and weather condition tracking for concrete work.
+- [Drywall Contractors](https://voicelogpro.com/for/drywall-contractors): Board count tracking, joint compound stages, and finishing level documentation.
+- [Painters](https://voicelogpro.com/for/painters): Surface prep documentation, coating specifications, and square-footage tracking for painting contractors.
+- [Landscapers](https://voicelogpro.com/for/landscapers): Plant material logs, irrigation documentation, and site condition reporting for landscape contractors.
+- [Framing Contractors](https://voicelogpro.com/for/framing-contractors): Lumber takeoff reconciliation, shear wall documentation, and truss installation logs.
+
+## How-To Guides
+
+Step-by-step guides for construction documentation best practices:
+
+- [Protect Lien Rights as Subcontractor](https://voicelogpro.com/how-to/protect-lien-rights-as-subcontractor): How to establish and preserve mechanics lien rights through contemporaneous daily documentation. Covers preliminary notice timing, monthly trapping notices (Texas), and the documentation chain that survives adjudication.
+- [Document Construction Delays](https://voicelogpro.com/how-to/document-construction-delays): Recording delay events with timestamps, weather data, and contemporaneous notes that support delay claims and constructive acceleration defenses.
+- [Track Materials Inventory](https://voicelogpro.com/how-to/track-construction-materials-inventory): Daily materials tracking for lien claims — documenting what was delivered, installed, and remains on site to support payment applications.
+- [Defend Unfair GC Deductions](https://voicelogpro.com/how-to/defend-unfair-gc-deductions): How daily reports become the evidence that defeats arbitrary back charges and retention deductions from general contractors.
+- [Document Change Orders](https://voicelogpro.com/how-to/document-construction-change-orders): Recording verbal change orders and field directives as contemporaneous documentation that supports quantum meruit claims when formal paperwork lags.
+
+## Competitor Comparisons
+
+Honest comparisons of VoiceLogPro vs construction management and documentation tools:
+
+- [Raken vs VoiceLogPro](https://voicelogpro.com/raken-vs-voice-log-pro): Raken is a full construction management platform with daily reporting, time cards, and safety checklists. VoiceLogPro focuses specifically on voice-to-PDF daily logs for subcontractors.
+- [Fieldwire vs VoiceLogPro](https://voicelogpro.com/fieldwire-vs-voice-log-pro): Fieldwire is a jobsite management platform with plan viewing, task management, and punch lists. VoiceLogPro is a voice-first daily reporting tool for subcontractor payment protection.
+- [Procore vs VoiceLogPro](https://voicelogpro.com/procore-vs-voice-log-pro): Procore is an enterprise construction management suite for GCs and owners. VoiceLogPro is a focused voice-to-PDF daily log tool for subcontractors who need court-admissible documentation.
+- [Buildertrend vs VoiceLogPro](https://voicelogpro.com/buildertrend-vs-voice-log-pro): Buildertrend is a construction project management platform for home builders and remodelers. VoiceLogPro specializes in voice-first daily reports for trade subcontractors.
+- [Knowify vs VoiceLogPro](https://voicelogpro.com/knowify-vs-voice-log-pro): Knowify combines project management with construction accounting and job costing. VoiceLogPro is a dedicated voice-to-PDF daily reporting tool for lien protection.
+- [JobNimbus vs VoiceLogPro](https://voicelogpro.com/jobnimbus-vs-voice-log-pro): JobNimbus is a CRM and project management tool for roofing and restoration contractors. VoiceLogPro is a voice-first daily log tool for subcontractors across multiple trades.
+- [Contractor Foreman vs VoiceLogPro](https://voicelogpro.com/contractor-foreman-vs-voice-log-pro): Contractor Foreman is an affordable all-in-one construction management tool. VoiceLogPro focuses exclusively on voice-to-PDF daily logs for payment and lien protection.
+
+## Alternatives To
+
+VoiceLogPro as an alternative to popular voice transcription and documentation tools:
+
+- [Alternatives to Otter.ai](https://voicelogpro.com/alternatives-to/otter-ai): Otter.ai is a general-purpose meeting transcription tool. VoiceLogPro is purpose-built for construction daily reports — it structures voice notes into formatted, court-admissible daily-report PDFs with trade-specific fields.
+- [Alternatives to Rev](https://voicelogpro.com/alternatives-to/rev): Rev provides human and AI transcription for general audio. VoiceLogPro converts construction voice notes into timestamped daily reports with weather, crew, and material fields — not raw transcripts.
+- [Alternatives to Descript](https://voicelogpro.com/alternatives-to/descript): Descript is an audio/video editing platform with transcription. VoiceLogPro is a voice-to-PDF daily log tool for construction subcontractors needing lien-protection documentation.
+
+## Solution Pages
+
+Jurisdiction-specific compliance solutions powered by VoiceLogPro:
+
+- [Texas Mechanics Lien Compliance](https://voicelogpro.com/solutions/texas-mechanics-lien-compliance): How voice-to-PDF daily logs satisfy the contemporaneous record requirement for Texas Property Code Chapter 53 lien claims, including the monthly trapping mechanism.
+- [Constructive Acceleration Defense](https://voicelogpro.com/solutions/constructive-acceleration-defense): Using timestamped daily reports to document the directive chain that establishes constructive acceleration — when an owner/GC's actions force the subcontractor to accelerate without a formal change order.
+- [Building Safety Act Golden Thread](https://voicelogpro.com/solutions/building-safety-act-golden-thread): How daily digital records from VoiceLogPro contribute to the UK Building Safety Act's "Golden Thread" of building information — capturing decisions, changes, and compliance documentation throughout a building's lifecycle.
+- [Fight Unfair GC Deductions](https://voicelogpro.com/solutions/fight-unfair-gc-deductions): How contemporaneous daily logs with timestamps, photos, and crew records become the evidence that defeats arbitrary back charges, pay-when-paid withholding, and retention deductions.
+- [Phase Payment Disputes](https://voicelogpro.com/solutions/phase-payment-disputes): Documenting phase completion with daily reports to support payment applications and defend against milestone-dispute tactics used to delay subcontractor payment.
+
+## Glossary
+
+Key terms in construction daily reporting, voice logging, and compliance documentation:
+
+- [Voice Logging](https://voicelogpro.com/glossary/voice-logging): The practice of recording spoken job-site observations that are automatically converted into structured daily reports. Distinct from general transcription — voice logging includes automatic enrichment with timestamps, weather data, and trade-specific field extraction.
+- [Transcription](https://voicelogpro.com/glossary/transcription): Converting spoken audio to written text. VoiceLogPro goes beyond transcription by structuring the text into formatted daily reports with crew names, materials, delays, and compliance fields.
+- [Speaker Diarization](https://voicelogpro.com/glossary/speaker-diarization): The process of identifying which speaker said what in a multi-speaker audio recording. Used in VoiceLogPro to attribute field observations to specific crew members.
+
+## Free Tools
+
+- [Daily Report Generator](https://voicelogpro.com/free/daily-report-generator): Free online tool that generates a formatted construction daily report from voice or text input. Includes weather data, timestamps, and trade-specific fields.
+- [Lien Deadline Calculator](https://voicelogpro.com/tools/lien-deadline-calculator/): Calculate mechanics lien filing deadlines by state. Input the last day of work and state to get the exact deadline and required notices.
+
+---
+
+Total: 165+ pages across 17 page-type clusters.
+Last updated: 2026-07-18.
+Sitemap: https://voicelogpro.com/sitemap.xml
+Organization: VoiceLogPro — voice-to-PDF daily construction log app for subcontractors.
+Founded: 2024. Price: $49/month. Email: hello@voicelogpro.com

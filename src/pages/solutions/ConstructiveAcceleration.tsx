@@ -24,9 +24,10 @@ const ConstructiveAcceleration = () => {
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
               Constructive Acceleration Defense
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
+            <p className="text-xl text-muted-foreground mb-6 max-w-2xl">
               Create contemporaneous evidence to defend against constructive acceleration claims and prove excusable delays in Northern Virginia data center projects.
             </p>
+            <p className="text-sm text-muted-foreground mb-8">Reviewed July 2026 · Aligned with AIA A401 documentation expectations</p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
                 Start Documenting — $49/month
