@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copy pSEO pages (vs/, for/, glossary/, faq/, learn/, alternatives-to/) into dist/ after prerender.
 set -e
-for dir in vs for glossary faq learn alternatives-to pricing-questions integrations templates weekly-reports best how-to use-cases guides scenarios redflags; do
+for dir in vs for glossary faq learn alternatives-to pricing-questions integrations templates weekly-reports best how-to use-cases guides scenarios redflags cost-of checklists free; do
   if [ -d "$dir" ]; then
     mkdir -p "dist/$dir"
     # Copy flat .html files
