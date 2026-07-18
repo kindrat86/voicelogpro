@@ -1,41 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Voice Log Pro</title>
+    <title>VoiceLogPro</title>
     <link>https://voicelogpro.com</link>
-    <description>Voice-to-PDF daily construction log app for contractors.</description>
+    <description>Daily construction reports from voice notes — turn spoken updates into structured daily logs, photo annotations, and compliance-ready reports in minutes. Built for construction crews, site managers, and contractors.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Jul 2026 14:57:21 GMT</lastBuildDate>
-    <atom:link href="https://voicelogpro.com/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jul 2026 09:01:48 GMT</lastBuildDate>
+    <generator>Hermes WebSub Feed Generator</generator>
+    <ttl>60</ttl>
+    <atom:link href="https://voicelogpro.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://voicelogpro.com/rss.xml" rel="alternate" type="application/rss+xml"/>
+    <atom:link href="https://voicelogpro.com/feed.json" rel="alternate" type="application/json"/>
+    <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
+    <atom:link href="https://pubsubhubbub.superfeedr.com/" rel="hub"/>
+    <atom:link href="https://websubhub.com/" rel="hub"/>
     <item>
-      <title>Homepage</title>
-      <link>https://voicelogpro.com/</link>
-      <guid isPermaLink="true">https://voicelogpro.com/</guid>
-      <description>Voice-to-PDF construction daily reports</description>
+      <title>Voice Log Pro | Daily Construction Reports from Voice Notes</title>
+      <link>https://voicelogpro.com</link>
+      <guid isPermaLink="true">https://voicelogpro.com</guid>
+      <description>Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Wed, 14 Jan 2026 22:00:00 GMT</pubDate>
+      <media:content url="https://voicelogpro.com/images/og-card.jpg" medium="image"/>
     </item>
     <item>
-      <title>Compare</title>
-      <link>https://voicelogpro.com/compare</link>
-      <guid isPermaLink="true">https://voicelogpro.com/compare</guid>
-      <description>Compare vs Procore, Buildertrend, Fieldwire</description>
+      <title>About VoiceLogPro</title>
+      <link>https://voicelogpro.com/about</link>
+      <guid isPermaLink="true">https://voicelogpro.com/about</guid>
+      <description>About VoiceLogPro: Voice-to-PDF Construction Daily Reports. Built for General contractors, electricians, plumbers, HVAC contractors, roofers, subcontractors.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Thu, 16 Jul 2026 09:01:48 GMT</pubDate>
     </item>
     <item>
-      <title>For Electricians</title>
-      <link>https://voicelogpro.com/for/electricians</link>
-      <guid isPermaLink="true">https://voicelogpro.com/for/electricians</guid>
-      <description>Daily logs for electricians</description>
+      <title>FAQ — VoiceLogPro</title>
+      <link>https://voicelogpro.com/faq</link>
+      <guid isPermaLink="true">https://voicelogpro.com/faq</guid>
+      <description>Frequently asked questions about VoiceLogPro.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Tue, 14 Jul 2026 09:01:48 GMT</pubDate>
     </item>
     <item>
-      <title>For Plumbers</title>
-      <link>https://voicelogpro.com/for/plumbers</link>
-      <guid isPermaLink="true">https://voicelogpro.com/for/plumbers</guid>
-      <description>Daily logs for plumbers</description>
+      <title>Free Construction Tools | Voice Log Pro</title>
+      <link>https://voicelogpro.com/free</link>
+      <guid isPermaLink="true">https://voicelogpro.com/free</guid>
+      <description>Free tools for subcontractors: lien deadline calculator, time tracking, weather logger, and daily report generator.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Sun, 12 Jul 2026 09:01:48 GMT</pubDate>
     </item>
     <item>
-      <title>Protect Lien Rights</title>
-      <link>https://voicelogpro.com/how-to/protect-lien-rights-as-subcontractor</link>
-      <guid isPermaLink="true">https://voicelogpro.com/how-to/protect-lien-rights-as-subcontractor</guid>
-      <description>Guide</description>
+      <title>Daily Construction Reports by Trade | Voice Log Pro</title>
+      <link>https://voicelogpro.com/for</link>
+      <guid isPermaLink="true">https://voicelogpro.com/for</guid>
+      <description>Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Wed, 14 Jan 2026 22:00:00 GMT</pubDate>
+      <media:content url="https://voicelogpro.com/images/og-card.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>Best Of — VoiceLogPro</title>
+      <link>https://voicelogpro.com/best</link>
+      <guid isPermaLink="true">https://voicelogpro.com/best</guid>
+      <description>5 OSHA-compliant templates, Texas Chapter 53 checklist, and dispute defense swipe file. Free PDF.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Wed, 08 Jul 2026 09:01:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>VoiceLogPro vs 8 Transcription Tools: Alternatives Compared</title>
+      <link>https://voicelogpro.com/alternatives-to</link>
+      <guid isPermaLink="true">https://voicelogpro.com/alternatives-to</guid>
+      <description>Side-by-side comparisons of VoiceLogPro and 8 transcription tools — Otter.ai, Rev, Descript, Trint, Sonix, Fireflies.ai, Temi, and Happy Scribe — covering features, pricing, and limitations.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Mon, 06 Jul 2026 09:01:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>Voice Logging &amp; Transcription Glossary — VoiceLogPro</title>
+      <link>https://voicelogpro.com/glossary</link>
+      <guid isPermaLink="true">https://voicelogpro.com/glossary</guid>
+      <description>Plain-language definitions of 7 voice documentation terms: voice logging, transcription, speaker diarization, speech-to-text, audio archive, compliance logging, and real-time transcription.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Sat, 04 Jul 2026 09:01:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>Weekly Construction Report Templates | Voice Log Pro</title>
+      <link>https://voicelogpro.com/weekly-reports</link>
+      <guid isPermaLink="true">https://voicelogpro.com/weekly-reports</guid>
+      <description>Free weekly report templates for every trade. Compiled automatically from daily voice notes.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Thu, 02 Jul 2026 09:01:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>Vs — VoiceLogPro</title>
+      <link>https://voicelogpro.com/vs</link>
+      <guid isPermaLink="true">https://voicelogpro.com/vs</guid>
+      <description>Detailed comparisons: VoiceLogPro vs other tools.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Tue, 30 Jun 2026 09:01:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>Free Construction Tools | Voice Log Pro</title>
+      <link>https://voicelogpro.com/tools</link>
+      <guid isPermaLink="true">https://voicelogpro.com/tools</guid>
+      <description>Free tools for construction subcontractors: lien deadline calculator, daily report templates, and more. Built by Voice Log Pro.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Sun, 28 Jun 2026 09:01:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>Daily Construction Report Templates by Trade | Voice Log Pro</title>
+      <link>https://voicelogpro.com/templates</link>
+      <guid isPermaLink="true">https://voicelogpro.com/templates</guid>
+      <description>Free daily construction report templates for electricians, plumbers, HVAC, roofers, general contractors, and more. Voice Log Pro fills these automatically from your voice note.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Fri, 26 Jun 2026 09:01:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>State Mechanics Lien Law Guides | Voice Log Pro</title>
+      <link>https://voicelogpro.com/states</link>
+      <guid isPermaLink="true">https://voicelogpro.com/states</guid>
+      <description>State-by-state mechanics lien law guides for subcontractors. Preliminary notice deadlines, lien filing windows, and enforcement periods. Protect your payment rights.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Wed, 24 Jun 2026 09:01:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>Raken vs Voice Log Pro | Payment Protection for Subcontractors</title>
+      <link>https://voicelogpro.com/raken-vs-voice-log-pro</link>
+      <guid isPermaLink="true">https://voicelogpro.com/raken-vs-voice-log-pro</guid>
+      <description>Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Wed, 14 Jan 2026 22:00:00 GMT</pubDate>
+      <media:content url="https://voicelogpro.com/images/og-card.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>/procore-vs-voice-log-pro</title>
+      <link>https://voicelogpro.com/procore-vs-voice-log-pro</link>
+      <guid isPermaLink="true">https://voicelogpro.com/procore-vs-voice-log-pro</guid>
+      <description>Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Wed, 14 Jan 2026 22:00:00 GMT</pubDate>
+      <media:content url="https://voicelogpro.com/images/og-card.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>/knowify-vs-voice-log-pro</title>
+      <link>https://voicelogpro.com/knowify-vs-voice-log-pro</link>
+      <guid isPermaLink="true">https://voicelogpro.com/knowify-vs-voice-log-pro</guid>
+      <description>Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Wed, 14 Jan 2026 22:00:00 GMT</pubDate>
+      <media:content url="https://voicelogpro.com/images/og-card.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>/jobnimbus-vs-voice-log-pro</title>
+      <link>https://voicelogpro.com/jobnimbus-vs-voice-log-pro</link>
+      <guid isPermaLink="true">https://voicelogpro.com/jobnimbus-vs-voice-log-pro</guid>
+      <description>Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Wed, 14 Jan 2026 22:00:00 GMT</pubDate>
+      <media:content url="https://voicelogpro.com/images/og-card.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>How-To Guides for Construction Documentation | Voice Log Pro</title>
+      <link>https://voicelogpro.com/how-to</link>
+      <guid isPermaLink="true">https://voicelogpro.com/how-to</guid>
+      <description>Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Wed, 14 Jan 2026 22:00:00 GMT</pubDate>
+      <media:content url="https://voicelogpro.com/images/og-card.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>Fieldwire vs Voice Log Pro | Payment Protection for Subcontractors</title>
+      <link>https://voicelogpro.com/fieldwire-vs-voice-log-pro</link>
+      <guid isPermaLink="true">https://voicelogpro.com/fieldwire-vs-voice-log-pro</guid>
+      <description>Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Wed, 14 Jan 2026 22:00:00 GMT</pubDate>
+      <media:content url="https://voicelogpro.com/images/og-card.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>Crew Plan Pricing — Voice Log Pro for Construction Teams</title>
+      <link>https://voicelogpro.com/crew-plan</link>
+      <guid isPermaLink="true">https://voicelogpro.com/crew-plan</guid>
+      <description>Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.</description>
+      <dc:creator>VoiceLogPro</dc:creator>
+      <pubDate>Wed, 14 Jan 2026 22:00:00 GMT</pubDate>
+      <media:content url="https://voicelogpro.com/images/og-card.jpg" medium="image"/>
     </item>
   </channel>
 </rss>

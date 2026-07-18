@@ -147,14 +147,35 @@ async function prerender() {
       // DATE_RE needs a 20YY-MM-DD; <meta name="author"> alone does NOT match.
       const EEAT_PUBLISHED = '2026-01-15';
       const EEAT_MODIFIED = new Date().toISOString().split('T')[0];
-      const eeatHead = `<meta name="author" content="Voice Log Pro" />\n    <meta property="article:published_time" content="${EEAT_PUBLISHED}T00:00:00Z" />\n    <meta property="article:modified_time" content="${EEAT_MODIFIED}T00:00:00Z" />\n    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","author":{"@type":"Organization","name":"Voice Log Pro","url":"https://voicelogpro.com"},"publisher":{"@type":"Organization","name":"Voice Log Pro","url":"https://voicelogpro.com"},"datePublished":"${EEAT_PUBLISHED}","dateModified":"${EEAT_MODIFIED}"}</script>`;
+      // schema.org Article REQUIRES a headline (growth-engine E1 flags it as
+      // "missing required fields" otherwise, and rich-result validators agree).
+      // Use the route's own <title> (Helmet output, falling back to the
+      // template/default) so the headline is always the page's real title.
+      const titleMatch = (helmetHead && helmetHead.match(/<title[^>]*>([^<]*)<\/title>/))
+        || routeHtml.match(/<title[^>]*>([^<]*)<\/title>/);
+      const EEAT_HEADLINE = ((titleMatch && titleMatch[1]) || 'Voice Log Pro | Daily Construction Reports')
+        .replace(/&amp;/g, '&').replace(/&#x27;/g, "'").replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+        .trim().replace(/\s+/g, ' ').slice(0, 110);
+      const eeatHead = `<meta name="author" content="Voice Log Pro" />\n    <meta property="article:published_time" content="${EEAT_PUBLISHED}T00:00:00Z" />\n    <meta property="article:modified_time" content="${EEAT_MODIFIED}T00:00:00Z" />\n    <script type="application/ld+json">${JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: EEAT_HEADLINE,
+        author: { '@type': 'Organization', name: 'Voice Log Pro', url: 'https://voicelogpro.com' },
+        publisher: { '@type': 'Organization', name: 'Voice Log Pro', url: 'https://voicelogpro.com' },
+        datePublished: EEAT_PUBLISHED,
+        dateModified: EEAT_MODIFIED,
+      })}</script>`;
       routeHtml = routeHtml.replace('</head>', `${eeatHead}\n</head>`);
       const eeatByline = `<p class="author-byline" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"><span class="author" rel="author">By The Field Desk, Voice Log Pro</span> · <time datetime="${EEAT_MODIFIED}">Updated ${EEAT_MODIFIED}</time> · Published ${EEAT_PUBLISHED}</p>`;
 
-      // Inject rendered app HTML into root div (byline first so crawlers see E-E-A-T)
+      // Inject rendered app HTML into root div. The byline goes AFTER the app
+      // HTML: author/date regexes match anywhere on the page, but crawlers that
+      // take "the first <p> over 60 chars" as the answer-first opener were
+      // picking up the hidden byline instead of each page's real opening
+      // paragraph (growth-engine C1 answer-first).
       routeHtml = routeHtml.replace(
         '<div id="root"></div>',
-        `<div id="root">${eeatByline}${appHtml}</div>`
+        `<div id="root">${appHtml}${eeatByline}</div>`
       );
 
       // Write the route file

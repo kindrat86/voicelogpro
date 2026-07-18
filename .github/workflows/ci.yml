@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint (non-blocking, pre-existing errors)
+        run: npm run lint
+        continue-on-error: true
+
+      - name: Unit tests
+        run: npm run test
+
+      - name: Build (vite + prerender + pSEO copy)
+        run: npm run build:all
+
+      - name: Verify prerendered HTML
+        run: node scripts/verify-prerender.mjs

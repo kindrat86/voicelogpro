@@ -1,0 +1,284 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "VoiceLogPro",
+  "description": "Daily construction reports from voice notes — turn spoken updates into structured daily logs, photo annotations, and compliance-ready reports in minutes. Built for construction crews, site managers, and contractors.",
+  "home_page_url": "https://voicelogpro.com/",
+  "feed_url": "https://voicelogpro.com/feed.json",
+  "language": "en",
+  "authors": [
+    {
+      "name": "VoiceLogPro",
+      "url": "https://voicelogpro.com/about"
+    }
+  ],
+  "_hubs": [
+    "https://pubsubhubbub.appspot.com/",
+    "https://pubsubhubbub.superfeedr.com/",
+    "https://websubhub.com/"
+  ],
+  "_site": {
+    "domain": "voicelogpro.com",
+    "generator": "Hermes WebSub Feed Generator",
+    "generated_at": "2026-07-18T09:01:48Z"
+  },
+  "items": [
+    {
+      "id": "https://voicelogpro.com",
+      "url": "https://voicelogpro.com",
+      "title": "Voice Log Pro | Daily Construction Reports from Voice Notes",
+      "content_text": "Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.",
+      "date_published": "2026-01-15T00:00:00Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ],
+      "image": "https://voicelogpro.com/images/og-card.jpg",
+      "banner_image": "https://voicelogpro.com/images/og-card.jpg"
+    },
+    {
+      "id": "https://voicelogpro.com/about",
+      "url": "https://voicelogpro.com/about",
+      "title": "About VoiceLogPro",
+      "content_text": "About VoiceLogPro: Voice-to-PDF Construction Daily Reports. Built for General contractors, electricians, plumbers, HVAC contractors, roofers, subcontractors.",
+      "date_published": "2026-07-16T09:01:48Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ]
+    },
+    {
+      "id": "https://voicelogpro.com/faq",
+      "url": "https://voicelogpro.com/faq",
+      "title": "FAQ — VoiceLogPro",
+      "content_text": "Frequently asked questions about VoiceLogPro.",
+      "date_published": "2026-07-14T09:01:48Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ]
+    },
+    {
+      "id": "https://voicelogpro.com/free",
+      "url": "https://voicelogpro.com/free",
+      "title": "Free Construction Tools | Voice Log Pro",
+      "content_text": "Free tools for subcontractors: lien deadline calculator, time tracking, weather logger, and daily report generator.",
+      "date_published": "2026-07-12T09:01:48Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ]
+    },
+    {
+      "id": "https://voicelogpro.com/for",
+      "url": "https://voicelogpro.com/for",
+      "title": "Daily Construction Reports by Trade | Voice Log Pro",
+      "content_text": "Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.",
+      "date_published": "2026-01-15T00:00:00Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ],
+      "image": "https://voicelogpro.com/images/og-card.jpg",
+      "banner_image": "https://voicelogpro.com/images/og-card.jpg"
+    },
+    {
+      "id": "https://voicelogpro.com/best",
+      "url": "https://voicelogpro.com/best",
+      "title": "Best Of — VoiceLogPro",
+      "content_text": "5 OSHA-compliant templates, Texas Chapter 53 checklist, and dispute defense swipe file. Free PDF.",
+      "date_published": "2026-07-08T09:01:48Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ]
+    },
+    {
+      "id": "https://voicelogpro.com/alternatives-to",
+      "url": "https://voicelogpro.com/alternatives-to",
+      "title": "VoiceLogPro vs 8 Transcription Tools: Alternatives Compared",
+      "content_text": "Side-by-side comparisons of VoiceLogPro and 8 transcription tools — Otter.ai, Rev, Descript, Trint, Sonix, Fireflies.ai, Temi, and Happy Scribe — covering features, pricing, and limitations.",
+      "date_published": "2026-07-06T09:01:48Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ]
+    },
+    {
+      "id": "https://voicelogpro.com/glossary",
+      "url": "https://voicelogpro.com/glossary",
+      "title": "Voice Logging & Transcription Glossary — VoiceLogPro",
+      "content_text": "Plain-language definitions of 7 voice documentation terms: voice logging, transcription, speaker diarization, speech-to-text, audio archive, compliance logging, and real-time transcription.",
+      "date_published": "2026-07-04T09:01:48Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ]
+    },
+    {
+      "id": "https://voicelogpro.com/weekly-reports",
+      "url": "https://voicelogpro.com/weekly-reports",
+      "title": "Weekly Construction Report Templates | Voice Log Pro",
+      "content_text": "Free weekly report templates for every trade. Compiled automatically from daily voice notes.",
+      "date_published": "2026-07-02T09:01:48Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ]
+    },
+    {
+      "id": "https://voicelogpro.com/vs",
+      "url": "https://voicelogpro.com/vs",
+      "title": "Vs — VoiceLogPro",
+      "content_text": "Detailed comparisons: VoiceLogPro vs other tools.",
+      "date_published": "2026-06-30T09:01:48Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ]
+    },
+    {
+      "id": "https://voicelogpro.com/tools",
+      "url": "https://voicelogpro.com/tools",
+      "title": "Free Construction Tools | Voice Log Pro",
+      "content_text": "Free tools for construction subcontractors: lien deadline calculator, daily report templates, and more. Built by Voice Log Pro.",
+      "date_published": "2026-06-28T09:01:48Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ]
+    },
+    {
+      "id": "https://voicelogpro.com/templates",
+      "url": "https://voicelogpro.com/templates",
+      "title": "Daily Construction Report Templates by Trade | Voice Log Pro",
+      "content_text": "Free daily construction report templates for electricians, plumbers, HVAC, roofers, general contractors, and more. Voice Log Pro fills these automatically from your voice note.",
+      "date_published": "2026-06-26T09:01:48Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ]
+    },
+    {
+      "id": "https://voicelogpro.com/states",
+      "url": "https://voicelogpro.com/states",
+      "title": "State Mechanics Lien Law Guides | Voice Log Pro",
+      "content_text": "State-by-state mechanics lien law guides for subcontractors. Preliminary notice deadlines, lien filing windows, and enforcement periods. Protect your payment rights.",
+      "date_published": "2026-06-24T09:01:48Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ]
+    },
+    {
+      "id": "https://voicelogpro.com/raken-vs-voice-log-pro",
+      "url": "https://voicelogpro.com/raken-vs-voice-log-pro",
+      "title": "Raken vs Voice Log Pro | Payment Protection for Subcontractors",
+      "content_text": "Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.",
+      "date_published": "2026-01-15T00:00:00Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ],
+      "image": "https://voicelogpro.com/images/og-card.jpg",
+      "banner_image": "https://voicelogpro.com/images/og-card.jpg"
+    },
+    {
+      "id": "https://voicelogpro.com/procore-vs-voice-log-pro",
+      "url": "https://voicelogpro.com/procore-vs-voice-log-pro",
+      "title": "/procore-vs-voice-log-pro",
+      "content_text": "Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.",
+      "date_published": "2026-01-15T00:00:00Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ],
+      "image": "https://voicelogpro.com/images/og-card.jpg",
+      "banner_image": "https://voicelogpro.com/images/og-card.jpg"
+    },
+    {
+      "id": "https://voicelogpro.com/knowify-vs-voice-log-pro",
+      "url": "https://voicelogpro.com/knowify-vs-voice-log-pro",
+      "title": "/knowify-vs-voice-log-pro",
+      "content_text": "Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.",
+      "date_published": "2026-01-15T00:00:00Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ],
+      "image": "https://voicelogpro.com/images/og-card.jpg",
+      "banner_image": "https://voicelogpro.com/images/og-card.jpg"
+    },
+    {
+      "id": "https://voicelogpro.com/jobnimbus-vs-voice-log-pro",
+      "url": "https://voicelogpro.com/jobnimbus-vs-voice-log-pro",
+      "title": "/jobnimbus-vs-voice-log-pro",
+      "content_text": "Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.",
+      "date_published": "2026-01-15T00:00:00Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ],
+      "image": "https://voicelogpro.com/images/og-card.jpg",
+      "banner_image": "https://voicelogpro.com/images/og-card.jpg"
+    },
+    {
+      "id": "https://voicelogpro.com/how-to",
+      "url": "https://voicelogpro.com/how-to",
+      "title": "How-To Guides for Construction Documentation | Voice Log Pro",
+      "content_text": "Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.",
+      "date_published": "2026-01-15T00:00:00Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ],
+      "image": "https://voicelogpro.com/images/og-card.jpg",
+      "banner_image": "https://voicelogpro.com/images/og-card.jpg"
+    },
+    {
+      "id": "https://voicelogpro.com/fieldwire-vs-voice-log-pro",
+      "url": "https://voicelogpro.com/fieldwire-vs-voice-log-pro",
+      "title": "Fieldwire vs Voice Log Pro | Payment Protection for Subcontractors",
+      "content_text": "Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.",
+      "date_published": "2026-01-15T00:00:00Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ],
+      "image": "https://voicelogpro.com/images/og-card.jpg",
+      "banner_image": "https://voicelogpro.com/images/og-card.jpg"
+    },
+    {
+      "id": "https://voicelogpro.com/crew-plan",
+      "url": "https://voicelogpro.com/crew-plan",
+      "title": "Crew Plan Pricing — Voice Log Pro for Construction Teams",
+      "content_text": "Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands.",
+      "date_published": "2026-01-15T00:00:00Z",
+      "authors": [
+        {
+          "name": "VoiceLogPro"
+        }
+      ],
+      "image": "https://voicelogpro.com/images/og-card.jpg",
+      "banner_image": "https://voicelogpro.com/images/og-card.jpg"
+    }
+  ]
+}

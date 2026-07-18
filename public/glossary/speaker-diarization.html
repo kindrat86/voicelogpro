@@ -54,36 +54,7 @@
   "datePublished": "2026-01-01",
   "dateModified": "2026-07-07"
 }</script>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What does speaker diarization mean?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Speaker Diarization is a concept in ai-powered voice logging & transcription that measures or describes an important aspect of operations for field inspectors."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why is speaker diarization important?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Speaker Diarization matters because it directly affects your ability to operate efficiently and make good decisions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is speaker diarization calculated?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The calculation of speaker diarization varies by context. VoiceLogPro handles this automatically for you."
-      }
-    }
-  ]
-}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does speaker diarization mean?", "acceptedAnswer": {"@type": "Answer", "text": "Speaker diarization means partitioning audio by speaker: the system detects voice changes and groups segments belonging to the same person. The output is a timeline of who spoke when, which a transcription engine can then fill with words, producing a script-like transcript of a multi-person conversation."}}, {"@type": "Question", "name": "Why is speaker diarization important?", "acceptedAnswer": {"@type": "Answer", "text": "Because a multi-speaker transcript without speaker labels is nearly useless as a record. If a GC made a verbal commitment in a site meeting, you need the transcript to show who said the words, not just that the words were said somewhere. Diarization is what makes that attribution possible."}}, {"@type": "Question", "name": "How accurate is speaker diarization?", "acceptedAnswer": {"@type": "Answer", "text": "It varies with recording conditions: distinct voices, minimal cross-talk, and a decent microphone give good separation, while overlapping speech and noisy rooms confuse it. Similar-sounding voices are the hardest case. Treat automatic speaker labels as a first pass and verify any important attribution against the audio itself."}}]}</script>
 </head>
 <body>
     <header>
@@ -98,10 +69,10 @@
         <article>
             <h1>What is Speaker Diarization?</h1>
             
-    <p><strong>Speaker Diarization</strong> is a key concept that every field inspectors should understand. In this glossary entry, we'll explain what speaker diarization means, why it matters, and how VoiceLogPro helps you with it.</p>
+    <p>Speaker diarization is the technology that splits an audio recording by who is speaking — labeling each segment Speaker 1, Speaker 2, and so on. It answers the question of who said what, and when, in a recording of multiple people, such as a site meeting between a subcontractor and a GC.</p>
     
     <h2>Speaker Diarization Definition</h2>
-    <p>Speaker Diarization refers to an important aspect of ai-powered voice logging & transcription. Understanding speaker diarization is crucial for field inspectors who want to make better decisions.</p>
+    <p>Diarization does not identify people by name; it separates voices. Automatic systems cluster stretches of audio by voice characteristics, so a transcript can show a conversation as alternating speakers rather than one undifferentiated block of text. Combined with transcription, it turns a meeting recording into a readable dialogue.</p>
     
     <h2>Why Speaker Diarization Matters</h2>
     <p>For field inspectors, speaker diarization impacts:</p>
@@ -113,7 +84,7 @@
     </ul>
     
     <h2>How VoiceLogPro Helps with Speaker Diarization</h2>
-    <p>VoiceLogPro makes speaker diarization manageable by providing Real-time voice logging with AI transcription, speaker diarization, and searchable audio archives. B</p>
+    <p>Daily voice logs are usually a single speaker — you — so VoiceLogPro's core workflow does not depend on diarization. Where the concept matters is context: if you record toolbox talks or site meetings with other tools, understanding diarization helps you judge how reliable a multi-speaker transcript will be as a record.</p>
     
     <h2>Speaker Diarization Best Practices</h2>
     <ol>
@@ -126,12 +97,12 @@
             
     <section class="faq">
         <h2>Frequently Asked Questions</h2>
-        <details><summary><h3>What does speaker diarization mean?</h3></summary><p>Speaker Diarization is a concept in ai-powered voice logging & transcription that measures or describes an important aspect of operations for field inspectors.</p></details><details><summary><h3>Why is speaker diarization important?</h3></summary><p>Speaker Diarization matters because it directly affects your ability to operate efficiently and make good decisions.</p></details><details><summary><h3>How is speaker diarization calculated?</h3></summary><p>The calculation of speaker diarization varies by context. VoiceLogPro handles this automatically for you.</p></details>
+        <details><summary><h3>What does speaker diarization mean?</h3></summary><p>Speaker diarization means partitioning audio by speaker: the system detects voice changes and groups segments belonging to the same person. The output is a timeline of who spoke when, which a transcription engine can then fill with words, producing a script-like transcript of a multi-person conversation.</p></details><details><summary><h3>Why is speaker diarization important?</h3></summary><p>Because a multi-speaker transcript without speaker labels is nearly useless as a record. If a GC made a verbal commitment in a site meeting, you need the transcript to show who said the words, not just that the words were said somewhere. Diarization is what makes that attribution possible.</p></details><details><summary><h3>How accurate is speaker diarization?</h3></summary><p>It varies with recording conditions: distinct voices, minimal cross-talk, and a decent microphone give good separation, while overlapping speech and noisy rooms confuse it. Similar-sounding voices are the hardest case. Treat automatic speaker labels as a first pass and verify any important attribution against the audio itself.</p></details>
     </section>
             
             <section class="cta">
                 <h2>Try VoiceLogPro</h2>
-                <p>Real-time voice logging with AI transcription, speaker diarization, and searchable audio archives. Built for field teams, inspectors, and compliance.</p>
+                <p>VoiceLogPro turns spoken field notes into dated, structured PDF daily reports — crew, work performed, materials, weather, and delays captured by voice at the end of the shift. It is in beta, with a free Solo plan, and is built for contractors and field teams rather than office transcription work.</p>
                 <a href="https://voicelogpro.com" class="button">Get Started with VoiceLogPro →</a>
             </section>
         </article>
