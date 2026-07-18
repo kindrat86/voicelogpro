@@ -1,43 +1,108 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-};
+// This endpoint spends paid Lovable AI credits, so CORS is locked to the site
+// (was '*') and rate limiting is durable + shared across instances when the
+// edge_rate_limits migration is applied (graceful in-memory fallback otherwise).
+const ALLOWED_ORIGINS = [
+  'https://voicelogpro.com',
+  'https://www.voicelogpro.com',
+  'http://localhost:8080',
+];
+
+function buildCorsHeaders(req: Request): Record<string, string> {
+  const origin = req.headers.get('origin') ?? '';
+  return {
+    'Access-Control-Allow-Origin': ALLOWED_ORIGINS.includes(origin) ? origin : 'https://voicelogpro.com',
+    'Vary': 'Origin',
+    'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  };
+}
 
 // Allowed trade values for input validation
 const ALLOWED_TRADES = ['electrical', 'plumbing', 'HVAC', 'hvac', 'Electrical', 'Plumbing'];
 
-// Simple in-memory rate limiter (resets on function cold start)
-const requestCounts = new Map<string, { count: number; resetTime: number }>();
-const RATE_LIMIT = 10; // requests per window
+// Rate limits: per-IP per minute, plus a hard global daily cap on AI spend.
+const RATE_LIMIT = 10; // requests per window per IP
 const RATE_WINDOW_MS = 60 * 1000; // 1 minute
+const GLOBAL_DAILY_CAP = 300; // total AI calls per day across all callers
+
+// In-memory fallback limiter (per instance, resets on cold start). Only used
+// when the durable store is unavailable (e.g. migration not yet applied).
+const requestCounts = new Map<string, { count: number; resetTime: number }>();
+
+const SUPABASE_URL = Deno.env.get('SUPABASE_URL');
+const SERVICE_ROLE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
 
 function getRateLimitKey(req: Request): string {
-  // Use X-Forwarded-For header or fall back to a default key
+  // Take the LAST hop of X-Forwarded-For: appended by the edge proxy, so a
+  // client sending its own XFF header cannot control it (the first entry can
+  // be spoofed freely).
   const forwarded = req.headers.get('x-forwarded-for');
-  const clientIp = forwarded ? forwarded.split(',')[0].trim() : 'unknown';
-  return clientIp;
+  if (!forwarded) return 'unknown';
+  const hops = forwarded.split(',').map((h) => h.trim()).filter(Boolean);
+  return hops[hops.length - 1] || 'unknown';
 }
 
-function checkRateLimit(key: string): { allowed: boolean; remaining: number } {
+// Atomic shared counter via the edge_rate_increment() SQL function.
+// Returns the new count for this window, or null if the durable store is
+// unavailable (caller falls back to the in-memory limiter).
+async function durableIncrement(key: string, windowSeconds: number): Promise<number | null> {
+  if (!SUPABASE_URL || !SERVICE_ROLE_KEY) return null;
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/edge_rate_increment`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SERVICE_ROLE_KEY,
+        'Authorization': `Bearer ${SERVICE_ROLE_KEY}`,
+      },
+      body: JSON.stringify({ p_key: key, p_window_seconds: windowSeconds }),
+    });
+    if (!res.ok) return null;
+    const count = await res.json();
+    return typeof count === 'number' ? count : null;
+  } catch {
+    return null;
+  }
+}
+
+function checkRateLimitFallback(key: string): { allowed: boolean; remaining: number } {
   const now = Date.now();
   const record = requestCounts.get(key);
-  
+
   if (!record || now > record.resetTime) {
     requestCounts.set(key, { count: 1, resetTime: now + RATE_WINDOW_MS });
     return { allowed: true, remaining: RATE_LIMIT - 1 };
   }
-  
+
   if (record.count >= RATE_LIMIT) {
     return { allowed: false, remaining: 0 };
   }
-  
+
   record.count++;
   return { allowed: true, remaining: RATE_LIMIT - record.count };
 }
 
+async function checkRateLimit(key: string): Promise<{ allowed: boolean; remaining: number }> {
+  // Global daily cap first: hard ceiling on paid AI calls regardless of source.
+  const globalCount = await durableIncrement('generate-daily-log:global', 86400);
+  if (globalCount !== null && globalCount > GLOBAL_DAILY_CAP) {
+    console.warn(`Global daily cap reached (${globalCount}/${GLOBAL_DAILY_CAP})`);
+    return { allowed: false, remaining: 0 };
+  }
+
+  // Per-IP window: durable when available, in-memory per instance otherwise.
+  const ipCount = await durableIncrement(`generate-daily-log:ip:${key}`, Math.floor(RATE_WINDOW_MS / 1000));
+  if (ipCount !== null) {
+    return { allowed: ipCount <= RATE_LIMIT, remaining: Math.max(0, RATE_LIMIT - ipCount) };
+  }
+  return checkRateLimitFallback(key);
+}
+
 serve(async (req) => {
+  const corsHeaders = buildCorsHeaders(req);
+
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -46,14 +111,14 @@ serve(async (req) => {
   try {
     // Apply rate limiting to prevent abuse
     const rateLimitKey = getRateLimitKey(req);
-    const rateCheck = checkRateLimit(rateLimitKey);
-    
+    const rateCheck = await checkRateLimit(rateLimitKey);
+
     if (!rateCheck.allowed) {
       console.warn(`Rate limit exceeded for ${rateLimitKey}`);
       return new Response(JSON.stringify({ error: 'Rate limit exceeded. Please try again later.' }), {
         status: 429,
-        headers: { 
-          ...corsHeaders, 
+        headers: {
+          ...corsHeaders,
           'Content-Type': 'application/json',
           'Retry-After': '60'
         },

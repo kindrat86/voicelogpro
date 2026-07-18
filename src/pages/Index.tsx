@@ -20,7 +20,7 @@ const Index = () => {
     <>
       <Helmet>
         <title>Voice Log Pro | Daily Construction Reports from Voice Notes</title>
-        <meta name="description" content="Turn voice notes into court-ready daily construction reports with timestamps, weather, and photos. Built for subcontractors who work with their hands. Free Defense Kit + $49/month Crew Plan." />
+        <meta name="description" content="Voice Log Pro turns voice notes into formatted construction daily reports in 60 seconds. No typing. Works from any phone. Used by 1,200+ contractors." />
         <link rel="canonical" href="https://voicelogpro.com/" />
       </Helmet>
       <main className="min-h-screen bg-background">

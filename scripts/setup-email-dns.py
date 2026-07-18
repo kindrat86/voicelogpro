@@ -38,9 +38,15 @@ from lib.vault import Vault  # noqa: E402
 DOMAIN_SLD, DOMAIN_TLD = "voicelogpro", "com"
 DOMAIN = f"{DOMAIN_SLD}.{DOMAIN_TLD}"
 FORWARD_TO = "sales@sipiteno.com"
-RESEND_KEY = re.search(
-    r"RESEND_API_KEY=(\S+)", (Path.home() / "email-engine/.env").read_text()
-).group(1)
+# voicelogpro.com lives in the upgraded "sipiteno" Pro team (2026-07-14),
+# not the grandfathered 4-domain team the engine's default key belongs to.
+# Prefer the Pro-team key when it exists; the engine reads the same env name
+# via `key_env: RESEND_API_KEY_PRO` in sequences/voicelogpro.yaml.
+_ENV = (Path.home() / "email-engine/.env").read_text()
+_pro = re.search(r"RESEND_API_KEY_PRO=(\S+)", _ENV)
+RESEND_KEY = (_pro or re.search(r"RESEND_API_KEY=(\S+)", _ENV)).group(1)
+if _pro:
+    print("Using RESEND_API_KEY_PRO (sipiteno Pro team).")
 
 
 def resend(path, method="GET", data=None):
