@@ -28,3 +28,5 @@ User-Agent: Bingbot
 Allow: /
 
 Sitemap: https://voicelogpro.com/sitemap.xml
+
+Sitemap: https://voicelogpro.com/sitemap-index.xml
