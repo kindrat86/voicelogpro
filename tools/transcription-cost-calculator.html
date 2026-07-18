@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Transcription Cost Calculator — Compare Rev vs Deepgram vs AssemblyAI Pricing 2026</title>
+<meta name="description" content="Free calculator comparing audio transcription costs across 6 providers. Find the cheapest solution for your monthly volume. Compare Rev, Deepgram, AssemblyAI, Whisper API, Google STT & Otter.ai." />
+<meta name="author" content="VoiceLogPro" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://voicelogpro.com/tools/transcription-cost-calculator.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="VoiceLogPro" />
+<meta property="og:title" content="Transcription Cost Calculator — Rev vs Deepgram vs AssemblyAI Pricing 2026" />
+<meta property="og:description" content="Free calculator comparing audio transcription costs across 6 providers. Find the cheapest solution for your monthly volume." />
+<meta property="og:url" content="https://voicelogpro.com/tools/transcription-cost-calculator.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<style>
+  :root { --bg: #0f172a; --bg-card: #1e293b; --text: #e2e8f0; --text-muted: #94a3b8; --accent: #8b5cf6; --accent-hover: #a78bfa; --border: #334155; --radius: 12px; --green: #10b981; --yellow: #f59e0b; --red: #ef4444; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 20px 80px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 20px; transition: color 0.15s; }
+  .back-link:hover { color: var(--accent); }
+  .back-link svg { width: 16px; height: 16px; }
+  h1 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 700; margin-bottom: 8px; background: linear-gradient(135deg, #a78bfa, #8b5cf6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .subtitle { color: var(--text-muted); margin-bottom: 28px; font-size: 0.95rem; }
+
+  .controls { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 28px; }
+  .control-group { margin-bottom: 18px; }
+  .control-group:last-child { margin-bottom: 0; }
+  .control-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .control-group .value-display { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
+  .control-row { display: flex; flex-wrap: wrap; gap: 16px; }
+  .control-row .control-group { flex: 1; min-width: 160px; }
+  input[type="range"] { width: 100%; height: 6px; -webkit-appearance: none; appearance: none; background: var(--border); border-radius: 3px; outline: none; cursor: pointer; }
+  input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg-card); cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+  input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg-card); cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+  select { width: 100%; padding: 10px 14px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-size: 0.95rem; cursor: pointer; outline: none; transition: border-color 0.15s; }
+  select:focus { border-color: var(--accent); }
+  select option { background: var(--bg); color: var(--text); }
+
+  .table-wrap { overflow-x: auto; margin-bottom: 28px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+  th { background: var(--bg-card); color: var(--text-muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; cursor: pointer; user-select: none; white-space: nowrap; }
+  th:hover { color: var(--accent); }
+  th .sort-arrow { margin-left: 4px; font-size: 0.7rem; }
+  tr:hover td { background: rgba(139,92,246,0.05); }
+  .cost-cell { font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .cheapest { background: rgba(16,185,129,0.1) !important; }
+  .cheapest .cost-cell { color: var(--green); }
+  .cheapest-badge { display: inline-block; background: rgba(16,185,129,0.15); color: var(--green); font-size: 0.65rem; padding: 1px 8px; border-radius: 8px; font-weight: 600; margin-left: 6px; vertical-align: middle; }
+
+  .chart-wrap { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 28px; }
+  .chart-wrap h3 { font-size: 1rem; margin-bottom: 14px; color: var(--text); }
+  .chart { position: relative; height: 220px; display: flex; align-items: flex-end; gap: 8px; padding: 0 10px; }
+  .bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
+  .bar { width: 100%; max-width: 60px; border-radius: 4px 4px 0 0; transition: height 0.4s ease; min-height: 2px; position: relative; }
+  .bar-label { font-size: 0.65rem; color: var(--text-muted); text-align: center; margin-top: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 70px; }
+  .bar-value { font-size: 0.7rem; font-weight: 700; color: var(--text); text-align: center; margin-top: 2px; }
+  .bar-0 { background: linear-gradient(to top, #8b5cf6, #a78bfa); }
+  .bar-1 { background: linear-gradient(to top, #10b981, #34d399); }
+  .bar-2 { background: linear-gradient(to top, #f59e0b, #fbbf24); }
+
+  .details { color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; }
+  .details p { margin-bottom: 6px; }
+  .details strong { color: var(--text); }
+
+  .footer { text-align: center; padding: 32px 0 0; border-top: 1px solid var(--border); margin-top: 40px; color: var(--text-muted); font-size: 0.9rem; }
+  .footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    .control-row { flex-direction: column; gap: 12px; }
+    .control-row .control-group { min-width: auto; }
+    th, td { padding: 8px 10px; font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="/tools/" class="back-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+    All Tools
+  </a>
+  <h1>Transcription Cost Calculator</h1>
+  <p class="subtitle">Compare real monthly costs across 6 transcription providers. Adjust your volume, language, and quality preferences below.</p>
+
+  <div class="controls">
+    <div class="control-row">
+      <div class="control-group">
+        <label>Audio Hours Per Month</label>
+        <input type="range" id="hoursSlider" min="1" max="500" value="50" oninput="calculate()" />
+        <span class="value-display" id="hoursDisplay">50 hrs</span>
+      </div>
+      <div class="control-group">
+        <label>Language</label>
+        <select id="languageSelect" onchange="calculate()">
+          <option value="english">English</option>
+          <option value="spanish">Spanish</option>
+          <option value="french">French</option>
+          <option value="german">German</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label>Quality</label>
+        <select id="qualitySelect" onchange="calculate()">
+          <option value="standard">Standard</option>
+          <option value="premium">Premium (Human-Verified)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table id="costTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Provider <span class="sort-arrow">↕</span></th>
+          <th onclick="sortTable(1)">Model <span class="sort-arrow">↕</span></th>
+          <th onclick="sortTable(2)">Rate <span class="sort-arrow">↕</span></th>
+          <th onclick="sortTable(3)">Monthly Cost <span class="sort-arrow">↕</span></th>
+        </tr>
+      </thead>
+      <tbody id="costBody"></tbody>
+    </table>
+  </div>
+
+  <div class="chart-wrap" id="chartSection">
+    <h3>🏆 Top 3 Cheapest Providers</h3>
+    <div class="chart" id="barChart"></div>
+  </div>
+
+  <div class="details">
+    <p><strong>Pricing assumptions (2026):</strong></p>
+    <p>• <strong>Rev</strong>: $2.50/min premium, $1.50/min standard — industry-standard human transcription.</p>
+    <p>• <strong>Deepgram</strong>: $0.0059/sec standard ($21.24/hr), $0.019/sec premium ($68.40/hr) — API-based AI.</p>
+    <p>• <strong>AssemblyAI</strong>: $0.075/min real-time ($4.50/hr), $0.075/min async — AI with punctuation & formatting.</p>
+    <p>• <strong>Whisper API (OpenAI)</strong>: $0.006/sec ($21.60/hr) — OpenAI's general-purpose speech-to-text.</p>
+    <p>• <strong>Google STT</strong>: $0.006/sec standard ($21.60/hr), premium ~$0.03/sec — cloud-based ML.</p>
+    <p>• <strong>Otter.ai</strong>: $16.99/mo Basic (600 min), $33.99/mo Pro (6,000 min) — subscription plan.</p>
+    <p>Costs calculated for <span id="langDetail">English</span> language at <span id="qualDetail">Standard</span> quality. Non-English languages may carry surcharges on some providers. Annual estimates = monthly × 12.</p>
+  </div>
+
+  <div class="footer">
+    <p>Powered by <a href="https://voicelogpro.com/">VoiceLogPro</a> — turn voice notes into formatted daily reports in 60 seconds.</p>
+  </div>
+</div>
+
+<script>
+const PROVIDERS = [
+  {
+    name: 'Rev',
+    standard: {rate: 1.50, unit: '/min', calc: 'minute'},
+    premium: {rate: 2.50, unit: '/min', calc: 'minute'},
+    note: 'Human transcription'
+  },
+  {
+    name: 'Deepgram',
+    standard: {rate: 0.0059, unit: '/sec', calc: 'second'},
+    premium: {rate: 0.019, unit: '/sec', calc: 'second'},
+    note: 'Nova-2 AI'
+  },
+  {
+    name: 'AssemblyAI',
+    standard: {rate: 0.075, unit: '/min', calc: 'minute'},
+    premium: {rate: 0.075, unit: '/min', calc: 'minute'},
+    note: 'Real-time AI'
+  },
+  {
+    name: 'Whisper API',
+    standard: {rate: 0.006, unit: '/sec', calc: 'second'},
+    premium: {rate: 0.006, unit: '/sec', calc: 'second'},
+    note: 'OpenAI API'
+  },
+  {
+    name: 'Google STT',
+    standard: {rate: 0.006, unit: '/sec', calc: 'second'},
+    premium: {rate: 0.030, unit: '/sec', calc: 'second'},
+    note: 'Cloud ML'
+  },
+  {
+    name: 'Otter.ai',
+    standard: {rate: 16.99, unit: '/mo', calc: 'subscription', limitMin: 600},
+    premium: {rate: 33.99, unit: '/mo', calc: 'subscription', limitMin: 6000},
+    note: 'Subscription'
+  }
+];
+
+let sortOrder = 1;
+let sortCol = 3;
+
+function calculate() {
+  const hours = parseFloat(document.getElementById('hoursSlider').value);
+  const lang = document.getElementById('languageSelect').value;
+  const quality = document.getElementById('qualitySelect').value;
+
+  document.getElementById('hoursDisplay').textContent = hours + ' hrs';
+  document.getElementById('langDetail').textContent = lang.charAt(0).toUpperCase() + lang.slice(1);
+  document.getElementById('qualDetail').textContent = quality.charAt(0).toUpperCase() + quality.slice(1);
+
+  const seconds = hours * 3600;
+  const minutes = hours * 60;
+
+  const rows = PROVIDERS.map((p, idx) => {
+    const tier = quality === 'premium' ? p.premium : p.standard;
+    let monthly = 0;
+    let rateLabel = '';
+
+    if (tier.calc === 'second') {
+      monthly = seconds * tier.rate;
+      rateLabel = '$' + tier.rate.toFixed(4) + tier.unit;
+    } else if (tier.calc === 'minute') {
+      monthly = minutes * tier.rate;
+      rateLabel = '$' + tier.rate.toFixed(2) + tier.unit;
+    } else if (tier.calc === 'subscription') {
+      const limitMin = tier.limitMin || 600;
+      const needed = Math.ceil(minutes / limitMin);
+      monthly = needed * tier.rate;
+      rateLabel = '$' + tier.rate + tier.unit;
+    }
+
+    return {
+      idx,
+      name: p.name,
+      note: p.note,
+      rateLabel,
+      monthly,
+      quality: quality === 'premium' ? 'Premium' : 'Standard'
+    };
+  });
+
+  renderTable(rows);
+  renderChart(rows);
+}
+
+function renderTable(rows) {
+  const sorted = [...rows].sort((a, b) => (a.monthly - b.monthly) * sortOrder);
+  if (sortCol !== 3) {
+    // Alphabetical sort was done differently, reset
+  }
+
+  const tbody = document.getElementById('costBody');
+  tbody.innerHTML = '';
+
+  const minCost = Math.min(...rows.map(r => r.monthly));
+
+  sorted.forEach(r => {
+    const tr = document.createElement('tr');
+    if (r.monthly === minCost) tr.className = 'cheapest';
+    const badge = r.monthly === minCost ? '<span class="cheapest-badge">Cheapest</span>' : '';
+    tr.innerHTML = `<td><strong>${r.name}</strong> ${badge}</td><td>${r.note}</td><td>${r.rateLabel}</td><td class="cost-cell">$${r.monthly.toFixed(2)}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderChart(rows) {
+  const sorted = [...rows].sort((a, b) => a.monthly - b.monthly);
+  const top3 = sorted.slice(0, 3);
+  const maxVal = top3[top3.length - 1].monthly || 1;
+
+  const colors = ['#8b5cf6', '#10b981', '#f59e0b'];
+  const chart = document.getElementById('barChart');
+  chart.innerHTML = '';
+
+  top3.forEach((r, i) => {
+    const pct = Math.max(2, (r.monthly / maxVal) * 100);
+    const wrap = document.createElement('div');
+    wrap.className = 'bar-wrap';
+    wrap.innerHTML = `
+      <div class="bar bar-${i}" style="height:${pct}%;background:${colors[i]}"></div>
+      <div class="bar-value">$${r.monthly.toFixed(2)}</div>
+      <div class="bar-label">${r.name}</div>
+    `;
+    chart.appendChild(wrap);
+  });
+}
+
+function sortTable(col) {
+  if (col === sortCol) sortOrder *= -1;
+  else { sortCol = col; sortOrder = 1; }
+  calculate();
+}
+
+// Initial calculation
+calculate();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Transcription Cost Calculator",
+  "url": "https://voicelogpro.com/tools/transcription-cost-calculator.html",
+  "description": "Compare audio transcription pricing across Rev, Deepgram, AssemblyAI, Whisper API, Google STT, and Otter.ai side by side.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which transcription provider is cheapest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your volume. For low hours, Otter.ai subscriptions can be cheapest. For high-volume API usage, Deepgram Nova-2, Whisper API, and Google STT are typically the most cost-effective at around $21/hour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Rev transcription cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rev charges $1.50 per minute for standard AI transcription and $2.50 per minute for premium human-verified transcription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best transcription API for large volumes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deepgram, Whisper API, and Google STT all offer rates around $0.006/second ($21.60/hour), making them ideal for large volumes of audio transcription."
+      }
+    }
+  ]
+}
+</script>
+</body>
+</html>
