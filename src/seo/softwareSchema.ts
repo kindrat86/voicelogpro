@@ -90,6 +90,7 @@ export interface OrganizationSchema {
   description: string;
   foundingDate: string;
   sameAs: string[];
+  knowsAbout?: string[];
 }
 
 export interface FAQItem {
