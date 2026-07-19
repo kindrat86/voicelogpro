@@ -61,6 +61,7 @@ const PRERENDER_ROUTES = [
   '/blog/texas-property-code-chapter-53-guide-2025',
   '/about',
   '/contact',
+  '/dream-100',
 ];
 
 function stripDefaultHeadTags(html, helmetHead = '') {

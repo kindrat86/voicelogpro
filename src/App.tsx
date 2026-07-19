@@ -50,6 +50,7 @@ const DefenseKit = lazy(() => import("./pages/DefenseKit"));
 const Welcome = lazy(() => import("./pages/Welcome"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
+const Dream100 = lazy(() => import("./pages/Dream100"));
 
 const queryClient = new QueryClient();
 
@@ -119,6 +120,7 @@ const App = () => (
               {/* Trust pages */}
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/dream-100" element={<Dream100 />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

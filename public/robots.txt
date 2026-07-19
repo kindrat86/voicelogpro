@@ -6,6 +6,11 @@ Disallow: /dashboard/
 Disallow: /account/
 Disallow: /login/
 
+max-image-preview:large
+max-video-preview:-1
+max-snippet:-1
+max-image-render:Standard
+
 User-Agent: GPTBot
 Allow: /
 
@@ -54,3 +59,6 @@ LLMs.txt: https://voicelogpro.com/llms.txt
 LLMs-full.txt: https://voicelogpro.com/llms-full.txt
 Knowledge-Graph: https://voicelogpro.com/knowledge-graph.json
 QA: https://voicelogpro.com/qa.jsonl
+
+# Image sitemap for Google Images indexing
+Sitemap: https://voicelogpro.com/image-sitemap.xml

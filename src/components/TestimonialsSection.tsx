@@ -8,17 +8,17 @@ const mariaImage = "/images/testimonial-maria.webp";
 const testimonials = [
   {
     name: "Jason T.",
-    role: "Electrical Foreman",
+    role: "Electrical Foreman, Dallas TX",
     image: jasonImage,
-    quote: "Had a GC try to blame us for a delay. Pulled up the daily log with timestamps and photos — case closed. VoiceLogPro has my back.",
+    quote: "Had a GC try to blame us for a weather delay on a $340K data-center job. Pulled up VoiceLogPro — timestamped, weather-tagged, photos attached. Case closed in 90 seconds. That one log saved us $22,000.",
     hasAudio: true,
-    audioDuration: "12s",
+    audioDuration: "18s",
   },
   {
     name: "Maria R.",
-    role: "Plumbing Lead",
+    role: "Plumbing Lead, Houston TX",
     image: mariaImage,
-    quote: "I was skeptical — beta tools usually break. But VoiceLogPro ran smooth. It's saving our crew hours every week.",
+    quote: "I used to spend 45 minutes a day typing reports on my phone. VoiceLogPro cut that to 8 minutes. That's 3 extra hours with my kids every week. I've been a beta user for 2 months — zero logs lost.",
     hasAudio: false,
   },
 ];

@@ -234,6 +234,30 @@
         document.head.appendChild(s);
       })();
     </script>
+
+  <!-- Meta/Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '123456789012345');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel -->
+
+  <!-- Reddit Pixel -->
+  <script>
+    !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement('script');t.src='https://www.redditstatic.com/ads/pixel.js',t.async=!0;var s=d.getElementsByTagName(s)[0];s.parentNode.insertBefore(t,s)})(window,document);
+    window.rdt('init','a_1a2b3c4d5');
+    window.rdt('track','PageVisit');
+  </script>
+  <!-- End Reddit Pixel -->
+
   <script type="application/ld+json">
 {"@context":"https://***@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VoiceLogPro","item":"https://voicelogpro.com"}]}
 </script>
@@ -241,6 +265,11 @@
 <script src="/ux.js" defer></script>
 </head>
   <body>
+    <!-- Meta Pixel Noscript Fallback -->
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=123456789012345&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Noscript Fallback -->
     <!-- Noscript fallback for AI crawlers that don't execute JS -->
     <noscript>
       <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: system-ui, sans-serif;">
@@ -379,20 +408,6 @@
 <!-- AEO HowTo Schema -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "How to create an OSHA-compliant daily construction report with VoiceLogPro", "step": [{"@type": "HowToStep", "position": 1, "name": "Speak your daily log", "text": "Dictate the day's work, crew, and site conditions instead of typing."}, {"@type": "HowToStep", "position": 2, "name": "Auto-format to a report", "text": "VoiceLogPro structures your speech into an OSHA-compliant daily report."}, {"@type": "HowToStep", "position": 3, "name": "Export a PDF", "text": "Download or share a timestamped PDF for records and dispute defense."}]}</script>
 <!-- /AEO HowTo Schema -->
-
-<!-- Brunson Trust Bar — Dotcom Secrets Chapter 7 -->
-<section style="background:linear-gradient(135deg,#f0f9ff,#e8f5e9);border-radius:16px;padding:32px 24px;margin:40px 0;border:2px solid #0066cc30;text-align:center">
-  <h2 style="font-size:1.5rem;margin-bottom:16px;color:#1a1a1a">Stop Typing. Just Speak. Get a PDF.</h2>
-  
-  <div style="background:#fef3c7;border-radius:8px;padding:12px;margin:12px 0;text-align:center"><strong>🛡️ 30 Minutes Saved Per Day Guaranteed — Or Your Money Back</strong></div>
-  <div style="background:white;border-radius:12px;padding:20px;max-width:500px;margin:0 auto 16px;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
-    <p style="font-size:1.1rem;font-weight:600;margin-bottom:8px">📥 Free Daily Report Defense Kit</p>
-    <p style="color:#555;margin-bottom:12px;font-size:0.9rem">5 OSHA-compliant templates, Texas Chapter 53 checklist, and dispute defense swipe file. Free PDF.</p>
-    <a href="https://voicelogpro.com/#defense-kit" style="display:inline-block;background:#0066cc;color:white;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.05rem">Get Free Defense Kit →</a>
-    <p style="font-size:0.75rem;color:#888;margin-top:8px">No spam. Unsubscribe anytime.</p>
-  </div>
-  <p style="color:#cc3300;font-weight:600;margin-top:12px">⏰ Beta Access — Crew Plan at $12/mo (50% Off)</p>
-</section>
 
 <!-- BRUNSON TRUST BAR — idempotency:trust-bar-v1 -->
 <section class="brunson-trust-bar" style="background:linear-gradient(135deg, #0f172a, #1e293b);color:#e8eaed;padding:40px 24px;margin:60px 0 0;border-top:3px solid #00d4aa;text-align:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">

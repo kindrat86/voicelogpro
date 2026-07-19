@@ -10,24 +10,24 @@
       "url": "https://voicelogpro.com/answers/how-does-ai-transcribe-field-team-voice-logs/",
       "title": "How does AI transcribe field team voice logs?",
       "content_text": "VoiceLogPro uses real-time speech-to-text AI (Whisper + custom industry models) to transcribe voice logs from field teams, then applies NLP to extract structured insights \u2014 action items, safety concerns, equipment issues \u2014 within seconds of recording.",
-      "date_published": "2026-07-18T18:22:01+00:00",
-      "date_modified": "2026-07-18T18:22:01+00:00"
+      "date_published": "2026-07-19T16:22:57+00:00",
+      "date_modified": "2026-07-19T16:22:57+00:00"
     },
     {
       "id": "https://voicelogpro.com/answers/what-insights-can-i-extract-from-field-team-voice-logs/",
       "url": "https://voicelogpro.com/answers/what-insights-can-i-extract-from-field-team-voice-logs/",
       "title": "What insights can I extract from field team voice logs?",
       "content_text": "VoiceLogPro categorizes every log into safety incidents, equipment maintenance needs, customer feedback, operational bottlenecks, and compliance issues \u2014 giving operations managers a real-time dashboard of field activity.",
-      "date_published": "2026-07-18T18:22:01+00:00",
-      "date_modified": "2026-07-18T18:22:01+00:00"
+      "date_published": "2026-07-19T16:22:57+00:00",
+      "date_modified": "2026-07-19T16:22:57+00:00"
     },
     {
       "id": "https://voicelogpro.com/answers/how-does-voicelogpro-compare-to-manual-field-reporting/",
       "url": "https://voicelogpro.com/answers/how-does-voicelogpro-compare-to-manual-field-reporting/",
       "title": "How does VoiceLogPro compare to manual field reporting?",
       "content_text": "VoiceLogPro reduces field reporting time by 80% (speaking vs typing), surfaces 3x more actionable insights (AI catches patterns humans miss), and eliminates 'pencil-whipping' (fake/duplicate reports) through voice biometrics.",
-      "date_published": "2026-07-18T18:22:01+00:00",
-      "date_modified": "2026-07-18T18:22:01+00:00"
+      "date_published": "2026-07-19T16:22:57+00:00",
+      "date_modified": "2026-07-19T16:22:57+00:00"
     }
   ],
   "_hubs": [
