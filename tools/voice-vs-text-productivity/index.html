@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Voice vs Text Speed Calculator — Voice Logging Productivity Gain 2026</title>
+<meta name="description" content="Free interactive calculator showing the productivity gain of voice logging over typing. See minutes and hours saved per day and month by using voice instead of typing." />
+<meta name="author" content="VoiceLogPro" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://voicelogpro.com/tools/voice-vs-text-productivity.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="VoiceLogPro" />
+<meta property="og:title" content="Voice vs Text Speed Calculator — Voice Logging Productivity Gain 2026" />
+<meta property="og:description" content="Compare voice logging vs typing speed. Calculate minutes and hours saved per day and per month with voice dictation." />
+<meta property="og:url" content="https://voicelogpro.com/tools/voice-vs-text-productivity.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<style>
+  :root { --bg: #0f172a; --bg-card: #1e293b; --text: #e2e8f0; --text-muted: #94a3b8; --accent: #8b5cf6; --accent-hover: #a78bfa; --border: #334155; --radius: 12px; --green: #10b981; --yellow: #f59e0b; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 800px; margin: 0 auto; padding: 24px 20px 80px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 20px; transition: color 0.15s; }
+  .back-link:hover { color: var(--accent); }
+  .back-link svg { width: 16px; height: 16px; }
+  h1 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 700; margin-bottom: 8px; background: linear-gradient(135deg, #a78bfa, #8b5cf6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .subtitle { color: var(--text-muted); margin-bottom: 28px; font-size: 0.95rem; }
+
+  .controls { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 28px; }
+  .control-group { margin-bottom: 18px; }
+  .control-group:last-child { margin-bottom: 0; }
+  .control-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .control-group .value-display { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
+  .control-row { display: flex; flex-wrap: wrap; gap: 16px; }
+  .control-row .control-group { flex: 1; min-width: 160px; }
+  input[type="range"] { width: 100%; height: 6px; -webkit-appearance: none; appearance: none; background: var(--border); border-radius: 3px; outline: none; cursor: pointer; }
+  input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg-card); cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+  input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg-card); cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+
+  .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 28px; }
+  .result-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+  .result-card .result-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; margin-bottom: 6px; }
+  .result-card .result-value { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+  .result-card .result-value.green { color: var(--green); }
+  .result-card .result-sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+
+  .visuals { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+  .visual-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+  .visual-card h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 600; }
+
+  .clock { width: 140px; height: 140px; border: 4px solid var(--accent); border-radius: 50%; position: relative; margin: 0 auto 10px; }
+  .clock-face { width: 100%; height: 100%; position: relative; }
+  .clock-hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; border-radius: 2px; }
+  .clock-hand.minute { width: 3px; height: 45%; background: var(--accent); }
+  .clock-hand.hour { width: 4px; height: 30%; background: var(--accent-hover); }
+  .clock-center { position: absolute; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+  .clock-label { font-size: 0.75rem; color: var(--text-muted); }
+
+  .progress-wrap { margin: 10px 0; }
+  .progress-track { width: 100%; height: 24px; background: var(--border); border-radius: 12px; overflow: hidden; position: relative; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), #10b981); border-radius: 12px; transition: width 0.4s ease; }
+  .progress-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; display: flex; justify-content: space-between; }
+  .progress-label strong { color: var(--text); }
+
+  .details { color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 28px; }
+  .details h3 { color: var(--text); font-size: 0.95rem; margin-bottom: 8px; }
+  .details p { margin-bottom: 6px; }
+  .details li { margin-bottom: 4px; margin-left: 18px; }
+
+  .footer { text-align: center; padding: 32px 0 0; border-top: 1px solid var(--border); margin-top: 40px; color: var(--text-muted); font-size: 0.9rem; }
+  .footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    .control-row { flex-direction: column; gap: 12px; }
+    .control-row .control-group { min-width: auto; }
+    .visuals { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="/tools/" class="back-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+    All Tools
+  </a>
+  <h1>Voice vs Text Speed Calculator</h1>
+  <p class="subtitle">See how much time you save by speaking instead of typing your daily reports, logs, and notes.</p>
+
+  <div class="controls">
+    <div class="control-row">
+      <div class="control-group">
+        <label>Words Logged Per Day</label>
+        <input type="range" id="wordsSlider" min="50" max="5000" value="500" oninput="calculate()" />
+        <span class="value-display" id="wordsDisplay">500 words</span>
+      </div>
+      <div class="control-group">
+        <label>Talking Speed (WPM)</label>
+        <input type="range" id="talkSlider" min="80" max="200" value="150" oninput="calculate()" />
+        <span class="value-display" id="talkDisplay">150 wpm</span>
+      </div>
+    </div>
+    <div class="control-row">
+      <div class="control-group">
+        <label>Typing Speed (WPM)</label>
+        <input type="range" id="typeSlider" min="20" max="80" value="40" oninput="calculate()" />
+        <span class="value-display" id="typeDisplay">40 wpm</span>
+      </div>
+      <div class="control-group">
+        <label>Days Per Week Working</label>
+        <input type="range" id="daysSlider" min="1" max="7" value="5" oninput="calculate()" />
+        <span class="value-display" id="daysDisplay">5 days</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="results" id="results">
+    <div class="result-card">
+      <div class="result-label">Time to Type</div>
+      <div class="result-value" id="typeTime">12.5 min</div>
+      <div class="result-sub">to log 500 words</div>
+    </div>
+    <div class="result-card">
+      <div class="result-label">Time to Speak</div>
+      <div class="result-value green" id="talkTime">3.3 min</div>
+      <div class="result-sub">to log 500 words</div>
+    </div>
+    <div class="result-card">
+      <div class="result-label">Saved Per Day</div>
+      <div class="result-value green" id="savedDay">9.2 min</div>
+      <div class="result-sub">every day</div>
+    </div>
+    <div class="result-card">
+      <div class="result-label">Saved Per Month</div>
+      <div class="result-value" id="savedMonth">3.0 hrs</div>
+      <div class="result-sub">(20 working days)</div>
+    </div>
+  </div>
+
+  <div class="visuals">
+    <div class="visual-card">
+      <h3>⏱ Time Saved Visualized</h3>
+      <div class="clock" id="clock">
+        <div class="clock-face">
+          <div class="clock-hand minute" id="clockMinute"></div>
+          <div class="clock-hand hour" id="clockHour"></div>
+          <div class="clock-center"></div>
+        </div>
+      </div>
+      <div class="clock-label" id="clockLabel">9.2 minutes saved per day</div>
+    </div>
+    <div class="visual-card">
+      <h3>📈 Efficiency Gain</h3>
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill" style="width:75%"></div>
+        </div>
+        <div class="progress-label">
+          <span>Voice is <strong id="efficiencyGain">375%</strong> faster</span>
+          <span id="progressPct">75%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="details">
+    <h3>How the math works</h3>
+    <p><strong>Time to type</strong> = Words per day ÷ Typing speed (wpm). Average typing speed is 40 WPM.</p>
+    <p><strong>Time to speak</strong> = Words per day ÷ Talking speed (wpm). Natural conversation is ~150 WPM.</p>
+    <p><strong>Minutes saved per day</strong> = Typing time − Speaking time.</p>
+    <p><strong>Hours saved per month</strong> = (Minutes saved per day × Days per week × 4.33) ÷ 60.</p>
+    <p><strong>Productivity gain</strong> = (Typing time ÷ Speaking time) × 100%. Voice logging is typically 3–5× faster than typing for field workers dictating reports.</p>
+    <p style="margin-top:8px;">💡 <strong>Pro tip:</strong> Most construction foremen log 300–800 words per daily report. At 150 WPM talking vs 40 WPM typing, that's 5–13 minutes saved <em>per report</em>.</p>
+  </div>
+
+  <div class="footer">
+    <p>Powered by <a href="https://voicelogpro.com/">VoiceLogPro</a> — turn voice notes into formatted daily reports in 60 seconds.</p>
+  </div>
+</div>
+
+<script>
+function calculate() {
+  const words = parseFloat(document.getElementById('wordsSlider').value);
+  const talkWpm = parseFloat(document.getElementById('talkSlider').value);
+  const typeWpm = parseFloat(document.getElementById('typeSlider').value);
+  const daysPerWeek = parseFloat(document.getElementById('daysSlider').value);
+
+  document.getElementById('wordsDisplay').textContent = words.toLocaleString() + ' words';
+  document.getElementById('talkDisplay').textContent = talkWpm + ' wpm';
+  document.getElementById('typeDisplay').textContent = typeWpm + ' wpm';
+  document.getElementById('daysDisplay').textContent = daysPerWeek + (daysPerWeek === 1 ? ' day' : ' days');
+
+  const talkMinutes = words / talkWpm;
+  const typeMinutes = words / typeWpm;
+  const savedMinutesDay = typeMinutes - talkMinutes;
+  const weeksPerMonth = 4.33;
+  const daysPerMonth = daysPerWeek * weeksPerMonth;
+  const savedHoursMonth = (savedMinutesDay * daysPerMonth) / 60;
+  const efficiency = typeMinutes / talkMinutes;
+  const efficiencyPct = Math.round((efficiency - 1) * 100);
+
+  document.getElementById('talkTime').textContent = talkMinutes.toFixed(1) + ' min';
+  document.getElementById('typeTime').textContent = typeMinutes.toFixed(1) + ' min';
+  document.getElementById('savedDay').textContent = savedMinutesDay.toFixed(1) + ' min';
+  document.getElementById('savedMonth').textContent = savedHoursMonth.toFixed(1) + ' hrs';
+
+  // Clock visualization — map saved minutes from 0-60 to 0-360 degrees
+  const clockDeg = Math.min(360, (savedMinutesDay / 60) * 360);
+  document.getElementById('clockMinute').style.transform = 'translateX(-50%) rotate(' + clockDeg + 'deg)';
+  document.getElementById('clockHour').style.transform = 'translateX(-50%) rotate(' + (clockDeg / 12) + 'deg)';
+  document.getElementById('clockLabel').textContent = savedMinutesDay.toFixed(1) + ' minutes saved per day';
+
+  // Progress bar
+  const pct = Math.min(100, Math.round((1 - 1 / Math.max(efficiency, 1.01)) * 100));
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+  document.getElementById('efficiencyGain').textContent = efficiencyPct + '%';
+}
+
+// Initial calculation
+calculate();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Voice vs Text Speed Calculator",
+  "url": "https://voicelogpro.com/tools/voice-vs-text-productivity.html",
+  "description": "Calculate the productivity gain of voice logging over typing. Compare talking speed vs typing speed to see time saved per day and per month.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much faster is voice than typing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Voice dictation at 150 words per minute is typically 3-4 times faster than average typing at 40 words per minute. For a 500-word daily report, that's about 12.5 minutes typing vs 3.3 minutes speaking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many minutes per day can voice logging save?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For typical field workers logging 300-800 words per day, voice logging saves 5-13 minutes per report. Over a month at 5 days per week, that's 2-5 hours saved."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the average talking speed for dictation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Natural conversational speech is around 150 words per minute. Professional voice dictation can reach 180-200 WPM with practice."
+      }
+    }
+  ]
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Audio Quality Checker — Field Report Transcription Readiness Score</title>
+<meta name="description" content="Free interactive tool that checks if your field audio recording meets minimum quality standards for accurate transcription. Score your sample rate, noise, mic type, and duration." />
+<meta name="author" content="VoiceLogPro" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://voicelogpro.com/tools/field-report-quality-checker.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="VoiceLogPro" />
+<meta property="og:title" content="Audio Quality Checker — Field Report Transcription Readiness Score" />
+<meta property="og:description" content="Check your audio quality for transcription readiness. Score sample rate, noise, mic type, speaker count, and duration." />
+<meta property="og:url" content="https://voicelogpro.com/tools/field-report-quality-checker.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<style>
+  :root { --bg: #0f172a; --bg-card: #1e293b; --text: #e2e8f0; --text-muted: #94a3b8; --accent: #8b5cf6; --accent-hover: #a78bfa; --border: #334155; --radius: 12px; --green: #10b981; --yellow: #f59e0b; --red: #ef4444; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 800px; margin: 0 auto; padding: 24px 20px 80px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 20px; transition: color 0.15s; }
+  .back-link:hover { color: var(--accent); }
+  .back-link svg { width: 16px; height: 16px; }
+  h1 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 700; margin-bottom: 8px; background: linear-gradient(135deg, #a78bfa, #8b5cf6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .subtitle { color: var(--text-muted); margin-bottom: 28px; font-size: 0.95rem; }
+
+  .controls { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 28px; }
+  .control-group { margin-bottom: 18px; }
+  .control-group:last-child { margin-bottom: 0; }
+  .control-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .control-group .value-display { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
+  .control-row { display: flex; flex-wrap: wrap; gap: 16px; }
+  .control-row .control-group { flex: 1; min-width: 160px; }
+  input[type="range"] { width: 100%; height: 6px; -webkit-appearance: none; appearance: none; background: var(--border); border-radius: 3px; outline: none; cursor: pointer; }
+  input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg-card); cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+  input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg-card); cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+  select { width: 100%; padding: 10px 14px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-size: 0.95rem; cursor: pointer; outline: none; transition: border-color 0.15s; }
+  select:focus { border-color: var(--accent); }
+  select option { background: var(--bg); color: var(--text); }
+
+  .score-section { text-align: center; margin-bottom: 28px; }
+  .score-ring { width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; position: relative; background: conic-gradient(var(--accent) 0deg, var(--border) 0deg); }
+  .score-ring-inner { width: 110px; height: 110px; border-radius: 50%; background: var(--bg-card); display: flex; align-items: center; justify-content: center; flex-direction: column; }
+  .score-number { font-size: 2.4rem; font-weight: 800; }
+  .score-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .score-verdict { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
+  .score-verdict.good { color: var(--green); }
+  .score-verdict.warning { color: var(--yellow); }
+  .score-verdict.bad { color: var(--red); }
+  .score-recommendation { color: var(--text-muted); font-size: 0.9rem; max-width: 500px; margin: 0 auto; }
+
+  .criteria { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+  .criterion { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; display: flex; align-items: center; gap: 14px; }
+  .criterion-icon { font-size: 1.5rem; width: 32px; text-align: center; }
+  .criterion-content { flex: 1; }
+  .criterion-name { font-size: 0.85rem; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .criterion-detail { font-size: 0.8rem; color: var(--text-muted); }
+  .criterion-badge { padding: 3px 12px; border-radius: 12px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; }
+  .criterion-badge.pass { background: rgba(16,185,129,0.15); color: var(--green); }
+  .criterion-badge.warn { background: rgba(245,158,11,0.15); color: var(--yellow); }
+  .criterion-badge.fail { background: rgba(239,68,68,0.15); color: var(--red); }
+
+  .details { color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 28px; }
+  .details h3 { color: var(--text); font-size: 0.95rem; margin-bottom: 8px; }
+  .details p { margin-bottom: 6px; }
+  .details li { margin-bottom: 4px; margin-left: 18px; }
+
+  .footer { text-align: center; padding: 32px 0 0; border-top: 1px solid var(--border); margin-top: 40px; color: var(--text-muted); font-size: 0.9rem; }
+  .footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    .control-row { flex-direction: column; gap: 12px; }
+    .control-row .control-group { min-width: auto; }
+    .criterion { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="/tools/" class="back-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+    All Tools
+  </a>
+  <h1>Audio Quality Checker</h1>
+  <p class="subtitle">Score your field recording's readiness for transcription. Adjust parameters below to match your audio and get a quality score with specific recommendations.</p>
+
+  <div class="controls">
+    <div class="control-row">
+      <div class="control-group">
+        <label>Duration (minutes)</label>
+        <input type="range" id="durationSlider" min="1" max="120" value="15" oninput="calculate()" />
+        <span class="value-display" id="durationDisplay">15 min</span>
+      </div>
+      <div class="control-group">
+        <label>Sample Rate</label>
+        <select id="sampleRateSelect" onchange="calculate()">
+          <option value="8">8 kHz (Phone)</option>
+          <option value="16" selected>16 kHz (VoIP/Wideband)</option>
+          <option value="22">22 kHz (FM Radio)</option>
+          <option value="44">44.1 kHz (CD Quality)</option>
+          <option value="48">48 kHz (Studio Quality)</option>
+        </select>
+      </div>
+    </div>
+    <div class="control-row">
+      <div class="control-group">
+        <label>Background Noise</label>
+        <select id="noiseSelect" onchange="calculate()">
+          <option value="none">None — Quiet indoor</option>
+          <option value="low">Low — Office ambience</option>
+          <option value="medium" selected>Medium — Construction site</option>
+          <option value="high">High — Heavy machinery</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label>Speaker Count</label>
+        <select id="speakerSelect" onchange="calculate()">
+          <option value="1">1 (Solo)</option>
+          <option value="2">2 (Duo)</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5+</option>
+        </select>
+      </div>
+    </div>
+    <div class="control-group">
+      <label>Microphone Type</label>
+      <select id="micSelect" onchange="calculate()">
+        <option value="builtin">Built-in Laptop/Phone</option>
+        <option value="usb">USB Headset</option>
+        <option value="lavalier" selected>Lavalier Lapel Mic</option>
+        <option value="professional">Professional XLR/Dynamic</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="score-section">
+    <div class="score-ring" id="scoreRing">
+      <div class="score-ring-inner">
+        <div class="score-number" id="scoreNum">72</div>
+        <div class="score-label">/ 100</div>
+      </div>
+    </div>
+    <div class="score-verdict" id="verdict">GOOD</div>
+    <div class="score-recommendation" id="recommendation">Your audio should transcribe well. Consider using a lavalier mic for best results.</div>
+  </div>
+
+  <div class="criteria" id="criteriaList"></div>
+
+  <div class="details">
+    <h3>What affects transcription quality?</h3>
+    <p><strong>Sample Rate</strong>: 16 kHz minimum for good ASR. 8 kHz (phone quality) loses high-frequency consonants causing word errors. 44.1 kHz+ captures full frequency range.</p>
+    <p><strong>Background Noise</strong>: Even moderate construction site noise (tools, wind, traffic) reduces accuracy by 15–30%. Use noise-cancelling or close-mic techniques.</p>
+    <p><strong>Microphone Type</strong>: Lavalier or headset mics capture clear speech at the source, rejecting ambient noise. Built-in mics pick up full room reverb.</p>
+    <p><strong>Speaker Count</strong>: Solo speakers transcribe best. Each additional speaker adds crosstalk and diarization errors, reducing per-speaker accuracy.</p>
+    <p><strong>Duration</strong>: Shorter clips (under 30 min) have lower risk of drift. Longer recordings benefit from periodic restarts or chapter markers.</p>
+  </div>
+
+  <div class="footer">
+    <p>Powered by <a href="https://voicelogpro.com/">VoiceLogPro</a> — turn voice notes into formatted daily reports in 60 seconds.</p>
+  </div>
+</div>
+
+<script>
+const SAMPLE_RATE_SCORES = { 8: 30, 16: 65, 22: 80, 44: 95, 48: 100 };
+const NOISE_SCORES = { none: 100, low: 75, medium: 50, high: 20 };
+const MIC_SCORES = { builtin: 40, usb: 65, lavalier: 85, professional: 100 };
+const SPEAKER_SCORES = { 1: 100, 2: 80, 3: 65, 4: 50, 5: 35 };
+
+function calculate() {
+  const duration = parseFloat(document.getElementById('durationSlider').value);
+  const sampleRate = parseInt(document.getElementById('sampleRateSelect').value);
+  const noise = document.getElementById('noiseSelect').value;
+  const speakers = parseInt(document.getElementById('speakerSelect').value);
+  const mic = document.getElementById('micSelect').value;
+
+  document.getElementById('durationDisplay').textContent = duration + ' min';
+
+  // Duration score: shorter is better, ideal <30min
+  let durationScore = 100;
+  if (duration > 60) durationScore = 40;
+  else if (duration > 30) durationScore = 65;
+  else if (duration > 15) durationScore = 85;
+
+  const srScore = SAMPLE_RATE_SCORES[sampleRate] || 50;
+  const noiseScore = NOISE_SCORES[noise] || 50;
+  const micScore = MIC_SCORES[mic] || 50;
+  const speakerScore = SPEAKER_SCORES[speakers] || 50;
+
+  // Weighted overall score
+  const totalScore = Math.round(
+    srScore * 0.25 +
+    noiseScore * 0.30 +
+    micScore * 0.25 +
+    speakerScore * 0.10 +
+    durationScore * 0.10
+  );
+
+  // Score ring
+  const degrees = (totalScore / 100) * 360;
+  const ring = document.getElementById('scoreRing');
+  ring.style.background = `conic-gradient(var(--accent) 0deg, var(--accent) ${degrees}deg, var(--border) ${degrees}deg)`;
+
+  document.getElementById('scoreNum').textContent = totalScore;
+
+  // Verdict
+  let verdictEl = document.getElementById('verdict');
+  let recommendation = '';
+  if (totalScore >= 80) {
+    verdictEl.className = 'score-verdict good';
+    verdictEl.textContent = '✅ EXCELLENT';
+    recommendation = 'Your audio is transcription-ready. High accuracy expected with any modern ASR provider.';
+  } else if (totalScore >= 60) {
+    verdictEl.className = 'score-verdict warning';
+    verdictEl.textContent = '⚠️ GOOD';
+    recommendation = 'Your audio should transcribe well. Consider improving your mic or recording environment for best results.';
+  } else if (totalScore >= 40) {
+    verdictEl.className = 'score-verdict warning';
+    verdictEl.textContent = '⚠️ FAIR';
+    recommendation = 'Transcription accuracy will be reduced. Recommended: use an external mic, reduce background noise, or increase sample rate.';
+  } else {
+    verdictEl.className = 'score-verdict bad';
+    verdictEl.textContent = '❌ POOR';
+    recommendation = 'Transcription will have significant errors. Switch to a lavalier or USB mic, reduce noise below medium, and use 16 kHz minimum sample rate.';
+  }
+  document.getElementById('recommendation').textContent = recommendation;
+
+  // Individual criteria
+  const criteria = [
+    {
+      icon: '🎵',
+      name: 'Sample Rate: ' + sampleRate + ' kHz',
+      detail: sampleRate < 16 ? 'Below minimum for good ASR' : sampleRate < 44 ? 'Adequate for most engines' : 'Studio quality',
+      score: srScore,
+      threshold: sampleRate < 16 ? 'fail' : sampleRate < 22 ? 'warn' : 'pass'
+    },
+    {
+      icon: '🔊',
+      name: 'Background Noise: ' + noise.charAt(0).toUpperCase() + noise.slice(1),
+      detail: noise === 'none' ? 'Ideal conditions' : noise === 'low' ? 'Minor interference' : noise === 'medium' ? 'Significant accuracy drop expected' : 'Heavy interference — not recommended',
+      score: noiseScore,
+      threshold: noise === 'high' ? 'fail' : noise === 'medium' ? 'warn' : 'pass'
+    },
+    {
+      icon: '🎤',
+      name: 'Microphone: ' + micLabel(mic),
+      detail: mic === 'professional' ? 'Best capture quality' : mic === 'lavalier' ? 'Good close-mic performance' : mic === 'usb' ? 'Decent but picks up room' : 'Poor — picks up full room echo',
+      score: micScore,
+      threshold: mic === 'builtin' ? 'warn' : 'pass'
+    },
+    {
+      icon: '👥',
+      name: 'Speakers: ' + (speakers === 5 ? '5+' : speakers),
+      detail: speakers === 1 ? 'Solo — ideal for diarization' : speakers <= 2 ? 'Manageable with good ASR' : speakers <= 3 ? 'Moderate crosstalk risk' : 'High crosstalk — accuracy drops',
+      score: speakerScore,
+      threshold: speakers >= 4 ? 'warn' : 'pass'
+    },
+    {
+      icon: '⏱',
+      name: 'Duration: ' + duration + ' min',
+      detail: duration <= 15 ? 'Short — minimal drift' : duration <= 30 ? 'Good — manageable length' : duration <= 60 ? 'Long — consider breaking into segments' : 'Very long — high drift risk, segment recommended',
+      score: durationScore,
+      threshold: duration > 60 ? 'warn' : 'pass'
+    }
+  ];
+
+  const list = document.getElementById('criteriaList');
+  list.innerHTML = '';
+  criteria.forEach(c => {
+    const div = document.createElement('div');
+    div.className = 'criterion';
+    const badgeClass = c.threshold;
+    const badgeLabel = badgeClass === 'pass' ? 'Pass' : badgeClass === 'warn' ? 'Warning' : 'Fail';
+    div.innerHTML = `
+      <div class="criterion-icon">${c.icon}</div>
+      <div class="criterion-content">
+        <div class="criterion-name">${c.name}</div>
+        <div class="criterion-detail">${c.detail}</div>
+      </div>
+      <div class="criterion-badge ${badgeClass}">${badgeLabel}</div>
+    `;
+    list.appendChild(div);
+  });
+}
+
+function micLabel(mic) {
+  const map = { builtin: 'Built-in Laptop/Phone', usb: 'USB Headset', lavalier: 'Lavalier Lapel Mic', professional: 'Professional XLR/Dynamic' };
+  return map[mic] || mic;
+}
+
+// Initial calculation
+calculate();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Audio Quality Checker for Transcription",
+  "url": "https://voicelogpro.com/tools/field-report-quality-checker.html",
+  "description": "Score your field audio recording's transcription readiness. Check sample rate, background noise, microphone type, speaker count, and duration against ASR best practices.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What sample rate is best for transcription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "16 kHz is the minimum for acceptable automatic speech recognition. 44.1 kHz or 48 kHz provides the best quality for transcription engines, capturing full frequency range including high-frequency consonants."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does background noise affect transcription accuracy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, significantly. Moderate construction site noise can reduce accuracy by 15-30%. Heavy machinery noise can make transcription nearly impossible without close-mic techniques or noise cancellation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What microphone is best for field transcription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lavalier lapel mic or headset mic is the best choice for field transcription. These close-mic solutions capture clear speech at the source and reject ambient noise better than built-in or USB microphones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many speakers can be transcribed accurately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solo speakers transcribe with the highest accuracy. With 2-3 speakers, modern ASR with diarization works reasonably well. Beyond 4 speakers, crosstalk significantly reduces per-speaker accuracy."
+      }
+    }
+  ]
+}
+</script>
+</body>
+</html>

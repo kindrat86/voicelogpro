@@ -16,4 +16,11 @@ for dir in vs for glossary faq learn alternatives-to pricing-questions integrati
     done
   fi
 done
+# Copy the embeddable widget farm (portfolio-network + tool widgets) so the
+# authority backlink mesh survives every redeploy — Vite's prerender step
+# does not carry /embed/* into dist/ on its own.
+if [ -d "embed" ]; then
+  mkdir -p "dist/embed/tools"
+  cp -R embed/. dist/embed/
+fi
 echo "Copied voicelogpro pSEO pages into dist/"
