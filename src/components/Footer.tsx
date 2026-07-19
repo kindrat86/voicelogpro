@@ -71,6 +71,9 @@ export function Footer() {
               <Link to="/contact" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 Contact
               </Link>
+              <a href="https://x.com/sipiteno" target="_blank" rel="me" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                X / Twitter
+              </a>
             </nav>
           </div>
         </div>
