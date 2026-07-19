@@ -14,6 +14,8 @@ import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { LimitedBetaSection } from "@/components/LimitedBetaSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
+import { organizationSchema } from "@/seo/softwareSchema";
+import { JsonLd } from "@/components/JsonLd";
 
 const Index = () => {
   return (
@@ -23,6 +25,7 @@ const Index = () => {
         <meta name="description" content="VoiceLogPro turns voice notes into formatted construction daily reports in 60 seconds. No typing. Works from any phone. Built for subcontractors who work with their hands." />
         <link rel="canonical" href="https://voicelogpro.com/" />
       </Helmet>
+      <JsonLd schema={[organizationSchema]} />
       <main className="min-h-screen bg-background">
         {/* 1. Hero with inline squeeze opt-in */}
         <HeroSection />
