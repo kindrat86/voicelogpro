@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Construction Daily Report Generator — VoiceLogPro</title>
+<meta name="robots" content="noindex, follow">
+<style>
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --border: #e7e5e4;
+  --text: #1c1917;
+  --text-muted: #78716c;
+  --accent: #d97706;
+  --accent-hover: #b45309;
+  --success: #15803d;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: #fff;
+  color: var(--text);
+  line-height: 1.5;
+  padding: 16px;
+}
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+.subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.card h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.form-group { margin-bottom: 10px; }
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1.5px solid var(--border);
+  border-radius: 5px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  background: #fff;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(217,119,6,0.1);
+}
+.form-group textarea { resize: vertical; min-height: 60px; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-outline { background: #fff; color: var(--text); border: 1.5px solid var(--border); }
+.btn-outline:hover { border-color: #a8a29e; }
+.btn-pdf { background: var(--success); color: #fff; }
+.btn-pdf:hover { background: #166534; }
+
+.report-preview {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+.report-preview .report-title {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid #292524;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+.report-preview .report-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: #57534e;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e7e5e4;
+}
+.report-preview .section-title {
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid #d6d3d1;
+  padding-bottom: 3px;
+  margin: 12px 0 6px;
+}
+.report-preview .report-section { margin-bottom: 6px; }
+.report-preview .report-section strong {
+  display: inline-block;
+  min-width: 110px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #57534e;
+}
+.report-preview .signature-block {
+  margin-top: 16px;
+  padding-top: 8px;
+  border-top: 1px solid #292524;
+  font-size: 0.8rem;
+  color: #57534e;
+}
+.report-preview .empty { color: #a8a29e; font-style: italic; }
+
+.powered-by {
+  text-align: center;
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.powered-by a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+@media print {
+  body { padding: 0; background: #fff; }
+  .card:first-of-type, .btn-row, .powered-by, h1, .subtitle { display: none !important; }
+  .grid { display: block; }
+  .card { box-shadow: none; border: none; padding: 10px 0; background: #fff; }
+}
+
+.toast {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c1917;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+
+<h1>📋 Free Construction Daily Report Generator</h1>
+<p class="subtitle">Fill out the form to generate a professional, court-admissible daily report — download as PDF or copy to clipboard.</p>
+
+<div class="grid">
+  <div class="card">
+    <h2>Report Details</h2>
+    <form id="reportForm" autocomplete="off">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Project Name *</label>
+          <input type="text" id="projectName" required placeholder="e.g., Oakwood Apartments — Phase 2">
+        </div>
+        <div class="form-group">
+          <label>Date *</label>
+          <input type="date" id="reportDate" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Weather</label>
+          <select id="weather">
+            <option value="">Select…</option>
+            <option>Clear / Sunny</option><option>Partly Cloudy</option><option>Overcast</option>
+            <option>Rain</option><option>Snow</option><option>Windy</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Temperature (°F)</label>
+          <input type="text" id="temperature" placeholder="e.g., 72°F">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Crew Size</label>
+          <input type="number" id="crewSize" placeholder="e.g., 5" min="0">
+        </div>
+        <div class="form-group">
+          <label>Crew Names</label>
+          <input type="text" id="crewNames" placeholder="e.g., Jose M., Dave K.">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Work Performed *</label>
+        <textarea id="workPerformed" required placeholder="Describe the work completed today in detail.&#10;&#10;e.g.,&#10;• Installed 240 ft of 2-inch EMT conduit, floors 3-4&#10;• Pulled 12 AWG THHN — 6 circuits&#10;• Wired 14 panels in units 302-315"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Materials Used</label>
+        <textarea id="materialsUsed" placeholder="e.g.,&#10;• 240 ft 2-inch EMT conduit&#10;• 900 ft 12 AWG THHN wire"></textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Equipment On Site</label>
+          <input type="text" id="equipment" placeholder="e.g., Scissor lift, drill">
+        </div>
+        <div class="form-group">
+          <label>Visitors / Inspections</label>
+          <input type="text" id="visitors" placeholder="e.g., City inspector">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Delays / Issues</label>
+        <input type="text" id="delays" placeholder="e.g., Material delay — expected Mon">
+      </div>
+      <div class="form-group">
+        <label>Safety Incidents</label>
+        <input type="text" id="safety" placeholder="e.g., None — or describe incident">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Submitted By *</label>
+          <input type="text" id="submittedBy" required placeholder="Your name / title">
+        </div>
+        <div class="form-group">
+          <label>Company</label>
+          <input type="text" id="company" placeholder="Company name">
+        </div>
+      </div>
+      <div class="btn-row">
+        <button type="submit" class="btn btn-primary">🔄 Generate Report</button>
+        <button type="button" class="btn btn-outline" id="btnClear">✕ Clear</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>📄 Preview</h2>
+    <div class="report-preview" id="preview">
+      <p style="color: #a8a29e; text-align: center; padding: 30px 0;">
+        Fill in the form and click <strong>Generate Report</strong> to preview your formatted daily report.
+      </p>
+    </div>
+    <div class="btn-row" id="actionButtons" style="display:none;">
+      <button class="btn btn-pdf" id="btnPrint">📥 Download PDF</button>
+      <button class="btn btn-outline" id="btnCopy">📋 Copy Text</button>
+    </div>
+  </div>
+</div>
+
+<div class="powered-by">
+  Powered by <a href="https://voicelogpro.com/" target="_blank" rel="noopener">VoiceLogPro</a> — voice-to-PDF construction daily reports
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function() {
+  const $ = (id) => document.getElementById(id);
+  const form = $('reportForm');
+  const preview = $('preview');
+  const actions = $('actionButtons');
+  const toast = $('toast');
+
+  $('reportDate').value = new Date().toISOString().slice(0, 10);
+
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  }
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '';
+    const d = new Date(dateStr + 'T12:00:00');
+    return d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  function esc(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function buildReport(data) {
+    if (!data.workPerformed) {
+      preview.innerHTML = '<p style="color: #a8a29e; text-align: center; padding: 30px 0;">Please fill in at least the <strong>Work Performed</strong> field.</p>';
+      actions.style.display = 'none';
+      return '';
+    }
+    const s = [];
+    s.push(`<div class="report-title">Construction Daily Report</div>`);
+    s.push(`<div class="report-meta"><span><strong>Project:</strong> ${esc(data.projectName || '—')}</span><span><strong>Date:</strong> ${formatDate(data.reportDate) || '—'}</span></div>`);
+    if (data.weather || data.temperature) {
+      s.push(`<div class="section-title">🌤 Site Conditions</div>`);
+      s.push(`<div class="report-section"><strong>Weather</strong> ${data.weather || '<span class="empty">Not recorded</span>'}</div>`);
+      if (data.temperature) s.push(`<div class="report-section"><strong>Temperature</strong> ${esc(data.temperature)}</div>`);
+    }
+    if (data.crewSize || data.crewNames) {
+      s.push(`<div class="section-title">👷 Crew</div>`);
+      if (data.crewSize) s.push(`<div class="report-section"><strong>Crew Size</strong> ${esc(data.crewSize)} on site</div>`);
+      if (data.crewNames) s.push(`<div class="report-section"><strong>Names</strong> ${esc(data.crewNames)}</div>`);
+    }
+    if (data.workPerformed) {
+      s.push(`<div class="section-title">🔨 Work Performed</div>`);
+      s.push(`<div class="report-section">${esc(data.workPerformed).replace(/\n/g, '<br>')}</div>`);
+    }
+    if (data.materialsUsed) {
+      s.push(`<div class="section-title">📦 Materials Used</div>`);
+      s.push(`<div class="report-section">${esc(data.materialsUsed).replace(/\n/g, '<br>')}</div>`);
+    }
+    if (data.equipment) s.push(`<div class="report-section"><strong>Equipment</strong> ${esc(data.equipment)}</div>`);
+    if (data.visitors) {
+      s.push(`<div class="section-title">🚶 Visitors / Inspections</div>`);
+      s.push(`<div class="report-section">${esc(data.visitors)}</div>`);
+    }
+    if (data.delays) {
+      s.push(`<div class="section-title">⚠ Delays / Issues</div>`);
+      s.push(`<div class="report-section">${esc(data.delays)}</div>`);
+    }
+    s.push(`<div class="section-title">🦺 Safety</div>`);
+    s.push(`<div class="report-section">${data.safety ? esc(data.safety) : '<span class="empty">No incidents reported</span>'}</div>`);
+    const now = new Date();
+    const ts = now.toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+    s.push(`<div class="signature-block">
+      <p><strong>Submitted by:</strong> ${esc(data.submittedBy || '—')}${data.company ? ' — ' + esc(data.company) : ''}</p>
+      <p><strong>Generated:</strong> ${ts}</p>
+      <p style="margin-top: 10px;">_________________________ &nbsp; _________________________</p>
+      <p style="margin-top: 2px; font-size: 0.75rem;">&nbsp;&nbsp;Submitted By&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reviewed By</p>
+    </div>`);
+    return s.join('\n');
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = {
+      projectName: $('projectName').value.trim(),
+      reportDate: $('reportDate').value,
+      weather: $('weather').value,
+      temperature: $('temperature').value.trim(),
+      crewSize: $('crewSize').value.trim(),
+      crewNames: $('crewNames').value.trim(),
+      workPerformed: $('workPerformed').value.trim(),
+      materialsUsed: $('materialsUsed').value.trim(),
+      equipment: $('equipment').value.trim(),
+      visitors: $('visitors').value.trim(),
+      delays: $('delays').value.trim(),
+      safety: $('safety').value.trim(),
+      submittedBy: $('submittedBy').value.trim(),
+      company: $('company').value.trim()
+    };
+    const html = buildReport(data);
+    if (html) {
+      preview.innerHTML = html;
+      actions.style.display = 'flex';
+    }
+  });
+
+  $('btnClear').addEventListener('click', function() {
+    form.reset();
+    $('reportDate').value = new Date().toISOString().slice(0, 10);
+    preview.innerHTML = '<p style="color: #a8a29e; text-align: center; padding: 30px 0;">Fill in the form and click <strong>Generate Report</strong> to preview your formatted daily report.</p>';
+    actions.style.display = 'none';
+  });
+
+  $('btnPrint').addEventListener('click', () => window.print());
+  $('btnCopy').addEventListener('click', () => {
+    navigator.clipboard.writeText(preview.innerText).then(() => showToast('✓ Copied!')).catch(() => showToast('Copy failed — select and copy manually'));
+  });
+})();
+</script>
+</body>
+</html>

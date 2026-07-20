@@ -22,7 +22,7 @@ const Index = () => {
     <>
       <Helmet>
         <title>VoiceLogPro | Daily Construction Reports from Voice Notes</title>
-        <meta name="description" content="VoiceLogPro turns voice notes into formatted construction daily reports in 60 seconds. No typing. Works from any phone. Built for subcontractors who work with their hands." />
+        <meta name="description" content="VoiceLogPro turns voice notes into daily construction reports in 60 seconds. No typing. Works from any phone. Built for subcontractors." />
         <link rel="canonical" href="https://voicelogpro.com/" />
       </Helmet>
       <JsonLd schema={[organizationSchema]} />
