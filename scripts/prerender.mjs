@@ -35,12 +35,10 @@ const ALL_LANGUAGE_CODES = [
   'cy', 'ga', 'gd', 'br', 'is', 'lb', 'mt',
 ];
 
-/** Generate hreflang tags for all 97 languages. */
+/** Generate hreflang tags — single-locale site, valid self-referencing pair only. */
 function generateHreflangTags(canonicalUrl) {
-  const tags = ALL_LANGUAGE_CODES.map(code =>
-    `    <link rel="alternate" hreflang="${code}" href="${canonicalUrl}" />`
-  ).join('\n');
-  return tags + '\n    <link rel="alternate" hreflang="x-default" href="' + canonicalUrl + '" />';
+  return `    <link rel="alternate" hreflang="en" href="${canonicalUrl}" />\n` +
+         `    <link rel="alternate" hreflang="x-default" href="${canonicalUrl}" />`;
 }
 
 // All routes to prerender (matching the sitemap + prerender/routes.ts list)
