@@ -17,6 +17,10 @@ for dir in vs for glossary faq learn alternatives-to pricing-questions integrati
     for subdir in "$dir"/*/; do
       [ -d "$subdir" ] || continue
       slug=$(basename "$subdir")
+      # Skip trade pages that have rich React prerender equivalents (TradePage.tsx)
+      if [ "$dir" = "for" ] && [[ "$slug" =~ ^(electricians|plumbers|hvac-contractors|roofers|general-contractors)$ ]]; then
+        continue
+      fi
       if [ -f "$subdir/index.html" ]; then
         cp "$subdir/index.html" "dist/$dir/$slug.html"
       fi
