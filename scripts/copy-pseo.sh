@@ -6,6 +6,13 @@ for dir in vs for glossary faq learn alternatives-to pricing-questions integrati
     mkdir -p "dist/$dir"
     # Copy flat .html files
     find "$dir" -maxdepth 1 -name "*.html" -exec cp {} "dist/$dir/" \; 2>/dev/null || true
+    # Remove pSEO flat files that have rich React prerender equivalents,
+    # so cleanUrls doesn't serve the 7KB thin version over the 69KB React page.
+    # These 5 trade pages each have a TradePage.tsx SSR prerender.
+    if [ "$dir" = "for" ]; then
+      rm -f dist/for/electricians.html dist/for/plumbers.html dist/for/hvac-contractors.html \
+            dist/for/roofers.html dist/for/general-contractors.html
+    fi
     # Copy directory-based index.html as flat .html
     for subdir in "$dir"/*/; do
       [ -d "$subdir" ] || continue
