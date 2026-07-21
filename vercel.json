@@ -223,9 +223,35 @@
     {
       "source": "/industries/:slug",
       "destination": "/industries/:slug.html"
+    },
+    {
+      "source": "/data",
+      "destination": "/data/index.html"
+    },
+    {
+      "source": "/data/",
+      "destination": "/data/index.html"
+    },
+    {
+      "source": "/data/(.*)/",
+      "destination": "/data/$1/index.html"
+    },
+    {
+      "source": "/data/(.*)",
+      "destination": "/data/$1/index.html"
     }
   ],
   "redirects": [
+    {
+      "source": "/((?:en|zh-CN|hi|es|fr|ar|bn|pt|ru|ur|id|de|ja|mr|te|tr|ta|vi|yue|pa-PK|ko|fa|it|th|gu|kn|ml|or|pl|uk|nl|ro|el|cs|hu|sv|fi|no|da|he|sw|am|so|ha|yo|ig|zu|xh|af|ms|my|km|lo|ne|si|ps|kk|uz|az|ka|hy|mn|bo|ug|tl|ceb|ilo|jv|su|mad|hmn|ku|bal|tg|tk|sq|sr|hr|bs|sk|sl|lt|lv|et|be|bg|mk|ca|eu|gl|cy|ga|gd|br|is|lb|mt))$",
+      "destination": "https://voicelogpro.com/",
+      "permanent": false
+    },
+    {
+      "source": "/((?:en|zh-CN|hi|es|fr|ar|bn|pt|ru|ur|id|de|ja|mr|te|tr|ta|vi|yue|pa-PK|ko|fa|it|th|gu|kn|ml|or|pl|uk|nl|ro|el|cs|hu|sv|fi|no|da|he|sw|am|so|ha|yo|ig|zu|xh|af|ms|my|km|lo|ne|si|ps|kk|uz|az|ka|hy|mn|bo|ug|tl|ceb|ilo|jv|su|mad|hmn|ku|bal|tg|tk|sq|sr|hr|bs|sk|sl|lt|lv|et|be|bg|mk|ca|eu|gl|cy|ga|gd|br|is|lb|mt))/(.*)",
+      "destination": "/$2",
+      "permanent": false
+    },
     {
       "source": "/:path*",
       "has": [

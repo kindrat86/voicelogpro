@@ -17,6 +17,25 @@ import { Footer } from "@/components/Footer";
 import { organizationSchema } from "@/seo/softwareSchema";
 import { JsonLd } from "@/components/JsonLd";
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://voicelogpro.com/#person",
+  name: "Maryan Kushnir",
+  description: "Founder of VoiceLogPro. Electrical foreman turned software builder, building voice-first daily reporting tools for construction subcontractors.",
+  sameAs: [
+    "https://github.com/kindrat86",
+    "https://x.com/sipiteno",
+    "https://www.linkedin.com/in/kushnir-maryan"
+  ],
+  knowsAbout: [
+    "Construction Daily Reporting",
+    "Texas Property Code Chapter 53",
+    "Mechanics Lien Documentation",
+    "Voice-to-PDF Technology"
+  ]
+};
+
 const Index = () => {
   return (
     <>
@@ -25,7 +44,7 @@ const Index = () => {
         <meta name="description" content="VoiceLogPro turns voice notes into daily construction reports in 60 seconds. No typing. Works from any phone. Built for subcontractors." />
         <link rel="canonical" href="https://voicelogpro.com/" />
       </Helmet>
-      <JsonLd schema={[organizationSchema]} />
+      <JsonLd schema={[organizationSchema, personSchema]} />
       <main className="min-h-screen bg-background">
         {/* 1. Hero with inline squeeze opt-in */}
         <HeroSection />

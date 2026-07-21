@@ -4,6 +4,23 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { competitors } from "@/content/comparisons";
+import { JsonLd } from "@/components/JsonLd";
+
+const comparisonsListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "VoiceLogPro vs Competitors",
+  description: "Honest, detailed comparisons showing why subcontractors choose VoiceLogPro for payment protection.",
+  url: "https://voicelogpro.com/compare",
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  numberOfItems: competitors.length,
+  itemListElement: competitors.map((comp, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: `${comp.name} vs VoiceLogPro`,
+    url: `https://voicelogpro.com/${comp.slug}-vs-voice-log-pro`
+  }))
+};
 
 export default function ComparisonsHub() {
   return (
@@ -13,6 +30,7 @@ export default function ComparisonsHub() {
         <meta name="description" content="See how VoiceLogPro compares to Procore, Buildertrend, Contractor Foreman, JobNimbus, and Knowify. Honest comparisons for subcontractors who need payment protection." />
         <link rel="canonical" href="https://voicelogpro.com/compare" />
       </Helmet>
+      <JsonLd schema={comparisonsListSchema} />
 
       <main className="min-h-screen bg-background">
         <section className="section-container max-w-4xl mx-auto py-16 px-4">

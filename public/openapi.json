@@ -1,23 +1,204 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "VoiceLogPro",
-    "description": "Voice-to-PDF daily construction log app for contractors.",
+    "title": "VoiceLogPro API",
+    "description": "Voice-to-PDF daily construction log API. Generate court-ready daily reports from voice recordings for construction subcontractors.",
     "version": "1.0.0",
     "contact": {
-      "url": "https://voicelogpro.com"
+      "url": "https://voicelogpro.com",
+      "email": "hello@voicelogpro.com"
     }
   },
   "servers": [
     {
-      "url": "https://voicelogpro.com"
+      "url": "https://voicelogpro.com",
+      "description": "Production"
     }
   ],
-  "paths": {},
+  "paths": {
+    "/api/speech-to-text": {
+      "post": {
+        "summary": "Convert voice recording to daily report text",
+        "description": "Transcribes a voice recording and structures it into a daily construction report format with crew, weather, and materials sections.",
+        "operationId": "speechToText",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "audio/wav": {
+              "schema": {
+                "type": "string",
+                "format": "binary",
+                "description": "Voice recording file (WAV/MP3/M4A)"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Transcribed and structured daily report text",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "transcript": { "type": "string" },
+                    "structured_report": {
+                      "type": "object",
+                      "properties": {
+                        "crew": { "type": "string" },
+                        "work_performed": { "type": "string" },
+                        "materials": { "type": "array", "items": { "type": "string" } },
+                        "weather": { "type": "string" },
+                        "notes": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/generate-pdf": {
+      "post": {
+        "summary": "Generate court-ready PDF report",
+        "description": "Generates a timestamped, court-admissible PDF daily report from structured report data.",
+        "operationId": "generatePdf",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "report_data": {
+                    "type": "object",
+                    "description": "Structured daily report data"
+                  },
+                  "include_weather": {
+                    "type": "boolean",
+                    "default": true
+                  },
+                  "include_photos": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "required": ["report_data"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "PDF report generated successfully",
+            "content": {
+              "application/pdf": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/compliance-check": {
+      "post": {
+        "summary": "Check report for compliance requirements",
+        "description": "Validates a daily report against jurisdiction-specific compliance requirements (Texas Chapter 53, NSW SOPA, UK Building Safety Act).",
+        "operationId": "complianceCheck",
+        "parameters": [
+          {
+            "name": "jurisdiction",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["texas-ch53", "nsw-sopa", "uk-bsa-golden-thread"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Compliance check results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "passed": { "type": "boolean" },
+                    "missing_fields": { "type": "array", "items": { "type": "string" } },
+                    "recommendations": { "type": "array", "items": { "type": "string" } }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/subscribe": {
+      "post": {
+        "summary": "Join the waitlist / subscribe",
+        "description": "Subscribe to the VoiceLogPro waitlist or newsletter.",
+        "operationId": "subscribe",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string", "format": "email" },
+                  "name": { "type": "string" },
+                  "trade": {
+                    "type": "string",
+                    "enum": ["electrician", "plumber", "hvac", "roofer", "general-contractor", "other"]
+                  }
+                },
+                "required": ["email"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully subscribed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "message": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "tags": [
     {
-      "name": "content",
-      "description": "Site content"
+      "name": "voice",
+      "description": "Voice-to-text and audio processing"
+    },
+    {
+      "name": "pdf",
+      "description": "PDF report generation"
+    },
+    {
+      "name": "compliance",
+      "description": "Legal compliance checks"
+    },
+    {
+      "name": "subscription",
+      "description": "Waitlist and subscription management"
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "VoiceLogPro",
+  "name_for_model": "voicelogpro",
+  "description_for_human": "Voice-to-PDF daily construction reports. Turn voice notes into legally defensible PDF reports for subcontractors.",
+  "description_for_model": "VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors. Users can convert voice notes into timestamped, court-admissible PDF daily reports with weather data, photo attachments, and crew logs. Supports compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://voicelogpro.com/openapi.json"
+  },
+  "logo_url": "https://voicelogpro.com/images/og-card.jpg",
+  "contact_email": "hello@voicelogpro.com",
+  "legal_info_url": "https://voicelogpro.com/terms"
+}

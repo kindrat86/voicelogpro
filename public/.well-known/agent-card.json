@@ -1,0 +1,38 @@
+{
+  "protocolVersion": "0.3.0",
+  "name": "VoiceLogPro Agent",
+  "description": "Voice-powered construction daily log app. Dictate your daily report hands-free and generate compliant, professional logs in seconds.",
+  "url": "https://voicelogpro.com/api/a2a",
+  "preferredTransport": "JSONRPC",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "create_daily_log",
+      "name": "Create Construction Daily Log",
+      "description": "Generate a professional construction daily log from voice input. Includes weather, work performed, crew, equipment, delays, and safety notes.",
+      "tags": [
+        "construction",
+        "daily-log",
+        "voice",
+        "field-report"
+      ],
+      "examples": [
+        "Create a daily log for today",
+        "Dictate my construction report"
+      ]
+    }
+  ]
+}

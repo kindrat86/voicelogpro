@@ -1,0 +1,17 @@
+{
+  "name": "VoiceLogPro",
+  "description": "Voice-to-PDF daily construction reporting for subcontractors. Converts voice notes into legally defensible PDF reports with timestamps, weather data, and photo attachments.",
+  "url": "https://voicelogpro.com",
+  "category": "productivity",
+  "tools": [
+    {
+      "name": "search_content",
+      "description": "Search VoiceLogPro content pages, guides, and documentation about construction daily reporting, lien law, and compliance",
+      "url": "https://voicelogpro.com/search"
+    }
+  ],
+  "supports": {
+    "streaming": false,
+    "webhooks": false
+  }
+}

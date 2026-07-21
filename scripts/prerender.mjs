@@ -21,6 +21,28 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distPath = path.resolve(__dirname, '../dist');
 const indexHtmlPath = path.join(distPath, 'index.html');
 
+// All 97 supported language codes (must match src/i18n/languages.ts)
+const ALL_LANGUAGE_CODES = [
+  'en', 'zh-CN', 'hi', 'es', 'fr', 'ar', 'bn', 'pt', 'ru', 'ur',
+  'id', 'de', 'ja', 'mr', 'te', 'tr', 'ta', 'vi', 'yue', 'pa-PK',
+  'ko', 'fa', 'it', 'th', 'gu', 'kn', 'ml', 'or', 'pl', 'uk',
+  'nl', 'ro', 'el', 'cs', 'hu', 'sv', 'fi', 'no', 'da', 'he',
+  'sw', 'am', 'so', 'ha', 'yo', 'ig', 'zu', 'xh', 'af', 'ms',
+  'my', 'km', 'lo', 'ne', 'si', 'ps', 'kk', 'uz', 'az', 'ka',
+  'hy', 'mn', 'bo', 'ug', 'tl', 'ceb', 'ilo', 'jv', 'su', 'mad',
+  'hmn', 'ku', 'bal', 'tg', 'tk', 'sq', 'sr', 'hr', 'bs', 'sk',
+  'sl', 'lt', 'lv', 'et', 'be', 'bg', 'mk', 'ca', 'eu', 'gl',
+  'cy', 'ga', 'gd', 'br', 'is', 'lb', 'mt',
+];
+
+/** Generate hreflang tags for all 97 languages. */
+function generateHreflangTags(canonicalUrl) {
+  const tags = ALL_LANGUAGE_CODES.map(code =>
+    `    <link rel="alternate" hreflang="${code}" href="${canonicalUrl}" />`
+  ).join('\n');
+  return tags + '\n    <link rel="alternate" hreflang="x-default" href="' + canonicalUrl + '" />';
+}
+
 // All routes to prerender (matching the sitemap + prerender/routes.ts list)
 const PRERENDER_ROUTES = [
   '/',
@@ -131,6 +153,16 @@ async function prerender() {
       // Strip default SEO tags from template — Helmet provides per-route ones.
       // Pass helmetHead so we only strip template canonical/OG/Twitter that Helmet replaces.
       routeHtml = stripDefaultHeadTags(routeHtml, helmetHead);
+
+      // Strip the template's hardcoded hreflang tags (we inject per-route ones below).
+      routeHtml = routeHtml.replace(/<!-- hreflang:.*?-->[\s\S]*?<link rel="alternate" hreflang="x-default"[^>]*\/>\n?/, '');
+
+      // Inject hreflang tags for all 97 supported languages.
+      // Extract canonical URL from helmet or fall back to route path.
+      const canonicalMatch = (helmetHead || routeHtml).match(/<link rel="canonical"[^>]*href="([^"]+)"/);
+      const canonicalUrl = canonicalMatch ? canonicalMatch[1] : `https://voicelogpro.com${route === '/' ? '' : route}`;
+      const hreflangTags = generateHreflangTags(canonicalUrl);
+      routeHtml = routeHtml.replace('</head>', `${hreflangTags}\n</head>`);
 
       // Inject helmet head tags before </head>
       // These include <title>, <meta name="description">, <link rel="canonical"> from each page's Helmet component

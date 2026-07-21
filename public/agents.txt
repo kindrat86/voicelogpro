@@ -1,0 +1,5 @@
+# VoiceLogPro — Agent Reference
+# Voice-to-PDF daily construction reports for subcontractors.
+# Turn glove-on voice notes into court-ready PDFs in 30 seconds.
+# Contact: hello@voicelogpro.com
+# Site: https://voicelogpro.com

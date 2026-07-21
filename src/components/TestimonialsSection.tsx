@@ -1,5 +1,6 @@
 import { CTAButton } from "@/components/CTAButton";
 import { AudioTestimonialButton } from "@/components/AudioTestimonialButton";
+import { useEffect } from "react";
 // Served from public/images so dev, SPA bundle, and prerendered HTML all
 // resolve the same URL (src/assets imports broke the prerendered pages).
 const jasonImage = "/images/testimonial-jason.webp";
@@ -24,6 +25,50 @@ const testimonials = [
 ];
 
 export function TestimonialsSection() {
+  // Inject Review schema for testimonial E-E-A-T boost
+  useEffect(() => {
+    const existing = document.getElementById("review-schema");
+    if (existing) return;
+    const script = document.createElement("script");
+    script.id = "review-schema";
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "VoiceLogPro",
+      description: "Voice-to-PDF daily construction reporting tool for subcontractors",
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "5",
+            bestRating: "5",
+          },
+          author: { "@type": "Person", name: "Jason T." },
+          reviewBody: "Saved us $22,000 on a weather delay dispute. Timestamped, weather-tagged, photos attached — case closed in 90 seconds.",
+        },
+        {
+          "@type": "Review",
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "5",
+            bestRating: "5",
+          },
+          author: { "@type": "Person", name: "Maria R." },
+          reviewBody: "Cut daily reporting from 45 minutes to 8 minutes. Zero logs lost in 2 months of beta use.",
+        },
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5.0",
+        bestRating: "5",
+        ratingCount: "2",
+        reviewCount: "2",
+      },
+    });
+    document.head.appendChild(script);
+  }, []);
   return (
     <section className="section-container">
       <h2 className="headline-section text-foreground mb-10 text-center">

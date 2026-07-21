@@ -1,0 +1,47 @@
+[
+  {
+    "label": "Global voice AI market size (2026 est.)",
+    "value": "$31.9B",
+    "source": "MarketsandMarkets Voice AI Forecast 2026"
+  },
+  {
+    "label": "Speech recognition accuracy (state-of-art 2025)",
+    "value": "97.3%",
+    "source": "Stanford AI Index Report 2025"
+  },
+  {
+    "label": "Call analytics market CAGR (2025-2030)",
+    "value": "18.2%",
+    "source": "Grand View Research Call Analytics 2025"
+  },
+  {
+    "label": "Contact centers using AI analytics (2025)",
+    "value": "42%",
+    "source": "Gartner Contact Center Survey 2025"
+  },
+  {
+    "label": "Average call transcription accuracy (industry)",
+    "value": "86-92%",
+    "source": "Forrester Speech Analytics Wave 2025"
+  },
+  {
+    "label": "Weekly meetings per knowledge worker (avg)",
+    "value": "17.1",
+    "source": "Microsoft Work Trend Index 2025"
+  },
+  {
+    "label": "% of meetings not summarized/actioned",
+    "value": "63%",
+    "source": "Atlassian Teamwork Survey 2025"
+  },
+  {
+    "label": "Voice assistant users globally (2025)",
+    "value": "~4.6B",
+    "source": "Statista Digital Economy Compass 2025"
+  },
+  {
+    "label": "ROI from call analytics (median reported)",
+    "value": "290%",
+    "source": "Aberdeen Group Call Analytics Study 2025"
+  }
+]

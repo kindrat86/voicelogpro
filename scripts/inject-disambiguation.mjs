@@ -22,12 +22,20 @@ const ORG = {
   description: "VoiceLogPro is a voice-to-PDF daily construction log app for contractors — general contractors, electricians, plumbers, HVAC, and roofers speak their on-site daily report and it becomes a timestamped, court-admissible PDF with fields for weather, crew, work performed, and materials, protecting mechanic's-lien and delay claims.",
   disambiguatingDescription: 'VoiceLogPro is a voice-to-PDF daily construction log app (voice on-site → timestamped, court-admissible daily-report PDF) — not a general-purpose meeting/voice-transcription tool (Otter, Rev, Fireflies), and not a full construction-management platform (Procore, Raken).',
   foundingDate: '2024',
-  sameAs: ['https://github.com/kindrat86'],
+  sameAs: ['https://github.com/kindrat86', 'https://x.com/data_nerd', 'https://www.linkedin.com/in/kushnir-maryan/', 'https://sipiteno.com', 'https://invisibleexit.com', 'https://signals.gitdealflow.com', 'https://sanctionsai.dev'],
 };
 const BLOCK = MARKER + '<script type="application/ld+json">' + JSON.stringify(ORG) + '</script>';
 const SKIP = new Set(['assets', 'og', '_app', 'node_modules']);
 
 let injected = 0;
+let fixedCorrupted = 0;
+
+function fixCorruptedJsonLd(html) {
+  // Fix the literal `https://***@type` corruption in all pSEO pages
+  // The growth engine emits `"@context":"https://***@type"` instead of `"@context":"https://schema.org","@type"`
+  return html.replace(/"@context":"https:\/\/\*\*\*@type"/g, '"@context":"https://schema.org","@type"');
+}
+
 function walk(dir) {
   let entries;
   try { entries = readdirSync(dir, { withFileTypes: true }); } catch { return; }
@@ -37,6 +45,15 @@ function walk(dir) {
     const p = join(dir, e.name);
     let t;
     try { t = readFileSync(p, 'utf8'); } catch { continue; }
+    // Fix corrupted JSON-LD blocks (https://***@type → https://schema.org","@type)
+    if (t.includes('https://***@type')) {
+      const before = t.match(/https:\/\/\*\*\*@type/g)?.length || 0;
+      t = fixCorruptedJsonLd(t);
+      if (t !== readFileSync(p, 'utf8')) {
+        writeFileSync(p, t);
+        fixedCorrupted += before;
+      }
+    }
     // Step 1: Replace any old MARKER-tagged injected block with current canonical
     if (t.includes(MARKER)) {
       const oldBlockPattern = new RegExp(MARKER + '<script type="application/ld\\+json">[^<]*</script>', 'g');
@@ -80,7 +97,7 @@ function walk(dir) {
 
 if (existsSync(DIST)) {
   walk(DIST);
-  console.log(`✓ disambiguation: injected into ${injected} built pages`);
+  console.log(`✓ disambiguation: injected into ${injected} built pages, fixed ${fixedCorrupted} corrupted JSON-LD blocks`);
 } else {
   console.log('(no dist/ — skipping disambiguation injection)');
 }
