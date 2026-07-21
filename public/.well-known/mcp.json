@@ -1,0 +1,14 @@
+{
+  "name": "VoiceLog Pro",
+  "description": "Voice-logged evidence and AI-transcribed documentation for compliance, legal, and field operations.",
+  "url": "https://voicelogpro.com",
+  "version": "1.0.0",
+  "capabilities": [
+    {
+      "name": "voice_log_lookup",
+      "description": "Voice logging compliance documentation and AI transcription evidence",
+      "endpoint": "https://voicelogpro.com/answers/"
+    }
+  ],
+  "documentation": "https://voicelogpro.com/llms.txt"
+}

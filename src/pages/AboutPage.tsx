@@ -29,7 +29,13 @@ const organizationSchema = {
   disambiguatingDescription:
     "VoiceLogPro is a voice-to-PDF daily construction log app (voice on-site → timestamped, court-admissible daily-report PDF) — not a general-purpose meeting/voice-transcription tool (Otter, Rev, Fireflies), and not a full construction-management platform (Procore, Raken).",
   foundingDate: "2024",
-  sameAs: ["https://github.com/kindrat86"],
+  sameAs: [
+    "https://github.com/kindrat86",
+    "https://x.com/sipiteno",
+    "https://linkedin.com/company/voicelogpro",
+    "https://www.linkedin.com/in/kushnir-maryan",
+    "https://www.indiehackers.com/product/unlock-saas"
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",

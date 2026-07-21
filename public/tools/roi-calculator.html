@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice Log ROI Calculator — VoiceLogPro</title>
+<meta name="description" content="Calculate how much your field team saves by switching from manual reporting to AI voice transcription.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Voice Log ROI Calculator","url":"https://voicelogpro.com/tools/roi-calculator","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Calculate field team savings from AI voice transcription vs manual reporting.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,system-ui,sans-serif;background:#0a0a0a;color:#e0e0e0;line-height:1.6;padding:20px;max-width:640px;margin:0 auto}
+h1{color:#fff;font-size:1.6em;margin-bottom:4px}
+h1 span{color:#3b82f6}
+.subtitle{color:#888;margin-bottom:24px;font-size:.95em}
+.card{background:#111;border:1px solid #1a1a1a;border-radius:12px;padding:20px;margin:16px 0}
+.card h3{color:#3b82f6;margin-bottom:12px;font-size:1em}
+label{display:block;color:#999;font-size:.85em;margin:10px 0 4px}
+input[type=range]{width:100%;margin:8px 0}
+.range-val{color:#3b82f6;font-weight:700;float:right}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.result-item{background:#111;border:1px solid #1a1a1a;border-radius:10px;padding:16px;text-align:center}
+.result-item .value{font-size:1.6em;font-weight:800;color:#3b82f6}
+.result-item .label{color:#888;font-size:.8em;margin-top:4px}
+.savings{background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);border-radius:12px;padding:20px;text-align:center;margin:16px 0}
+.savings .big{font-size:2.2em;font-weight:800;color:#3b82f6}
+.savings .sub{color:#888;font-size:.9em}
+.embed-box{background:#111;border:1px solid #1a1a1a;border-radius:12px;padding:16px;margin:20px 0}
+.embed-box h4{color:#3b82f6;margin-bottom:8px;font-size:.9em}
+.embed-box pre{background:#0a0a0a;padding:12px;border-radius:8px;overflow-x:auto;font-size:.8em;color:#888}
+</style>
+</head>
+<body>
+
+<h1><span>🎙️</span> Voice Log ROI Calculator</h1>
+<p class="subtitle">See how much your field team saves by switching from manual reports to AI voice transcription. Drag the sliders to match your team.</p>
+
+<div class="card">
+  <h3>Team Size & Activity</h3>
+  <label>Field Team Members <span class="range-val" id="teamVal">25</span></label>
+  <input type="range" id="teamSize" min="1" max="200" value="25" oninput="update()">
+  
+  <label>Voice Logs Per Person Per Day <span class="range-val" id="logsVal">4</span></label>
+  <input type="range" id="logsPerDay" min="1" max="20" value="4" oninput="update()">
+  
+  <label>Average Log Duration (minutes) <span class="range-val" id="durVal">3</span></label>
+  <input type="range" id="logDuration" min="1" max="15" value="3" oninput="update()">
+  
+  <label>Working Days Per Month <span class="range-val" id="daysVal">22</span></label>
+  <input type="range" id="workDays" min="15" max="30" value="22" oninput="update()">
+  
+  <label>Average Hourly Rate ($) <span class="range-val" id="rateVal">35</span></label>
+  <input type="range" id="hourlyRate" min="15" max="150" value="35" oninput="update()">
+</div>
+
+<div class="result-grid">
+  <div class="result-item">
+    <div class="value" id="manualHours">0</div>
+    <div class="label">Hours/month writing reports</div>
+  </div>
+  <div class="result-item">
+    <div class="value" id="manualCost">$0</div>
+    <div class="label">Monthly cost (manual)</div>
+  </div>
+  <div class="result-item">
+    <div class="value" id="aiHours">0</div>
+    <div class="label">Hours/month with AI</div>
+  </div>
+  <div class="result-item">
+    <div class="value" id="aiCost">$0</div>
+    <div class="label">Monthly cost (VoiceLogPro)</div>
+  </div>
+</div>
+
+<div class="savings">
+  <div style="color:#888;font-size:.9em;margin-bottom:4px">ANNUAL SAVINGS</div>
+  <div class="big" id="annualSavings">$0</div>
+  <div class="sub">That's <span id="hoursSaved">0</span> hours your team gets back every year</div>
+</div>
+
+<div class="embed-box">
+  <h4>📋 Embed this calculator</h4>
+  <pre>&lt;iframe src="https://voicelogpro.com/tools/roi-calculator" 
+        width="100%" height="500" style="border:none"&gt;&lt;/iframe&gt;</pre>
+</div>
+
+<script>
+function update(){
+  let t=+document.getElementById('teamSize').value;
+  let l=+document.getElementById('logsPerDay').value;
+  let d=+document.getElementById('logDuration').value;
+  let w=+document.getElementById('workDays').value;
+  let r=+document.getElementById('hourlyRate').value;
+  
+  document.getElementById('teamVal').textContent=t;
+  document.getElementById('logsVal').textContent=l;
+  document.getElementById('durVal').textContent=d;
+  document.getElementById('daysVal').textContent=w;
+  document.getElementById('rateVal').textContent=r;
+  
+  // Manual: each log takes 3x the duration to write up (transcribe + format + submit)
+  let manualHoursMonth=(t*l*d*3/60)*w;
+  let manualCost=manualHoursMonth*r;
+  
+  // AI: each log takes 20% of duration (speak + auto-transcribe)
+  let aiHoursMonth=(t*l*d*0.2/60)*w;
+  let aiCost=aiHoursMonth*r + t*w*0.5; // $0.50/month per user for VoiceLogPro
+  
+  let annualSavings=(manualCost-aiCost)*12;
+  let hoursSavedYear=(manualHoursMonth-aiHoursMonth)*12;
+  
+  document.getElementById('manualHours').textContent=Math.round(manualHoursMonth).toLocaleString();
+  document.getElementById('manualCost').textContent='$'+Math.round(manualCost).toLocaleString();
+  document.getElementById('aiHours').textContent=Math.round(aiHoursMonth).toLocaleString();
+  document.getElementById('aiCost').textContent='$'+Math.round(aiCost).toLocaleString();
+  document.getElementById('annualSavings').textContent='$'+Math.round(annualSavings).toLocaleString();
+  document.getElementById('hoursSaved').textContent=Math.round(hoursSavedYear).toLocaleString();
+}
+update();
+</script>
+</body>
+</html>

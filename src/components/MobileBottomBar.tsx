@@ -1,12 +1,15 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Home, Mic, Unlock } from "lucide-react";
+import { Home, Mic, Unlock, Globe } from "lucide-react";
 import { vibrate } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export const MobileBottomBar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isHome = location.pathname === "/";
   const isPlans = location.pathname === "/crew-plan";
+  const { t } = useTranslation();
 
   const handleMicClick = () => {
     vibrate();
@@ -36,7 +39,7 @@ export const MobileBottomBar = () => {
           }`}
         >
           <Home className="w-6 h-6" />
-          <span className="text-xs font-medium mt-1">Home</span>
+          <span className="text-xs font-medium mt-1">{t("nav.home", "Home")}</span>
         </Link>
 
         {/* Center Mic FAB */}
@@ -59,8 +62,13 @@ export const MobileBottomBar = () => {
           }`}
         >
           <Unlock className="w-6 h-6" />
-          <span className="text-xs font-medium mt-1">Plans</span>
+          <span className="text-xs font-medium mt-1">{t("nav.plans", "Plans")}</span>
         </Link>
+
+        {/* Language Switcher (compact on mobile) */}
+        <div className="flex flex-col items-center justify-center min-h-[60px] min-w-[60px] px-1 py-2">
+          <LanguageSwitcher compact />
+        </div>
       </div>
     </nav>
   );

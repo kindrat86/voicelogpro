@@ -4,6 +4,23 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { trades } from "@/content/trades";
+import { JsonLd } from "@/components/JsonLd";
+
+const tradesListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Construction Trades — Daily Report Solutions",
+  description: "Voice-first daily construction reports tailored for each trade. Protect your payment with 30-second voice documentation.",
+  url: "https://voicelogpro.com/for",
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  numberOfItems: trades.length,
+  itemListElement: trades.map((trade, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: `Daily Reports for ${trade.tradePlural}`,
+    url: `https://voicelogpro.com/for/${trade.slug}`
+  }))
+};
 
 export default function TradesHub() {
   return (
@@ -13,6 +30,7 @@ export default function TradesHub() {
         <meta name="description" content="Voice-first daily reports built for electricians, plumbers, HVAC contractors, roofers, and general contractors. Protect your payment with 30-second voice documentation." />
         <link rel="canonical" href="https://voicelogpro.com/for" />
       </Helmet>
+      <JsonLd schema={tradesListSchema} />
 
       <main className="min-h-screen bg-background">
         <section className="section-container max-w-4xl mx-auto py-16 px-4">

@@ -4,6 +4,23 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { howToGuides } from "@/content/how-to-guides";
+import { JsonLd } from "@/components/JsonLd";
+
+const howToListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "How-To Guides for Subcontractors",
+  description: "Practical, step-by-step guides to protect your payment with proper construction documentation.",
+  url: "https://voicelogpro.com/how-to",
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  numberOfItems: howToGuides.length,
+  itemListElement: howToGuides.map((guide, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: guide.h1,
+    url: `https://voicelogpro.com/how-to/${guide.slug}`
+  }))
+};
 
 export default function HowToHub() {
   return (
@@ -13,6 +30,7 @@ export default function HowToHub() {
         <meta name="description" content="Step-by-step guides on documenting construction delays, protecting lien rights, tracking materials, defending against deductions, and managing change orders." />
         <link rel="canonical" href="https://voicelogpro.com/how-to" />
       </Helmet>
+      <JsonLd schema={howToListSchema} />
 
       <main className="min-h-screen bg-background">
         <section className="section-container max-w-4xl mx-auto py-16 px-4">

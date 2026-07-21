@@ -1,0 +1,18 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "VoiceLogPro Research Datasets",
+  "home_page_url": "https://voicelogpro.com/data/",
+  "feed_url": "https://voicelogpro.com/data/feed.json",
+  "description": "Free, downloadable industry datasets from VoiceLogPro. CC BY 4.0.",
+  "icon": "https://voicelogpro.com/favicon.ico",
+  "items": [
+    {
+      "id": "https://voicelogpro.com/data/voice-ai-market-statistics/",
+      "url": "https://voicelogpro.com/data/voice-ai-market-statistics/",
+      "title": "Voice AI & Call Analytics Market Statistics 2026",
+      "content_text": "Market size, adoption rates, and key statistics for voice AI, speech recognition, call analytics, and conversational AI. Sourced from industry analyst reports and market research.",
+      "date_published": "2026-07-20T00:00:00Z",
+      "date_modified": "2026-07-20T00:00:00Z"
+    }
+  ]
+}

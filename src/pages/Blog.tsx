@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Footer } from "@/components/Footer";
-import { Helmet } from "react-helmet-async";
+import { JsonLd } from "@/components/JsonLd";
 
 interface BlogPost {
   id: string;
@@ -42,6 +43,21 @@ export default function Blog() {
         <meta name="description" content="Expert guides on construction lien law, payment protection, and daily documentation for subcontractors and project managers." />
         <link rel="canonical" href="https://voicelogpro.com/blog" />
       </Helmet>
+      <JsonLd schema={{
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Construction Law & Compliance Blog",
+        description: "Expert guides on construction lien law, payment protection, and daily documentation for subcontractors and project managers.",
+        url: "https://voicelogpro.com/blog",
+        itemListOrder: "https://schema.org/ItemListOrderAscending",
+        numberOfItems: posts.length,
+        itemListElement: posts.map((post, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: post.title,
+          url: `https://voicelogpro.com/blog/${post.slug}`
+        }))
+      }} />
 
       <div className="min-h-screen bg-background">
         <header className="border-b border-border">

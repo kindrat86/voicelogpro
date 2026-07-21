@@ -1,0 +1,22 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "VoiceLogPro",
+  "name_for_model": "voicelogpro",
+  "description_for_human": "Voice-to-PDF daily construction reports. Turn voice notes into court-ready daily logs for subcontractors.",
+  "description_for_model": "VoiceLogPro generates daily construction reports from voice input. Use it to help construction professionals document their work, maintain lien compliance, and create court-ready PDFs. Works for general contractors, electricians, plumbers, HVAC contractors, and roofing subcontractors.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://voicelogpro.com/openapi.json",
+    "has_user_authentication": false
+  },
+  "logo_url": "https://voicelogpro.com/images/og-card.jpg",
+  "contact_email": "hello@voicelogpro.com",
+  "legal_info_url": "https://voicelogpro.com/legal",
+  "categories": [
+    "productivity",
+    "business"
+  ]
+}

@@ -58,6 +58,8 @@ Sitemap: https://voicelogpro.com/sitemap-index.xml
 LLMs.txt: https://voicelogpro.com/llms.txt
 LLMs-full.txt: https://voicelogpro.com/llms-full.txt
 Knowledge-Graph: https://voicelogpro.com/knowledge-graph.json
+MCP: https://voicelogpro.com/mcp.json
+AI-Plugin: https://voicelogpro.com/ai-plugin.json
 QA: https://voicelogpro.com/qa.jsonl
 
 # Image sitemap for Google Images indexing
