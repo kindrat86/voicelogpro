@@ -174,7 +174,7 @@
     },
     {
       "source": "/for/:slug",
-      "destination": "/for/:slug.html"
+      "destination": "/for/:slug/index.html"
     },
     {
       "source": "/glossary/:slug",
