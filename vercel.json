@@ -202,7 +202,7 @@
     },
     {
       "source": "/answers",
-      "destination": "/answers.html"
+      "destination": "/answers/index.html"
     },
     {
       "source": "/AGENTS.md",
