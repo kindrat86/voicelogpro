@@ -56,13 +56,7 @@
     "compliance",
     "voice-to-text"
   ],
-  "tools": [
-    {
-      "name": "search_content",
-      "description": "Search VoiceLogPro content pages, guides, and documentation about construction daily reporting, lien law, and compliance",
-      "url": "https://voicelogpro.com/search"
-    }
-  ],
+  "tools": [],
   "supports": {
     "streaming": false,
     "webhooks": false
