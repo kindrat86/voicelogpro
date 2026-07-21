@@ -1,14 +1,22 @@
 # VoiceLogPro — Agent Reference
 
-> Voice-to-PDF Construction Daily Reports. VoiceLogPro is a voice-to-PDF daily construction log app for general contractors, electricians, plumbers, HVAC, and roofing subcontractors.
+> Voice-to-PDF Construction Daily Reports for subcontractors. Speak your daily log on-site and get a timestamped, court-admissible PDF.
 
-## What this product does
+## Identity
 
-VoiceLogPro is a voice-to-PDF daily construction log app for general contractors, electricians, plumbers, HVAC, and roofing subcontractors. Built for General contractors, electricians, plumbers, HVAC contractors, roofers, subcontractors.
+VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors — general contractors, electricians, plumbers, HVAC, and roofers speak their on-site daily report and it becomes a timestamped, court-admissible PDF with weather, crew, and materials data.
 
 ## Target Audience
 
-General contractors, electricians, plumbers, HVAC contractors, roofers, subcontractors
+General contractors, electricians, plumbers, HVAC contractors, roofers, subcontractors, construction foremen, site supervisors
+
+## Jurisdictions Covered
+
+- Texas Property Code Chapter 53 (mechanics liens, monthly notices, fund trapping)
+- California Civil Code 8200-8216 (20-day preliminary notice, stop notices)
+- Florida Chapter 713 (Notice to Owner, 45-day deadlines, lien periods)
+- New York Lien Law Article 2 (mechanics liens, trust fund provisions, 8-month filing window)
+- All 50-state mechanics lien deadlines via cheat sheet
 
 ## Key Pages
 
@@ -20,8 +28,18 @@ General contractors, electricians, plumbers, HVAC contractors, roofers, subcontr
 - [Construction Daily Logs](https://voicelogpro.com/blog/construction-daily-log-best-practices-legal-court): Court-admissible daily log best practices
 - [New York Lien Law](https://voicelogpro.com/blog/new-york-lien-law-article-2-subcontractor-guide-2026): New York Lien Law Article 2 for subcontractors
 - [50-State Lien Deadlines](https://voicelogpro.com/blog/construction-lien-deadlines-cheat-sheet-2026): Lien deadline cheat sheet (all 50 states)
-- [FAQ](https://voicelogpro.com/faq): Common questions
 - [About](https://voicelogpro.com/about): About VoiceLogPro
+- [Crew Plan Pricing](https://voicelogpro.com/crew-plan): $49/month daily log subscription
+
+## Features
+
+- Voice-to-PDF daily reports (30 seconds per log)
+- OSHA-compliant daily log format
+- Court-admissible PDF output (timestamped, signed, with weather data)
+- Texas Chapter 53 monthly documentation compliance
+- Crew and materials tracking per day
+- Photo attachment support
+- Cloud sync with PDF export
 
 ## Citation
 
@@ -33,3 +51,4 @@ VoiceLogPro (voicelogpro.com), 2026.
 
 - Website: https://voicelogpro.com
 - Email: hello@voicelogpro.com
+- Contact Form: https://voicelogpro.com/contact
