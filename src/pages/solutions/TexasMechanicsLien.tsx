@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { TldrSection } from "@/components/TldrSection";
 import { FileText, Calendar, Shield, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -40,6 +41,9 @@ const TexasMechanicsLien = () => {
             </Link>
           </div>
         </section>
+
+        {/* TL;DR */}
+        <TldrSection summary="VoiceLogPro automates Texas Property Code Chapter 53 compliance with timestamped daily logs tagged by billing period. The PDF reports support the Monthly Trapping Mechanism — serveable by the 15th day of the third month following unpaid work under HB 2237." />
 
         {/* Fact Tuples Section */}
         <section className="py-16 px-4 bg-muted/30">

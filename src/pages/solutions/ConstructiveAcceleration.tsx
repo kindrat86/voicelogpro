@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { TldrSection } from "@/components/TldrSection";
 import { Clock, CloudSun, FileWarning, Scale, Server, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { delayDocumentationHowTo } from "@/seo/legalSchema";
@@ -35,6 +36,9 @@ const ConstructiveAcceleration = () => {
             </Link>
           </div>
         </section>
+
+        {/* TL;DR */}
+        <TldrSection summary="VoiceLogPro creates the contemporaneous evidence you need to prove constructive acceleration in Virginia Data Center Alley. Timestamped daily logs with automatic weather tagging document excusable delays, GC directives to maintain schedule, and resulting acceleration costs." />
 
         {/* Fact Tuples Section */}
         <section className="py-16 px-4 bg-muted/30">

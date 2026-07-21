@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
+import { TldrSection } from "@/components/TldrSection";
 import { Mic, Package, ClipboardCheck, TrendingDown, Hand, Quote } from "lucide-react";
 
 const faqs = [
@@ -77,6 +78,9 @@ export default function ElectricalInventoryTracking() {
             </div>
           </div>
         </section>
+
+        {/* TL;DR */}
+        <TldrSection summary="Foremen record material usage by voice — 'used 1,000 ft of 12/2 MC, 50 mud rings, 300 wire nuts' — and the office sees it instantly. No typing, no spreadsheets, no end-of-day guessing." />
 
         {/* Real Talk Section - The "All-in-One" Trap */}
         <section className="py-16 md:py-24 bg-muted/30">

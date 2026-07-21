@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { TldrSection } from "@/components/TldrSection";
 import { Shield, AlertTriangle, CheckCircle2, Quote, DollarSign, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { softwareApplicationSchema, organizationSchema } from "@/seo/softwareSchema";
@@ -85,6 +86,9 @@ const FightUnfairDeductions = () => {
             </Link>
           </div>
         </section>
+
+        {/* TL;DR */}
+        <TldrSection summary="If a GC claims you owe a 'credit' for work you self-performed or demands a supervision fee they didn't provide, VoiceLogPro's timestamped daily logs prove who did the work and who was on site — making unfair deductions impossible to sustain." label="Bottom Line" />
 
         {/* The Problem Section */}
         <section className="py-16 px-4 bg-muted/30">

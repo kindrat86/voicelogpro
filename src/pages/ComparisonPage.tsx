@@ -3,6 +3,7 @@ import { useLocation, Navigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { TldrSection } from "@/components/TldrSection";
 import { Button } from "@/components/ui/button";
 import { Check, X, Mic, Shield, ChevronRight, FileText, Wifi } from "lucide-react";
 import {
@@ -81,6 +82,9 @@ export default function ComparisonPage() {
           </p>
           <ComparisonCTA location="hero" />
         </section>
+
+        {/* TL;DR */}
+        <TldrSection summary={`VoiceLogPro is cheaper (${comp.pricing.startsWith("$") ? '$49/month flat vs. ' + comp.pricing.split(" ")[0] : 'flat $49/month'}), faster (voice input vs. ${comp.inputMethod.toLowerCase()}), and built for subcontractors who need payment protection, not project management. You own your data, and reports are court-ready.`} />
 
         {/* What {competitor} Is */}
         <section className="section-container bg-secondary/30 py-16 px-4">

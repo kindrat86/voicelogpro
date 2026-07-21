@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { TldrSection } from "@/components/TldrSection";
 import { FileText, Building2, Shield, Users, CheckCircle2, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -40,6 +41,9 @@ const GoldenThread = () => {
             </Link>
           </div>
         </section>
+
+        {/* TL;DR */}
+        <TldrSection summary="VoiceLogPro creates the digital daily reports UK subcontractors need for Golden Thread compliance under the Building Safety Act 2022. Timestamped voice logs with weather data and photos build the accurate, contemporaneous record Higher-Risk Buildings require." />
 
         {/* Fact Tuples Section */}
         <section className="py-16 px-4 bg-muted/30">

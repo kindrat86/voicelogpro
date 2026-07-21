@@ -3,6 +3,7 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { TldrSection } from "@/components/TldrSection";
 import { Button } from "@/components/ui/button";
 import { Check, ChevronRight, Clock } from "lucide-react";
 import {
@@ -109,6 +110,12 @@ export default function HowToPage() {
             </Button>
           </Link>
         </section>
+
+        {/* TL;DR / Bottom Line */}
+        <TldrSection 
+          summary={guide.intro.split('.')[0] + '.'} 
+          label="Bottom Line"
+        />
 
         {/* Key Points */}
         <section className="section-container bg-secondary/30 py-12 px-4">

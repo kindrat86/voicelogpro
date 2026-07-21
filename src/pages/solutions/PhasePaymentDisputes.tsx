@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { TldrSection } from "@/components/TldrSection";
 import { Shield, FileCheck, Clock, Cloud, AlertTriangle, CheckCircle, ArrowRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 
@@ -97,6 +98,9 @@ const PhasePaymentDisputes = () => {
             </div>
           </div>
         </section>
+
+        {/* TL;DR */}
+        <TldrSection summary="When a GC demands phase payment for work they haven't completed, VoiceLogPro's timestamped daily logs with photos and inspection records prove exactly what was done, who was on site, and what passed or failed — stopping unauthorized billing cold." label="Bottom Line" />
 
         {/* Reality Check Section - The Phase Payment Trap */}
         <section className="py-16 md:py-20 bg-muted/20">

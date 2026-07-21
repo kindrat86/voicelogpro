@@ -3,6 +3,7 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { TldrSection } from "@/components/TldrSection";
 import { Button } from "@/components/ui/button";
 import { Check, Mic, Shield, ChevronRight, Wifi, Image } from "lucide-react";
 import {
@@ -58,6 +59,9 @@ export default function TradePage() {
             </Button>
           </Link>
         </section>
+
+        {/* TL;DR */}
+        <TldrSection summary={`VoiceLogPro lets ${trade.tradePlural} document daily work with 30-second voice recordings — no typing, no end-of-day catch-up. Court-ready PDFs with automatic timestamps, weather data, and photo attachments. Flat $49/month for your entire crew, works fully offline.`} />
 
         {/* Pain Points */}
         <section className="section-container bg-secondary/30 py-16 px-4">
