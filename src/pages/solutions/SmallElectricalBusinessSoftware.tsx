@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Check, X, Mic, Cloud, Camera, ArrowRight, Shield, DollarSign, Clock, FileText } from "lucide-react";
 import { Footer } from "@/components/Footer";
+import { TldrSection } from "@/components/TldrSection";
 
 const faqs = [
   {
@@ -87,6 +88,9 @@ export default function SmallElectricalBusinessSoftware() {
             </div>
           </div>
         </section>
+
+        {/* TL;DR */}
+        <TldrSection summary="Small electrical shops (1–5 crew) don't need Procore or PlanHub. VoiceLogPro gives you the one thing that actually protects your income: court-ready daily documentation that backs up invoices, protects change orders, and keeps you from getting underpaid." label="Bottom Line" />
 
         {/* Reality Check Section */}
         <section className="py-16 md:py-20 bg-background">
