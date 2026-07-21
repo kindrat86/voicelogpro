@@ -32,8 +32,13 @@ const organizationSchema = {
   sameAs: [
     "https://github.com/kindrat86",
     "https://x.com/sipiteno",
+    "https://x.com/data_nerd",
+    "https://www.linkedin.com/in/kushnir-maryan/",
     "https://linkedin.com/company/voicelogpro",
-    "https://www.linkedin.com/in/kushnir-maryan",
+    "https://sipiteno.com",
+    "https://invisibleexit.com",
+    "https://signals.gitdealflow.com",
+    "https://sanctionsai.dev",
     "https://www.indiehackers.com/product/unlock-saas"
   ],
   contactPoint: {

@@ -13,7 +13,18 @@ const organizationSchema = {
   description:
     "VoiceLogPro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
   foundingDate: "2024",
-  sameAs: [],
+  sameAs: [
+    "https://github.com/kindrat86",
+    "https://x.com/sipiteno",
+    "https://x.com/data_nerd",
+    "https://www.linkedin.com/in/kushnir-maryan/",
+    "https://linkedin.com/company/voicelogpro",
+    "https://sipiteno.com",
+    "https://invisibleexit.com",
+    "https://signals.gitdealflow.com",
+    "https://sanctionsai.dev",
+    "https://www.indiehackers.com/product/unlock-saas"
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",

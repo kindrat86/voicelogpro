@@ -393,7 +393,6 @@ export const organizationSchema: OrganizationSchema = {
     "https://x.com/sipiteno",
     "https://x.com/data_nerd",
     "https://www.linkedin.com/in/kushnir-maryan/",
-    "https://linkedin.com/company/voicelogpro",
     "https://sipiteno.com",
     "https://invisibleexit.com",
     "https://signals.gitdealflow.com",

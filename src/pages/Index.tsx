@@ -26,13 +26,22 @@ const personSchema = {
   sameAs: [
     "https://github.com/kindrat86",
     "https://x.com/sipiteno",
-    "https://www.linkedin.com/in/kushnir-maryan"
+    "https://x.com/data_nerd",
+    "https://www.linkedin.com/in/kushnir-maryan/",
+    "https://linkedin.com/company/voicelogpro",
+    "https://sipiteno.com",
+    "https://invisibleexit.com",
+    "https://signals.gitdealflow.com",
+    "https://sanctionsai.dev",
+    "https://www.indiehackers.com/product/unlock-saas"
   ],
   knowsAbout: [
     "Construction Daily Reporting",
     "Texas Property Code Chapter 53",
     "Mechanics Lien Documentation",
-    "Voice-to-PDF Technology"
+    "Voice-to-PDF Technology",
+    "Construction Compliance",
+    "AI-Powered Construction Software"
   ]
 };
 
