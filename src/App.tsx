@@ -15,6 +15,11 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 // GEO-optimized blog posts
 const TexasLienLaw2025 = lazy(() => import("./pages/blog/TexasLienLaw2025"));
+const CaliforniaPreliminaryNotice = lazy(() => import("./pages/blog/CaliforniaPreliminaryNotice"));
+const FloridaNoticeToOwner = lazy(() => import("./pages/blog/FloridaNoticeToOwner"));
+const DailyLogBestPractices = lazy(() => import("./pages/blog/DailyLogBestPractices"));
+const NewYorkLienLaw = lazy(() => import("./pages/blog/NewYorkLienLaw"));
+const LienDeadlineCheatSheet = lazy(() => import("./pages/blog/LienDeadlineCheatSheet"));
 
 // Solutions pages (entity-specific landing pages for LLM SEO)
 const TexasMechanicsLien = lazy(() => import("./pages/solutions/TexasMechanicsLien"));
@@ -86,6 +91,11 @@ const App = () => (
               <Route path="/blog/texas-lien-law" element={<TexasLienLaw2025 />} />
               {/* GEO-optimized blog posts */}
               <Route path="/blog/texas-property-code-chapter-53-guide-2025" element={<TexasLienLaw2025 />} />
+              <Route path="/blog/california-20-day-preliminary-notice-guide-2026" element={<CaliforniaPreliminaryNotice />} />
+              <Route path="/blog/florida-notice-to-owner-45-day-guide-2026" element={<FloridaNoticeToOwner />} />
+              <Route path="/blog/construction-daily-log-best-practices-legal-court" element={<DailyLogBestPractices />} />
+              <Route path="/blog/new-york-lien-law-article-2-subcontractor-guide-2026" element={<NewYorkLienLaw />} />
+              <Route path="/blog/construction-lien-deadlines-cheat-sheet-2026" element={<LienDeadlineCheatSheet />} />
               {/* Solutions pages - entity-specific landing pages */}
               <Route path="/solutions/texas-mechanics-lien-compliance" element={<TexasMechanicsLien />} />
               <Route path="/solutions/constructive-acceleration-defense" element={<ConstructiveAcceleration />} />

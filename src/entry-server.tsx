@@ -46,6 +46,11 @@ import SmallElectricalBusinessSoftware from './pages/solutions/SmallElectricalBu
 
 // Blog posts
 import TexasLienLaw2025 from './pages/blog/TexasLienLaw2025';
+import CaliforniaPreliminaryNotice from './pages/blog/CaliforniaPreliminaryNotice';
+import FloridaNoticeToOwner from './pages/blog/FloridaNoticeToOwner';
+import DailyLogBestPractices from './pages/blog/DailyLogBestPractices';
+import NewYorkLienLaw from './pages/blog/NewYorkLienLaw';
+import LienDeadlineCheatSheet from './pages/blog/LienDeadlineCheatSheet';
 
 // Comparison pages
 import RakenComparison from './pages/RakenComparison';
@@ -108,6 +113,11 @@ export async function render(url: string): Promise<RenderResult> {
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/blog/texas-lien-law" element={<TexasLienLaw2025 />} />
                 <Route path="/blog/texas-property-code-chapter-53-guide-2025" element={<TexasLienLaw2025 />} />
+                <Route path="/blog/california-20-day-preliminary-notice-guide-2026" element={<CaliforniaPreliminaryNotice />} />
+                <Route path="/blog/florida-notice-to-owner-45-day-guide-2026" element={<FloridaNoticeToOwner />} />
+                <Route path="/blog/construction-daily-log-best-practices-legal-court" element={<DailyLogBestPractices />} />
+                <Route path="/blog/new-york-lien-law-article-2-subcontractor-guide-2026" element={<NewYorkLienLaw />} />
+                <Route path="/blog/construction-lien-deadlines-cheat-sheet-2026" element={<LienDeadlineCheatSheet />} />
                 <Route path="/solutions/texas-mechanics-lien-compliance" element={<TexasMechanicsLien />} />
                 <Route path="/solutions/constructive-acceleration-defense" element={<ConstructiveAcceleration />} />
                 <Route path="/solutions/building-safety-act-golden-thread" element={<GoldenThread />} />

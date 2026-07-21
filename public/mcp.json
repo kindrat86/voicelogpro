@@ -1,8 +1,61 @@
 {
   "name": "VoiceLogPro",
-  "description": "Voice-to-PDF daily construction reporting for subcontractors. Converts voice notes into legally defensible PDF reports with timestamps, weather data, and photo attachments.",
-  "url": "https://voicelogpro.com",
-  "category": "productivity",
+  "description": "Voice-to-PDF daily construction log app. Generates timestamped, court-admissible daily reports from voice notes for subcontractors.",
+  "version": "1.0.0",
+  "homepage": "https://voicelogpro.com",
+  "contact": {
+    "email": "hello@voicelogpro.com",
+    "url": "https://voicelogpro.com/contact"
+  },
+  "resources": [
+    {
+      "uri": "https://voicelogpro.com/llms.txt",
+      "name": "AI Crawler Index",
+      "description": "Complete page index for AI crawlers (134 pages)"
+    },
+    {
+      "uri": "https://voicelogpro.com/llms-full.txt",
+      "name": "Full AI Crawler Index",
+      "description": "Full page index with detailed descriptions"
+    },
+    {
+      "uri": "https://voicelogpro.com/knowledge-graph.json",
+      "name": "Knowledge Graph",
+      "description": "JSON-LD knowledge graph with entity relationships"
+    },
+    {
+      "uri": "https://voicelogpro.com/agents.md",
+      "name": "Agent Reference",
+      "description": "Agent reference documentation"
+    },
+    {
+      "uri": "https://voicelogpro.com/qa.jsonl",
+      "name": "Q&A Training Data",
+      "description": "JSONL-formatted Q&A pairs for AI training"
+    },
+    {
+      "uri": "https://voicelogpro.com/openapi.json",
+      "name": "OpenAPI Specification",
+      "description": "OpenAPI 3.1 spec for VoiceLogPro"
+    },
+    {
+      "uri": "https://voicelogpro.com/sitemap.xml",
+      "name": "XML Sitemap",
+      "description": "XML sitemap of all pages"
+    },
+    {
+      "uri": "https://voicelogpro.com/sitemap-pseo.xml",
+      "name": "pSEO Sitemap",
+      "description": "Programmatic SEO page sitemap"
+    }
+  ],
+  "categories": [
+    "productivity",
+    "construction",
+    "documentation",
+    "compliance",
+    "voice-to-text"
+  ],
   "tools": [
     {
       "name": "search_content",

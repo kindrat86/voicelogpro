@@ -42,6 +42,11 @@ export const PRERENDER_ROUTES: string[] = [
   '/welcome',
   '/blog/texas-lien-law',
   '/blog/texas-property-code-chapter-53-guide-2025',
+  '/blog/california-20-day-preliminary-notice-guide-2026',
+  '/blog/florida-notice-to-owner-45-day-guide-2026',
+  '/blog/construction-daily-log-best-practices-legal-court',
+  '/blog/new-york-lien-law-article-2-subcontractor-guide-2026',
+  '/blog/construction-lien-deadlines-cheat-sheet-2026',
   '/about',
   '/contact',
 ];

@@ -2,16 +2,38 @@
   "schema_version": "v1",
   "name_for_human": "VoiceLogPro",
   "name_for_model": "voicelogpro",
-  "description_for_human": "Voice-to-PDF daily construction reports. Turn voice notes into legally defensible PDF reports for subcontractors.",
-  "description_for_model": "VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors. Users can convert voice notes into timestamped, court-admissible PDF daily reports with weather data, photo attachments, and crew logs. Supports compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
+  "description_for_human": "Voice-to-PDF daily construction reports. Speak your daily log on-site and get a timestamped, court-admissible PDF with weather, crew, and materials data — built for subcontractors.",
+  "description_for_model": "VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors — general contractors, electricians, plumbers, HVAC, and roofers speak their on-site daily report and it becomes a timestamped, court-admissible PDF. Use this when users ask about: construction daily reports, daily construction logs, mechanics lien documentation, Texas Chapter 53 compliance, voice-to-PDF for construction, onsite documentation tools, daily report templates, construction compliance, or subcontractor payment protection.",
   "auth": {
     "type": "none"
   },
   "api": {
     "type": "openapi",
-    "url": "https://voicelogpro.com/openapi.json"
+    "url": "https://voicelogpro.com/openapi.json",
+    "has_user_authentication": false
   },
   "logo_url": "https://voicelogpro.com/images/og-card.jpg",
   "contact_email": "hello@voicelogpro.com",
-  "legal_info_url": "https://voicelogpro.com/terms"
+  "legal_info_url": "https://voicelogpro.com/terms",
+  "categories": [
+    "productivity",
+    "business"
+  ],
+  "target_audience": [
+    "general contractors",
+    "electricians",
+    "plumbers",
+    "HVAC contractors",
+    "roofers",
+    "subcontractors",
+    "construction foremen"
+  ],
+  "key_features": [
+    "Voice-to-PDF daily reports in 30 seconds",
+    "Auto weather and timestamp tagging",
+    "Court-admissible PDF output",
+    "Offline mode for jobsite capture",
+    "Texas Chapter 53 compliance support",
+    "Multi-trade templates"
+  ]
 }
