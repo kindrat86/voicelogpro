@@ -149,6 +149,21 @@ const CourtReadyDailyLogs = () => {
       acceptedAnswer: { "@type": "Answer", text: f.answer },
     })),
   };
+  const qaPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "QAPage",
+    "@id": `${CANONICAL}#qa`,
+    dateModified: REVIEWED,
+    mainEntity: {
+      "@type": "Question",
+      name: "What makes a construction daily log court-ready?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A construction daily log is court-ready when it is a contemporaneous business record — created at the time of the work, timestamped, corroborated by objective data (weather reports, geotagged photos), maintained as part of regular business practice, and consistent across entries. The five elements — contemporaneous creation, timestamp verification, corroboration, photo evidence, and consistency — make the record admissible under the business-records exception to the hearsay rule (e.g., Federal Rule of Evidence 803(6)). VoiceLogPro captures all five by voice in about 30 seconds on-site.",
+        dateModified: REVIEWED,
+      },
+    },
+  };
 
   return (
     <>
@@ -160,7 +175,7 @@ const CourtReadyDailyLogs = () => {
         />
         <link rel="canonical" href={CANONICAL} />
       </Helmet>
-      <JsonLd schema={[softwareApplicationSchema, organizationSchema, articleSchema, howToSchema, faqSchema]} />
+      <JsonLd schema={[softwareApplicationSchema, organizationSchema, articleSchema, howToSchema, faqSchema, qaPageSchema]} />
 
       <main className="min-h-screen bg-background">
         {/* Hero */}
