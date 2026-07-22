@@ -532,5 +532,5 @@ th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var
    signals.gitdealflow.com). Link-buttons paint their own background
    and must keep their own text colour. Do not reintroduce a bare
    `a { color: ... }` rule in this file. */
-a[class*="bg-"], a[role="button"], a.btn, button a { color: revert-layer; }
+a[class*="bg-"], a[role="button"], button a { color: revert; }
 
