@@ -53,7 +53,7 @@ for (const state of D.states) {
 
   const body = `${D.sections.map((s) => sectionTable(state, s)).join("")}
 <div class="cta"><strong>Never miss these dates.</strong> All three deadlines start from your <em>first</em> or <em>last furnishing date</em>. A contested date can blur your entire timeline. <a href="/">VoiceLogPro</a> timestamps every day of work from a 60-second voice note — so your furnishing dates are documented, not argued.
- Try the <a href="/free/lien-deadline-calculator">Lien Deadline Calculator →</a></div>
+ Try the <a href="/free/lien-deadline-calculator">Lien Deadline Calculator →</a><br>Learn what makes a log hold up: <a href="/court-ready-daily-logs">court-ready daily logs →</a></div>
 <p>See all states in the <a href="${CHEATSHEET}">50-state lien deadline cheat sheet</a>. Nearby: ${others.map((o) => `<a href="/lien-law-deadlines/${slugify(o)}">${esc(o)}</a>`).join(" · ")}.</p>`;
 
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">

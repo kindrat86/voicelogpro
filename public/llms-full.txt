@@ -1,5 +1,5 @@
 # VoiceLogPro — llms-full.txt (comprehensive AI crawler content index)
-# Generated 2026-07-18. Total indexed pages: 165+
+# Generated 2026-07-23. Total indexed pages: 220+
 # Format: Markdown with URL + 2-3 sentence content summary per page.
 # Compatible with GPTBot, ClaudeBot, PerplexityBot, Google-Extended.
 
@@ -7,6 +7,9 @@
 
 ### [Homepage](https://voicelogpro.com/)
 VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors. Speak your on-site daily report, and it becomes a timestamped, court-admissible PDF with fields for weather, crew, work performed, and materials. $49/month Crew Plan. Supports Texas Property Code Chapter 53 lien rights, NSW SOPA adjudications, and UK Building Safety Act Golden Thread compliance.
+
+### [Court-Ready Daily Logs](https://voicelogpro.com/court-ready-daily-logs)
+The five elements that make a construction daily log hold up as evidence: contemporaneous, timestamped, objectively corroborated (weather), photo-backed with metadata, and complete/consistent. Court-ready logs defend payment disputes, mechanics liens, delay claims, and GC backcharges. VoiceLogPro captures all five by voice in about 30 seconds on-site.
 
 ### [Crew Plan](https://voicelogpro.com/crew-plan)
 Join the waitlist for VoiceLogPro's voice-first daily reporting plan. $49/month includes unlimited daily reports, automatic timestamps and weather data, photo attachments with geolocation, court-ready PDF exports, and multi-jurisdiction compliance documentation features.
@@ -23,19 +26,18 @@ Early beta access for construction crews. Test the voice-to-PDF daily reporting 
 ### [Blog](https://voicelogpro.com/blog)
 Construction law, lien rights, and daily documentation guides for subcontractors. Covers Texas Property Code Chapter 53, mechanics lien deadlines by state, NSw SOPA adjudications, and UK Building Safety Act Golden Thread requirements.
 
-## State Lien Law Guides
+## Lien Law Deadlines (50-State Reference)
 
-VoiceLogPro publishes mechanics lien deadline guides covering preliminary notice rules, filing windows, and enforcement timelines for US states:
+VoiceLogPro publishes per-state mechanics lien deadline pages with preliminary notice, lien filing, and enforcement windows. Data sourced from the VoiceLogPro 50-state reference (CC BY 4.0):
 
-- [California](https://voicelogpro.com/states/california-lien-law): 20-day preliminary notice requirement, 90-day mechanics lien filing window from last day of work. Covers direct contractors, subcontractors, and material suppliers.
-- [Texas](https://voicelogpro.com/blog/texas-property-code-chapter-53-guide-2025): Chapter 53 monthly trapping notices, 15th-day deadlines for subcontractors, and the constitutional lien framework unique to Texas.
-- [Florida](https://voicelogpro.com/states/florida-lien-law): Notice to Owner requirement for subcontractors and suppliers, 90-day lien filing window, and 1-year enforcement deadline.
-- [New York](https://voicelogpro.com/states/new-york-lien-law): 4-8 month filing window depending on project type (commercial vs residential), plus public improvement bond claim alternatives.
-- [Illinois](https://voicelogpro.com/states/illinois-lien-law): 60-day owner notice requirement for subcontractors, 4-month lien filing window, and 2-year enforcement period.
-- [Ohio](https://voicelogpro.com/states/ohio-lien-law): 75-day lien filing window from last day of work, 6-year enforcement period (one of the longest in the US).
-- [Georgia](https://voicelogpro.com/states/georgia-lien-law): 90-day lien filing window, 365-day enforcement deadline from filing date.
-- [North Carolina](https://voicelogpro.com/states/north-carolina-lien-law): 120-day lien filing window, 180-day enforcement deadline from last day of furnishing.
-- [Colorado](https://voicelogpro.com/states/colorado-lien-law): 10-day intent-to-lien notice requirement, 4-month lien filing window for most projects.
+- [Lien Law Deadlines Hub](https://voicelogpro.com/lien-law-deadlines): All 50 states + DC, linked from a single hub page.
+- [California](https://voicelogpro.com/lien-law-deadlines/california): 20-day preliminary notice, 90-day lien filing, 90-day enforcement.
+- [Texas](https://voicelogpro.com/lien-law-deadlines/texas): Varies by tier, monthly trapping mechanism, constitutional lien framework.
+- [Florida](https://voicelogpro.com/lien-law-deadlines/florida): 45-day Notice to Owner, 90-day lien filing, 1-year enforcement.
+- [New York](https://voicelogpro.com/lien-law-deadlines/new-york): 8-month lien filing (commercial), 1-year enforcement.
+- [Lien Deadline Calculator](https://voicelogpro.com/free/lien-deadline-calculator): Interactive tool to calculate mechanics lien filing deadlines by state and last day of work.
+- [50-State Cheat Sheet](https://voicelogpro.com/blog/construction-lien-deadlines-cheat-sheet-2026): Full blog post reference with all deadlines in one table.
+- [Download Dataset](https://voicelogpro.com/lien-law-deadlines/data.json): Machine-readable dataset (CC BY 4.0).
 
 ## Daily Report Templates
 
@@ -117,8 +119,8 @@ Key terms in construction daily reporting, voice logging, and compliance documen
 
 ---
 
-Total: 165+ pages across 17 page-type clusters.
-Last updated: 2026-07-18.
+Total: 220+ pages across 18 page-type clusters.
+Last updated: 2026-07-23.
 Sitemap: https://voicelogpro.com/sitemap.xml
 Organization: VoiceLogPro — voice-to-PDF daily construction log app for subcontractors.
 Founded: 2024. Price: $49/month. Email: hello@voicelogpro.com
