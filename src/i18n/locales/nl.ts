@@ -22,10 +22,10 @@ const nl = {
   cta: {
     getDefenseKit: "Gratis verdedigingskit",
     reserveBetaSpot: "Reserveer mijn beta-plek",
-    seeCrewPlan: "Bekijk het betaalde Crew-abonnement",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Stuur me de kit",
-    joinBetaFree: "Gratis meedoen met beta",
-    getCrewAccess: "Crew-toegang krijgen",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Kies je pad",
   },
 
@@ -159,15 +159,6 @@ const nl = {
     row3Solution: "Creëert een digitaal beheerpad voor locatiebeslissingen en registraties.",
   },
 
-  testimonials: {
-    title: "Wat ploegen zeggen",
-    jasonName: "Jason T.",
-    jasonRole: "Elektrovoorman",
-    jasonQuote: "Een hoofdaannemer probeerde ons de schuld te geven van een vertraging. Ik trok het dagelijkse logboek met tijdstempels en foto's — zaak gesloten. VoiceLogPro dekt mijn rug.",
-    mariaName: "Maria R.",
-    mariaRole: "Loodgietersleiding",
-    mariaQuote: "Ik was sceptisch — beta-tools gaan meestal kapot. Maar VoiceLogPro werkte soepel. Het bespaart onze ploeg elk weekend uren.",
-  },
 
   valueLadder: {
     title: "Begin gratis. Groei door naar de Crew.",
@@ -191,12 +182,6 @@ const nl = {
     rung3Sub: "/maand",
     rung3Desc: "Tot 5 ploegen, prioritaire onboarding, aangepaste branding, geschil-klare export.",
     rung3Deliverable: "Maandelijks abonnement",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (jaarlijks)",
-    rung4Price: "€470",
-    rung4Sub: "/jaar — bespaar €118",
-    rung4Desc: "Onbeperkte ploegen, dedicated onboarding, API-toegang, juridisch audit traject.",
-    rung4Deliverable: "Jaarlijks · wachtlijst",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const nl = {
   },
 
   limitedBeta: {
-    badge: "Nog maar 3 beta-plekken beschikbaar",
+    badge: "Private Beta — Limited Places",
     title: "We houden de beta bewust klein",
-    body: "VoiceLogPro wordt gebouwd door een werkende ploeg, niet door een venture-gefinancierde startup. We nemen 3 nieuwe ploegen tegelijk aan, zodat elke beta-partner echte ondersteuning krijgt — geen helpdesk-ticket.",
-    nextBatch: "Zodra deze 3 plekken gevuld zijn, gaat de volgende batch pas over ~30 dagen open.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Als je serieus bent over rapportage die klopt — reserveer nu.",
   },
 

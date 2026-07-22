@@ -22,10 +22,10 @@ const fa = {
   cta: {
     getDefenseKit: "دریافت کیت دفاعی رایگان",
     reserveBetaSpot: "رزرو جایگاه بتای من",
-    seeCrewPlan: "مشاهده طرح گروهی",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "کیت را برای من بفرست",
-    joinBetaFree: "عضویت رایگان در بتا",
-    getCrewAccess: "دریافت دسترسی گروهی",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "مسیر خود را انتخاب کنید",
   },
 
@@ -159,15 +159,6 @@ const fa = {
     row3Solution: "ایجاد زنجیره دیجیتالی نگهداری برای تصمیمات و سوابق سایت.",
   },
 
-  testimonials: {
-    title: "نظرات تیم‌ها",
-    jasonName: "جیسون تی.",
-    jasonRole: "سرکارگر برق",
-    jasonQuote: "یک GC سعی کرد تقصیر تأخیر را به گردن ما بیندازد. گزارش روزانه با زمان‌بندی و عکس‌ها را آوردم — پرونده بسته شد. VoiceLogPro پشتیبان من است.",
-    mariaName: "ماریا آر.",
-    mariaRole: "سرپرست لوله‌کشی",
-    mariaQuote: "شک داشتم — ابزارهای بتا معمولاً خراب می‌شوند. اما VoiceLogPro روان کار کرد. هر هفته ساعت‌ها از وقت تیم ما را ذخیره می‌کند.",
-  },
 
   valueLadder: {
     title: "رایگان شروع کنید. به سمت گروهی رشد کنید.",
@@ -191,12 +182,6 @@ const fa = {
     rung3Sub: "/ماه",
     rung3Desc: "تا ۵ تیم، اولویت در پذیرش، برندسازی سفارشی، خروجی‌های آماده اختلاف.",
     rung3Deliverable: "اشتراک ماهانه",
-    rung4Tier: "حق بیمه",
-    rung4Name: "حرفه‌ای (سالانه)",
-    rung4Price: "$470",
-    rung4Sub: "/سال — صرفه‌جویی $118",
-    rung4Desc: "تیم‌های نامحدود، پذیرش اختصاصی، دسترسی API، مسیر حسابرسی درجه قانونی.",
-    rung4Deliverable: "سالانه · لیست انتظار",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const fa = {
   },
 
   limitedBeta: {
-    badge: "فقط ۳ جایگاه بتا باقی مانده",
+    badge: "Private Beta — Limited Places",
     title: "ما بتا را عمداً کوچک نگه داشته‌ایم",
-    body: "VoiceLogPro توسط یک تیم کاری ساخته شده است، نه یک استارتاپ سرمایه‌گذاری شده. ما هر بار ۳ تیم جدید را پذیرش می‌کنیم تا هر شریک بتا پشتیبانی واقعی دریافت کند — نه یک تیکت پشتیبانی.",
-    nextBatch: "وقتی این ۳ جایگاه پر شوند، دسته بعدی حدود ۳۰ روز باز نمی‌شود.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "اگر در مورد گزارش‌دهی درست جدی هستید — اکنون قفل کنید.",
   },
 

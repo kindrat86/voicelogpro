@@ -94,7 +94,7 @@ export function HeroSection() {
         </div>
 
         <p className="text-sm text-muted-foreground mb-10 animate-fade-up" style={{ animationDelay: "0.35s" }}>
-          Or <a href="#crew-plan" className="text-primary font-bold underline">see the paid Crew Plan →</a>
+          Or <a href="#crew-plan" className="text-primary font-bold underline">learn about the Crew Plan →</a>
         </p>
         
         {/* Before/After Slider */}

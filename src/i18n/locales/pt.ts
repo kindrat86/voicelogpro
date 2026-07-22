@@ -22,10 +22,10 @@ const pt = {
   cta: {
     getDefenseKit: "Obtenha o Kit de Defesa Grátis",
     reserveBetaSpot: "Reserve Minha Vaga Beta",
-    seeCrewPlan: "Ver o Plano de Equipe Pago",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Envie-me o Kit",
-    joinBetaFree: "Entre na Beta Grátis",
-    getCrewAccess: "Obter Acesso de Equipe",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Escolha seu caminho",
   },
 
@@ -159,15 +159,6 @@ const pt = {
     row3Solution: "Cria uma cadeia de custódia digital para decisões e registros do canteiro.",
   },
 
-  testimonials: {
-    title: "O Que as Equipes Estão Dizendo",
-    jasonName: "Jason T.",
-    jasonRole: "Encarregado Elétrico",
-    jasonQuote: "Um GC tentou nos culpar por um atraso. Peguei o registro diário com carimbos de data/hora e fotos — caso encerrado. VoiceLogPro está do meu lado.",
-    mariaName: "Maria R.",
-    mariaRole: "Líder de Encanamento",
-    mariaQuote: "Eu estava cética — ferramentas beta geralmente quebram. Mas o VoiceLogPro funcionou perfeitamente. Está economizando horas para nossa equipe toda semana.",
-  },
 
   valueLadder: {
     title: "Comece Grátis. Cresça Para a Equipe.",
@@ -191,12 +182,6 @@ const pt = {
     rung3Sub: "/mês",
     rung3Desc: "Até 5 equipes, integração prioritária, marca personalizada, exportações prontas para disputas.",
     rung3Deliverable: "Assinatura mensal",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (Anual)",
-    rung4Price: "$470",
-    rung4Sub: "/ano — economize $118",
-    rung4Desc: "Equipes ilimitadas, integração dedicada, acesso à API, trilha de auditoria de nível jurídico.",
-    rung4Deliverable: "Anual · lista de espera",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const pt = {
   },
 
   limitedBeta: {
-    badge: "Apenas 3 Vagas Beta Restantes",
+    badge: "Private Beta — Limited Places",
     title: "Mantemos a Beta Pequena de Propósito",
-    body: "VoiceLogPro é construído por uma equipe ativa, não por uma startup financiada por capital de risco. Integramos 3 novas equipes por vez para que cada parceiro beta receba suporte real — não um ticket de help-desk.",
-    nextBatch: "Assim que estas 3 vagas forem preenchidas, o próximo lote não abrirá por ~30 dias.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Se você leva a sério fazer relatórios corretamente — garanta sua vaga agora.",
   },
 

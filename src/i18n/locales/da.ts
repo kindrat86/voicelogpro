@@ -22,10 +22,10 @@ const da = {
   cta: {
     getDefenseKit: "Få det gratis Forsvarskit",
     reserveBetaSpot: "Reserver min betaplads",
-    seeCrewPlan: "se den betalte Crew-plan",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Send mig kittet",
-    joinBetaFree: "Bliv med i Beta gratis",
-    getCrewAccess: "Få Crew-adgang",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Vælg din vej",
   },
 
@@ -159,15 +159,6 @@ const da = {
     row3Solution: "Skaber en digital forvaltningskæde for stedbeslutninger og registreringer.",
   },
 
-  testimonials: {
-    title: "Hvad hold siger",
-    jasonName: "Jason T.",
-    jasonRole: "Elektroformand",
-    jasonQuote: "En GC prøvede at skyde skylden for en forsinkelse på os. Trak den daglige log frem med tidsstempler og billeder — sag lukket. VoiceLogPro dækker min ryg.",
-    mariaName: "Maria R.",
-    mariaRole: "VVS-leder",
-    mariaQuote: "Jeg var skeptisk — beta-værktøjer går som regel i stykker. Men VoiceLogPro kørte glat. Det sparer vores hold for timer hver uge.",
-  },
 
   valueLadder: {
     title: "Start gratis. Voks ind i Holdet.",
@@ -191,12 +182,6 @@ const da = {
     rung3Sub: "/måned",
     rung3Desc: "Op til 5 hold, prioriteret onboarding, tilpasset branding, tvisteklare eksporter.",
     rung3Deliverable: "Månedligt abonnement",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (Årlig)",
-    rung4Price: "3.830 kr",
-    rung4Sub: "/år — spar 958 kr",
-    rung4Desc: "Ubegrænsede hold, dedikeret onboarding, API-adgang, juridisk revisionsspor.",
-    rung4Deliverable: "Årlig · venteliste",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const da = {
   },
 
   limitedBeta: {
-    badge: "Kun 3 betapladser tilbage",
+    badge: "Private Beta — Limited Places",
     title: "Vi holder betaen bevidst lille",
-    body: "VoiceLogPro bygges af et arbejdende hold, ikke en venture-finansieret startup. Vi onboarder 3 nye hold ad gangen, så hver betapartner får ægte support — ikke en helpdesk-billet.",
-    nextBatch: "Når disse 3 pladser er fyldt, åbnes næste batch først om ~30 dage.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Hvis du er seriøs omkring rapportering gjort rigtigt — lås ind nu.",
   },
 

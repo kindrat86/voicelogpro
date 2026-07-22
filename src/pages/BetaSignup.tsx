@@ -419,7 +419,7 @@ export default function BetaSignup() {
                             Joining...
                           </>
                         ) : (
-                          "Join Beta Free"
+                          "Join the free beta waitlist"
                         )}
                       </Button>
                       <p className="text-xs text-muted-foreground text-center">
@@ -433,7 +433,7 @@ export default function BetaSignup() {
                       className="w-full"
                       onClick={() => handlePlanClick("free")}
                     >
-                      Join Beta Free
+                      Join the free beta waitlist
                     </Button>
                   )}
                 </div>
@@ -512,7 +512,7 @@ export default function BetaSignup() {
                             Joining...
                           </>
                         ) : (
-                          "Get Crew Access"
+                          "Reserve a Crew Plan place"
                         )}
                       </Button>
                     </form>
@@ -523,7 +523,7 @@ export default function BetaSignup() {
                       className="w-full"
                       onClick={() => handlePlanClick("paid")}
                     >
-                      Get Crew Access
+                      Reserve a Crew Plan place
                     </Button>
                   )}
                 </div>

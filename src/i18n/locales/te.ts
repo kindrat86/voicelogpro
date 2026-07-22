@@ -22,10 +22,10 @@ const te = {
   cta: {
     getDefenseKit: "ఉచిత డిఫెన్స్ కిట్ పొందండి",
     reserveBetaSpot: "నా బీటా స్థానాన్ని రిజర్వ్ చేయండి",
-    seeCrewPlan: "చెల్లింపు క్రూ ప్లాన్ చూడండి",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "నాకు కిట్ పంపండి",
-    joinBetaFree: "ఉచితంగా బీటాలో చేరండి",
-    getCrewAccess: "క్రూ యాక్సెస్ పొందండి",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "మీ మార్గాన్ని ఎంచుకోండి",
   },
 
@@ -159,15 +159,6 @@ const te = {
     row3Solution: "సైట్ నిర్ణయాలు మరియు రికార్డుల కోసం డిజిటల్ చైన్ ఆఫ్ కస్టడీని సృష్టిస్తుంది.",
   },
 
-  testimonials: {
-    title: "క్రూలు ఏమంటున్నాయి",
-    jasonName: "జేసన్ టి.",
-    jasonRole: "ఎలక్ట్రికల్ ఫోర్మెన్",
-    jasonQuote: "ఒక GC ఆలస్యానికి మమ్మల్ని నిందించడానికి ప్రయత్నించింది. టైమ్‌స్టాంప్‌లు మరియు ఫోటోలతో డైలీ లాగ్ తీసుకొచ్చాను — కేసు మూసివేయబడింది. వాయిస్ లాగ్ ప్రో నాకు మద్దతుగా ఉంది.",
-    mariaName: "మారియా ఆర్.",
-    mariaRole: "ప్లంబింగ్ లీడ్",
-    mariaQuote: "నేను సందేహంగా ఉన్నాను — బీటా టూల్స్ సాధారణంగా విరిగిపోతాయి. కానీ వాయిస్ లాగ్ ప్రో సజావుగా నడిచింది. ఇది మా క్రూ వారానికి గంటలు ఆదా చేస్తోంది.",
-  },
 
   valueLadder: {
     title: "ఉచితంగా ప్రారంభించండి. క్రూలోకి ఎదగండి.",
@@ -191,12 +182,6 @@ const te = {
     rung3Sub: "/నెల",
     rung3Desc: "5 వరకు క్రూలు, ప్రాధాన్యత ఆన్‌బోర్డింగ్, కస్టమ్ బ్రాండింగ్, వివాద-సిద్ధం ఎగుమతులు.",
     rung3Deliverable: "నెలవారీ సబ్‌స్క్రిప్షన్",
-    rung4Tier: "ప్రీమియం",
-    rung4Name: "ప్రో (వార్షిక)",
-    rung4Price: "$470",
-    rung4Sub: "/సంవత్సరం — $118 ఆదా",
-    rung4Desc: "అపరిమిత క్రూలు, ప్రత్యేక ఆన్‌బోర్డింగ్, API యాక్సెస్, లీగల్-గ్రేడ్ ఆడిట్ ట్రయల్.",
-    rung4Deliverable: "వార్షిక · వెయిటింగ్ లిస్ట్",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const te = {
   },
 
   limitedBeta: {
-    badge: "కేవలం 3 బీటా స్లాట్‌లు మాత్రమే మిగిలి ఉన్నాయి",
+    badge: "Private Beta — Limited Places",
     title: "మేము బీటాను ఉద్దేశపూర్వకంగా చిన్నగా ఉంచుతున్నాము",
-    body: "వాయిస్ లాగ్ ప్రో వెంచర్-ఫండెడ్ స్టార్టప్ ద్వారా కాకుండా పని చేస్తున్న క్రూ ద్వారా నిర్మించబడింది. మేము ఒకేసారి 3 కొత్త క్రూలను ఆన్‌బోర్డ్ చేస్తాము, తద్వారా ప్రతి బీటా భాగస్వామికి హెల్ప్-డెస్క్ టికెట్ కాకుండా నిజమైన మద్దతు లభిస్తుంది.",
-    nextBatch: "ఈ 3 సీట్లు నిండిన తర్వాత, తదుపరి బ్యాచ్ ~30 రోజుల వరకు తెరవబడదు.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "మీరు రిపోర్టింగ్ సరిగ్గా చేయడం గురించి తీవ్రంగా ఉంటే — ఇప్పుడే లాక్ చేయండి.",
   },
 

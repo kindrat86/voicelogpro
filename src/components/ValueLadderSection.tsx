@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Gift, Zap, Users, Building2, ChevronRight } from "lucide-react";
+import { Gift, Zap, Users, ChevronRight } from "lucide-react";
 
 const ladderRungs = [
   {
@@ -35,22 +35,11 @@ const ladderRungs = [
     href: "/crew-plan",
     highlight: true,
   },
-  {
-    icon: Building2,
-    tier: "Premium",
-    name: "Pro (Annual)",
-    price: "$470",
-    sub: "/year — save $118",
-    description: "Unlimited crews, dedicated onboarding, API access, legal-grade audit trail.",
-    deliverable: "Annual · waitlist",
-    href: "/crew-plan",
-    highlight: false,
-  },
 ];
 
 /**
  * Visual VALUE LADDER (Brunson core concept).
- * Makes the free → low → core → premium progression explicit so the buyer
+ * Makes the free → entry → core progression explicit so the buyer
  * self-selects the rung that fits — and sees a clear upgrade path.
  */
 export function ValueLadderSection() {
@@ -60,10 +49,10 @@ export function ValueLadderSection() {
         Start Free. Grow Into The Crew.
       </h2>
       <p className="body-large text-center mb-10">
-        Four steps from protecting your first job to running your whole company's reporting.
+        Three steps from protecting your first job to running your whole company's reporting.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {ladderRungs.map((rung) => (
           <div
             key={rung.name}

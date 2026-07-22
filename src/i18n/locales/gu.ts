@@ -22,10 +22,10 @@ const gu = {
   cta: {
     getDefenseKit: "મફત ડિફેન્સ કિટ મેળવો",
     reserveBetaSpot: "મારું બીટા સ્થાન આરક્ષિત કરો",
-    seeCrewPlan: "પેઇડ ક્રૂ પ્લાન જુઓ",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "મને કિટ મોકલો",
-    joinBetaFree: "બીટામાં મફત જોડાઓ",
-    getCrewAccess: "ક્રૂ ઍક્સેસ મેળવો",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "તમારો માર્ગ પસંદ કરો",
   },
 
@@ -159,15 +159,6 @@ const gu = {
     row3Solution: "સાઇટ નિર્ણયો અને રેકોર્ડ્સ માટે ડિજિટલ ચેઇન ઓફ કસ્ટડી બનાવે છે.",
   },
 
-  testimonials: {
-    title: "ક્રૂ શું કહી રહ્યા છે",
-    jasonName: "જેસન ટી.",
-    jasonRole: "ઇલેક્ટ્રિકલ ફોરમેન",
-    jasonQuote: "એક GC એ અમારા પર વિલંબનો દોષ મૂકવાનો પ્રયાસ કર્યો. ટાઇમસ્ટેમ્પ્સ અને ફોટા સાથે દૈનિક લૉગ ખેંચ્યો — કેસ બંધ. વૉઇસ લૉગ પ્રો મારી પીઠ પર છે.",
-    mariaName: "મારિયા આર.",
-    mariaRole: "પ્લમ્બિંગ લીડ",
-    mariaQuote: "મને શંકા હતી — બીટા ટૂલ્સ સામાન્ય રીતે તૂટી જાય છે. પરંતુ વૉઇસ લૉગ પ્રો સરળ ચાલ્યું. તે અમારા ક્રૂના દર અઠવાડિયે કલાકો બચાવી રહ્યું છે.",
-  },
 
   valueLadder: {
     title: "મફત શરૂ કરો. ક્રૂમાં વૃદ્ધિ પામો.",
@@ -191,12 +182,6 @@ const gu = {
     rung3Sub: "/મહિનો",
     rung3Desc: "૫ ક્રૂ સુધી, પ્રાથમિકતા ઓનબોર્ડિંગ, કસ્ટમ બ્રાન્ડિંગ, વિવાદ-તૈયાર નિકાસ.",
     rung3Deliverable: "માસિક સબ્સ્ક્રિપ્શન",
-    rung4Tier: "પ્રીમિયમ",
-    rung4Name: "પ્રો (વાર્ષિક)",
-    rung4Price: "$470",
-    rung4Sub: "/વર્ષ — $118 બચાવો",
-    rung4Desc: "અમર્યાદિત ક્રૂ, સમર્પિત ઓનબોર્ડિંગ, API ઍક્સેસ, કાનૂની-ગ્રેડ ઓડિટ ટ્રેઇલ.",
-    rung4Deliverable: "વાર્ષિક · પ્રતીક્ષા યાદી",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const gu = {
   },
 
   limitedBeta: {
-    badge: "ફક્ત ૩ બીટા સ્લોટ બાકી",
+    badge: "Private Beta — Limited Places",
     title: "અમે બીટાને હેતુપૂર્વક નાનું રાખી રહ્યા છીએ",
-    body: "વૉઇસ લૉગ પ્રો કાર્યરત ક્રૂ દ્વારા બનાવવામાં આવ્યું છે, વેન્ચર-ફંડેડ સ્ટાર્ટઅપ નહીં. અમે એક સમયે ૩ નવા ક્રૂને ઓનબોર્ડ કરીએ છીએ જેથી દરેક બીટા ભાગીદારને વાસ્તવિક સમર્થન મળે — હેલ્પ-ડેસ્ક ટિકિટ નહીં.",
-    nextBatch: "એકવાર આ ૩ સીટ ભરાઈ જાય, પછીનો બેચ લગભગ ૩૦ દિવસ સુધી ખુલશે નહીં.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "જો તમે યોગ્ય રીતે રિપોર્ટિંગ કરવા વિશે ગંભીર છો — હમણાં લૉક કરો.",
   },
 

@@ -22,10 +22,10 @@ const mr = {
   cta: {
     getDefenseKit: "मोफत डिफेन्स किट मिळवा",
     reserveBetaSpot: "माझी बीटा जागा राखून ठेवा",
-    seeCrewPlan: "सशुल्क क्रू प्लॅन पहा",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "मला किट पाठवा",
-    joinBetaFree: "मोफत बीटामध्ये सामील व्हा",
-    getCrewAccess: "क्रू ऍक्सेस मिळवा",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "तुमचा मार्ग निवडा",
   },
 
@@ -159,15 +159,6 @@ const mr = {
     row3Solution: "साइट निर्णय आणि रेकॉर्डसाठी डिजिटल चेन ऑफ कस्टडी तयार करते.",
   },
 
-  testimonials: {
-    title: "क्रू काय म्हणत आहेत",
-    jasonName: "जेसन टी.",
-    jasonRole: "इलेक्ट्रिकल फोरमन",
-    jasonQuote: "एका जीसीने विलंबासाठी आम्हाला दोष देण्याचा प्रयत्न केला. टाइमस्टॅम्प आणि फोटोंसह डेली लॉग बाहेर काढला — केस बंद. व्हॉइस लॉग प्रो माझ्या पाठीशी आहे.",
-    mariaName: "मारिया आर.",
-    mariaRole: "प्लंबिंग लीड",
-    mariaQuote: "मी संशयित होते — बीटा टूल्स सहसा तुटतात. पण व्हॉइस लॉग प्रो सुरळीत चालले. ते आमच्या क्रूचे दर आठवड्याला तास वाचवत आहे.",
-  },
 
   valueLadder: {
     title: "मोफत सुरू करा. क्रूमध्ये वाढ करा.",
@@ -191,12 +182,6 @@ const mr = {
     rung3Sub: "/महिना",
     rung3Desc: "५ पर्यंत क्रू, प्राधान्य ऑनबोर्डिंग, कस्टम ब्रँडिंग, विवाद-सज्ज निर्यात.",
     rung3Deliverable: "मासिक सबस्क्रिप्शन",
-    rung4Tier: "प्रीमियम",
-    rung4Name: "प्रो (वार्षिक)",
-    rung4Price: "$470",
-    rung4Sub: "/वर्ष — $118 वाचवा",
-    rung4Desc: "अमर्यादित क्रू, समर्पित ऑनबोर्डिंग, एपीआय ऍक्सेस, कायदेशीर-ग्रेड ऑडिट ट्रेल.",
-    rung4Deliverable: "वार्षिक · प्रतीक्षा यादी",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const mr = {
   },
 
   limitedBeta: {
-    badge: "फक्त ३ बीटा स्लॉट शिल्लक",
+    badge: "Private Beta — Limited Places",
     title: "आम्ही बीटा हेतुपुरस्सर लहान ठेवत आहोत",
-    body: "व्हॉइस लॉग प्रो व्हेंचर-फंडेड स्टार्टअपने नव्हे तर कार्यरत क्रूने बनवले आहे. आम्ही एकावेळी ३ नवीन क्रू घेतो जेणेकरून प्रत्येक बीटा भागीदाराला हेल्प-डेस्क तिकीट नव्हे तर वास्तविक समर्थन मिळेल.",
-    nextBatch: "या ३ जागा भरल्यावर पुढील बॅच सुमारे ३० दिवसांनी उघडेल.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "जर तुम्ही योग्य रिपोर्टिंगबद्दल गंभीर असाल — तर आता लॉक करा.",
   },
 

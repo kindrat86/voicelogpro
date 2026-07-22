@@ -22,10 +22,10 @@ const zhCN = {
   cta: {
     getDefenseKit: "免费获取防御工具包",
     reserveBetaSpot: "预留我的Beta名额",
-    seeCrewPlan: "查看付费团队方案",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "发送工具包给我",
-    joinBetaFree: "免费加入Beta",
-    getCrewAccess: "获取团队访问权限",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "选择你的路径",
   },
 
@@ -159,15 +159,6 @@ const zhCN = {
     row3Solution: "为现场决策和记录创建数字化保管链。",
   },
 
-  testimonials: {
-    title: "施工团队的评价",
-    jasonName: "Jason T.",
-    jasonRole: "电气工长",
-    jasonQuote: "有一次总包想把延误赖给我们。我调出带时间戳和照片的每日日志——案件就此了结。VoiceLogPro挺我。",
-    mariaName: "Maria R.",
-    mariaRole: "水管主管",
-    mariaQuote: "我本来很怀疑——Beta工具通常都会出问题。但VoiceLogPro运行得很流畅。它每周为我们的团队节省了好几个小时。",
-  },
 
   valueLadder: {
     title: "免费开始。逐步升级到团队方案。",
@@ -191,12 +182,6 @@ const zhCN = {
     rung3Sub: "/月",
     rung3Desc: "最多5个团队、优先入门、自定义品牌、争议就绪导出。",
     rung3Deliverable: "月度订阅",
-    rung4Tier: "高级",
-    rung4Name: "专业版（年付）",
-    rung4Price: "$470",
-    rung4Sub: "/年 — 节省$118",
-    rung4Desc: "无限团队、专属入门、API访问、法律级审计追踪。",
-    rung4Deliverable: "年付 · 候补名单",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const zhCN = {
   },
 
   limitedBeta: {
-    badge: "仅剩3个Beta名额",
+    badge: "Private Beta — Limited Places",
     title: "我们有意保持Beta规模小",
-    body: "VoiceLogPro由一支正在工作的施工团队打造，而非风投资助的初创公司。我们每次只引入3个新团队，确保每个Beta合作伙伴都能获得真正的支持——而不是一张客服工单。",
-    nextBatch: "这3个名额填满后，下一批大约30天后才会开放。",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "如果你认真想要做好报告——现在就锁定名额。",
   },
 

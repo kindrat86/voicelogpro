@@ -240,7 +240,7 @@ export function CrewPlanSection() {
                         Joining...
                       </>
                     ) : (
-                      "Get Crew Access"
+                      "Reserve a Crew Plan place"
                     )}
                   </Button>
                 </form>
@@ -251,7 +251,7 @@ export function CrewPlanSection() {
                   className="w-full"
                   onClick={() => handlePlanClick("paid")}
                 >
-                  Get Crew Access
+                  Reserve a Crew Plan place
                 </Button>
               )}
             </div>

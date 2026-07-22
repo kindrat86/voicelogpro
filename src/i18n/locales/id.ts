@@ -24,10 +24,10 @@ const id = {
   cta: {
     getDefenseKit: "Dapatkan Kit Pertahanan Gratis",
     reserveBetaSpot: "Pesan Tempat Beta Saya",
-    seeCrewPlan: "Lihat Paket Kru Berbayar",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Kirim Saya Kit-nya",
-    joinBetaFree: "Gabung Beta Gratis",
-    getCrewAccess: "Dapatkan Akses Kru",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Pilih jalur Anda",
   },
 
@@ -170,16 +170,6 @@ const id = {
     row3Solution: "Menciptakan rantai kepemilikan digital untuk keputusan dan catatan lapangan.",
   },
 
-  // Testimonials
-  testimonials: {
-    title: "Apa Kata Para Kru",
-    jasonName: "Jason T.",
-    jasonRole: "Mandor Listrik",
-    jasonQuote: "Ada GC yang coba menyalahkan kami atas keterlambatan. Saya tunjukkan laporan harian dengan stempel waktu dan foto — selesai. VoiceLogPro melindungi saya.",
-    mariaName: "Maria R.",
-    mariaRole: "Kepala Tukang Pipa",
-    mariaQuote: "Saya awalnya skeptis — alat beta biasanya rusak. Tapi VoiceLogPro berjalan mulus. Ini menghemat waktu kru kami berjam-jam setiap minggu.",
-  },
 
   // Value ladder
   valueLadder: {
@@ -204,12 +194,6 @@ const id = {
     rung3Sub: "/bulan",
     rung3Desc: "Hingga 5 kru, onboarding prioritas, branding kustom, ekspor siap-sengketa.",
     rung3Deliverable: "Langganan bulanan",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (Tahunan)",
-    rung4Price: "$470",
-    rung4Sub: "/tahun — hemat $118",
-    rung4Desc: "Kru tak terbatas, onboarding khusus, akses API, jejak audit tingkat hukum.",
-    rung4Deliverable: "Tahunan · daftar tunggu",
   },
 
   // Order bump / crew plan conversion
@@ -256,10 +240,10 @@ const id = {
 
   // Limited beta section
   limitedBeta: {
-    badge: "Hanya Tersisa 3 Slot Beta",
+    badge: "Private Beta — Limited Places",
     title: "Kami Menjaga Beta Tetap Kecil dengan Sengaja",
-    body: "VoiceLogPro dibangun oleh kru yang bekerja, bukan startup yang didanai ventura. Kami menerima 3 kru baru setiap kali agar setiap mitra beta mendapat dukungan nyata — bukan tiket help-desk.",
-    nextBatch: "Setelah 3 kursi ini terisi, kelompok berikutnya tidak akan dibuka selama ~30 hari.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Jika Anda serius tentang pelaporan yang benar — amankan sekarang.",
   },
 

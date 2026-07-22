@@ -22,10 +22,10 @@ const ro = {
   cta: {
     getDefenseKit: "Obține Kitul de Apărare Gratuit",
     reserveBetaSpot: "Rezervă-mi Locul Beta",
-    seeCrewPlan: "vezi Planul Echipă plătit",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Trimite-mi Kitul",
-    joinBetaFree: "Alătură-te Beta Gratuit",
-    getCrewAccess: "Obține Accesul Echipă",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Alege-ți calea",
   },
 
@@ -159,15 +159,6 @@ const ro = {
     row3Solution: "Creează un lanț digital de custodie pentru deciziile și înregistrările de pe șantier.",
   },
 
-  testimonials: {
-    title: "Ce spun echipele",
-    jasonName: "Jason T.",
-    jasonRole: "Maistru Electrician",
-    jasonQuote: "Un antreprenor general a încercat să ne învinovățească pentru o întârziere. Am scos jurnalul zilnic cu marcaje temporale și poze — caz închis. VoiceLogPro mă acoperă.",
-    mariaName: "Maria R.",
-    mariaRole: "Șefă Instalatori",
-    mariaQuote: "Eram sceptică — instrumentele beta de obicei se strică. Dar VoiceLogPro a funcționat fără probleme. Ne salvează echipajului ore întregi în fiecare săptămână.",
-  },
 
   valueLadder: {
     title: "Începe Gratuit. Crește cu Echipă.",
@@ -191,12 +182,6 @@ const ro = {
     rung3Sub: "/lună",
     rung3Desc: "Până la 5 echipe, integrare prioritară, branding personalizat, exporturi gata de dispute.",
     rung3Deliverable: "Abonament lunar",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (Anual)",
-    rung4Price: "470 lei",
-    rung4Sub: "/an — economisești 118 lei",
-    rung4Desc: "Echipe nelimitate, integrare dedicată, acces API, traseu de audit de calitate juridică.",
-    rung4Deliverable: "Anual · listă de așteptare",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const ro = {
   },
 
   limitedBeta: {
-    badge: "Au Mai Rămas Doar 3 Locuri Beta",
+    badge: "Private Beta — Limited Places",
     title: "Păstrăm Beta-ul Mic Intenționat",
-    body: "VoiceLogPro este construit de o echipă care lucrează, nu de un startup finanțat de venture capital. Integrăm câte 3 echipe noi odată, astfel încât fiecare partener beta să primească sprijin real — nu un bilet de help-desk.",
-    nextBatch: "Odată ce aceste 3 locuri se ocupă, următorul lot nu se va deschide timp de ~30 de zile.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Dacă ești serios în privința raportării făcute corect — blochează-ți locul acum.",
   },
 

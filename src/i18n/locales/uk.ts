@@ -22,10 +22,10 @@ const uk = {
   cta: {
     getDefenseKit: "Отримайте безкоштовний оборонний набір",
     reserveBetaSpot: "Зарезервувати моє бета-місце",
-    seeCrewPlan: "Переглянути платний план Crew",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Надішліть мені набір",
-    joinBetaFree: "Приєднатися до бети безкоштовно",
-    getCrewAccess: "Отримати доступ Crew",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Оберіть свій шлях",
   },
 
@@ -159,15 +159,6 @@ const uk = {
     row3Solution: "Створює цифровий ланцюг зберігання для будівельних рішень і записів.",
   },
 
-  testimonials: {
-    title: "Що кажуть бригади",
-    jasonName: "Джейсон Т.",
-    jasonRole: "Майстер-електрик",
-    jasonQuote: "GC спробував звинуватити нас у затримці. Я дістав щоденний журнал з позначками часу та фото — справа закрита. VoiceLogPro прикриває мене.",
-    mariaName: "Марія Р.",
-    mariaRole: "Керівник сантехніки",
-    mariaQuote: "Я була скептична — бета-інструменти зазвичай ламаються. Але VoiceLogPro працював бездоганно. Він економить нашій бригаді години щотижня.",
-  },
 
   valueLadder: {
     title: "Почніть безкоштовно. Зростайте до Crew.",
@@ -191,12 +182,6 @@ const uk = {
     rung3Sub: "/місяць",
     rung3Desc: "До 5 бригад, пріоритетне налаштування, індивідуальний брендинг, експорт, готовий до суперечок.",
     rung3Deliverable: "Місячна підписка",
-    rung4Tier: "Преміум",
-    rung4Name: "Pro (річний)",
-    rung4Price: "13 500 ₴",
-    rung4Sub: "/рік — економте 3 300 ₴",
-    rung4Desc: "Необмежені бригади, виділене налаштування, доступ до API, аудит юридичного рівня.",
-    rung4Deliverable: "Річний · список очікування",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const uk = {
   },
 
   limitedBeta: {
-    badge: "Залишилося лише 3 бета-місця",
+    badge: "Private Beta — Limited Places",
     title: "Ми навмисно тримаємо бету невеликою",
-    body: "VoiceLogPro створюється робочою бригадою, а не стартапом, що фінансується венчурним капіталом. Ми беремо по 3 нові бригади за раз, щоб кожен бета-партнер отримував реальну підтримку — не заявку в службу підтримки.",
-    nextBatch: "Як тільки ці 3 місця заповняться, наступна партія відкриється приблизно через 30 днів.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Якщо ви серйозно налаштовані щодо правильної звітності — забронюйте місце зараз.",
   },
 

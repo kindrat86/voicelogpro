@@ -22,10 +22,10 @@ const cs = {
   cta: {
     getDefenseKit: "Získejte Obranný Kit zdarma",
     reserveBetaSpot: "Rezervovat moji beta pozici",
-    seeCrewPlan: "podívejte se na placený Crew plán",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Pošlete mi Kit",
-    joinBetaFree: "Připojit se k Beta zdarma",
-    getCrewAccess: "Získat přístup Crew",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Vyberte si svou cestu",
   },
 
@@ -159,15 +159,6 @@ const cs = {
     row3Solution: "Vytváří digitální řetězec dohledu nad rozhodnutími a záznamy na staveništi.",
   },
 
-  testimonials: {
-    title: "Co říkají týmy",
-    jasonName: "Jason T.",
-    jasonRole: "Vedoucí elektrikář",
-    jasonQuote: "GC se nás snažil obvinit ze zpoždění. Vytáhl jsem denní log s časovými razítky a fotkami — případ uzavřen. VoiceLogPro mě kryje.",
-    mariaName: "Maria R.",
-    mariaRole: "Vedoucí instalatérů",
-    mariaQuote: "Byla jsem skeptická — beta nástroje se obvykle kazí. Ale VoiceLogPro běžel hladce. Šetří našemu týmu hodiny každý týden.",
-  },
 
   valueLadder: {
     title: "Začněte zdarma. Přejděte na Crew.",
@@ -191,12 +182,6 @@ const cs = {
     rung3Sub: "/měsíc",
     rung3Desc: "Až 5 týmů, prioritní onboarding, vlastní značka, exporty připravené pro spory.",
     rung3Deliverable: "Měsíční předplatné",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (Roční)",
-    rung4Price: "11 490 Kč",
-    rung4Sub: "/rok — ušetříte 2 898 Kč",
-    rung4Desc: "Neomezené týmy, dedikovaný onboarding, API přístup, auditní stopa právní kvality.",
-    rung4Deliverable: "Roční · čekací listina",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const cs = {
   },
 
   limitedBeta: {
-    badge: "Zbývají pouze 3 beta místa",
+    badge: "Private Beta — Limited Places",
     title: "Beta záměrně udržujeme malou",
-    body: "VoiceLogPro staví pracovní tým, ne venture-financovaný startup. Nabíráme vždy 3 nové týmy, aby každý beta partner dostal skutečnou podporu — ne lístek na help-desk.",
-    nextBatch: "Jakmile se tato 3 místa zaplní, další várka se otevře až za ~30 dní.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Pokud to s reportováním myslíte vážně — zafixujte si místo nyní.",
   },
 

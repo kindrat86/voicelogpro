@@ -22,10 +22,10 @@ const no = {
   cta: {
     getDefenseKit: "Få gratis Forsvarskit",
     reserveBetaSpot: "Reserver betaplassen min",
-    seeCrewPlan: "se den betalte Crew-planen",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Send meg kitet",
-    joinBetaFree: "Bli med i Beta gratis",
-    getCrewAccess: "Få Crew-tilgang",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Velg din vei",
   },
 
@@ -159,15 +159,6 @@ const no = {
     row3Solution: "Skaper en digital forvaltningskjede for stedsbeslutninger og registreringer.",
   },
 
-  testimonials: {
-    title: "Hva mannskaper sier",
-    jasonName: "Jason T.",
-    jasonRole: "Elektroformann",
-    jasonQuote: "En GC prøvde å skylde en forsinkelse på oss. Tok frem den daglige loggen med tidsstempler og bilder — saken løst. VoiceLogPro dekker ryggen min.",
-    mariaName: "Maria R.",
-    mariaRole: "Rørleggerleder",
-    mariaQuote: "Jeg var skeptisk — beta-verktøy går som oftest i stykker. Men VoiceLogPro fungerte knirkefritt. Det sparer mannskapet vårt for timer hver uke.",
-  },
 
   valueLadder: {
     title: "Start gratis. Voks inn i Crewet.",
@@ -191,12 +182,6 @@ const no = {
     rung3Sub: "/måned",
     rung3Desc: "Opptil 5 mannskaper, prioritert onboarding, tilpasset merkevarebygging, tvisteklare eksporter.",
     rung3Deliverable: "Månedlig abonnement",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (Årlig)",
-    rung4Price: "5 270 kr",
-    rung4Sub: "/år — spar 1 318 kr",
-    rung4Desc: "Ubegrensede mannskaper, dedikert onboarding, API-tilgang, juridisk revisjonsspor.",
-    rung4Deliverable: "Årlig · venteliste",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const no = {
   },
 
   limitedBeta: {
-    badge: "Bare 3 betaplasser igjen",
+    badge: "Private Beta — Limited Places",
     title: "Vi holder betaen bevisst liten",
-    body: "VoiceLogPro bygges av et arbeidende mannskap, ikke en venture-finansiert oppstart. Vi tar inn 3 nye mannskaper om gangen slik at hver betapartner får ekte støtte — ikke en helpdesk-billett.",
-    nextBatch: "Når disse 3 plassene er fylt, åpnes neste gruppe om ~30 dager.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Hvis du mener alvor med rapportering gjort riktig — lås inn nå.",
   },
 

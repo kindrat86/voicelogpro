@@ -195,7 +195,7 @@ export default function CrewPlan() {
                             Joining...
                           </>
                         ) : (
-                          "Join Beta Free"
+                          "Join the free beta waitlist"
                         )}
                       </Button>
                       <p className="text-xs text-muted-foreground text-center">
@@ -209,7 +209,7 @@ export default function CrewPlan() {
                       className="w-full"
                       onClick={() => handlePlanClick("free")}
                     >
-                      Join Beta Free
+                      Join the free beta waitlist
                     </Button>
                   )}
                 </div>
@@ -280,7 +280,7 @@ export default function CrewPlan() {
                             Joining...
                           </>
                         ) : (
-                          "Get Crew Access"
+                          "Reserve a Crew Plan place"
                         )}
                       </Button>
                     </form>
@@ -291,7 +291,7 @@ export default function CrewPlan() {
                       className="w-full"
                       onClick={() => handlePlanClick("paid")}
                     >
-                      Get Crew Access
+                      Reserve a Crew Plan place
                     </Button>
                   )}
                 </div>
