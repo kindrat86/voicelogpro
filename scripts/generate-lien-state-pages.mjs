@@ -5,6 +5,7 @@
  */
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
+import { POSTHOG_SNIPPET, captureBlock } from "./lib/capture-snippet.mjs";
 
 const D = JSON.parse(readFileSync(join(process.cwd(), "src/data/lien-deadlines.json"), "utf8"));
 const BASE = "https://voicelogpro.com";
@@ -62,6 +63,7 @@ for (const state of D.states) {
 <link rel="canonical" href="${BASE}/lien-law-deadlines/${slug}">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 ${CSS}
+${POSTHOG_SNIPPET}
 <script type="application/ld+json">${JSON.stringify(faq)}</script>
 <script type="application/ld+json">${JSON.stringify(breadcrumb)}</script>
 </head><body>
@@ -69,6 +71,7 @@ ${CSS}
 <h1>${esc(state)} Mechanics Lien Deadlines</h1>
 <p>The three deadlines every ${esc(state)} subcontractor must track — preliminary notice, lien filing, and enforcement. Values below are reproduced from our verified 50-state reference; confirm with a ${esc(state)} construction attorney.</p>
 ${body}
+${captureBlock(`/lien-law-deadlines/${slug}`, esc(state), `${esc(state)}'s`)}
 <p class="disc">${esc(D.disclaimer)} Source: <a href="${CHEATSHEET}">VoiceLogPro 50-state lien deadline reference</a> · <a href="/lien-law-deadlines/data.json">Download data (CC BY 4.0)</a></p>
 </body></html>`;
 
