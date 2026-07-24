@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2, CheckCircle, Lock } from "lucide-react";
 import { z } from "zod";
-import { supabase } from "@/integrations/supabase/client";
 import { subscribeToSequence } from "@/lib/subscribe";
 import { Link } from "react-router-dom";
 
@@ -43,23 +42,17 @@ export function LeadMagnetForm({
     }
     setStatus("loading");
     setIsDuplicate(false);
-    // Enroll in the email sequence in parallel — never blocks the signup UX.
-    void subscribeToSequence(email);
-    try {
-      const { error } = await supabase.from("waitlist").insert({
-        email: email.toLowerCase().trim(),
-        source,
-      });
-      if (error) {
-        if (error.code === "23505") {
-          setIsDuplicate(true);
-          setStatus("success");
-          return;
-        }
-        throw error;
-      }
+    // 2026-07-24: this used to fire subscribeToSequence() (real, working
+    // capture) and then AWAIT a supabase.from("waitlist").insert() against a
+    // placeholder Supabase URL — the broken second call always threw, so the
+    // UI told every submitter "Something went wrong" even though their email
+    // had already been captured and enrolled. This is likely the site's
+    // highest-traffic form (reusable across pages). Now the awaited result
+    // is the one real capture path.
+    const ok = await subscribeToSequence(email, source);
+    if (ok) {
       setStatus("success");
-    } catch (error) {
+    } else {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
     }

@@ -69,6 +69,12 @@ export function HeroSection() {
           Stop Typing Daily Reports.
           <span className="block text-primary">Just Speak.</span>
         </h1>
+
+        <p className="text-sm font-semibold text-primary max-w-2xl mx-auto mb-4 animate-fade-up" style={{ animationDelay: "0.12s" }}>
+          <strong>TL;DR:</strong> VoiceLogPro turns 30-second voice notes into timestamped, weather-corroborated,
+          court-ready PDF daily reports. No typing. Works from any phone. Flat $49/month for your entire crew.
+          Built for subcontractors who need payment protection, not project management.
+        </p>
         
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4 animate-fade-up" style={{
         animationDelay: "0.15s"
@@ -94,7 +100,7 @@ export function HeroSection() {
         </div>
 
         <p className="text-sm text-muted-foreground mb-10 animate-fade-up" style={{ animationDelay: "0.35s" }}>
-          Or <a href="#crew-plan" className="text-primary font-bold underline">see the paid Crew Plan →</a>
+          Or <a href="#crew-plan" className="text-primary font-bold underline">learn about the Crew Plan →</a>
         </p>
         
         {/* Before/After Slider */}

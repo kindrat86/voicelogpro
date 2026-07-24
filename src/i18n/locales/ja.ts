@@ -22,10 +22,10 @@ const ja = {
   cta: {
     getDefenseKit: "無料ディフェンスキットを入手",
     reserveBetaSpot: "ベータ版の席を確保",
-    seeCrewPlan: "有料クループランを見る",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "キットを送ってください",
-    joinBetaFree: "無料でベータ版に参加",
-    getCrewAccess: "クルーアクセスを取得",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "パスを選択",
   },
 
@@ -159,15 +159,6 @@ const ja = {
     row3Solution: "現場での意思決定と記録のデジタル管理チェーンを作成。",
   },
 
-  testimonials: {
-    title: "クルーの声",
-    jasonName: "Jason T.",
-    jasonRole: "電気工事現場監督",
-    jasonQuote: "GCが遅延の責任を私たちになすりつけようとした。タイムスタンプ付きの日報と写真を提示したら — 一件落着。VoiceLogProが私の味方です。",
-    mariaName: "Maria R.",
-    mariaRole: "配管リーダー",
-    mariaQuote: "懐疑的でした — ベータツールは大抵壊れますから。でもVoiceLogProはスムーズに動作しました。私たちのクルーの毎週の時間を節約しています。",
-  },
 
   valueLadder: {
     title: "無料で始めて、クループランへ",
@@ -191,12 +182,6 @@ const ja = {
     rung3Sub: "/月",
     rung3Desc: "最大5クルー、優先オンボーディング、カスタムブランディング、紛争対応エクスポート。",
     rung3Deliverable: "月額サブスクリプション",
-    rung4Tier: "プレミアム",
-    rung4Name: "Pro（年間）",
-    rung4Price: "¥470",
-    rung4Sub: "/年 — ¥118お得",
-    rung4Desc: "無制限クルー、専任オンボーディング、APIアクセス、法的グレードの監査証跡。",
-    rung4Deliverable: "年間 · ウェイティングリスト",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const ja = {
   },
 
   limitedBeta: {
-    badge: "ベータ枠残りわずか3",
+    badge: "Private Beta — Limited Places",
     title: "ベータ版は意図的に小規模に保っています",
-    body: "VoiceLogProはベンチャーキャピタルではなく、実際に働くクルーによって開発されています。一度に3クルーずつ受け入れ、すべてのベータパートナーがヘルプデスクチケットではなく実際のサポートを受けられるようにしています。",
-    nextBatch: "この3枠が埋まると、次のバッチは約30日間開きません。",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "レポート作成を真剣に考えているなら — 今すぐ確保してください。",
   },
 

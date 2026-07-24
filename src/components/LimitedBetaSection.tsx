@@ -13,7 +13,7 @@ export function LimitedBetaSection() {
       <div className="max-w-xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 bg-destructive/20 text-foreground px-4 py-2 rounded-full mb-6">
           <AlertTriangle className="w-5 h-5" />
-          <span className="font-semibold uppercase tracking-wide text-sm">Only 3 Beta Slots Left</span>
+          <span className="font-semibold uppercase tracking-wide text-sm">Private Beta — Limited Places</span>
         </div>
 
         <h2 className="headline-section text-foreground mb-6">
@@ -22,13 +22,13 @@ export function LimitedBetaSection() {
 
         <p className="body-large mb-4">
           VoiceLogPro is built by a working crew, not a venture-funded startup.
-          We onboard <span className="text-foreground font-semibold">3 new crews at a time</span> so every
+          We onboard <span className="text-foreground font-semibold">crews in small groups</span> so every
           beta partner gets real support — not a help-desk ticket.
         </p>
 
         <div className="flex items-center justify-center gap-2 mb-8 text-foreground font-medium">
           <Clock className="w-5 h-5 text-destructive" />
-          <span>Once these 3 seats fill, the next batch won't open for ~30 days.</span>
+          <span>New beta cohorts open as capacity allows.</span>
         </div>
 
         <p className="text-xl text-foreground font-medium mb-8">

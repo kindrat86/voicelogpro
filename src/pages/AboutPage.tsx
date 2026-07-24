@@ -122,6 +122,11 @@ export default function AboutPage() {
           <h1 className="font-display text-4xl md:text-6xl uppercase text-foreground mb-6 leading-tight">
             Built for the <span className="text-primary">crew</span> who works with their hands
           </h1>
+          <p className="text-sm font-semibold text-primary max-w-2xl mx-auto mb-4">
+            <strong>TL;DR:</strong> VoiceLogPro was built on actual jobsites by an electrical foreman who got tired
+            of fighting backcharges. It turns voice notes into court-ready daily construction reports —
+            timestamped, weather-tagged, and formatted as PDFs. One price: $49/month for the whole crew.
+          </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             VoiceLogPro turns voice notes into timestamped, court-ready daily construction reports.
             It was built by subcontractors who learned the hard way that what kills your pay isn't bad

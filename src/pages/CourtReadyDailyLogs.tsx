@@ -189,6 +189,12 @@ const CourtReadyDailyLogs = () => {
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
               Court-Ready Construction Daily Logs
             </h1>
+            <p className="text-sm font-semibold text-primary mb-4">
+              <strong>TL;DR:</strong> A court-ready daily log is a contemporaneous business record with timestamps,
+              weather corroboration, and geotagged photos — kept consistently as routine practice. VoiceLogPro
+              captures all five elements by voice in about 30 seconds on-site, producing a PDF that holds up
+              in payment disputes, mechanics liens, and delay claims.
+            </p>
             <p className="text-xl text-muted-foreground mb-4 max-w-2xl">
               A construction daily log is court-ready when it is a <strong className="text-foreground">contemporaneous
               business record</strong> — created at the time of the work, timestamped, corroborated by objective
@@ -288,6 +294,7 @@ const CourtReadyDailyLogs = () => {
             </div>
             <div className="mt-8 text-sm text-muted-foreground">
               See also:{" "}
+              <Link to="/lien-law-deadlines" className="text-primary hover:underline">state-by-state lien deadlines</Link>{" · "}
               <Link to="/how-to/document-construction-delays" className="text-primary hover:underline">document construction delays</Link>{" · "}
               <Link to="/how-to/protect-lien-rights-as-subcontractor" className="text-primary hover:underline">protect your lien rights</Link>{" · "}
               <Link to="/solutions/building-safety-act-golden-thread" className="text-primary hover:underline">UK Building Safety Act golden thread</Link>

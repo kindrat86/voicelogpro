@@ -22,10 +22,10 @@ const fi = {
   cta: {
     getDefenseKit: "Hanki ilmainen Puolustuspakkaus",
     reserveBetaSpot: "Varaa beta-paikkani",
-    seeCrewPlan: "katso maksullinen Crew-suunnitelma",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Lähetä minulle pakkaus",
-    joinBetaFree: "Liity Betaan ilmaiseksi",
-    getCrewAccess: "Hanki Crew-pääsy",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Valitse polkusi",
   },
 
@@ -159,15 +159,6 @@ const fi = {
     row3Solution: "Luo digitaalisen hallintaketjun työmaan päätöksille ja tallenteille.",
   },
 
-  testimonials: {
-    title: "Mitä tiimit sanovat",
-    jasonName: "Jason T.",
-    jasonRole: "Sähkötyönjohtaja",
-    jasonQuote: "GC yritti syyttää meitä viivästyksestä. Vedin esiin päivittäisen lokin aikaleimoineen ja kuvineen — tapaus selvitetty. VoiceLogPro peittää selkäni.",
-    mariaName: "Maria R.",
-    mariaRole: "Putkityönjohtaja",
-    mariaQuote: "Olin skeptinen — beta-työkalut yleensä hajoavat. Mutta VoiceLogPro toimi moitteettomasti. Se säästää tiimiltämme tunteja joka viikko.",
-  },
 
   valueLadder: {
     title: "Aloita ilmaiseksi. Kasva tiimiksi.",
@@ -191,12 +182,6 @@ const fi = {
     rung3Sub: "/kk",
     rung3Desc: "Jopa 5 tiimiä, prioriteettikäyttöönotto, mukautettu brändäys, riitavalmiit viennit.",
     rung3Deliverable: "Kuukausitilaus",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (Vuosittainen)",
-    rung4Price: "470 €",
-    rung4Sub: "/vuosi — säästä 118 €",
-    rung4Desc: "Rajattomat tiimit, oma käyttöönotto, API-pääsy, oikeudellinen audit trail.",
-    rung4Deliverable: "Vuosittainen · jonotuslista",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const fi = {
   },
 
   limitedBeta: {
-    badge: "Vain 3 beta-paikkaa jäljellä",
+    badge: "Private Beta — Limited Places",
     title: "Pidämme betan tarkoituksella pienenä",
-    body: "VoiceLogPron rakentaa työskentelevä tiimi, ei venture-rahoitettu startup. Otamme 3 uutta tiimiä kerrallaan, joten jokainen beta-kumppani saa todellista tukea — ei helpdesk-lippua.",
-    nextBatch: "Kun nämä 3 paikkaa täyttyvät, seuraava erä ei aukea ~30 päivään.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Jos olet tosissasi raportoinnin tekemisestä oikein — lukitse nyt.",
   },
 

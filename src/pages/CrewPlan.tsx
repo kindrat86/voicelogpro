@@ -6,7 +6,6 @@ import { Footer } from "@/components/Footer";
 import { CheckCircle, Loader2, ArrowLeft, Zap, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { z } from "zod";
-import { supabase } from "@/integrations/supabase/client";
 import { subscribeToSequence } from "@/lib/subscribe";
 import { Badge } from "@/components/ui/badge";
 
@@ -50,25 +49,20 @@ export default function CrewPlan() {
     }
     setStatus("loading");
     setIsDuplicate(false);
-    // Enroll in the email sequence in parallel — never blocks the signup UX.
-    void subscribeToSequence(email);
-    try {
-      const { error } = await supabase.from("waitlist").insert({
-        email: email.toLowerCase().trim(),
-        source: planType === "free" ? "beta_free" : "crew_plan"
-      });
-      if (error) {
-        if (error.code === "23505") {
-          setIsDuplicate(true);
-          setSubmittedPlan(planType);
-          setStatus("success");
-          return;
-        }
-        throw error;
-      }
+    // 2026-07-24: this used to fire subscribeToSequence() (real, working
+    // capture) and then AWAIT a supabase.from("waitlist").insert() against a
+    // placeholder Supabase URL — the broken second call always threw, so the
+    // UI told every signup "Something went wrong" even though their email
+    // had already been captured and enrolled. Now the awaited result is the
+    // one real capture path.
+    const ok = await subscribeToSequence(
+      email,
+      planType === "free" ? "beta_free" : "crew_plan"
+    );
+    if (ok) {
       setSubmittedPlan(planType);
       setStatus("success");
-    } catch (error) {
+    } else {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
     }
@@ -195,7 +189,7 @@ export default function CrewPlan() {
                             Joining...
                           </>
                         ) : (
-                          "Join Beta Free"
+                          "Join the free beta waitlist"
                         )}
                       </Button>
                       <p className="text-xs text-muted-foreground text-center">
@@ -209,7 +203,7 @@ export default function CrewPlan() {
                       className="w-full"
                       onClick={() => handlePlanClick("free")}
                     >
-                      Join Beta Free
+                      Join the free beta waitlist
                     </Button>
                   )}
                 </div>
@@ -280,7 +274,7 @@ export default function CrewPlan() {
                             Joining...
                           </>
                         ) : (
-                          "Get Crew Access"
+                          "Reserve a Crew Plan place"
                         )}
                       </Button>
                     </form>
@@ -291,7 +285,7 @@ export default function CrewPlan() {
                       className="w-full"
                       onClick={() => handlePlanClick("paid")}
                     >
-                      Get Crew Access
+                      Reserve a Crew Plan place
                     </Button>
                   )}
                 </div>

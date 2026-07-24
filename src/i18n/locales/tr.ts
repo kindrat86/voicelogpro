@@ -22,10 +22,10 @@ const tr = {
   cta: {
     getDefenseKit: "Ücretsiz Savunma Kiti'ni Al",
     reserveBetaSpot: "Beta Yerimi Ayır",
-    seeCrewPlan: "Ücretli Crew Planı'nı Gör",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Kiti Bana Gönder",
-    joinBetaFree: "Beta'ya Ücretsiz Katıl",
-    getCrewAccess: "Crew Erişimi Al",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Yolunu seç",
   },
 
@@ -159,15 +159,6 @@ const tr = {
     row3Solution: "Saha kararları ve kayıtları için dijital bir saklama zinciri oluşturur.",
   },
 
-  testimonials: {
-    title: "Ekipler Ne Diyor",
-    jasonName: "Jason T.",
-    jasonRole: "Elektrik Ustabaşı",
-    jasonQuote: "Bir GC bizi gecikme için suçlamaya çalıştı. Zaman damgalı günlük kaydını ve fotoğrafları çıkardım — dava kapandı. VoiceLogPro arkamı kolluyor.",
-    mariaName: "Maria R.",
-    mariaRole: "Tesisat Lideri",
-    mariaQuote: "Şüpheciydim — beta araçları genelde bozulur. Ama VoiceLogPro sorunsuz çalıştı. Ekibimize her hafta saatler kazandırıyor.",
-  },
 
   valueLadder: {
     title: "Ücretsiz Başlayın. Crew Planına Büyüyün.",
@@ -191,12 +182,6 @@ const tr = {
     rung3Sub: "/ay",
     rung3Desc: "5 ekibe kadar, öncelikli katılım, özel markalama, anlaşmazlığa hazır dışa aktarımlar.",
     rung3Deliverable: "Aylık abonelik",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (Yıllık)",
-    rung4Price: "$470",
-    rung4Sub: "/yıl — 118$ tasarruf",
-    rung4Desc: "Sınırsız ekip, özel katılım, API erişimi, yasal dereceli denetim izi.",
-    rung4Deliverable: "Yıllık · bekleme listesi",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const tr = {
   },
 
   limitedBeta: {
-    badge: "Sadece 3 Beta Slotu Kaldı",
+    badge: "Private Beta — Limited Places",
     title: "Beta'yı Bilerek Küçük Tutuyoruz",
-    body: "VoiceLogPro, girişim sermayeli bir startup tarafından değil, çalışan bir ekip tarafından inşa edildi. Her beta ortağının yardım masası bileti değil, gerçek destek alması için aynı anda 3 yeni ekip alıyoruz.",
-    nextBatch: "Bu 3 koltuk dolduğunda, bir sonraki parti ~30 gün açılmayacak.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Raporlamayı doğru yapmakta ciddiyseniz — şimdi yerinizi ayırın.",
   },
 

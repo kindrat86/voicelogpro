@@ -22,10 +22,10 @@ const ar = {
   cta: {
     getDefenseKit: "احصل على عدة الدفاع المجانية",
     reserveBetaSpot: "احجز مكاني في بيتا",
-    seeCrewPlan: "اطلع على خطة الطاقم المدفوعة",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "أرسل لي العدة",
-    joinBetaFree: "انضم إلى بيتا مجاناً",
-    getCrewAccess: "احصل على وصول الطاقم",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "اختر مسارك",
   },
 
@@ -159,15 +159,6 @@ const ar = {
     row3Solution: "ينشئ سلسلة حيازة رقمية لقرارات وسجلات الموقع.",
   },
 
-  testimonials: {
-    title: "ما يقوله الطواقم",
-    jasonName: "جيسون ت.",
-    jasonRole: "رئيس عمال كهربائي",
-    jasonQuote: "حاول مقاول عام إلقاء اللوم علينا بسبب تأخير. أحضرت السجل اليومي مع الأختام الزمنية والصور — أُغلقت القضية. VoiceLogPro يساندني.",
-    mariaName: "ماريا ر.",
-    mariaRole: "قائدة سباكة",
-    mariaQuote: "كنت متشككة — أدوات بيتا عادة ما تتعطل. لكن VoiceLogPro عمل بسلاسة. إنه يوفر لطاقمنا ساعات كل أسبوع.",
-  },
 
   valueLadder: {
     title: "ابدأ مجاناً. تطور إلى الطاقم.",
@@ -191,12 +182,6 @@ const ar = {
     rung3Sub: "/شهر",
     rung3Desc: "حتى 5 طواقم، تأهيل ذو أولوية، علامة تجارية مخصصة، تصدير جاهز للنزاعات.",
     rung3Deliverable: "اشتراك شهري",
-    rung4Tier: "ممتاز",
-    rung4Name: "احترافي (سنوي)",
-    rung4Price: "$470",
-    rung4Sub: "/سنة — وفر $118",
-    rung4Desc: "طواقم غير محدودة، تأهيل مخصص، وصول API، مسار تدقيق بجودة قانونية.",
-    rung4Deliverable: "سنوي · قائمة انتظار",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const ar = {
   },
 
   limitedBeta: {
-    badge: "بقي 3 مقاعد بيتا فقط",
+    badge: "Private Beta — Limited Places",
     title: "نبقي بيتا صغيراً عن قصد",
-    body: "VoiceLogPro مبني بواسطة طاقم عامل، لا بواسطة شركة ناشئة ممولة بالمغامرة. نؤهل 3 طواقم جديدة في كل مرة لضمان حصول كل شريك بيتا على دعم حقيقي — لا تذكرة مكتب مساعدة.",
-    nextBatch: "بمجرد امتلاء هذه المقاعد الثلاثة، لن تفتح الدفعة التالية إلا بعد حوالي 30 يوماً.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "إذا كنت جاداً بشأن التقارير الصحيحة — احجز مكانك الآن.",
   },
 

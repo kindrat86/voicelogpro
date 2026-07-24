@@ -22,10 +22,10 @@ const bn = {
   cta: {
     getDefenseKit: "ফ্রি ডিফেন্স কিট পান",
     reserveBetaSpot: "আমার বিটা স্পট সংরক্ষণ করুন",
-    seeCrewPlan: "পেইড ক্রু প্ল্যান দেখুন",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "আমাকে কিট পাঠান",
-    joinBetaFree: "বিনামূল্যে বিটায় যোগ দিন",
-    getCrewAccess: "ক্রু অ্যাক্সেস পান",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "আপনার পথ বেছে নিন",
   },
 
@@ -159,15 +159,6 @@ const bn = {
     row3Solution: "সাইট সিদ্ধান্ত এবং রেকর্ডের জন্য একটি ডিজিটাল কাস্টডি চেইন তৈরি করে।",
   },
 
-  testimonials: {
-    title: "ক্রুরা কী বলছে",
-    jasonName: "জেসন টি.",
-    jasonRole: "ইলেকট্রিক্যাল ফোরম্যান",
-    jasonQuote: "একজন GC আমাদের উপর বিলম্বের দোষ চাপানোর চেষ্টা করেছিল। টাইমস্ট্যাম্প এবং ছবি সহ দৈনিক লগ বের করলাম — মামলা বন্ধ। VoiceLogPro আমার পাশে আছে।",
-    mariaName: "মারিয়া আর.",
-    mariaRole: "প্লাম্বিং লিড",
-    mariaQuote: "আমার সন্দেহ ছিল — বিটা টুল সাধারণত ভেঙে যায়। কিন্তু VoiceLogPro মসৃণভাবে চলল। এটি আমাদের ক্রুর প্রতি সপ্তাহে ঘন্টা বাঁচাচ্ছে।",
-  },
 
   valueLadder: {
     title: "বিনামূল্যে শুরু করুন। ক্রুতে বৃদ্ধি পান।",
@@ -191,12 +182,6 @@ const bn = {
     rung3Sub: "/মাস",
     rung3Desc: "৫টি ক্রু পর্যন্ত, অগ্রাধিকার অনবোর্ডিং, কাস্টম ব্র্যান্ডিং, বিরোধ-প্রস্তুত এক্সপোর্ট।",
     rung3Deliverable: "মাসিক সাবস্ক্রিপশন",
-    rung4Tier: "প্রিমিয়াম",
-    rung4Name: "প্রো (বার্ষিক)",
-    rung4Price: "$470",
-    rung4Sub: "/বছর — $১১৮ বাঁচান",
-    rung4Desc: "সীমাহীন ক্রু, ডেডিকেটেড অনবোর্ডিং, API অ্যাক্সেস, আইনি-গ্রেড অডিট ট্রেইল।",
-    rung4Deliverable: "বার্ষিক · অপেক্ষমাণ তালিকা",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const bn = {
   },
 
   limitedBeta: {
-    badge: "শুধু ৩টি বিটা স্লট বাকি",
+    badge: "Private Beta — Limited Places",
     title: "আমরা ইচ্ছাকৃতভাবে বিটা ছোট রাখছি",
-    body: "VoiceLogPro একটি কর্মরত ক্রু দ্বারা তৈরি, ভেঞ্চার-ফান্ডেড স্টার্টআপ দ্বারা নয়। আমরা একসাথে ৩টি নতুন ক্রু অনবোর্ড করি যাতে প্রতিটি বিটা অংশীদার প্রকৃত সমর্থন পায় — হেল্প-ডেস্ক টিকিট নয়।",
-    nextBatch: "এই ৩টি সিট পূর্ণ হলে, পরবর্তী ব্যাচ ~৩০ দিন পর্যন্ত খুলবে না।",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "যদি আপনি সঠিক রিপোর্টিং সম্পর্কে গুরুতর হন — এখনই লক করুন।",
   },
 

@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { Mic, FileText, Clock, Shield, FileCheck, Users, Smartphone, CheckCircle, Loader2, Zap } from "lucide-react";
 import { z } from "zod";
-import { supabase } from "@/integrations/supabase/client";
 import { subscribeToSequence } from "@/lib/subscribe";
 // Served from public/images so dev, SPA bundle, and prerendered HTML all
 // resolve the same URL (src/assets imports broke the prerendered pages).
@@ -80,35 +79,17 @@ export default function BetaSignup() {
     } catch {
       /* analytics must never break signup */
     }
-    // Enroll in the email sequence in parallel — never blocks the signup UX.
-    void subscribeToSequence(cleanEmail, attribution);
-    try {
-      let { error } = await supabase.from("waitlist").insert({
-        email: cleanEmail,
-        source: plan,
-        heard_from: attribution,
-      });
-      // If the heard_from column isn't in the live schema yet (migration not
-      // applied), retry without it so signup never breaks. PGRST204 = column
-      // missing from PostgREST's schema cache; 42703 = undefined_column.
-      if (error && (error.code === "PGRST204" || error.code === "42703")) {
-        ({ error } = await supabase.from("waitlist").insert({
-          email: cleanEmail,
-          source: plan,
-        }));
-      }
-      if (error) {
-        if (error.code === "23505") {
-          setIsDuplicate(true);
-          setSubmittedPlan(planType);
-          setStatus("success");
-          return;
-        }
-        throw error;
-      }
+    // 2026-07-24: this used to fire subscribeToSequence() (real, working
+    // capture) and then AWAIT a supabase.from("waitlist").insert() — with a
+    // schema-mismatch retry — against a placeholder Supabase URL. That
+    // second call always threw, so the UI told every signup "Something went
+    // wrong" even though their email had already been captured and
+    // enrolled. Now the awaited result is the one real capture path.
+    const ok = await subscribeToSequence(cleanEmail, attribution);
+    if (ok) {
       setSubmittedPlan(planType);
       setStatus("success");
-    } catch (error) {
+    } else {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
     }
@@ -419,7 +400,7 @@ export default function BetaSignup() {
                             Joining...
                           </>
                         ) : (
-                          "Join Beta Free"
+                          "Join the free beta waitlist"
                         )}
                       </Button>
                       <p className="text-xs text-muted-foreground text-center">
@@ -433,7 +414,7 @@ export default function BetaSignup() {
                       className="w-full"
                       onClick={() => handlePlanClick("free")}
                     >
-                      Join Beta Free
+                      Join the free beta waitlist
                     </Button>
                   )}
                 </div>
@@ -512,7 +493,7 @@ export default function BetaSignup() {
                             Joining...
                           </>
                         ) : (
-                          "Get Crew Access"
+                          "Reserve a Crew Plan place"
                         )}
                       </Button>
                     </form>
@@ -523,7 +504,7 @@ export default function BetaSignup() {
                       className="w-full"
                       onClick={() => handlePlanClick("paid")}
                     >
-                      Get Crew Access
+                      Reserve a Crew Plan place
                     </Button>
                   )}
                 </div>

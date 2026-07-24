@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Check, Users, CheckCircle, Loader2, Lock, Shield, FileText, Plus, Star } from "lucide-react";
 import { z } from "zod";
-import { supabase } from "@/integrations/supabase/client";
+import { subscribeToSequence } from "@/lib/subscribe";
 
 const emailSchema = z.string().email("Please enter a valid email address");
 
@@ -45,21 +45,17 @@ export function OrderBumpSection() {
     }
     setStatus("loading");
     setIsDuplicate(false);
-    try {
-      const { error } = await supabase.from("waitlist").insert({
-        email: email.toLowerCase().trim(),
-        source: bumpAccepted ? "crew_plan_bump" : "crew_plan",
-      });
-      if (error) {
-        if (error.code === "23505") {
-          setIsDuplicate(true);
-          setStatus("success");
-          return;
-        }
-        throw error;
-      }
+    // 2026-07-24: was supabase.from("waitlist").insert(...) against a
+    // placeholder Supabase URL (VITE_SUPABASE_URL is empty) — every submit
+    // errored out, losing 100% of order-bump signups. Repointed at the
+    // working email-engine subscribe path (same as LeadMagnetForm/CrewPlan).
+    const ok = await subscribeToSequence(
+      email,
+      bumpAccepted ? "crew_plan_bump" : "crew_plan"
+    );
+    if (ok) {
       setStatus("success");
-    } catch (error) {
+    } else {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
     }

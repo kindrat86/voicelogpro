@@ -22,10 +22,10 @@ const es = {
   cta: {
     getDefenseKit: "Obtén el Kit de Defensa Gratis",
     reserveBetaSpot: "Reserva Mi Lugar Beta",
-    seeCrewPlan: "Ver el Plan de Cuadrilla de Pago",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Envíame el Kit",
-    joinBetaFree: "Únete a Beta Gratis",
-    getCrewAccess: "Obtén Acceso de Cuadrilla",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Elige tu camino",
   },
 
@@ -159,15 +159,6 @@ const es = {
     row3Solution: "Crea una cadena de custodia digital para decisiones y registros de obra.",
   },
 
-  testimonials: {
-    title: "Lo Que Dicen las Cuadrillas",
-    jasonName: "Jason T.",
-    jasonRole: "Capataz Eléctrico",
-    jasonQuote: "Un GC intentó culparnos por una demora. Saqué el registro diario con marcas de tiempo y fotos — caso cerrado. VoiceLogPro me respalda.",
-    mariaName: "María R.",
-    mariaRole: "Líder de Plomería",
-    mariaQuote: "Era escéptica — las herramientas beta suelen fallar. Pero VoiceLogPro funcionó sin problemas. Le está ahorrando horas a nuestra cuadrilla cada semana.",
-  },
 
   valueLadder: {
     title: "Empieza Gratis. Crece Hasta la Cuadrilla.",
@@ -191,12 +182,6 @@ const es = {
     rung3Sub: "/mes",
     rung3Desc: "Hasta 5 cuadrillas, incorporación prioritaria, marca personalizada, exportaciones listas para disputas.",
     rung3Deliverable: "Suscripción mensual",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (Anual)",
-    rung4Price: "$470",
-    rung4Sub: "/año — ahorra $118",
-    rung4Desc: "Cuadrillas ilimitadas, incorporación dedicada, acceso a API, rastro de auditoría de grado legal.",
-    rung4Deliverable: "Anual · lista de espera",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const es = {
   },
 
   limitedBeta: {
-    badge: "Solo Quedan 3 Lugares Beta",
+    badge: "Private Beta — Limited Places",
     title: "Mantenemos la Beta Pequeña a Propósito",
-    body: "VoiceLogPro es creado por una cuadrilla activa, no por una startup financiada por capital de riesgo. Incorporamos 3 nuevas cuadrillas a la vez para que cada socio beta reciba apoyo real — no un ticket de servicio.",
-    nextBatch: "Una vez que estos 3 lugares se llenen, el próximo lote no se abrirá por ~30 días.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Si hablas en serio sobre hacer los informes correctamente — asegura tu lugar ahora.",
   },
 

@@ -22,10 +22,10 @@ const hu = {
   cta: {
     getDefenseKit: "Szerezd meg az ingyenes Védelmi Készletet",
     reserveBetaSpot: "Beta helyem lefoglalása",
-    seeCrewPlan: "fizetős Crew Csomag megtekintése",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Küldd el a Készletet",
-    joinBetaFree: "Csatlakozz a Beta-hoz ingyen",
-    getCrewAccess: "Crew hozzáférés megszerzése",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Válaszd ki az utadat",
   },
 
@@ -159,15 +159,6 @@ const hu = {
     row3Solution: "Digitális letéti láncot hoz létre a munkahelyi döntésekhez és feljegyzésekhez.",
   },
 
-  testimonials: {
-    title: "Mit mondanak a csapatok",
-    jasonName: "Jason T.",
-    jasonRole: "Villanyszerelő művezető",
-    jasonQuote: "Egy GC megpróbált hibáztatni minket egy késésért. Előhúztam a napi naplót időbélyegekkel és fotókkal — ügy lezárva. A VoiceLogPro védi a hátam.",
-    mariaName: "Maria R.",
-    mariaRole: "Vízvezeték-szerelő vezető",
-    mariaQuote: "Szkeprikus voltam — a beta eszközök általában elromlanak. De a VoiceLogPro simán működött. Heti órákat spórol a csapatunknak.",
-  },
 
   valueLadder: {
     title: "Kezdj ingyen. Nőj fel a Crew-ba.",
@@ -191,12 +182,6 @@ const hu = {
     rung3Sub: "/hó",
     rung3Desc: "Akár 5 csapat, elsőbbségi bevezetés, egyedi arculat, vitára kész exportok.",
     rung3Deliverable: "Havi előfizetés",
-    rung4Tier: "Prémium",
-    rung4Name: "Pro (Éves)",
-    rung4Price: "172 000 Ft",
-    rung4Sub: "/év — spórolj 44 000 Ft-ot",
-    rung4Desc: "Korlátlan csapatok, dedikált bevezetés, API hozzáférés, jogi minőségű audit nyomvonal.",
-    rung4Deliverable: "Éves · várólista",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const hu = {
   },
 
   limitedBeta: {
-    badge: "Már csak 3 Beta Hely Maradt",
+    badge: "Private Beta — Limited Places",
     title: "Szándékosan tartjuk kicsiben a Beta-t",
-    body: "A VoiceLogPro-t egy dolgozó csapat építi, nem egy venture-tőkés startup. Egyszerre 3 új csapatot veszünk fel, hogy minden beta partner valódi támogatást kapjon — nem egy helpdesk jegyet.",
-    nextBatch: "Amint ez a 3 hely betelik, a következő kör ~30 napig nem nyílik meg.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Ha komolyan gondolod a rendes jelentéskészítést — foglald le most.",
   },
 

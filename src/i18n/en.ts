@@ -26,10 +26,10 @@ const en = {
   cta: {
     getDefenseKit: "Get the Free Defense Kit",
     reserveBetaSpot: "Reserve My Beta Spot",
-    seeCrewPlan: "see the paid Crew Plan",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Send Me the Kit",
-    joinBetaFree: "Join Beta Free",
-    getCrewAccess: "Get Crew Access",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Choose your path",
   },
 
@@ -172,21 +172,11 @@ const en = {
     row3Solution: "Creates a digital chain of custody for site decisions and records.",
   },
 
-  // Testimonials
-  testimonials: {
-    title: "What Crews Are Saying",
-    jasonName: "Jason T.",
-    jasonRole: "Electrical Foreman",
-    jasonQuote: "Had a GC try to blame us for a delay. Pulled up the daily log with timestamps and photos — case closed. VoiceLogPro has my back.",
-    mariaName: "Maria R.",
-    mariaRole: "Plumbing Lead",
-    mariaQuote: "I was skeptical — beta tools usually break. But VoiceLogPro ran smooth. It's saving our crew hours every week.",
-  },
 
   // Value ladder
   valueLadder: {
     title: "Start Free. Grow Into The Crew.",
-    subtitle: "Four steps from protecting your first job to running your whole company's reporting.",
+    subtitle: "Three steps from protecting your first job to running your whole company's reporting.",
     mostPopular: "Most Popular",
     rung1Tier: "Free",
     rung1Name: "Daily Log Defense Kit",
@@ -206,12 +196,6 @@ const en = {
     rung3Sub: "/month",
     rung3Desc: "Up to 5 crews, priority onboarding, custom branding, dispute-ready exports.",
     rung3Deliverable: "Monthly subscription",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (Annual)",
-    rung4Price: "$470",
-    rung4Sub: "/year — save $118",
-    rung4Desc: "Unlimited crews, dedicated onboarding, API access, legal-grade audit trail.",
-    rung4Deliverable: "Annual · waitlist",
   },
 
   // Order bump / crew plan conversion
@@ -258,10 +242,10 @@ const en = {
 
   // Limited beta section
   limitedBeta: {
-    badge: "Only 3 Beta Slots Left",
+    badge: "Private Beta — Limited Places",
     title: "We're Keeping The Beta Small On Purpose",
-    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard 3 new crews at a time so every beta partner gets real support — not a help-desk ticket.",
-    nextBatch: "Once these 3 seats fill, the next batch won't open for ~30 days.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "If you're serious about reporting done right — lock in now.",
   },
 

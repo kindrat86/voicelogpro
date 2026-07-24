@@ -185,6 +185,10 @@
       "destination": "/best/:slug.html"
     },
     {
+      "source": "/thank-you",
+      "destination": "/thank-you.html"
+    },
+    {
       "source": "/privacy",
       "destination": "/privacy.html"
     },

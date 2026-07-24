@@ -22,10 +22,10 @@ const el = {
   cta: {
     getDefenseKit: "Λάβετε το Δωρεάν Κιτ Άμυνας",
     reserveBetaSpot: "Κράτησε τη Βήτα Θέση Μου",
-    seeCrewPlan: "δείτε το επί πληρωμή Πλάνο Συνεργείου",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "Στείλτε μου το Κιτ",
-    joinBetaFree: "Γίνε Μέλος Beta Δωρεάν",
-    getCrewAccess: "Απόκτησε Πρόσβαση Συνεργείου",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "Διάλεξε το μονοπάτι σου",
   },
 
@@ -159,15 +159,6 @@ const el = {
     row3Solution: "Δημιουργεί μια ψηφιακή αλυσίδα φύλαξης για αποφάσεις και αρχεία εργοταξίου.",
   },
 
-  testimonials: {
-    title: "Τι Λένε τα Συνεργεία",
-    jasonName: "Jason T.",
-    jasonRole: "Επιστάτης Ηλεκτρολόγων",
-    jasonQuote: "Ένας Γενικός Εργολάβος προσπάθησε να μας κατηγορήσει για καθυστέρηση. Ανέσυρα το καθημερινό ημερολόγιο με χρονοσήμανση και φωτογραφίες — υπόθεση κλειστή. Το VoiceLogPro με καλύπτει.",
-    mariaName: "Maria R.",
-    mariaRole: "Αρχηγός Υδραυλικών",
-    mariaQuote: "Ήμουν δύσπιστος — τα beta εργαλεία συνήθως χαλάνε. Αλλά το VoiceLogPro δούλεψε ομαλά. Μας εξοικονομεί ώρες κάθε εβδομάδα.",
-  },
 
   valueLadder: {
     title: "Ξεκίνα Δωρεάν. Μεγάλωσε στο Συνεργείο.",
@@ -191,12 +182,6 @@ const el = {
     rung3Sub: "/μήνα",
     rung3Desc: "Έως 5 συνεργεία, προτεραιότητα ενσωμάτωσης, προσαρμοσμένη επωνυμία, εξαγωγές έτοιμες για διαφορές.",
     rung3Deliverable: "Μηνιαία συνδρομή",
-    rung4Tier: "Premium",
-    rung4Name: "Pro (Ετήσιο)",
-    rung4Price: "470€",
-    rung4Sub: "/έτος — εξοικονόμηση 118€",
-    rung4Desc: "Απεριόριστα συνεργεία, αποκλειστική ενσωμάτωση, πρόσβαση API, ίχνος ελέγχου νομικής ποιότητας.",
-    rung4Deliverable: "Ετήσιο · λίστα αναμονής",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const el = {
   },
 
   limitedBeta: {
-    badge: "Απομένουν Μόνο 3 Θέσεις Beta",
+    badge: "Private Beta — Limited Places",
     title: "Κρατάμε το Beta Μικρό Επίτηδες",
-    body: "Το VoiceLogPro χτίζεται από ένα εργαζόμενο συνεργείο, όχι από μια venture-funded startup. Ενσωματώνουμε 3 νέα συνεργεία κάθε φορά, ώστε κάθε beta συνεργάτης να λαμβάνει πραγματική υποστήριξη — όχι ένα εισιτήριο help-desk.",
-    nextBatch: "Μόλις γεμίσουν αυτές οι 3 θέσεις, η επόμενη παρτίδα δεν θα ανοίξει για ~30 ημέρες.",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "Αν είσαι σοβαρός για αναφορές που γίνονται σωστά — κλείδωσε τώρα.",
   },
 

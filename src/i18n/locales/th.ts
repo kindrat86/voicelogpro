@@ -22,10 +22,10 @@ const th = {
   cta: {
     getDefenseKit: "รับชุดป้องกันฟรี",
     reserveBetaSpot: "จองที่นั่งเบต้าของฉัน",
-    seeCrewPlan: "ดูแผนทีม",
+    seeCrewPlan: "learn about the Crew Plan",
     sendMeTheKit: "ส่งชุดให้ฉัน",
-    joinBetaFree: "เข้าร่วมเบต้าฟรี",
-    getCrewAccess: "รับสิทธิ์เข้าถึงทีม",
+    joinBetaFree: "Join the free beta waitlist",
+    getCrewAccess: "Reserve a Crew Plan place",
     chooseYourPath: "เลือกเส้นทางของคุณ",
   },
 
@@ -159,15 +159,6 @@ const th = {
     row3Solution: "สร้างห่วงโซ่การดูแลดิจิทัลสำหรับการตัดสินใจและบันทึกในไซต์",
   },
 
-  testimonials: {
-    title: "สิ่งที่ทีมงานพูด",
-    jasonName: "เจสัน ที.",
-    jasonRole: "หัวหน้าช่างไฟฟ้า",
-    jasonQuote: "มี GC พยายามโทษเราเรื่องความล่าช้า ดึงรายงานประจำวันที่มีประทับเวลาและรูปถ่ายออกมา — ปิดคดี VoiceLogPro คุ้มครองฉัน",
-    mariaName: "มาเรีย อาร์.",
-    mariaRole: "หัวหน้าช่างประปา",
-    mariaQuote: "ฉันเคยสงสัย — เครื่องมือเบต้ามักจะพัง แต่ VoiceLogPro ทำงานได้ลื่นไหล มันช่วยประหยัดเวลาทีมงานของเราหลายชั่วโมงทุกสัปดาห์",
-  },
 
   valueLadder: {
     title: "เริ่มฟรี เติบโตสู่ทีม",
@@ -191,12 +182,6 @@ const th = {
     rung3Sub: "/เดือน",
     rung3Desc: "สูงสุด 5 ทีม การเริ่มต้นใช้งานลำดับความสำคัญสูง การสร้างแบรนด์เอง การส่งออกพร้อมข้อพิพาท",
     rung3Deliverable: "สมัครสมาชิกรายเดือน",
-    rung4Tier: "พรีเมียม",
-    rung4Name: "โปร (รายปี)",
-    rung4Price: "$470",
-    rung4Sub: "/ปี — ประหยัด $118",
-    rung4Desc: "ทีมไม่จำกัด การเริ่มต้นใช้งานเฉพาะบุคคล การเข้าถึง API เส้นทางการตรวจสอบระดับกฎหมาย",
-    rung4Deliverable: "รายปี · รายชื่อรอ",
   },
 
   orderBump: {
@@ -240,10 +225,10 @@ const th = {
   },
 
   limitedBeta: {
-    badge: "เหลือเพียง 3 ที่นั่งเบต้า",
+    badge: "Private Beta — Limited Places",
     title: "เราจงใจรักษาเบต้าให้เล็ก",
-    body: "VoiceLogPro สร้างโดยทีมงานจริง ไม่ใช่สตาร์ทอัพที่ได้รับทุนจาก VC เรารับทีมใหม่ครั้งละ 3 ทีม เพื่อให้พันธมิตรเบต้าทุกคนได้รับการสนับสนุนจริง — ไม่ใช่ตั๋วช่วยเหลือ",
-    nextBatch: "เมื่อ 3 ที่นั่งนี้เต็ม รอบถัดไปจะไม่เปิดประมาณ 30 วัน",
+    body: "VoiceLogPro is built by a working crew, not a venture-funded startup. We onboard crews in small groups so every beta partner gets real support — not a help-desk ticket.",
+    nextBatch: "New beta cohorts open as capacity allows.",
     closing: "ถ้าคุณจริงจังกับการรายงานที่ถูกต้อง — ล็อคตอนนี้",
   },
 
