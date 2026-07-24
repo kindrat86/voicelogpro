@@ -25,7 +25,6 @@ const personSchema = {
   sameAs: [
     "https://github.com/kindrat86",
     "https://x.com/sipiteno",
-    "https://x.com/data_nerd",
     "https://www.linkedin.com/in/kushnir-maryan/",
     "https://sipiteno.com",
     "https://invisibleexit.com",
