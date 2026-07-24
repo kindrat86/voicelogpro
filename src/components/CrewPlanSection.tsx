@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Check, Zap, Users, CheckCircle, Loader2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { z } from "zod";
-import { supabase } from "@/integrations/supabase/client";
+import { subscribeToSequence } from "@/lib/subscribe";
 
 const emailSchema = z.string().email("Please enter a valid email address");
 
@@ -46,23 +46,18 @@ export function CrewPlanSection() {
     }
     setStatus("loading");
     setIsDuplicate(false);
-    try {
-      const { error } = await supabase.from("waitlist").insert({
-        email: email.toLowerCase().trim(),
-        source: planType === "free" ? "beta_free" : "crew_plan"
-      });
-      if (error) {
-        if (error.code === "23505") {
-          setIsDuplicate(true);
-          setSubmittedPlan(planType);
-          setStatus("success");
-          return;
-        }
-        throw error;
-      }
+    // 2026-07-24: was supabase.from("waitlist").insert(...) against a
+    // placeholder Supabase URL (VITE_SUPABASE_URL is empty) — every submit
+    // errored out, losing 100% of signups on both plans. Repointed at the
+    // working email-engine subscribe path (same as LeadMagnetForm/CrewPlan).
+    const ok = await subscribeToSequence(
+      email,
+      planType === "free" ? "beta_free" : "crew_plan"
+    );
+    if (ok) {
       setSubmittedPlan(planType);
       setStatus("success");
-    } catch (error) {
+    } else {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
     }
