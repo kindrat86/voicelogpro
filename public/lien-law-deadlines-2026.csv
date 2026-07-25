@@ -22,7 +22,7 @@ Maryland,MD,120 days after last work (residential),180 days after last work,1 ye
 Massachusetts,MA,Not required,90 days after last work (subcontractors: 60 days after NOF),90 days after filing,Must record notice of contract for large projects
 Michigan,MI,20 days after first work (residential),90 days after last work,1 year after filing,Residential requires notice of furnishing
 Minnesota,MN,45 days after first work (residential),120 days after last work,1 year after filing,Pre-lien notice required for all tiers
-Mississippi,MS,Not required,12 months after last work (commercial), 90 days (residential),1 year after filing,No preliminary notice required
+Mississippi,MS,Not required,"12 months after last work (commercial), 90 days (residential)",1 year after filing,No preliminary notice required
 Missouri,MO,5 days before filing (residential),6 months after last work,6 months after filing,Residential requires 10-day pre-lien notice
 Montana,MT,20 days after first work (residential),90 days after last work,2 years after filing,Notice of right to claim lien required
 Nebraska,NE,Not required,120 days after last work,2 years after filing,Must include verified itemized statement
@@ -50,4 +50,4 @@ West Virginia,WV,Not required,100 days after last work,6 months after filing,Not
 Wisconsin,WI,60 days after first work (residential),6 months after last work,2 years after filing,Notice of intent to file lien required
 Wyoming,WY,30 days after first work (commercial),120 days after last work (commercial),180 days after filing,Notice of intent to lien required
 District of Columbia,DC,Not required,90 days after last work,180 days after filing,Notice of intent required
-Source: State mechanics lien statutes, 2026 compilation. CC BY 4.0. Cite as: VoiceLogPro (voicelogpro.com), "Construction Lien Law Deadlines by State", 2026. Disclaimer: Not legal advice. Verify current statutes before relying on deadlines.
+"Source: State mechanics lien statutes, 2026 compilation. CC BY 4.0. Cite as: VoiceLogPro (voicelogpro.com), ""Construction Lien Law Deadlines by State"", 2026. Disclaimer: Not legal advice. Verify current statutes before relying on deadlines."
