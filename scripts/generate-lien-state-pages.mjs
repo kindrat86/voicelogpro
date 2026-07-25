@@ -57,6 +57,13 @@ for (const state of D.states) {
  Try the <a href="/free/lien-deadline-calculator">Lien Deadline Calculator →</a><br>Learn what makes a log hold up: <a href="/court-ready-daily-logs">court-ready daily logs →</a></div>
 <p>See all states in the <a href="${CHEATSHEET}">50-state lien deadline cheat sheet</a>. Nearby: ${others.map((o) => `<a href="/lien-law-deadlines/${slugify(o)}">${esc(o)}</a>`).join(" · ")}.</p>`;
 
+  // Statute reference is rendered ONLY for states whose official source URL has been
+  // content-verified to serve the cited chapter. Unverified states render nothing —
+  // an absent citation is safer than a wrong one on compliance content.
+  const st = (D.statuteByState || {})[state];
+  const statuteLine = st
+    ? ` Statute: ${esc(st.statute)} — <a href="${esc(st.sourceUrl)}" rel="nofollow noopener" target="_blank">official text</a>.`
+    : "";
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(state)} Mechanics Lien Deadlines (${D.updatedAt.slice(0,4)}) — Preliminary Notice & Filing | VoiceLogPro</title>
 <meta name="description" content="${esc(state)} mechanics lien deadlines: preliminary notice, lien filing, and enforcement windows. Verified reference for subcontractors. Not legal advice.">
@@ -72,7 +79,7 @@ ${POSTHOG_SNIPPET}
 <p>The three deadlines every ${esc(state)} subcontractor must track — preliminary notice, lien filing, and enforcement. Values below are reproduced from our verified 50-state reference; confirm with a ${esc(state)} construction attorney.</p>
 ${body}
 ${captureBlock(`/lien-law-deadlines/${slug}`, esc(state), `${esc(state)}'s`)}
-<p class="disc">${esc(D.disclaimer)} Source: <a href="${CHEATSHEET}">VoiceLogPro 50-state lien deadline reference</a> · <a href="/lien-law-deadlines/data.json">Download data (CC BY 4.0)</a></p>
+<p class="disc">${esc(D.disclaimer)}${statuteLine} Compiled reference: <a href="${CHEATSHEET}">VoiceLogPro 50-state lien deadline reference</a> · <a href="/lien-law-deadlines/data.json">Download data (CC BY 4.0)</a></p>
 </body></html>`;
 
   mkdirSync(join(process.cwd(), "lien-law-deadlines", slug), { recursive: true });
