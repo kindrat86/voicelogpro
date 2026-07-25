@@ -20,11 +20,18 @@ const md = contentMatch[1];
 
 const US_STATES = new Set(["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","District of Columbia","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","Washington DC","West Virginia","Wisconsin","Wyoming"]);
 
-// Section header -> canonical key
+// Section header -> canonical key.
+//
+// `inverted` marks the two tables that are laid out the OTHER way round from
+// the preliminary-notice one: their first column is a deadline bucket
+// ("30-60 days", "2 years") and their second column is a comma-separated list
+// of the states in that bucket. Keyed by column 0 they yield zero states, which
+// is why both sections silently produced nothing and 2 of the 3 "critical
+// dates" never reached the per-state pages. See invertSection() below.
 const SECTIONS = [
   { key: "preliminaryNotice", label: "Preliminary Notice", header: /^##\s+Preliminary notice deadlines by state/im },
-  { key: "lienFiling",        label: "Lien Filing",        header: /^##\s+Lien filing deadlines by state/im },
-  { key: "enforcement",       label: "Lien Enforcement",   header: /^##\s+Lien enforcement deadlines by state/im },
+  { key: "lienFiling",        label: "Lien Filing",        header: /^##\s+Lien filing deadlines by state/im, inverted: true },
+  { key: "enforcement",       label: "Lien Enforcement",   header: /^##\s+Lien enforcement deadlines by state/im, inverted: true },
 ];
 
 const clean = (s) => s.replace(/\*\*/g, "").replace(/`/g, "").trim();
@@ -35,26 +42,99 @@ function parseSection(md, headerRe) {
   const start = m.index + m[0].length;
   const rest = md.slice(start);
   const lines = rest.split("\n");
-  const rows = {}; let headers = null;
+  const rows = {}; const dataRows = []; let headers = null;
   for (const line of lines) {
     const t = line.trim();
     if (t.startsWith("##")) break;                 // next section
-    if (!t.startsWith("|")) { if (headers && Object.keys(rows).length) break; else continue; }
+    if (!t.startsWith("|")) { if (headers && dataRows.length) break; else continue; }
     const cells = t.split("|").slice(1, -1).map(clean);
     if (cells.every((c) => /^-{2,}:?$|^:?-{2,}$/.test(c.replace(/\s/g, "")) || c === "")) continue; // separator
     if (!headers) { headers = cells; continue; }   // header row
+    dataRows.push(cells);
     const state = cells[0];
     if (US_STATES.has(state)) rows[state] = cells;
   }
-  return headers ? { headers, rows } : null;
+  return headers ? { headers, rows, dataRows } : null;
+}
+
+// Split "Alaska (30 days), Oregon (30 days after written demand)" on the
+// top-level commas only, so a comma inside a parenthetical can never split an
+// entry in half.
+function splitTopLevel(list) {
+  const out = []; let buf = ""; let depth = 0;
+  for (const ch of list) {
+    if (ch === "(") depth++;
+    else if (ch === ")") depth = Math.max(0, depth - 1);
+    if (ch === "," && depth === 0) { out.push(buf); buf = ""; continue; }
+    buf += ch;
+  }
+  if (buf.trim()) out.push(buf);
+  return out.map((s) => s.trim()).filter(Boolean);
+}
+
+// Turn a bucket-keyed table into per-state rows. VERBATIM only: a state's
+// deadline is its own parenthetical when the source gives one, otherwise the
+// bucket label exactly as written. Nothing is normalised, averaged or resolved
+// — "30/60 days" and "15th of 4th month" pass through untouched, and anything
+// that doesn't resolve to exactly one known state is dropped and logged.
+function invertSection(parsed, label) {
+  const rows = {}; const seen = new Map(); const skipped = [];
+  for (const cells of parsed.dataRows) {
+    const bucket = cells[0];
+    const list = cells[1] || "";
+    if (!bucket || !list) { skipped.push(`empty row`); continue; }
+    for (const entry of splitTopLevel(list)) {
+      const m = entry.match(/^(.+?)\s*\((.+)\)\s*$/);
+      const name = clean(m ? m[1] : entry);
+      const detail = m ? clean(m[2]) : null;
+      if (!US_STATES.has(name)) { skipped.push(entry); continue; }
+      // A parenthetical only overrides the bucket when it is itself a concrete
+      // deadline. "New York (longest in nation)" is an editorial aside, not a
+      // filing window — treating it as one would print "Lien Filing Deadline:
+      // longest in nation". Require a digit; otherwise the bucket label stands
+      // and the aside is carried as a note.
+      const isDeadline = detail !== null && /\d/.test(detail);
+      // A state landing in two buckets is ambiguous — omit it rather than
+      // pick a winner.
+      if (seen.has(name)) {
+        skipped.push(`${name} (appears in both "${seen.get(name)}" and "${bucket}" — omitted as ambiguous)`);
+        delete rows[name];
+        continue;
+      }
+      seen.set(name, bucket);
+      rows[name] = isDeadline ? [name, detail] : (detail ? [name, bucket, detail] : [name, bucket]);
+    }
+  }
+  if (skipped.length) console.log(`    ${label}: omitted ${skipped.length} unresolvable entr(y/ies): ${skipped.slice(0, 4).join("; ")}${skipped.length > 4 ? " …" : ""}`);
+  return { headers: ["State", `${label} Deadline`, "Note"], rows };
 }
 
 const sections = [];
 for (const s of SECTIONS) {
   const parsed = parseSection(md, s.header);
   if (!parsed) { console.warn(`  (section not found: ${s.label})`); continue; }
-  sections.push({ key: s.key, label: s.label, headers: parsed.headers, rows: parsed.rows });
-  console.log(`  ${s.label}: ${Object.keys(parsed.rows).length} states parsed`);
+  const { headers, rows } = s.inverted ? invertSection(parsed, s.label) : parsed;
+  sections.push({ key: s.key, label: s.label, headers, rows });
+  console.log(`  ${s.label}: ${Object.keys(rows).length} states parsed`);
+}
+
+// Legal-integrity gate: every deadline string we emit must appear verbatim in
+// the source markdown. Catches any future edit that starts synthesising values.
+{
+  const violations = [];
+  for (const s of sections) {
+    for (const [state, cells] of Object.entries(s.rows)) {
+      for (const cell of cells.slice(1)) {
+        if (cell && !md.includes(cell)) violations.push(`${s.label}/${state}: "${cell}" not found verbatim in source`);
+      }
+    }
+  }
+  if (violations.length) {
+    console.error(`FAIL: ${violations.length} value(s) not traceable to source. Refusing to write.`);
+    for (const v of violations.slice(0, 10)) console.error(`  - ${v}`);
+    process.exit(1);
+  }
+  console.log(`  ✓ legal-integrity: every emitted deadline traces verbatim to source`);
 }
 
 // States that appear in at least the first (preliminary) section get a page.

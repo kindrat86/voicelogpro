@@ -326,19 +326,224 @@
       "key": "lienFiling",
       "label": "Lien Filing",
       "headers": [
-        "Deadline Range",
-        "States"
+        "State",
+        "Lien Filing Deadline",
+        "Note"
       ],
-      "rows": {}
+      "rows": {
+        "Alaska": [
+          "Alaska",
+          "30 days"
+        ],
+        "Oregon": [
+          "Oregon",
+          "30 days after written demand"
+        ],
+        "Washington": [
+          "Washington",
+          "30/60 days"
+        ],
+        "California": [
+          "California",
+          "90 days"
+        ],
+        "Florida": [
+          "Florida",
+          "90 days"
+        ],
+        "Georgia": [
+          "Georgia",
+          "90 days"
+        ],
+        "Nevada": [
+          "Nevada",
+          "90 days"
+        ],
+        "North Carolina": [
+          "North Carolina",
+          "90 days"
+        ],
+        "Ohio": [
+          "Ohio",
+          "90 days"
+        ],
+        "Oklahoma": [
+          "Oklahoma",
+          "90 days"
+        ],
+        "South Carolina": [
+          "South Carolina",
+          "90 days"
+        ],
+        "Utah": [
+          "Utah",
+          "90 days"
+        ],
+        "Virginia": [
+          "Virginia",
+          "90 days"
+        ],
+        "West Virginia": [
+          "West Virginia",
+          "90 days"
+        ],
+        "Wisconsin": [
+          "Wisconsin",
+          "90 days"
+        ],
+        "Illinois": [
+          "Illinois",
+          "4 months"
+        ],
+        "Texas": [
+          "Texas",
+          "15th of 4th month"
+        ],
+        "Missouri": [
+          "Missouri",
+          "4 months"
+        ],
+        "Connecticut": [
+          "Connecticut",
+          "6 months"
+        ],
+        "Pennsylvania": [
+          "Pennsylvania",
+          "6 months"
+        ],
+        "Michigan": [
+          "Michigan",
+          "6 months"
+        ],
+        "Massachusetts": [
+          "Massachusetts",
+          "6 months"
+        ],
+        "New York": [
+          "New York",
+          "8 months",
+          "longest in nation"
+        ],
+        "Arkansas": [
+          "Arkansas",
+          "1 year+"
+        ],
+        "Kansas": [
+          "Kansas",
+          "1 year+"
+        ],
+        "Kentucky": [
+          "Kentucky",
+          "1 year+"
+        ],
+        "Maine": [
+          "Maine",
+          "1 year+"
+        ],
+        "Nebraska": [
+          "Nebraska",
+          "1 year+"
+        ],
+        "New Jersey": [
+          "New Jersey",
+          "1 year+"
+        ],
+        "Vermont": [
+          "Vermont",
+          "1 year+"
+        ]
+      }
     },
     {
       "key": "enforcement",
       "label": "Lien Enforcement",
       "headers": [
-        "Enforcement Window",
-        "States"
+        "State",
+        "Lien Enforcement Deadline",
+        "Note"
       ],
-      "rows": {}
+      "rows": {
+        "California": [
+          "California",
+          "90 days"
+        ],
+        "Alabama": [
+          "Alabama",
+          "90 days"
+        ],
+        "Georgia": [
+          "Georgia",
+          "90 days"
+        ],
+        "Illinois": [
+          "Illinois",
+          "6 months"
+        ],
+        "Massachusetts": [
+          "Massachusetts",
+          "6 months"
+        ],
+        "Michigan": [
+          "Michigan",
+          "6 months"
+        ],
+        "New Jersey": [
+          "New Jersey",
+          "6 months"
+        ],
+        "Florida": [
+          "Florida",
+          "1 year"
+        ],
+        "Pennsylvania": [
+          "Pennsylvania",
+          "1 year"
+        ],
+        "Ohio": [
+          "Ohio",
+          "1 year"
+        ],
+        "Wisconsin": [
+          "Wisconsin",
+          "1 year"
+        ],
+        "North Carolina": [
+          "North Carolina",
+          "1 year"
+        ],
+        "Minnesota": [
+          "Minnesota",
+          "1 year"
+        ],
+        "Connecticut": [
+          "Connecticut",
+          "18 months"
+        ],
+        "Nebraska": [
+          "Nebraska",
+          "18 months"
+        ],
+        "Texas": [
+          "Texas",
+          "2 years"
+        ],
+        "New York": [
+          "New York",
+          "2 years"
+        ],
+        "Kansas": [
+          "Kansas",
+          "2 years"
+        ],
+        "Kentucky": [
+          "Kentucky",
+          "2 years"
+        ],
+        "Missouri": [
+          "Missouri",
+          "2 years"
+        ]
+      }
     }
   ],
   "states": [
@@ -403,7 +608,10 @@
         "Bond claim only on public projects"
       ],
       "lienFiling": null,
-      "enforcement": null,
+      "enforcement": [
+        "Alabama",
+        "90 days"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -416,7 +624,10 @@
         "60 days from first furnishing",
         "Only required for subcontractors"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "Alaska",
+        "30 days"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": {
@@ -454,7 +665,10 @@
         "N/A",
         "Lien available without notice"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "Arkansas",
+        "1 year+"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": null,
@@ -468,8 +682,14 @@
         "20 days from first furnishing",
         "Strictly enforced; late = work after only"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "California",
+        "90 days"
+      ],
+      "enforcement": [
+        "California",
+        "90 days"
+      ],
       "numeric": {
         "preliminaryNotice": {
           "n": 20,
@@ -501,8 +721,14 @@
         "N/A",
         "No preliminary notice required"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Connecticut",
+        "6 months"
+      ],
+      "enforcement": [
+        "Connecticut",
+        "18 months"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -534,8 +760,14 @@
         "45 days from first furnishing",
         "NTO must meet strict content requirements"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Florida",
+        "90 days"
+      ],
+      "enforcement": [
+        "Florida",
+        "1 year"
+      ],
       "numeric": {
         "preliminaryNotice": {
           "n": 45,
@@ -553,8 +785,14 @@
         "N/A",
         "No preliminary for private projects"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Georgia",
+        "90 days"
+      ],
+      "enforcement": [
+        "Georgia",
+        "90 days"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -600,8 +838,14 @@
         "90 days from last furnishing",
         "Must serve owner with copy of lien"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Illinois",
+        "4 months"
+      ],
+      "enforcement": [
+        "Illinois",
+        "6 months"
+      ],
       "numeric": {
         "preliminaryNotice": {
           "n": 90,
@@ -652,8 +896,14 @@
         "N/A",
         "No preliminary notice required"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Kansas",
+        "1 year+"
+      ],
+      "enforcement": [
+        "Kansas",
+        "2 years"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -666,8 +916,14 @@
         "N/A",
         "Lien available without notice"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Kentucky",
+        "1 year+"
+      ],
+      "enforcement": [
+        "Kentucky",
+        "2 years"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -694,7 +950,10 @@
         "N/A",
         "No preliminary notice required"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "Maine",
+        "1 year+"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": null,
@@ -727,8 +986,14 @@
         "N/A",
         "No preliminary notice required"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Massachusetts",
+        "6 months"
+      ],
+      "enforcement": [
+        "Massachusetts",
+        "6 months"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -741,8 +1006,14 @@
         "N/A",
         "Lien available without notice"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Michigan",
+        "6 months"
+      ],
+      "enforcement": [
+        "Michigan",
+        "6 months"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -756,7 +1027,10 @@
         "Pre-lien notice to owner"
       ],
       "lienFiling": null,
-      "enforcement": null,
+      "enforcement": [
+        "Minnesota",
+        "1 year"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -783,8 +1057,14 @@
         "5 months from last furnishing",
         "Notice of non-payment"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Missouri",
+        "4 months"
+      ],
+      "enforcement": [
+        "Missouri",
+        "2 years"
+      ],
       "numeric": {
         "preliminaryNotice": {
           "n": 5,
@@ -816,8 +1096,14 @@
         "10 days before lien filing",
         "Pre-lien notice to owner"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Nebraska",
+        "1 year+"
+      ],
+      "enforcement": [
+        "Nebraska",
+        "18 months"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -830,7 +1116,10 @@
         "30 days from first furnishing",
         "Separate requirement for residential"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "Nevada",
+        "90 days"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": {
@@ -863,8 +1152,14 @@
         "By lien filing date",
         "Notice linked to lien filing"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "New Jersey",
+        "1 year+"
+      ],
+      "enforcement": [
+        "New Jersey",
+        "6 months"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -891,8 +1186,15 @@
         "N/A",
         "No notice required; 8-month filing window"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "New York",
+        "8 months",
+        "longest in nation"
+      ],
+      "enforcement": [
+        "New York",
+        "2 years"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -905,8 +1207,14 @@
         "30 days from first furnishing",
         "Must serve owner and GC"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "North Carolina",
+        "90 days"
+      ],
+      "enforcement": [
+        "North Carolina",
+        "1 year"
+      ],
       "numeric": {
         "preliminaryNotice": {
           "n": 30,
@@ -938,8 +1246,14 @@
         "21 days from first furnishing",
         "Notice to owner required"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Ohio",
+        "90 days"
+      ],
+      "enforcement": [
+        "Ohio",
+        "1 year"
+      ],
       "numeric": {
         "preliminaryNotice": {
           "n": 21,
@@ -957,7 +1271,10 @@
         "N/A",
         "No preliminary notice required"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "Oklahoma",
+        "90 days"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": null,
@@ -971,7 +1288,10 @@
         "8 days from first furnishing",
         "Notice of right to lien"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "Oregon",
+        "30 days after written demand"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": {
@@ -990,8 +1310,14 @@
         "90 days from last furnishing",
         "Notice required within 90 days"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Pennsylvania",
+        "6 months"
+      ],
+      "enforcement": [
+        "Pennsylvania",
+        "1 year"
+      ],
       "numeric": {
         "preliminaryNotice": {
           "n": 90,
@@ -1023,7 +1349,10 @@
         "30 days from first furnishing",
         "Notice to owner"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "South Carolina",
+        "90 days"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": {
@@ -1075,8 +1404,14 @@
         "15th of 3rd month",
         "Monthly notices for each unpaid month"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Texas",
+        "15th of 4th month"
+      ],
+      "enforcement": [
+        "Texas",
+        "2 years"
+      ],
       "numeric": {
         "preliminaryNotice": null,
         "lienFiling": null
@@ -1089,7 +1424,10 @@
         "20 days from first furnishing",
         "Preconstruction notice"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "Utah",
+        "90 days"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": {
@@ -1108,7 +1446,10 @@
         "N/A",
         "Lien available without notice"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "Vermont",
+        "1 year+"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": null,
@@ -1122,7 +1463,10 @@
         "30 days from first furnishing",
         "Must serve owner"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "Virginia",
+        "90 days"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": {
@@ -1141,7 +1485,10 @@
         "10 days from first furnishing",
         "Notice to owner + notice of intent"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "Washington",
+        "30/60 days"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": {
@@ -1179,7 +1526,10 @@
         "N/A",
         "No preliminary notice required"
       ],
-      "lienFiling": null,
+      "lienFiling": [
+        "West Virginia",
+        "90 days"
+      ],
       "enforcement": null,
       "numeric": {
         "preliminaryNotice": null,
@@ -1193,8 +1543,14 @@
         "60 days from first furnishing",
         "Notice of intent to file"
       ],
-      "lienFiling": null,
-      "enforcement": null,
+      "lienFiling": [
+        "Wisconsin",
+        "90 days"
+      ],
+      "enforcement": [
+        "Wisconsin",
+        "1 year"
+      ],
       "numeric": {
         "preliminaryNotice": {
           "n": 60,
