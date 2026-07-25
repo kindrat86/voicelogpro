@@ -170,6 +170,16 @@ const STATUTE_BY_STATE = {
   "New York":   { statute: "N.Y. Lien Law art. 2",       sourceUrl: "https://www.nysenate.gov/legislation/laws/LIE/A2" },
   "Washington": { statute: "RCW ch. 60.04",              sourceUrl: "https://app.leg.wa.gov/RCW/default.aspx?cite=60.04" },
   "Arizona":    { statute: "A.R.S. § 33-981 et seq.",    sourceUrl: "https://www.azleg.gov/arsDetail/?title=33" },
+  "Connecticut":           { statute: "Conn. Gen. Stat. \u00a7 49-33 et seq.", sourceUrl: "https://www.cga.ct.gov/current/pub/chap_847.htm" },
+  "District of Columbia":  { statute: "D.C. Code \u00a7 40-301.01 et seq.", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/titles/40/chapters/3" },
+  "Kansas":                { statute: "K.S.A. \u00a7 60-1101 et seq.", sourceUrl: "https://www.ksrevisor.org/statutes/chapters/ch60/060_011_0001.html" },
+  "Maine":                 { statute: "10 M.R.S. \u00a7 3251 et seq.", sourceUrl: "https://legislature.maine.gov/statutes/10/title10ch603sec0.html" },
+  "Minnesota":             { statute: "Minn. Stat. ch. 514", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/514" },
+  "Missouri":              { statute: "Mo. Rev. Stat. ch. 429", sourceUrl: "https://revisor.mo.gov/main/OneChapter.aspx?chapter=429" },
+  "Montana":               { statute: "Mont. Code \u00a7 71-3-521 et seq.", sourceUrl: "https://archive.legmt.gov/bills/mca/title_0710/chapter_0030/part_0050/sections_index.html" },
+  "South Carolina":        { statute: "S.C. Code \u00a7 29-5-10 et seq.", sourceUrl: "https://www.scstatehouse.gov/code/t29c005.php" },
+  "Vermont":               { statute: "9 V.S.A. \u00a7 1921 et seq.", sourceUrl: "https://legislature.vermont.gov/statutes/chapter/09/051" },
+  "Virginia":              { statute: "Va. Code \u00a7 43-1 et seq.", sourceUrl: "https://law.lis.virginia.gov/vacodefull/title43/chapter1/" },
 };
 
 const dataset = {
