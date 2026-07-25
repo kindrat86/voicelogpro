@@ -437,75 +437,75 @@ body {
   <!-- Form Card -->
   <div class="card">
     <h2>📋 Report Details</h2>
-    <form id="reportForm" autocomplete="off">
+    <form id="reportForm" method="post" autocomplete="off">
       <div class="form-row">
         <div class="form-group">
-          <label>Project Name *</label>
-          <input type="text" id="projectName" required placeholder="e.g., Oakwood Apartments — Phase 2">
+          <label for="projectName">Project Name *</label>
+          <input type="text" id="projectName" name="projectName" required placeholder="e.g., Oakwood Apartments — Phase 2">
         </div>
         <div class="form-group">
-          <label>Date *</label>
-          <input type="date" id="reportDate" required>
+          <label for="reportDate">Date *</label>
+          <input type="date" id="reportDate" name="reportDate" required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Weather</label>
-          <select id="weather">
+          <label for="weather">Weather</label>
+          <select id="weather" name="weather">
             <option value="">Select…</option>
             <option>Clear / Sunny</option><option>Partly Cloudy</option><option>Overcast</option>
             <option>Rain</option><option>Snow</option><option>Windy</option><option>Extreme Heat</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Temperature (°F)</label>
-          <input type="text" id="temperature" placeholder="e.g., 72°F">
+          <label for="temperature">Temperature (°F)</label>
+          <input type="text" id="temperature" name="temperature" placeholder="e.g., 72°F">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Crew Size</label>
-          <input type="number" id="crewSize" placeholder="e.g., 5" min="0">
+          <label for="crewSize">Crew Size</label>
+          <input type="number" id="crewSize" name="crewSize" placeholder="e.g., 5" min="0">
         </div>
         <div class="form-group">
-          <label>Crew Names</label>
-          <input type="text" id="crewNames" placeholder="e.g., Jose M., Dave K., Mike R.">
+          <label for="crewNames">Crew Names</label>
+          <input type="text" id="crewNames" name="crewNames" placeholder="e.g., Jose M., Dave K., Mike R.">
         </div>
       </div>
       <div class="form-group">
-        <label>Work Performed *</label>
-        <textarea id="workPerformed" required placeholder="Describe what work was completed today in detail. Be specific — this is your legal record.&#10;&#10;e.g.,&#10;• Installed 240 linear ft of 2-inch EMT conduit on floors 3-4, east wing&#10;• Pulled 12 AWG THHN wire through conduits — 6 circuits total&#10;• Mounted and wired 14 electrical panels in units 302-315"></textarea>
+        <label for="workPerformed">Work Performed *</label>
+        <textarea id="workPerformed" name="workPerformed" required placeholder="Describe what work was completed today in detail. Be specific — this is your legal record.&#10;&#10;e.g.,&#10;• Installed 240 linear ft of 2-inch EMT conduit on floors 3-4, east wing&#10;• Pulled 12 AWG THHN wire through conduits — 6 circuits total&#10;• Mounted and wired 14 electrical panels in units 302-315"></textarea>
       </div>
       <div class="form-group">
-        <label>Materials Used</label>
-        <textarea id="materialsUsed" placeholder="e.g.,&#10;• 240 ft 2-inch EMT conduit&#10;• 900 ft 12 AWG THHN wire (black, red, white, green)&#10;• 14 x Eaton BR 20A circuit breakers&#10;• 50 x wire nuts, assorted"></textarea>
+        <label for="materialsUsed">Materials Used</label>
+        <textarea id="materialsUsed" name="materialsUsed" placeholder="e.g.,&#10;• 240 ft 2-inch EMT conduit&#10;• 900 ft 12 AWG THHN wire (black, red, white, green)&#10;• 14 x Eaton BR 20A circuit breakers&#10;• 50 x wire nuts, assorted"></textarea>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Equipment On Site</label>
-          <input type="text" id="equipment" placeholder="e.g., Scissor lift, 2 x hammer drills">
+          <label for="equipment">Equipment On Site</label>
+          <input type="text" id="equipment" name="equipment" placeholder="e.g., Scissor lift, 2 x hammer drills">
         </div>
         <div class="form-group">
-          <label>Visitors / Inspections</label>
-          <input type="text" id="visitors" placeholder="e.g., City inspector — electrical rough-in">
+          <label for="visitors">Visitors / Inspections</label>
+          <input type="text" id="visitors" name="visitors" placeholder="e.g., City inspector — electrical rough-in">
         </div>
       </div>
       <div class="form-group">
-        <label>Delays / Issues</label>
-        <input type="text" id="delays" placeholder="e.g., Material delay on 4-inch boxes — expected Monday">
+        <label for="delays">Delays / Issues</label>
+        <input type="text" id="delays" name="delays" placeholder="e.g., Material delay on 4-inch boxes — expected Monday">
       </div>
       <div class="form-group">
-        <label>Safety Incidents</label>
-        <input type="text" id="safety" placeholder="e.g., None — or describe any incident">
+        <label for="safety">Safety Incidents</label>
+        <input type="text" id="safety" name="safety" placeholder="e.g., None — or describe any incident">
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Submitted By *</label>
-          <input type="text" id="submittedBy" required placeholder="Your name / title">
+          <label for="submittedBy">Submitted By *</label>
+          <input type="text" id="submittedBy" name="submittedBy" required placeholder="Your name / title">
         </div>
         <div class="form-group">
-          <label>Company</label>
-          <input type="text" id="company" placeholder="Your company name">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" placeholder="Your company name">
         </div>
       </div>
       <div class="btn-row">
