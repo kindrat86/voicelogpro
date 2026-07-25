@@ -84,10 +84,11 @@ export function LeadMagnetForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
+    <form onSubmit={handleSubmit} method="post" className="w-full max-w-md mx-auto">
       <div className="flex flex-col sm:flex-row gap-3">
         <Input
           type="email"
+          name="email"
           autoComplete="email"
           inputMode="email"
           enterKeyHint="go"
@@ -121,7 +122,7 @@ export function LeadMagnetForm({
         </Button>
       </div>
       {status === "error" && errorMessage && (
-        <p className="text-destructive text-sm mt-2 text-center">{errorMessage}</p>
+        <p role="alert" className="text-destructive text-sm mt-2 text-center">{errorMessage}</p>
       )}
       <p className="text-xs text-muted-foreground text-center mt-3 flex items-center justify-center gap-1">
         <Lock className="w-3 h-3" />

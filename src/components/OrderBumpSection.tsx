@@ -171,9 +171,12 @@ export function OrderBumpSection() {
             </button>
 
             {/* Checkout form */}
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} method="post" className="space-y-4">
               <Input
                 type="email"
+                name="email"
+                autoComplete="email"
+                aria-label="Email address for checkout"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => {
@@ -185,7 +188,7 @@ export function OrderBumpSection() {
                 autoFocus
               />
               {status === "error" && errorMessage && (
-                <p className="text-destructive text-sm">{errorMessage}</p>
+                <p role="alert" className="text-destructive text-sm">{errorMessage}</p>
               )}
               <Button
                 type="submit"

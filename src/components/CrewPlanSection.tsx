@@ -124,9 +124,12 @@ export function CrewPlanSection() {
               </ul>
 
               {activePlan === "free" ? (
-                <form onSubmit={(e) => handleSubmit(e, "free")} className="space-y-4">
+                <form onSubmit={(e) => handleSubmit(e, "free")} method="post" className="space-y-4">
                   <Input
                     type="email"
+                    name="email"
+                    autoComplete="email"
+                    aria-label="Email address for the free crew plan"
                     placeholder="Enter your email"
                     value={freeEmail}
                     onChange={(e) => {
@@ -138,7 +141,7 @@ export function CrewPlanSection() {
                     autoFocus
                   />
                   {status === "error" && errorMessage && (
-                    <p className="text-destructive text-sm">{errorMessage}</p>
+                    <p role="alert" className="text-destructive text-sm">{errorMessage}</p>
                   )}
                   <Button
                     type="submit"
@@ -206,9 +209,12 @@ export function CrewPlanSection() {
               </ul>
 
               {activePlan === "paid" ? (
-                <form onSubmit={(e) => handleSubmit(e, "paid")} className="space-y-4">
+                <form onSubmit={(e) => handleSubmit(e, "paid")} method="post" className="space-y-4">
                   <Input
                     type="email"
+                    name="email"
+                    autoComplete="email"
+                    aria-label="Email address for the paid crew plan"
                     placeholder="Enter your email"
                     value={paidEmail}
                     onChange={(e) => {
@@ -220,7 +226,7 @@ export function CrewPlanSection() {
                     autoFocus
                   />
                   {status === "error" && errorMessage && (
-                    <p className="text-destructive text-sm">{errorMessage}</p>
+                    <p role="alert" className="text-destructive text-sm">{errorMessage}</p>
                   )}
                   <Button
                     type="submit"
