@@ -14,16 +14,22 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "QAPage",
-  "mainEntity": {
+  "@type": "FAQPage",
+  "@id": "https://voicelogpro.com/answers/how-does-ai-transcribe-field-team-voice-logs/#faq",
+  "url": "https://voicelogpro.com/answers/how-does-ai-transcribe-field-team-voice-logs/",
+  "name": "How does AI transcribe field team voice logs?",
+  "dateModified": "2026-07-21T12:00:00+00:00",
+  "author": { "@type": "Organization", "name": "VoiceLogPro", "url": "https://voicelogpro.com/" },
+  "publisher": { "@type": "Organization", "name": "VoiceLogPro", "url": "https://voicelogpro.com/" },
+  "mainEntity": [{
     "@type": "Question",
     "name": "How does AI transcribe field team voice logs?",
     "acceptedAnswer": {
       "@type": "Answer",
       "text": "VoiceLogPro uses a three-stage AI pipeline: (1) real-time speech-to-text via Whisper large-v3, processing 3–8 seconds per minute of audio with 94%+ accuracy on construction terminology; (2) domain-specific entity extraction via a custom NER model trained on field ops vocabulary — worker names, equipment IDs, material types, safety hazard categories; and (3) structured output generation — JSON with urgency scores, assigned actions, and compliance flags — delivered to the dashboard within seconds of completing the voice recording. The pipeline runs on-device for initial capture and cloud-side for full processing, meaning logs are partially available even offline.",
-      "dateModified": "2026-07-21T12:00:00+00:00"
+      "url": "https://voicelogpro.com/answers/how-does-ai-transcribe-field-team-voice-logs/"
     }
-  }
+  }]
 }
 </script>
 <script type="application/ld+json">
