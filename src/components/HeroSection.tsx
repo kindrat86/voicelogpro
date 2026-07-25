@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { LeadMagnetForm } from "@/components/LeadMagnetForm";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
-import { Star } from "lucide-react";
+import { HardHat } from "lucide-react";
 
 // All hero images live in public/images so the SAME URL resolves in dev, the
 // production SPA bundle, AND the prerendered HTML. (Importing from src/assets
@@ -10,14 +10,17 @@ const heroElectrician = "/images/hero-electrician.webp";
 const beforeMessyNotes = "/images/before-messy-notes.webp";
 const afterCleanPdf = "/images/after-clean-pdf.webp";
 
-// Social proof bar — Brunson "mass influence" pattern
+// Credibility bar. This deliberately does NOT render a five-star rating: the
+// stars were paired with "Trusted on jobsites" on a product that has not started
+// billing and has no reviews, which reads as an aggregate rating nobody gave.
+// Say who built it instead — that part is true and it is the stronger claim.
 const SocialProofBar = () => (
   <div className="flex items-center justify-center gap-3 mb-6 animate-fade-up" style={{ animationDelay: "0.05s" }}>
     <div className="flex">
-      {[0,1,2,3,4].map(i => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+      <HardHat className="w-4 h-4 text-primary" aria-hidden="true" />
     </div>
     <span className="text-sm text-muted-foreground font-medium">
-      Built by subcontractors. Trusted on jobsites.
+      Built by subcontractors, for subcontractors. Not billing yet — join the waitlist.
     </span>
   </div>
 );

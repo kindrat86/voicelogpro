@@ -51,7 +51,7 @@ const en = {
 
   // Hero section
   hero: {
-    socialProof: "Built by subcontractors. Trusted on jobsites.",
+    socialProof: "Built by subcontractors, for subcontractors. Not yet billing — join the waitlist.",
     titleLine1: "Stop Typing Daily Reports.",
     titleLine2: "Just Speak.",
     subtitle: "The AI Voice-to-PDF daily log tool for defending against payment disputes, lien waivers, and schedule compression claims.",
