@@ -73,20 +73,38 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  if (isHead || (req.method === "GET" && !validToken(email, sig, process.env.UNSUB_SECRET))) {
-    res.status(200).send(confirmPage(email, requested));
-    return;
-  }
-
   const key = process.env.RESEND_API_KEY;
   const audienceId = UUID_RE.test(requested)
     ? requested
     : String(process.env.RESEND_AUDIENCE_ID || "");
 
+  // SELF-HEALING HANDOFF. RESEND_API_KEY is not set on this Vercel project, so this
+  // handler cannot reach Resend — and links carrying ?email=&audience= are already in
+  // recipients' inboxes and cannot be fixed by changing the sender. Hand off to
+  // sipiteno.com/api/unsubscribe, the deliberate "universal" endpoint, which DOES have
+  // the key and takes the audience as a parameter (verified live: it reaches Resend and
+  // never itself redirects, so no loop). 307 keeps a one-click POST a POST.
+  // Disappears as soon as `vercel env add RESEND_API_KEY production` is run here.
+  if (!key && UUID_RE.test(audienceId)) {
+    const fwd = new URLSearchParams({ email, audience: audienceId });
+    if (sig) fwd.set("t", sig);
+    res.setHeader("Location", "https://sipiteno.com/api/unsubscribe?" + fwd.toString());
+    res.status(307).end();
+    return;
+  }
+
   if (!key || !UUID_RE.test(audienceId)) {
+    // Checked BEFORE the confirmation page: the handoff above needs a valid audience,
+    // so if we are here nothing can be done automatically. Rendering a confirm page
+    // whose button leads to this same dead end is worse than saying so immediately.
     res.status(200).send(page("error",
       "The unsubscribe service is temporarily unavailable. Email " + SUPPORT +
       " and we will remove you by hand."));
+    return;
+  }
+
+  if (isHead || (req.method === "GET" && !validToken(email, sig, process.env.UNSUB_SECRET))) {
+    res.status(200).send(confirmPage(email, requested));
     return;
   }
 
