@@ -1,5 +1,5 @@
 # VoiceLogPro — llms.txt (AI crawler index)
-# Generated 2026-07-09. Total indexed pages: 134
+# Generated 2026-07-24. Total indexed pages: 112
 # Format: Markdown with URL lists. Compatible with GPTBot, ClaudeBot, PerplexityBot.
 
 ## Product & Core Pages (6 pages)
@@ -11,17 +11,60 @@ VoiceLogPro is a voice-to-PDF daily construction report SaaS for subcontractors.
 - [Beta](https://voicelogpro.com/beta): Early beta access for construction crews
 - [Blog](https://voicelogpro.com/blog): Construction law, lien rights, and daily documentation guides
 
-## State Lien Law Guides (8 pages)
-Mechanics lien deadlines, preliminary notice rules, and enforcement timelines per state. Total: 8 pages.
-- [California Lien Law](https://voicelogpro.com/states/california-lien-law): 20-day preliminary notice, 90-day lien window
-- [Texas Lien Law](https://voicelogpro.com/blog/texas-property-code-chapter-53-guide-2025): Chapter 53 monthly notices, 15th-day deadlines
-- [Florida Lien Law](https://voicelogpro.com/states/florida-lien-law): Notice to Owner, 90-day lien window
-- [New York Lien Law](https://voicelogpro.com/states/new-york-lien-law): 4-8 month filing window by project type
-- [Illinois Lien Law](https://voicelogpro.com/states/illinois-lien-law): 60-day owner notice, 4-month lien
-- [Ohio Lien Law](https://voicelogpro.com/states/ohio-lien-law): 75-day filing, 6-year enforcement
-- [Georgia Lien Law](https://voicelogpro.com/states/georgia-lien-law): 90-day filing, 365-day enforcement
-- [North Carolina Lien Law](https://voicelogpro.com/states/north-carolina-lien-law): 120-day filing, 180-day enforcement
-- [Colorado Lien Law](https://voicelogpro.com/states/colorado-lien-law): 10-day intent notice, 4-month lien
+## State Lien Law Guides (51 pages)
+Mechanics lien deadlines, preliminary notice rules, and enforcement timelines per state — verbatim from our verified dataset (CC BY 4.0). Total: 51 pages.
+- [Alabama Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/alabama): Bond claim only on public projects
+- [Alaska Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/alaska): Only required for subcontractors
+- [Arizona Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/arizona): Prelim notice + notice of intent
+- [Arkansas Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/arkansas): Lien available without notice
+- [California Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/california): Strictly enforced; late = work after only
+- [Colorado Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/colorado): Or 10 days before lien filing
+- [Connecticut Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/connecticut): No preliminary notice required
+- [Delaware Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/delaware): Must be served on owner
+- [Florida Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/florida): NTO must meet strict content requirements
+- [Georgia Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/georgia): No preliminary for private projects
+- [Hawaii Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/hawaii): Must serve owner and GC
+- [Idaho Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/idaho): No preliminary notice required
+- [Illinois Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/illinois): Must serve owner with copy of lien
+- [Indiana Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/indiana): Notice of intent to file
+- [Iowa Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/iowa): Pre-lien notice
+- [Kansas Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/kansas): No preliminary notice required
+- [Kentucky Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/kentucky): Lien available without notice
+- [Louisiana Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/louisiana): With Louisiana State Licensing Board
+- [Maine Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/maine): No preliminary notice required
+- [Maryland Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/maryland): Notice must contain specific language
+- [Massachusetts Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/massachusetts): No preliminary notice required
+- [Michigan Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/michigan): Lien available without notice
+- [Minnesota Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/minnesota): Pre-lien notice to owner
+- [Mississippi Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/mississippi): No preliminary notice required
+- [Missouri Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/missouri): Notice of non-payment
+- [Montana Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/montana): Pre-lien notice for residential only
+- [Nebraska Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/nebraska): Pre-lien notice to owner
+- [Nevada Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/nevada): Separate requirement for residential
+- [New Hampshire Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/new-hampshire): Lien available without notice
+- [New Jersey Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/new-jersey): Notice linked to lien filing
+- [New Mexico Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/new-mexico): No preliminary notice required
+- [New York Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/new-york): No notice required; 8-month filing window
+- [North Carolina Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/north-carolina): Must serve owner and GC
+- [North Dakota Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/north-dakota): No preliminary notice required
+- [Ohio Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/ohio): Notice to owner required
+- [Oklahoma Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/oklahoma): No preliminary notice required
+- [Oregon Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/oregon): Notice of right to lien
+- [Pennsylvania Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/pennsylvania): Notice required within 90 days
+- [Rhode Island Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/rhode-island): No preliminary notice required
+- [South Carolina Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/south-carolina): Notice to owner
+- [South Dakota Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/south-dakota): No preliminary notice required
+- [Tennessee Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/tennessee): Pre-lien notice
+- [Texas Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/texas): Monthly notices for each unpaid month
+- [Utah Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/utah): Preconstruction notice
+- [Vermont Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/vermont): Lien available without notice
+- [Virginia Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/virginia): Must serve owner
+- [Washington Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/washington): Notice to owner + notice of intent
+- [Washington DC Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/washington-dc): Pre-lien notice required
+- [West Virginia Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/west-virginia): No preliminary notice required
+- [Wisconsin Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/wisconsin): Notice of intent to file
+- [Wyoming Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/wyoming): No preliminary notice required
+
 
 ## Daily Report Templates (5 pages)
 Trade-specific daily construction report templates. Total: 5 pages.
@@ -91,5 +134,5 @@ Voice logging and construction documentation terms. Total: 7 pages.
 - ...[4 more like this]
 
 ---
-Total: 134 pages across 11 page-type clusters.
-Last updated: 2026-07-09. Sitemap: https://voicelogpro.com/sitemap.xml
+Total: 112 pages across 10 page-type clusters.
+Last updated: 2026-07-24. Sitemap: https://voicelogpro.com/sitemap.xml
