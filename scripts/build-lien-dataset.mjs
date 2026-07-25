@@ -153,6 +153,25 @@ function numericRule(text) {
   return { n: parseInt(m[1], 10), unit: m[2].toLowerCase().startsWith("month") ? "months" : "days", trigger: m[3].toLowerCase() + "Furnishing", raw: text };
 }
 
+// ── Verified statute references ──────────────────────────────────────────────
+// Rendered on each state page as "Statute: <citation> — official text".
+// ONLY states whose official source URL was content-verified to actually serve
+// the cited chapter appear here. A wrong citation on lien deadlines is worse
+// than none, so unverified states are omitted and the page renders no statute
+// line at all. Verification = fetch the URL and confirm the page really
+// contains the chapter (a 200 is NOT sufficient: statutes.capitol.texas.gov
+// returns 200 with zero "lien" mentions over curl because it is JS-rendered —
+// Texas below was confirmed in a real browser, 246 lien mentions, §53.052).
+// To add a state: verify first, then add it here — NOT to the generated JSON,
+// which this script overwrites on every build.
+const STATUTE_BY_STATE = {
+  "Texas":      { statute: "Tex. Prop. Code ch. 53",     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.53.htm" },
+  "Florida":    { statute: "Fla. Stat. ch. 713",         sourceUrl: "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0713/0713.html" },
+  "New York":   { statute: "N.Y. Lien Law art. 2",       sourceUrl: "https://www.nysenate.gov/legislation/laws/LIE/A2" },
+  "Washington": { statute: "RCW ch. 60.04",              sourceUrl: "https://app.leg.wa.gov/RCW/default.aspx?cite=60.04" },
+  "Arizona":    { statute: "A.R.S. § 33-981 et seq.",    sourceUrl: "https://www.azleg.gov/arsDetail/?title=33" },
+};
+
 const dataset = {
   name: "US Mechanics Lien Deadlines by State",
   updatedAt, sourceSlug,
@@ -169,6 +188,7 @@ const dataset = {
       lienFiling: numericRule((sections.find((s) => s.key === "lienFiling")?.rows[st] || [])[1]) || numericRule((sections.find((s) => s.key === "lienFiling")?.rows[st] || [])[2]),
     },
   }])),
+  statuteByState: STATUTE_BY_STATE,
 };
 
 mkdirSync(join(process.cwd(), "src/data"), { recursive: true });
