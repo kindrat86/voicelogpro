@@ -116,3 +116,30 @@ These are owner actions, not autonomous code changes.
 ---
 
 *"You don't build a funnel to look pretty. You build it to move people from cold to cash, predictably. The pretty part is free. The moving part is everything."* — Russell Brunson
+
+---
+
+## 🚀 SECOND DEPLOY WAVE — 2026-07-27 (same session)
+
+| # | Fix | Secret(s) | Status |
+|---|-----|-----------|--------|
+| 3 | Removed fake 5-star rating from OrderBumpSection Crew Plan card — replaced with honest pre-launch badge ("Pre-launch. Founding price. No charge until live.") | Honesty alignment (matches 1d83b7f) | ✅ Live — commit `5e4ef39`, verified via curl |
+| 4 | Upgraded `/welcome` post-optin page from a simple two-paragraph bridge into a proper Brunson Stack-and-Bang: urgency header, value stack, order bump surfaced as paired decision, "No thanks" decline path, honest trust bar, email teaser | S11 (OTO Script), S13 (Value Stack) | ✅ Live — commit `5e4ef39`, verified via curl |
+
+**Changes verified on production domain (voicelogpro.com):**
+- ✅ 0 fake-star references on homepage
+- ✅ `Pre-launch. Founding price. No charge until live.` present on Crew Plan card
+- ✅ Welcome page: "This page only", "Dispute-Ready Audit Trail", "No thanks — just open my Defense Kit", "Founding price locked" all present
+- ✅ No regression: network block dead, hero intact, Defense Kit intact, Three False Beliefs intact, HTTP 200
+
+### Session total: 4 fixes shipped, 2 deploy cycles, zero fabricated assets.
+
+### Remaining structural gaps (need real human assets/decisions):
+1. **VSL / recorded video** — biggest single DotCom gap. Needs founder's face/voice.
+2. **Real crew testimonials** with names/companies — needs actual beta users.
+3. **Dedicated /oto page as separate funnel step** — needs product/pricing decision.
+4. **$9–$19 paid tripwire** — needs Stripe integration + real product to sell.
+5. **Daily Seinfeld email cadence** — needs ongoing content production from the founder.
+
+---
+*"A funnel that tells the truth beats a funnel that tells a prettier lie — every single time."*
