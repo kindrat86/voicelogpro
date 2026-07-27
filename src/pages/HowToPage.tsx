@@ -150,7 +150,7 @@ export default function HowToPage() {
         </section>
 
         {/* CTA */}
-        <section className="section-container bg-primary/10 py-16 text-center">
+        <section className="section-container bg-primary/20 py-16 text-center">
           <h2 className="text-2xl font-display font-bold text-foreground mb-4">Ready to Start Documenting?</h2>
           <p className="text-lg text-muted-foreground mb-6">
             VoiceLogPro makes all of the above automatic. Record your day in 30 seconds.

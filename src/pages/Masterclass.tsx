@@ -225,7 +225,7 @@ export default function Masterclass() {
           </h2>
           <div className="card-industrial">
             <div className="flex flex-col md:flex-row gap-6 items-start">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
                 <HardHat className="w-8 h-8 text-primary" />
               </div>
               <div>

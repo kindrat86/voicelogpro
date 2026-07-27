@@ -63,7 +63,7 @@ export function ValueLadderSection() {
                 Most Popular
               </div>
             )}
-            <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+            <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mb-3">
               <rung.icon className="w-5 h-5 text-primary" />
             </div>
             <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground mb-1">

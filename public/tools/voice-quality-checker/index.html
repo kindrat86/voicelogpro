@@ -40,7 +40,7 @@ header p{color:#94a3b8;font-size:1.05rem;max-width:600px;margin:0 auto}
 .input-field:focus,.input-range:focus{outline:none;border-color:#60a5fa;box-shadow:0 0 0 3px rgba(96,165,250,0.15)}
 select.input-field{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2394a3b8' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
 .range-val{color:#60a5fa;font-weight:600;font-size:0.85rem;margin-left:0.5rem}
-.unit{color:#64748b;font-size:0.8rem;font-weight:400}
+.unit{color:#94a3b8;font-size:0.8rem;font-weight:400}
 .btn{display:block;width:100%;padding:0.9rem;background:linear-gradient(135deg,#3b82f6,#6366f1);color:white;border:none;border-radius:12px;font-size:1.05rem;font-weight:600;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;margin-top:1rem}
 .btn:hover{transform:translateY(-1px);box-shadow:0 8px 25px rgba(59,130,246,0.3)}
 .btn:active{transform:translateY(0)}
@@ -55,7 +55,7 @@ select.input-field{appearance:none;background-image:url("data:image/svg+xml,%3Cs
 .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.8rem;margin-bottom:1.5rem}
 .metric{background:#0f172a;border-radius:10px;padding:1rem;text-align:center}
 .metric .val{font-size:1.5rem;font-weight:700;color:#f1f5f9}
-.metric .lbl{font-size:0.75rem;color:#64748b;margin-top:0.2rem;text-transform:uppercase}
+.metric .lbl{font-size:0.75rem;color:#94a3b8;margin-top:0.2rem;text-transform:uppercase}
 .recommendations{background:#0f172a;border-radius:10px;padding:1.2rem;margin-top:1rem}
 .recommendations h3{font-size:0.85rem;color:#94a3b8;margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.05em}
 .recommendations li{color:#cbd5e1;font-size:0.9rem;margin-bottom:0.4rem;padding-left:1.2rem;position:relative}
@@ -66,10 +66,10 @@ select.input-field{appearance:none;background-image:url("data:image/svg+xml,%3Cs
 .share-btn.copy{background:#1e3a5f;border-color:#3b82f6}
 .embed-card{background:#0f172a;border:1px dashed #334155;border-radius:10px;padding:1rem;margin-top:1rem}
 .embed-card textarea{width:100%;background:#020617;color:#94a3b8;border:1px solid #1e293b;border-radius:8px;padding:0.7rem;font-family:'SF Mono',monospace;font-size:0.8rem;resize:vertical;height:80px}
-.embed-card .label{font-size:0.75rem;color:#64748b;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.05em}
-.powered-by{text-align:center;margin-top:2rem;color:#475569;font-size:0.8rem}
+.embed-card .label{font-size:0.75rem;color:#94a3b8;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.05em}
+.powered-by{text-align:center;margin-top:2rem;color:#94a3b8;font-size:0.8rem}
 .powered-by a{color:#60a5fa;text-decoration:none}
-footer{text-align:center;padding:2rem;color:#475569;font-size:0.8rem}
+footer{text-align:center;padding:2rem;color:#94a3b8;font-size:0.8rem}
 @media(max-width:600px){.container{padding:1rem}.card{padding:1.2rem}header h1{font-size:1.5rem}}
 </style>
 </head>
@@ -277,7 +277,7 @@ function displayResults(r) {
   if (r.providers) {
     html += '</div><div style="margin-top:1rem">';
     html += '<table style="width:100%;border-collapse:collapse;font-size:0.85rem">';
-    html += '<tr style="color:#64748b;text-align:left"><th style="padding:0.5rem">Provider</th><th style="padding:0.5rem;text-align:right">Monthly</th><th style="padding:0.5rem;text-align:right">Annual</th></tr>';
+    html += '<tr style="color:#94a3b8;text-align:left"><th style="padding:0.5rem">Provider</th><th style="padding:0.5rem;text-align:right">Monthly</th><th style="padding:0.5rem;text-align:right">Annual</th></tr>';
     for (const p of r.providers) {
       html += '<tr style="border-top:1px solid #1e293b"><td style="padding:0.5rem;color:#e2e8f0">' + p.name + '</td><td style="padding:0.5rem;text-align:right;font-weight:600;color:#60a5fa">' + p.monthly + '</td><td style="padding:0.5rem;text-align:right;color:#94a3b8">' + p.annual + '</td></tr>';
     }

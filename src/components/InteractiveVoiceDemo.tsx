@@ -387,7 +387,7 @@ export function InteractiveVoiceDemo() {
         Preview how VoiceLogPro transforms voice into job-ready logs.
       </p>
       <p className="text-sm text-center mb-8 text-muted-foreground">
-        <span className="inline-flex items-center gap-1.5 bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">
+        <span className="inline-flex items-center gap-1.5 bg-primary/20 text-primary px-3 py-1 rounded-full font-medium">
           Beta Demo — Simulated output, not actual transcription
         </span>
       </p>

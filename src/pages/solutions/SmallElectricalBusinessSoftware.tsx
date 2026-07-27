@@ -58,7 +58,7 @@ export default function SmallElectricalBusinessSoftware() {
         <section className="relative py-16 md:py-24 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Shield className="w-4 h-4" />
                 Built for 1–5 Person Crews
               </div>
@@ -172,7 +172,7 @@ export default function SmallElectricalBusinessSoftware() {
             
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Mic className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-bold text-foreground mb-3">Voice-First Logging</h3>
@@ -182,7 +182,7 @@ export default function SmallElectricalBusinessSoftware() {
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <FileText className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-bold text-foreground mb-3">Professional Records</h3>
@@ -192,7 +192,7 @@ export default function SmallElectricalBusinessSoftware() {
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-bold text-foreground mb-3">Change Order Defense</h3>
@@ -214,7 +214,7 @@ export default function SmallElectricalBusinessSoftware() {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-background border border-border rounded-xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
                     <Check className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -226,7 +226,7 @@ export default function SmallElectricalBusinessSoftware() {
               
               <div className="bg-background border border-border rounded-xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
                     <Cloud className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -238,7 +238,7 @@ export default function SmallElectricalBusinessSoftware() {
               
               <div className="bg-background border border-border rounded-xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
                     <Camera className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -280,7 +280,7 @@ export default function SmallElectricalBusinessSoftware() {
                 "I almost spent eight grand on construction management software for my three-man crew. Another contractor told me to stay lean. I use VoiceLogPro for $49 a month, and my invoices get paid faster because everything's documented."
               </blockquote>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
                   <span className="text-primary font-bold">AR</span>
                 </div>
                 <div>

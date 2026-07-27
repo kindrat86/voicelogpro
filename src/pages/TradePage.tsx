@@ -126,7 +126,7 @@ export default function TradePage() {
               {trade.useCaseExamples.map((ex, i) => (
                 <div key={i} className="bg-background border border-border rounded-xl p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-primary font-bold text-sm">{i + 1}</span>
                     </div>
                     <div>
@@ -144,7 +144,7 @@ export default function TradePage() {
         </section>
 
         {/* CTA */}
-        <section className="section-container bg-primary/10 py-16 text-center">
+        <section className="section-container bg-primary/20 py-16 text-center">
           <h2 className="text-2xl font-display font-bold text-foreground mb-4">
             Built for {trade.tradePlural}. Ready in 30 Seconds.
           </h2>

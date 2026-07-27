@@ -257,7 +257,7 @@ const PhasePaymentDisputes = () => {
                 ))}
               </div>
               
-              <p className="text-center text-lg md:text-xl font-bold text-foreground mt-10 bg-primary/10 rounded-lg p-6">
+              <p className="text-center text-lg md:text-xl font-bold text-foreground mt-10 bg-primary/20 rounded-lg p-6">
                 If it isn't logged, it didn't happen.
               </p>
             </div>

@@ -41,7 +41,7 @@ export function HowItWorks() {
             key={step.number}
             className="card-industrial flex items-center gap-4 md:gap-6 transition-all duration-300 hover:border-primary/50"
           >
-            <div className="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 bg-primary/10 rounded-lg flex items-center justify-center">
+            <div className="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 bg-primary/20 rounded-lg flex items-center justify-center">
               <step.icon className="w-7 h-7 md:w-8 md:h-8 text-primary" />
             </div>
             <div className="flex-1">

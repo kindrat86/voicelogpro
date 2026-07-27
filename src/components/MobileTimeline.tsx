@@ -98,7 +98,7 @@ export function MobileTimeline({ steps }: MobileTimelineProps) {
                   isActive ? "border-primary/50" : ""
                 }`}
               >
-                <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div className="flex-shrink-0 w-14 h-14 bg-primary/20 rounded-lg flex items-center justify-center">
                   <Icon className="w-7 h-7 text-primary" />
                 </div>
                 <div className="flex-1">

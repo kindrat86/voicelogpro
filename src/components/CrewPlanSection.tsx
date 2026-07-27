@@ -101,7 +101,7 @@ export function CrewPlanSection() {
             {/* LEFT CARD — Solo Beta */}
             <div className="card-industrial border-border">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
                   <Zap className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -187,7 +187,7 @@ export function CrewPlanSection() {
               </div>
 
               <div className="flex items-center gap-3 mb-4 pt-2">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
                   <Users className="w-5 h-5 text-primary" />
                 </div>
                 <div>

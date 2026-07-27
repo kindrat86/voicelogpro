@@ -276,7 +276,7 @@ export default function ComparisonPage() {
         </section>
 
         {/* Mid-page CTA */}
-        <section className="section-container bg-primary/10 py-16 text-center">
+        <section className="section-container bg-primary/20 py-16 text-center">
           <h2 className="text-2xl font-display font-bold text-foreground mb-6">Ready to Own Your Documentation?</h2>
           <ComparisonCTA location="mid" />
         </section>

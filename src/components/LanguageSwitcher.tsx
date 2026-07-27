@@ -83,7 +83,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/50"
+        className="flex items-center gap-1.5 px-4 py-2.5 min-h-[44px] min-w-[44px] text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-secondary/50"
         aria-label={t("nav.language") || "Language"}
       >
         <Globe className="w-4 h-4" />
@@ -116,7 +116,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
                 key={lang.code}
                 onClick={() => changeLanguage(lang.code)}
                 className={`w-full flex items-center justify-between px-3 py-2.5 text-sm hover:bg-secondary/50 transition-colors ${
-                  currentLang === lang.code ? "bg-primary/10" : ""
+                  currentLang === lang.code ? "bg-primary/20" : ""
                 }`}
               >
                 <div className="flex flex-col items-start">

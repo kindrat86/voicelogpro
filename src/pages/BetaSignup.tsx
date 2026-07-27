@@ -181,7 +181,7 @@ export default function BetaSignup() {
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mic className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">No Manual Entry</h3>
@@ -191,7 +191,7 @@ export default function BetaSignup() {
               </div>
 
               <div className="text-center">
-                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <FileText className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Structured Labor Data</h3>
@@ -201,7 +201,7 @@ export default function BetaSignup() {
               </div>
 
               <div className="text-center">
-                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Built for Disputes</h3>
@@ -277,7 +277,7 @@ export default function BetaSignup() {
                   { icon: FileText, text: "Consistent documentation trail" },
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-5 h-5 text-primary" />
                     </div>
                     <span className="text-foreground font-medium">{item.text}</span>
@@ -329,7 +329,7 @@ export default function BetaSignup() {
                 {/* LEFT CARD — Solo Beta */}
                 <div className="bg-background rounded-xl border border-border p-6 md:p-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
                       <Zap className="w-5 h-5 text-primary" />
                     </div>
                     <div>
@@ -345,7 +345,7 @@ export default function BetaSignup() {
                   <ul className="space-y-3 mb-6">
                     {freeFeatures.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <div className="w-5 h-5 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                           <svg className="w-3 h-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
@@ -426,7 +426,7 @@ export default function BetaSignup() {
                   </div>
 
                   <div className="flex items-center gap-3 mb-4 pt-2">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
                       <Users className="w-5 h-5 text-primary" />
                     </div>
                     <div>
@@ -438,7 +438,7 @@ export default function BetaSignup() {
                   <ul className="space-y-3 mb-6 mt-6">
                     {paidFeatures.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <div className="w-5 h-5 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                           <svg className="w-3 h-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
@@ -516,7 +516,7 @@ export default function BetaSignup() {
         {/* Strategic Positioning */}
         <section className="px-4 py-16 bg-muted/50">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <Smartphone className="w-8 h-8 text-primary" />
             </div>
 

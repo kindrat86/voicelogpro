@@ -289,7 +289,7 @@ export default function RakenComparison() {
         </section>
 
         {/* Mid-page CTA */}
-        <section className="section-container bg-primary/10 text-center">
+        <section className="section-container bg-primary/20 text-center">
           <h2 className="headline-section text-foreground mb-6">Ready to Own Your Documentation?</h2>
           <ComparisonCTA location="mid" />
         </section>

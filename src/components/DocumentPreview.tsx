@@ -93,7 +93,7 @@ export function DocumentPreview() {
 
         {/* Time Verified Stamp Overlay */}
         <div className="absolute bottom-4 right-4 transform rotate-[-12deg]">
-          <div className="relative bg-primary/10 border-4 border-primary rounded-lg p-3 shadow-lg">
+          <div className="relative bg-primary/20 border-4 border-primary rounded-lg p-3 shadow-lg">
             {/* Inner border */}
             <div className="absolute inset-1 border-2 border-primary/50 rounded pointer-events-none" />
             
@@ -105,7 +105,7 @@ export function DocumentPreview() {
               <div className="font-display text-primary font-bold text-sm uppercase tracking-wide">
                 Time Verified
               </div>
-              <div className="text-primary/70 text-[10px] mt-0.5">
+              <div className="text-primary/90 text-[10px] mt-0.5">
                 Timestamped Record
               </div>
             </div>

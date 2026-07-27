@@ -61,10 +61,10 @@ export const ThreeFalseBeliefs = () => {
             <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
               {/* Number + icon */}
               <div className="flex-shrink-0 flex items-center gap-3 md:flex-col md:items-center md:gap-2">
-                <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/20 rounded-lg flex items-center justify-center">
                   <belief.icon className="w-7 h-7 md:w-8 md:h-8 text-primary" />
                 </div>
-                <span className="font-display text-xl md:text-2xl text-primary/70">
+                <span className="font-display text-xl md:text-2xl text-primary/90">
                   0{index + 1}
                 </span>
               </div>

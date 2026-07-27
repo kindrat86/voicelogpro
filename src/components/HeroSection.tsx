@@ -54,7 +54,7 @@ export function HeroSection() {
       {/* Background images - mobile stacked, desktop side by side */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 md:w-1/2 md:left-0">
-          <img src="/images/hero-plumber.webp" alt="Plumber working on construction site" width={1024} height={768} className="w-full h-full object-cover" fetchpriority="high" decoding="async" />
+          <img src="/images/hero-plumber.webp" alt="Plumber working on construction site" width={1024} height={768} className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
         </div>
         <div className="hidden md:block absolute inset-0 w-1/2 right-0 left-auto">
           <img src={heroElectrician} alt="Electrician pulling wire" width={1024} height={768} className="w-full h-full object-cover" loading="lazy" decoding="async" />

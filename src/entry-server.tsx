@@ -9,6 +9,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import { Toaster } from '@/components/ui/toaster';
 import { Toaster as Sonner } from '@/components/ui/sonner';
 import { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // i18n for server-side rendering
@@ -79,6 +80,7 @@ import ContactPage from './pages/ContactPage';
 import Dream100 from './pages/Dream100';
 import Press from './pages/Press';
 import { MobileBottomBar } from '@/components/MobileBottomBar';
+import { MobileBottomBar } from '@/components/MobileBottomBar';
 
 interface RenderResult {
   html: string;
@@ -110,6 +112,7 @@ export async function render(url: string): Promise<RenderResult> {
           <Sonner />
           <StaticRouter location={url}>
             <div className="pb-24 md:pb-0">
+            <Suspense fallback={<div className="min-h-screen bg-background" />}>
             <Suspense fallback={<div className="min-h-screen bg-background" />}>
               <Routes>
                 <Route path="/" element={<Index />} />
@@ -152,6 +155,7 @@ export async function render(url: string): Promise<RenderResult> {
                 <Route path="/press" element={<Press />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
+            </Suspense>
             </Suspense>
             </div>
             <MobileBottomBar />

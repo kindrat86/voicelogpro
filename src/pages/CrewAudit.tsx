@@ -158,7 +158,7 @@ export default function CrewAudit() {
           <div className="grid md:grid-cols-2 gap-6 mb-10">
             {AUDIT_SCOPE.map((item) => (
               <div key={item.title} className="card-industrial">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mb-3">
                   <item.icon className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="text-lg font-bold text-foreground mb-2">

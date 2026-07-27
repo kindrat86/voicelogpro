@@ -142,7 +142,7 @@ export default function ElectricalInventoryTracking() {
             
             <div className="bg-muted/30 border border-border rounded-xl p-8 mb-10">
               <div className="flex items-start gap-4 mb-6">
-                <div className="bg-primary/10 p-3 rounded-full">
+                <div className="bg-primary/20 p-3 rounded-full">
                   <Mic className="w-6 h-6 text-primary" />
                 </div>
                 <div>
