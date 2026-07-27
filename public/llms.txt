@@ -106,12 +106,9 @@ VoiceLogPro vs alternatives — honest comparisons. Total: 8 pages.
 - [JobNimbus vs VoiceLogPro](https://voicelogpro.com/jobnimbus-vs-voice-log-pro)
 - [Contractor Foreman vs VoiceLogPro](https://voicelogpro.com/contractor-foreman-vs-voice-log-pro)
 
-## Alternatives To (9 pages)
-VoiceLogPro as alternative to popular tools. Total: 9 pages.
-- [Alternatives to Otter.ai](https://voicelogpro.com/alternatives-to/otter-ai)
-- [Alternatives to Rev](https://voicelogpro.com/alternatives-to/rev)
-- [Alternatives to Descript](https://voicelogpro.com/alternatives-to/descript)
-- ...[6 more like this]
+## Alternatives To — see /vs/ pages (consolidated 2026-07-27)
+VoiceLogPro vs common tools — all comparison pages now live under /vs/.
+{{ see Competitor Comparisons section above }}
 
 ## Solution Pages (5 pages)
 Jurisdiction-specific compliance solutions. Total: 5 pages.

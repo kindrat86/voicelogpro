@@ -50,6 +50,7 @@ export const PRERENDER_ROUTES: string[] = [
   '/about',
   '/contact',
   '/dream-100',
+  '/press',
 ];
 
 /**

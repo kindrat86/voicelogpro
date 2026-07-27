@@ -65,7 +65,7 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Grow With Us — Traffic Secrets: Dream 100 (S5) + Affiliate Army (S18) */}
+          {/* Grow With Us — Traffic Secrets: Dream 100 (S5) + Affiliate Army (S18) + Press (S13/S20) */}
           <div>
             <p className="font-semibold text-foreground mb-3 text-sm">Grow With Us</p>
             <nav className="flex flex-col gap-2">
@@ -74,6 +74,9 @@ export function Footer() {
               </Link>
               <Link to="/affiliates" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 Affiliates — 30% recurring
+              </Link>
+              <Link to="/press" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                Press &amp; Podcast Kit
               </Link>
             </nav>
           </div>

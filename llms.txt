@@ -1,3 +1,135 @@
+# VoiceLogPro — llms.txt (AI crawler index)
+# Generated 2026-07-24. Total indexed pages: 112
+# Format: Markdown with URL lists. Compatible with GPTBot, ClaudeBot, PerplexityBot.
 
-## Statistics Hub
-- [Stats Hub](https://voicelogpro.com/stats/): Curated industry statistics and benchmarks with embeddable badges and APA citations.
+## Product & Core Pages (6 pages)
+VoiceLogPro is a voice-to-PDF daily construction report SaaS for subcontractors.
+- [Homepage](https://voicelogpro.com/): Voice-to-PDF Construction Daily Reports — $49/month
+- [Crew Plan](https://voicelogpro.com/crew-plan): Join the waitlist for voice-first daily reports
+- [About](https://voicelogpro.com/about): Built by subcontractors who learned that missing reports cost more than bad work
+- [Contact](https://voicelogpro.com/contact): Get in touch — support, partnerships, questions
+- [Beta](https://voicelogpro.com/beta): Early beta access for construction crews
+- [Blog](https://voicelogpro.com/blog): Construction law, lien rights, and daily documentation guides
+
+## State Lien Law Guides (51 pages)
+Mechanics lien deadlines, preliminary notice rules, and enforcement timelines per state — verbatim from our verified dataset (CC BY 4.0). Total: 51 pages.
+- [Alabama Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/alabama): Bond claim only on public projects
+- [Alaska Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/alaska): Only required for subcontractors
+- [Arizona Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/arizona): Prelim notice + notice of intent
+- [Arkansas Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/arkansas): Lien available without notice
+- [California Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/california): Strictly enforced; late = work after only
+- [Colorado Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/colorado): Or 10 days before lien filing
+- [Connecticut Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/connecticut): No preliminary notice required
+- [Delaware Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/delaware): Must be served on owner
+- [Florida Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/florida): NTO must meet strict content requirements
+- [Georgia Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/georgia): No preliminary for private projects
+- [Hawaii Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/hawaii): Must serve owner and GC
+- [Idaho Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/idaho): No preliminary notice required
+- [Illinois Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/illinois): Must serve owner with copy of lien
+- [Indiana Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/indiana): Notice of intent to file
+- [Iowa Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/iowa): Pre-lien notice
+- [Kansas Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/kansas): No preliminary notice required
+- [Kentucky Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/kentucky): Lien available without notice
+- [Louisiana Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/louisiana): With Louisiana State Licensing Board
+- [Maine Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/maine): No preliminary notice required
+- [Maryland Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/maryland): Notice must contain specific language
+- [Massachusetts Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/massachusetts): No preliminary notice required
+- [Michigan Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/michigan): Lien available without notice
+- [Minnesota Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/minnesota): Pre-lien notice to owner
+- [Mississippi Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/mississippi): No preliminary notice required
+- [Missouri Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/missouri): Notice of non-payment
+- [Montana Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/montana): Pre-lien notice for residential only
+- [Nebraska Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/nebraska): Pre-lien notice to owner
+- [Nevada Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/nevada): Separate requirement for residential
+- [New Hampshire Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/new-hampshire): Lien available without notice
+- [New Jersey Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/new-jersey): Notice linked to lien filing
+- [New Mexico Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/new-mexico): No preliminary notice required
+- [New York Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/new-york): No notice required; 8-month filing window
+- [North Carolina Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/north-carolina): Must serve owner and GC
+- [North Dakota Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/north-dakota): No preliminary notice required
+- [Ohio Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/ohio): Notice to owner required
+- [Oklahoma Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/oklahoma): No preliminary notice required
+- [Oregon Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/oregon): Notice of right to lien
+- [Pennsylvania Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/pennsylvania): Notice required within 90 days
+- [Rhode Island Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/rhode-island): No preliminary notice required
+- [South Carolina Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/south-carolina): Notice to owner
+- [South Dakota Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/south-dakota): No preliminary notice required
+- [Tennessee Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/tennessee): Pre-lien notice
+- [Texas Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/texas): Monthly notices for each unpaid month
+- [Utah Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/utah): Preconstruction notice
+- [Vermont Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/vermont): Lien available without notice
+- [Virginia Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/virginia): Must serve owner
+- [Washington Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/washington): Notice to owner + notice of intent
+- [Washington DC Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/washington-dc): Pre-lien notice required
+- [West Virginia Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/west-virginia): No preliminary notice required
+- [Wisconsin Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/wisconsin): Notice of intent to file
+- [Wyoming Lien Law Deadlines](https://voicelogpro.com/lien-law-deadlines/wyoming): No preliminary notice required
+
+
+## Daily Report Templates (5 pages)
+Trade-specific daily construction report templates. Total: 5 pages.
+- [General Contractor Template](https://voicelogpro.com/templates/general-contractor-daily-report)
+- [Electrician Template](https://voicelogpro.com/templates/electrician-daily-report)
+- [Plumber Template](https://voicelogpro.com/templates/plumber-daily-report)
+- [HVAC Contractor Template](https://voicelogpro.com/templates/hvac-contractor-daily-report)
+- [Roofer Template](https://voicelogpro.com/templates/roofer-daily-report)
+
+## Trade-Specific Pages (14 pages)
+Daily reports built for specific construction trades. Total: 14 pages.
+- [Electricians](https://voicelogpro.com/for/electricians)
+- [Plumbers](https://voicelogpro.com/for/plumbers)
+- [HVAC Contractors](https://voicelogpro.com/for/hvac-contractors)
+- [Roofers](https://voicelogpro.com/for/roofers)
+- [General Contractors](https://voicelogpro.com/for/general-contractors)
+- [Concrete Contractors](https://voicelogpro.com/for/concrete-contractors)
+- [Drywall Contractors](https://voicelogpro.com/for/drywall-contractors)
+- [Painters](https://voicelogpro.com/for/painters)
+- [Landscapers](https://voicelogpro.com/for/landscapers)
+- [Framing Contractors](https://voicelogpro.com/for/framing-contractors)
+- ...[4 more like this]
+
+## How-To Guides (5 pages)
+Step-by-step construction documentation guides. Total: 5 pages.
+- [Protect Lien Rights as Subcontractor](https://voicelogpro.com/how-to/protect-lien-rights-as-subcontractor)
+- [Document Construction Delays](https://voicelogpro.com/how-to/document-construction-delays)
+- [Track Materials Inventory](https://voicelogpro.com/how-to/track-construction-materials-inventory)
+- [Defend Unfair GC Deductions](https://voicelogpro.com/how-to/defend-unfair-gc-deductions)
+- [Document Change Orders](https://voicelogpro.com/how-to/document-construction-change-orders)
+
+## Competitor Comparisons (8 pages)
+VoiceLogPro vs alternatives — honest comparisons. Total: 8 pages.
+- [Raken vs VoiceLogPro](https://voicelogpro.com/raken-vs-voice-log-pro)
+- [Fieldwire vs VoiceLogPro](https://voicelogpro.com/fieldwire-vs-voice-log-pro)
+- [Procore vs VoiceLogPro](https://voicelogpro.com/procore-vs-voice-log-pro)
+- [Buildertrend vs VoiceLogPro](https://voicelogpro.com/buildertrend-vs-voice-log-pro)
+- [Knowify vs VoiceLogPro](https://voicelogpro.com/knowify-vs-voice-log-pro)
+- [JobNimbus vs VoiceLogPro](https://voicelogpro.com/jobnimbus-vs-voice-log-pro)
+- [Contractor Foreman vs VoiceLogPro](https://voicelogpro.com/contractor-foreman-vs-voice-log-pro)
+
+## Alternatives To — see /vs/ pages (consolidated 2026-07-27)
+VoiceLogPro vs common tools — all comparison pages now live under /vs/.
+{{ see Competitor Comparisons section above }}
+
+## Solution Pages (5 pages)
+Jurisdiction-specific compliance solutions. Total: 5 pages.
+- [Texas Mechanics Lien Compliance](https://voicelogpro.com/solutions/texas-mechanics-lien-compliance)
+- [Constructive Acceleration Defense](https://voicelogpro.com/solutions/constructive-acceleration-defense)
+- [Building Safety Act Golden Thread](https://voicelogpro.com/solutions/building-safety-act-golden-thread)
+- [Fight Unfair GC Deductions](https://voicelogpro.com/solutions/fight-unfair-gc-deductions)
+- [Phase Payment Disputes](https://voicelogpro.com/solutions/phase-payment-disputes)
+
+## Blog Posts (2 pages)
+In-depth construction law and lien rights articles. Total: 2 pages.
+- [Texas Lien Law 2025](https://voicelogpro.com/blog/texas-lien-law)
+- [Texas Property Code Chapter 53 Guide](https://voicelogpro.com/blog/texas-property-code-chapter-53-guide-2025)
+
+## Glossary (7 pages)
+Voice logging and construction documentation terms. Total: 7 pages.
+- [Voice Logging](https://voicelogpro.com/glossary/voice-logging)
+- [Transcription](https://voicelogpro.com/glossary/transcription)
+- [Speaker Diarization](https://voicelogpro.com/glossary/speaker-diarization)
+- ...[4 more like this]
+
+---
+Total: 112 pages across 10 page-type clusters.
+Last updated: 2026-07-24. Sitemap: https://voicelogpro.com/sitemap.xml

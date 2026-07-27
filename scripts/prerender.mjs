@@ -87,6 +87,7 @@ const PRERENDER_ROUTES = [
   '/about',
   '/contact',
   '/dream-100',
+  '/press',
 ];
 
 function stripDefaultHeadTags(html, helmetHead = '') {

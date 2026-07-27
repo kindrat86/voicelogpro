@@ -75,6 +75,8 @@ import DefenseKit from './pages/DefenseKit';
 import Welcome from './pages/Welcome';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import Dream100 from './pages/Dream100';
+import Press from './pages/Press';
 
 interface RenderResult {
   html: string;
@@ -143,6 +145,8 @@ export async function render(url: string): Promise<RenderResult> {
                 <Route path="/welcome" element={<Welcome />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/dream-100" element={<Dream100 />} />
+                <Route path="/press" element={<Press />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
