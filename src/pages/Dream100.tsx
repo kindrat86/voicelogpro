@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { LeadMagnetForm } from "@/components/LeadMagnetForm";
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -337,6 +338,30 @@ export default function Dream100() {
             Subscribe to our newsletter to get each piece delivered to your inbox. 
             No spam — just actionable construction documentation advice.
           </p>
+        </section>
+
+        {/* Lead capture — Traffic Secrets S6: every distribution page must capture */}
+        <section style={{
+          background: "linear-gradient(135deg, rgba(0,212,170,0.08), rgba(0,212,170,0.02))",
+          border: "1px solid rgba(0,212,170,0.15)",
+          borderRadius: "16px",
+          padding: "36px 24px",
+          margin: "32px 0",
+          textAlign: "center",
+        }}>
+          <h2 style={{ fontSize: "1.3rem", margin: "0 0 8px", color: "#f1f5f9" }}>
+            Get the Free Daily Log Defense Kit
+          </h2>
+          <p style={{ color: "#94a3b8", fontSize: "0.92rem", margin: "0 0 20px", lineHeight: 1.6 }}>
+            Browse the communities. Know where your people are. But don't leave without the
+            kit that protects your payment — 5 templates, compliance checklist, and dispute scripts.
+            Free. No credit card.
+          </p>
+          <LeadMagnetForm
+            ctaLabel="Send Me the Kit"
+            source="dream100_distribution"
+            variant="default"
+          />
         </section>
 
         {/* CTA */}

@@ -77,10 +77,48 @@ a{color:#6366f1;text-decoration:none}
 <a href="mailto:hello@voicelogpro.com?subject=Affiliate%20Program%20Signup" class="btn">Join the affiliate program →</a>
 </div>
 
+<!-- Lead capture — Traffic Secrets S18: affiliates are a distribution channel; capture them too -->
+<div style="background:linear-gradient(135deg,rgba(99,102,241,.08),rgba(99,102,241,.02));border:1px solid rgba(99,102,241,.15);border-radius:16px;padding:32px 24px;margin:32px 0;text-align:center">
+<h2 style="font-size:1.2em;margin:0 0 8px;color:#e2e8f0">Get the Free Daily Log Defense Kit</h2>
+<p style="color:#94a3b8;font-size:.92em;margin:0 0 18px;line-height:1.6">While you wait for your referral code, grab the same Defense Kit we give every crew — 5 templates, a compliance checklist, and dispute scripts. Free.</p>
+<form id="aff-capture" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:440px;margin:0 auto">
+<input type="email" id="aff-email" autocomplete="email" placeholder="your@email.com" required style="flex:1;min-width:180px;padding:12px 14px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#e2e8f0;font-size:.92em">
+<button type="submit" id="aff-submit" style="background:linear-gradient(135deg,#6366f1,#818cf8);color:#fff;padding:12px 24px;border-radius:10px;border:none;font-weight:600;font-size:.92em;cursor:pointer;white-space:nowrap">Send Me the Kit</button>
+</form>
+<p id="aff-msg" style="margin:12px 0 0;font-size:.85em;min-height:20px"></p>
+<p style="font-size:.78em;color:#64748b;margin:8px 0 0">100% Free. No credit card. Unsubscribe anytime.</p>
+</div>
+
 <h2>Not sure who to refer?</h2>
 <p class="lead" style="font-size:.95rem">We keep a public <a href="/dream-100">Dream 100 directory</a> of the construction communities, podcasts, YouTube channels, and trade publications where subcontractors gather. If you already show up in those spaces, you already know the people who need this.</p>
 
 <p class="note"><a href="/">← Back to VoiceLogPro</a> · <a href="/dream-100">Dream 100</a></p>
 </div>
 </body>
+<script>
+(function(){
+var f=document.getElementById('aff-capture');
+var m=document.getElementById('aff-msg');
+var b=document.getElementById('aff-submit');
+if(!f)return;
+f.addEventListener('submit',function(e){
+e.preventDefault();
+var em=document.getElementById('aff-email').value.trim();
+if(!em||!em.includes('@')){m.style.color='#ef4444';m.textContent='Please enter a valid email.';return}
+b.disabled=true;b.textContent='Sending...';
+m.style.color='#94a3b8';m.textContent='';
+fetch('https://email-engine-fawn.vercel.app/api/subscribe',{
+method:'POST',headers:{'Content-Type':'application/json'},
+body:JSON.stringify({product:'voicelogpro',email:em.toLowerCase(),heard_from:'affiliates_capture'})
+})
+.then(function(r){return r.ok})
+.then(function(ok){
+if(ok){m.style.color='#22c55e';m.textContent='Defense Kit on its way! Check your inbox.';f.reset()}
+else{m.style.color='#ef4444';m.textContent='Something went wrong. Try again or email us.'}
+})
+.catch(function(){m.style.color='#ef4444';m.textContent='Something went wrong. Try again or email us.'})
+.finally(function(){b.disabled=false;b.textContent='Send Me the Kit'})
+})
+})();
+</script>
 </html>

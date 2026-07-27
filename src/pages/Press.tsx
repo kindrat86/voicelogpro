@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { LeadMagnetForm } from "@/components/LeadMagnetForm";
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -231,6 +232,39 @@ export default function Press() {
             Bio, headshot, and intro copy available on request — email and we'll send same-day.
           </p>
         </Section>
+
+        {/* Lead capture — Traffic Secrets S13/S20: every traffic page must capture */}
+        <section style={{
+          background: "linear-gradient(135deg, rgba(0,212,170,0.08), rgba(0,212,170,0.02))",
+          border: "1px solid rgba(0,212,170,0.15)",
+          borderRadius: "16px",
+          padding: "36px 24px",
+          margin: "32px 0",
+          textAlign: "center",
+        }}>
+          <h2 style={{ fontSize: "1.25rem", margin: "0 0 8px", color: "#f1f5f9" }}>
+            Get construction documentation tips delivered
+          </h2>
+          <p style={{ color: "#94a3b8", fontSize: "0.9rem", margin: "0 0 20px", lineHeight: 1.6 }}>
+            Podcast hosts, journalists, and crew leads alike — get actionable tips on payment
+            protection, compliance, and daily logs. No spam, unsubscribe anytime.
+          </p>
+          <LeadMagnetForm
+            ctaLabel="Stay in the Loop"
+            source="press_distribution"
+            variant="default"
+          />
+        </section>
+
+        {/* Share — Traffic Secrets S20: other traffic sources via social share */}
+        <div style={{ textAlign: "center", margin: "28px 0", padding: "16px", borderTop: "1px solid #334155", borderBottom: "1px solid #334155" }}>
+          <p style={{ color: "#64748b", fontSize: "0.82rem", margin: "0 0 10px" }}>Share this page:</p>
+          <div style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap" }}>
+            <a href={"https://x.com/intent/post?text=" + encodeURIComponent("VoiceLogPro Press & Media Kit — podcast one-sheet for construction trades coverage&url=https://voicelogpro.com/press")} target="_blank" rel="noopener" style={{ background: "#1e293b", border: "1px solid #334155", borderRadius: "8px", padding: "8px 16px", color: "#cbd5e1", textDecoration: "none", fontSize: "0.85rem" }}>X</a>
+            <a href={"https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent("https://voicelogpro.com/press")} target="_blank" rel="noopener" style={{ background: "#1e293b", border: "1px solid #334155", borderRadius: "8px", padding: "8px 16px", color: "#cbd5e1", textDecoration: "none", fontSize: "0.85rem" }}>LinkedIn</a>
+            <button onClick={() => { navigator.clipboard.writeText("https://voicelogpro.com/press"); const el = document.activeElement as HTMLElement; if (el) { const t = el.innerText; el.innerText = "Copied!"; setTimeout(() => { el.innerText = t; }, 1500); } }} style={{ background: "#1e293b", border: "1px solid #334155", borderRadius: "8px", padding: "8px 16px", color: "#cbd5e1", cursor: "pointer", fontSize: "0.85rem" }}>Copy link</button>
+          </div>
+        </div>
 
         <section style={{ textAlign: "center", padding: "40px 0 20px" }}>
           <h2 style={{ fontSize: "1.5rem", margin: "0 0 12px", color: "#f1f5f9" }}>Ready to book?</h2>
