@@ -20,8 +20,8 @@
     <title>VoiceLogPro — Voice-to-Report for Construction Crews</title>
     <meta name="description" content="VoiceLogPro turns voice notes into formatted construction daily reports in 60 seconds. No typing. Works from any phone. Built for subcontractors who work with their hands." />
     <meta name="author" content="VoiceLogPro" />
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     
     <!-- Keywords for AI crawlers -->
     <meta name="keywords" content="construction daily report, daily log construction, voice to text construction, subcontractor documentation, lien protection, payment protection, jobsite reporting, construction compliance" />
@@ -179,7 +179,8 @@
         "price": "49.00",
         "priceCurrency": "USD",
         "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/PreOrder"
+        "availability": "https://schema.org/BackOrder",
+        "availabilityStarts": "2026-09-01"
       },
       "audience": {
         "@type": "BusinessAudience",
@@ -197,7 +198,7 @@
         "Lien protection documentation",
         "RFI and delay documentation"
       ],
-      "screenshot": "https://voicelogpro.com/og-image.png",
+      "screenshot": "https://voicelogpro.com/images/og-card.jpg",
       "softwareHelp": "https://voicelogpro.com/blog"
     }
     </script>
@@ -349,38 +350,17 @@
       ]
     }
     </script>
-<meta name="google-site-verification" content="VoicelogPro_Verification" />
     
     <!-- Theme color for mobile browser chrome -->
     <meta name="theme-color" content="#0f172a" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
-    <!-- PostHog analytics (async, non-blocking). Single loader from /static/array.js —
-         the SDK is ONLY served from /static/array.js (plain /array.js 404s).
-         This snippet is the ONLY PostHog init on the site; do not also init
-         posthog-js from the bundle or every pageview gets counted twice. -->
-    <script>
-      (function () {
-        if (window.posthog && window.posthog.__loaded) return;
-        var s = document.createElement("script");
-        s.type = "text/javascript";
-        s.crossOrigin = "anonymous";
-        s.defer = true;
-        s.src = "https://eu.i.posthog.com/static/array.js";
-        s.onload = function () {
-          window.posthog.init("phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX", {
-            api_host: "https://eu.i.posthog.com",
-            person_profiles: "identified_only",
-            defaults: "2025-05-24",
-            capture_pageview: false,
-            session_recording: { recordCrossOriginIframes: true, maskAllInputs: false }
-          });
-          window.posthog.capture("$pageview", {$viewport_height: window.innerHeight, $viewport_width: window.innerWidth});
-        };
-        document.head.appendChild(s);
-      })();
-    </script>
+    <!-- PostHog analytics: initialized once by the official snippet above (line ~164).
+         The custom second loader that used to live here was removed — it loaded
+         /static/array.js a second time and re-called posthog.init(), double-counting
+         every pageview and producing console noise. Do NOT re-add a second init. -->
+
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VoiceLogPro","item":"https://voicelogpro.com"}]}
   </script>
@@ -669,134 +649,14 @@ try{for(var k in localStorage){if(/^(_fb|_rdt|_ga|_gcl)/.test(k))localStorage.re
   </div>
 </section>
 <!-- /BRUNSON MOVEMENT -->
-<!-- CROSS-PORTFOLIO NETWORK FOOTER — generated 2026-07-18 -->
-<style>
-.portfolio-network {
-    max-width: 1200px;
-    margin: 4rem auto 2rem;
-    padding: 2rem 1.5rem;
-    border-top: 1px solid rgba(127, 127, 127, 0.28);
-    font-family: system-ui, -apple-system, sans-serif;
-}
-.portfolio-network h3 {
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: inherit;
-    opacity: 0.85;
-    margin: 0 0 1rem;
-    text-align: center;
-}
-.network-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 0.75rem;
-}
-.network-card {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.15s;
-    background: rgba(127, 127, 127, 0.12);
-}
-.network-card:hover {
-    background: rgba(127, 127, 127, 0.20);
-}
-.network-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-.network-name {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    color: inherit;
-    white-space: nowrap;
-}
-.network-tagline {
-    font-size: 0.6875rem;
-    color: inherit;
-    opacity: 0.85;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-/* Dark mode */
-/* No prefers-color-scheme block on purpose. The widget used to assert light
-   colours with a dark override keyed on the OS setting, but its tagline failed
-   contrast in BOTH themes on its own card (#9ca3af on #f9fafb = 2.43:1;
-   #6b7280 on #1f2937 = 3.55:1), and hosts like sipi.bot and sanctionsai are
-   always dark regardless of the OS. Inheriting the host's colour and tinting
-   with currentColor/alpha is correct on any background. */
-</style>
-<section class="portfolio-network">
-    <h3>🚀 Explore Our Network</h3>
-    <nav class="network-grid" aria-label="Portfolio network">
-            <a href="https://gitdealflow.com" class="network-card" 
-               title="GitDealFlow: Track startup acquisitions & funding rounds">
-                <span class="network-dot" style="background:#10B981"></span>
-                <span class="network-name">GitDealFlow</span>
-                <span class="network-tagline">Data & Analytics</span>
-            </a>
-            <a href="https://signals.gitdealflow.com" class="network-card" 
-               title="Signals by GitDealFlow: AI-powered startup investment signals">
-                <span class="network-dot" style="background:#3B82F6"></span>
-                <span class="network-name">Signals by GitDealFlow</span>
-                <span class="network-tagline">AI & Investing</span>
-            </a>
-            <a href="https://invisibleexit.com" class="network-card" 
-               title="Invisible Exit: Acquisition readiness for bootstrapped SaaS">
-                <span class="network-dot" style="background:#8B5CF6"></span>
-                <span class="network-name">Invisible Exit</span>
-                <span class="network-tagline">SaaS & M&A</span>
-            </a>
-            <a href="https://sipiteno.com" class="network-card" 
-               title="SipiTeno: AI Agents for SaaS Operations">
-                <span class="network-dot" style="background:#F59E0B"></span>
-                <span class="network-name">SipiTeno</span>
-                <span class="network-tagline">AI Agents & Automation</span>
-            </a>
-            <a href="https://unlocksaas.com" class="network-card" 
-               title="UnlockSaaS: Launch your SaaS in 60 days">
-                <span class="network-dot" style="background:#EC4899"></span>
-                <span class="network-name">UnlockSaaS</span>
-                <span class="network-tagline">SaaS Building</span>
-            </a>
-            <a href="https://voicelogpro.com" class="network-card" 
-               title="VoiceLogPro: Voice-to-insight for field teams">
-                <span class="network-dot" style="background:#06B6D4"></span>
-                <span class="network-name">VoiceLogPro</span>
-                <span class="network-tagline">Voice AI & Field Ops</span>
-            </a>
-            <a href="https://carshake.online" class="network-card" 
-               title="CarShake: Valet-damage-proof vehicle handover">
-                <span class="network-dot" style="background:#EF4444"></span>
-                <span class="network-name">CarShake</span>
-                <span class="network-tagline">Automotive & Insurance</span>
-            </a>
-            <a href="https://churnlens.site" class="network-card" 
-               title="ChurnLens: Churn analytics that predict, not just report">
-                <span class="network-dot" style="background:#6366F1"></span>
-                <span class="network-name">ChurnLens</span>
-                <span class="network-tagline">SaaS Analytics</span>
-            </a>
-            <a href="https://sanctionsai.dev" class="network-card" 
-               title="SanctionsAI: AI agent payment compliance">
-                <span class="network-dot" style="background:#DC2626"></span>
-                <span class="network-name">SanctionsAI</span>
-                <span class="network-tagline">Compliance & Fintech</span>
-            </a>
-            <a href="https://sipi.bot" class="network-card" 
-               title="Sipi.bot: AI spend firewall for agent payments">
-                <span class="network-dot" style="background:#14B8A6"></span>
-                <span class="network-name">Sipi.bot</span>
-                <span class="network-tagline">AI Infrastructure</span>
-            </a>
-    </nav>
-</section>
+<!-- CROSS-PORTFOLIO NETWORK FOOTER removed 2026-07-27 (DotCom Secrets S3).
+     The 10 outbound links to unrelated portfolio products (GitDealFlow,
+     CarShake, ChurnLens, SanctionsAI, Sipi.bot, …) were funnel exits — every
+     one a door out of the VoiceLogPro funnel to a different product.
+     Brunson's rule: a funnel is a guided path, not a buffet. Kill the exits.
+     The block was static hand-injected HTML, not generator output, so it is
+     safe to remove here without a rebuild clobbering it. Internal SEO hubs
+     (/alternatives-to, /for, /glossary) in the pseo-footer above are kept —
+     those are on-domain and do not leak visitors away. -->
 </body>
 </html>

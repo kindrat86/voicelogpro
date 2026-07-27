@@ -18,6 +18,7 @@ export interface SchemaOffer {
   priceCurrency: string;
   priceValidUntil?: string;
   availability?: string;
+  availabilityStarts?: string;
 }
 
 export interface SchemaAudience {
@@ -349,7 +350,8 @@ export const softwareApplicationSchema: SoftwareApplicationSchema = {
     price: "49.00",
     priceCurrency: "USD",
     priceValidUntil: "2026-12-31",
-    availability: "https://schema.org/PreOrder"
+    availability: "https://schema.org/BackOrder",
+    availabilityStarts: "2026-09-01"
   },
   audience: {
     "@type": "BusinessAudience",
@@ -367,7 +369,7 @@ export const softwareApplicationSchema: SoftwareApplicationSchema = {
     "Lien protection documentation",
     "RFI and delay documentation"
   ],
-  screenshot: "https://voicelogpro.com/og-image.png",
+  screenshot: "https://voicelogpro.com/images/og-card.jpg",
   softwareHelp: "https://voicelogpro.com/blog",
   potentialAction: potentialActions,
   knowsAbout: knowsAboutTerms,
