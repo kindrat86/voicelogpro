@@ -6,9 +6,9 @@ export function Footer() {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   
-  return <footer className="border-t border-border py-12 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+    return <footer className="border-t border-border py-12 px-4">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
           <div>
             <p className="font-display text-2xl text-primary mb-2">VoiceLogPro</p>
@@ -61,6 +61,19 @@ export function Footer() {
               </Link>
               <Link to="/fieldwire-vs-voice-log-pro" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 {t("footer.fieldwireVs", "Fieldwire vs VoiceLogPro")}
+              </Link>
+            </nav>
+          </div>
+
+          {/* Grow With Us — Traffic Secrets: Dream 100 (S5) + Affiliate Army (S18) */}
+          <div>
+            <p className="font-semibold text-foreground mb-3 text-sm">Grow With Us</p>
+            <nav className="flex flex-col gap-2">
+              <Link to="/dream-100" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                Dream 100 — Communities
+              </Link>
+              <Link to="/affiliates" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                Affiliates — 30% recurring
               </Link>
             </nav>
           </div>

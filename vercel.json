@@ -189,6 +189,10 @@
       "destination": "/thank-you.html"
     },
     {
+      "source": "/affiliates",
+      "destination": "/affiliates.html"
+    },
+    {
       "source": "/privacy",
       "destination": "/privacy.html"
     },

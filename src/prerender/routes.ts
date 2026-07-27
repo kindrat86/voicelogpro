@@ -49,6 +49,7 @@ export const PRERENDER_ROUTES: string[] = [
   '/blog/construction-lien-deadlines-cheat-sheet-2026',
   '/about',
   '/contact',
+  '/dream-100',
 ];
 
 /**

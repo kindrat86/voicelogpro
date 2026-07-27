@@ -345,7 +345,7 @@ export default function Dream100() {
             Join the Crew
           </h2>
           <p style={{ color: "#94a3b8", maxWidth: "600px", margin: "0 auto 24px" }}>
-            VoiceLogPro is built for the trades, by the trades. Stop typing reports. 
+            VoiceLogPro is built for the trades, by the trades. Stop typing reports.
             Get back to the work that actually pays.
           </p>
           <a href="https://voicelogpro.com/crew-plan" style={{
@@ -360,6 +360,19 @@ export default function Dream100() {
             boxShadow: "0 8px 24px -10px rgba(0,212,170,0.5)"
           }}>
             Get Started Free →
+          </a>
+
+          {/* Funnel Hub bridge — Traffic Secrets S16/S18: route community traffic into the affiliate army, not a dead end. */}
+          <p style={{ color: "#64748b", fontSize: "0.88rem", margin: "28px 0 8px" }}>
+            Already serving these communities? Send other crews our way.
+          </p>
+          <a href="https://voicelogpro.com/affiliates" style={{
+            color: "#00d4aa",
+            fontWeight: 600,
+            textDecoration: "underline",
+            fontSize: "0.92rem",
+          }}>
+            Earn 30% recurring as a VoiceLogPro affiliate →
           </a>
         </section>
 
