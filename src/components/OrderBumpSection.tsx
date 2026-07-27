@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Check, Users, CheckCircle, Loader2, Lock, Shield, FileText, Plus, Star } from "lucide-react";
+import { Check, Users, CheckCircle, Loader2, Lock, Shield, FileText, Plus, HardHat } from "lucide-react";
 import { z } from "zod";
 import { subscribeToSequence } from "@/lib/subscribe";
 
@@ -114,9 +114,11 @@ export function OrderBumpSection() {
               </div>
             </div>
 
-            <div className="flex items-center gap-1 mb-4">
-              {[0,1,2,3,4].map(i => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
-              <span className="text-xs text-muted-foreground ml-2">Reserved by beta crews</span>
+            <div className="flex items-center gap-2 mb-4">
+              <HardHat className="w-4 h-4 text-primary" aria-hidden="true" />
+              <span className="text-xs text-muted-foreground font-medium">
+                Pre-launch. Founding price. No charge until live.
+              </span>
             </div>
 
             <ul className="space-y-3 mb-6 mt-6">
