@@ -51,9 +51,6 @@ export default function LienDeadlineCheatSheetPage() {
             </span>
           </div>
           
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
-            {lienDeadlineCheatSheet.title}
-          </h1>
           
           <p className="text-lg text-muted-foreground leading-relaxed">
             {lienDeadlineCheatSheet.metaDescription}
