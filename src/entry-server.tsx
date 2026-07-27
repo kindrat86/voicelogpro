@@ -111,7 +111,6 @@ export async function render(url: string): Promise<RenderResult> {
           <StaticRouter location={url}>
             <div className="pb-24 md:pb-0">
             <Suspense fallback={<div className="min-h-screen bg-background" />}>
-            <Suspense fallback={<div className="min-h-screen bg-background" />}>
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/crew-plan" element={<CrewPlan />} />
@@ -153,7 +152,6 @@ export async function render(url: string): Promise<RenderResult> {
                 <Route path="/press" element={<Press />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
-            </Suspense>
             </Suspense>
             </div>
             <MobileBottomBar />

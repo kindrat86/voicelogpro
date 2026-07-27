@@ -15,23 +15,18 @@ if (!container) {
 // Check if there's prerendered content to hydrate
 const hasPrerenderedContent = container.innerHTML.trim().length > 0;
 
+const app = (
+  <HelmetProvider>
+    <I18nextProvider i18n={i18n}>
+      <App />
+    </I18nextProvider>
+  </HelmetProvider>
+);
+
 if (hasPrerenderedContent) {
   // Hydrate prerendered HTML
-  hydrateRoot(
-    container,
-    <HelmetProvider>
-    <I18nextProvider i18n={i18n}>
-      <App />
-    </I18nextProvider>
-    </HelmetProvider>
-  );
+  hydrateRoot(container, app);
 } else {
   // Fallback to client-side render for non-prerendered routes
-  createRoot(container).render(
-    <HelmetProvider>
-    <I18nextProvider i18n={i18n}>
-      <App />
-    </I18nextProvider>
-    </HelmetProvider>
-  );
+  createRoot(container).render(app);
 }
