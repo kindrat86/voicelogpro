@@ -1,0 +1,6 @@
+Contact: mailto:security@voicelogpro.com
+Expires: 2027-07-27T00:00:00Z
+Preferred-Languages: en
+Canonical: https://voicelogpro.com/.well-known/security.txt
+Policy: https://voicelogpro.com/privacy
+Acknowledgments: https://voicelogpro.com/about
