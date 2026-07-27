@@ -50,6 +50,8 @@ export const PRERENDER_ROUTES: string[] = [
   '/about',
   '/contact',
   '/dream-100',
+  '/masterclass',
+  '/crew-audit',
   '/press',
 ];
 
@@ -151,5 +153,15 @@ export const ROUTE_METADATA: Record<string, {
     title: 'Contact VoiceLogPro | Daily Construction Reports Support',
     description: 'Get in touch with VoiceLogPro. Questions about daily construction reports, partnership inquiries, or support. We answer fast.',
     canonical: 'https://voicelogpro.com/contact',
+  },
+  '/masterclass': {
+    title: 'Free Masterclass — The Payment Dispute Shield | VoiceLogPro',
+    description: 'Register for our free on-demand masterclass: how to document a day\'s work in 30 seconds so it holds up in any payment dispute.',
+    canonical: 'https://voicelogpro.com/masterclass',
+  },
+  '/crew-audit': {
+    title: 'Crew Documentation Audit — Done-For-You | VoiceLogPro',
+    description: 'Done-for-you audit of your crew\'s last 90 days of daily logs. We flag every documentation gap a payment dispute could exploit.',
+    canonical: 'https://voicelogpro.com/crew-audit',
   },
 };

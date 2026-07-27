@@ -58,6 +58,10 @@ const ContactPage = lazy(() => import("./pages/ContactPage"));
 const Dream100 = lazy(() => import("./pages/Dream100"));
 const Press = lazy(() => import("./pages/Press"));
 
+// Funnel pages — DotCom Secrets: webinar/VSL registration (#16-17) + backend service (#12)
+const Masterclass = lazy(() => import("./pages/Masterclass"));
+const CrewAudit = lazy(() => import("./pages/CrewAudit"));
+
 const queryClient = new QueryClient();
 
 /** Scroll to the #hash target after SPA navigation (react-router doesn't). */
@@ -133,6 +137,9 @@ const App = () => (
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/dream-100" element={<Dream100 />} />
               <Route path="/press" element={<Press />} />
+              {/* DotCom Secrets: funnel pages — masterclass (#16-17) + backend audit (#12) */}
+              <Route path="/masterclass" element={<Masterclass />} />
+              <Route path="/crew-audit" element={<CrewAudit />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

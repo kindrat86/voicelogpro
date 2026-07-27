@@ -87,6 +87,8 @@ const PRERENDER_ROUTES = [
   '/about',
   '/contact',
   '/dream-100',
+  '/masterclass',
+  '/crew-audit',
   '/press',
 ];
 
