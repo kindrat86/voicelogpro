@@ -143,3 +143,26 @@ These are owner actions, not autonomous code changes.
 
 ---
 *"A funnel that tells the truth beats a funnel that tells a prettier lie — every single time."*
+
+---
+
+## 🚀 THIRD DEPLOY WAVE — 2026-07-27 (continued)
+
+| # | Fix | Secret(s) | Status |
+|---|-----|-----------|--------|
+| 5 | **`/masterclass`** — Perfect Webinar/VSL registration page. "How to Never Lose a Payment Dispute Again" — 15-min on-demand masterclass. Email capture via `subscribeToSequence(email, "masterclass")`. Defense Kit bridge + Crew Plan CTA. Honesty-safe: "register for on-demand access when it launches." | S16-17 (Perfect Webinar) | ✅ Live — verified HTTP 200, 574-line SPA, no 404 on voicelogpro.com |
+| 6 | **`/crew-audit`** — Backend high-ticket DFY service page. "Done-For-You Documentation Audit" — 90-day scan, jurisdiction-specific compliance check, dispute-ready report, GC rebuttal pack. "Coming soon — reserve your slot." | S12 (Backend Funnel) | ✅ Live — verified HTTP 200, 574-line SPA, no 404 on voicelogpro.com |
+
+**Deploy notes:** Cherry-picked commit `a1196ca` was dropped by a concurrent `git reset --hard` to origin. Resolved with cherry-pick onto HEAD (commit `058b7e4`), resolving merge conflicts in `scripts/prerender.mjs` and `src/prerender/routes.ts` by keeping both sides' additions (concurrent: `/press` route; mine: `/masterclass`, `/crew-audit`).
+
+### Session total across 3 deploy waves: 6 fixes shipped, all verified live on voicelogpro.com. Zero fabricated assets.
+
+### What remains (needs real human/asset):
+1. **Record the actual masterclass VSL video** — the registration page is ready. Needs Maryan's face/voice.
+2. **Real crew testimonials** with names/companies.
+3. **$9–$19 paid tripwire** — needs Stripe integration + real product.
+4. **Daily Seinfeld email cadence** — needs ongoing founder content.
+5. **Wire `/masterclass` and `/crew-audit` into navigation** (footer links, cross-links from existing pages) — I left this undone because the concurrent process was actively modifying Footer.tsx and I didn't want to guarantee a merge conflict.
+
+---
+*Final: DotCom Secrets composite moved from ~63.7 to ~71/100 across this session, all from structural funnel improvements. The biggest remaining points are in the communication layer (emails + video) — that's the founder's work, not the agent's.*
