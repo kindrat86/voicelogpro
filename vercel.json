@@ -32,7 +32,7 @@
         },
         {
           "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=(), private-state-token-issuance=(), idle-detection=()"
         },
         {
           "key": "X-Permitted-Cross-Domain-Policies",
@@ -53,6 +53,18 @@
         {
           "key": "Cross-Origin-Embedder-Policy",
           "value": "credentialless"
+        },
+        {
+          "key": "Cross-Origin-Resource-Policy",
+          "value": "same-site"
+        },
+        {
+          "key": "Alt-Svc",
+          "value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept-Encoding"
         },
         {
           "key": "X-DNS-Prefetch-Control",
@@ -84,6 +96,24 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/ux.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/ux.css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=86400"
         }
       ]
     },
