@@ -196,6 +196,7 @@ export default function BlogPost() {
       }
     };
 
+    let hasH1 = false;
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       const trimmed = line.trim();
@@ -221,14 +222,23 @@ export default function BlogPost() {
         flushTable();
       }
 
-      // Headers
+      // Headers — only one H1 per page; subsequent # lines become H2s
       if (trimmed.startsWith("# ")) {
         flushList();
-        elements.push(
-          <h1 key={elements.length} className="text-3xl md:text-4xl font-display uppercase text-foreground mb-6 mt-8">
-            {renderInlineLinks(trimmed.slice(2))}
-          </h1>
-        );
+        if (!hasH1) {
+          hasH1 = true;
+          elements.push(
+            <h1 key={elements.length} className="text-3xl md:text-4xl font-display uppercase text-foreground mb-6 mt-8">
+              {renderInlineLinks(trimmed.slice(2))}
+            </h1>
+          );
+        } else {
+          elements.push(
+            <h2 key={elements.length} className="text-2xl md:text-3xl font-display uppercase text-foreground mb-4 mt-8">
+              {renderInlineLinks(trimmed.slice(2))}
+            </h2>
+          );
+        }
       } else if (trimmed.startsWith("## ")) {
         flushList();
         elements.push(
