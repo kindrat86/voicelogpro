@@ -7,6 +7,7 @@ import { InteractiveVoiceDemo } from "@/components/InteractiveVoiceDemo";
 import { HowItWorks } from "@/components/HowItWorks";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { ComplianceMatrix } from "@/components/ComplianceMatrix";
+import { ThreeFalseBeliefs } from "@/components/ThreeFalseBeliefs";
 import { ValueLadderSection } from "@/components/ValueLadderSection";
 import { OrderBumpSection } from "@/components/OrderBumpSection";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
@@ -81,6 +82,11 @@ const Index = () => {
 
         {/* 8. Features */}
         <FeaturesSection />
+
+        {/* 9. Three False Beliefs — crush the Vehicle/Internal/External
+            objections before the offer is revealed (DotCom S10 + Expert
+            Secrets Three False Beliefs framework). */}
+        <ThreeFalseBeliefs />
 
         {/* 10. Value ladder (free → entry → core) */}
         <ValueLadderSection />
