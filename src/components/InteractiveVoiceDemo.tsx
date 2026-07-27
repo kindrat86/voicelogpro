@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Mic, Square, RotateCcw, FileText, AlertCircle, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 // pdf-lib is dynamically imported in generatePDF to reduce initial bundle size
 
@@ -94,33 +93,10 @@ export function InteractiveVoiceDemo() {
   }, []);
 
   const generateTranscript = async (): Promise<string> => {
-    try {
-      const trades = ['electrical', 'plumbing', 'HVAC'];
-      const randomTrade = trades[Math.floor(Math.random() * trades.length)];
-
-      const { data, error } = await supabase.functions.invoke('generate-daily-log', {
-        body: { trade: randomTrade }
-      });
-
-      if (error) {
-        console.error('Edge function error:', error);
-        throw new Error(error.message || 'Failed to generate log');
-      }
-
-      if (data?.error) {
-        throw new Error(data.error);
-      }
-
-      if (!data?.transcript) {
-        throw new Error('No transcript received');
-      }
-
-      return data.transcript;
-    } catch (err) {
-      console.error('Error generating transcript:', err);
-      // Return fallback on error
-      return getFallbackTranscript();
-    }
+    // The demo previously called a Supabase Edge Function to generate a sample
+    // daily log. With Supabase removed, the demo uses the bundled fallback
+    // transcript directly — same UX, no external dependency, no failure mode.
+    return getFallbackTranscript();
   };
 
   const startRecording = () => {

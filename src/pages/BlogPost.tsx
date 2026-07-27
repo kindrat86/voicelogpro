@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
 import { Footer } from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
 import { CTAButton } from "@/components/CTAButton";
@@ -26,28 +25,16 @@ export default function BlogPost() {
   const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
-    async function fetchPost() {
-      if (!slug) {
-        setNotFound(true);
-        setLoading(false);
-        return;
-      }
-
-      const { data, error } = await supabase
-        .from("blog_posts")
-        .select("*")
-        .eq("slug", slug)
-        .eq("published", true)
-        .single();
-
-      if (error || !data) {
-        setNotFound(true);
-      } else {
-        setPost(data as BlogPostData);
-      }
-      setLoading(false);
+    // All published posts now live at dedicated routes (see src/App.tsx) backed
+    // by static content in src/content/blog/*. This catch-all only renders for
+    // unknown slugs, which are shown the not-found state below. The previous
+    // Supabase lookup was removed when the project moved off Supabase.
+    if (!slug) {
+      setNotFound(true);
+    } else {
+      setNotFound(true);
     }
-    fetchPost();
+    setLoading(false);
   }, [slug]);
 
   if (loading) {

@@ -3,6 +3,11 @@ import { HelmetProvider } from 'react-helmet-async';
 import './i18n';
 import App from './App';
 import './index.css';
+import { captureTouch } from '@/lib/utm';
+
+// Capture UTM attribution immediately (before hydration) so first-touch data
+// is available for PostHog registration and the first waitlist insert.
+captureTouch();
 
 const container = document.getElementById('root');
 

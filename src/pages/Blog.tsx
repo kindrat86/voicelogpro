@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 
@@ -85,19 +84,12 @@ export default function Blog() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchPosts() {
-      const { data, error } = await supabase
-        .from("blog_posts")
-        .select("id, slug, title, excerpt, target_audience, jurisdiction, published_at, keywords")
-        .eq("published", true)
-        .order("published_at", { ascending: false });
-
-      if (!error && data) {
-        setPosts(data);
-      }
-      setLoading(false);
-    }
-    fetchPosts();
+    // Blog posts are now fully static (see src/content/blog/* and
+    // src/pages/blog/*). The previous Supabase-backed dynamic store was
+    // removed when the project moved off Supabase — all published posts live
+    // in STATIC_POSTS below and render at dedicated routes.
+    setPosts([]);
+    setLoading(false);
   }, []);
 
   // Combine static posts (always shown) with dynamic posts from Supabase

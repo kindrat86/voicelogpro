@@ -5,6 +5,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { MobileBottomBar } from "@/components/MobileBottomBar";
+import { ConsentBanner } from "@/components/ConsentBanner";
+import { useConsent } from "@/hooks/useConsent";
 import Index from "./pages/Index";
 
 // Lazy load non-critical routes to reduce initial bundle size
@@ -73,6 +75,13 @@ const ScrollToHash = () => {
   return null;
 };
 
+/** GDPR consent banner (renders once, then never again). */
+const ConsentGate = () => {
+  const consent = useConsent();
+  if (!consent.showBanner) return null;
+  return <ConsentBanner onDecide={consent.decide} />;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -80,6 +89,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToHash />
+        <ConsentGate />
         <div className="pb-24 md:pb-0">
           <Suspense fallback={<div className="min-h-screen bg-background" />}>
             <Routes>
@@ -150,7 +160,7 @@ const App = () => (
     </div>
     <p style="font-size:1.05rem;margin-bottom:24px;color:#cbd5e1">Stop typing daily reports. Speak them in 60 seconds and let AI handle the paperwork.</p>
     <a href="https://voicelogpro.com/" style="display:inline-block;background:linear-gradient(135deg,#00d4aa,#2deec0);color:#04130e;padding:14px 32px;border-radius:12px;font-weight:700;text-decoration:none;font-size:.95rem;box-shadow:0 8px 24px -10px rgba(0,212,170,.5)">Get Free Defense Kit</a>
-    <p style="margin-top:18px;font-size:.78rem;color:#6b7178">14-day free trial. No credit card required. Cancel anytime.</p>
+	    <p style="margin-top:18px;font-size:.78rem;color:#6b7178">No charge until launch. No credit card required. Cancel anytime.</p>
   </div>
 </section>` }} />
       </BrowserRouter>

@@ -50,8 +50,8 @@ export default function CrewPlan() {
     setStatus("loading");
     setIsDuplicate(false);
     // 2026-07-24: this used to fire subscribeToSequence() (real, working
-    // capture) and then AWAIT a supabase.from("waitlist").insert() against a
-    // placeholder Supabase URL — the broken second call always threw, so the
+    // Lead capture posts to the Mac mini /subscribe endpoint (Resend + SQLite).
+    // Lead capture posts to the Mac mini /subscribe endpoint (Resend + SQLite).
     // UI told every signup "Something went wrong" even though their email
     // had already been captured and enrolled. Now the awaited result is the
     // one real capture path.

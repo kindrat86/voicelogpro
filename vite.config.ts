@@ -41,7 +41,7 @@ export default defineConfig(({ mode }) => ({
             "@radix-ui/react-radio-group",
           ],
           "ui-visual": ["recharts", "lucide-react"],
-          "data-layer": ["@tanstack/react-query", "@supabase/supabase-js"],
+          "data-layer": ["@tanstack/react-query"],
         },
       },
     },

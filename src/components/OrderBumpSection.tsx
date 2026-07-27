@@ -45,8 +45,8 @@ export function OrderBumpSection() {
     }
     setStatus("loading");
     setIsDuplicate(false);
-    // 2026-07-24: was supabase.from("waitlist").insert(...) against a
-    // placeholder Supabase URL (VITE_SUPABASE_URL is empty) — every submit
+    // Lead capture posts to the Mac mini /subscribe endpoint (Resend + SQLite).
+    // Lead capture posts to the Mac mini /subscribe endpoint (Resend + SQLite).
     // errored out, losing 100% of order-bump signups. Repointed at the
     // working email-engine subscribe path (same as LeadMagnetForm/CrewPlan).
     const ok = await subscribeToSequence(

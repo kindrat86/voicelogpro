@@ -1,24 +1,23 @@
 /**
- * Email-engine subscription (Brunson Soap Opera Sequence).
- * Adds the subscriber to the VoiceLogPro Resend audience and triggers the
- * double-opt-in confirmation email; on confirm, the 5-email sequence is
- * scheduled automatically (days 0-4).
+ * Email subscription — posts to the portfolio-wide Mac mini /subscribe endpoint
+ * (SQLite + Resend). The lead is stored locally on the Mac mini and a branded
+ * welcome is sent via Resend from hello@voicelogpro.com.
  *
  * Fire-and-forget by design: the waitlist insert is the source of truth for
- * beta spots, so a transient engine failure must never break the signup UX.
+ * beta spots, so a transient network failure must never break the signup UX.
  */
-const ENGINE_URL = "https://email-engine-fawn.vercel.app";
+const SUBSCRIBE_URL = "https://api.carshake.online/subscribe";
 
 export async function subscribeToSequence(email: string, heardFrom?: string): Promise<boolean> {
   try {
-    const res = await fetch(`${ENGINE_URL}/api/subscribe`, {
+    const res = await fetch(SUBSCRIBE_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         product: "voicelogpro",
         email: email.toLowerCase().trim(),
-        // Attribution passthrough — harmless if the engine ignores it.
-        ...(heardFrom ? { heard_from: heardFrom } : {}),
+        // Attribution passthrough.
+        ...(heardFrom ? { source: heardFrom } : {}),
       }),
     });
     return res.ok;

@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Loader2, CheckCircle, Lock } from "lucide-react";
 import { z } from "zod";
 import { subscribeToSequence } from "@/lib/subscribe";
+import { track, identify, EVENTS } from "@/lib/posthog";
 import { Link } from "react-router-dom";
 
 const emailSchema = z.string().email("Please enter a valid email address");
@@ -38,23 +39,37 @@ export function LeadMagnetForm({
     if (!result.success) {
       setStatus("error");
       setErrorMessage("Please enter a valid email address. Try again.");
+      track(EVENTS.formValidationError, {
+        placement: source,
+        field: "email",
+        error_type: "invalid_email",
+      });
       return;
     }
     setStatus("loading");
     setIsDuplicate(false);
     // 2026-07-24: this used to fire subscribeToSequence() (real, working
-    // capture) and then AWAIT a supabase.from("waitlist").insert() against a
-    // placeholder Supabase URL — the broken second call always threw, so the
+    // Lead capture posts to the Mac mini /subscribe endpoint (Resend + SQLite).
+    // Lead capture posts to the Mac mini /subscribe endpoint (Resend + SQLite).
     // UI told every submitter "Something went wrong" even though their email
     // had already been captured and enrolled. This is likely the site's
     // highest-traffic form (reusable across pages). Now the awaited result
     // is the one real capture path.
     const ok = await subscribeToSequence(email, source);
     if (ok) {
+      track(EVENTS.emailCaptured, {
+        placement: source,
+        lead_magnet: "defense_kit",
+      });
+      identify(email.toLowerCase().trim(), { lead_magnet: "defense_kit", source });
       setStatus("success");
     } else {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
+      track(EVENTS.formSubmitFailed, {
+        placement: source,
+        error_message: "Email engine failed",
+      });
     }
   };
 

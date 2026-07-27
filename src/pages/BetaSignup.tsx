@@ -7,6 +7,7 @@ import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { Mic, FileText, Clock, Shield, FileCheck, Users, Smartphone, CheckCircle, Loader2, Zap } from "lucide-react";
 import { z } from "zod";
 import { subscribeToSequence } from "@/lib/subscribe";
+import { track, identify, EVENTS } from "@/lib/posthog";
 // Served from public/images so dev, SPA bundle, and prerendered HTML all
 // resolve the same URL (src/assets imports broke the prerendered pages).
 const beforeImage = "/images/before-messy-notes.webp";
@@ -63,6 +64,11 @@ export default function BetaSignup() {
     if (!result.success) {
       setStatus("error");
       setErrorMessage("Please enter a valid email address. Try again.");
+      track(EVENTS.formValidationError, {
+        placement: "beta",
+        field: "email",
+        error_type: "invalid_email",
+      });
       return;
     }
     setStatus("loading");
@@ -70,18 +76,17 @@ export default function BetaSignup() {
     const cleanEmail = email.toLowerCase().trim();
     const plan = planType === "free" ? "beta_free" : "crew_plan";
     const attribution = heardFrom || "not_specified";
-    // Record attribution to PostHog first — zero DB dependency, so it lands even
-    // if the waitlist insert fails. This is the AEO measurement signal.
-    try {
-      const ph = (window as { posthog?: { capture?: (e: string, p?: unknown) => void; setPersonProperties?: (p: unknown) => void } }).posthog;
-      ph?.capture?.("beta_signup", { plan, heard_from: attribution });
-      ph?.setPersonProperties?.({ heard_from: attribution, signup_plan: plan });
-    } catch {
-      /* analytics must never break signup */
-    }
+    const tier = planType === "free" ? "solo_beta" : "crew";
+    // Typed PostHog wrapper (lib/posthog.ts) — consent-gated, zero DB dependency.
+    track(EVENTS.emailCaptured, {
+      placement: "beta",
+      lead_magnet: "crew_plan",
+      plan_tier: tier,
+    });
+    identify(cleanEmail, { plan_tier: tier, heard_from: attribution });
     // 2026-07-24: this used to fire subscribeToSequence() (real, working
-    // capture) and then AWAIT a supabase.from("waitlist").insert() — with a
-    // schema-mismatch retry — against a placeholder Supabase URL. That
+    // Lead capture posts to the Mac mini /subscribe endpoint (Resend + SQLite).
+    // Lead capture posts to the Mac mini /subscribe endpoint (Resend + SQLite).
     // second call always threw, so the UI told every signup "Something went
     // wrong" even though their email had already been captured and
     // enrolled. Now the awaited result is the one real capture path.
@@ -92,6 +97,10 @@ export default function BetaSignup() {
     } else {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
+      track(EVENTS.formSubmitFailed, {
+        placement: "beta",
+        error_message: "Email engine failed",
+      });
     }
   };
 

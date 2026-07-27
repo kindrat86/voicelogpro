@@ -5,6 +5,7 @@ import { Check, Zap, Users, CheckCircle, Loader2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { z } from "zod";
 import { subscribeToSequence } from "@/lib/subscribe";
+import { track, identify, EVENTS } from "@/lib/posthog";
 
 const emailSchema = z.string().email("Please enter a valid email address");
 
@@ -42,12 +43,18 @@ export function CrewPlanSection() {
     if (!result.success) {
       setStatus("error");
       setErrorMessage("Please enter a valid email address. Try again.");
+      track(EVENTS.formValidationError, {
+        placement: "crew_plan",
+        field: "email",
+        error_type: "invalid_email",
+        plan_tier: planType === "free" ? "solo_beta" : "crew",
+      });
       return;
     }
     setStatus("loading");
     setIsDuplicate(false);
-    // 2026-07-24: was supabase.from("waitlist").insert(...) against a
-    // placeholder Supabase URL (VITE_SUPABASE_URL is empty) — every submit
+    // Lead capture posts to the Mac mini /subscribe endpoint (Resend + SQLite).
+    // Lead capture posts to the Mac mini /subscribe endpoint (Resend + SQLite).
     // errored out, losing 100% of signups on both plans. Repointed at the
     // working email-engine subscribe path (same as LeadMagnetForm/CrewPlan).
     const ok = await subscribeToSequence(
@@ -55,11 +62,25 @@ export function CrewPlanSection() {
       planType === "free" ? "beta_free" : "crew_plan"
     );
     if (ok) {
+      const tier = planType === "free" ? "solo_beta" : "crew";
+      track(EVENTS.emailCaptured, {
+        placement: "crew_plan",
+        lead_magnet: "crew_plan",
+        plan_tier: tier,
+      });
+      identify(email.toLowerCase().trim(), {
+        plan_tier: tier,
+        lead_magnet: "crew_plan",
+      });
       setSubmittedPlan(planType);
       setStatus("success");
     } else {
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
+      track(EVENTS.formSubmitFailed, {
+        placement: "crew_plan",
+        error_message: "Email engine failed",
+      });
     }
   };
 
