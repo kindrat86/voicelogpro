@@ -15,8 +15,8 @@ import {
 import { competitors } from "@/content/comparisons";
 
 const trackCTAClick = (location: string) => {
-  if (typeof window !== "undefined" && (window as any).gtag) {
-    (window as any).gtag("event", "cta_click", {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "cta_click", {
       event_category: "conversion",
       event_label: `comparison_${location}`,
     });

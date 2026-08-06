@@ -70,7 +70,7 @@ export default function BlogPost() {
       }
     }
     // Only allow http, https, or relative paths
-    return /^(https?:\/\/|\/[^\/])/.test(trimmed);
+    return /^(https?:\/\/|\/[^/])/.test(trimmed);
   };
 
   // Helper to render inline markdown links

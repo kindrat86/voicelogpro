@@ -62,7 +62,7 @@ export function registerUserProperties(props: Record<string, unknown>) {
   const ph = getPosthog();
   if (ph && consentGranted) {
     try {
-      (ph as any).setPersonProperties?.(superProps);
+      (ph as PostHogApi).setPersonProperties?.(superProps);
     } catch {
       // setPersonProperties is best-effort; don't break the page
     }
@@ -73,7 +73,7 @@ export function registerUserProperties(props: Record<string, unknown>) {
 
 function getPosthog() {
   if (typeof window === "undefined") return null;
-  return (window as any).posthog;
+  return window.posthog;
 }
 
 export function track(
