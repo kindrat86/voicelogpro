@@ -17,7 +17,7 @@ describe("subscribeToSequence", () => {
     expect(fetchMock).toHaveBeenCalledTimes(1);
     const [url, init] = fetchMock.mock.calls[0];
     expect(String(url)).toBe(
-      "https://email-engine-fawn.vercel.app/api/subscribe"
+      "https://api.carshake.online/subscribe"
     );
     expect(JSON.parse(String(init?.body))).toEqual({
       product: "voicelogpro",

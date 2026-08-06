@@ -50,7 +50,7 @@ export function useConsent(): UseConsent {
   // Sync Google Consent Mode v2 if gtag is present.
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const gtag = (window as any).gtag as
+    const gtag = window.gtag as
       | ((cmd: string, action: string, params: Record<string, string>) => void)
       | undefined;
     if (typeof gtag === "function") {
