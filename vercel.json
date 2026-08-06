@@ -125,6 +125,14 @@
   ],
   "rewrites": [
     {
+      "source": "/tripwire",
+      "destination": "/tripwire.html"
+    },
+    {
+      "source": "/oto",
+      "destination": "/oto.html"
+    },
+    {
       "source": "/cities/:slug",
       "destination": "/cities/:slug/index.html"
     },
@@ -231,6 +239,14 @@
     {
       "source": "/industries/:slug",
       "destination": "/industries/:slug.html"
+    },
+    {
+      "source": "/tripwire",
+      "destination": "/tripwire.html"
+    },
+    {
+      "source": "/oto",
+      "destination": "/oto.html"
     }
   ],
   "redirects": [
