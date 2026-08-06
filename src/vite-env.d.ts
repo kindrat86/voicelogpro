@@ -3,7 +3,7 @@
 interface PostHogApi {
   capture: (event: string, properties?: Record<string, unknown>) => void;
   setPersonProperties?: (props: Record<string, unknown>) => void;
-  identify?: (id: string | number) => void;
+  identify?: (distinctId: string, traits?: Record<string, unknown>) => void;
   reset?: () => void;
 }
 
