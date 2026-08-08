@@ -81,6 +81,25 @@ export function Footer() {
             </nav>
           </div>
 
+          {/* Network */}
+          <div>
+            <p className="font-semibold text-foreground mb-3 text-sm">Network</p>
+            <nav className="flex flex-col gap-2">
+              <a href="https://gitdealflow.com" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                GitDealFlow
+              </a>
+              <a href="https://signals.gitdealflow.com" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                VC Deal Flow Signal
+              </a>
+              <a href="https://sipi.bot" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                Sipi.bot
+              </a>
+              <a href="https://invisibleexit.com" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                InvisibleExit
+              </a>
+            </nav>
+          </div>
+
           {/* Company */}
           <div>
             <p className="font-semibold text-foreground mb-3 text-sm">Company</p>

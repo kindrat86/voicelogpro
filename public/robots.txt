@@ -51,9 +51,7 @@ Allow: /
 User-Agent: Bingbot
 Allow: /
 
-Sitemap: https://voicelogpro.com/sitemap.xml
 Sitemap: https://voicelogpro.com/sitemap-index.xml
-Sitemap: https://voicelogpro.com/image-sitemap.xml
 
 # AI-crawler discovery surfaces (informational; crawlers discover these via
 # /.well-known/ and the root /llms.txt convention, not via robots directives):
