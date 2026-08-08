@@ -115,7 +115,6 @@ export default function BetaSignup() {
       <Helmet>
         <title>VoiceLogPro Beta | Stop Chasing Paper Timesheets</title>
         <meta name="description" content="Turn field voice notes into accurate labor logs and Phase vs. Actual reports in 30 seconds. No typing. No apps. No crew accounts. Join the beta." />
-        <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href="https://voicelogpro.com/beta" />
       </Helmet>
 
