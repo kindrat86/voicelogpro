@@ -22,24 +22,7 @@ const distPath = path.resolve(__dirname, '../dist');
 const indexHtmlPath = path.join(distPath, 'index.html');
 
 // All 97 supported language codes (must match src/i18n/languages.ts)
-const ALL_LANGUAGE_CODES = [
-  'en', 'zh-CN', 'hi', 'es', 'fr', 'ar', 'bn', 'pt', 'ru', 'ur',
-  'id', 'de', 'ja', 'mr', 'te', 'tr', 'ta', 'vi', 'yue', 'pa-PK',
-  'ko', 'fa', 'it', 'th', 'gu', 'kn', 'ml', 'or', 'pl', 'uk',
-  'nl', 'ro', 'el', 'cs', 'hu', 'sv', 'fi', 'no', 'da', 'he',
-  'sw', 'am', 'so', 'ha', 'yo', 'ig', 'zu', 'xh', 'af', 'ms',
-  'my', 'km', 'lo', 'ne', 'si', 'ps', 'kk', 'uz', 'az', 'ka',
-  'hy', 'mn', 'bo', 'ug', 'tl', 'ceb', 'ilo', 'jv', 'su', 'mad',
-  'hmn', 'ku', 'bal', 'tg', 'tk', 'sq', 'sr', 'hr', 'bs', 'sk',
-  'sl', 'lt', 'lv', 'et', 'be', 'bg', 'mk', 'ca', 'eu', 'gl',
-  'cy', 'ga', 'gd', 'br', 'is', 'lb', 'mt',
-];
-
-/** Generate hreflang tags — single-locale site, valid self-referencing pair only. */
-function generateHreflangTags(canonicalUrl) {
-  return `    <link rel="alternate" hreflang="en" href="${canonicalUrl}" />\n` +
-         `    <link rel="alternate" hreflang="x-default" href="${canonicalUrl}" />`;
-}
+/** hreflang tags removed — single-locale site, no translations. */
 
 // All routes to prerender (matching the sitemap + prerender/routes.ts list)
 const PRERENDER_ROUTES = [
@@ -57,13 +40,10 @@ const PRERENDER_ROUTES = [
   '/solutions/phase-payment-disputes',
   '/solutions/electrical-inventory-tracking',
   '/solutions/small-electrical-business-software',
-  '/procore-vs-voice-log-pro',
+  // Redirect-source pages removed — vercel.json 308s handle /procore-vs-voice-log-pro etc.
+  // buildertrend/jobnimbus have no /vs/ target, so they stay as standalone pages.
   '/buildertrend-vs-voice-log-pro',
-  '/contractor-foreman-vs-voice-log-pro',
   '/jobnimbus-vs-voice-log-pro',
-  '/knowify-vs-voice-log-pro',
-  '/raken-vs-voice-log-pro',
-  '/fieldwire-vs-voice-log-pro',
   '/how-to/document-construction-delays',
   '/how-to/protect-lien-rights-as-subcontractor',
   '/how-to/document-construction-change-orders',
@@ -157,15 +137,7 @@ async function prerender() {
       // Pass helmetHead so we only strip template canonical/OG/Twitter that Helmet replaces.
       routeHtml = stripDefaultHeadTags(routeHtml, helmetHead);
 
-      // Strip the template's hardcoded hreflang tags (we inject per-route ones below).
-      routeHtml = routeHtml.replace(/<!-- hreflang:.*?-->[\s\S]*?<link rel="alternate" hreflang="x-default"[^>]*\/>\n?/, '');
-
-      // Inject hreflang tags for all 97 supported languages.
-      // Extract canonical URL from helmet or fall back to route path.
-      const canonicalMatch = (helmetHead || routeHtml).match(/<link rel="canonical"[^>]*href="([^"]+)"/);
-      const canonicalUrl = canonicalMatch ? canonicalMatch[1] : `https://voicelogpro.com${route === '/' ? '' : route}`;
-      const hreflangTags = generateHreflangTags(canonicalUrl);
-      routeHtml = routeHtml.replace('</head>', `${hreflangTags}\n</head>`);
+      // hreflang tags removed — single-locale site, no translations.
 
       // Inject helmet head tags before </head>
       // These include <title>, <meta name="description">, <link rel="canonical"> from each page's Helmet component

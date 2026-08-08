@@ -1,17 +1,54 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Register a Trusted Types default policy. The CSP enforces
-         require-trusted-types-for 'script' with no policy registered,
-         which throws on every dangerouslySetInnerHTML/innerHTML write
-         (App.tsx's Brunson Trust Bar, ux.js toast/back-to-top) on every
-         single pageview right now. Must run before any other script. -->
+    <!-- Trusted Types default policy with XSS sanitization.
+         Intercepts every innerHTML / dangerouslySetInnerHTML write and sanitizes
+         HTML through a template-based filter: strips on* handlers, javascript:
+         URLs, and dangerous tags (script/iframe/object/embed/base).
+         Legitimate content (Brunson Trust Bar, toast markup, React portals)
+         passes through; attacker payloads are neutered. Must run FIRST. -->
     <script>
       if (window.trustedTypes && window.trustedTypes.createPolicy) {
+        var __TT_BLOCK_TAGS = new Set(['script','iframe','object','embed','base','applet','meta','link']);
+        var __TT_URL_ATTRS = ['href','src','action','formaction'];
+        var __TT_INSIDE = false; /* re-entrancy guard: our own template.innerHTML write re-invokes this default policy */
         window.trustedTypes.createPolicy('default', {
-          createHTML: (s) => s,
-          createScript: (s) => s,
-          createScriptURL: (s) => s,
+          createHTML: function(s) {
+            if (typeof s !== 'string') return '';
+            /* Inner call triggered by the sanitizer's own template write below.
+               Template content is inert (no script execution); the tree is
+               sanitized before it is ever serialized back out. Without this
+               guard createHTML recurses until the stack overflows and React
+               never renders (empty #root in production). */
+            if (__TT_INSIDE) return s;
+            __TT_INSIDE = true;
+            try {
+              var t = document.createElement('template');
+              t.innerHTML = s;
+              !function walk(n) {
+                var c = n.firstChild, next;
+                for (; c; c = next) {
+                  next = c.nextSibling; /* capture before any removeChild */
+                  if (c.nodeType === 1) {
+                    if (__TT_BLOCK_TAGS.has(c.tagName.toLowerCase())) { c.parentNode.removeChild(c); continue; }
+                    for (var a = c.attributes, i = a.length - 1; i >= 0; i--) {
+                      var nm = a[i].name.toLowerCase(), v = a[i].value.trim().toLowerCase();
+                      if (nm.indexOf('on') === 0) c.removeAttribute(a[i].name);
+                      else if (__TT_URL_ATTRS.indexOf(nm) !== -1 && /^\s*javascript:/i.test(v)) c.removeAttribute(a[i].name);
+                    }
+                    walk(c);
+                  } else if (c.nodeType === 8) { var p = c.parentNode; p && p.removeChild(c); }
+                  else if (c.nodeType !== 3) { var px = c.parentNode; px && px.removeChild(c); }
+                }
+              }(t.content);
+              return t.innerHTML;
+            } finally { __TT_INSIDE = false; }
+          },
+          createScript: function() { return ''; },
+          createScriptURL: function(s) {
+            try { var u = new URL(s, document.baseURI); if (u.origin === location.origin || u.hostname.endsWith('.posthog.com') || u.hostname.endsWith('.supabase.co') || u.hostname.endsWith('.vercel.app')) return s; } catch(e){}
+            return '';
+          }
         });
       }
     </script>
@@ -20,8 +57,8 @@
     <title>VoiceLogPro — Voice-to-Report for Construction Crews</title>
     <meta name="description" content="VoiceLogPro turns voice notes into formatted construction daily reports in 60 seconds. No typing. Works from any phone. Built for subcontractors who work with their hands." />
     <meta name="author" content="VoiceLogPro" />
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     
     <!-- Keywords for AI crawlers -->
     <meta name="keywords" content="construction daily report, daily log construction, voice to text construction, subcontractor documentation, lien protection, payment protection, jobsite reporting, construction compliance" />
@@ -55,113 +92,15 @@
     <meta name="geo.region" content="US-TX, US-VA, AU-NSW, GB" />
     <meta name="geo.placename" content="Global Construction Compliance" />
     
-    <!-- hreflang: all 97 supported language/region variants -->
-    <link rel="alternate" hreflang="en" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="zh-CN" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="hi" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="es" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="fr" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ar" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="bn" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="pt" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ru" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ur" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="id" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="de" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ja" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="mr" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="te" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="tr" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ta" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="vi" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="yue" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="pa-PK" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ko" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="fa" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="it" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="th" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="gu" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="kn" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ml" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="or" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="pl" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="uk" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="nl" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ro" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="el" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="cs" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="hu" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="sv" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="fi" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="no" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="da" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="he" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="sw" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="am" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="so" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ha" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="yo" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ig" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="zu" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="xh" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="af" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ms" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="my" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="km" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="lo" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ne" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="si" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ps" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="kk" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="uz" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="az" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ka" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="hy" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="mn" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="bo" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ug" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="tl" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ceb" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ilo" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="jv" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="su" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="mad" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="hmn" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ku" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="bal" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="tg" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="tk" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="sq" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="sr" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="hr" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="bs" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="sk" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="sl" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="lt" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="lv" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="et" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="be" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="bg" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="mk" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ca" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="eu" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="gl" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="cy" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="ga" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="gd" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="br" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="is" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="lb" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="mt" href="https://voicelogpro.com/" />
-    <link rel="alternate" hreflang="x-default" href="https://voicelogpro.com/" />
+    <!-- Favicon -->
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <!-- Preconnect to critical origins -->
-    <link rel="preconnect" href="https://api.carshake.online" crossorigin />
+    <link rel="preconnect" href="https://isethofkdawreiitpkdq.supabase.co" crossorigin />
     <link rel="preconnect" href="https://eu.i.posthog.com" crossorigin />
-    <script>!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=!0)}(document,window.posthog||[]);posthog.init("phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX",{before_send:function(e){try{if(e&&e.properties){if(window.__PHBOT===undefined){window.__PHBOT=(function(){try{var ua=(navigator.userAgent||'').toLowerCase();if(!ua)return true;var B=['bot/','bot;','bot)','-bot','_bot','bot ','crawler','spider','scraper','slurp','archiver','indexer','headless','phantomjs','selenium','puppeteer','playwright','cypress','webdriver','curl/','wget/','python-requests','python-httpx','aiohttp','axios/','go-http-client','java/','okhttp','libwww-perl','guzzlehttp','postmanruntime','node-fetch','undici','googlebot','bingbot','yandex','duckduckbot','baiduspider','sogou','ahrefs','semrush','mj12','dotbot','dataforseo','screaming frog','petalbot','bytespider','applebot','amazonbot','uptimerobot','pingdom','lighthouse','pagespeed','gtmetrix','gptbot','oai-searchbot','chatgpt-user','claudebot','claude-web','anthropic-ai','perplexitybot','youbot','ccbot','google-extended','meta-externalagent','cohere-ai','diffbot','timpibot','omgili','facebookexternalhit','whatsapp','telegrambot','slackbot','discordbot','twitterbot','linkedinbot','redditbot','embedly','quora link preview','skypeuripreview','vkshare','w3c_validator'];for(var i=0;i<B.length;i++){if(ua.indexOf(B[i])>-1)return true;}if(navigator.webdriver===true)return true;if(navigator.languages&&navigator.languages.length===0)return true;return false;}catch(x){return false;}})();}e.properties.is_bot=window.__PHBOT;}}catch(x){}return e;},api_host:"https://eu.i.posthog.com",person_profiles:"identified_only"})</script>
+    <script>(function(){var s=false,l=function(){if(s)return;s=true;!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=!0}(document,window.posthog||[]);posthog.init("phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX",{api_host:"https://eu.i.posthog.com",person_profiles:"identified_only",loaded:function(p){p.capture("$pageview",{deferred:true})}})};"requestIdleCallback"in window?requestIdleCallback(l,{timeout:3000}):setTimeout(l,3000);["mousemove","scroll","keydown","touchstart","click"].forEach(function(e){window.addEventListener(e,l,{capture:true,passive:true,once:true})})})()</script>
     <!-- JSON-LD Structured Data for AI Crawlers -->
     <!-- SoftwareApplication Schema - Canonical Product Identity -->
     <script type="application/ld+json">
@@ -170,7 +109,7 @@
       "@type": "SoftwareApplication",
       "name": "VoiceLogPro",
       "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
+      "operatingSystem": "Web, iOS, Android",
       "description": "AI-powered construction daily reporting tool. Converts voice notes into legally defensible PDF reports for subcontractors. Features automatic weather tagging, RFI detection, and compliance documentation for Texas Property Code Chapter 53, NSW Security of Payment Act (SOPA), and UK Building Safety Act Golden Thread requirements.",
       "disambiguatingDescription": "VoiceLogPro is a voice-to-PDF daily construction log app (voice on-site → timestamped, court-admissible daily-report PDF) — not a general-purpose meeting/voice-transcription tool (Otter, Rev, Fireflies), and not a full construction-management platform (Procore, Raken).",
       "url": "https://voicelogpro.com",
@@ -179,7 +118,8 @@
         "price": "49.00",
         "priceCurrency": "USD",
         "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/PreOrder"
+        "availability": "https://schema.org/BackOrder",
+        "availabilityStarts": "2026-09-01"
       },
       "audience": {
         "@type": "BusinessAudience",
@@ -197,7 +137,7 @@
         "Lien protection documentation",
         "RFI and delay documentation"
       ],
-      "screenshot": "https://voicelogpro.com/og-image.png",
+      "screenshot": "https://voicelogpro.com/images/og-card.jpg",
       "softwareHelp": "https://voicelogpro.com/blog"
     }
     </script>
@@ -223,7 +163,8 @@
         "https://invisibleexit.com",
         "https://signals.gitdealflow.com",
         "https://sanctionsai.dev",
-        "https://www.indiehackers.com/product/unlock-saas"
+        "https://www.indiehackers.com/product/unlock-saas",
+        "https://hirenika.com"
       ]
     }
     </script>
@@ -242,8 +183,7 @@
       "sameAs": [
         "https://github.com/kindrat86",
         "https://x.com/sipiteno",
-        "https://www.linkedin.com/in/kushnir-maryan/",
-        "https://hirenika.com"
+        "https://www.linkedin.com/in/kushnir-maryan/"
       ],
       "knowsAbout": [
         "Construction daily reporting",
@@ -350,38 +290,17 @@
       ]
     }
     </script>
-<meta name="google-site-verification" content="VoicelogPro_Verification" />
     
     <!-- Theme color for mobile browser chrome -->
     <meta name="theme-color" content="#0f172a" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
-    <!-- PostHog analytics (async, non-blocking). Single loader from /static/array.js —
-         the SDK is ONLY served from /static/array.js (plain /array.js 404s).
-         This snippet is the ONLY PostHog init on the site; do not also init
-         posthog-js from the bundle or every pageview gets counted twice. -->
-    <script>
-      (function () {
-        if (window.posthog && window.posthog.__loaded) return;
-        var s = document.createElement("script");
-        s.type = "text/javascript";
-        s.crossOrigin = "anonymous";
-        s.defer = true;
-        s.src = "https://eu.i.posthog.com/static/array.js";
-        s.onload = function () {
-          window.posthog.init("phc_lyZCgvTpicjLzAO3rY2GhxuX5WUc5jQjP8ZVwwJqauX", {before_send:function(e){try{if(e&&e.properties){if(window.__PHBOT===undefined){window.__PHBOT=(function(){try{var ua=(navigator.userAgent||'').toLowerCase();if(!ua)return true;var B=['bot/','bot;','bot)','-bot','_bot','bot ','crawler','spider','scraper','slurp','archiver','indexer','headless','phantomjs','selenium','puppeteer','playwright','cypress','webdriver','curl/','wget/','python-requests','python-httpx','aiohttp','axios/','go-http-client','java/','okhttp','libwww-perl','guzzlehttp','postmanruntime','node-fetch','undici','googlebot','bingbot','yandex','duckduckbot','baiduspider','sogou','ahrefs','semrush','mj12','dotbot','dataforseo','screaming frog','petalbot','bytespider','applebot','amazonbot','uptimerobot','pingdom','lighthouse','pagespeed','gtmetrix','gptbot','oai-searchbot','chatgpt-user','claudebot','claude-web','anthropic-ai','perplexitybot','youbot','ccbot','google-extended','meta-externalagent','cohere-ai','diffbot','timpibot','omgili','facebookexternalhit','whatsapp','telegrambot','slackbot','discordbot','twitterbot','linkedinbot','redditbot','embedly','quora link preview','skypeuripreview','vkshare','w3c_validator'];for(var i=0;i<B.length;i++){if(ua.indexOf(B[i])>-1)return true;}if(navigator.webdriver===true)return true;if(navigator.languages&&navigator.languages.length===0)return true;return false;}catch(x){return false;}})();}e.properties.is_bot=window.__PHBOT;}}catch(x){}return e;},
-            api_host: "https://eu.i.posthog.com",
-            person_profiles: "identified_only",
-            defaults: "2025-05-24",
-            capture_pageview: false,
-            session_recording: { recordCrossOriginIframes: true, maskAllInputs: false }
-          });
-          window.posthog.capture("$pageview", {$viewport_height: window.innerHeight, $viewport_width: window.innerWidth});
-        };
-        document.head.appendChild(s);
-      })();
-    </script>
+    <!-- PostHog analytics: initialized once by the official snippet above (line ~164).
+         The custom second loader that used to live here was removed — it loaded
+         /static/array.js a second time and re-called posthog.init(), double-counting
+         every pageview and producing console noise. Do NOT re-add a second init. -->
+
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VoiceLogPro","item":"https://voicelogpro.com"}]}
   </script>
@@ -448,7 +367,7 @@ try{for(var k in localStorage){if(/^(_fb|_rdt|_ga|_gcl)/.test(k))localStorage.re
           <p>© 2025 VoiceLogPro. Built for the crew.</p>
         <!-- Dream-100 congregation footer -->
 <div style="margin-top:16px;font-size:13px"><strong>Find us where builders are:</strong> <a href="https://github.com/kindrat86" rel="me noopener" style="color:inherit">GitHub</a></div>
-<div style="margin-top:8px;font-size:13px"><strong>AI teammates:</strong> <a href="https://hirenika.com" rel="noopener" style="color:inherit">hirenika.com — AI employees for small business</a></div>
+<div style="margin-top:8px;font-size:13px"><strong>AI teammates:</strong> <a href="https://hirenika.com" rel="noopener" style="color:inherit">hirenika.com &mdash; AI employees for small business</a></div>
 <!-- Dream-100 congregation footer -->
 </footer>
       </div>
@@ -459,9 +378,9 @@ try{for(var k in localStorage){if(/^(_fb|_rdt|_ga|_gcl)/.test(k))localStorage.re
   
 <!-- pSEO Footer Navigation -->
 <style>
-.pseo-footer { max-width: 1200px; margin: 0 auto; padding: 40px 20px; border-top: 1px solid #e5e7eb; margin-top: 60px; }
+.pseo-footer { max-width: 1200px; margin: 0 auto; padding: 40px 20px; border-top: 1px solid rgba(127, 127, 127, 0.28); margin-top: 60px; }
 .pseo-footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
-.pseo-footer-section h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6b7280; }
+.pseo-footer-section h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #9ca3af; }
 .pseo-footer-section ul { list-style: none; padding: 0; margin: 0; }
 .pseo-footer-section li { margin-bottom: 6px; }
 .pseo-footer-section a { color: #374151; text-decoration: none; font-size: 14px; }
@@ -531,7 +450,7 @@ try{for(var k in localStorage){if(/^(_fb|_rdt|_ga|_gcl)/.test(k))localStorage.re
 </nav>
 
 <!-- AEO Definition Block -->
-<section style="max-width:760px;margin:32px auto;padding:0 16px"><h2>Key terms, defined</h2><dl><dt style="font-weight:700;margin-top:14px">Daily construction report</dt><dd style="margin:4px 0 0;color:#555">A dated record of crew, work performed, materials, weather, and site conditions on a job site.</dd><dt style="font-weight:700;margin-top:14px">OSHA compliance</dt><dd style="margin:4px 0 0;color:#555">Adherence to Occupational Safety and Health Administration recordkeeping and safety requirements.</dd><dt style="font-weight:700;margin-top:14px">Dispute defense record</dt><dd style="margin:4px 0 0;color:#555">Contemporaneous documentation used to defend against payment or liability disputes.</dd></dl></section>
+<section style="max-width:760px;margin:32px auto;padding:0 16px"><h2>Key terms, defined</h2><dl><dt style="font-weight:700;margin-top:14px">Daily construction report</dt><dd style="margin:4px 0 0;color:#a3a8ae">A dated record of crew, work performed, materials, weather, and site conditions on a job site.</dd><dt style="font-weight:700;margin-top:14px">OSHA compliance</dt><dd style="margin:4px 0 0;color:#a3a8ae">Adherence to Occupational Safety and Health Administration recordkeeping and safety requirements.</dd><dt style="font-weight:700;margin-top:14px">Dispute defense record</dt><dd style="margin:4px 0 0;color:#a3a8ae">Contemporaneous documentation used to defend against payment or liability disputes.</dd></dl></section>
 <!-- /AEO Definition Block -->
 <!-- AEO HowTo Schema -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "How to create an OSHA-compliant daily construction report with VoiceLogPro", "step": [{"@type": "HowToStep", "position": 1, "name": "Speak your daily log", "text": "Dictate the day's work, crew, and site conditions instead of typing."}, {"@type": "HowToStep", "position": 2, "name": "Auto-format to a report", "text": "VoiceLogPro structures your speech into an OSHA-compliant daily report."}, {"@type": "HowToStep", "position": 3, "name": "Export a PDF", "text": "Download or share a timestamped PDF for records and dispute defense."}]}</script>
@@ -541,12 +460,12 @@ try{for(var k in localStorage){if(/^(_fb|_rdt|_ga|_gcl)/.test(k))localStorage.re
 <section style="background:linear-gradient(135deg,#f0f9ff,#e8f5e9);border-radius:16px;padding:32px 24px;margin:40px 0;border:2px solid #0066cc30;text-align:center">
   <h2 style="font-size:1.5rem;margin-bottom:16px;color:#1a1a1a">Stop Typing. Just Speak. Get a PDF.</h2>
   
-  <div style="background:#fef3c7;border-radius:8px;padding:12px;margin:12px 0;text-align:center"><strong>🛡️ 30 Minutes Saved Per Day Guaranteed — Or Your Money Back</strong></div>
+  <div style="background:#fef3c7;border-radius:8px;padding:12px;margin:12px 0;text-align:center;color:#78350f"><strong>🛡️ 30 Minutes Saved Per Day Guaranteed — Or Your Money Back</strong></div>
   <div style="background:white;border-radius:12px;padding:20px;max-width:500px;margin:0 auto 16px;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
-    <p style="font-size:1.1rem;font-weight:600;margin-bottom:8px">📥 Free Daily Report Defense Kit</p>
+    <p style="font-size:1.1rem;font-weight:600;margin-bottom:8px;color:#1a1a1a">📥 Free Daily Report Defense Kit</p>
     <p style="color:#555;margin-bottom:12px;font-size:0.9rem">5 OSHA-compliant templates, Texas Chapter 53 checklist, and dispute defense swipe file. Free PDF.</p>
     <a href="https://voicelogpro.com/#defense-kit" style="display:inline-block;background:#0066cc;color:white;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.05rem">Get Free Defense Kit →</a>
-    <p style="font-size:0.75rem;color:#888;margin-top:8px">No spam. Unsubscribe anytime.</p>
+    <p style="font-size:0.75rem;color:#666;margin-top:8px">No spam. Unsubscribe anytime.</p>
   </div>
   <p style="color:#cc3300;font-weight:600;margin-top:12px">⏰ Beta Access — Crew Plan at $12/mo (50% Off)</p>
 </section>
@@ -558,17 +477,17 @@ try{for(var k in localStorage){if(/^(_fb|_rdt|_ga|_gcl)/.test(k))localStorage.re
     <p style="text-align:center;color:#6b7280;max-width:600px;margin:0 auto 2.5rem;font-size:1rem">Three things every crew believes until a dispute hits — and a payment gets held. Here's why each one fails, and what actually works.</p>
     <div style="display:flex;flex-direction:column;gap:1.25rem">
       <div style="background:#fef2f2;border-left:4px solid #ef4444;padding:1.5rem;border-radius:0 12px 12px 0">
-        <p style="font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:#ef4444;margin:0 0 .5rem">Lie #1 — "I'll remember what happened today"</p>
+        <p style="font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:#b91c1c;margin:0 0 .5rem">Lie #1 — "I'll remember what happened today"</p>
         <p style="font-size:.95rem;color:#1f2937;margin:0;line-height:1.6">After a 12-hour shift in the heat, you can't recall who was on site, what materials were delivered, or which conversation happened at 9 AM. Two weeks later, when the GC disputes a change order, your memory is worthless. <strong>Memory is not documentation. It's a feeling — and feelings don't win payment disputes.</strong></p>
         <p style="font-size:.85rem;color:#0066cc;margin:.5rem 0 0;font-weight:600">What actually works: A 60-second voice note turned into a timestamped, weather-stamped, crew-logged PDF — before you leave the site.</p>
       </div>
       <div style="background:#fffbeb;border-left:4px solid #f59e0b;padding:1.5rem;border-radius:0 12px 12px 0">
-        <p style="font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:#f59e0b;margin:0 0 .5rem">Lie #2 — "The GC will back me up if there's a dispute"</p>
+        <p style="font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:#92400e;margin:0 0 .5rem">Lie #2 — "The GC will back me up if there's a dispute"</p>
         <p style="font-size:.95rem;color:#1f2937;margin:0;line-height:1.6">When the owner refuses to pay, the GC's first move is to review the paperwork. If your daily reports are missing, late, or handwritten on a napkin, the GC has no leverage. They'll settle for less — and pass the loss to you. <strong>The GC protects themselves first. Your documentation is their only weapon — and if it doesn't exist, neither does your claim.</strong></p>
         <p style="font-size:.85rem;color:#0066cc;margin:.5rem 0 0;font-weight:600">What actually works: Court-ready PDFs with timestamps, weather data, and photo attachments — evidence so clear the GC can fight and win.</p>
       </div>
       <div style="background:#f0fdf4;border-left:4px solid #22c55e;padding:1.5rem;border-radius:0 12px 12px 0">
-        <p style="font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:#22c55e;margin:0 0 .5rem">Lie #3 — "The contract protects my lien rights"</p>
+        <p style="font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:#15803d;margin:0 0 .5rem">Lie #3 — "The contract protects my lien rights"</p>
         <p style="font-size:.95rem;color:#1f2937;margin:0;line-height:1.6">In Texas, you have until the 15th of the 4th month after your last work to file a lien. Miss that deadline by one day — even with a signed contract — and your lien rights evaporate. Forever. The contract doesn't track deadlines. The contract doesn't send reminders. <strong>Your lien rights are only as strong as your last daily report — and missing one report can cost you the entire claim.</strong></p>
         <p style="font-size:.85rem;color:#0066cc;margin:.5rem 0 0;font-weight:600">What actually works: Voice-generated daily reports that auto-log every site visit — creating an unbroken chain of documentation that protects your lien deadline.</p>
       </div>
@@ -591,7 +510,7 @@ try{for(var k in localStorage){if(/^(_fb|_rdt|_ga|_gcl)/.test(k))localStorage.re
     </div>
     <p style="font-size:1.05rem;margin-bottom:24px;color:#cbd5e1">Every report you type by hand is 60 minutes you will never get back. Founding price locks at sign-up.</p>
     <a href="https://voicelogpro.com/beta" style="display:inline-block;background:linear-gradient(135deg,#00d4aa,#2deec0);color:#04130e;padding:14px 32px;border-radius:12px;font-weight:700;text-decoration:none;font-size:.95rem;box-shadow:0 8px 24px -10px rgba(0,212,170,.5)">Join the Waitlist →</a>
-    <p style="margin-top:18px;font-size:.78rem;color:#6b7178">🛡️ Nothing to pay yet — this is a waitlist, not a checkout. When billing starts, founding members keep the launch price and get a 30-day refund window.</p>
+    <p style="margin-top:18px;font-size:.78rem;color:#9aa3ad">🛡️ Nothing to pay yet — this is a waitlist, not a checkout. When billing starts, founding members keep the launch price and get a 30-day refund window.</p>
   </div>
 </section>
 <!-- /BRUNSON TRUST BAR -->
@@ -649,7 +568,7 @@ try{for(var k in localStorage){if(/^(_fb|_rdt|_ga|_gcl)/.test(k))localStorage.re
         <div style="color:#00d4aa;font-weight:800;font-size:1.4rem">$49/mo</div>
       </div>
     </div>
-    <p style="text-align:center;color:#475569;font-size:.85rem;margin-top:1.5rem">🛡️ Nothing to pay yet — this is a waitlist. When billing starts, founding members keep the launch price and get a 30-day refund window.</p>
+    <p style="text-align:center;color:#94a3b8;font-size:.85rem;margin-top:1.5rem">🛡️ Nothing to pay yet — this is a waitlist. When billing starts, founding members keep the launch price and get a 30-day refund window.</p>
   </div>
 </section>
 <!-- /BRUNSON VALUE STACK -->
@@ -667,138 +586,18 @@ try{for(var k in localStorage){if(/^(_fb|_rdt|_ga|_gcl)/.test(k))localStorage.re
     <div style="margin:2.5rem 0 1rem">
       <a href="https://voicelogpro.com/beta" style="display:inline-block;background:linear-gradient(135deg,#00d4aa,#2deec0);color:#04130e;padding:16px 36px;border-radius:12px;font-weight:700;text-decoration:none;font-size:1.05rem;box-shadow:0 8px 24px -10px rgba(0,212,170,.5)">Join the Movement →</a>
     </div>
-    <p style="font-size:.82rem;color:#6b7178;margin:0">Built by trades, for trades. No clipboard required.</p>
+    <p style="font-size:.82rem;color:#9aa3ad;margin:0">Built by trades, for trades. No clipboard required.</p>
   </div>
 </section>
 <!-- /BRUNSON MOVEMENT -->
-<!-- CROSS-PORTFOLIO NETWORK FOOTER — generated 2026-07-18 -->
-<style>
-.portfolio-network {
-    max-width: 1200px;
-    margin: 4rem auto 2rem;
-    padding: 2rem 1.5rem;
-    border-top: 1px solid #e5e7eb;
-    font-family: system-ui, -apple-system, sans-serif;
-}
-.portfolio-network h3 {
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #9ca3af;
-    margin: 0 0 1rem;
-    text-align: center;
-}
-.network-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 0.75rem;
-}
-.network-card {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.15s;
-    background: #f9fafb;
-}
-.network-card:hover {
-    background: #f3f4f6;
-}
-.network-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-.network-name {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    color: #111827;
-    white-space: nowrap;
-}
-.network-tagline {
-    font-size: 0.6875rem;
-    color: #9ca3af;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-    .portfolio-network { border-top-color: #374151; }
-    .portfolio-network h3 { color: #6b7280; }
-    .network-card { background: #1f2937; }
-    .network-card:hover { background: #374151; }
-    .network-name { color: #f9fafb; }
-    .network-tagline { color: #6b7280; }
-}
-</style>
-<section class="portfolio-network">
-    <h3>🚀 Explore Our Network</h3>
-    <nav class="network-grid" aria-label="Portfolio network">
-            <a href="https://gitdealflow.com" class="network-card" 
-               title="GitDealFlow: Track startup acquisitions & funding rounds">
-                <span class="network-dot" style="background:#10B981"></span>
-                <span class="network-name">GitDealFlow</span>
-                <span class="network-tagline">Data & Analytics</span>
-            </a>
-            <a href="https://signals.gitdealflow.com" class="network-card" 
-               title="Signals by GitDealFlow: AI-powered startup investment signals">
-                <span class="network-dot" style="background:#3B82F6"></span>
-                <span class="network-name">Signals by GitDealFlow</span>
-                <span class="network-tagline">AI & Investing</span>
-            </a>
-            <a href="https://invisibleexit.com" class="network-card" 
-               title="Invisible Exit: Acquisition readiness for bootstrapped SaaS">
-                <span class="network-dot" style="background:#8B5CF6"></span>
-                <span class="network-name">Invisible Exit</span>
-                <span class="network-tagline">SaaS & M&A</span>
-            </a>
-            <a href="https://sipiteno.com" class="network-card" 
-               title="SipiTeno: AI Agents for SaaS Operations">
-                <span class="network-dot" style="background:#F59E0B"></span>
-                <span class="network-name">SipiTeno</span>
-                <span class="network-tagline">AI Agents & Automation</span>
-            </a>
-            <a href="https://unlocksaas.com" class="network-card" 
-               title="UnlockSaaS: Launch your SaaS in 60 days">
-                <span class="network-dot" style="background:#EC4899"></span>
-                <span class="network-name">UnlockSaaS</span>
-                <span class="network-tagline">SaaS Building</span>
-            </a>
-            <a href="https://voicelogpro.com" class="network-card" 
-               title="VoiceLogPro: Voice-to-insight for field teams">
-                <span class="network-dot" style="background:#06B6D4"></span>
-                <span class="network-name">VoiceLogPro</span>
-                <span class="network-tagline">Voice AI & Field Ops</span>
-            </a>
-            <a href="https://carshake.online" class="network-card" 
-               title="CarShake: Valet-damage-proof vehicle handover">
-                <span class="network-dot" style="background:#EF4444"></span>
-                <span class="network-name">CarShake</span>
-                <span class="network-tagline">Automotive & Insurance</span>
-            </a>
-            <a href="https://churnlens.site" class="network-card" 
-               title="ChurnLens: Churn analytics that predict, not just report">
-                <span class="network-dot" style="background:#6366F1"></span>
-                <span class="network-name">ChurnLens</span>
-                <span class="network-tagline">SaaS Analytics</span>
-            </a>
-            <a href="https://sanctionsai.dev" class="network-card" 
-               title="SanctionsAI: AI agent payment compliance">
-                <span class="network-dot" style="background:#DC2626"></span>
-                <span class="network-name">SanctionsAI</span>
-                <span class="network-tagline">Compliance & Fintech</span>
-            </a>
-            <a href="https://sipi.bot" class="network-card" 
-               title="Sipi.bot: AI spend firewall for agent payments">
-                <span class="network-dot" style="background:#14B8A6"></span>
-                <span class="network-name">Sipi.bot</span>
-                <span class="network-tagline">AI Infrastructure</span>
-            </a>
-    </nav>
-</section>
+<!-- CROSS-PORTFOLIO NETWORK FOOTER removed 2026-07-27 (DotCom Secrets S3).
+     The 10 outbound links to unrelated portfolio products (GitDealFlow,
+     CarShake, ChurnLens, SanctionsAI, Sipi.bot, …) were funnel exits — every
+     one a door out of the VoiceLogPro funnel to a different product.
+     Brunson's rule: a funnel is a guided path, not a buffet. Kill the exits.
+     The block was static hand-injected HTML, not generator output, so it is
+     safe to remove here without a rebuild clobbering it. Internal SEO hubs
+     (/alternatives-to, /for, /glossary) in the pseo-footer above are kept —
+     those are on-domain and do not leak visitors away. -->
 </body>
 </html>
