@@ -23,6 +23,48 @@ const SITEMAP_FILES = [
 ];
 const CONCURRENCY = 10;
 const TIMEOUT_MS = 15_000;
+// ── pre-flight: detect source sitemap divergence ─────────────────────
+// Catches root sitemap.xml ≠ public/sitemap.xml BEFORE build produces dist/.
+
+import { existsSync } from "node:fs";
+
+const ROOT_SITEMAP = resolve(ROOT, "sitemap.xml");
+const PUBLIC_SITEMAP = resolve(ROOT, "public/sitemap.xml");
+
+if (existsSync(ROOT_SITEMAP) && existsSync(PUBLIC_SITEMAP)) {
+  const rootXml = readFileSync(ROOT_SITEMAP, "utf-8");
+  const publicXml = readFileSync(PUBLIC_SITEMAP, "utf-8");
+  const rootUrls = new Set(extractUrls(rootXml));
+  const publicUrls = new Set(extractUrls(publicXml));
+
+  const onlyRoot = [...rootUrls].filter(u => !publicUrls.has(u));
+  const onlyPublic = [...publicUrls].filter(u => !rootUrls.has(u));
+
+  if (onlyRoot.length > 0 || onlyPublic.length > 0) {
+    console.error(
+      `\n❌ SITEMAP SOURCE DIVERGENCE — root sitemap.xml ≠ public/sitemap.xml`
+    );
+    console.error(`   root:   ${rootUrls.size} URLs`);
+    console.error(`   public: ${publicUrls.size} URLs`);
+    if (onlyRoot.length > 0) {
+      console.error(`   Only in root (${onlyRoot.length}):`);
+      for (const u of onlyRoot.slice(0, 5)) console.error(`     - ${u}`);
+      if (onlyRoot.length > 5)
+        console.error(`     ... +${onlyRoot.length - 5} more`);
+    }
+    if (onlyPublic.length > 0) {
+      console.error(`   Only in public (${onlyPublic.length}):`);
+      for (const u of onlyPublic.slice(0, 5)) console.error(`     + ${u}`);
+      if (onlyPublic.length > 5)
+        console.error(`     ... +${onlyPublic.length - 5} more`);
+    }
+    console.error(
+      "\n   Sync root and public sitemaps before deploying.\n"
+    );
+    process.exit(1);
+  }
+}
+
 const USER_AGENT = "VoiceLogPro-SitemapGuard/1.0 (pre-deploy check; +https://voicelogpro.com)";
 
 // ── helpers ──────────────────────────────────────────────────────────
