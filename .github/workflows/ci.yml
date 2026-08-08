@@ -37,3 +37,6 @@ jobs:
 
       - name: Verify prerendered HTML
         run: node scripts/verify-prerender.mjs
+
+      - name: Verify sitemap URLs (no dead pages, no noindex)
+        run: node scripts/verify-sitemap-urls.mjs
