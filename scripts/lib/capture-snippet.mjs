@@ -6,6 +6,14 @@
  * statute text) — it is appended around the verbatim legal content, not into it.
  *
  * Posts to the same live email-engine endpoint the homepage form uses, with the
+ *
+ * HOST NOTE (2026-08-09): the engine host was `email-engine-fawn` until the
+ * 2026-08-06 Vercel team consolidation deleted that project; it came back as
+ * `email-engine-pink`. The old URL 404'd for 3 days and every opt-in on the 52
+ * generated lien pages was silently discarded — the form still "sent", the
+ * visitor saw success only if the fetch resolved, and nothing reached the
+ * engine. If the engine host EVER changes again, this constant and
+ * ~/unlocksaas/app/src/lib/email-engine.ts must both be updated.
  * same routing field (`product: "voicelogpro"`) so subscribers land in the
  * VoiceLogPro persona sequence. `source`/`state` are attribution passthrough —
  * harmless if the engine ignores them.
@@ -58,5 +66,5 @@ export function captureBlock(source, state = "", label = "my state's") {
   </form>
   <p class="cap-msg" role="status" aria-live="polite" style="margin:.6rem 0 0;font-size:.9rem;min-height:1.2em"></p>
 </section>
-<script>(function(){var s=document.currentScript.previousElementSibling;while(s&&!(s.classList&&s.classList.contains('cap')))s=s.previousElementSibling;if(!s)return;var form=s.querySelector('.cap-form'),msg=s.querySelector('.cap-msg');form.addEventListener('submit',function(e){e.preventDefault();var email=form.email.value.trim();if(!email)return;var st=form.state.value||(document.getElementById('st')&&document.getElementById('st').value)||'';var src=form.source.value;msg.style.color='#475569';msg.textContent='Sending…';fetch('https://email-engine-fawn.vercel.app/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({product:'voicelogpro',email:email.toLowerCase(),source:src,state:st,heard_from:src})}).then(function(r){if(!r.ok)throw 0;msg.style.color='#047857';msg.innerHTML="You're in! Check your inbox to confirm. → <a href='/thank-you' style='color:#047857;text-decoration:underline'>Your next step</a>";form.reset();try{if(window.posthog&&posthog.capture)posthog.capture('tools_subscribe_submitted',{source:src,state:st});}catch(_){}}).catch(function(){msg.style.color='#b91c1c';msg.textContent='Something went wrong — please try again.';});});})();</script>`;
+<script>(function(){var s=document.currentScript.previousElementSibling;while(s&&!(s.classList&&s.classList.contains('cap')))s=s.previousElementSibling;if(!s)return;var form=s.querySelector('.cap-form'),msg=s.querySelector('.cap-msg');form.addEventListener('submit',function(e){e.preventDefault();var email=form.email.value.trim();if(!email)return;var st=form.state.value||(document.getElementById('st')&&document.getElementById('st').value)||'';var src=form.source.value;msg.style.color='#475569';msg.textContent='Sending…';fetch('https://email-engine-pink.vercel.app/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({product:'voicelogpro',email:email.toLowerCase(),source:src,state:st,heard_from:src})}).then(function(r){if(!r.ok)throw 0;msg.style.color='#047857';msg.innerHTML="You're in! Check your inbox to confirm. → <a href='/thank-you' style='color:#047857;text-decoration:underline'>Your next step</a>";form.reset();try{if(window.posthog&&posthog.capture)posthog.capture('tools_subscribe_submitted',{source:src,state:st});}catch(_){}}).catch(function(){msg.style.color='#b91c1c';msg.textContent='Something went wrong — please try again.';});});})();</script>`;
 }
