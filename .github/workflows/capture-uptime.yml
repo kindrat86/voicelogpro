@@ -1,0 +1,94 @@
+# Uptime check for BOTH live email-capture endpoints.
+#
+# Runs on GitHub, NOT on the Mac mini — deliberately. The 2026-08-09 outage was
+# the Mac mini's own listener crash-looping, so a monitor hosted there would
+# have died with the thing it was supposed to be watching. This must stay
+# off-box to be worth anything.
+#
+# On failure it opens ONE deduplicated issue (label: capture-outage) and closes
+# it automatically on recovery. The auto-close is load-bearing: dedup only stays
+# correct if a resolved outage clears the issue, otherwise the next outage would
+# find one already open and stay silent.
+name: capture-uptime
+
+on:
+  schedule:
+    # Every 15 minutes. GitHub delays high-frequency crons under load, which is
+    # fine — this is here to shrink "3 days of lost leads" to "minutes", not to
+    # be a precise heartbeat.
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+# Scheduled workflows only run from the DEFAULT branch — this file has no effect
+# until it is merged to main.
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: capture-uptime
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Probe capture endpoints
+        id: probe
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          node scripts/check-capture-endpoints.mjs 2>&1 | tee probe.log
+
+      - name: Open outage issue
+        if: steps.probe.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create capture-outage --color B60205 \
+            --description "A live email-capture endpoint is down" 2>/dev/null || true
+
+          existing=$(gh issue list --label capture-outage --state open \
+            --json number --jq '.[0].number // empty')
+
+          if [ -n "$existing" ]; then
+            echo "Outage issue #$existing already open — not filing a duplicate."
+            exit 1
+          fi
+
+          {
+            echo "A live email-capture endpoint is failing its uptime probe."
+            echo "**Opt-ins submitted right now are being silently discarded.**"
+            echo
+            echo '```'
+            cat probe.log
+            echo '```'
+            echo
+            echo "Probe: \`node scripts/check-capture-endpoints.mjs\`"
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            echo "This issue closes itself when the probe passes again."
+          } > issue.md
+
+          gh issue create --title "Capture endpoint DOWN" \
+            --label capture-outage --body-file issue.md
+          exit 1
+
+      - name: Close outage issue on recovery
+        if: steps.probe.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for n in $(gh issue list --label capture-outage --state open \
+            --json number --jq '.[].number'); do
+            gh issue close "$n" --comment \
+              "Capture endpoints are healthy again — closed automatically by capture-uptime."
+          done
