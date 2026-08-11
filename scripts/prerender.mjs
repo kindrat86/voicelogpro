@@ -180,16 +180,25 @@ async function prerender() {
         cssSelector: ['h1', 'h2', 'p'],
       })}</script>`;
       routeHtml = routeHtml.replace('</head>', `${eeatHead}\n</head>`);
-      const eeatByline = `<p class="author-byline" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"><span class="author" rel="author">By The Field Desk, VoiceLogPro</span> · <time datetime="${EEAT_MODIFIED}">Updated ${EEAT_MODIFIED}</time> · Published ${EEAT_PUBLISHED}</p>`;
 
-      // Inject rendered app HTML into root div. The byline goes AFTER the app
-      // HTML: author/date regexes match anywhere on the page, but crawlers that
-      // take "the first <p> over 60 chars" as the answer-first opener were
-      // picking up the hidden byline instead of each page's real opening
-      // paragraph (growth-engine C1 answer-first).
+      // NO BYLINE. Until 2026-08-11 this injected:
+      //   <p class="author-byline" style="position:absolute;width:1px;height:1px;
+      //      overflow:hidden;clip:rect(0 0 0 0)">
+      //      <span class="author" rel="author">By The Field Desk, VoiceLogPro</span> ...
+      // Two separate defects in one line:
+      //   1. HIDDEN TEXT — a 1px clipped container is hidden text under Google's
+      //      spam policies. It existed only to make the growth-engine crawler's
+      //      AUTHOR_RE/DATE_RE fire and score E-E-A-T, i.e. it optimised an audit
+      //      score against a signal no human could see. sipiteno.com shipped the
+      //      identical pattern on 52% of its URLs and it was fixed the same day.
+      //   2. FABRICATED AUTHOR — "The Field Desk" is not a person or a team.
+      //      CLAUDE.md already flags fabricated trust signals on this domain.
+      // Authorship is still declared truthfully and visibly-to-machines via the
+      // Article JSON-LD above, which names the Organization as author. That is
+      // metadata, not concealed body text, and it is accurate.
       routeHtml = routeHtml.replace(
         '<div id="root"></div>',
-        `<div id="root">${appHtml}${eeatByline}</div>`
+        `<div id="root">${appHtml}</div>`
       );
 
       // Write the route file
