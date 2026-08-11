@@ -78,13 +78,13 @@ Step-by-step guides for construction documentation best practices:
 
 Honest comparisons of VoiceLogPro vs construction management and documentation tools:
 
-- [Raken vs VoiceLogPro](https://voicelogpro.com/raken-vs-voice-log-pro): Raken is a full construction management platform with daily reporting, time cards, and safety checklists. VoiceLogPro focuses specifically on voice-to-PDF daily logs for subcontractors.
-- [Fieldwire vs VoiceLogPro](https://voicelogpro.com/fieldwire-vs-voice-log-pro): Fieldwire is a jobsite management platform with plan viewing, task management, and punch lists. VoiceLogPro is a voice-first daily reporting tool for subcontractor payment protection.
-- [Procore vs VoiceLogPro](https://voicelogpro.com/procore-vs-voice-log-pro): Procore is an enterprise construction management suite for GCs and owners. VoiceLogPro is a focused voice-to-PDF daily log tool for subcontractors who need court-admissible documentation.
+- [Raken vs VoiceLogPro](https://voicelogpro.com/vs/raken): Raken is a full construction management platform with daily reporting, time cards, and safety checklists. VoiceLogPro focuses specifically on voice-to-PDF daily logs for subcontractors.
+- [Fieldwire vs VoiceLogPro](https://voicelogpro.com/vs/fieldwire): Fieldwire is a jobsite management platform with plan viewing, task management, and punch lists. VoiceLogPro is a voice-first daily reporting tool for subcontractor payment protection.
+- [Procore vs VoiceLogPro](https://voicelogpro.com/vs/procore): Procore is an enterprise construction management suite for GCs and owners. VoiceLogPro is a focused voice-to-PDF daily log tool for subcontractors who need court-admissible documentation.
 - [Buildertrend vs VoiceLogPro](https://voicelogpro.com/buildertrend-vs-voice-log-pro): Buildertrend is a construction project management platform for home builders and remodelers. VoiceLogPro specializes in voice-first daily reports for trade subcontractors.
-- [Knowify vs VoiceLogPro](https://voicelogpro.com/knowify-vs-voice-log-pro): Knowify combines project management with construction accounting and job costing. VoiceLogPro is a dedicated voice-to-PDF daily reporting tool for lien protection.
+- [Knowify vs VoiceLogPro](https://voicelogpro.com/vs/knowify): Knowify combines project management with construction accounting and job costing. VoiceLogPro is a dedicated voice-to-PDF daily reporting tool for lien protection.
 - [JobNimbus vs VoiceLogPro](https://voicelogpro.com/jobnimbus-vs-voice-log-pro): JobNimbus is a CRM and project management tool for roofing and restoration contractors. VoiceLogPro is a voice-first daily log tool for subcontractors across multiple trades.
-- [Contractor Foreman vs VoiceLogPro](https://voicelogpro.com/contractor-foreman-vs-voice-log-pro): Contractor Foreman is an affordable all-in-one construction management tool. VoiceLogPro focuses exclusively on voice-to-PDF daily logs for payment and lien protection.
+- [Contractor Foreman vs VoiceLogPro](https://voicelogpro.com/vs/contractor-foreman): Contractor Foreman is an affordable all-in-one construction management tool. VoiceLogPro focuses exclusively on voice-to-PDF daily logs for payment and lien protection.
 
 ## Alternatives To
 

@@ -98,13 +98,13 @@ Step-by-step construction documentation guides. Total: 5 pages.
 
 ## Competitor Comparisons (8 pages)
 VoiceLogPro vs alternatives — honest comparisons. Total: 8 pages.
-- [Raken vs VoiceLogPro](https://voicelogpro.com/raken-vs-voice-log-pro)
-- [Fieldwire vs VoiceLogPro](https://voicelogpro.com/fieldwire-vs-voice-log-pro)
-- [Procore vs VoiceLogPro](https://voicelogpro.com/procore-vs-voice-log-pro)
+- [Raken vs VoiceLogPro](https://voicelogpro.com/vs/raken)
+- [Fieldwire vs VoiceLogPro](https://voicelogpro.com/vs/fieldwire)
+- [Procore vs VoiceLogPro](https://voicelogpro.com/vs/procore)
 - [Buildertrend vs VoiceLogPro](https://voicelogpro.com/buildertrend-vs-voice-log-pro)
-- [Knowify vs VoiceLogPro](https://voicelogpro.com/knowify-vs-voice-log-pro)
+- [Knowify vs VoiceLogPro](https://voicelogpro.com/vs/knowify)
 - [JobNimbus vs VoiceLogPro](https://voicelogpro.com/jobnimbus-vs-voice-log-pro)
-- [Contractor Foreman vs VoiceLogPro](https://voicelogpro.com/contractor-foreman-vs-voice-log-pro)
+- [Contractor Foreman vs VoiceLogPro](https://voicelogpro.com/vs/contractor-foreman)
 
 ## Alternatives To (9 pages)
 VoiceLogPro as alternative to popular tools. Total: 9 pages.
