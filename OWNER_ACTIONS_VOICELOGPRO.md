@@ -4,6 +4,81 @@ Date: 2026-07-23 | Repo: `~/voicelogpro` | Domain: voicelogpro.com
 
 ---
 
+## 0. 🔴 URGENT (2026-08-10) — capture backend down, cross-site
+
+**Every email capture from the React SPA (homepage hero, beta signup, crew plan)
+has been silently discarded since 2026-08-09 17:52.** `src/lib/subscribe.ts` is
+fire-and-forget by design, so the visitor still sees success. This also takes
+down **carshake.online** and the rest of the portfolio — the same listener serves
+all ten products' `/subscribe` — which is why this is an owner action, not
+something the site loop applies on its own.
+
+### Root cause (traced, not guessed)
+
+`api.carshake.online` returns 502 on every path. `cloudflared` (PID 811) is
+healthy and routes the hostname to `127.0.0.1:8788`; nothing is listening there
+because `com.carshake.macmini` is crash-looping (`launchctl list` → no PID, exit
+status 1). `PORT=8788` in `~/carshake-macmini/.env` is correct — the port is not
+the problem. The crash is:
+
+```
+Error: The module '.../better-sqlite3/build/Release/better_sqlite3.node'
+was compiled against a different Node.js version using
+NODE_MODULE_VERSION 127. This version of Node.js requires
+NODE_MODULE_VERSION 147.
+```
+
+`~/.local/bin/node` became a **symlink to Homebrew node v26.7.0 on 2026-08-09
+12:00:53** (NODE_MODULE_VERSION 147). The installed `better-sqlite3` 11.10.0
+native binary is a prebuild for Node 22 (NMV 127). `migrate-on-start.js` opens
+the DB at boot, so the process dies instantly; launchd's `KeepAlive` +
+`ThrottleInterval 10` then restarts it every 10s. That loop has run **10,364
+times** and written a 6.2 MB `/tmp/carshake-macmini.err.log`.
+
+> ⚠️ **`npm rebuild better-sqlite3` does NOT fix this.** Verified 2026-08-10 in a
+> throwaway dir: better-sqlite3 11.10.0 fails to compile against Node 26 headers
+> with 6 errors (`make` exit 2). Don't burn time on it.
+
+### Fix — Option A (recommended: restore the runtime, no code change)
+
+Puts back the exact ABI the shipped binary was built for. `node@22` is keg-only,
+so it will not disturb the linked Node 26 used elsewhere. `scripts/run.sh`
+already sources `.env` with `set -a` *before* resolving `NODE_BIN`, so this needs
+no code edit:
+
+```bash
+brew install node@22
+printf 'NODE_BIN=/opt/homebrew/opt/node@22/bin/node\n' >> ~/carshake-macmini/.env
+: > /tmp/carshake-macmini.err.log        # 6.2 MB of crash-loop spam
+launchctl kickstart -k gui/$(id -u)/com.carshake.macmini
+```
+
+### Fix — Option B (upgrade the native dep)
+
+better-sqlite3 **13.0.3** installs from prebuild and loads + queries fine on Node
+26 (verified 2026-08-10). But that is a two-major jump from 11.10.0 on the
+library holding every portfolio lead, so it needs an API review and a migration
+test against a copy of the SQLite file first — not a hot-fix under an outage.
+
+### Verify the fix
+
+```bash
+curl -fsS https://api.carshake.online/health          # {"ok":true,"service":"carshake-macmini",...}
+node ~/voicelogpro/scripts/check-capture-endpoints.mjs   # expect: All 2 capture endpoints healthy.
+launchctl list | grep carshake.macmini                # expect a real PID, status 0
+```
+
+Then submit a real opt-in on voicelogpro.com and confirm the row lands (leads are
+persisted before the Resend send, so a mail failure cannot lose it).
+
+### Follow-up
+
+The Node symlink flip on 2026-08-09 12:00 was machine-wide. Anything else on this
+box with compiled native modules (other `launchctl list` jobs, other repos'
+`node_modules`) may be broken the same way and equally silent — worth a sweep.
+
+---
+
 ## 1. GSC + Bing Webmaster Tools — Submit & Verify
 
 The site was verified in GSC previously. After this deploy:
