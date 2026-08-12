@@ -29,8 +29,13 @@
 //     blocked ("requires a 'TrustedScriptURL'"). We register a permissive
 //     `default` Trusted Types policy first so that assignment passes through.
 //     Guarded on !defaultPolicy so we never clobber an existing one.
-//  2. script-src/connect-src allow `eu.i.posthog.com` but NOT `eu-assets.…`, so
-//     we load array.js straight from api_host instead of the `-assets` rewrite.
+//  2. We load array.js straight from api_host instead of the stock `-assets`
+//     rewrite. This originally worked around script-src omitting
+//     `eu-assets.i.posthog.com`; that host was added to script-src AND
+//     connect-src on 2026-08-11 (it was also silently killing this snippet's
+//     config.js fetch, i.e. remote config + surveys, while core capture
+//     survived). The direct load is kept anyway: it is one less origin in the
+//     critical path, and it is the configuration these pages are known-good on.
 //
 // `createHTML` is included alongside `createScriptURL`/`createScript` even
 // though PostHog's own loader only needs the latter two: this is the ONE
