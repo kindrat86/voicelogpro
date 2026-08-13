@@ -72,7 +72,7 @@ export function BeforeAfterSlider({
           height={512}
           className="absolute inset-0 w-full h-full object-cover"
           draggable={false}
-          fetchpriority="high"
+          {...({ fetchpriority: "high" } as Record<string, string>)}
           decoding="async"
         />
 
