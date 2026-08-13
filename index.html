@@ -113,14 +113,6 @@
       "description": "AI-powered construction daily reporting tool. Converts voice notes into legally defensible PDF reports for subcontractors. Features automatic weather tagging, RFI detection, and compliance documentation for Texas Property Code Chapter 53, NSW Security of Payment Act (SOPA), and UK Building Safety Act Golden Thread requirements.",
       "disambiguatingDescription": "VoiceLogPro is a voice-to-PDF daily construction log app (voice on-site → timestamped, court-admissible daily-report PDF) — not a general-purpose meeting/voice-transcription tool (Otter, Rev, Fireflies), and not a full construction-management platform (Procore, Raken).",
       "url": "https://voicelogpro.com",
-      "offers": {
-        "@type": "Offer",
-        "price": "49.00",
-        "priceCurrency": "USD",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/BackOrder",
-        "availabilityStarts": "2026-09-01"
-      },
       "audience": {
         "@type": "BusinessAudience",
         "audienceType": "Electrical, Plumbing, and HVAC Subcontractors"
@@ -467,7 +459,14 @@ try{for(var k in localStorage){if(/^(_fb|_rdt|_ga|_gcl)/.test(k))localStorage.re
     <a href="https://voicelogpro.com/#defense-kit" style="display:inline-block;background:#0066cc;color:white;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.05rem">Get Free Defense Kit →</a>
     <p style="font-size:0.75rem;color:#666;margin-top:8px">No spam. Unsubscribe anytime.</p>
   </div>
-  <p style="color:#cc3300;font-weight:600;margin-top:12px">⏰ Beta Access — Crew Plan at $12/mo (50% Off)</p>
+  <!-- Urgency line rewritten 2026-08-13. The previous copy advertised a
+       half-price beta rate that contradicted src/lib/pricing.ts (the declared
+       single source of truth, Crew Plan = $49/month) and the value stack below,
+       and it promised a discount on a plan with no checkout — this page states
+       twice that nothing is payable and no card is required. Deliberately does
+       not quote the old figure: this comment ships into every prerendered page,
+       so repeating it here would trip the fabricated-number grep in CLAUDE.md. -->
+  <p style="color:#cc3300;font-weight:600;margin-top:12px">⏰ Founding-member beta — reserve the $49/mo Crew Plan price. Nothing to pay yet.</p>
 </section>
 
 <!-- BRUNSON FALSE BELIEFS — Expert Secrets Ch.7 (idempotency:brunson-false-beliefs-v1) -->
