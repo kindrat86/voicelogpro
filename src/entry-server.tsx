@@ -2,6 +2,7 @@
  * Server-side render for prerendering routes.
  * Uses dynamic CJS-compatible imports to workaround ESM/CJS interop issues with react-helmet-async.
  */
+import { Suspense } from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -106,6 +107,14 @@ export async function render(url: string): Promise<RenderResult> {
           <Sonner />
           <StaticRouter location={url}>
             <div className="pb-24 md:pb-0">
+              {/* MUST mirror App.tsx, which wraps Routes in this exact Suspense
+                  boundary with this exact fallback. renderToString emits
+                  <!--$--> / <!--/$--> markers for a Suspense boundary and
+                  hydrateRoot looks for them; when the server omitted the
+                  boundary the client found none, which failed hydration at
+                  <Suspense> and made React discard the whole prerender
+                  (#418 -> #423). Keep the two trees in step. */}
+              <Suspense fallback={<div className="min-h-screen bg-background" />}>
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/crew-plan" element={<CrewPlan />} />
@@ -145,6 +154,7 @@ export async function render(url: string): Promise<RenderResult> {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
+              </Suspense>
             </div>
           </StaticRouter>
         </TooltipProvider>
