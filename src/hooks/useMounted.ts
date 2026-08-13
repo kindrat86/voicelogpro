@@ -3,7 +3,7 @@
  *
  * WHY THIS EXISTS
  * This app prerenders to static HTML (scripts/prerender.mjs) and then hydrates
- * it in entry-client.tsx. Hydration requires the client's FIRST render to
+ * it in src/main.tsx. Hydration requires the client's FIRST render to
  * produce the same tree the server produced. Two pieces of chrome broke that
  * rule and were rendered only on the client:
  *
