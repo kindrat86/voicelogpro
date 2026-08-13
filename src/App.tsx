@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { MobileBottomBar } from "@/components/MobileBottomBar";
 import { ConsentBanner } from "@/components/ConsentBanner";
 import { useConsent } from "@/hooks/useConsent";
+import { useMounted } from "@/hooks/useMounted";
 import Index from "./pages/Index";
 
 // Lazy load non-critical routes to reduce initial bundle size
@@ -75,11 +76,27 @@ const ScrollToHash = () => {
   return null;
 };
 
-/** GDPR consent banner (renders once, then never again). */
+/** GDPR consent banner (renders once, then never again).
+ *
+ * Deliberately renders nothing until mounted. `showBanner` is `choice === null`
+ * and `choice` starts null, so this used to render on the client's FIRST pass
+ * while the prerendered HTML contained no banner at all — a mismatch at the top
+ * of the tree that made React discard the whole prerender (errors #418/#423).
+ * Whether to show it depends on localStorage, which prerendering cannot know,
+ * so post-mount is the only correct time to decide. */
 const ConsentGate = () => {
+  const mounted = useMounted();
   const consent = useConsent();
-  if (!consent.showBanner) return null;
+  if (!mounted || !consent.showBanner) return null;
   return <ConsentBanner onDecide={consent.decide} />;
+};
+
+/** Mobile nav is client-only chrome; the prerender emits none, so it must not
+ *  appear on the hydrating render either. */
+const MobileBottomBarGate = () => {
+  const mounted = useMounted();
+  if (!mounted) return null;
+  return <MobileBottomBar />;
 };
 
 const App = () => (
@@ -147,7 +164,7 @@ const App = () => (
             </Routes>
           </Suspense>
         </div>
-        <MobileBottomBar />
+        <MobileBottomBarGate />
         {/* Brunson Trust Bar — Dotcom Secrets Ch 7: social proof + lead magnet + urgency + guarantee */}
         <div dangerouslySetInnerHTML={{ __html: `<!-- BRUNSON TRUST BAR -- idempotency:trust-bar-v1 -->
 <section class="brunson-trust-bar" style="background:linear-gradient(135deg, #0f172a, #1e293b);color:#e8eaed;padding:40px 24px;margin:60px 0 0;border-top:3px solid #00d4aa;text-align:center;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">
