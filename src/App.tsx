@@ -8,57 +8,18 @@ import { MobileBottomBar } from "@/components/MobileBottomBar";
 import { ConsentBanner } from "@/components/ConsentBanner";
 import { useConsent } from "@/hooks/useConsent";
 import { useMounted } from "@/hooks/useMounted";
-import Index from "./pages/Index";
+import { ROUTES } from "./routes";
 
-// Lazy load non-critical routes to reduce initial bundle size
-const CrewPlan = lazy(() => import("./pages/CrewPlan"));
-const Blog = lazy(() => import("./pages/Blog"));
-const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-// GEO-optimized blog posts
-const TexasLienLaw2025 = lazy(() => import("./pages/blog/TexasLienLaw2025"));
-const CaliforniaPreliminaryNotice = lazy(() => import("./pages/blog/CaliforniaPreliminaryNotice"));
-const FloridaNoticeToOwner = lazy(() => import("./pages/blog/FloridaNoticeToOwner"));
-const DailyLogBestPractices = lazy(() => import("./pages/blog/DailyLogBestPractices"));
-const NewYorkLienLaw = lazy(() => import("./pages/blog/NewYorkLienLaw"));
-const LienDeadlineCheatSheet = lazy(() => import("./pages/blog/LienDeadlineCheatSheet"));
 
-// Solutions pages (entity-specific landing pages for LLM SEO)
-const TexasMechanicsLien = lazy(() => import("./pages/solutions/TexasMechanicsLien"));
-const ConstructiveAcceleration = lazy(() => import("./pages/solutions/ConstructiveAcceleration"));
-const GoldenThread = lazy(() => import("./pages/solutions/GoldenThread"));
-const FightUnfairDeductions = lazy(() => import("./pages/solutions/FightUnfairDeductions"));
-const PhasePaymentDisputes = lazy(() => import("./pages/solutions/PhasePaymentDisputes"));
-const ElectricalInventoryTracking = lazy(() => import("./pages/solutions/ElectricalInventoryTracking"));
-const SmallElectricalBusinessSoftware = lazy(() => import("./pages/solutions/SmallElectricalBusinessSoftware"));
 
-// Comparison landing pages
-const RakenComparison = lazy(() => import("./pages/RakenComparison"));
-const FieldwireComparison = lazy(() => import("./pages/FieldwireComparison"));
-const ComparisonPage = lazy(() => import("./pages/ComparisonPage"));
-const ComparisonsHub = lazy(() => import("./pages/ComparisonsHub"));
 
-// How-to guides (search-intent prefix pages)
-const HowToPage = lazy(() => import("./pages/HowToPage"));
-const HowToHub = lazy(() => import("./pages/HowToHub"));
 
-// Trade vertical pages (niche landing pages)
-const TradePage = lazy(() => import("./pages/TradePage"));
-const TradesHub = lazy(() => import("./pages/TradesHub"));
 
-// Flagship topic pillar (claims the "court-ready daily log" wedge)
-const CourtReadyDailyLogs = lazy(() => import("./pages/CourtReadyDailyLogs"));
 
-// Standalone conversion landing page
-const BetaSignup = lazy(() => import("./pages/BetaSignup"));
 
-// Funnel delivery pages (lead magnet + double-opt-in confirmation)
-const DefenseKit = lazy(() => import("./pages/DefenseKit"));
-const Welcome = lazy(() => import("./pages/Welcome"));
-const AboutPage = lazy(() => import("./pages/AboutPage"));
-const ContactPage = lazy(() => import("./pages/ContactPage"));
-const Dream100 = lazy(() => import("./pages/Dream100"));
+
 
 const queryClient = new QueryClient();
 
@@ -110,56 +71,12 @@ const App = () => (
         <div className="pb-24 md:pb-0">
           <Suspense fallback={<div className="min-h-screen bg-background" />}>
             <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/crew-plan" element={<CrewPlan />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              {/* Single blog post routes */}
-              <Route path="/blog/texas-lien-law" element={<TexasLienLaw2025 />} />
-              {/* GEO-optimized blog posts */}
-              <Route path="/blog/texas-property-code-chapter-53-guide-2025" element={<TexasLienLaw2025 />} />
-              <Route path="/blog/california-20-day-preliminary-notice-guide-2026" element={<CaliforniaPreliminaryNotice />} />
-              <Route path="/blog/florida-notice-to-owner-45-day-guide-2026" element={<FloridaNoticeToOwner />} />
-              <Route path="/blog/construction-daily-log-best-practices-legal-court" element={<DailyLogBestPractices />} />
-              <Route path="/blog/new-york-lien-law-article-2-subcontractor-guide-2026" element={<NewYorkLienLaw />} />
-              <Route path="/blog/construction-lien-deadlines-cheat-sheet-2026" element={<LienDeadlineCheatSheet />} />
-              {/* Solutions pages - entity-specific landing pages */}
-              <Route path="/solutions/texas-mechanics-lien-compliance" element={<TexasMechanicsLien />} />
-              <Route path="/solutions/constructive-acceleration-defense" element={<ConstructiveAcceleration />} />
-              <Route path="/solutions/building-safety-act-golden-thread" element={<GoldenThread />} />
-              <Route path="/solutions/fight-unfair-gc-deductions" element={<FightUnfairDeductions />} />
-              <Route path="/solutions/phase-payment-disputes" element={<PhasePaymentDisputes />} />
-              <Route path="/solutions/electrical-inventory-tracking" element={<ElectricalInventoryTracking />} />
-              <Route path="/solutions/small-electrical-business-software" element={<SmallElectricalBusinessSoftware />} />
-              {/* Comparison landing pages */}
-              <Route path="/raken-vs-voice-log-pro" element={<RakenComparison />} />
-              <Route path="/fieldwire-vs-voice-log-pro" element={<FieldwireComparison />} />
-              {/* Programmatic SEO comparison pages */}
-              <Route path="/compare" element={<ComparisonsHub />} />
-              <Route path="/procore-vs-voice-log-pro" element={<ComparisonPage />} />
-              <Route path="/buildertrend-vs-voice-log-pro" element={<ComparisonPage />} />
-              <Route path="/contractor-foreman-vs-voice-log-pro" element={<ComparisonPage />} />
-              <Route path="/jobnimbus-vs-voice-log-pro" element={<ComparisonPage />} />
-              <Route path="/knowify-vs-voice-log-pro" element={<ComparisonPage />} />
-              {/* Flagship topic pillar */}
-              <Route path="/court-ready-daily-logs" element={<CourtReadyDailyLogs />} />
-              {/* How-to guides (search-intent prefix pages) */}
-              <Route path="/how-to" element={<HowToHub />} />
-              <Route path="/how-to/:slug" element={<HowToPage />} />
-              {/* Trade vertical pages (niche landing pages) */}
-              <Route path="/for" element={<TradesHub />} />
-              <Route path="/for/:slug" element={<TradePage />} />
-              {/* Standalone conversion landing page */}
-              <Route path="/beta" element={<BetaSignup />} />
-
-              <Route path="/defense-kit" element={<DefenseKit />} />
-              <Route path="/welcome" element={<Welcome />} />
-              {/* Trust pages */}
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/dream-100" element={<Dream100 />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              {/* Single source of truth: src/routes.tsx. Do NOT add a <Route>
+                  here — add it to ROUTES so the prerenderer gets it too. */}
+              {ROUTES.map(({ path, load, eager }) => {
+                const C = eager ?? lazy(load);
+                return <Route key={path} path={path} element={<C />} />;
+              })}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

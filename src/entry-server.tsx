@@ -2,7 +2,9 @@
  * Server-side render for prerendering routes.
  * Uses dynamic CJS-compatible imports to workaround ESM/CJS interop issues with react-helmet-async.
  */
-import { Suspense } from 'react';
+import { Suspense, type ComponentType } from 'react';
+import { ROUTES } from './routes';
+import NotFound from './pages/NotFound';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -11,7 +13,6 @@ import { Toaster } from '@/components/ui/toaster';
 import { Toaster as Sonner } from '@/components/ui/sonner';
 import { Routes, Route } from 'react-router-dom';
 
-// i18n for server-side rendering
 import i18n from './i18n';
 import { I18nextProvider } from 'react-i18next';
 
@@ -29,53 +30,13 @@ export async function initHelmet() {
   return { HelmetProvider, Helmet };
 }
 
-// Direct imports for SSR (no lazy — must be synchronous for renderToString)
-import Index from './pages/Index';
-import CrewPlan from './pages/CrewPlan';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import NotFound from './pages/NotFound';
 
-// Solutions pages
-import TexasMechanicsLien from './pages/solutions/TexasMechanicsLien';
-import ConstructiveAcceleration from './pages/solutions/ConstructiveAcceleration';
-import GoldenThread from './pages/solutions/GoldenThread';
-import FightUnfairDeductions from './pages/solutions/FightUnfairDeductions';
-import PhasePaymentDisputes from './pages/solutions/PhasePaymentDisputes';
-import ElectricalInventoryTracking from './pages/solutions/ElectricalInventoryTracking';
-import SmallElectricalBusinessSoftware from './pages/solutions/SmallElectricalBusinessSoftware';
 
-// Blog posts
-import TexasLienLaw2025 from './pages/blog/TexasLienLaw2025';
-import CaliforniaPreliminaryNotice from './pages/blog/CaliforniaPreliminaryNotice';
-import FloridaNoticeToOwner from './pages/blog/FloridaNoticeToOwner';
-import DailyLogBestPractices from './pages/blog/DailyLogBestPractices';
-import NewYorkLienLaw from './pages/blog/NewYorkLienLaw';
-import LienDeadlineCheatSheet from './pages/blog/LienDeadlineCheatSheet';
 
-// Comparison pages
-import RakenComparison from './pages/RakenComparison';
-import FieldwireComparison from './pages/FieldwireComparison';
-import ComparisonPage from './pages/ComparisonPage';
-import ComparisonsHub from './pages/ComparisonsHub';
 
-// How-to guides
-import HowToPage from './pages/HowToPage';
-import HowToHub from './pages/HowToHub';
 
-// Trade vertical pages
-import TradePage from './pages/TradePage';
-import TradesHub from './pages/TradesHub';
 
-// Flagship topic pillar
-import CourtReadyDailyLogs from './pages/CourtReadyDailyLogs';
 
-// Standalone
-import BetaSignup from './pages/BetaSignup';
-import DefenseKit from './pages/DefenseKit';
-import Welcome from './pages/Welcome';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
 
 interface RenderResult {
   html: string;
@@ -88,6 +49,16 @@ export async function render(url: string): Promise<RenderResult> {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // renderToString has no Suspense support: a React.lazy component would
+  // render the fallback instead of the page. Await every route module first
+  // and hand renderToString concrete components.
+  const resolved: Record<string, ComponentType> = {};
+  await Promise.all(
+    ROUTES.map(async ({ path, load }) => {
+      resolved[path] = (await load()).default;
+    })
+  );
+
   const helmetContext: Record<string, any> = {};
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -116,42 +87,13 @@ export async function render(url: string): Promise<RenderResult> {
                   (#418 -> #423). Keep the two trees in step. */}
               <Suspense fallback={<div className="min-h-screen bg-background" />}>
               <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/crew-plan" element={<CrewPlan />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/blog/texas-lien-law" element={<TexasLienLaw2025 />} />
-                <Route path="/blog/texas-property-code-chapter-53-guide-2025" element={<TexasLienLaw2025 />} />
-                <Route path="/blog/california-20-day-preliminary-notice-guide-2026" element={<CaliforniaPreliminaryNotice />} />
-                <Route path="/blog/florida-notice-to-owner-45-day-guide-2026" element={<FloridaNoticeToOwner />} />
-                <Route path="/blog/construction-daily-log-best-practices-legal-court" element={<DailyLogBestPractices />} />
-                <Route path="/blog/new-york-lien-law-article-2-subcontractor-guide-2026" element={<NewYorkLienLaw />} />
-                <Route path="/blog/construction-lien-deadlines-cheat-sheet-2026" element={<LienDeadlineCheatSheet />} />
-                <Route path="/solutions/texas-mechanics-lien-compliance" element={<TexasMechanicsLien />} />
-                <Route path="/solutions/constructive-acceleration-defense" element={<ConstructiveAcceleration />} />
-                <Route path="/solutions/building-safety-act-golden-thread" element={<GoldenThread />} />
-                <Route path="/solutions/fight-unfair-gc-deductions" element={<FightUnfairDeductions />} />
-                <Route path="/solutions/phase-payment-disputes" element={<PhasePaymentDisputes />} />
-                <Route path="/solutions/electrical-inventory-tracking" element={<ElectricalInventoryTracking />} />
-                <Route path="/solutions/small-electrical-business-software" element={<SmallElectricalBusinessSoftware />} />
-                <Route path="/raken-vs-voice-log-pro" element={<RakenComparison />} />
-                <Route path="/fieldwire-vs-voice-log-pro" element={<FieldwireComparison />} />
-                <Route path="/compare" element={<ComparisonsHub />} />
-                <Route path="/procore-vs-voice-log-pro" element={<ComparisonPage />} />
-                <Route path="/buildertrend-vs-voice-log-pro" element={<ComparisonPage />} />
-                <Route path="/contractor-foreman-vs-voice-log-pro" element={<ComparisonPage />} />
-                <Route path="/jobnimbus-vs-voice-log-pro" element={<ComparisonPage />} />
-                <Route path="/knowify-vs-voice-log-pro" element={<ComparisonPage />} />
-                <Route path="/court-ready-daily-logs" element={<CourtReadyDailyLogs />} />
-                <Route path="/how-to" element={<HowToHub />} />
-                <Route path="/how-to/:slug" element={<HowToPage />} />
-                <Route path="/for" element={<TradesHub />} />
-                <Route path="/for/:slug" element={<TradePage />} />
-                <Route path="/beta" element={<BetaSignup />} />
-                <Route path="/defense-kit" element={<DefenseKit />} />
-                <Route path="/welcome" element={<Welcome />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
+                {/* Built from the SAME src/routes.tsx the client uses.
+                    renderToString cannot suspend, so every component is
+                    awaited in render() below and passed in resolved. */}
+                {ROUTES.map(({ path }) => {
+                  const C = resolved[path];
+                  return C ? <Route key={path} path={path} element={<C />} /> : null;
+                })}
                 <Route path="*" element={<NotFound />} />
               </Routes>
               </Suspense>
