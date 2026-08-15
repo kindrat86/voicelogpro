@@ -4,17 +4,25 @@ on:
   push:
   pull_request:
 
+# One in-flight run per ref: rapid pushes each used to start a fresh run while
+# the previous was still executing (the pattern that exhausted the account's
+# free Actions minutes on 2026-08-06). A new push cancels only its own branch's
+# in-progress run.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Validate JSON-LD (source pSEO pages)
         run: python3 scripts/validate_jsonld.py .
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
