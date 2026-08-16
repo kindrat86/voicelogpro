@@ -5,6 +5,15 @@
 # have died with the thing it was supposed to be watching. This must stay
 # off-box to be worth anything.
 #
+# ALERT MODEL (revised 2026-08-15, after the 5-minute tunnel blip):
+# The deduplicated issue IS the alert. The run itself stays GREEN whenever the
+# alert was delivered (issue filed, or an outage issue already open). The OLD
+# behavior — exit 1 on every failing tick — meant one "Run failed" email per
+# 15-minute tick for the whole outage (a 3-day outage ≈ 288 emails) even though
+# the issue had already paged on minute one. The run goes RED only when the
+# alert path itself is broken: endpoints down AND no issue could be filed or
+# found — that is the one state where an outage would otherwise be silent.
+#
 # On failure it opens ONE deduplicated issue (label: capture-outage) and closes
 # it automatically on recovery. The auto-close is load-bearing: dedup only stays
 # correct if a resolved outage clears the issue, otherwise the next outage would
@@ -35,9 +44,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
 
@@ -48,7 +57,10 @@ jobs:
           set -o pipefail
           node scripts/check-capture-endpoints.mjs 2>&1 | tee probe.log
 
+      # DOWN → file the ONE deduplicated issue. Deliberately exits 0: the issue
+      # is the alert, and a red run would only add per-tick email spam.
       - name: Open outage issue
+        id: outage
         if: steps.probe.outcome == 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -61,7 +73,8 @@ jobs:
 
           if [ -n "$existing" ]; then
             echo "Outage issue #$existing already open — not filing a duplicate."
-            exit 1
+            echo "delivered=true" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
 
           {
@@ -73,6 +86,8 @@ jobs:
             echo '```'
             echo
             echo "Probe: \`node scripts/check-capture-endpoints.mjs\`"
+            # Safe interpolation: server_url/repository/run_id are GitHub-set,
+            # not attacker-controllable event fields.
             echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo
             echo "This issue closes itself when the probe passes again."
@@ -80,6 +95,15 @@ jobs:
 
           gh issue create --title "Capture endpoint DOWN" \
             --label capture-outage --body-file issue.md
+          echo "delivered=true" >> "$GITHUB_OUTPUT"
+
+      # Red ONLY when the alert could not be delivered — endpoints down AND no
+      # outage issue exists. This is the silent-outage canary.
+      - name: Fail if the outage alert could not be delivered
+        if: steps.probe.outcome == 'failure' && steps.outage.outputs.delivered != 'true'
+        run: |
+          echo "::error::Capture endpoints are DOWN and no outage issue exists — the alert was NOT delivered. File it manually."
+          cat probe.log
           exit 1
 
       - name: Close outage issue on recovery
