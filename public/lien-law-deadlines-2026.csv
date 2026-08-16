@@ -1,53 +1,52 @@
-State,Abbr,Preliminary Notice Deadline,Lien Filing Deadline,Enforcement Deadline,Special Notes
-Alabama,AL,Not required for residential; 30 days for commercial,6 months after last work,6 months after filing,Balance lien only for unpaid portion
-Alaska,AK,15 days after first work,120 days after last work,6 months after filing,Owner-occupied residential requires notice
-Arizona,AZ,20 days after first work,120 days after completion (60 days if no NOO),6 months after filing,Preliminary 20-day notice is mandatory
-Arkansas,AR,75 days after last work (residential),120 days after last work,15 months after filing,Residential requires 10-day pre-lien notice
-California,CA,20 days after first work,90 days after completion,90 days after filing,Strict preliminary notice requirement for all tiers
-Colorado,CO,Not required but recommended,4 months after last work,6 months after filing,One notice covers all work
-Connecticut,CT,Not required for original contractors,90 days after last work,1 year after filing,Subcontractors must serve notice within 60 days
-Delaware,DE,Not required,180 days after last work,1 year after filing,Must file in Superior Court
-Florida,FL,45 days after first work (Notice to Owner),90 days after last work,1 year after filing,Notice to Owner is strictly required for subcontractors
-Georgia,GA,Not required,90 days after last work,365 days after filing,Material suppliers have same deadline as contractors
-Hawaii,HI,Not required,45 days after last work,3 months after filing,Notice of completion can shorten deadlines
-Idaho,ID,Not required,90 days after last work,6 months after filing,Must include verified statement of amount due
-Illinois,IL,60 days after last work (subcontractors),4 months after last work,2 years after filing,Original contractor: file within 4 months
-Indiana,IN,30 days after first work (residential),90 days after last work (60 days for residential),1 year after filing,Residential pre-lien notice required
-Iowa,IA,Not required,90 days after last work,2 years after filing,Owner may demand suit within 30 days
-Kansas,KS,Not required,4 months after last work (3 months for residential),1 year after filing,Residential projects have shorter deadlines
-Kentucky,KY,75 days after last work (residential),6 months after last work,1 year after filing,Must file statement of amount due
-Louisiana,LA,Not required,60 days after last work (30 days if NOO filed),1 year after filing,Notice of termination shortens deadlines
-Maine,ME,Not required,90 days after last work,120 days after filing,Must include sworn statement
-Maryland,MD,120 days after last work (residential),180 days after last work,1 year after filing,Notice of intention to claim lien required for subcontractors
-Massachusetts,MA,Not required,90 days after last work (subcontractors: 60 days after NOF),90 days after filing,Must record notice of contract for large projects
-Michigan,MI,20 days after first work (residential),90 days after last work,1 year after filing,Residential requires notice of furnishing
-Minnesota,MN,45 days after first work (residential),120 days after last work,1 year after filing,Pre-lien notice required for all tiers
-Mississippi,MS,Not required,"12 months after last work (commercial), 90 days (residential)",1 year after filing,No preliminary notice required
-Missouri,MO,5 days before filing (residential),6 months after last work,6 months after filing,Residential requires 10-day pre-lien notice
-Montana,MT,20 days after first work (residential),90 days after last work,2 years after filing,Notice of right to claim lien required
-Nebraska,NE,Not required,120 days after last work,2 years after filing,Must include verified itemized statement
-Nevada,NV,45 days after first work (residential),90 days after last work,6 months after filing,Notice of right to lien required for all
-New Hampshire,NH,Not required,120 days after last work,120 days after filing,Must file attested account
-New Jersey,NJ,60 days after last work (residential),90 days after last work (120 days for residential),1 year after filing,NOC filing can shorten deadlines
-New Mexico,NM,60 days after first work (commercial),120 days after last work,2 years after filing,Notice of claim of lien required
-New York,NY,Not required for commercial,8 months after last work (commercial),1 year after filing,Residential: 4 months filing deadline
-North Carolina,NC,15 days after first work (subcontractors),120 days after last work,180 days after filing,Notice of claim of lien on funds required
-North Dakota,ND,Not required,90 days after last work,3 years after filing,Must include itemized statement
-Ohio,OH,21 days after first work (residential),75 days after last work (60 days residential),6 years after filing,Notice of furnishing required for all tiers
-Oklahoma,OK,75 days after last work (residential),4 months after last work,1 year after filing,Pre-lien notice required for residential
-Oregon,OR,8 days before first work (residential),75 days after last work,120 days after filing,Notice of right to lien required for all
-Pennsylvania,PA,30 days after first work (subcontractors),6 months after last work,2 years after filing,Formal notice of intention to file required
-Rhode Island,RI,Not required,200 days after last work,40 days after notice,Must file notice of intention
-South Carolina,SC,15 days before first work (residential),90 days after last work,6 months after filing,Notice of furnishing required
-South Dakota,SD,Not required,120 days after last work,1 year after filing,Must include verified itemized account
-Tennessee,TN,Not required,90 days after last work,1 year after filing,Notice of nonpayment may be required
-Texas,TX,15th day of 2nd month after work (residential),15th day of 4th month after last work,1 year after filing (2 years for residential),Strict deadlines — miss by one day and lien is void
-Utah,UT,20 days after first work,180 days after completion of original contract,180 days after filing,Notice of pre-lien required
-Vermont,VT,Not required,180 days after last work,1 year after filing,Must file notice of lien
-Virginia,VA,30 days after first work (residential),90 days after last work,6 months after filing,Must include memorandum of lien
-Washington,WA,10 days before first work (residential),90 days after last work,8 months after filing,Notice to owner/customer is strictly required
-West Virginia,WV,Not required,100 days after last work,6 months after filing,Notice of mechanics lien required
-Wisconsin,WI,60 days after first work (residential),6 months after last work,2 years after filing,Notice of intent to file lien required
-Wyoming,WY,30 days after first work (commercial),120 days after last work (commercial),180 days after filing,Notice of intent to lien required
-District of Columbia,DC,Not required,90 days after last work,180 days after filing,Notice of intent required
-"Source: State mechanics lien statutes, 2026 compilation. CC BY 4.0. Cite as: VoiceLogPro (voicelogpro.com), ""Construction Lien Law Deadlines by State"", 2026. Disclaimer: Not legal advice. Verify current statutes before relying on deadlines."
+State,Abbr,Preliminary Notice Deadline,Lien Filing Deadline,Enforcement Deadline,Statute Citation,Statute URL,Last Verified,Special Notes
+Alabama,AL,N/A,6 months from last furnishing,6 months after filing,Ala. Code § 35-11-210 et seq.,https://alison.legislature.state.al.us/code-of-alabama,2026-08-14,Balance lien only for unpaid portion
+Alaska,AK,15 days from first furnishing,120 days from last furnishing,6 months after filing,Alaska Stat. § 34.35.005 et seq.,https://www.akleg.gov/statutes/Title34/Chapter35/,2026-08-14,Owner-occupied residential requires notice
+Arizona,AZ,20 days from first furnishing,120 days after completion (60 days if no NOO),6 months after filing,A.R.S. § 33-981 et seq.,https://www.azleg.gov/arsDetail/?title=33,2026-08-14,Preliminary 20-day notice is mandatory
+Arkansas,AR,75 days from last furnishing (residential),120 days from last furnishing,15 months after filing,Ark. Code § 18-44-101 et seq.,https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-44-101/,2026-08-14,Residential requires 10-day pre-lien notice
+California,CA,20 days from first furnishing,90 days after completion,90 days after filing,Cal. Civ. Code § 8000 et seq.,https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?division=2.&lawCode=CIV&title=8.,2026-08-14,Strict preliminary notice requirement for all tiers
+Colorado,CO,N/A,4 months from last furnishing,6 months after filing,Colo. Rev. Stat. § 38-22-101 et seq.,https://leg.colorado.gov/sites/default/files/2021-09/title-38.pdf,2026-08-14,One notice covers all work
+Connecticut,CT,N/A,90 days from last furnishing,1 year after filing,Conn. Gen. Stat. § 49-33 et seq.,https://www.cga.ct.gov/current/pub/chap_847.htm,2026-08-14,Subcontractors must serve notice within 60 days
+Delaware,DE,N/A,180 days from last furnishing,1 year after filing,Del. Code tit. 6 § 2701 et seq.,https://delcode.delaware.gov/title6/c027/,2026-08-14,Must file in Superior Court
+District of Columbia,DC,N/A,90 days from last furnishing,180 days after filing,D.C. Code § 40-301.01 et seq.,https://code.dccouncil.gov/us/dc/council/code/titles/40/chapters/3,2026-08-14,Notice of intent required
+Florida,FL,45 days from first furnishing (Notice to Owner),90 days from last furnishing,1 year after filing,Fla. Stat. ch. 713,https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0713/0713.html,2026-08-14,Notice to Owner is strictly required for subcontractors
+Georgia,GA,N/A,90 days from last furnishing,365 days after filing,O.C.G.A. § 44-14-361 et seq.,https://law.justia.com/codes/georgia/title-44/chapter-14/article-3/part-1/,2026-08-14,Material suppliers have same deadline as contractors
+Hawaii,HI,N/A,45 days from last furnishing,3 months after filing,Haw. Rev. Stat. § 507-41 et seq.,https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0501-0588/HRS0507/HRS_0507-0041.htm,2026-08-14,Notice of completion can shorten deadlines
+Idaho,ID,N/A,90 days from last furnishing,6 months after filing,Idaho Code § 45-501 et seq.,https://legislature.idaho.gov/statutesrules/idstat/title45/t45ch5/,2026-08-14,Must include verified statement of amount due
+Illinois,IL,60 days from last furnishing (subcontractors),4 months from last furnishing,2 years after filing,770 ILCS 60/1 et seq.,https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2812&ChapterID=50,2026-08-14,Original contractor: file within 4 months
+Indiana,IN,30 days from first furnishing (residential),90 days from last furnishing (60 days for residential),1 year after filing,Ind. Code § 32-28-3-1 et seq.,https://iga.in.gov/legislative/laws/2024/ic/titles/032#32-28-3,2026-08-14,Residential pre-lien notice required
+Iowa,IA,N/A,90 days from last furnishing,2 years after filing,Iowa Code § 572.1 et seq.,https://www.legis.iowa.gov/docs/code/572.pdf,2026-08-14,Owner may demand suit within 30 days
+Kansas,KS,N/A,4 months from last furnishing (3 months for residential),1 year after filing,K.S.A. § 60-1101 et seq.,https://www.ksrevisor.org/statutes/chapters/ch60/060_011_0001.html,2026-08-14,Residential projects have shorter deadlines
+Kentucky,KY,75 days from last furnishing (residential),6 months from last furnishing,1 year after filing,Ky. Rev. Stat. § 376.010 et seq.,https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=39198,2026-08-14,Must file statement of amount due
+Louisiana,LA,N/A,60 days from last furnishing (30 days if NOO filed),1 year after filing,La. R.S. 9:4801 et seq.,https://www.legis.la.gov/legis/Law.aspx?d=292868,2026-08-14,Notice of termination shortens deadlines
+Maine,ME,N/A,90 days from last furnishing,120 days after filing,10 M.R.S. § 3251 et seq.,https://legislature.maine.gov/statutes/10/title10ch603sec0.html,2026-08-14,Must include sworn statement
+Maryland,MD,120 days from last furnishing (residential),180 days from last furnishing,1 year after filing,"Md. Code, Real Prop. § 9-101 et seq.",https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=grp&section=9-101&enactments=,2026-08-14,Notice of intention to claim lien required for subcontractors
+Massachusetts,MA,N/A,90 days from last furnishing (subcontractors: 60 days after NOF),90 days after filing,Mass. Gen. Laws ch. 254 § 2 et seq.,https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleI/Chapter254,2026-08-14,Must record notice of contract for large projects
+Michigan,MI,20 days from first furnishing (residential),90 days from last furnishing,1 year after filing,Mich. Comp. Laws § 570.1101 et seq.,http://www.legislature.mi.gov/(S(epgkb0mr4ps14adnqkfvlfhb))/mileg.aspx?page=GetObject&objectname=mcl-act-497-of-1980,2026-08-14,Residential requires notice of furnishing
+Minnesota,MN,45 days from first furnishing (residential),120 days from last furnishing,1 year after filing,Minn. Stat. ch. 514,https://www.revisor.mn.gov/statutes/cite/514,2026-08-14,Pre-lien notice required for all tiers
+Mississippi,MS,N/A,"12 months from last furnishing (commercial), 90 days (residential)",1 year after filing,Miss. Code § 85-7-181 et seq.,https://codes.findlaw.com/ms/title-85-trusts-and-trustees/ms-code-sect-85-7-181/,2026-08-14,No preliminary notice required
+Missouri,MO,5 days before filing (residential),6 months from last furnishing,6 months after filing,Mo. Rev. Stat. ch. 429,https://revisor.mo.gov/main/OneChapter.aspx?chapter=429,2026-08-14,Residential requires 10-day pre-lien notice
+Montana,MT,20 days from first furnishing (residential),90 days from last furnishing,2 years after filing,Mont. Code § 71-3-521 et seq.,https://archive.legmt.gov/bills/mca/title_0710/chapter_0030/part_0050/sections_index.html,2026-08-14,Notice of right to claim lien required
+Nebraska,NE,N/A,120 days from last furnishing,2 years after filing,Neb. Rev. Stat. § 52-121 et seq.,https://nebraskalegislature.gov/laws/statutes.php?statute=52-121,2026-08-14,Must include verified itemized statement
+Nevada,NV,45 days from first furnishing (residential),90 days from last furnishing,6 months after filing,Nev. Rev. Stat. § 108.221 et seq.,https://www.leg.state.nv.us/NRS/NRS-108.html,2026-08-14,Notice of right to lien required for all
+New Hampshire,NH,N/A,120 days from last furnishing,120 days after filing,N.H. Rev. Stat. § 447:1 et seq.,https://www.gencourt.state.nh.us/rsa/html/447/447-1.htm,2026-08-14,Must file attested account
+New Jersey,NJ,60 days from last furnishing (residential),90 days from last furnishing (120 days for residential),1 year after filing,N.J. Stat. § 2A:44A-1 et seq.,https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu,2026-08-14,NOC filing can shorten deadlines
+New Mexico,NM,60 days from first furnishing (commercial),120 days from last furnishing,2 years after filing,N.M. Stat. § 48-2-1 et seq.,https://nmonesource.com/nmos/enus/Statutes/NMSA1978/NMSA1978-048-002/NMSA1978-048-002-1,2026-08-14,Notice of claim of lien required
+New York,NY,N/A,8 months from last furnishing (commercial),1 year after filing,N.Y. Lien Law art. 2,https://www.nysenate.gov/legislation/laws/LIE/A2,2026-08-14,Residential: 4 months filing deadline
+North Carolina,NC,15 days from first furnishing (subcontractors),120 days from last furnishing,180 days after filing,N.C. Gen. Stat. § 44A-1 et seq.,https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByChapter/Chapter_44A.html,2026-08-14,Notice of claim of lien on funds required
+North Dakota,ND,N/A,90 days from last furnishing,3 years after filing,N.D. Cent. Code § 35-27-01 et seq.,https://www.legis.nd.gov/cencode/t35c27.pdf,2026-08-14,Must include itemized statement
+Ohio,OH,21 days from first furnishing (residential),75 days from last furnishing (60 days residential),6 years after filing,Ohio Rev. Code § 1311.01 et seq.,https://codes.ohio.gov/ohio-revised-code/chapter-1311,2026-08-14,Notice of furnishing required for all tiers
+Oklahoma,OK,75 days from last furnishing (residential),4 months from last furnishing,1 year after filing,Okla. Stat. tit. 42 § 141 et seq.,https://www.oscn.net/applications/oscn/index.asp?ftdb=ST42ST141&level=1,2026-08-14,Pre-lien notice required for residential
+Oregon,OR,8 days before first furnishing (residential),75 days from last furnishing,120 days after filing,Or. Rev. Stat. § 87.005 et seq.,https://www.oregonlegislature.gov/bills_laws/ors/ors087.html,2026-08-14,Notice of right to lien required for all
+Pennsylvania,PA,30 days from first furnishing (subcontractors),6 months from last furnishing,2 years after filing,49 Pa. Stat. § 1101 et seq.,https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=49&div=0&chpt=11,2026-08-14,Formal notice of intention to file required
+Rhode Island,RI,N/A,200 days from last furnishing,40 days after notice,R.I. Gen. Laws § 34-28-1 et seq.,http://webserver.rilin.state.ri.us/Statutes/TITLE34/34-28/INDEX.HTM,2026-08-14,Must file notice of intention
+South Carolina,SC,15 days before first furnishing (residential),90 days from last furnishing,6 months after filing,S.C. Code § 29-5-10 et seq.,https://www.scstatehouse.gov/code/t29c005.php,2026-08-14,Notice of furnishing required
+South Dakota,SD,N/A,120 days from last furnishing,1 year after filing,S.D. Codified Laws § 44-9-1 et seq.,https://sdlegislature.gov/Statutes/Codified_Laws/DisplayStatute.aspx?Type=Statute&Statute=44-9-1,2026-08-14,Must include verified itemized account
+Tennessee,TN,N/A,90 days from last furnishing,1 year after filing,Tenn. Code § 66-11-101 et seq.,https://law.justia.com/codes/tennessee/title-66/chapter-11/part-1/section-66-11-101/,2026-08-14,Notice of nonpayment may be required
+Texas,TX,15th day of 2nd month after work (residential),15th day of 4th month from last furnishing,1 year after filing (2 years for residential),Tex. Prop. Code ch. 53,https://statutes.capitol.texas.gov/Docs/PR/htm/PR.53.htm,2026-08-14,Strict deadlines — miss by one day and lien is void
+Utah,UT,20 days from first furnishing,180 days after completion of original contract,180 days after filing,Utah Code § 38-1a-101 et seq.,https://le.utah.gov/xcode/Title38/Chapter1A/38-1a.html,2026-08-14,Notice of pre-lien required
+Vermont,VT,N/A,180 days from last furnishing,1 year after filing,9 V.S.A. § 1921 et seq.,https://legislature.vermont.gov/statutes/chapter/09/051,2026-08-14,Must file notice of lien
+Virginia,VA,30 days from first furnishing (residential),90 days from last furnishing,6 months after filing,Va. Code § 43-1 et seq.,https://law.lis.virginia.gov/vacodefull/title43/chapter1/,2026-08-14,Must include memorandum of lien
+Washington,WA,10 days before first furnishing (residential),90 days from last furnishing,8 months after filing,RCW ch. 60.04,https://app.leg.wa.gov/RCW/default.aspx?cite=60.04,2026-08-14,Notice to owner/customer is strictly required
+West Virginia,WV,N/A,100 days from last furnishing,6 months after filing,W. Va. Code § 38-2-1 et seq.,http://www.wvlegislature.gov/wvcode/code.cfm?chap=38&art=2,2026-08-14,Notice of mechanics lien required
+Wisconsin,WI,60 days from first furnishing (residential),6 months from last furnishing,2 years after filing,Wis. Stat. § 779.01 et seq.,https://docs.legis.wisconsin.gov/statutes/statutes/779,2026-08-14,Notice of intent to file lien required
+Wyoming,WY,30 days from first furnishing (commercial),120 days from last furnishing (commercial),180 days after filing,Wyo. Stat. § 29-1-301 et seq.,https://www.wyoleg.gov/statutes/title29,2026-08-14,Notice of intent to lien required

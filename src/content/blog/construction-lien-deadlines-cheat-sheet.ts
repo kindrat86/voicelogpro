@@ -10,7 +10,7 @@ export const lienDeadlineCheatSheet = {
   jurisdiction: "National",
   targetAudience: "Multi-State Subcontractors & GCs",
   publishedAt: "2026-07-21",
-  updatedAt: "2026-07-21",
+  updatedAt: "2026-08-14",
 
   content: `# Construction Lien Deadlines Cheat Sheet: 50-State Comparison (2026 Update)
 
@@ -59,77 +59,92 @@ All three deadlines depend on a single fact: the **first furnishing date** (for 
 
 ## Preliminary notice deadlines by state
 
-**Short answer:** Preliminary notice deadlines range from 0 days (no notice required) to within 60 days of first furnishing. California's 20-day requirement and Florida's 45-day NTO are among the strictest.
+**Short answer:** Preliminary notice requirements range from none (19 states) to strict first-furnishing windows — California's 20-day rule and Florida's 45-day NTO are among the strictest. Some states also require a separate notice of intent to lien after last furnishing (e.g. Maryland, Oklahoma, Arkansas).
 
 | State | Preliminary Notice? | Deadline | Notes |
 |-------|-------------------|----------|-------|
-| Alabama | No | N/A | Bond claim only on public projects |
-| Alaska | Yes | 60 days from first furnishing | Only required for subcontractors |
-| Arizona | Yes | 20 days from first furnishing | Prelim notice + notice of intent |
-| Arkansas | No | N/A | Lien available without notice |
-| California | **Yes** | **20 days from first furnishing** | Strictly enforced; late = work after only |
-| Colorado | Yes | 5 business days for mechanic's lien | Or 10 days before lien filing |
-| Connecticut | No | N/A | No preliminary notice required |
-| Delaware | Yes | 60 days from first furnishing | Must be served on owner |
-| Florida | **Yes** | **45 days from first furnishing** | NTO must meet strict content requirements |
-| Georgia | No | N/A | No preliminary for private projects |
-| Hawaii | Yes | 45 days from first furnishing | Must serve owner and GC |
-| Idaho | No | N/A | No preliminary notice required |
-| Illinois | Yes | 90 days from last furnishing | Must serve owner with copy of lien |
-| Indiana | Yes | 60 days from first furnishing | Notice of intent to file |
-| Iowa | Yes | 10 days before lien filing | Pre-lien notice |
-| Kansas | No | N/A | No preliminary notice required |
-| Kentucky | No | N/A | Lien available without notice |
-| Louisiana | Yes | 30 days from registration | With Louisiana State Licensing Board |
-| Maine | No | N/A | No preliminary notice required |
-| Maryland | Yes | 120 days from last furnishing | Notice must contain specific language |
-| Massachusetts | No | N/A | No preliminary notice required |
-| Michigan | No | N/A | Lien available without notice |
-| Minnesota | Yes | 10 days before lien filing | Pre-lien notice to owner |
-| Mississippi | No | N/A | No preliminary notice required |
-| Missouri | Yes | 5 months from last furnishing | Notice of non-payment |
-| Montana | No | N/A | Pre-lien notice for residential only |
-| Nebraska | Yes | 10 days before lien filing | Pre-lien notice to owner |
-| Nevada | Yes | 30 days from first furnishing | Separate requirement for residential |
-| New Hampshire | No | N/A | Lien available without notice |
-| New Jersey | Yes | By lien filing date | Notice linked to lien filing |
-| New Mexico | No | N/A | No preliminary notice required |
-| New York | **No** | **N/A** | No notice required; 8-month filing window |
-| North Carolina | Yes | 30 days from first furnishing | Must serve owner and GC |
-| North Dakota | No | N/A | No preliminary notice required |
-| Ohio | Yes | 21 days from first furnishing | Notice to owner required |
-| Oklahoma | No | N/A | No preliminary notice required |
-| Oregon | Yes | 8 days from first furnishing | Notice of right to lien |
-| Pennsylvania | Yes | 90 days from last furnishing | Notice required within 90 days |
-| Rhode Island | No | N/A | No preliminary notice required |
-| South Carolina | Yes | 30 days from first furnishing | Notice to owner |
-| South Dakota | No | N/A | No preliminary notice required |
-| Tennessee | Yes | 60 days from last furnishing | Pre-lien notice |
-| **Texas** | **Yes (monthly)** | **15th of 3rd month** | Monthly notices for each unpaid month |
-| Utah | Yes | 20 days from first furnishing | Preconstruction notice |
-| Vermont | No | N/A | Lien available without notice |
-| Virginia | Yes | 30 days from first furnishing | Must serve owner |
-| Washington | Yes | 10 days from first furnishing | Notice to owner + notice of intent |
-| West Virginia | No | N/A | No preliminary notice required |
-| Wisconsin | Yes | 60 days from first furnishing | Notice of intent to file |
-| Wyoming | No | N/A | No preliminary notice required |
-| Washington DC | Yes | 45 days from first furnishing | Pre-lien notice required |
+| Alabama | No | N/A | No notice required for residential; 30 days for commercial |
+| Alaska | Yes | 15 days from first furnishing |  |
+| Arizona | Yes | 20 days from first furnishing |  |
+| Arkansas | Yes | 75 days from last furnishing (residential) |  |
+| California | Yes | 20 days from first furnishing |  |
+| Colorado | No | N/A | No notice required but recommended |
+| Connecticut | No | N/A | No notice required for original contractors |
+| Delaware | No | N/A | No notice required |
+| Washington DC | No | N/A | No notice required |
+| Florida | Yes | 45 days from first furnishing (Notice to Owner) |  |
+| Georgia | No | N/A | No notice required |
+| Hawaii | No | N/A | No notice required |
+| Idaho | No | N/A | No notice required |
+| Illinois | Yes | 60 days from last furnishing (subcontractors) |  |
+| Indiana | Yes | 30 days from first furnishing (residential) |  |
+| Iowa | No | N/A | No notice required |
+| Kansas | No | N/A | No notice required |
+| Kentucky | Yes | 75 days from last furnishing (residential) |  |
+| Louisiana | No | N/A | No notice required |
+| Maine | No | N/A | No notice required |
+| Maryland | Yes | 120 days from last furnishing (residential) |  |
+| Massachusetts | No | N/A | No notice required |
+| Michigan | Yes | 20 days from first furnishing (residential) |  |
+| Minnesota | Yes | 45 days from first furnishing (residential) |  |
+| Mississippi | No | N/A | No notice required |
+| Missouri | Yes | 5 days before filing (residential) |  |
+| Montana | Yes | 20 days from first furnishing (residential) |  |
+| Nebraska | No | N/A | No notice required |
+| Nevada | Yes | 45 days from first furnishing (residential) |  |
+| New Hampshire | No | N/A | No notice required |
+| New Jersey | Yes | 60 days from last furnishing (residential) |  |
+| New Mexico | Yes | 60 days from first furnishing (commercial) |  |
+| New York | No | N/A | No notice required for commercial |
+| North Carolina | Yes | 15 days from first furnishing (subcontractors) |  |
+| North Dakota | No | N/A | No notice required |
+| Ohio | Yes | 21 days from first furnishing (residential) |  |
+| Oklahoma | Yes | 75 days from last furnishing (residential) |  |
+| Oregon | Yes | 8 days before first furnishing (residential) |  |
+| Pennsylvania | Yes | 30 days from first furnishing (subcontractors) |  |
+| Rhode Island | No | N/A | No notice required |
+| South Carolina | Yes | 15 days before first furnishing (residential) |  |
+| South Dakota | No | N/A | No notice required |
+| Tennessee | No | N/A | No notice required |
+| Texas | Yes | 15th day of 2nd month after work (residential) |  |
+| Utah | Yes | 20 days from first furnishing |  |
+| Vermont | No | N/A | No notice required |
+| Virginia | Yes | 30 days from first furnishing (residential) |  |
+| Washington | Yes | 10 days before first furnishing (residential) |  |
+| West Virginia | No | N/A | No notice required |
+| Wisconsin | Yes | 60 days from first furnishing (residential) |  |
+| Wyoming | Yes | 30 days from first furnishing (commercial) |  |
 
 ---
 
 ## Lien filing deadlines by state
 
-**Short answer:** Lien filing deadlines range from 30 days after last furnishing (Alaska) to 8 months (New York). The most common deadline is 90 days.
+**Short answer:** Lien filing deadlines range from 45 days (Hawaii) to 8 months (New York) or 12 months (Mississippi commercial). The most common deadline is 90 days from last furnishing.
 
-| Deadline Range | States |
-|----------------|--------|
-| **30-60 days** | Alaska (30 days), Oregon (30 days after written demand), Washington (30/60 days) |
-| **90 days** | California, Florida, Georgia, Nevada, North Carolina, Ohio, Oklahoma, South Carolina, Utah, Virginia, West Virginia, Wisconsin |
-| **4 months** | Illinois, Texas (15th of 4th month), Missouri |
-| **6 months** | Connecticut, Pennsylvania, Michigan, Massachusetts |
-| **8 months** | New York (longest in nation) |
-| **1 year+** | Arkansas, Kansas, Kentucky, Maine, Nebraska, New Jersey, Vermont |
-| **Variable** | Many states tie filing window to last furnishing vs. project completion |
+| Lien Filing Deadline | States |
+|---------------------|--------|
+| **6 months from last furnishing** | Alabama, Kentucky, Missouri, Pennsylvania, Wisconsin |
+| **120 days from last furnishing** | Alaska, Arkansas, Minnesota, Nebraska, New Hampshire, New Mexico, North Carolina, South Dakota |
+| **120 days after completion (60 days if no NOO)** | Arizona |
+| **90 days after completion** | California |
+| **4 months from last furnishing** | Colorado, Illinois, Oklahoma |
+| **90 days from last furnishing** | Connecticut, Washington DC, Florida, Georgia, Idaho, Iowa, Maine, Michigan, Montana, Nevada, North Dakota, South Carolina, Tennessee, Virginia, Washington |
+| **180 days from last furnishing** | Delaware, Maryland, Vermont |
+| **45 days from last furnishing** | Hawaii |
+| **90 days from last furnishing (60 days for residential)** | Indiana |
+| **4 months from last furnishing (3 months for residential)** | Kansas |
+| **60 days from last furnishing (30 days if NOO filed)** | Louisiana |
+| **90 days from last furnishing (subcontractors: 60 days after NOF)** | Massachusetts |
+| **12 months from last furnishing (commercial), 90 days (residential)** | Mississippi |
+| **90 days from last furnishing (120 days for residential)** | New Jersey |
+| **8 months from last furnishing (commercial)** | New York |
+| **75 days from last furnishing (60 days residential)** | Ohio |
+| **75 days from last furnishing** | Oregon |
+| **200 days from last furnishing** | Rhode Island |
+| **15th day of 4th month from last furnishing** | Texas |
+| **180 days after completion of original contract** | Utah |
+| **100 days from last furnishing** | West Virginia |
+| **120 days from last furnishing (commercial)** | Wyoming |
 
 **Key consideration for multi-state contractors:** If you work in both New York (8 months) and California (90 days), your California calendaring must be dramatically tighter than your New York schedule.
 
@@ -137,26 +152,34 @@ All three deadlines depend on a single fact: the **first furnishing date** (for 
 
 ## Lien enforcement deadlines by state
 
-**Short answer:** Enforcement deadlines range from 90 days after filing (California) to 2 years (Texas, New York). Once the enforcement deadline passes, the lien is automatically void.
+**Short answer:** Enforcement deadlines range from 40 days (Rhode Island) to 6 years (Ohio). Once the enforcement deadline passes, the lien is automatically void.
 
-| Enforcement Window | States |
-|--------------------|--------|
-| **90 days** | California, Alabama, Georgia |
-| **6 months** | Illinois, Massachusetts, Michigan, New Jersey |
-| **1 year** | Florida, Pennsylvania, Ohio, Wisconsin, North Carolina, Minnesota |
-| **18 months** | Connecticut, Nebraska |
-| **2 years** | Texas, New York, Kansas, Kentucky, Missouri |
-| **Variable** | Some states extend enforcement for good cause; always file early |
+| Enforcement Deadline | States |
+|----------------------|--------|
+| **6 months after filing** | Alabama, Alaska, Arizona, Colorado, Idaho, Missouri, Nevada, South Carolina, Virginia, West Virginia |
+| **15 months after filing** | Arkansas |
+| **90 days after filing** | California, Massachusetts |
+| **1 year after filing** | Connecticut, Delaware, Florida, Indiana, Kansas, Kentucky, Louisiana, Maryland, Michigan, Minnesota, Mississippi, New Jersey, New York, Oklahoma, South Dakota, Tennessee, Vermont |
+| **180 days after filing** | Washington DC, North Carolina, Utah, Wyoming |
+| **365 days after filing** | Georgia |
+| **3 months after filing** | Hawaii |
+| **2 years after filing** | Illinois, Iowa, Montana, Nebraska, New Mexico, Pennsylvania, Wisconsin |
+| **120 days after filing** | Maine, New Hampshire, Oregon |
+| **3 years after filing** | North Dakota |
+| **6 years after filing** | Ohio |
+| **40 days after notice** | Rhode Island |
+| **1 year after filing (2 years for residential)** | Texas |
+| **8 months after filing** | Washington |
 
 ---
 
 ## States with NO preliminary notice requirement
 
-**Short answer:** 20 states do not require any preliminary notice from subcontractors — you can file a lien without sending any advance notice to the owner.
+**Short answer:** 19 states do not require any preliminary notice from subcontractors — you can file a lien without sending any advance notice to the owner.
 
 States with no preliminary notice requirement for private projects:
 
-Alabama, Arkansas, Connecticut, Georgia, Idaho, Kansas, Kentucky, Maine, Massachusetts, Michigan, Mississippi, Montana, New Hampshire, New Mexico, **New York**, North Dakota, Oklahoma, Rhode Island, South Dakota, Vermont, West Virginia, Wyoming
+19 states require no preliminary notice for private projects: Delaware, Washington DC, Georgia, Hawaii, Idaho, Iowa, Kansas, Louisiana, Maine, Massachusetts, Mississippi, Nebraska, New Hampshire, North Dakota, Rhode Island, South Dakota, Tennessee, Vermont, West Virginia. A further 4 require notice only in specific situations: Alabama, Colorado, Connecticut, New York.
 
 **Important caveat:** While these states don't require a notice, serving one is always a best practice. In many of these states, the owner can pay the GC in full without notice and have no further liability.
 
@@ -164,18 +187,18 @@ Alabama, Arkansas, Connecticut, Georgia, Idaho, Kansas, Kentucky, Maine, Massach
 
 ## States with the longest filing deadlines
 
-**Short answer:** New York leads with 8 months, followed by Pennsylvania (6 months), Connecticut (6 months), and a group of states with 1-year+ filing windows for certain project types.
+**Short answer:** Mississippi leads with 12 months (commercial), followed by New York (8 months commercial) and Rhode Island (200 days). Several states — Alabama, Kentucky, Missouri, Pennsylvania and Wisconsin — sit at 6 months.
 
-| Rank | State | Filing Window | Why It Matters |
-|------|-------|---------------|----------------|
-| 1 | **New York** | **8 months** | Most generous in the nation |
-| 2 | Pennsylvania | 6 months | Second longest for major states |
-| 3 | Connecticut | 6 months | Residential and commercial |
-| 4 | Massachusetts | 6 months | Residential only |
-| 5 | Michigan | 6 months | Commercial only |
-| 6 | Illinois | 4 months | If notice served at 90 days |
-| 7 | Texas | 4 months (15th) | Calendar-based |
-| 8 | Arkansas | 1 year | From completion of contract |
+| Rank | State | Filing Window | Note |
+|------|-------|---------------|------|
+| 1 | Mississippi | 12 months from last furnishing (commercial), 90 days (residential) | |
+| 2 | New York | 8 months from last furnishing (commercial) | |
+| 3 | Rhode Island | 200 days from last furnishing | |
+| 4 | Alabama | 6 months from last furnishing | |
+| 5 | Delaware | 180 days from last furnishing | |
+| 6 | Kentucky | 6 months from last furnishing | |
+| 7 | Maryland | 180 days from last furnishing | |
+| 8 | Missouri | 6 months from last furnishing | |
 
 ---
 
@@ -185,13 +208,12 @@ Alabama, Arkansas, Connecticut, Georgia, Idaho, Kansas, Kentucky, Maine, Massach
 
 | Strictness Factor | California | Texas | Florida |
 |-------------------|------------|-------|---------|
-| Notice deadline | 20 days from start | 15th of 3rd month | 45 days from start |
+| Notice deadline | 20 days from start | 15th of 2nd month (monthly) | 45 days from start |
 | Late notice protection | Work after notice only | Month not covered | Work after notice only |
 | Service requirements | Certified mail + personal | Certified mail | Certified mail or courier |
 | Content precision | Strict | Specific | Very strict (statutory language) |
 | Exemptions | Very few | GCs only | GCs only |
 
-**National average comparison:** The average US state requires notice within 30 days and filing within 90 days. California, Texas, and Florida are all below-average on time allowances, making them high-risk jurisdictions for unwary subcontractors.
 
 ---
 
@@ -236,7 +258,7 @@ VoiceLogPro automates daily log creation with:
 
 ### Which state has the most subcontractor-friendly lien laws?
 
-**Short answer:** New York — with no preliminary notice requirement, an 8-month filing window, and the unique Lien Trust Fund provisions (Sections 70-71-a) that make fund diversion a criminal offense.
+**Short answer:** New York — with no preliminary notice requirement for commercial projects, an 8-month commercial filing window, and the unique Lien Trust Fund provisions (Sections 70-71-a) that make fund diversion a criminal offense.
 
 ### Which state has the strictest lien laws for subcontractors?
 
@@ -252,7 +274,7 @@ VoiceLogPro automates daily log creation with:
 
 ### How long should I keep daily logs after a project ends?
 
-**Short answer:** At least the lien enforcement period plus 1 year. For Texas (2 years enforcement), keep logs for 3 years minimum. For states with 1-year enforcement, keep logs for 2 years. For litigation, keep logs until the case fully resolves including appeals.
+**Short answer:** At least the lien enforcement period plus 1 year. For Texas residential projects (2 years enforcement), keep logs for 3 years minimum. For states with 1-year enforcement, keep logs for 2 years. For litigation, keep logs until the case fully resolves including appeals.
 `,
   faqSchema: {
     "@context": "https://schema.org",
@@ -287,7 +309,7 @@ VoiceLogPro automates daily log creation with:
         "name": "Which states have the strictest lien compliance requirements?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "California (20-day preliminary notice), Texas (monthly notices due 15th of 3rd month), and Florida (45-day NTO) are the three strictest states. All have zero tolerance for late notices."
+          "text": "California (20-day preliminary notice), Texas (monthly notices due 15th of 2nd month (monthly)), and Florida (45-day NTO) are the three strictest states. All have zero tolerance for late notices."
         }
       },
       {
