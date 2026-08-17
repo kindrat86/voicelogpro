@@ -247,6 +247,16 @@
   ],
   "redirects": [
     {
+      "source": "/tools/lien-deadline-calculator",
+      "destination": "/free/lien-deadline-calculator",
+      "permanent": true
+    },
+    {
+      "source": "/tools/lien-deadline-calculator/",
+      "destination": "/free/lien-deadline-calculator",
+      "permanent": true
+    },
+    {
       "source": "/states/district-of-columbia-lien-law",
       "destination": "/lien-law-deadlines/washington-dc",
       "permanent": true

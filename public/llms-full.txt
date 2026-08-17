@@ -115,7 +115,6 @@ Key terms in construction daily reporting, voice logging, and compliance documen
 ## Free Tools
 
 - [Daily Report Generator](https://voicelogpro.com/free/daily-report-generator): Free online tool that generates a formatted construction daily report from voice or text input. Includes weather data, timestamps, and trade-specific fields.
-- [Lien Deadline Calculator](https://voicelogpro.com/tools/lien-deadline-calculator/): Calculate mechanics lien filing deadlines by state. Input the last day of work and state to get the exact deadline and required notices.
 
 ---
 

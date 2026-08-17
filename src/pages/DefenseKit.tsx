@@ -227,7 +227,7 @@ export default function DefenseKit() {
           </ul>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 print:hidden">
             <a
-              href="/tools/lien-deadline-calculator/"
+              href="/free/lien-deadline-calculator"
               className="inline-flex items-center justify-center h-12 px-6 bg-primary text-primary-foreground font-bold uppercase tracking-wide hover:opacity-90 transition-opacity"
               style={{ borderRadius: "var(--radius)", boxShadow: "var(--shadow-hard-primary)" }}
             >
