@@ -56,10 +56,10 @@ export function Footer() {
               <Link to="/for" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 {t("nav.for", "For Your Trade")}
               </Link>
-              <Link to="/raken-vs-voice-log-pro" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+              <Link to="/vs/raken" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 {t("footer.rakenVs", "Raken vs VoiceLogPro")}
               </Link>
-              <Link to="/fieldwire-vs-voice-log-pro" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+              <Link to="/vs/fieldwire" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 {t("footer.fieldwireVs", "Fieldwire vs VoiceLogPro")}
               </Link>
             </nav>

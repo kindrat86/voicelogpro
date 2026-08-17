@@ -247,6 +247,76 @@
   ],
   "redirects": [
     {
+      "source": "/raken-vs-voice-log-pro",
+      "destination": "/vs/raken",
+      "permanent": true
+    },
+    {
+      "source": "/raken-vs-voice-log-pro/",
+      "destination": "/vs/raken",
+      "permanent": true
+    },
+    {
+      "source": "/fieldwire-vs-voice-log-pro",
+      "destination": "/vs/fieldwire",
+      "permanent": true
+    },
+    {
+      "source": "/fieldwire-vs-voice-log-pro/",
+      "destination": "/vs/fieldwire",
+      "permanent": true
+    },
+    {
+      "source": "/contractor-foreman-vs-voice-log-pro",
+      "destination": "/vs/contractor-foreman",
+      "permanent": true
+    },
+    {
+      "source": "/contractor-foreman-vs-voice-log-pro/",
+      "destination": "/vs/contractor-foreman",
+      "permanent": true
+    },
+    {
+      "source": "/procore-vs-voice-log-pro",
+      "destination": "/vs/procore",
+      "permanent": true
+    },
+    {
+      "source": "/procore-vs-voice-log-pro/",
+      "destination": "/vs/procore",
+      "permanent": true
+    },
+    {
+      "source": "/knowify-vs-voice-log-pro",
+      "destination": "/vs/knowify",
+      "permanent": true
+    },
+    {
+      "source": "/knowify-vs-voice-log-pro/",
+      "destination": "/vs/knowify",
+      "permanent": true
+    },
+    {
+      "source": "/buildertrend-vs-voice-log-pro",
+      "destination": "/alternatives-to",
+      "permanent": true
+    },
+    {
+      "source": "/buildertrend-vs-voice-log-pro/",
+      "destination": "/alternatives-to",
+      "permanent": true
+    },
+    {
+      "source": "/jobnimbus-vs-voice-log-pro",
+      "destination": "/alternatives-to",
+      "permanent": true
+    },
+    {
+      "source": "/jobnimbus-vs-voice-log-pro/",
+      "destination": "/alternatives-to",
+      "permanent": true
+    },
+    {
       "source": "/alternatives-to/fieldwire-alt",
       "destination": "/alternatives-to",
       "permanent": true
