@@ -247,6 +247,36 @@
   ],
   "redirects": [
     {
+      "source": "/alternatives-to/fieldwire-alt",
+      "destination": "/alternatives-to",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to/fieldwire-alt/",
+      "destination": "/alternatives-to",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to/procore-alt",
+      "destination": "/alternatives-to/procore",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to/procore-alt/",
+      "destination": "/alternatives-to/procore",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to/raken",
+      "destination": "/vs/raken",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to/raken/",
+      "destination": "/vs/raken",
+      "permanent": true
+    },
+    {
       "source": "/tools/lien-deadline-calculator",
       "destination": "/free/lien-deadline-calculator",
       "permanent": true
