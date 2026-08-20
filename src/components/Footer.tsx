@@ -84,18 +84,38 @@ export function Footer() {
           {/* Network */}
           <div>
             <p className="font-semibold text-foreground mb-3 text-sm">Network</p>
-            <nav className="flex flex-col gap-2">
-              <a href="https://gitdealflow.com" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+            <nav
+              className="flex flex-col gap-2"
+              aria-label="More products from Sipiteno"
+              data-portfolio-cross-promo="v1"
+              data-portfolio-origin="voicelogpro.com"
+            >
+              <a href="https://sipiteno.com/?utm_source=voicelogpro.com&utm_medium=referral&utm_campaign=portfolio_crosspromo&utm_content=footer" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                Sipiteno
+              </a>
+              <a href="https://gitdealflow.com/?utm_source=voicelogpro.com&utm_medium=referral&utm_campaign=portfolio_crosspromo&utm_content=footer" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 GitDealFlow
               </a>
-              <a href="https://signals.gitdealflow.com" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+              <a href="https://signals.gitdealflow.com/?utm_source=voicelogpro.com&utm_medium=referral&utm_campaign=portfolio_crosspromo&utm_content=footer" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 VC Deal Flow Signal
               </a>
-              <a href="https://sipi.bot" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                Sipi.bot
+              <a href="https://invisibleexit.com/?utm_source=voicelogpro.com&utm_medium=referral&utm_campaign=portfolio_crosspromo&utm_content=footer" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                Invisible Exit
               </a>
-              <a href="https://invisibleexit.com" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                InvisibleExit
+              <a href="https://unlocksaas.com/?utm_source=voicelogpro.com&utm_medium=referral&utm_campaign=portfolio_crosspromo&utm_content=footer" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                UnlockSaaS
+              </a>
+              <a href="https://carshake.online/?utm_source=voicelogpro.com&utm_medium=referral&utm_campaign=portfolio_crosspromo&utm_content=footer" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                CarShake
+              </a>
+              <a href="https://churnlens.site/?utm_source=voicelogpro.com&utm_medium=referral&utm_campaign=portfolio_crosspromo&utm_content=footer" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                ChurnLens
+              </a>
+              <a href="https://sanctionsai.dev/?utm_source=voicelogpro.com&utm_medium=referral&utm_campaign=portfolio_crosspromo&utm_content=footer" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                SanctionsAI
+              </a>
+              <a href="https://sipi.bot/?utm_source=voicelogpro.com&utm_medium=referral&utm_campaign=portfolio_crosspromo&utm_content=footer" target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                sipi.bot
               </a>
             </nav>
           </div>
