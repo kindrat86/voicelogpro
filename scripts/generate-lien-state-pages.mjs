@@ -12,7 +12,7 @@ const BASE = "https://voicelogpro.com";
 const CHEATSHEET = `${BASE}/blog/${D.sourceSlug}`;
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-const DEEP_STATES = new Set(["California", "Florida", "New York", "Pennsylvania", "Texas"]);
+const DEEP_STATES = new Set(["California", "Florida", "New York", "Pennsylvania", "Texas", "Alabama", "Alaska", "Arizona", "Arkansas", "Colorado"]);
 
 const CSS = `<style>
 :root{color-scheme:light dark}body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:820px;margin:0 auto;padding:2rem 1rem;color:#0f172a}
