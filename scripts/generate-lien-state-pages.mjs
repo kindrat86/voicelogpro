@@ -12,7 +12,7 @@ const BASE = "https://voicelogpro.com";
 const CHEATSHEET = `${BASE}/blog/${D.sourceSlug}`;
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-const DEEP_STATES = new Set(["California", "Florida", "New York", "Pennsylvania", "Texas", "Alabama", "Alaska", "Arizona", "Arkansas", "Colorado", "Connecticut", "Delaware", "Georgia", "Hawaii", "Idaho"]);
+const DEEP_STATES = new Set(["California", "Florida", "New York", "Pennsylvania", "Texas", "Alabama", "Alaska", "Arizona", "Arkansas", "Colorado", "Connecticut", "Delaware", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky"]);
 
 const CSS = `<style>
 :root{color-scheme:light dark}body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:820px;margin:0 auto;padding:2rem 1rem;color:#0f172a}
@@ -48,16 +48,21 @@ function depthSection(state) {
   if (!notice || !filing || !enforcement || !st) return "";
   const filingDeadline = filing[2] || filing[1];
   const enforcementDeadline = enforcement[2] || enforcement[1];
+  const noNotice = notice[1] === "No" || notice[2] === "N/A";
 
   return `<section aria-labelledby="timeline-${slugify(state)}">
 <h2 id="timeline-${slugify(state)}">How to read the ${esc(state)} lien timeline</h2>
-<p>A lien timeline is not one date. It is a sequence of separate steps. For ${esc(state)}, start by identifying whether the preliminary-notice rule applies to your role and project. The reference above records that requirement as <strong>${esc(notice[1])}</strong> and gives the deadline as <strong>${esc(notice[2])}</strong>${notice[3] ? `, with this qualification: ${esc(notice[3])}` : ""}. Do not substitute the date of an invoice, payment application, or internal reminder unless the statute makes that event the trigger.</p>
+<p>A lien timeline is not one date. It is a sequence of separate steps. For ${esc(state)}, start by identifying whether the preliminary-notice rule applies to your role and project. ${noNotice
+    ? `The reference above records the preliminary-notice requirement as <strong>No</strong>${notice[3] ? ` (${esc(notice[3])})` : ""}. That removes one notice to track, but not the record-keeping: the deadlines below still run from project events, and those events still have to be proven with documents.`
+    : `The reference above records that requirement as <strong>${esc(notice[1])}</strong> and gives the deadline as <strong>${esc(notice[2])}</strong>${notice[3] ? `, with this qualification: ${esc(notice[3])}` : ""}. Do not substitute the date of an invoice, payment application, or internal reminder unless the statute makes that event the trigger.`}</p>
 <p>The filing window is a different step. The source data states <strong>${esc(filingDeadline)}</strong>${filing[3] ? ` and notes: ${esc(filing[3])}` : ""}. The enforcement window starts after a lien has been filed. For ${esc(state)}, that period is <strong>${esc(enforcementDeadline)}</strong>${enforcement[3] ? `, subject to this note: ${esc(enforcement[3])}` : ""}. Keeping these events separate helps prevent a notice deadline from being mistaken for a filing deadline.</p>
 
 <h2>A worked ${esc(state)} timeline</h2>
 <p>Suppose a subcontractor is reviewing an unpaid project. This example does not invent calendar dates. It shows which project records must be matched to each sourced rule before a calendar date is calculated.</p>
 <ol>
-<li><strong>Find the notice trigger.</strong> Check the daily log and contract record for the event named in <strong>${esc(notice[2])}</strong>. Confirm whether the stated project or role qualification applies.</li>
+<li><strong>${noNotice ? "Confirm the no-notice rule against your role." : "Find the notice trigger."}</strong> ${noNotice
+    ? `The reference above records <strong>No</strong> preliminary notice${notice[3] ? ` (${esc(notice[3])})` : ""}. Verify with the official statute that no variant of the rule applies to your project type before skipping this step entirely.`
+    : `Check the daily log and contract record for the event named in <strong>${esc(notice[2])}</strong>. Confirm whether the stated project or role qualification applies.`}</li>
 <li><strong>Find the filing trigger.</strong> Use the project record required by <strong>${esc(filingDeadline)}</strong>. Record the underlying event and the filing deadline as separate entries.</li>
 <li><strong>Start enforcement tracking only after filing.</strong> Once the lien is filed, preserve the filing receipt and track <strong>${esc(enforcementDeadline)}</strong>. Do not count this period from the first or last furnishing date unless the official law says to do so.</li>
 </ol>
