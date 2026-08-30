@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { LeadMagnetForm } from "@/components/LeadMagnetForm";
+import { FoundingPilotCTA } from "@/components/FoundingPilotCTA";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { HardHat } from "lucide-react";
 
@@ -20,7 +20,7 @@ const SocialProofBar = () => (
       <HardHat className="w-4 h-4 text-primary" aria-hidden="true" />
     </div>
     <span className="text-sm text-muted-foreground font-medium">
-      Built by subcontractors, for subcontractors. Not billing yet — join the waitlist.
+      Built by subcontractors, for subcontractors. Human-assisted founding pilot available now.
     </span>
   </div>
 );
@@ -75,14 +75,13 @@ export function HeroSection() {
         <h1 className="headline-primary text-foreground mb-6 animate-fade-up" style={{
         animationDelay: "0.1s"
       }}>
-          Stop Typing Daily Reports.
-          <span className="block text-primary">Just Speak.</span>
+          Your crew talks.
+          <span className="block text-primary">We deliver the daily report.</span>
         </h1>
 
         <p className="text-sm font-semibold text-primary max-w-2xl mx-auto mb-4 animate-fade-up" style={{ animationDelay: "0.12s" }}>
-          <strong>TL;DR:</strong> VoiceLogPro turns 30-second voice notes into timestamped, weather-corroborated,
-          court-ready PDF daily reports. No typing. Works from any phone. Flat $49/month for your entire crew.
-          Built for subcontractors who need payment protection, not project management.
+          <strong>Founding pilot:</strong> $49 one-time for one crew, 7 days, and up to 5 human-assisted daily-report PDFs.
+          No subscription and no automatic renewal.
         </p>
         
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4 animate-fade-up" style={{
@@ -98,18 +97,18 @@ export function HeroSection() {
         <p className="body-large max-w-2xl mx-auto mb-8 animate-fade-up" style={{
         animationDelay: "0.2s"
       }}>
-          Turn glove-on voice notes into job-ready PDFs in 30 seconds.
-          <span className="block mt-2">Built for subs who need to move fast — and prove work got done.</span>
+          Send a voice note, written notes, and optional photos after the jobsite walk.
+          <span className="block mt-2">We structure the facts you supply and return a finished PDF.</span>
         </p>
         
-        {/* PRIMARY CTA: Lead magnet opt-in (Brunson squeeze in hero) */}
-        <div className="relative animate-fade-up mb-8" style={{ animationDelay: "0.3s" }}>
+        {/* PRIMARY CTA: paid pilot, with the free kit preserved as the secondary path. */}
+        <div className="relative animate-fade-up mb-5" style={{ animationDelay: "0.3s" }}>
           <HeroWaveform />
-          <LeadMagnetForm ctaLabel="Get the Free Defense Kit" source="hero_lead_magnet" variant="hero" />
+          <FoundingPilotCTA placement="homepage_hero" />
         </div>
 
         <p className="text-sm text-muted-foreground mb-10 animate-fade-up" style={{ animationDelay: "0.35s" }}>
-          Or <a href="#crew-plan" className="text-primary font-bold underline">learn about the Crew Plan →</a>
+          Not ready to pay? <a href="#defense-kit" className="text-primary font-bold underline">Get the free Daily Log Defense Kit.</a>
         </p>
         
         {/* Before/After Slider */}

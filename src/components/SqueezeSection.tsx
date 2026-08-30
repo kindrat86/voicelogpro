@@ -32,7 +32,7 @@ export function SqueezeSection() {
         <div className="text-center mb-6">
           <span className="inline-flex items-center gap-2 bg-destructive/15 text-foreground px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
             <Download className="w-4 h-4" />
-            Free Download — While It's Still Up
+            Free Daily Log Defense Kit
           </span>
         </div>
 
@@ -61,7 +61,7 @@ export function SqueezeSection() {
         <LeadMagnetForm ctaLabel="Send Me the Kit" source="lead_magnet" />
 
         <p className="text-center text-xs text-muted-foreground mt-6 max-w-md mx-auto">
-          Joining the list also reserves your beta spot — you'll be first in line when access opens.
+          Enter your email to receive the free kit. This does not reserve a paid plan or start billing.
         </p>
       </div>
     </section>

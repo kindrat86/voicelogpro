@@ -28,6 +28,8 @@ const indexHtmlPath = path.join(distPath, 'index.html');
 const PRERENDER_ROUTES = [
   '/',
   '/crew-plan',
+  '/founding-pilot',
+  '/pilot-welcome',
   '/blog',
   '/compare',
   '/court-ready-daily-logs',
@@ -69,11 +71,41 @@ const PRERENDER_ROUTES = [
   '/dream-100',
 ];
 
+const CONVERSION_ROUTES = new Set([
+  '/',
+  '/founding-pilot',
+  '/pilot-welcome',
+  '/crew-plan',
+  '/beta',
+]);
+
+function stripConversionShellExtras(html, route) {
+  if (!CONVERSION_ROUTES.has(route)) return html;
+  const startMarker = '<!-- pSEO Footer Navigation -->';
+  const endMarker = '<!-- /AEO Definition Block -->';
+  const start = html.indexOf(startMarker);
+  const end = html.indexOf(endMarker, start);
+  if (start === -1 || end === -1) return html;
+  return html.slice(0, start) + html.slice(end + endMarker.length);
+}
+
+function stripConversionStructuredData(html, route) {
+  if (!CONVERSION_ROUTES.has(route)) return html;
+  return html
+    .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>\s*/g, '')
+    .replace(/<meta (?:property|name)="(?:og:[^"]+|twitter:[^"]+)"[^>]*>\s*/g, '');
+}
+
 function stripDefaultHeadTags(html, helmetHead = '') {
   // Remove the default <title> tag
   html = html.replace(/<title>.*?<\/title>\n?/, '');
   // Remove the default <meta name="description">
   html = html.replace(/<meta name="description" content="[^"]*"[^>]*>\n?/, '');
+  // Route-specific robots directives such as noindex must replace the template
+  // default instead of producing conflicting index + noindex tags.
+  if (/name="robots"/.test(helmetHead)) {
+    html = html.replace(/<meta name="robots"[^>]*>\n?/, '');
+  }
   // Remove the template's hardcoded homepage canonical / OG url+title / Twitter title
   // ONLY when the route's Helmet provides its own — otherwise every prerendered route
   // inherits the HOMEPAGE canonical + OG/Twitter tags and Helmet APPENDS a second copy,
@@ -132,6 +164,8 @@ async function prerender() {
 
       // Build the route HTML from template:
       let routeHtml = baseTemplate;
+      routeHtml = stripConversionShellExtras(routeHtml, route);
+      routeHtml = stripConversionStructuredData(routeHtml, route);
 
       // Strip default SEO tags from template — Helmet provides per-route ones.
       // Pass helmetHead so we only strip template canonical/OG/Twitter that Helmet replaces.

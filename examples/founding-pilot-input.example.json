@@ -1,0 +1,50 @@
+{
+  "report": {
+    "id": "VLP-DEMO-001",
+    "reportDate": "2026-08-29"
+  },
+  "company": {
+    "name": "Example Electrical Co."
+  },
+  "project": {
+    "name": "Fictional Library Renovation",
+    "location": "Raleigh, NC"
+  },
+  "submitter": "Casey Example, Foreperson",
+  "receivedAt": "2026-08-29T17:40:00-04:00",
+  "customerReportedEventTimes": [
+    {
+      "time": "07:10",
+      "event": "Crew arrived and completed the pre-task briefing."
+    }
+  ],
+  "workPerformed": [
+    "Installed fictional conduit on Level 2."
+  ],
+  "crewLabor": [
+    {
+      "trade": "Electricians",
+      "count": 4,
+      "hoursEach": 8
+    }
+  ],
+  "materialsEquipmentDeliveries": [
+    "Received 200 ft of fictional conduit."
+  ],
+  "delaysBlockers": [
+    "Access to Room 204 was unavailable for 30 minutes."
+  ],
+  "safetyObservations": [
+    "No incidents reported by the customer."
+  ],
+  "rfisChangeOrders": [
+    "RFI-EXAMPLE-7 remained open."
+  ],
+  "photoReferences": [
+    {
+      "file": "fictional-panel.jpg",
+      "caption": "Customer-supplied example photo."
+    }
+  ],
+  "additionalNotes": "Every person, company, project, and fact in this example is fictional."
+}

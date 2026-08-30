@@ -1,52 +1,42 @@
-import { Shield, RotateCcw, Lock, HeartHandshake } from "lucide-react";
+import { FileCheck, Lock, RotateCcw, Shield } from "lucide-react";
 
 const guarantees = [
   {
-    icon: Shield,
-    title: "No Charge Until Launch",
-    description: "Reserve your seat for free. You only pay $49/mo once VoiceLogPro ships and you choose to subscribe.",
-  },
-  {
     icon: RotateCcw,
-    title: "30-Day Money-Back",
-    description: "At launch, if it doesn't save you hours and help you win disputes in the first 30 days, we refund every cent.",
+    title: "Useful-Report Refund",
+    description: "If the reports are not useful, email us within 7 calendar days after the final pilot report for a refund of the $49 pilot payment.",
   },
   {
     icon: Lock,
-    title: "Your Data Stays Yours",
-    description: "Daily logs export as standard PDFs. No lock-in. Leave anytime and keep every report you generated.",
+    title: "No Automatic Renewal",
+    description: "The $49 charge is one-time. Buying the pilot does not enroll you in another plan.",
   },
   {
-    icon: HeartHandshake,
-    title: "Built By Subcontractors",
-    description: "We're not Big Tech. We've lost money to bad documentation — that's why this tool exists. We're on your side.",
+    icon: FileCheck,
+    title: "Your Supplied Facts",
+    description: "We structure the information you provide. Missing facts are omitted or marked Not provided, never invented.",
+  },
+  {
+    icon: Shield,
+    title: "Clear Limits",
+    description: "Reports support project records but do not guarantee compliance, admissibility, payment, lien rights, or a legal outcome.",
   },
 ];
 
-/**
- * Risk reversal / guarantees section.
- * Removes the buyer's four biggest fears (price, fit, lock-in, trust) —
- * a core Dotcom Secrets "stack" element.
- */
 export function GuaranteeSection() {
   return (
     <section className="section-container">
       <div className="max-w-4xl mx-auto">
-        <h2 className="headline-section text-foreground mb-3 text-center">
-          Join With Zero Risk
-        </h2>
-        <p className="body-large text-center mb-10">
-          We remove every reason to say "not yet."
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {guarantees.map((g) => (
-            <div key={g.title} className="card-sunlight text-center">
-              <div className="w-12 h-12 bg-primary/20 border-2 border-primary flex items-center justify-center mx-auto mb-3" style={{ borderRadius: 'var(--radius)' }}>
-                <g.icon className="w-6 h-6 text-primary" />
+        <h2 className="headline-section text-foreground mb-3 text-center">A small, clear first step</h2>
+        <p className="body-large text-center mb-10">One paid pilot, a defined deliverable, and no hidden subscription.</p>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {guarantees.map((item) => (
+            <div key={item.title} className="card-sunlight text-center">
+              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center border-2 border-primary bg-primary/20" style={{ borderRadius: "var(--radius)" }}>
+                <item.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="font-bold text-foreground mb-1 text-sm">{g.title}</h3>
-              <p className="text-muted-foreground text-xs">{g.description}</p>
+              <h3 className="mb-1 text-sm font-bold text-foreground">{item.title}</h3>
+              <p className="text-xs text-muted-foreground">{item.description}</p>
             </div>
           ))}
         </div>

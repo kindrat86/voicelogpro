@@ -23,6 +23,9 @@ export const EVENTS = {
   demoRecordClicked: "demo_record_clicked",
   faqExpanded: "faq_expanded",
   externalLinkClicked: "external_link_clicked",
+  foundingPilotViewed: "founding_pilot_viewed",
+  foundingPilotCtaClicked: "founding_pilot_cta_clicked",
+  foundingPilotOnboardingViewed: "founding_pilot_onboarding_viewed",
   formValidationError: "form_validation_error",
   formSubmitFailed: "form_submit_failed",
 } as const;
