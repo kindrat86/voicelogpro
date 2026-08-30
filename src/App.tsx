@@ -23,6 +23,14 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
+const CONVERSION_PATHS = new Set([
+  "/",
+  "/founding-pilot",
+  "/pilot-welcome",
+  "/crew-plan",
+  "/beta",
+]);
+
 /** Scroll to the #hash target after SPA navigation (react-router doesn't). */
 const ScrollToHash = () => {
   const { hash, pathname } = useLocation();
@@ -56,7 +64,8 @@ const ConsentGate = () => {
  *  appear on the hydrating render either. */
 const MobileBottomBarGate = () => {
   const mounted = useMounted();
-  if (!mounted) return null;
+  const { pathname } = useLocation();
+  if (!mounted || CONVERSION_PATHS.has(pathname)) return null;
   return <MobileBottomBar />;
 };
 

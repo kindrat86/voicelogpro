@@ -8,6 +8,7 @@ import { Mic, FileText, Clock, Shield, FileCheck, Users, Smartphone, CheckCircle
 import { z } from "zod";
 import { subscribeToSequence } from "@/lib/subscribe";
 import { track, identify, EVENTS } from "@/lib/posthog";
+import { FoundingPilotCTA } from "@/components/FoundingPilotCTA";
 // Served from public/images so dev, SPA bundle, and prerendered HTML all
 // resolve the same URL (src/assets imports broke the prerendered pages).
 const beforeImage = "/images/before-messy-notes.webp";
@@ -114,11 +115,17 @@ export default function BetaSignup() {
     <>
       <Helmet>
         <title>VoiceLogPro Beta | Stop Chasing Paper Timesheets</title>
-        <meta name="description" content="Turn field voice notes into accurate labor logs and Phase vs. Actual reports in 30 seconds. No typing. No apps. No crew accounts. Join the beta." />
+        <meta name="description" content="Join the VoiceLogPro beta waitlist or start the $49 one-time human-assisted Founding Pilot for one crew, seven days, and up to five daily-report PDFs." />
         <link rel="canonical" href="https://voicelogpro.com/beta" />
       </Helmet>
 
       <div className="min-h-screen bg-background">
+        <section className="border-b border-border bg-secondary/30 px-4 py-8 text-center">
+          <p className="mb-2 text-sm font-bold uppercase tracking-wide text-primary">Need reports now?</p>
+          <h2 className="mb-3 text-2xl font-bold text-foreground">Start the $49 one-time Founding Pilot</h2>
+          <p className="mx-auto mb-5 max-w-2xl text-muted-foreground">The current paid pilot is human-assisted: one crew, 7 days, up to 5 daily-report PDFs. It does not imply the full self-serve app is live.</p>
+          <FoundingPilotCTA placement="beta_page" />
+        </section>
         {/* Hero Section */}
         <section className="px-4 pt-12 pb-16 md:pt-20 md:pb-24">
           <div className="max-w-3xl mx-auto text-center">
@@ -128,9 +135,9 @@ export default function BetaSignup() {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              VoiceLogPro turns field voice notes into accurate labor logs and Phase vs. Actual reports in 30 seconds.
+              The future self-serve app is in beta. For reports now, use the human-assisted Founding Pilot above.
               <br className="hidden md:block" />
-              <strong className="text-foreground">No typing. No apps. No crew accounts.</strong>
+              <strong className="text-foreground">One paid pilot. No automatic enrollment in a future plan.</strong>
             </p>
 
             {/* Before/After Slider */}

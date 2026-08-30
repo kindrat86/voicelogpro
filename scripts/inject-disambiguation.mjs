@@ -19,10 +19,10 @@ const ORG = {
   name: 'VoiceLogPro',
   url: 'https://voicelogpro.com',
   logo: 'https://voicelogpro.com/images/og-card.jpg',
-  description: "VoiceLogPro is a voice-to-PDF daily construction log app for contractors — general contractors, electricians, plumbers, HVAC, and roofers speak their on-site daily report and it becomes a timestamped, court-admissible PDF with fields for weather, crew, work performed, and materials, protecting mechanic's-lien and delay claims.",
-  disambiguatingDescription: 'VoiceLogPro is a voice-to-PDF daily construction log app (voice on-site → timestamped, court-admissible daily-report PDF) — not a general-purpose meeting/voice-transcription tool (Otter, Rev, Fireflies), and not a full construction-management platform (Procore, Raken).',
+  description: 'VoiceLogPro currently provides human-assisted daily-report PDFs from customer-supplied notes and photos through its Founding Pilot while the self-serve software remains in beta.',
+  disambiguatingDescription: 'VoiceLogPro is a construction daily-report documentation service, not a general-purpose meeting transcription tool and not a full construction-management platform.',
   foundingDate: '2024',
-  sameAs: ['https://github.com/kindrat86', 'https://x.com/data_nerd', 'https://www.linkedin.com/in/kushnir-maryan/', 'https://sipiteno.com', 'https://invisibleexit.com', 'https://signals.gitdealflow.com', 'https://sanctionsai.dev'],
+  sameAs: ['https://github.com/kindrat86', 'https://x.com/sipiteno', 'https://www.linkedin.com/in/kushnir-maryan/', 'https://sipiteno.com', 'https://invisibleexit.com', 'https://signals.gitdealflow.com', 'https://sanctionsai.dev'],
 };
 const BLOCK = MARKER + '<script type="application/ld+json">' + JSON.stringify(ORG) + '</script>';
 const SKIP = new Set(['assets', 'og', '_app', 'node_modules']);

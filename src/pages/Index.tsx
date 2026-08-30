@@ -2,16 +2,9 @@ import { Helmet } from "react-helmet-async";
 import { HeroSection } from "@/components/HeroSection";
 import { SqueezeSection } from "@/components/SqueezeSection";
 import { BuiltForJobsites } from "@/components/BuiltForJobsites";
-import { WhySitelogExists } from "@/components/WhySitelogExists";
 import { InteractiveVoiceDemo } from "@/components/InteractiveVoiceDemo";
-import { HowItWorks } from "@/components/HowItWorks";
-import { FeaturesSection } from "@/components/FeaturesSection";
-import { ComplianceMatrix } from "@/components/ComplianceMatrix";
-import { ValueLadderSection } from "@/components/ValueLadderSection";
 import { OrderBumpSection } from "@/components/OrderBumpSection";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { LimitedBetaSection } from "@/components/LimitedBetaSection";
-import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { organizationSchema } from "@/seo/softwareSchema";
 import { JsonLd } from "@/components/JsonLd";
@@ -47,56 +40,41 @@ const Index = () => {
     <>
       <Helmet>
         <title>VoiceLogPro | Daily Construction Reports from Voice Notes</title>
-        <meta name="description" content="VoiceLogPro turns voice notes into daily construction reports in 60 seconds. No typing. Works from any phone. Built for subcontractors." />
+        <meta name="description" content="VoiceLogPro Founding Pilot: $49 one-time for one crew, seven days, and up to five human-assisted daily-report PDFs. No subscription or automatic renewal." />
         <link rel="canonical" href="https://voicelogpro.com/" />
+        <meta property="og:title" content="$49 VoiceLogPro Founding Pilot" />
+        <meta property="og:description" content="One crew, seven days, and up to five human-assisted daily-report PDFs. One-time payment with no automatic renewal." />
+        <meta property="og:url" content="https://voicelogpro.com/" />
+        <meta name="twitter:title" content="$49 VoiceLogPro Founding Pilot" />
+        <meta name="twitter:description" content="One-time human-assisted daily-report pilot for one crew. No subscription or automatic renewal." />
       </Helmet>
       <JsonLd schema={[organizationSchema, personSchema]} />
       <main className="min-h-screen bg-background">
         {/* 1. Hero with inline squeeze opt-in */}
         <HeroSection />
 
-        {/* 2. Dedicated squeeze (lead magnet value anchor) */}
+        {/* 2. Purchase-ready concierge offer */}
+        <OrderBumpSection />
+
+        {/* 3. Free path for visitors who are not ready to buy */}
         <div id="defense-kit">
           <SqueezeSection />
         </div>
 
-        {/* 3. Social proof — trade imagery */}
+        {/* 4. Trade context */}
         <div className="hidden md:block">
           <BuiltForJobsites />
         </div>
 
-        {/* 4. Epiphany Bridge story */}
-        <WhySitelogExists />
-
-        {/* 5. Interactive demo (show the thing) */}
+        {/* 5. Simulated product preview, explicitly labeled in the component */}
         <div id="demo">
           <InteractiveVoiceDemo />
         </div>
 
-        {/* 6. Authority — compliance coverage (table scrolls horizontally on mobile) */}
-        <ComplianceMatrix />
-
-        {/* 7. How it works */}
-        <HowItWorks />
-
-        {/* 8. Features */}
-        <FeaturesSection />
-
-        {/* 10. Value ladder (free → entry → core) */}
-        <ValueLadderSection />
-
-        {/* 11. Order bump + checkout-style conversion */}
-        <OrderBumpSection />
-
-        {/* 12. Risk reversal */}
+        {/* 6. Paid-pilot risk reversal */}
         <GuaranteeSection />
 
-        {/* 13. Scarcity / urgency */}
-        <LimitedBetaSection />
-
-        {/* 14. Objection handling */}
-        <FAQSection />
-
+        {/* 7. Site footer */}
         <Footer />
       </main>
     </>

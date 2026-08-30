@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { z } from "zod";
 import { subscribeToSequence } from "@/lib/subscribe";
 import { Badge } from "@/components/ui/badge";
+import { FoundingPilotCTA } from "@/components/FoundingPilotCTA";
 
 const emailSchema = z.string().email("Please enter a valid email address");
 
@@ -78,7 +79,7 @@ export default function CrewPlan() {
     <main className="min-h-screen bg-background flex flex-col">
       <Helmet>
         <title>Crew Plan Pricing — VoiceLogPro for Construction Teams</title>
-        <meta name="description" content="VoiceLogPro offers two plans: a free Solo Beta (unlimited voice logs, standard PDF reports) and the $49/month Crew Plan for up to 5 crews with priority onboarding and custom branding. No credit card required to start." />
+        <meta name="description" content="Start with the $49 one-time VoiceLogPro Founding Pilot: one crew, seven days, and up to five human-assisted daily-report PDFs. Future plans remain separate and require an explicit choice." />
         <link rel="canonical" href="https://voicelogpro.com/crew-plan" />
       </Helmet>
       <div className="flex-1 flex items-center justify-center px-4 py-16">
@@ -88,6 +89,13 @@ export default function CrewPlan() {
             <ArrowLeft className="w-4 h-4" />
             Back to home
           </Link>
+
+          <section className="card-industrial mb-10 border-2 border-primary text-center">
+            <p className="mb-2 text-sm font-bold uppercase tracking-wide text-primary">Available now</p>
+            <h1 className="mb-3 text-3xl font-bold">Start with the $49 one-time Founding Pilot</h1>
+            <p className="mx-auto mb-5 max-w-2xl text-muted-foreground">One crew, 7 days, and up to 5 human-assisted daily-report PDFs. No subscription and no automatic renewal.</p>
+            <FoundingPilotCTA placement="crew_plan_page" />
+          </section>
 
           {status === "success" ? (
             <div className="card-industrial p-8 max-w-md mx-auto text-center animate-fade-in">
@@ -118,10 +126,8 @@ export default function CrewPlan() {
                 Choose your path
               </h1>
               <p className="text-lg text-muted-foreground mb-8 text-center max-w-2xl mx-auto">
-                VoiceLogPro has two plans. The <strong>Solo Beta is free</strong> — unlimited voice logs,
-                standard PDF reports, and email support, no credit card required. The <strong>Crew Plan is
-                $49/month</strong> and adds up to 5 crews, priority onboarding, and custom branding. Pick the
-                one that fits how your team works today.
+                The Solo Beta and future Crew Plan below are waitlists for the self-serve product. For reports now,
+                use the <strong>$49 one-time Founding Pilot</strong> above. Buying the pilot does not enroll you in either future plan.
               </p>
 
               {/* Two-Option Grid */}

@@ -36,6 +36,8 @@ export interface RouteDef {
 export const ROUTES: RouteDef[] = [
   { path: "/", load: () => import("./pages/Index"), eager: Index },
   { path: "/crew-plan", load: () => import("./pages/CrewPlan") },
+  { path: "/founding-pilot", load: () => import("./pages/FoundingPilot") },
+  { path: "/pilot-welcome", load: () => import("./pages/PilotWelcome") },
   { path: "/blog", load: () => import("./pages/Blog") },
   { path: "/blog/:slug", load: () => import("./pages/BlogPost") },
   { path: "/blog/texas-lien-law", load: () => import("./pages/blog/TexasLienLaw2025") },

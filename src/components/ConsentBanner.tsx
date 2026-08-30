@@ -7,7 +7,7 @@
  * until the user explicitly grants or denies consent.
  *
  * DESIGN
- *  - Non-blocking (fixed bottom, doesn't obscure the hero).
+ *  - In document flow so consent never obscures purchase or report content.
  *  - Accept and Reject are equally weighted — no dark patterns, legally required.
  *  - Matches the industrial design system (card-industrial, primary gradient).
  */
@@ -23,7 +23,7 @@ export function ConsentBanner({ onDecide }: ConsentBannerProps) {
     <div
       role="dialog"
       aria-label="Cookie consent"
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 backdrop-blur-sm shadow-lg animate-slide-up"
+      className="relative inset-x-0 z-40 border-t border-border bg-background/95 backdrop-blur-sm shadow-lg animate-slide-up"
     >
       <div className="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
         <p className="text-sm leading-relaxed text-muted-foreground">
