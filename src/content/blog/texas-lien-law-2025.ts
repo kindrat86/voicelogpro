@@ -15,28 +15,30 @@ export const texasLienLaw2025 = {
 
   content: `# Texas Property Code Chapter 53: The 2026 Guide for Electrical Subcontractors
 
-> **Last updated: July 2026.** This guide reflects Texas HB 2237, effective January 1, 2022, which consolidated the former second-month and third-month subcontractor notices into a single third-month notice. Deadlines below use the current rule. Always confirm exact dates for your project with a licensed Texas construction attorney.
+> **Last updated: August 2026.** This guide reflects Texas HB 2237, effective January 1, 2022. Current monthly-notice deadlines differ by project type: generally the 15th day of the third month, but the 15th day of the second month for residential construction projects. Always confirm exact dates for your project with a licensed Texas construction attorney.
 
 ## TL;DR
 
-- Texas subcontractors must send monthly fund-trapping notices to retain lien rights—miss a deadline and you lose protection for that billing period.
-- Since HB 2237 (effective January 1, 2022) there is a single notice deadline: the 15th day of the third month following each month of unpaid labor or materials, sent to both the property owner and the original contractor. The older separate second-month notice to the GC was eliminated.
-- Fund trapping freezes owner payments to the GC, securing your unpaid invoices.
-- Daily logs with timestamps serve as primary evidence for first furnishing dates and lien amount calculations.
-- Filing a mechanics lien affidavit must occur by the 15th of the fourth month after the month you last furnished labor or materials.
+- Texas derivative claimants must send monthly notices to preserve statutory remedies. Missing a deadline can forfeit protection for that billing period.
+- Since HB 2237, each month of unpaid work generally requires one notice to the owner and original contractor by the 15th day of the third month; residential construction projects use the 15th day of the second month.
+- The owner must reserve 10 percent of the contract price or value during the work and for 30 days after completion under Section 53.101.
+- Daily logs and supporting records help establish furnishing dates and the amount claimed.
+- Lien-affidavit deadlines vary by claimant and project type: generally the 15th day of the fourth month, but the 15th day of the third month for residential construction projects.
 
 ## Table of Contents
 
 1. [What is Texas Property Code Chapter 53?](#what-is-texas-property-code-chapter-53)
 2. [Who qualifies for Texas mechanics lien protection?](#who-qualifies-for-texas-mechanics-lien-protection)
 3. [What are the monthly notice deadlines for Texas subcontractors?](#what-are-the-monthly-notice-deadlines-for-texas-subcontractors)
-4. [How does fund trapping work under Chapter 53?](#how-does-fund-trapping-work-under-chapter-53)
-5. [What triggers the 30-day retainage release timeline?](#what-triggers-the-30-day-retainage-release-timeline)
+4. [How do reserved funds protect claimants under Chapter 53?](#how-do-reserved-funds-protect-claimants-under-chapter-53)
+5. [How do retainage notices and prompt-payment deadlines work?](#how-do-retainage-notices-and-prompt-payment-deadlines-work)
 6. [When must a Texas mechanics lien affidavit be filed?](#when-must-a-texas-mechanics-lien-affidavit-be-filed)
 7. [How do daily logs prove first furnishing date?](#how-do-daily-logs-prove-first-furnishing-date)
 8. [What information must monthly notices contain?](#what-information-must-monthly-notices-contain)
 9. [What happens if you miss a Texas lien deadline?](#what-happens-if-you-miss-a-texas-lien-deadline)
 10. [How do Texas lien rights differ from other states?](#how-do-texas-lien-rights-differ-from-other-states)
+
+[Printable one-page checklist](#tx53-checklist)
 
 ---
 
@@ -49,9 +51,10 @@ Texas Property Code Chapter 53 is the statutory framework governing construction
 The chapter applies to all private construction projects. Public projects follow Texas Government Code Chapter 2253 (payment bonds) instead of mechanics liens.
 
 Key sections include:
-- **Section 53.056**: Monthly notice requirements for subcontractors
-- **Section 53.057**: Fund trapping procedures
+- **Section 53.056**: Monthly notice requirements for derivative claimants
+- **Section 53.057**: Notice of claim for unpaid retainage
 - **Section 53.052**: Lien affidavit filing deadlines
+- **Section 53.101**: Owner's 10 percent reserve
 
 For the official statute text, see [Texas Property Code Chapter 53](https://statutes.capitol.texas.gov/Docs/PR/htm/PR.53.htm) on the Texas Legislature website.
 
@@ -77,77 +80,70 @@ Original contractors do not need to send monthly notices. Derivative claimants m
 
 ## What are the monthly notice deadlines for Texas subcontractors?
 
-**Short answer:** Texas subcontractors must send a single monthly notice to both the property owner and the original contractor by the 15th day of the third month following each month in which they provided unpaid labor or materials. HB 2237 (effective January 1, 2022) consolidated the former second-month and third-month notices into this one third-month notice.
+**Short answer:** A derivative claimant must send one monthly notice to the owner and original contractor for each month of unpaid labor or materials. The general deadline is the 15th day of the third month after that month; for residential construction projects, it is the 15th day of the second month.
 
-| Recipient | Deadline | Example (unpaid work in January) | Statute Reference |
-|-----------|----------|----------------------------------|-------------------|
-| Property Owner and Original Contractor | 15th day of the 3rd month after each month of unpaid work | April 15 | Section 53.056 (as amended by HB 2237, 2022) |
-| Each subsequent month of unpaid work | 15th day of the 3rd month after that billing month | Ongoing monthly | Section 53.056 |
+| Project type | Recipient | Deadline | Example for unpaid work in January |
+|--------------|-----------|----------|------------------------------------|
+| Non-residential | Owner and original contractor | 15th day of the 3rd month | April 15 |
+| Residential construction | Owner and original contractor | 15th day of the 2nd month | March 15 |
 
 ### Monthly Notice Compliance Checklist
 
-- [ ] Record exact first furnishing date in daily log with timestamp
-- [ ] Calendar the single notice deadline: 15th day of the 3rd month after each month of unpaid work
+- [ ] Confirm whether the project is residential or non-residential
+- [ ] Record furnishing dates in a contemporaneous log
+- [ ] Calendar the applicable deadline for each month of unpaid work
 - [ ] Send the notice to both the property owner and the original contractor
-- [ ] Send notices via certified mail, return receipt requested
-- [ ] Retain proof of mailing with postmark date
-- [ ] Continue monthly notices for each subsequent billing period
-- [ ] Document all labor and materials in contemporaneous daily logs
+- [ ] Send by certified mail in the statutory form and retain proof of mailing
+- [ ] Continue monthly notices for each subsequent unpaid billing period
 
 The full statutory notice requirements are published in [Texas Property Code Chapter 53](https://statutes.capitol.texas.gov/Docs/PR/htm/PR.53.htm) on the Texas Legislature's statutes site.
 
 ---
 
-## How does fund trapping work under Chapter 53?
+## How do reserved funds protect claimants under Chapter 53?
 
-**Short answer:** Fund trapping under Section 53.057 requires the owner to withhold payments to the GC after receiving a subcontractor's monthly notice, up to the amount claimed in that notice.
+**Short answer:** Section 53.101 requires the owner to reserve 10 percent of the contract price or value while work is in progress and for 30 days after completion. Timely notices and affidavits are still required to assert a claim against reserved funds.
 
-When an owner receives a valid monthly notice from a subcontractor:
+For a reserved-funds claim, calendar the separate Section 53.103 affidavit trigger: filing may be due within 30 days after the earliest applicable completion, termination, or abandonment date. This can be earlier than the general Section 53.052 filing deadline.
 
-1. The owner must retain sufficient funds to cover the claimed amount
-2. The retained funds come from payments otherwise due to the GC
-3. The GC cannot recover the retained funds until the subcontractor is paid
-4. The owner's liability is limited to the original contract price
-
-Fund trapping protects subcontractors even when GCs become insolvent. The owner cannot pay the GC in full if valid notices remain outstanding.
-
-**Critical limitation:** Fund trapping only works if funds remain in the contract. If the owner has already paid the GC before receiving notices, no funds exist to trap.
+**Critical limitation:** The reserve and notice rules are procedural and deadline-sensitive. Confirm the applicable route for your contract and project type with a licensed Texas construction attorney.
 
 ---
 
-## What triggers the 30-day retainage release timeline?
+## How do retainage notices and prompt-payment deadlines work?
 
-**Short answer:** Under Section 53.101, the GC must pay subcontractors within 30 days after the owner makes final payment to the GC, or the subcontractor may recover penalty interest at 1.5% per month.
+**Short answer:** Section 53.057 requires a claimant seeking unpaid retainage to notify the owner and original contractor no later than the earlier of 30 days after the claimant's contract is completed, terminated, or abandoned, or 30 days after the original contract is terminated or abandoned.
 
-The retainage release sequence:
+Prompt payment is a separate protection under the Texas Prompt Payment Act (Property Code Chapter 28):
 
-1. Project reaches substantial completion
-2. Owner makes final payment to GC (including retainage)
-3. GC has 30 days to distribute retainage to subcontractors
-4. Failure to pay within 30 days triggers penalty interest
+1. On a proper written payment request, the owner generally must pay the contractor by the 35th day after receiving the request, less authorized withholding.
+2. After receiving the owner's payment, the contractor must pay each subcontractor its share within 7 days.
+3. An overdue amount under Chapter 28 bears interest at 1-1/2 percent per month.
 
-Texas Business & Commerce Code Section 28.004 provides additional protections for construction retainage. See the [Texas Legislature statute](https://statutes.capitol.texas.gov/Docs/BC/htm/BC.28.htm) for current interest rates.
+These Chapter 28 payment rules are separate from Chapter 53 lien and retainage-notice requirements. See the [official Texas Property Code Chapter 28](https://statutes.capitol.texas.gov/Docs/PR/htm/PR.28.htm).
 
 ---
 
 ## When must a Texas mechanics lien affidavit be filed?
 
-**Short answer:** A Texas mechanics lien affidavit must be filed with the county clerk by the 15th day of the fourth month after the month in which the claimant last furnished labor or materials.
+**Short answer:** Filing deadlines vary by claimant and project type. Original contractors generally file by the 15th day of the fourth month after completion; derivative claimants generally use the 15th day of the fourth month after the applicable last-furnishing anchor. Residential projects generally use the 15th day of the third month after the corresponding anchor. Retainage claims have a separate Section 53.052(d) deadline.
 
-| Claimant Type | Filing Deadline | Example (Last Furnishing: January 20) |
-|---------------|-----------------|---------------------------------------|
-| Original Contractor | 15th of 4th month after last furnishing | May 15 |
-| Subcontractor | 15th of 4th month after last furnishing | May 15 |
-| Retainage Only Claims | 15th of 4th month after completion | May 15 |
+| Claimant or project type | General filing rule |
+|--------------------------|---------------------|
+| Original contractor, non-residential | 15th day of the 4th month after completion, termination, or abandonment |
+| Derivative claimant, non-residential | 15th day of the 4th month after the applicable last-furnishing anchor |
+| Residential construction | 15th day of the 3rd month after the corresponding anchor |
+| Derivative retainage claim | 15th day of the 3rd month after the original contract was completed, terminated, or abandoned |
 
 ### Lien Affidavit Filing Checklist
 
-- [ ] Calculate exact last furnishing date from daily logs
-- [ ] Verify all monthly notices were timely sent
-- [ ] Prepare lien affidavit with statutory requirements
-- [ ] File with county clerk where property is located
-- [ ] Send copy to owner within 5 days of filing (Section 53.055)
-- [ ] Calendar the 2-year enforcement deadline
+- [ ] Confirm claimant type and whether the project is residential
+- [ ] Calculate the applicable completion or last-furnishing anchor from project records
+- [ ] Verify all required monthly and retainage notices were timely sent
+- [ ] Prepare the affidavit with the statutory requirements
+- [ ] File in the county where the improvements are located
+- [ ] Send a copy to the owner and original contractor within 5 days of filing
+- [ ] Calendar foreclosure: generally one year after the last day the affidavit could be filed; extension to two years requires a recorded agreement
 
 The lien affidavit must include:
 - Sworn statement of amount claimed
@@ -161,7 +157,7 @@ The lien affidavit must include:
 
 **Short answer:** Daily construction logs with timestamps, GPS location data, and photo documentation create contemporaneous evidence of first furnishing dates that courts accept over conflicting testimony.
 
-First furnishing date determines all subsequent deadlines. Disputes over this date are common in lien litigation.
+Furnishing records help prove when lien rights began and support the completion and last-furnishing anchors used by different notice and affidavit deadlines. Disputes over these dates are common in lien litigation.
 
 **What courts accept as proof:**
 
@@ -203,12 +199,11 @@ Statutory requirements under Section 53.056:
 
 | Missed Deadline | Consequence | Recovery Options |
 |-----------------|-------------|------------------|
-| Monthly notice to GC | Lose fund trapping for that period | Breach of contract claim against GC |
-| Monthly notice to Owner | Lose lien rights for that period | Breach of contract claim against GC |
-| Lien affidavit filing | Permanent loss of lien rights | Breach of contract only |
-| 2-year enforcement | Lien becomes unenforceable | None for lien; contract claim may survive |
+| Monthly notice | May lose statutory protection for that billing period | Contract remedies may remain |
+| Lien affidavit filing | Mechanics lien claim may be barred | Contract remedies may remain |
+| Foreclosure suit deadline | Lien becomes unenforceable | Contract remedies may have separate limits |
 
-Texas courts strictly enforce these deadlines. In *Rourke v. Garza*, 530 S.W.3d 794 (Tex. App. 2017), the court denied lien recovery where the claimant missed the filing deadline by one day.
+Under Section 53.158, a foreclosure suit generally must be brought within one year after the last day the claimant could file the affidavit under Section 53.052. An extension to the second anniversary of the filing date requires a written, recorded agreement.
 
 ---
 
@@ -221,8 +216,8 @@ Texas courts strictly enforce these deadlines. In *Rourke v. Garza*, 530 S.W.3d 
 | Preliminary notice required | No | Yes (20 days) | Yes (NTO within 45 days) |
 | Monthly notices required | Yes | No | No |
 | Fund trapping available | Yes | No | No |
-| Lien filing deadline | 15th of 4th month | 90 days after completion | 90 days after last furnishing |
-| Enforcement deadline | 2 years | 90 days | 1 year |
+| Lien filing deadline | Varies: generally 15th of 4th month; 3rd month for residential | 90 days after completion | 90 days after last furnishing |
+| Enforcement deadline | Generally 1 year after last affidavit-filing day | 90 days | 1 year |
 
 Texas's monthly notice system is more burdensome but provides stronger protection through fund trapping. Subcontractors who maintain compliance have direct recourse against owner funds.
 
@@ -266,11 +261,11 @@ Maintaining lien rights requires systematic documentation. The following records
 
 ### Does Texas require a preliminary notice like California?
 
-**Short answer:** No. Texas does not require a single preliminary notice. Instead, Texas requires ongoing monthly notices for each billing period, each due the 15th day of the third month following the month of unpaid labor or materials — a single notice to the property owner and original contractor since HB 2237 took effect on January 1, 2022.
+**Short answer:** No. Texas does not use one universal preliminary notice. Instead, derivative claimants generally send one notice for each month of unpaid work to the owner and original contractor. The deadline is generally the 15th day of the third month, or the 15th day of the second month for residential construction projects.
 
 ### How long do I have to sue after filing a lien?
 
-**Short answer:** Two years from the date the lien affidavit is filed. After two years, the lien becomes unenforceable even if properly filed. Calendar this deadline immediately upon filing.
+**Short answer:** Section 53.158 generally requires suit within one year after the last day the claimant could file the lien affidavit under Section 53.052. A written agreement may extend the deadline to the second anniversary of the filing date only if the agreement is recorded as the statute requires.
 
 ### Can I trap funds if I'm a second-tier subcontractor?
 
@@ -298,15 +293,15 @@ Maintaining lien rights requires systematic documentation. The following records
         "name": "What are the monthly notice deadlines for Texas subcontractors?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Texas subcontractors must send a single monthly notice to both the property owner and the original contractor by the 15th day of the third month following each month of unpaid labor or materials. HB 2237 (effective January 1, 2022) consolidated the former second-month and third-month notices into this single third-month notice."
+          "text": "Texas derivative claimants generally send one monthly notice to the owner and original contractor for each month of unpaid labor or materials. The deadline is generally the 15th day of the third month, or the 15th day of the second month for residential construction projects."
         }
       },
       {
         "@type": "Question",
-        "name": "How does fund trapping work under Chapter 53?",
+        "name": "How do reserved funds protect claimants under Chapter 53?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Fund trapping under Section 53.057 requires the owner to withhold payments to the GC after receiving a subcontractor's monthly notice, up to the amount claimed in that notice."
+          "text": "Section 53.101 requires the owner to reserve 10 percent of the contract price or value during the work and for 30 days after completion. Claimants must still satisfy applicable notice and affidavit deadlines."
         }
       },
       {
@@ -314,7 +309,7 @@ Maintaining lien rights requires systematic documentation. The following records
         "name": "When must a Texas mechanics lien affidavit be filed?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A Texas mechanics lien affidavit must be filed with the county clerk by the 15th day of the fourth month after the month in which the claimant last furnished labor or materials."
+          "text": "Lien-affidavit deadlines vary by claimant and project type. They are generally the 15th day of the fourth month after the applicable anchor, or the 15th day of the third month for residential construction projects; retainage claims have a separate deadline under Section 53.052(d)."
         }
       },
       {
@@ -346,7 +341,7 @@ Maintaining lien rights requires systematic documentation. The following records
         "name": "Does Texas require a preliminary notice like California?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Texas does not require a single preliminary notice. Instead, Texas requires ongoing monthly notices for each billing period, each due the 15th day of the third month following the month of unpaid labor or materials (a single notice to the owner and original contractor since HB 2237 took effect in 2022)."
+          "text": "Texas does not use one universal preliminary notice. Derivative claimants generally send one notice for each month of unpaid work; the deadline is generally the 15th day of the third month, or the 15th day of the second month for residential construction projects."
         }
       }
     ]

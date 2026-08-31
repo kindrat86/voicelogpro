@@ -28,6 +28,7 @@ export const EVENTS = {
   foundingPilotOnboardingViewed: "founding_pilot_onboarding_viewed",
   formValidationError: "form_validation_error",
   formSubmitFailed: "form_submit_failed",
+  checklistPrintClicked: "checklist_print_clicked",
 } as const;
 
 export type EventName = (typeof EVENTS)[keyof typeof EVENTS];
