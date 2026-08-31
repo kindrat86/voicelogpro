@@ -74,10 +74,13 @@ for (const root of roots) {
 
 const TAG_RE = /<script([^>]*)>([\s\S]*?)<\/script\s*>/gi;
 const failures = [];
+const pageviewPolicyFailures = [];
 let checked = 0;
+let pageviewPoliciesChecked = 0;
 
 for (const file of files) {
   const html = fs.readFileSync(file, 'utf-8');
+  const executableInlineScripts = [];
   TAG_RE.lastIndex = 0;
   let m;
   while ((m = TAG_RE.exec(html)) !== null) {
@@ -89,6 +92,7 @@ for (const file of files) {
     const type = typeMatch ? typeMatch[1].trim() : '';
     if (type && NON_JS_TYPES.test(type)) continue;
 
+    executableInlineScripts.push(body);
     checked++;
     try {
       // Compiles (and therefore parses) without executing. Same syntax check
@@ -101,6 +105,27 @@ for (const file of files) {
         message: err.message,
         preview: body.trim().slice(0, 120).replace(/\s+/g, ' '),
       });
+    }
+  }
+
+  // Count analytics policy markers only inside executable inline JavaScript.
+  // Raw HTML also contains a warning comment mentioning posthog.init, which is
+  // documentation rather than a second initialization.
+  const executableSource = executableInlineScripts.join('\n');
+  const manualPageviews = executableSource.match(/\.capture\(\s*["']\$pageview["']\s*,\s*\{\s*deferred\s*:\s*true\s*\}\s*\)/g) || [];
+  if (manualPageviews.length > 0) {
+    pageviewPoliciesChecked++;
+    const initCount = (executableSource.match(/\bposthog\.init\s*\(/g) || []).length;
+    const autoDisableCount = (executableSource.match(/\bcapture_pageview\s*:\s*false\b/g) || []).length;
+
+    if (manualPageviews.length !== 1) {
+      pageviewPolicyFailures.push(`${path.relative(repoRoot, file)}: expected one manual deferred pageview, found ${manualPageviews.length}`);
+    }
+    if (initCount !== 1) {
+      pageviewPolicyFailures.push(`${path.relative(repoRoot, file)}: expected one executable posthog.init call, found ${initCount}`);
+    }
+    if (autoDisableCount !== 1) {
+      pageviewPolicyFailures.push(`${path.relative(repoRoot, file)}: manual deferred pageview requires capture_pageview:false (found ${autoDisableCount})`);
     }
   }
 }
@@ -117,4 +142,14 @@ if (failures.length) {
   process.exit(1);
 }
 
+if (pageviewPolicyFailures.length) {
+  console.error(`\n❌ PostHog pageview policy errors (${pageviewPolicyFailures.length}):\n`);
+  for (const failure of pageviewPolicyFailures) {
+    console.error(`   ${failure}`);
+  }
+  console.error('\nKeep the single manual deferred:true pageview and disable PostHog automatic pageviews.\n');
+  process.exit(1);
+}
+
 console.log(`✅ Inline scripts OK: ${checked} parsed across ${files.length} HTML files`);
+console.log(`✅ PostHog pageview policy OK: ${pageviewPoliciesChecked} manual-capture HTML file(s) checked`);
