@@ -11,7 +11,7 @@ export const texasLienLaw2025 = {
   jurisdiction: "Texas",
   targetAudience: "Texas Electrical Subcontractor",
   publishedAt: "2025-01-15",
-  updatedAt: "2026-07-18",
+  updatedAt: "2026-08-31",
 
   content: `# Texas Property Code Chapter 53: The 2026 Guide for Electrical Subcontractors
 
