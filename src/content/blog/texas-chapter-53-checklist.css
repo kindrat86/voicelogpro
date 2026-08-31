@@ -74,6 +74,12 @@
     break-inside: avoid;
   }
 
+  /* The intro's 'Print this page' guidance is screen-only; on paper it is
+     redundant, so drop it to keep the artifact to a single sheet. */
+  #tx53-checklist > p:first-of-type {
+    display: none;
+  }
+
   #tx53-checklist h2 {
     font-size: 0.95rem;
     margin: 0.2rem 0;
