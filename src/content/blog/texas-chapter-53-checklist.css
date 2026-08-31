@@ -51,11 +51,9 @@
     margin: 0;
     border: 1px solid #cbd5e1;
     border-radius: 4px;
-    page-break-inside: avoid;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* multicol (not grid): fragments cleanly across pages in print */
+    columns: 2;
     column-gap: 1rem;
-    row-gap: 0;
     align-items: start;
     background: #ffffff !important;
     color: #0f172a !important;
@@ -71,9 +69,9 @@
     border-color: #334155 !important;
   }
 
-  #tx53-checklist > div:first-child,
-  #tx53-checklist > p {
-    grid-column: 1 / -1;
+  /* section blocks stay whole within a column */
+  #tx53-checklist > div {
+    break-inside: avoid;
   }
 
   #tx53-checklist h2 {
@@ -83,24 +81,64 @@
   }
 
   #tx53-checklist h3 {
-    font-size: 0.75rem;
-    margin: 0.3rem 0 0.1rem;
+    font-size: 0.72rem;
+    margin: 0.2rem 0 0.1rem;
     break-after: avoid;
   }
 
+  #tx53-checklist > div {
+    margin-bottom: 0.15rem !important;
+  }
+
   #tx53-checklist .tx53-item {
-    font-size: 0.66rem;
-    line-height: 1.25;
-    padding: 0.05rem 0;
+    font-size: 0.62rem;
+    line-height: 1.2;
+    padding: 0.03rem 0;
   }
 
   #tx53-checklist input[type="checkbox"] {
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 0.62rem;
+    height: 0.62rem;
   }
 
   #tx53-checklist p {
-    font-size: 0.6rem;
-    margin: 0.2rem 0 0;
+    font-size: 0.58rem;
+    margin: 0.15rem 0 0;
+  }
+
+  /* Print only the checklist. Everything else on the page (article body,
+     headers, footers, cookie/consent banners, toasts, CTAs) is already
+     print:hidden via Tailwind, but hide any stragglers at the layout level
+     so a real browser print never ships unreviewed content on paper. */
+  body > *:not(#root) {
+    display: none !important;
+  }
+  /* App-shell consent banner: fixed, direct child of #root, no print:hidden */
+  #root > div[class*="inset-x-0"] {
+    display: none !important;
+  }
+  /* Global site chrome (nav header, wrappers) around the article */
+  #root [class*="min-h-screen"] > *:not(article) {
+    display: none !important;
+  }
+  /* Fixed bottom mobile nav (md:hidden does not apply at print width) */
+  nav {
+    display: none !important;
+  }
+  #root article > *:not(#tx53-checklist) {
+    display: none !important;
+  }
+  #root article {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    min-height: 0 !important;
+  }
+  #root [class*="min-h-screen"] {
+    min-height: 0 !important;
+  }
+  #root [class*="pb-24"] {
+    padding-bottom: 0 !important;
   }
 }
