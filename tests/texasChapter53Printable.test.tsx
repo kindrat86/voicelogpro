@@ -17,6 +17,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import TexasLienLaw2025Page from "@/pages/blog/TexasLienLaw2025";
 import { texasChapter53Checklist } from "@/content/blog/texas-chapter-53-checklist";
+import { texasLienLaw2025 } from "@/content/blog/texas-lien-law-2025";
 import { setConsentGranted } from "@/lib/posthog";
 
 const repoRoot = path.resolve(
@@ -111,6 +112,18 @@ describe("Texas Chapter 53 printable checklist on the guide page", () => {
       document.querySelectorAll(".print\\:hidden"),
     );
     expect(hidden.length).toBeGreaterThanOrEqual(3);
+    // Explicit scope: the corrected artifact prints; everything else does not.
+    // The prose body that renders guide markdown must be print-hidden, as must
+    // the article disclaimer footer and the site footer.
+    const prose = document.querySelector(".prose");
+    expect(prose?.className).toMatch(/print:hidden/);
+    const footers = Array.from(document.querySelectorAll("footer"));
+    expect(footers.length).toBeGreaterThanOrEqual(2);
+    for (const f of footers) {
+      const self = /print:hidden/.test(f.className);
+      const ancestor = f.closest(".print\\:hidden");
+      expect(self || ancestor !== null).toBe(true);
+    }
     // Checklist card chrome (the print button) must not appear on paper.
     const printBtn = screen.getByRole("button", { name: /print this checklist/i });
     expect(printBtn.className).toMatch(/print:hidden/);

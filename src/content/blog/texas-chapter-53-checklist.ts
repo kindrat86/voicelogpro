@@ -95,6 +95,18 @@ export const VERBATIM_OFFICIAL_EXCERPTS: { cite: string; text: string }[] = [
     text: "the 30th day after the date the claimant's contract is completed, terminated, or abandoned",
   },
   {
+    cite: "Sec. 53.057(a-1)(2)",
+    text: "the 30th day after the date the original contract is terminated or abandoned",
+  },
+  {
+    cite: "Sec. 53.103(2)",
+    text: "files an affidavit claiming a lien not later than the 30th day after the earliest of the date",
+  },
+  {
+    cite: "Sec. 53.052(d)",
+    text: "not later than the 15th day of the third month after the month in which the original contract under which the claimant performed was completed, terminated, or abandoned",
+  },
+  {
     cite: "Sec. 53.101(a)",
     text: "During the progress of work under an original contract for which a mechanic's lien may be claimed and for 30 days after the work under the contract is completed, the owner shall reserve",
   },
@@ -166,7 +178,7 @@ export const texasChapter53Checklist: Tx53ChecklistSection[] = [
     items: [
       {
         id: "first-furnishing",
-        text: "Record the exact first furnishing date in your daily log with timestamp: first furnishing date determines all subsequent deadlines.",
+        text: "Record the exact first furnishing date in your daily log with timestamp: it proves when your lien rights began and anchors your notice and affidavit timeline.",
         sourceQuotes: [],
       },
       {
@@ -213,10 +225,25 @@ export const texasChapter53Checklist: Tx53ChecklistSection[] = [
     items: [
       {
         id: "retainage-clock",
-        text: "If your contract provides for retainage, calendar contract completion: the retainage notice is due within 30 days after your contract is completed, terminated, or abandoned.",
+        text: "If your contract provides for retainage, calendar the earliest trigger: notice is due within 30 days after your contract is completed, terminated, or abandoned, or within 30 days after the original contract is terminated or abandoned, whichever is earlier.",
         sourceQuotes: [
           "must send the notice of claim for unpaid retainage to the owner or reputed owner and the original contractor not later than the earlier of",
           "the 30th day after the date the claimant's contract is completed, terminated, or abandoned",
+          "the 30th day after the date the original contract is terminated or abandoned",
+        ],
+      },
+      {
+        id: "reserved-funds-affidavit",
+        text: "To claim against the owner's 10 percent reserve, remember the separate short trigger: a lien on reserved funds requires filing the affidavit within 30 days after the earliest of completion, termination, or abandonment (Section 53.103).",
+        sourceQuotes: [
+          "files an affidavit claiming a lien not later than the 30th day after the earliest of the date",
+        ],
+      },
+      {
+        id: "retainage-affidavit-deadline",
+        text: "Filing for unpaid retainage: a derivative claimant must file the affidavit by the 15th day of the third month after the month the original contract was completed, terminated, or abandoned (Section 53.052(d)).",
+        sourceQuotes: [
+          "not later than the 15th day of the third month after the month in which the original contract under which the claimant performed was completed, terminated, or abandoned",
         ],
       },
     ],
@@ -283,7 +310,7 @@ export const texasChapter53Checklist: Tx53ChecklistSection[] = [
       },
       {
         id: "filing-deadline",
-        text: "File the sworn affidavit with the county clerk where the improvements are located: original contractors, 15th day of the fourth month after completion; derivative claimants, 15th day of the fourth month after last furnishing; residential projects, 15th day of the third month (Sections 53.052(a)-(c)).",
+        text: "File the sworn affidavit in the county of the improvements: original contractor, 15th day of the fourth month after completion; derivative claimant, 15th day of the fourth month after last furnishing; residential projects, 15th day of the third month after that anchor (Sections 53.052(a)-(c)).",
         sourceQuotes: [
           "not later than the 15th day of the fourth month after the month in which the original contractor's work was completed, terminated, or abandoned",
           "for residential construction projects, not later than the 15th day of the third month after the month in which the original contractor's work was completed, terminated, or abandoned",

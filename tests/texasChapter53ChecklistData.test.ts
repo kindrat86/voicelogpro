@@ -9,6 +9,7 @@
  * ONLY from the statute excerpts and the guide is no longer a source.
  */
 import { describe, expect, it } from "vitest";
+import { texasLienLaw2025 } from "@/content/blog/texas-lien-law-2025";
 import {
   texasChapter53Checklist,
   VERBATIM_OFFICIAL_EXCERPTS,
@@ -144,12 +145,31 @@ describe("Texas Chapter 53 checklist derives only from official statute excerpts
       (n, s) => n + s.items.length,
       0,
     );
-    expect(itemCount).toBeLessThanOrEqual(16);
+    // print layout is a 2-column grid (see texas-chapter-53-checklist.css),
+    // so 18 items still fit one US Letter page at print sizes
+    expect(itemCount).toBeLessThanOrEqual(18);
     for (const section of texasChapter53Checklist) {
       for (const item of section.items) {
         expect(item.text.length).toBeLessThan(320);
       }
     }
+  });
+
+  it("published guide and FAQ do not contradict the corrected checklist", () => {
+    const publicCopy = `${texasLienLaw2025.content}\n${JSON.stringify(texasLienLaw2025.faqSchema)}`;
+    for (const falseClaim of [
+      /two years from the date the lien affidavit is filed/i,
+      /calendar the 2-year enforcement deadline/i,
+      /certified mail, return receipt requested/i,
+      /GC must pay subcontractors within 30 days after the owner makes final payment/i,
+      /single third-month notice/i,
+      /all subsequent deadlines/i,
+    ]) {
+      expect(publicCopy).not.toMatch(falseClaim);
+    }
+    expect(publicCopy).toMatch(/residential construction projects[^\n]{0,180}15th day of the second month/i);
+    expect(publicCopy).toMatch(/one year[^\n]{0,180}(last day|affidavit-filing)/i);
+    expect(publicCopy).toMatch(/Prompt Payment Act/i);
   });
 
   it("no em dashes in checklist copy (repo style rule)", () => {

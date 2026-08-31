@@ -8,6 +8,7 @@ import texasLienLaw2025 from "@/content/blog/texas-lien-law-2025";
 import {
   texasChapter53Checklist,
   tx53ChecklistDisclaimer,
+  tx53ChecklistIntro,
   TX53_CHECKLIST_SOURCE_LABEL,
   TX53_CHECKLIST_SOURCE_URL,
 } from "@/content/blog/texas-chapter-53-checklist";
@@ -97,6 +98,7 @@ export default function TexasLienLaw2025Page() {
               Print this checklist
             </Button>
           </div>
+          <p className="text-sm text-muted-foreground mb-3">{tx53ChecklistIntro}</p>
           {texasChapter53Checklist.map((section) => (
             <div key={section.id} className="mb-3">
               <h3 className="text-base font-semibold text-foreground mb-1">
@@ -133,8 +135,10 @@ export default function TexasLienLaw2025Page() {
           </p>
         </section>
 
-        {/* Article Content */}
-        <div className="prose prose-slate dark:prose-invert max-w-none
+        {/* Article Content (hidden in print: the guide prose still contains
+            pre-correction claims; the printable artifact is the checklist
+            alone, which derives from official statute excerpts) */}
+        <div className={`print:hidden prose prose-slate dark:prose-invert max-w-none
           prose-headings:scroll-mt-20
           prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-12 prose-h2:mb-4 prose-h2:text-foreground
           prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-foreground
@@ -148,7 +152,7 @@ export default function TexasLienLaw2025Page() {
           prose-td:border prose-td:border-border prose-td:px-4 prose-td:py-2
           prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
           prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic
-        ">
+        `}>
           <MarkdownContent content={texasLienLaw2025.content} />
         </div>
 
@@ -166,7 +170,7 @@ export default function TexasLienLaw2025Page() {
         </section>
 
         {/* Disclaimer */}
-        <footer className="mt-12 pt-8 border-t border-border">
+        <footer className="print:hidden mt-12 pt-8 border-t border-border">
           <p className="text-sm text-muted-foreground">
             <strong>Disclaimer:</strong> This content is for educational purposes only and does not constitute legal advice. 
             Texas Property Code Chapter 53 is subject to change. Consult a licensed Texas attorney for specific legal guidance 
@@ -175,7 +179,9 @@ export default function TexasLienLaw2025Page() {
         </footer>
       </article>
 
-      <Footer />
+      <div className="print:hidden">
+        <Footer />
+      </div>
     </div>
   );
 }
