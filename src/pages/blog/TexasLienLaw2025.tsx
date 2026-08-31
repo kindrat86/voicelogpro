@@ -3,8 +3,16 @@ import { JsonLd } from "@/components/JsonLd";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowLeft, FileText, Calendar, MapPin } from "lucide-react";
+import { ArrowLeft, FileText, Calendar, MapPin, Printer } from "lucide-react";
 import texasLienLaw2025 from "@/content/blog/texas-lien-law-2025";
+import {
+  texasChapter53Checklist,
+  tx53ChecklistDisclaimer,
+  TX53_CHECKLIST_SOURCE_LABEL,
+  TX53_CHECKLIST_SOURCE_URL,
+} from "@/content/blog/texas-chapter-53-checklist";
+import "@/content/blog/texas-chapter-53-checklist.css";
+import { track, EVENTS } from "@/lib/posthog";
 
 export default function TexasLienLaw2025Page() {
   return (
@@ -22,7 +30,7 @@ export default function TexasLienLaw2025Page() {
       <JsonLd schema={texasLienLaw2025.faqSchema} />
       
       {/* Navigation */}
-      <header className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="print:hidden border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center px-4">
           <Link to="/blog" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="h-4 w-4" />
@@ -62,6 +70,69 @@ export default function TexasLienLaw2025Page() {
           </p>
         </header>
 
+        {/* Printable Chapter 53 checklist (print-optimized, consent-gated
+            analytics; data derives only from official statute excerpts) */}
+        <section
+          id="tx53-checklist"
+          aria-label="Printable Chapter 53 checklist"
+          role="region"
+          className="mb-10 p-6 rounded-lg border border-border bg-card"
+        >
+          <div className="flex items-center justify-between gap-4 flex-wrap mb-2">
+            <h2 className="text-2xl font-bold text-foreground">
+              Printable Chapter 53 Checklist
+            </h2>
+            <Button
+              type="button"
+              variant="outline"
+              className="print:hidden"
+              onClick={() => {
+                window.print();
+                track(EVENTS.checklistPrintClicked, {
+                  page: "texas-property-code-chapter-53-guide-2025",
+                });
+              }}
+            >
+              <Printer className="h-4 w-4 mr-2" />
+              Print this checklist
+            </Button>
+          </div>
+          {texasChapter53Checklist.map((section) => (
+            <div key={section.id} className="mb-3">
+              <h3 className="text-base font-semibold text-foreground mb-1">
+                {section.heading}
+                <span className="text-xs text-muted-foreground font-normal ml-2">
+                  {section.statute}
+                </span>
+              </h3>
+              {section.items.map((item) => (
+                <label
+                  key={item.id}
+                  className="tx53-item text-sm text-muted-foreground cursor-pointer"
+                >
+                  <input type="checkbox" aria-label={item.text} />
+                  <span>{item.text}</span>
+                </label>
+              ))}
+            </div>
+          ))}
+          <p className="text-xs text-muted-foreground mt-3">{tx53ChecklistDisclaimer}</p>
+          <p className="text-xs mt-2">
+            <a href="#tx53-checklist" className="text-primary underline">
+              Back to checklist top
+            </a>{" "}
+            ·{" "}
+            <a
+              href={TX53_CHECKLIST_SOURCE_URL}
+              className="text-primary underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {TX53_CHECKLIST_SOURCE_LABEL}
+            </a>
+          </p>
+        </section>
+
         {/* Article Content */}
         <div className="prose prose-slate dark:prose-invert max-w-none
           prose-headings:scroll-mt-20
@@ -82,7 +153,7 @@ export default function TexasLienLaw2025Page() {
         </div>
 
         {/* CTA Section */}
-        <section className="mt-16 p-8 bg-muted/50 rounded-lg border border-border">
+        <section className="print:hidden mt-16 p-8 bg-muted/50 rounded-lg border border-border">
           <h2 className="text-2xl font-bold text-foreground mb-4">
             Protect Your Texas Lien Rights
           </h2>

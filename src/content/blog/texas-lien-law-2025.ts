@@ -38,6 +38,8 @@ export const texasLienLaw2025 = {
 9. [What happens if you miss a Texas lien deadline?](#what-happens-if-you-miss-a-texas-lien-deadline)
 10. [How do Texas lien rights differ from other states?](#how-do-texas-lien-rights-differ-from-other-states)
 
+[Printable one-page checklist](#tx53-checklist)
+
 ---
 
 ## What is Texas Property Code Chapter 53?
