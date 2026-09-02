@@ -117,6 +117,46 @@ describe("index.html lazy PostHog bootstrap", () => {
     expect(captures).toEqual([["$pageview", { deferred: true }]]); // exactly one, marked
   });
 
+  it("tags residual crawler user agents on every event via before_send", () => {
+    const crawlerUserAgents = [
+      "curl/8.7.1",
+      "python-requests/2.32.3",
+      "ClaudeBot/1.0",
+      "CCBot/2.0",
+      "Applebot/0.1",
+      "facebookexternalhit/1.1",
+      "Slackbot-LinkExpanding 1.0",
+    ];
+
+    for (const userAgent of crawlerUserAgents) {
+      const h = runBootstrap(extractLazyPostHogBootstrap(html));
+      h.window.navigator = { userAgent, languages: ["en-US"], webdriver: false };
+      h.idle[0].fn();
+      const initConfig = h.window.posthog._i[0][1];
+      expect(initConfig.before_send).toBeTypeOf("function");
+
+      const event = { event: "$pageview", properties: {} as Record<string, unknown> };
+      expect(initConfig.before_send(event)).toBe(event);
+      expect(event.properties.is_bot).toBe(true);
+    }
+  });
+
+  it("tags a normal browser event as non-bot", () => {
+    const h = runBootstrap(extractLazyPostHogBootstrap(html));
+    h.window.navigator = {
+      userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 Safari/605.1.15",
+      languages: ["en-US"],
+      webdriver: false,
+    };
+    h.idle[0].fn();
+    const initConfig = h.window.posthog._i[0][1];
+    expect(initConfig.before_send).toBeTypeOf("function");
+
+    const event = { event: "$pageview", properties: {} as Record<string, unknown> };
+    expect(initConfig.before_send(event)).toBe(event);
+    expect(event.properties.is_bot).toBe(false);
+  });
+
   it("does not re-init when activity events fire after the load already happened", () => {
     const h = runBootstrap(extractLazyPostHogBootstrap(html));
     h.idle[0].fn();
