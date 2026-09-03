@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>What Larson Home Inspection's field notes lose without structure | VoiceLogPro</title>
+<meta name="description" content="A one-page teardown of Larson Home Inspection's publicly described reporting workflow: three observed risks, what structured field logs change, and a simple paid pilot.">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="/ux.css">
+<style>
+body{font-family:-apple-system,system-ui,sans-serif;background:#0f172a;color:#cbd5e1;line-height:1.65;margin:0;padding:0}
+.wrap{max-width:780px;margin:0 auto;padding:40px 24px 80px}
+.kicker{color:#64748b;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px}
+h1{font-size:1.9em;font-weight:800;color:#f8fafc;margin:0 0 12px;letter-spacing:-.02em;line-height:1.25}
+.lead{color:#94a3b8;margin:0 0 28px}
+h2{font-size:1.25em;font-weight:700;color:#f1f5f9;margin:36px 0 12px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:20px;margin:0 0 16px}
+.card h3{margin:0 0 8px;font-size:1rem;color:#e2e8f0}
+.card p{margin:0;font-size:.92rem;color:#94a3b8}
+.tag{display:inline-block;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.3);color:#a5b4fc;border-radius:6px;padding:2px 8px;font-size:.72rem;font-weight:600;letter-spacing:.03em;margin:0 0 10px}
+blockquote{border-left:3px solid #475569;margin:12px 0;padding:4px 0 4px 14px;color:#cbd5e1;font-size:.9rem;font-style:italic}
+.src{font-size:.78rem;color:#64748b;font-style:normal}
+.step{display:flex;gap:14px;margin:0 0 14px}
+.stepnum{flex:0 0 30px;height:30px;border-radius:8px;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.35);color:#a5b4fc;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.step h3{margin:2px 0 4px;font-size:.98rem;color:#e2e8f0}
+.step p{margin:0;font-size:.9rem;color:#94a3b8}
+.price{background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(99,102,241,.02));border:1px dashed rgba(99,102,241,.4);border-radius:12px;padding:16px 20px;color:#c7d2fe;font-size:.92rem;margin:20px 0}
+a{color:#818cf8;text-decoration:none}
+a:hover{text-decoration:underline}
+.note{color:#64748b;font-size:.8rem;margin:36px 0 0;border-top:1px solid #334155;padding-top:16px}
+ul{padding-left:20px}
+li{margin:0 0 8px;font-size:.92rem;color:#94a3b8}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p class="kicker">Prepared for Andy Larson, Owner/Operator</p>
+<h1>What Larson Home Inspection's field notes lose without structure</h1>
+<p class="lead">A one-page teardown built only from what Larson Home Inspection publishes on its own website. Three workflow risks, what structured field logs change, and a simple paid pilot. No performance numbers are claimed anywhere on this page.</p>
+
+<h2>Where this comes from</h2>
+<div class="card">
+<p>Larson Home Inspection, LLC (Moorhead, MN) serves Fargo-Moorhead and west-central Minnesota. The owner/operator, Andy Larson, personally inspects every home and personally prepares every report. Source pages, observed 2026-09-03:</p>
+<ul>
+<li><a href="https://www.larsonhomeinspection.com/faq">Company FAQ</a> - why reports are not delivered on-site</li>
+<li><a href="https://www.larsonhomeinspection.com/">Company homepage</a> - owner/operator scope and qualifications</li>
+</ul>
+<blockquote>"I actually go back to my office, sit down at the computer and take the time to prepare the report. It takes a few hours to prepare a report, and it allows me to do further research on items I wasn't sure of in the field. I can also research specific appliance/furnace models and years."<br><span class="src">- Andy Larson, company FAQ</span></blockquote>
+</div>
+
+<h2>Three observed workflow risks</h2>
+<p class="lead" style="font-size:.85rem">Each of the three below is an assumption drawn from the public pages above - not from inside information. They may be wrong; that is exactly what the pilot would test.</p>
+
+<div class="card">
+<span class="tag">Assumption 1 - from public FAQ</span>
+<h3>Report writing is a second shift after the drive home</h3>
+<p>The FAQ states reports are typed at the office after the inspection, and that a report takes "a few hours to prepare." If that typing starts from scratch each time, every inspection day silently includes an unpaid desk evening. The bottleneck is not the inspection - it is the reconstruction of it.</p>
+</div>
+
+<div class="card">
+<span class="tag">Assumption 2 - from homepage + FAQ</span>
+<h3>One person is the ceiling on both inspection and reporting capacity</h3>
+<p>The homepage confirms Andy personally inspects every home; the FAQ confirms he also types every report. With "available 7 days a week" and a $300 base inspection, growth means adding desk hours to the same single person - capacity is capped by evenings, not by demand.</p>
+</div>
+
+<div class="card">
+<span class="tag">Assumption 3 - from public FAQ</span>
+<h3>Field detail has to survive the trip back to the office</h3>
+<p>The FAQ describes going back to research "items I wasn't sure of in the field" and looking up "specific appliance/furnace models and years." Anything not fully captured on-site - locations, model numbers, photo-to-finding links - must be remembered or re-found later. Unstructured notes lose their structure somewhere between the crawlspace and the keyboard.</p>
+</div>
+
+<h2>What structured field logs change</h2>
+<div class="card">
+<p>VoiceLogPro turns voice memos into structured field logs: timestamped, organized entries spoken while you walk the property. For a solo inspector, the shift is this - the walk-through itself produces an organized record (location, observation, item, model numbers as you say them), so office time becomes <em>reviewing and deepening</em> a structured draft instead of typing one from a blank page.</p>
+<p style="margin-top:10px">To be precise about what this is not: VoiceLogPro does not write your inspection report and does not replace your judgment or your reporting software. It structures what you already say out loud, so the detail that currently lives in memory and margin notes arrives at the office already organized.</p>
+</div>
+
+<h2>A 3-step paid pilot</h2>
+<div class="step"><div class="stepnum">1</div><div><h3>Dictate, change nothing else (1 week)</h3><p>For your next 2-3 inspections, record your normal walk-through observations as voice memos - same words you would say anyway. Run them through VoiceLogPro alongside your existing process.</p></div></div>
+<div class="step"><div class="stepnum">2</div><div><h3>Compare the drafts (same week)</h3><p>Put the structured log next to your blank page at the office. You judge how much of the report skeleton - sections, findings, model numbers - was already assembled before you sat down.</p></div></div>
+<div class="step"><div class="stepnum">3</div><div><h3>Keep it or drop it (your call)</h3><p>If the structured log earns its place in your evening, keep going. If it does not, you say so and it ends there. No lock-in, no contract.</p></div></div>
+<div class="price"><strong>Pilot pricing:</strong> [PILOT_PRICE] for the pilot month - a paid pilot, deliberately small, because a free test gets sampled and a paid one gets used. Final price set before anything starts; nothing is charged without your explicit yes.</div>
+
+<p class="note">Built by VoiceLogPro (voicelogpro.com) from public information only, observed 2026-09-03. Contains no private data, no client information, and no invented metrics. Quotations are verbatim from larsonhomeinspection.com. This page was made for Larson Home Inspection and is shared with them directly; reply "no" and we will not contact you again.</p>
+</div>
+</body>
+</html>
