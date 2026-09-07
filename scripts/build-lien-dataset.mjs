@@ -171,7 +171,7 @@ const STATUTE_BY_STATE = {
   "Washington": { statute: "RCW ch. 60.04",              sourceUrl: "https://app.leg.wa.gov/RCW/default.aspx?cite=60.04" },
   "Arizona":    { statute: "A.R.S. \u00a7 33-981 et seq.",    sourceUrl: "https://www.azleg.gov/arsDetail/?title=33" },
   "Connecticut":           { statute: "Conn. Gen. Stat. \u00a7 49-33 et seq.", sourceUrl: "https://www.cga.ct.gov/current/pub/chap_847.htm" },
-  "District of Columbia":  { statute: "D.C. Code \u00a7 40-301.01 et seq.", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/titles/40/chapters/3" },
+  "Washington DC":         { statute: "D.C. Code \u00a7 40-301.01 et seq.", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/titles/40/chapters/3" },
   "Kansas":                { statute: "K.S.A. \u00a7 60-1101 et seq.", sourceUrl: "https://www.ksrevisor.org/statutes/chapters/ch60/060_011_0001.html" },
   "Maine":                 { statute: "10 M.R.S. \u00a7 3251 et seq.", sourceUrl: "https://legislature.maine.gov/statutes/10/title10ch603sec0.html" },
   "Minnesota":             { statute: "Minn. Stat. ch. 514", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/514" },
