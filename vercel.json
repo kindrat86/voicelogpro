@@ -247,6 +247,11 @@
   ],
   "redirects": [
     {
+      "source": "/scenarios/:path*",
+      "destination": "/court-ready-daily-logs",
+      "permanent": true
+    },
+    {
       "source": "/raken-vs-voice-log-pro",
       "destination": "/vs/raken",
       "permanent": true
