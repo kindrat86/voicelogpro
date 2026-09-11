@@ -252,6 +252,41 @@
       "permanent": true
     },
     {
+      "source": "/guides",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/guides/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/guides/construction-daily-report-guide",
+      "destination": "/blog/construction-daily-log-best-practices-legal-court",
+      "permanent": true
+    },
+    {
+      "source": "/guides/construction-daily-report-guide/",
+      "destination": "/blog/construction-daily-log-best-practices-legal-court",
+      "permanent": true
+    },
+    {
+      "source": "/guides/mechanics-lien-compliance-guide",
+      "destination": "/lien-law-deadlines",
+      "permanent": true
+    },
+    {
+      "source": "/guides/mechanics-lien-compliance-guide/",
+      "destination": "/lien-law-deadlines",
+      "permanent": true
+    },
+    {
+      "source": "/guides/:path*",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
       "source": "/raken-vs-voice-log-pro",
       "destination": "/vs/raken",
       "permanent": true
