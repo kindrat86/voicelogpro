@@ -247,6 +247,21 @@
   ],
   "redirects": [
     {
+      "source": "/redflags",
+      "destination": "/blog/construction-daily-log-best-practices-legal-court",
+      "permanent": true
+    },
+    {
+      "source": "/redflags/",
+      "destination": "/blog/construction-daily-log-best-practices-legal-court",
+      "permanent": true
+    },
+    {
+      "source": "/redflags/:path*",
+      "destination": "/blog/construction-daily-log-best-practices-legal-court",
+      "permanent": true
+    },
+    {
       "source": "/scenarios/:path*",
       "destination": "/court-ready-daily-logs",
       "permanent": true
