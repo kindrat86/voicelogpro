@@ -412,6 +412,21 @@
       "permanent": true
     },
     {
+      "source": "/tools",
+      "destination": "/free",
+      "permanent": true
+    },
+    {
+      "source": "/tools/",
+      "destination": "/free",
+      "permanent": true
+    },
+    {
+      "source": "/tools/:path*",
+      "destination": "/free",
+      "permanent": true
+    },
+    {
       "source": "/states/district-of-columbia-lien-law",
       "destination": "/lien-law-deadlines/washington-dc",
       "permanent": true
