@@ -392,6 +392,26 @@
       "permanent": true
     },
     {
+      "source": "/alternatives-to/buildertrend",
+      "destination": "/best/contractor-apps",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to/buildertrend/",
+      "destination": "/best/contractor-apps",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to/plan-grid",
+      "destination": "/best/construction-documentation-tools",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to/plan-grid/",
+      "destination": "/best/construction-documentation-tools",
+      "permanent": true
+    },
+    {
       "source": "/alternatives-to/raken",
       "destination": "/vs/raken",
       "permanent": true
