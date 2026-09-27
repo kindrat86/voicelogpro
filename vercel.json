@@ -353,42 +353,62 @@
     },
     {
       "source": "/buildertrend-vs-voice-log-pro",
-      "destination": "/alternatives-to",
+      "destination": "/vs",
       "permanent": true
     },
     {
       "source": "/buildertrend-vs-voice-log-pro/",
-      "destination": "/alternatives-to",
+      "destination": "/vs",
       "permanent": true
     },
     {
       "source": "/jobnimbus-vs-voice-log-pro",
-      "destination": "/alternatives-to",
+      "destination": "/vs",
       "permanent": true
     },
     {
       "source": "/jobnimbus-vs-voice-log-pro/",
-      "destination": "/alternatives-to",
+      "destination": "/vs",
       "permanent": true
     },
     {
       "source": "/alternatives-to/fieldwire-alt",
-      "destination": "/alternatives-to",
+      "destination": "/vs/fieldwire",
       "permanent": true
     },
     {
       "source": "/alternatives-to/fieldwire-alt/",
-      "destination": "/alternatives-to",
+      "destination": "/vs/fieldwire",
       "permanent": true
     },
     {
       "source": "/alternatives-to/procore-alt",
-      "destination": "/alternatives-to/procore",
+      "destination": "/vs/procore",
       "permanent": true
     },
     {
       "source": "/alternatives-to/procore-alt/",
-      "destination": "/alternatives-to/procore",
+      "destination": "/vs/procore",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to",
+      "destination": "/vs",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to/",
+      "destination": "/vs",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to/procore",
+      "destination": "/vs/procore",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives-to/procore/",
+      "destination": "/vs/procore",
       "permanent": true
     },
     {
