@@ -412,6 +412,46 @@
       "permanent": true
     },
     {
+      "source": "/vs/descript",
+      "destination": "/alternatives-to/descript",
+      "permanent": true
+    },
+    {
+      "source": "/vs/descript/",
+      "destination": "/alternatives-to/descript",
+      "permanent": true
+    },
+    {
+      "source": "/vs/sonix",
+      "destination": "/alternatives-to/sonix",
+      "permanent": true
+    },
+    {
+      "source": "/vs/sonix/",
+      "destination": "/alternatives-to/sonix",
+      "permanent": true
+    },
+    {
+      "source": "/vs/rev",
+      "destination": "/alternatives-to/rev",
+      "permanent": true
+    },
+    {
+      "source": "/vs/rev/",
+      "destination": "/alternatives-to/rev",
+      "permanent": true
+    },
+    {
+      "source": "/vs/trint",
+      "destination": "/alternatives-to/trint",
+      "permanent": true
+    },
+    {
+      "source": "/vs/trint/",
+      "destination": "/alternatives-to/trint",
+      "permanent": true
+    },
+    {
       "source": "/alternatives-to/buildertrend",
       "destination": "/best/contractor-apps",
       "permanent": true
