@@ -452,6 +452,46 @@
       "permanent": true
     },
     {
+      "source": "/vs/fireflies-ai",
+      "destination": "/alternatives-to/fireflies-ai",
+      "permanent": true
+    },
+    {
+      "source": "/vs/fireflies-ai/",
+      "destination": "/alternatives-to/fireflies-ai",
+      "permanent": true
+    },
+    {
+      "source": "/vs/happy-scribe",
+      "destination": "/alternatives-to/happy-scribe",
+      "permanent": true
+    },
+    {
+      "source": "/vs/happy-scribe/",
+      "destination": "/alternatives-to/happy-scribe",
+      "permanent": true
+    },
+    {
+      "source": "/vs/otter-ai",
+      "destination": "/alternatives-to/otter-ai",
+      "permanent": true
+    },
+    {
+      "source": "/vs/otter-ai/",
+      "destination": "/alternatives-to/otter-ai",
+      "permanent": true
+    },
+    {
+      "source": "/vs/temi",
+      "destination": "/alternatives-to/temi",
+      "permanent": true
+    },
+    {
+      "source": "/vs/temi/",
+      "destination": "/alternatives-to/temi",
+      "permanent": true
+    },
+    {
       "source": "/alternatives-to/buildertrend",
       "destination": "/best/contractor-apps",
       "permanent": true
