@@ -76,7 +76,7 @@ Step-by-step guides for construction documentation best practices:
 
 ## Competitor Comparisons
 
-Honest comparisons of VoiceLogPro vs construction management and documentation tools:
+Honest comparisons of VoiceLogPro vs construction management and documentation tools — all comparisons indexed on the hub at https://voicelogpro.com/vs:
 
 - [Raken vs VoiceLogPro](https://voicelogpro.com/vs/raken): Raken is a full construction management platform with daily reporting, time cards, and safety checklists. VoiceLogPro focuses specifically on voice-to-PDF daily logs for subcontractors.
 - [Fieldwire vs VoiceLogPro](https://voicelogpro.com/vs/fieldwire): Fieldwire is a jobsite management platform with plan viewing, task management, and punch lists. VoiceLogPro is a voice-first daily reporting tool for subcontractor payment protection.
@@ -85,6 +85,10 @@ Honest comparisons of VoiceLogPro vs construction management and documentation t
 - [Knowify vs VoiceLogPro](https://voicelogpro.com/vs/knowify): Knowify combines project management with construction accounting and job costing. VoiceLogPro is a dedicated voice-to-PDF daily reporting tool for lien protection.
 - [JobNimbus vs VoiceLogPro](https://voicelogpro.com/jobnimbus-vs-voice-log-pro): JobNimbus is a CRM and project management tool for roofing and restoration contractors. VoiceLogPro is a voice-first daily log tool for subcontractors across multiple trades.
 - [Contractor Foreman vs VoiceLogPro](https://voicelogpro.com/vs/contractor-foreman): Contractor Foreman is an affordable all-in-one construction management tool. VoiceLogPro focuses exclusively on voice-to-PDF daily logs for payment and lien protection.
+- [Autodesk Build vs VoiceLogPro](https://voicelogpro.com/vs/autodesk-build): Autodesk Build is a construction management platform. VoiceLogPro is a focused voice-to-PDF daily log tool for subcontractors.
+- [BuildLog vs VoiceLogPro](https://voicelogpro.com/vs/buildlog): BuildLog is also voice-first for daily reports — the comparison comes down to price, team scale, and how much claims tooling you need.
+- [KnowCross vs VoiceLogPro](https://voicelogpro.com/vs/knowcross): KnowCross is a construction site management tool. VoiceLogPro is a dedicated voice-to-PDF daily reporting tool for subcontractors.
+- [Rhumbix vs VoiceLogPro](https://voicelogpro.com/vs/rhumbix): Rhumbix is a field workforce management tool. VoiceLogPro is a voice-first daily log tool for subcontractor payment protection.
 
 ## Alternatives To
 

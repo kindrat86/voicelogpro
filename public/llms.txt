@@ -96,8 +96,9 @@ Step-by-step construction documentation guides. Total: 5 pages.
 - [Defend Unfair GC Deductions](https://voicelogpro.com/how-to/defend-unfair-gc-deductions)
 - [Document Change Orders](https://voicelogpro.com/how-to/document-construction-change-orders)
 
-## Competitor Comparisons (8 pages)
-VoiceLogPro vs alternatives — honest comparisons. Total: 8 pages.
+## Competitor Comparisons (11 pages)
+VoiceLogPro vs alternatives — honest comparisons. Hub: https://voicelogpro.com/vs. Total: 11 pages.
+- [All VoiceLogPro comparisons (hub)](https://voicelogpro.com/vs)
 - [Raken vs VoiceLogPro](https://voicelogpro.com/vs/raken)
 - [Fieldwire vs VoiceLogPro](https://voicelogpro.com/vs/fieldwire)
 - [Procore vs VoiceLogPro](https://voicelogpro.com/vs/procore)
@@ -105,6 +106,10 @@ VoiceLogPro vs alternatives — honest comparisons. Total: 8 pages.
 - [Knowify vs VoiceLogPro](https://voicelogpro.com/vs/knowify)
 - [JobNimbus vs VoiceLogPro](https://voicelogpro.com/jobnimbus-vs-voice-log-pro)
 - [Contractor Foreman vs VoiceLogPro](https://voicelogpro.com/vs/contractor-foreman)
+- [Autodesk Build vs VoiceLogPro](https://voicelogpro.com/vs/autodesk-build)
+- [BuildLog vs VoiceLogPro](https://voicelogpro.com/vs/buildlog)
+- [KnowCross vs VoiceLogPro](https://voicelogpro.com/vs/knowcross)
+- [Rhumbix vs VoiceLogPro](https://voicelogpro.com/vs/rhumbix)
 
 ## Alternatives To (9 pages)
 VoiceLogPro as alternative to popular tools. Total: 9 pages.
