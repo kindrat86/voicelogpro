@@ -129,8 +129,14 @@
       "destination": "/cities/:slug/index.html"
     },
     {
-      "source": "/alternatives/:slug",
-      "destination": "/alternatives/:slug/index.html"
+      "source": "/alternatives/raken",
+      "destination": "/vs/raken",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/raken/",
+      "destination": "/vs/raken",
+      "permanent": true
     },
     {
       "source": "/weekly-reports/:slug",
@@ -409,6 +415,66 @@
     {
       "source": "/alternatives-to/procore/",
       "destination": "/vs/procore",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/busybusy",
+      "destination": "/best/construction-daily-log-apps",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/busybusy/",
+      "destination": "/best/construction-daily-log-apps",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/crew-tracks",
+      "destination": "/best/construction-timesheet-apps",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/crew-tracks/",
+      "destination": "/best/construction-timesheet-apps",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/fieldlens",
+      "destination": "/best/construction-documentation-tools",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/fieldlens/",
+      "destination": "/best/construction-documentation-tools",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/notevault",
+      "destination": "/best/construction-daily-log-apps",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/notevault/",
+      "destination": "/best/construction-daily-log-apps",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/site-max",
+      "destination": "/best/contractor-apps",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/site-max/",
+      "destination": "/best/contractor-apps",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives",
+      "destination": "/vs",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/",
+      "destination": "/vs",
       "permanent": true
     },
     {
