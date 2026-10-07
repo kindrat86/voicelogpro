@@ -419,12 +419,12 @@
     },
     {
       "source": "/alternatives/crew-tracks",
-      "destination": "/best/construction-timesheet-apps",
+      "destination": "/best/best-construction-timesheet-apps",
       "permanent": true
     },
     {
       "source": "/alternatives/crew-tracks/",
-      "destination": "/best/construction-timesheet-apps",
+      "destination": "/best/best-construction-timesheet-apps",
       "permanent": true
     },
     {
