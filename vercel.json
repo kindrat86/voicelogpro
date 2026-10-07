@@ -129,16 +129,6 @@
       "destination": "/cities/:slug/index.html"
     },
     {
-      "source": "/alternatives/raken",
-      "destination": "/vs/raken",
-      "permanent": true
-    },
-    {
-      "source": "/alternatives/raken/",
-      "destination": "/vs/raken",
-      "permanent": true
-    },
-    {
       "source": "/weekly-reports/:slug",
       "destination": "/weekly-reports/:slug/index.html"
     },
@@ -465,6 +455,16 @@
     {
       "source": "/alternatives/site-max/",
       "destination": "/best/contractor-apps",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/raken",
+      "destination": "/vs/raken",
+      "permanent": true
+    },
+    {
+      "source": "/alternatives/raken/",
+      "destination": "/vs/raken",
       "permanent": true
     },
     {
