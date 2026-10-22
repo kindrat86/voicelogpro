@@ -123,9 +123,9 @@ def replace_table(lines, header_text, new_table):
     return out
 
 lines = replace_table(lines, "| State | Preliminary Notice? | Deadline | Notes |", prelim)
-lines = replace_table(lines, "| Deadline Range | States |", filing)
-lines = replace_table(lines, "| Enforcement Window | States |", enf)
-lines = replace_table(lines, "| Rank | State | Filing Window | Why It Matters |", longest_lines)
+lines = replace_table(lines, "| Lien Filing Deadline | States |", filing)
+lines = replace_table(lines, "| Enforcement Deadline | States |", enf)
+lines = replace_table(lines, "| Rank | State | Filing Window | Note |", longest_lines)
 
 # replace the no-notice prose list (the bare comma-list line following its short answer)
 out = []
