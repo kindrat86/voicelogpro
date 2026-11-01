@@ -3,46 +3,79 @@
 // Deployed as a Vercel serverless function. No auth required (read-only tools).
 // Install in Claude Desktop: npx mcp-remote https://voicelogpro.com/api/mcp
 
+const SUPPORTED_PROTOCOL_VERSIONS = ["2025-06-18", "2025-03-26", "2024-11-05"];
+const LATEST_PROTOCOL_VERSION = SUPPORTED_PROTOCOL_VERSIONS[0];
 const SERVER_INFO = {
   name: "voicelogpro-mcp",
+  title: "VoiceLogPro MCP",
   version: "1.0.0"
 };
 const CAPABILITIES = { tools: { listChanged: false }, resources: {}, prompts: {} };
 const TOOLS = [
   {
     "name": "create_daily_log_template",
+    "title": "Create Daily Log Template",
     "description": "Generate a construction daily log template.",
     "inputSchema": {
       "type": "object",
       "properties": {
         "project_type": {
-          "type": "string"
+          "type": "string",
+          "description": "Type of construction project the daily log template is for, e.g. residential, commercial, infrastructure.",
+          "examples": ["residential", "commercial", "infrastructure"]
         }
       }
+    },
+    "annotations": {
+      "title": "Create Daily Log Template",
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
     }
   },
   {
     "name": "get_logging_requirements",
+    "title": "Get Logging Requirements",
     "description": "Get daily log compliance requirements.",
     "inputSchema": {
       "type": "object",
       "properties": {
         "project_type": {
-          "type": "string"
+          "type": "string",
+          "description": "Type of construction project to look up daily log compliance requirements for, e.g. residential, commercial, infrastructure.",
+          "examples": ["residential", "commercial", "infrastructure"]
         }
       }
+    },
+    "annotations": {
+      "title": "Get Logging Requirements",
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
     }
   },
   {
     "name": "list_construction_faq",
+    "title": "Search Construction FAQ",
     "description": "Search construction logging FAQ.",
     "inputSchema": {
       "type": "object",
       "properties": {
         "query": {
-          "type": "string"
+          "type": "string",
+          "description": "Search keywords for the construction logging FAQ, e.g. overtime rules, safety incidents.",
+          "examples": ["overtime rules", "safety incidents"]
         }
       }
+    },
+    "annotations": {
+      "title": "Search Construction FAQ",
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false
     }
   }
 ];
@@ -101,7 +134,7 @@ export default function handler(req, res) {
       jsonrpc: "2.0",
       serverInfo: SERVER_INFO,
       capabilities: CAPABILITIES,
-      protocolVersion: "2024-11-05",
+      protocolVersion: LATEST_PROTOCOL_VERSION,
       tools: TOOLS.map(t => ({ name: t.name, description: t.description })),
       _meta: {
         homepage: HOME_URL,
@@ -138,8 +171,9 @@ export default function handler(req, res) {
     const { id, method, params } = req || {};
     // initialize
     if (method === "initialize") {
+      const requested = (params && params.protocolVersion) || "";
       return makeResult(id, {
-        protocolVersion: "2024-11-05",
+        protocolVersion: SUPPORTED_PROTOCOL_VERSIONS.includes(requested) ? requested : LATEST_PROTOCOL_VERSION,
         capabilities: CAPABILITIES,
         serverInfo: SERVER_INFO
       });
