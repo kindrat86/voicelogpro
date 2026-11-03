@@ -64,7 +64,7 @@ export default function ComparisonsHub() {
           <div className="mt-12 text-center">
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
-                Start Protecting Your Payment — $49/month
+                Start Protecting Your Payment — $49 Pilot
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>

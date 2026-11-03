@@ -50,7 +50,7 @@ const nl = {
     titleLine2: "Spreek gewoon.",
     subtitle: "De AI spraak-naar-PDF tool voor dagelijkse bouwlogboeken om betalingsgeschillen, pandrechten en planningsclaims te voorkomen.",
     srOnly: "Dagelijkse bouwlogboeken voor pandrechten, vertragingsdocumentatie, bewijs van verschoonbare vertraging en PDF-rapporten geschikt voor geschillen.",
-    bodyLine1: "Zet handschoen-vriendelijke spraaknotities in 30 seconden om in kant-en-klare PDF's.",
+    bodyLine1: "Zet handschoen-vriendelijke spraaknotities om in kant-en-klare PDF's (door ons team, dezelfde of volgende werkdag).",
     bodyLine2: "Gebouwd voor onderaannemers die snel moeten werken — en moeten bewijzen dat het werk gedaan is.",
     beforeLabel: "Voorheen: Rommelige notities",
     afterLabel: "Nu: Schone PDF",

@@ -4,8 +4,8 @@
   "@id": "https://voicelogpro.com/#organization",
   "name": "VoiceLogPro",
   "url": "https://voicelogpro.com",
-  "description": "VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors — general contractors, electricians, plumbers, HVAC, and roofers speak their on-site daily report and it becomes a timestamped, court-admissible PDF with fields for weather, crew, work performed, and materials, protecting mechanic's-lien and delay claims.",
-  "disambiguatingDescription": "VoiceLogPro is a voice-to-PDF daily construction log app (voice on-site → timestamped, court-admissible daily-report PDF) — not a general-purpose meeting/voice-transcription tool (Otter, Rev, Fireflies), and not a full construction-management platform (Procore, Raken).",
+  "description": "VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors — general contractors, electricians, plumbers, HVAC, and roofers speak their on-site daily report and the VoiceLogPro team returns a timestamped PDF daily report with fields for weather, crew, work performed, and materials, protecting mechanic's-lien and delay claims.",
+  "disambiguatingDescription": "VoiceLogPro is a voice-to-PDF daily construction log app (voice on-site → timestamped daily-report PDF) — not a general-purpose meeting/voice-transcription tool (Otter, Rev, Fireflies), and not a full construction-management platform (Procore, Raken).",
   "logo": "https://voicelogpro.com/images/og-card.jpg",
   "foundingDate": "2024",
   "sameAs": [

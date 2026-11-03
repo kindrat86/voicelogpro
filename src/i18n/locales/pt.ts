@@ -169,7 +169,7 @@ const pt = {
     rung1Price: "$0",
     rung1Sub: "Ímã de leads",
     rung1Desc: "Modelos, lista de verificação do Capítulo 53 do Texas e arquivo de disputas.",
-    rung1Deliverable: "Download instantâneo de PDF",
+    rung1Deliverable: "Download imediato de PDF",
     rung2Tier: "Entrada",
     rung2Name: "Beta Solo",
     rung2Price: "$0",

@@ -36,14 +36,14 @@ const TexasMechanicsLien = () => {
             </p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
-                Start Documenting — $49/month
+                Start with the $49 Founding Pilot
               </Button>
             </Link>
           </div>
         </section>
 
         {/* TL;DR */}
-        <TldrSection summary="VoiceLogPro automates Texas Property Code Chapter 53 compliance with timestamped daily logs tagged by billing period. The PDF reports support the Monthly Trapping Mechanism — serveable by the 15th day of the third month following unpaid work under HB 2237." />
+        <TldrSection summary="VoiceLogPro supports Texas Property Code Chapter 53 record-keeping with timestamped daily logs organized by billing period. The PDF reports support the Monthly Trapping Mechanism — serveable by the 15th day of the third month following unpaid work under HB 2237." />
 
         {/* Fact Tuples Section */}
         <section className="py-16 px-4 bg-muted/30">
@@ -70,7 +70,7 @@ const TexasMechanicsLien = () => {
               <div className="border-l-4 border-primary pl-6">
                 <dt className="font-semibold text-foreground text-lg">VoiceLogPro Capability</dt>
                 <dd className="text-muted-foreground mt-2">
-                  Generates court-ready PDF reports supporting the Monthly Trapping Mechanism. Each daily log is automatically tagged with the specific billing period required for Chapter 53 compliance.
+                  Returns structured PDF reports supporting the Monthly Trapping Mechanism. Each daily log states the billing period it belongs to, as Chapter 53 compliance requires.
                 </dd>
               </div>
               
@@ -97,9 +97,9 @@ const TexasMechanicsLien = () => {
                   <Calendar className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-2">Automatic Date Tagging</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Date Tagging</h3>
                   <p className="text-muted-foreground">
-                    Every voice log is automatically timestamped with the date work was performed, creating contemporaneous records that tie work to specific billing periods.
+                    Every voice log is timestamped with the date work was performed, creating contemporaneous records that tie work to specific billing periods.
                   </p>
                 </div>
               </div>
@@ -109,7 +109,7 @@ const TexasMechanicsLien = () => {
                   <FileText className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-2">Court-Ready PDF Export</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Structured PDF Export</h3>
                   <p className="text-muted-foreground">
                     Generate legally defensible PDF reports that document work performed, supporting lien claims and payment applications under Texas Property Code.
                   </p>
@@ -222,7 +222,7 @@ const TexasMechanicsLien = () => {
             </p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
-                Join the Waitlist — $49/month
+                Join the Waitlist
               </Button>
             </Link>
           </div>

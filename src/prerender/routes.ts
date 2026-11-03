@@ -62,12 +62,12 @@ export const ROUTE_METADATA: Record<string, {
 }> = {
   '/': {
     title: 'VoiceLogPro | Daily Construction Reports from Voice Notes',
-    description: 'Turn voice notes into court-ready daily construction reports with timestamps and photos. Built for subcontractors who work with their hands.',
+    description: 'Turn voice notes into structured daily construction reports with timestamps and photos. Built for subcontractors who work with their hands.',
     canonical: 'https://voicelogpro.com/',
   },
   '/crew-plan': {
-    title: 'Crew Plan - $49/month | VoiceLogPro',
-    description: 'Join the VoiceLogPro waitlist. $49/month gets you unlimited daily reports, timestamps, weather data, and legal protection for your crew.',
+    title: 'Crew Plan Waitlist | VoiceLogPro',
+    description: 'Join the VoiceLogPro Crew Plan waitlist. Pricing will be announced at launch; the current offer is the $49 one-time Founding Pilot.',
     canonical: 'https://voicelogpro.com/crew-plan',
   },
   '/blog': {
@@ -112,7 +112,7 @@ export const ROUTE_METADATA: Record<string, {
   },
   '/solutions/phase-payment-disputes': {
     title: 'Phase Payment Dispute Documentation | VoiceLogPro',
-    description: 'Document phased payment disputes with contemporaneous daily logs. Protect your staged payment rights with timestamped, court-ready evidence from VoiceLogPro.',
+    description: 'Document phased payment disputes with contemporaneous daily logs. Protect your staged payment rights with timestamped daily-report evidence from VoiceLogPro.',
     canonical: 'https://voicelogpro.com/solutions/phase-payment-disputes',
   },
   '/solutions/electrical-inventory-tracking': {
@@ -142,7 +142,7 @@ export const ROUTE_METADATA: Record<string, {
   },
   '/about': {
     title: 'About VoiceLogPro — Voice-to-PDF Daily Construction Reports',
-    description: 'VoiceLogPro turns voice notes into court-ready daily construction reports. Built by subcontractors who learned that missing reports cost more than bad work.',
+    description: 'VoiceLogPro turns voice notes into structured daily construction reports. Built by subcontractors who learned that missing reports cost more than bad work.',
     canonical: 'https://voicelogpro.com/about',
   },
   '/contact': {

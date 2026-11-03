@@ -41,9 +41,9 @@ function ComparisonTable() {
     { feature: "User Experience", fieldwire: "Complex UI (pins, plans, boards)", vlp: "One-button voice recording" },
     { feature: "Data Entry", fieldwire: "Typing, tagging, pinning", vlp: "Voice-to-text with AI" },
     { feature: "Legal Value", fieldwire: "Shows intent", vlp: "Proves reality" },
-    { feature: "Connectivity", fieldwire: "Requires sync", vlp: "Works fully offline" },
+    { feature: "Connectivity", fieldwire: "Requires sync", vlp: "Records anywhere, no app needed" },
     { feature: "Data Ownership", fieldwire: "Usually GC-controlled", vlp: "Subcontractor-owned" },
-    { feature: "Pricing", fieldwire: "Per-user, scales up", vlp: "Flat $49/month" },
+    { feature: "Pricing", fieldwire: "Per-user, scales up", vlp: "Founding Pilot: $49 one-time" },
     { feature: "Best For", fieldwire: "Plans & punch lists", vlp: "Daily logs & change orders" },
   ];
 
@@ -78,11 +78,11 @@ const faqs = [
   },
   {
     q: "What is the best Fieldwire alternative for subcontractors?",
-    a: "For subcontractors focused on payment protection rather than project management, VoiceLogPro is the best alternative. It creates court-ready documentation in seconds using voice—no typing, no pins, no plan navigation required.",
+    a: "For subcontractors focused on payment protection rather than project management, VoiceLogPro is the best alternative. It returns structured documentation from a short voice note—no typing, no pins, no plan navigation required.",
   },
   {
     q: "How do subcontractors document delays?",
-    a: "Effective delay documentation requires contemporaneous records with timestamps, weather data, and specific details. VoiceLogPro automatically captures this information with every voice log, creating excusable delay evidence that holds up in disputes.",
+    a: "Effective delay documentation requires contemporaneous records with timestamps, weather data, and specific details. VoiceLogPro captures this information with every voice log, creating excusable-delay evidence that holds up in disputes.",
   },
   {
     q: "How do subcontractors protect lien rights?",
@@ -90,7 +90,7 @@ const faqs = [
   },
   {
     q: "Is VoiceLogPro project management software?",
-    a: "No. VoiceLogPro is not project management software and doesn't compete with Fieldwire. It's a legal defense and payment protection tool that converts voice notes into court-ready PDFs with timestamps and weather data.",
+    a: "No. VoiceLogPro is not project management software and doesn't compete with Fieldwire. It's a legal defense and payment protection tool that converts voice notes into structured PDF reports with timestamps and the weather you report.",
   },
 ];
 
@@ -101,7 +101,7 @@ export default function FieldwireComparison() {
         <title>Fieldwire vs VoiceLogPro | Payment Protection for Subcontractors</title>
         <meta
           name="description"
-          content="Compare Fieldwire vs VoiceLogPro. Fieldwire manages plans and tasks. VoiceLogPro protects subcontractors with court-ready voice logs, lien defense, and delay documentation."
+          content="Compare Fieldwire vs VoiceLogPro. Fieldwire manages plans and tasks. VoiceLogPro protects subcontractors with structured voice logs, lien defense, and delay documentation."
         />
         <link rel="canonical" href="https://voicelogpro.com/fieldwire-vs-voice-log-pro" />
       </Helmet>
@@ -229,7 +229,7 @@ export default function FieldwireComparison() {
               <blockquote className="border-l-4 border-primary pl-4 text-foreground italic mb-4">
                 "Blocked in Zone A by framing crew. Standby for two hours."
               </blockquote>
-              <p className="text-primary font-semibold">VoiceLogPro instantly converts this into a claim-ready, structured report.</p>
+              <p className="text-primary font-semibold">VoiceLogPro converts this into a claim-ready, structured report (same or next business day).</p>
             </div>
 
             <div className="card-industrial">
@@ -239,7 +239,7 @@ export default function FieldwireComparison() {
                 </div>
                 <h3 className="font-display text-lg uppercase text-foreground">2. Excusable Delay Defense</h3>
               </div>
-              <p className="text-muted-foreground mb-4">Every voice log automatically captures:</p>
+              <p className="text-muted-foreground mb-4">Every voice log can capture:</p>
               <ul className="space-y-2 mb-4">
                 <li className="flex items-center gap-2 text-foreground"><Check className="w-4 h-4 text-primary" /> Timestamp</li>
                 <li className="flex items-center gap-2 text-foreground"><Check className="w-4 h-4 text-primary" /> Location</li>
@@ -289,7 +289,7 @@ export default function FieldwireComparison() {
               <p className="text-muted-foreground mb-4">
                 Courts in the UK and Australia prioritize contemporaneous site diaries over retroactive task lists.
               </p>
-              <p className="text-primary font-semibold">VoiceLogPro automatically creates this evidentiary standard.</p>
+              <p className="text-primary font-semibold">VoiceLogPro's daily logs are built to this evidentiary standard.</p>
             </div>
           </div>
         </section>
@@ -320,7 +320,7 @@ export default function FieldwireComparison() {
             
             <div className="card-sunlight">
               <p className="text-lg text-foreground mb-2"><strong>Use VoiceLogPro to protect the business.</strong></p>
-              <p className="text-foreground">It's the only tool that lets a foreman generate legally defensible proof in under 60 seconds a day.</p>
+              <p className="text-foreground">It lets a foreman document the day in under a minute of voice — and our team returns the structured report.</p>
             </div>
             
             <div className="border-l-4 border-primary pl-6 py-4">

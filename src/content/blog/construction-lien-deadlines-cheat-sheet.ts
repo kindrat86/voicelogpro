@@ -242,11 +242,11 @@ States with no preliminary notice requirement for private projects:
 | Enforcement deadline | Lien filing date | Lien expires if suit is late |
 | Retainage release period | Substantial completion date | Lose penalty interest |
 
-VoiceLogPro automates daily log creation with:
-- **GPS-timestamped entries** that are court-admissible as business records
-- **Voice-to-text logging** (60 seconds per day, no typing)
-- **Immutable audit trail** — entries cannot be backdated or altered
-- **Cloud backup** — logs survive device loss or damage
+VoiceLogPro documents your daily log with:
+- **Timestamped entries** tied to the day the work was performed
+- **Voice-to-text logging** (about a minute per day, no typing)
+- **Your original voice note retained** as the backing record for the typed entry
+- **PDF reports you keep** — they survive device loss or damage
 
 ---
 

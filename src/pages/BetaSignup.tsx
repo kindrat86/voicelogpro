@@ -181,7 +181,7 @@ export default function BetaSignup() {
             
             <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-6">
               VoiceLogPro lets you record a quick daily summary by voice.
-              The system turns it into structured labor data and a professional report—automatically.
+              Our team turns it into structured labor data and a professional report.
             </p>
 
             <div className="flex flex-col items-center gap-2 text-xl font-semibold text-primary">

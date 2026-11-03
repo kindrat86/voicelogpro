@@ -180,7 +180,7 @@ const FightUnfairDeductions = () => {
 
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
               <div className="border rounded-lg p-4 text-center">
-                <p className="font-semibold text-foreground">Automatic timestamps</p>
+                <p className="font-semibold text-foreground">Timestamps</p>
               </div>
               <div className="border rounded-lg p-4 text-center">
                 <p className="font-semibold text-foreground">GPS location tagging</p>
@@ -268,7 +268,7 @@ const FightUnfairDeductions = () => {
             </p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold text-lg px-8 py-6">
-                Get VoiceLogPro — $49/month
+                Get VoiceLogPro — $49 Founding Pilot
               </Button>
             </Link>
             <p className="text-muted-foreground mt-4">

@@ -1,10 +1,10 @@
 # VoiceLogPro — Agent Reference
 
-> Voice-to-PDF Construction Daily Reports for subcontractors. Speak your daily log on-site and get a timestamped, court-admissible PDF.
+> Voice-to-PDF Construction Daily Reports for subcontractors. Speak your daily log on-site and get a timestamped PDF daily report.
 
 ## Identity
 
-VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors — general contractors, electricians, plumbers, HVAC, and roofers speak their on-site daily report and it becomes a timestamped, court-admissible PDF with weather, crew, and materials data.
+VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors — general contractors, electricians, plumbers, HVAC, and roofers speak their on-site daily report and the VoiceLogPro team returns a timestamped PDF daily report with weather, crew, and materials data.
 
 ## Target Audience
 
@@ -25,17 +25,17 @@ General contractors, electricians, plumbers, HVAC contractors, roofers, subcontr
 - [Texas Lien Law Guide](https://voicelogpro.com/blog/texas-property-code-chapter-53-guide-2025): Texas Property Code Chapter 53 for subcontractors
 - [California Preliminary Notice](https://voicelogpro.com/blog/california-20-day-preliminary-notice-guide-2026): California 20-Day Preliminary Notice (Civil Code 8200)
 - [Florida Notice to Owner](https://voicelogpro.com/blog/florida-notice-to-owner-45-day-guide-2026): Florida 45-Day Notice to Owner (Chapter 713)
-- [Construction Daily Logs](https://voicelogpro.com/blog/construction-daily-log-best-practices-legal-court): Court-admissible daily log best practices
+- [Construction Daily Logs](https://voicelogpro.com/blog/construction-daily-log-best-practices-legal-court): Daily log best practices for legal disputes
 - [New York Lien Law](https://voicelogpro.com/blog/new-york-lien-law-article-2-subcontractor-guide-2026): New York Lien Law Article 2 for subcontractors
 - [50-State Lien Deadlines](https://voicelogpro.com/blog/construction-lien-deadlines-cheat-sheet-2026): Lien deadline cheat sheet (all 50 states)
 - [About](https://voicelogpro.com/about): About VoiceLogPro
-- [Crew Plan Pricing](https://voicelogpro.com/crew-plan): $49/month daily log subscription
+- [Crew Plan](https://voicelogpro.com/crew-plan): waitlist for the future subscription; current offer is the $49 one-time Founding Pilot
 
 ## Features
 
-- Voice-to-PDF daily reports (30 seconds per log)
+- Voice-to-PDF daily reports (short voice note per log)
 - OSHA-compliant daily log format
-- Court-admissible PDF output (timestamped, signed, with weather data)
+- Structured PDF output (timestamped, signed, with weather data)
 - Texas Chapter 53 monthly documentation compliance
 - Crew and materials tracking per day
 - Photo attachment support

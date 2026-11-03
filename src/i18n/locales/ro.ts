@@ -169,7 +169,7 @@ const ro = {
     rung1Price: "0 lei",
     rung1Sub: "Lead magnet",
     rung1Desc: "Șabloane, lista de verificare Texas Capitolul 53 și fișierul de apărare pentru dispute.",
-    rung1Deliverable: "Descărcare PDF instantanee",
+    rung1Deliverable: "Descărcare PDF imediată la înregistrare",
     rung2Tier: "Intrare",
     rung2Name: "Solo Beta",
     rung2Price: "0 lei",

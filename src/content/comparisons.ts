@@ -28,7 +28,7 @@ export const competitors: CompetitorEntry[] = [
     name: "Procore",
     website: "procore.com",
     metaTitle: "Procore vs VoiceLogPro | Smarter Daily Reports for Subs",
-    metaDescription: "Procore is enterprise construction management. VoiceLogPro is voice-first daily reporting built for subcontractors who need court-ready documentation, not project oversight.",
+    metaDescription: "Procore is enterprise construction management. VoiceLogPro is voice-first daily reporting built for subcontractors who need structured daily-report documentation, not project oversight.",
     h1: "Procore vs. VoiceLogPro: Enterprise Overkill Meets Subcontractor Defense",
     intro: "Procore is the 800-pound gorilla of construction management software. It handles everything from bidding to closeout — but it was built for General Contractors managing massive portfolios. Subcontractors using Procore are paying for features they don't need and missing the one thing they do: payment protection.",
     builtFor: "Enterprise General Contractors & Owners",
@@ -49,10 +49,10 @@ export const competitors: CompetitorEntry[] = [
     vlpStrengths: [
       "Voice-first input designed for crews with tools in hand",
       "You own your data — reports don't flow upward to the GC",
-      "Court-ready PDFs with timestamps, weather, and photos",
-      "Flat $49/month pricing — no surprise enterprise fees",
+      "Structured PDFs with timestamps, weather, and photos",
+      "Founding Pilot: $49 one-time pricing — no surprise enterprise fees",
       "Built for legal defense: lien rights, delay claims, payment disputes",
-      "Works fully offline in basements, mechanical rooms, and remote sites",
+      "Records in basements, mechanical rooms, and remote sites with any voice-memo app",
     ],
     faqs: [
       {
@@ -61,7 +61,7 @@ export const competitors: CompetitorEntry[] = [
       },
       {
         question: "Is Procore worth it for small subcontractors?",
-        answer: "Usually not. Procore's enterprise pricing ($400+/month per user) and complexity are designed for large GCs. Most small subcontractors need payment protection and lien documentation, not project management modules. VoiceLogPro delivers legal-grade documentation at $49/month with zero training required.",
+        answer: "Usually not. Procore's enterprise pricing ($400+/month per user) and complexity are designed for large GCs. Most small subcontractors need payment protection and lien documentation, not project management modules. VoiceLogPro delivers structured documentation with zero training required.",
       },
       {
         question: "Does Procore help with mechanics lien rights?",
@@ -78,7 +78,7 @@ export const competitors: CompetitorEntry[] = [
     name: "Buildertrend",
     website: "buildertrend.com",
     metaTitle: "Buildertrend vs VoiceLogPro | Field Reporting for Subs",
-    metaDescription: "Buildertrend is built for residential builders. VoiceLogPro is built for trade subcontractors who need payment protection and court-ready documentation — not another project dashboard.",
+    metaDescription: "Buildertrend is built for residential builders. VoiceLogPro is built for trade subcontractors who need payment protection and structured daily-report documentation — not another project dashboard.",
     h1: "Buildertrend vs. VoiceLogPro: Residential Builder Tool Meets Trade Defense",
     intro: "Buildertrend is popular with residential builders for scheduling, change orders, and client communication. But it's designed for the builder — the person running the project — not the subcontractors doing the work. If you're a trade contractor using Buildertrend at a GC's request, your documentation is working for them, not you.",
     builtFor: "Residential Builders & Remodelers",
@@ -97,12 +97,12 @@ export const competitors: CompetitorEntry[] = [
       "Requires training and daily manual data entry",
     ],
     vlpStrengths: [
-      "Voice-first: 30-second recording becomes a PDF report",
+      "Voice-first: a short recording becomes a PDF report",
       "Built for trade subcontractors — not GCs or builders",
-      "$49/month flat pricing — no per-user fees",
+      "$49 one-time Founding Pilot — no subscription",
       "You own your data and your legal documentation",
-      "Court-ready PDFs with automatic timestamps and weather data",
-      "Works offline in any job site condition",
+      "Structured PDF reports with timestamps and weather data",
+      "Records anywhere on any job site condition",
     ],
     faqs: [
       {
@@ -111,15 +111,15 @@ export const competitors: CompetitorEntry[] = [
       },
       {
         question: "Is Buildertrend good for lien rights protection?",
-        answer: "Buildertrend is project management software, not legal defense software. It stores documents but doesn't generate the specific contemporaneous records needed for mechanics lien claims. VoiceLogPro automatically creates timestamped, weather-tagged daily logs that support lien rights preservation and payment disputes.",
+        answer: "Buildertrend is project management software, not legal defense software. It stores documents but doesn't generate the specific contemporaneous records needed for mechanics lien claims. VoiceLogPro creates timestamped daily logs that record the site conditions you dictate, supporting lien rights preservation and payment disputes.",
       },
       {
         question: "Which is cheaper — Buildertrend or VoiceLogPro?",
-        answer: "VoiceLogPro is significantly cheaper at $49/month flat. Buildertrend starts at $499/month for 3 users and scales up from there. For a small subcontractor crew, VoiceLogPro delivers specialized legal documentation at a fraction of the cost.",
+        answer: "VoiceLogPro's Founding Pilot is $49 one-time. Buildertrend starts at $499/month for 3 users and scales up from there. For a small subcontractor crew, VoiceLogPro delivers specialized legal documentation at a fraction of the cost.",
       },
       {
         question: "Does Buildertrend work offline?",
-        answer: "Buildertrend has some offline capability but requires periodic syncing. VoiceLogPro is fully functional offline — record notes, attach photos, and generate reports even in basements or remote sites with zero connectivity. Reports sync automatically when you're back online.",
+        answer: "Buildertrend has some offline capability but requires periodic syncing. VoiceLogPro is fully functional offline — record notes, attach photos, and generate reports even in basements or remote sites with zero connectivity — record with any voice-memo app and email it when you're back online.",
       },
     ],
   },
@@ -148,16 +148,16 @@ export const competitors: CompetitorEntry[] = [
     ],
     vlpStrengths: [
       "Specialized for one thing: legal-grade daily documentation",
-      "Voice-first input — speak your report in 30 seconds",
-      "Automated timestamps, geolocation, and historical weather data",
+      "Voice-first input — speak your report in under a minute",
+      "Timestamps, photo geolocation, and dictated weather data",
       "Collateral lien-right-protection workflows (Texas, UK, NSW SOPA)",
-      "$49/month flat — one tool, one price, full functionality",
-      "Works offline in any condition",
+      "$49 one-time Founding Pilot — one tool, one price",
+      "Records in any condition, sends when back online",
     ],
     faqs: [
       {
         question: "Is Contractor Foreman good for daily reports?",
-        answer: "Contractor Foreman includes daily log functionality as part of its suite, but it's generalized project management — not specialized legal documentation. The reports lack the forensic-grade metadata (timestamps, weather, geolocation) that makes VoiceLogPro reports court-ready.",
+        answer: "Contractor Foreman includes daily log functionality as part of its suite, but it's generalized project management — not specialized legal documentation. The reports lack the forensic-grade metadata (timestamps, weather, geolocation) that makes VoiceLogPro reports strong evidence.",
       },
       {
         question: "Does Contractor Foreman help with lien rights?",
@@ -165,7 +165,7 @@ export const competitors: CompetitorEntry[] = [
       },
       {
         question: "What's the price difference?",
-        answer: "Contractor Foreman starts at $83/month. VoiceLogPro is $49/month flat with no per-user fees. For a crew of 5-10 subcontractors, VoiceLogPro delivers specialized legal documentation at about 40% less cost.",
+        answer: "Contractor Foreman starts at $83/month. VoiceLogPro's Founding Pilot is $49 one-time with no per-user fees. For a crew of 5-10 subcontractors, VoiceLogPro is the lower-cost option.",
       },
     ],
   },
@@ -195,15 +195,15 @@ export const competitors: CompetitorEntry[] = [
     vlpStrengths: [
       "Built for legal defense, not CRM — one focused purpose",
       "Voice-first daily reports optimized for evidential weight",
-      "$49/month flat — covers your entire crew",
-      "Automatic timestamps, weather data, and geolocation on every report",
+      "$49 one-time Founding Pilot — covers your entire crew",
+      "Timestamps, weather data, and geolocation on every report",
       "Designed for trades: electrical, plumbing, HVAC subcontractors",
-      "Works fully offline in any job site environment",
+      "Records in any job site environment, sends when back online",
     ],
     faqs: [
       {
         question: "Can I use JobNimbus for daily construction reports?",
-        answer: "JobNimbus offers job logs and notes, but they're designed as CRM activity records — not as legally defensible daily construction reports. The format, metadata, and structure don't meet the evidentiary standards needed for lien claims or payment disputes.",
+        answer: "JobNimbus offers job logs and notes, but they're designed as CRM activity records — not as structured daily construction reports for disputes. The format, metadata, and structure don't meet the evidentiary standards needed for lien claims or payment disputes.",
       },
       {
         question: "Does JobNimbus help with payment disputes?",
@@ -240,20 +240,20 @@ export const competitors: CompetitorEntry[] = [
     ],
     vlpStrengths: [
       "Field-first design — capture evidence while you work",
-      "30-second voice recording generates a court-ready PDF",
-      "$49/month flat for your entire crew",
-      "Automatic weather, time, and location metadata on every report",
+      "a short voice recording generates a structured PDF (human-assisted)",
+      "$49 one-time Founding Pilot for your entire crew",
+      "Time and location on every report; weather as you dictate it",
       "Built for legal frameworks: Texas, Virginia, UK, NSW SOPA",
-      "Works offline — capture evidence anywhere",
+      "Records anywhere — capture evidence with any voice-memo app",
     ],
     faqs: [
       {
         question: "Does Knowify generate daily construction reports?",
-        answer: "Knowify focuses on financial tracking (job costing, invoicing, change orders) rather than daily field reports. It tracks what work cost — not what work happened on site each day. VoiceLogPro fills that gap with voice-generated, court-ready daily logs.",
+        answer: "Knowify focuses on financial tracking (job costing, invoicing, change orders) rather than daily field reports. It tracks what work cost — not what work happened on site each day. VoiceLogPro fills that gap with voice-generated, timestamped daily logs.",
       },
       {
         question: "Can Knowify help with lien rights?",
-        answer: "Knowify's financial records (invoices, change orders) support lien claims indirectly, but you need contemporaneous daily documentation to prove labor and materials were furnished. That's what VoiceLogPro provides — timestamped, weather-tagged daily reports that directly support lien filings.",
+        answer: "Knowify's financial records (invoices, change orders) support lien claims indirectly, but you need contemporaneous daily documentation to prove labor and materials were furnished. That's what VoiceLogPro provides — timestamped daily reports that record the conditions you dictate, supporting lien filings.",
       },
       {
         question: "Which one do subcontractors need more?",

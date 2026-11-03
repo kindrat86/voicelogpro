@@ -11,17 +11,17 @@ const steps = [
   {
     icon: FileText,
     number: "02",
-    text: "VoiceLogPro transcribes and adds timestamps, weather, and safety tags",
+    text: "Our team transcribes your note and adds timestamps and structure",
   },
   {
     icon: Send,
     number: "03",
-    text: "A job-ready PDF is generated — ready to send",
+    text: "A structured PDF report is returned — same or next business day",
   },
   {
     icon: Wifi,
     number: "04",
-    text: "Works offline — logs sync when you're back online",
+    text: "Record anywhere with any voice-memo app, send when back online",
   },
 ];
 

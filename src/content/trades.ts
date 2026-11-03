@@ -22,9 +22,9 @@ export const trades: TradeEntry[] = [
     tradeName: "Electrician",
     tradePlural: "Electricians",
     metaTitle: "Daily Construction Reports for Electricians | VoiceLogPro",
-    metaDescription: "Voice-first daily reports built for electricians. Track conduit runs, cable pulls, panel installations, and change orders with 30-second voice notes. Court-ready PDFs in seconds.",
+    metaDescription: "Voice-first daily reports built for electricians. Track conduit runs, cable pulls, panel installations, and change orders with short voice notes. Structured PDFs, same or next business day.",
     h1: "Daily Construction Reports Built for Electricians",
-    intro: "Electricians work with their hands, not keyboards. Between pulling cable, terminating panels, and troubleshooting circuits, there's no time to fill out forms. VoiceLogPro turns a 30-second voice recording into a professional, court-ready daily report — so you can document without stopping work.",
+    intro: "Electricians work with their hands, not keyboards. Between pulling cable, terminating panels, and troubleshooting circuits, there's no time to fill out forms. VoiceLogPro turns a short voice recording into a professional daily-report PDF (human-assisted) — so you can document without stopping work.",
     painPoints: [
       "Typing reports at the end of the day after a full shift of physical work",
       "Forgetting details about specific circuits, panels, or conduit runs hours later",
@@ -34,17 +34,17 @@ export const trades: TradeEntry[] = [
       "No contemporaneous evidence to support electrical lien claims",
     ],
     howVlpHelps: [
-      "30-second voice recording captures conduit runs, panel terminations, and circuit details while you're standing at the panel",
-      "Automatic timestamps and weather data — ideal for weather-related delay documentation",
+      "a short voice recording captures conduit runs, panel terminations, and circuit details while you're standing at the panel",
+      "Timestamps and the weather conditions you report — ideal for weather-related delay documentation",
       "Photo attachments with geolocation prove completed work before it's covered by drywall",
-      "Court-ready PDFs support change order pricing and lien right preservation",
-      "Flat $49/month for your entire crew — no per-user fees",
-      "Works fully offline in basements, mechanical rooms, and service tunnels",
+      "Structured PDFs support change order pricing and lien right preservation",
+      "Founding Pilot: $49 one-time for your entire crew — no per-user fees",
+      "Record with any voice-memo app in basements, mechanical rooms, and service tunnels",
     ],
     useCaseExamples: [
       {
         situation: "You complete a panel changeout but the GC claims it wasn't finished",
-        howVlpHelps: "Your VoiceLogPro entry from that day includes a timestamped voice note describing the completed work plus photos of the finished panel with geotags — irrefutable proof the work was done.",
+        howVlpHelps: "Your VoiceLogPro entry from that day includes a timestamped voice note describing the completed work plus photos of the finished panel — contemporaneous proof the work was done.",
       },
       {
         situation: "You're asked to pull extra circuits as a verbal change order",
@@ -52,7 +52,7 @@ export const trades: TradeEntry[] = [
       },
       {
         situation: "Weather delays your rooftop conduit installation",
-        howVlpHelps: "Your voice note captures the weather condition, and VoiceLogPro automatically tags it with historical weather data. This creates excusable delay evidence without any extra effort.",
+        howVlpHelps: "Your voice note captures the weather condition, and your report records it word-for-word. This creates excusable-delay evidence without any extra effort.",
       },
     ],
     faqs: [
@@ -75,9 +75,9 @@ export const trades: TradeEntry[] = [
     tradeName: "Plumber",
     tradePlural: "Plumbers",
     metaTitle: "Daily Construction Reports for Plumbers | VoiceLogPro",
-    metaDescription: "Voice-first daily reports for plumbing contractors. Document pipe runs, fixture installations, and material usage with voice notes. Protect your payment with court-ready PDFs.",
+    metaDescription: "Voice-first daily reports for plumbing contractors. Document pipe runs, fixture installations, and material usage with voice notes. Protect your payment with structured daily-report PDFs.",
     h1: "Daily Construction Reports Built for Plumbers",
-    intro: "Plumbers are on their feet all day — in crawl spaces, on rooftops, and behind walls. The last thing you want to do at the end of a shift is type up reports. VoiceLogPro captures your day in 30 seconds of speaking while you're standing at the job.",
+    intro: "Plumbers are on their feet all day — in crawl spaces, on rooftops, and behind walls. The last thing you want to do at the end of a shift is type up reports. VoiceLogPro captures your day in under a minute of speaking while you're standing at the job.",
     painPoints: [
       "Typing reports after a long day of physical installation work",
       "Forgetting pipe run details, fixture specs, or material counts later",
@@ -88,11 +88,11 @@ export const trades: TradeEntry[] = [
     ],
     howVlpHelps: [
       "Record pipe runs, fixture installations, and material usage with voice — not typing",
-      "Automatic timestamps prove when each phase of work was completed",
+      "Timestamps prove when each phase of work was completed",
       "Photo attachments with geolocation prove completed rough-ins before walls are closed",
-      "Court-ready PDFs support payment applications and lien right preservation",
-      "Flat $49/month for your entire crew — no per-user fees",
-      "Works fully offline in basements, crawl spaces, and new construction sites",
+      "Structured PDF reports support payment applications and lien right preservation",
+      "Founding Pilot: $49 one-time for your entire crew — no per-user fees",
+      "Records in basements, crawl spaces, and new construction sites with any voice-memo app",
     ],
     useCaseExamples: [
       {
@@ -111,7 +111,7 @@ export const trades: TradeEntry[] = [
     faqs: [
       {
         question: "Can plumbers use VoiceLogPro without stopping work?",
-        answer: "Absolutely. That's exactly what it was designed for. Record a 30-second voice note while you're working — hands-free. VoiceLogPro transcribes it and formats it into a professional daily report automatically.",
+        answer: "Absolutely. That's exactly what it was designed for. Record a short voice note while you're working — hands-free. the VoiceLogPro team transcribes it and formats it into a professional daily report, delivered the same or next business day.",
       },
       {
         question: "Does VoiceLogPro track plumbing materials?",
@@ -128,7 +128,7 @@ export const trades: TradeEntry[] = [
     tradeName: "HVAC Contractor",
     tradePlural: "HVAC Contractors",
     metaTitle: "Daily Construction Reports for HVAC Contractors | VoiceLogPro",
-    metaDescription: "Voice-first daily reports for HVAC contractors. Document ductwork, equipment installations, and commissioning with voice notes. Protect payment with court-ready PDF documentation.",
+    metaDescription: "Voice-first daily reports for HVAC contractors. Document ductwork, equipment installations, and commissioning with voice notes. Protect payment with structured daily-report documentation.",
     h1: "Daily Construction Reports Built for HVAC Contractors",
     intro: "HVAC work is complex — ductwork runs, equipment installations, refrigerant lines, and commissioning. Documentation is critical for payment and liability protection, but typing reports between jobs is impractical. VoiceLogPro lets you document while you work.",
     painPoints: [
@@ -141,11 +141,11 @@ export const trades: TradeEntry[] = [
     ],
     howVlpHelps: [
       "Record equipment model numbers, serial numbers, and installation details by voice at the unit",
-      "Automatic timestamps prove commissioning dates for warranty purposes",
+      "Timestamps prove commissioning dates for warranty purposes",
       "Photo attachments with geolocation document installed equipment and ductwork before ceilings are closed",
-      "Court-ready PDFs support payment applications and protect against liability claims",
-      "Flat $49/month for your entire crew — no per-user fees",
-      "Works fully offline in mechanical rooms, rooftops, and new construction",
+      "Structured PDF reports support payment applications and protect against liability claims",
+      "Founding Pilot: $49 one-time for your entire crew — no per-user fees",
+      "Records in mechanical rooms, rooftops, and new construction with any voice-memo app",
     ],
     useCaseExamples: [
       {
@@ -168,7 +168,7 @@ export const trades: TradeEntry[] = [
       },
       {
         question: "Can I document equipment serial numbers with VoiceLogPro?",
-        answer: "Yes. Record a voice note with the model and serial numbers at the equipment, or take a photo of the nameplate. VoiceLogPro attaches this documentation to your daily report with automatic timestamps and project association.",
+        answer: "Yes. Record a voice note with the model and serial numbers at the equipment, or take a photo of the nameplate. VoiceLogPro attaches this documentation to your daily report with timestamps and project association.",
       },
       {
         question: "Does VoiceLogPro help with HVAC lien rights?",
@@ -181,9 +181,9 @@ export const trades: TradeEntry[] = [
     tradeName: "Roofer",
     tradePlural: "Roofers",
     metaTitle: "Daily Construction Reports for Roofers | VoiceLogPro",
-    metaDescription: "Voice-first daily reports for roofing contractors. Document tear-offs, underlayment, and final roofing with voice notes. Protect payment with weather-tagged, court-ready PDFs.",
+    metaDescription: "Voice-first daily reports for roofing contractors. Document tear-offs, underlayment, and final roofing with voice notes. Protect payment with weather-tagged, structured PDF reports.",
     h1: "Daily Construction Reports Built for Roofers",
-    intro: "Roofing work is weather-dependent, physical, and time-sensitive. The last thing a roofer wants at the end of a day on a hot roof is more paperwork. VoiceLogPro captures your daily documentation in 30 seconds — and automatically tags it with the weather data that protects your delay claims.",
+    intro: "Roofing work is weather-dependent, physical, and time-sensitive. The last thing a roofer wants at the end of a day on a hot roof is more paperwork. VoiceLogPro captures your daily documentation in under a minute — and records the weather conditions you dictate, protecting your delay claims.",
     painPoints: [
       "Weather conditions that constantly disrupt schedules and need documentation",
       "Tear-off records and debris disposal documentation for compliance",
@@ -193,17 +193,17 @@ export const trades: TradeEntry[] = [
       "No easy way to document punch list completion for final payment",
     ],
     howVlpHelps: [
-      "Automatic weather tagging — every daily report includes temperature, precipitation, and wind data",
-      "Voice recording takes 30 seconds — no typing on the roof",
+      "Weather conditions you dictate — every daily report includes temperature, precipitation, and wind data",
+      "Voice recording takes under a minute — no typing on the roof",
       "Photo attachments with timestamps and geolocation prove completed work",
       "Weather-tagged reports create excusable delay evidence that shifts liability to weather events",
-      "Flat $49/month for your entire crew — no per-user fees",
-      "Works fully offline in any location",
+      "Founding Pilot: $49 one-time for your entire crew — no per-user fees",
+      "Records anywhere, sends when back online",
     ],
     useCaseExamples: [
       {
         situation: "A rain day forces you off the roof, pushing the schedule",
-        howVlpHelps: "Your voice note says 'rain delay' and VoiceLogPro automatically tags it with the actual precipitation data. This creates objective excusable delay evidence that prevents the GC from charging you for schedule impact.",
+        howVlpHelps: "Your voice note says 'rain delay' and your report records it word-for-word. This creates contemporaneous excusable delay evidence that prevents the GC from charging you for schedule impact.",
       },
       {
         situation: "The GC claims the tear-off wasn't complete before your crew arrived",
@@ -221,7 +221,7 @@ export const trades: TradeEntry[] = [
       },
       {
         question: "How does weather tagging help roofers?",
-        answer: "Weather is the #1 variable in roofing schedules. VoiceLogPro automatically records temperature, precipitation, and wind for every daily entry. This creates objective evidence that weather — not your crew — caused schedule delays, protecting you from backcharges and liquidated damages.",
+        answer: "Weather is the #1 variable in roofing schedules. VoiceLogPro records the temperature, precipitation, and wind you dictate for every daily entry. This creates objective evidence that weather — not your crew — caused schedule delays, protecting you from backcharges and liquidated damages.",
       },
       {
         question: "Does VoiceLogPro help with roofing lien rights?",
@@ -234,9 +234,9 @@ export const trades: TradeEntry[] = [
     tradeName: "General Contractor",
     tradePlural: "General Contractors",
     metaTitle: "Daily Construction Reports for General Contractors | VoiceLogPro",
-    metaDescription: "Voice-first daily reports for GCs managing trade crews. Document sitewide conditions, track subcontractor progress, and maintain project records with 30-second voice notes.",
+    metaDescription: "Voice-first daily reports for GCs managing trade crews. Document sitewide conditions, track subcontractor progress, and maintain project records with short voice notes.",
     h1: "Daily Construction Reports Built for General Contractors",
-    intro: "General Contractors juggle multiple trades, changing conditions, and constant communication demands. You need documentation from every corner of the site, but you're not the one doing the typing. VoiceLogPro lets you capture sitewide conditions, crew progress, and issues in seconds — by voice, while walking the job.",
+    intro: "General Contractors juggle multiple trades, changing conditions, and constant communication demands. You need documentation from every corner of the site, but you're not the one doing the typing. VoiceLogPro lets you capture sitewide conditions, crew progress, and issues by voice, while walking the job.",
     painPoints: [
       "Walking the site and needing to remember details for end-of-day reports",
       "Subcontractor disputes about who was on site and what they did",
@@ -247,11 +247,11 @@ export const trades: TradeEntry[] = [
     ],
     howVlpHelps: [
       "Walk the site and record observations by voice — captures conditions, crew counts, and progress naturally",
-      "Court-ready PDFs with timestamps support owner reporting and dispute resolution",
+      "Structured PDF reports with timestamps support owner reporting and dispute resolution",
       "Photo attachments with geolocation document sitewide conditions for each area",
-      "Automatic weather data supports overall project delay documentation",
-      "Flat $49/month for your entire team — covers unlimited daily reports",
-      "Works fully offline in any job site condition",
+      "Recorded weather data supports overall project delay documentation",
+      "Founding Pilot: $49 one-time for your entire team — up to 5 human-assisted daily-report PDFs over 7 days",
+      "Records in any job site condition, sends when back online",
     ],
     useCaseExamples: [
       {
@@ -270,7 +270,7 @@ export const trades: TradeEntry[] = [
     faqs: [
       {
         question: "Is VoiceLogPro useful for GCs or just subcontractors?",
-        answer: "Both. While VoiceLogPro was designed with subcontractors in mind, GCs benefit from the same voice-first documentation. Walking the site and recording observations by voice is faster and more natural than typing notes. The court-ready PDFs serve owner reporting and project documentation needs equally well.",
+        answer: "Both. While VoiceLogPro was designed with subcontractors in mind, GCs benefit from the same voice-first documentation. Walking the site and recording observations by voice is faster and more natural than typing notes. The structured PDF reports serve owner reporting and project documentation needs equally well.",
       },
       {
         question: "Can GCs track multiple subcontractors with VoiceLogPro?",

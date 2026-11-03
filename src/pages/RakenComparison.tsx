@@ -42,7 +42,7 @@ function ComparisonTable() {
     { feature: "Input Method", raken: "Typing & forms", vlp: "100% voice" },
     { feature: "Legal Focus", raken: "General compliance", vlp: "Payment & lien defense" },
     { feature: "Data Ownership", raken: "GC", vlp: "You" },
-    { feature: "Pricing", raken: "Seat-based", vlp: "$49/month" },
+    { feature: "Pricing", raken: "Seat-based", vlp: "$49 one-time pilot" },
   ];
 
   return (
@@ -76,19 +76,19 @@ const faqs = [
   },
   {
     q: "What is the best daily report app for subcontractors?",
-    a: "The best daily report app for subcontractors is one that creates legally defensible documentation you own. VoiceLogPro is built specifically for subcontractors—voice-first input, court-ready PDFs with timestamps and weather data, and automatic lien right protection.",
+    a: "The best daily report app for subcontractors is one that creates structured documentation you own. VoiceLogPro is built specifically for subcontractors—voice-first input, structured PDF reports with timestamps and the weather you report, and lien-relevant documentation.",
   },
   {
     q: "How do subcontractors protect lien rights?",
-    a: "Subcontractors protect lien rights through contemporaneous documentation—daily logs with timestamps, photos, and weather conditions. VoiceLogPro automatically generates this evidence and supports compliance with Texas Property Code Chapter 53 and monthly notice requirements.",
+    a: "Subcontractors protect lien rights through contemporaneous documentation—daily logs with timestamps, photos, and weather conditions. VoiceLogPro generates this evidence from your voice notes and supports Texas Property Code Chapter 53 and monthly notice requirements.",
   },
   {
     q: "How do you document delays in construction?",
-    a: "Effective delay documentation requires timestamped records created at the time of the event. VoiceLogPro automatically tags every log with time, location, and historical weather data—creating excusable delay evidence that holds up in disputes and adjudications.",
+    a: "Effective delay documentation requires timestamped records created at the time of the event. VoiceLogPro logs record time, the location and weather you report, and photos keep their geotags—creating excusable delay evidence that holds up in disputes and adjudications.",
   },
   {
     q: "Is VoiceLogPro a project management tool?",
-    a: "No. VoiceLogPro is not project management software. It's a legal defense and compliance engine that converts your voice notes into court-ready documentation. It protects payment, not manages projects.",
+    a: "No. VoiceLogPro is not project management software. It's a documentation service that turns your voice notes into structured, timestamped reports for disputes and compliance. It protects payment, not manages projects.",
   },
 ];
 
@@ -99,7 +99,7 @@ export default function RakenComparison() {
         <title>Raken vs VoiceLogPro | Payment Protection for Subcontractors</title>
         <meta
           name="description"
-          content="Compare Raken vs VoiceLogPro. Raken is built for GCs. VoiceLogPro is built for subcontractors to create court-ready proof, preserve lien rights, and protect payment—using voice."
+          content="Compare Raken vs VoiceLogPro. Raken is built for GCs. VoiceLogPro is built for subcontractors to create structured, timestamped proof, preserve lien rights, and protect payment—using voice."
         />
         <link rel="canonical" href="https://voicelogpro.com/raken-vs-voice-log-pro" />
       </Helmet>
@@ -143,7 +143,7 @@ export default function RakenComparison() {
             <div className="card-sunlight">
               <h3 className="font-display text-xl uppercase text-primary mb-3">Bottom-Up Defense (VoiceLogPro)</h3>
               <p className="text-foreground">
-                Built for subcontractors to create legally defensible proof of delays, extra work, and site conditions — automatically, using voice.
+                Built for subcontractors to create structured proof of delays, extra work, and site conditions — from a voice note, prepared by our team.
               </p>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function RakenComparison() {
               <h3 className="font-display text-2xl uppercase text-foreground">Compliance in Your Pocket</h3>
             </div>
             <p className="text-foreground text-lg mb-4">
-              Speak for 30 seconds. VoiceLogPro converts your voice into a court-ready, timestamped PDF.
+              Speak for under a minute. VoiceLogPro returns a structured, timestamped PDF report (same or next business day).
             </p>
             <p className="text-primary font-bold">No typing. No forms. No chasing foremen.</p>
           </div>
@@ -231,7 +231,7 @@ export default function RakenComparison() {
                 </div>
                 <h3 className="font-display text-lg uppercase text-foreground">2. Automated Delay & Acceleration Defense</h3>
               </div>
-              <p className="text-muted-foreground mb-4">Every log is automatically tagged with:</p>
+              <p className="text-muted-foreground mb-4">Every log records:</p>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-foreground"><Check className="w-4 h-4 text-primary" /> Time & location</li>
                 <li className="flex items-center gap-2 text-foreground"><Check className="w-4 h-4 text-primary" /> Historical weather (temperature, precipitation)</li>
@@ -278,11 +278,11 @@ export default function RakenComparison() {
                 <div className="w-10 h-10 rounded bg-primary/20 flex items-center justify-center">
                   <Wifi className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="font-display text-lg uppercase text-foreground">5. Works Offline — Always</h3>
+                <h3 className="font-display text-lg uppercase text-foreground">5. Records Anywhere — Always</h3>
               </div>
               <p className="text-foreground">
                 Basements. Mechanical rooms. Remote sites.<br />
-                <span className="text-primary font-semibold">Your evidence is captured even without signal.</span>
+                <span className="text-primary font-semibold">Your evidence is captured even without signal — record with any voice-memo app, send it in later.</span>
               </p>
             </div>
           </div>

@@ -26,7 +26,7 @@
     "name": "How does AI transcribe field team voice logs?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "VoiceLogPro uses a three-stage AI pipeline: (1) real-time speech-to-text via Whisper large-v3, processing 3–8 seconds per minute of audio with 94%+ accuracy on construction terminology; (2) domain-specific entity extraction via a custom NER model trained on field ops vocabulary — worker names, equipment IDs, material types, safety hazard categories; and (3) structured output generation — JSON with urgency scores, assigned actions, and compliance flags — delivered to the dashboard within seconds of completing the voice recording. The pipeline runs on-device for initial capture and cloud-side for full processing, meaning logs are partially available even offline.",
+      "text": "VoiceLogPro uses a three-stage AI pipeline: (1) real-time speech-to-text via Whisper large-v3, processing 3–8 seconds per minute of audio with 94%+ accuracy on construction terminology; (2) domain-specific entity extraction via a custom NER model trained on field ops vocabulary — worker names, equipment IDs, material types, safety hazard categories; and (3) structured output generation — JSON with urgency scores, assigned actions, and compliance flags — delivered as a PDF the same or next business day after you send the voice recording. The Founding Pilot is human-assistedure and cloud-side for full processing, meaning logs are partially available even offline.",
       "url": "https://voicelogpro.com/answers/how-does-ai-transcribe-field-team-voice-logs/"
     }
   }]
@@ -47,7 +47,7 @@
 <main>
 <article>
     <h1>How does AI transcribe field team voice logs?</h1>
-    <p class="bluf"><strong>Answer:</strong> VoiceLogPro uses a three-stage AI pipeline — Whisper large-v3 speech-to-text (94%+ accuracy on construction terminology), custom NER entity extraction (workers, equipment, materials, hazards), and structured JSON output — processing 3–8 seconds per minute of audio and delivering actionable insights to your dashboard within seconds.</p>
+    <p class="bluf"><strong>Answer:</strong> VoiceLogPro uses a three-stage AI pipeline — Whisper large-v3 speech-to-text (94%+ accuracy on construction terminology), custom NER entity extraction (workers, equipment, materials, hazards), and structured JSON output — processing 3–8 seconds per minute of audio and delivering structured reports the same or next business day.</p>
 
     <div class="full-answer">
         <h2>The transcription pipeline in detail</h2>
@@ -65,7 +65,7 @@
             <li><strong>Processing speed:</strong> 3–8 seconds per minute of audio (median: 4.2s)</li>
             <li><strong>Accuracy on technical terms:</strong> 94.3% (measured across 12,000 test transcripts)</li>
             <li><strong>Entity extraction precision:</strong> 91.7% (correctly identified vs. false positives)</li>
-            <li><strong>Offline capability:</strong> Captures and stores locally; syncs transcription when back online</li>
+            <li><strong>Record anywhere, send later:</strong> Captures and stores locally; syncs transcription when back online</li>
             <li><strong>Languages supported:</strong> English (primary), Spanish, French, with Polish and Romanian in beta</li>
         </ul>
     </div>

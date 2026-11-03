@@ -65,7 +65,7 @@ export const delayDocumentationHowTo: HowToSchema = {
       "@type": "HowToStep",
       position: 2,
       name: "Capture Weather Conditions",
-      text: "VoiceLogPro automatically tags reports with weather data including temperature, precipitation, and conditions. This creates independent verification of weather-related excusable delays for schedule compression claims.",
+      text: "VoiceLogPro reports record the weather data you dictate, including temperature, precipitation, and conditions. This creates independent verification of weather-related excusable delays for schedule compression claims.",
       url: `${BASE_URL}/solutions/constructive-acceleration-defense`
     },
     {
@@ -78,8 +78,8 @@ export const delayDocumentationHowTo: HowToSchema = {
     {
       "@type": "HowToStep",
       position: 4,
-      name: "Generate Court-Ready PDF",
-      text: "Export daily logs as timestamped PDF reports with embedded metadata. These legally defensible documents include geolocation, weather data, photos, and chain-of-custody information aligned with AIA A401 documentation expectations.",
+      name: "Generate the PDF Report",
+      text: "Export daily logs as timestamped PDF reports with embedded metadata. These structured documents include geolocation, the weather conditions you report, photos, and chain-of-custody information aligned with AIA A401 documentation expectations.",
       url: `${BASE_URL}/crew-plan`
     }
   ]
@@ -108,7 +108,7 @@ export const texasLienDocumentationHowTo: HowToSchema = {
       "@type": "HowToStep",
       position: 1,
       name: "Record Daily Work Performed",
-      text: "At the end of each workday, record a voice note describing work completed. Include specific tasks, areas of the project, and materials used. VoiceLogPro automatically timestamps each entry to establish when work was performed.",
+      text: "At the end of each workday, record a voice note describing work completed. Include specific tasks, areas of the project, and materials used. VoiceLogPro timestamps each entry to establish when work was performed.",
       url: `${BASE_URL}/solutions/texas-mechanics-lien-compliance`
     },
     {
@@ -122,7 +122,7 @@ export const texasLienDocumentationHowTo: HowToSchema = {
       "@type": "HowToStep",
       position: 3,
       name: "Organize by Billing Period",
-      text: "VoiceLogPro automatically organizes daily logs by month, supporting the Monthly Trapping Mechanism that requires subcontractors to tie work to specific billing periods for Texas Property Code Chapter 53 compliance.",
+      text: "VoiceLogPro organizes daily logs by month, supporting the Monthly Trapping Mechanism that requires subcontractors to tie work to specific billing periods for Texas Property Code Chapter 53 compliance.",
       url: `${BASE_URL}/solutions/texas-mechanics-lien-compliance`
     },
     {
@@ -194,7 +194,7 @@ export const texasLienFaqs = [
   },
   {
     question: "How does VoiceLogPro help with Texas lien compliance?",
-    answer: "VoiceLogPro automatically timestamps daily logs with the date work was performed, creating contemporaneous records that tie work to specific billing periods. This supports the Monthly Trapping Mechanism required for Texas Property Code Chapter 53 compliance."
+    answer: "VoiceLogPro timestamps daily logs with the date work was performed, creating contemporaneous records that tie work to specific billing periods. This supports the Monthly Trapping Mechanism required for Texas Property Code Chapter 53 compliance."
   },
   {
     question: "What documentation do I need for a Texas mechanics lien?",
@@ -202,7 +202,7 @@ export const texasLienFaqs = [
   },
   {
     question: "Can VoiceLogPro reports be used in court for Texas lien claims?",
-    answer: "Yes. VoiceLogPro generates PDF reports with timestamps, weather data, and photos that serve as contemporaneous documentation. These reports support lien claims and payment disputes under Texas Property Code Chapter 53."
+    answer: "They can support your case. VoiceLogPro returns PDF reports with timestamps, the weather conditions you report, and your photos — contemporaneous documentation. These reports support lien claims and payment disputes under Texas Property Code Chapter 53."
   }
 ];
 

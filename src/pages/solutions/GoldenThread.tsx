@@ -36,7 +36,7 @@ const GoldenThread = () => {
             </p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
-                Start Documenting — $49/month
+                Start with the $49 Founding Pilot
               </Button>
             </Link>
           </div>
@@ -171,7 +171,7 @@ const GoldenThread = () => {
                   <h3 className="font-semibold text-foreground">Digital-First Daily Records</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  Every voice log creates a digital record with automatic timestamps, geolocation, and weather data. Records are stored securely and can be exported as PDFs for inclusion in Golden Thread documentation packages.
+                  Every voice log creates a timestamped record with the geolocation and weather you report. Records are stored securely and can be exported as PDFs for inclusion in Golden Thread documentation packages.
                 </p>
               </div>
               
@@ -273,7 +273,7 @@ const GoldenThread = () => {
             </p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
-                Join the Waitlist — $49/month
+                Join the Waitlist
               </Button>
             </Link>
           </div>

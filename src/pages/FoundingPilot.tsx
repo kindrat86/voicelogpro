@@ -101,7 +101,7 @@ export default function FoundingPilot() {
           </div>
           <div>
             <h2 className="headline-section mb-3">What this pilot does not include</h2>
-            <p className="text-muted-foreground">This is a human-assisted concierge service, not the finished self-serve app. It does not promise automatic transcription, offline processing, automatic geolocation, automatic weather, legal compliance, or a 30-second automated result.</p>
+            <p className="text-muted-foreground">This is a human-assisted concierge service, not the finished self-serve app. It does not promise transcription, offline processing, automatic geolocation, automatic weather, legal compliance, or a 30-second automated result.</p>
           </div>
           <div className="card-industrial border-primary">
             <h2 className="mb-3 text-2xl font-bold">Useful-report guarantee</h2>

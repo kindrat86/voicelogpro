@@ -6,13 +6,13 @@
 ## Product & Core Pages
 
 ### [Homepage](https://voicelogpro.com/)
-VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors. Speak your on-site daily report, and it becomes a timestamped, court-admissible PDF with fields for weather, crew, work performed, and materials. $49/month Crew Plan. Supports Texas Property Code Chapter 53 lien rights, NSW SOPA adjudications, and UK Building Safety Act Golden Thread compliance.
+VoiceLogPro is a voice-to-PDF daily construction log app for subcontractors. Speak your on-site daily report, and the VoiceLogPro team returns a timestamped PDF daily report with fields for weather, crew, work performed, and materials. Founding Pilot (one-time $49). Supports Texas Property Code Chapter 53 lien rights, NSW SOPA adjudications, and UK Building Safety Act Golden Thread compliance.
 
 ### [Court-Ready Daily Logs](https://voicelogpro.com/court-ready-daily-logs)
-The five elements that make a construction daily log hold up as evidence: contemporaneous, timestamped, objectively corroborated (weather), photo-backed with metadata, and complete/consistent. Court-ready logs defend payment disputes, mechanics liens, delay claims, and GC backcharges. VoiceLogPro captures all five by voice in about 30 seconds on-site.
+The five elements that make a construction daily log hold up as evidence: contemporaneous, timestamped, objectively corroborated (weather), photo-backed with metadata, and complete/consistent. Court-ready logs defend payment disputes, mechanics liens, delay claims, and GC backcharges. VoiceLogPro captures all five by voice in about half a minute on-site.
 
 ### [Crew Plan](https://voicelogpro.com/crew-plan)
-Join the waitlist for VoiceLogPro's voice-first daily reporting plan. $49/month includes unlimited daily reports, automatic timestamps and weather data, photo attachments with geolocation, court-ready PDF exports, and multi-jurisdiction compliance documentation features.
+Join the waitlist for VoiceLogPro's voice-first daily reporting plan. The current offer is the $49 one-time Founding Pilot: one crew, 7 days, up to 5 human-assisted daily-report PDFs delivered same or next business day.
 
 ### [About](https://voicelogpro.com/about)
 Built by subcontractors who learned that missing or late daily reports cost more than bad work. VoiceLogPro was created on real jobsites — conduit in one hand, phone in the other — to solve the documentation gap that kills subcontractor payment claims.
@@ -21,7 +21,7 @@ Built by subcontractors who learned that missing or late daily reports cost more
 Support, partnerships, and general inquiries for VoiceLogPro. Reach the team for questions about lien protection documentation, jurisdiction-specific compliance features, or beta access.
 
 ### [Beta](https://voicelogpro.com/beta)
-Early beta access for construction crews. Test the voice-to-PDF daily reporting workflow before the public launch. Includes offline capability and multi-jurisdiction compliance features.
+Early beta access for construction crews. Test the voice-to-PDF daily reporting workflow before the public launch. Record anywhere with any voice-memo app; reports are prepared by the team (human-assisted).
 
 ### [Blog](https://voicelogpro.com/blog)
 Construction law, lien rights, and daily documentation guides for subcontractors. Covers Texas Property Code Chapter 53, mechanics lien deadlines by state, NSw SOPA adjudications, and UK Building Safety Act Golden Thread requirements.
@@ -80,7 +80,7 @@ Honest comparisons of VoiceLogPro vs construction management and documentation t
 
 - [Raken vs VoiceLogPro](https://voicelogpro.com/vs/raken): Raken is a full construction management platform with daily reporting, time cards, and safety checklists. VoiceLogPro focuses specifically on voice-to-PDF daily logs for subcontractors.
 - [Fieldwire vs VoiceLogPro](https://voicelogpro.com/vs/fieldwire): Fieldwire is a jobsite management platform with plan viewing, task management, and punch lists. VoiceLogPro is a voice-first daily reporting tool for subcontractor payment protection.
-- [Procore vs VoiceLogPro](https://voicelogpro.com/vs/procore): Procore is an enterprise construction management suite for GCs and owners. VoiceLogPro is a focused voice-to-PDF daily log tool for subcontractors who need court-admissible documentation.
+- [Procore vs VoiceLogPro](https://voicelogpro.com/vs/procore): Procore is an enterprise construction management suite for GCs and owners. VoiceLogPro is a focused voice-to-PDF daily log tool for subcontractors who need structured, timestamped documentation for disputes.
 - [Buildertrend vs VoiceLogPro](https://voicelogpro.com/buildertrend-vs-voice-log-pro): Buildertrend is a construction project management platform for home builders and remodelers. VoiceLogPro specializes in voice-first daily reports for trade subcontractors.
 - [Knowify vs VoiceLogPro](https://voicelogpro.com/vs/knowify): Knowify combines project management with construction accounting and job costing. VoiceLogPro is a dedicated voice-to-PDF daily reporting tool for lien protection.
 - [JobNimbus vs VoiceLogPro](https://voicelogpro.com/jobnimbus-vs-voice-log-pro): JobNimbus is a CRM and project management tool for roofing and restoration contractors. VoiceLogPro is a voice-first daily log tool for subcontractors across multiple trades.
@@ -94,7 +94,7 @@ Honest comparisons of VoiceLogPro vs construction management and documentation t
 
 VoiceLogPro as an alternative to popular voice transcription and documentation tools:
 
-- [Alternatives to Otter.ai](https://voicelogpro.com/alternatives-to/otter-ai): Otter.ai is a general-purpose meeting transcription tool. VoiceLogPro is purpose-built for construction daily reports — it structures voice notes into formatted, court-admissible daily-report PDFs with trade-specific fields.
+- [Alternatives to Otter.ai](https://voicelogpro.com/alternatives-to/otter-ai): Otter.ai is a general-purpose meeting transcription tool. VoiceLogPro is purpose-built for construction daily reports — it turns voice notes into formatted daily-report PDFs with trade-specific fields (human-assisted, same or next business day).
 - [Alternatives to Rev](https://voicelogpro.com/alternatives-to/rev): Rev provides human and AI transcription for general audio. VoiceLogPro converts construction voice notes into timestamped daily reports with weather, crew, and material fields — not raw transcripts.
 - [Alternatives to Descript](https://voicelogpro.com/alternatives-to/descript): Descript is an audio/video editing platform with transcription. VoiceLogPro is a voice-to-PDF daily log tool for construction subcontractors needing lien-protection documentation.
 
@@ -112,7 +112,7 @@ Jurisdiction-specific compliance solutions powered by VoiceLogPro:
 
 Key terms in construction daily reporting, voice logging, and compliance documentation:
 
-- [Voice Logging](https://voicelogpro.com/glossary/voice-logging): The practice of recording spoken job-site observations that are automatically converted into structured daily reports. Distinct from general transcription — voice logging includes automatic enrichment with timestamps, weather data, and trade-specific field extraction.
+- [Voice Logging](https://voicelogpro.com/glossary/voice-logging): The practice of recording spoken job-site observations that are converted into structured daily reports. Distinct from general transcription — voice logging includes enrichment with timestamps, weather fields, and trade-specific fields.
 - [Transcription](https://voicelogpro.com/glossary/transcription): Converting spoken audio to written text. VoiceLogPro goes beyond transcription by structuring the text into formatted daily reports with crew names, materials, delays, and compliance fields.
 - [Speaker Diarization](https://voicelogpro.com/glossary/speaker-diarization): The process of identifying which speaker said what in a multi-speaker audio recording. Used in VoiceLogPro to attribute field observations to specific crew members.
 
@@ -126,4 +126,4 @@ Total: 220+ pages across 18 page-type clusters.
 Last updated: 2026-07-23.
 Sitemap: https://voicelogpro.com/sitemap.xml
 Organization: VoiceLogPro — voice-to-PDF daily construction log app for subcontractors.
-Founded: 2024. Price: $49/month. Email: hello@voicelogpro.com
+Founded: 2024. Current offer: $49 one-time Founding Pilot. Email: hello@voicelogpro.com

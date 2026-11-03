@@ -165,7 +165,7 @@ export default function TexasLienLaw2025Page() {
             VoiceLogPro creates the timestamped daily records you need to prove first furnishing dates and support lien claims.
           </p>
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <Link to="/crew-plan">Get VoiceLogPro — $49/month</Link>
+            <Link to="/crew-plan">Get VoiceLogPro — $49 Founding Pilot</Link>
           </Button>
         </section>
 

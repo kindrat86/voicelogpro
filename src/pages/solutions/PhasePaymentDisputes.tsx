@@ -39,7 +39,7 @@ const PhasePaymentDisputes = () => {
         "name": "What happens if the contractor alters or removes work after I document it?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "VoiceLogPro syncs instantly to the cloud. Even if work is altered, damaged, or removed after documentation, the timestamped record of what existed remains intact and dispute-ready."
+          "text": "Your reports are stored as PDFs you keep. Even if work is altered, damaged, or removed after documentation, the timestamped record of what existed remains intact and dispute-ready."
         }
       }
     ]
@@ -197,7 +197,7 @@ const PhasePaymentDisputes = () => {
               <div className="space-y-8">
                 {/* Feature 1 */}
                 <div className="bg-card border border-border rounded-lg p-6 md:p-8">
-                  <h3 className="text-xl font-bold text-foreground mb-3">Instant Site Documentation</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-3">On-the-Spot Site Documentation</h3>
                   <p className="text-muted-foreground mb-4">
                     Walk the site and dictate exactly what exists — or doesn't.
                   </p>

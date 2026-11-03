@@ -36,7 +36,7 @@ ${POSTHOG_SNIPPET}
 <label for="lf">Last furnishing date (when you finished)</label><input type="date" id="lf">
 <div class="out" id="out">Select a state to see deadlines.</div>
 ${captureBlock("/free/lien-deadline-calculator", "", "my state's")}
-<div class="cta" style="margin-top:1.25rem;background:#fff7ed;border:1px solid #fed7aa;border-radius:.6rem;padding:1rem"><strong>Your dates are only as good as your records.</strong> <a href="/">VoiceLogPro</a> documents your furnishing dates automatically from voice notes. <a href="/lien-law-deadlines">Browse deadlines by state →</a></div>
+<div class="cta" style="margin-top:1.25rem;background:#fff7ed;border:1px solid #fed7aa;border-radius:.6rem;padding:1rem"><strong>Your dates are only as good as your records.</strong> <a href="/">VoiceLogPro</a> documents your furnishing dates from your daily voice notes. <a href="/lien-law-deadlines">Browse deadlines by state →</a></div>
 <div class="dl" style="margin-top:1.25rem;border:1px solid #e2e8f0;border-radius:.6rem;padding:1rem"><strong>Download the full 51-jurisdiction reference table:</strong> <a href="/lien-law-deadlines-2026.csv" download>lien-law-deadlines-2026.csv</a> — preliminary-notice, filing, and enforcement deadlines for every state with statute citation, statute URL, and last-verified date (${D.updatedAt}, CC BY 4.0). <a href="/lien-law-deadlines">View the table online →</a></div>
 <p class="disc">${D.disclaimer}</p>
 <script>

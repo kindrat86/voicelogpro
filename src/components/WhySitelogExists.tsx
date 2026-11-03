@@ -45,8 +45,8 @@ export function WhySitelogExists() {
           </p>
           
           <p>
-            VoiceLogPro turns what you say into evidence-grade daily logs with timestamps, weather, and safety notes — documentation that supports your payment disputes and lien rights.
-            <span className="block font-semibold text-primary">Even works offline.</span>
+            VoiceLogPro turns what you say into structured daily logs with timestamps, the weather you report, and safety notes — documentation that supports your payment disputes and lien rights.
+            <span className="block font-semibold text-primary">Even records anywhere.</span>
           </p>
         </div>
 

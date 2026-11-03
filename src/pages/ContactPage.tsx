@@ -175,7 +175,7 @@ export default function ContactPage() {
               <div className="bg-background border border-border rounded-lg p-5">
                 <h3 className="font-bold text-foreground mb-1">How much does it cost?</h3>
                 <p className="text-sm text-muted-foreground">
-                  The Crew Plan is $49/month. One price. Unlimited daily reports. No per-report fees.{' '}
+                  Today's offer is the $49 one-time Founding Pilot (one crew, 7 days, up to 5 human-assisted daily-report PDFs). The Crew Plan subscription launches later.{' '}
                   <Link to="/crew-plan" className="text-primary hover:underline">See full details &rarr;</Link>
                 </p>
               </div>

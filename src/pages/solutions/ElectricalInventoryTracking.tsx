@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     question: "How quickly does the office see the logs?",
-    answer: "Instantly. Logs sync the moment they're recorded. No waiting for end-of-day reports or chasing foremen for counts."
+    answer: "Same or next business day. Your recorded log is sent in the moment you finish it. No waiting for end-of-day reports or chasing foremen for counts."
   }
 ];
 
@@ -65,7 +65,7 @@ export default function ElectricalInventoryTracking() {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Your shop is growing, but your field reporting isn't. Stop forcing crews to type into inventory apps they hate. Let them speak — and get usable data instantly.
+              Your shop is growing, but your field reporting isn't. Stop forcing crews to type into inventory apps they hate. Let them speak — and get usable data back the same or next business day.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -73,14 +73,14 @@ export default function ElectricalInventoryTracking() {
                 <Link to="/crew-plan">Get VoiceLogPro</Link>
               </Button>
               <a href="#how-it-works" className="text-muted-foreground hover:text-foreground underline underline-offset-4 transition-colors">
-                See How It Works in 30 Seconds →
+                See How It Works →
               </a>
             </div>
           </div>
         </section>
 
         {/* TL;DR */}
-        <TldrSection summary="Foremen record material usage by voice — 'used 1,000 ft of 12/2 MC, 50 mud rings, 300 wire nuts' — and the office sees it instantly. No typing, no spreadsheets, no end-of-day guessing." />
+        <TldrSection summary="Foremen record material usage by voice — 'used 1,000 ft of 12/2 MC, 50 mud rings, 300 wire nuts' — and the office reads it in the next daily report. No typing, no spreadsheets, no end-of-day guessing." />
 
         {/* Real Talk Section - The "All-in-One" Trap */}
         <section className="py-16 md:py-24 bg-muted/30">
@@ -166,7 +166,7 @@ export default function ElectricalInventoryTracking() {
                   </li>
                   <li className="flex items-start gap-3">
                     <TrendingDown className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">The office sees it instantly — clean and readable</span>
+                    <span className="text-muted-foreground">The office reads it in the daily report — clean and readable</span>
                   </li>
                 </ul>
               </div>

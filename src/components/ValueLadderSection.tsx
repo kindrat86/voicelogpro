@@ -9,7 +9,7 @@ const ladderRungs = [
     price: "$0",
     sub: "Lead magnet",
     description: "Templates, Texas Chapter 53 checklist & dispute swipe file.",
-    deliverable: "Instant PDF download",
+    deliverable: "PDF download on signup",
     href: "#defense-kit",
     highlight: false,
   },

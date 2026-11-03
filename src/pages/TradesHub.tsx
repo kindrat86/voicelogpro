@@ -10,7 +10,7 @@ const tradesListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Construction Trades — Daily Report Solutions",
-  description: "Voice-first daily construction reports tailored for each trade. Protect your payment with 30-second voice documentation.",
+  description: "Voice-first daily construction reports tailored for each trade. Protect your payment with short daily voice documentation.",
   url: "https://voicelogpro.com/for",
   itemListOrder: "https://schema.org/ItemListOrderAscending",
   numberOfItems: trades.length,
@@ -27,7 +27,7 @@ export default function TradesHub() {
     <>
       <Helmet>
         <title>Daily Construction Reports by Trade | VoiceLogPro</title>
-        <meta name="description" content="Voice-first daily reports built for electricians, plumbers, HVAC contractors, roofers, and general contractors. Protect your payment with 30-second voice documentation." />
+        <meta name="description" content="Voice-first daily reports built for electricians, plumbers, HVAC contractors, roofers, and general contractors. Protect your payment with short daily voice documentation." />
         <link rel="canonical" href="https://voicelogpro.com/for" />
       </Helmet>
       <JsonLd schema={tradesListSchema} />
@@ -64,7 +64,7 @@ export default function TradesHub() {
           <div className="mt-12 text-center">
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
-                Start Protecting Your Payment — $49/month
+                Start Protecting Your Payment — $49 Pilot
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>

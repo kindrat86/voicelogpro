@@ -169,7 +169,7 @@ const es = {
     rung1Price: "$0",
     rung1Sub: "Imán de prospectos",
     rung1Desc: "Plantillas, lista de verificación del Capítulo 53 de Texas y archivo de disputas.",
-    rung1Deliverable: "Descarga instantánea de PDF",
+    rung1Deliverable: "Descarga inmediata de PDF",
     rung2Tier: "Entrada",
     rung2Name: "Beta Individual",
     rung2Price: "$0",

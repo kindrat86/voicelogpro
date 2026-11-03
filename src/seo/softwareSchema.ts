@@ -6,7 +6,7 @@
  * 
  * IMPORTANT: 
  * - Feature claims must match published legislative pages
- * - Price must match current pricing ($49/month)
+ * - Price must match current offer ($49 one-time Founding Pilot)
  * - Legal frameworks listed must have corresponding documentation
  */
 
@@ -140,7 +140,7 @@ export const featureListSchema: FeatureListSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Voice-to-PDF Conversion",
-      description: "Converts spoken voice notes into professionally formatted PDF daily reports with automatic transcription"
+      description: "Converts spoken voice notes into professionally formatted PDF daily reports (human-assisted)"
     },
     {
       "@type": "ListItem",
@@ -163,14 +163,14 @@ export const featureListSchema: FeatureListSchema = {
     {
       "@type": "ListItem",
       position: 5,
-      name: "Automatic Weather Tagging",
+      name: "Weather Conditions You Dictate",
       description: "Captures weather conditions at time of recording for excusable delay proof and schedule compression claims"
     },
     {
       "@type": "ListItem",
       position: 6,
-      name: "Court-Ready PDF Generation",
-      description: "Produces legally defensible PDF reports with timestamps, metadata, and chain-of-custody documentation"
+      name: "Daily-Report PDF Generation",
+      description: "Produces structured PDF reports with timestamps, metadata, and chain-of-custody documentation"
     },
     {
       "@type": "ListItem",
@@ -181,8 +181,8 @@ export const featureListSchema: FeatureListSchema = {
     {
       "@type": "ListItem",
       position: 8,
-      name: "Offline Capability",
-      description: "Full functionality without internet connection for remote construction sites"
+      name: "Record Anywhere",
+      description: "Record voice notes on remote construction sites with any voice-memo app and send them when back online"
     },
     {
       "@type": "ListItem",
@@ -267,7 +267,7 @@ const potentialActions: SchemaAction[] = [
     "@type": "GenerateAction",
     "@id": "https://voicelogpro.com/#action-daily-report",
     name: "Generate Voice-to-PDF Daily Report",
-    description: "Convert voice recording into legally defensible PDF daily construction report with automatic timestamps and weather tagging",
+    description: "Turn a voice recording into a structured PDF daily construction report with timestamps and the weather conditions you report",
     target: {
       "@type": "EntryPoint",
       urlTemplate: "https://voicelogpro.com/#demo",
@@ -297,7 +297,7 @@ const potentialActions: SchemaAction[] = [
     "@type": "CreateAction",
     "@id": "https://voicelogpro.com/#action-weather-documentation",
     name: "Capture Weather Conditions for Delay Claims",
-    description: "Automatically tag daily reports with weather data to support excusable delay documentation and schedule impact claims",
+    description: "Record dictated weather conditions in daily reports to support excusable delay documentation and schedule impact claims",
     target: {
       "@type": "EntryPoint",
       urlTemplate: "https://voicelogpro.com/#demo",
@@ -326,7 +326,7 @@ const knowsAboutTerms: DefinedTermSchema[] = [
   { "@type": "DefinedTerm", name: "Security of Payment Act (SOPA)", inDefinedTermSet: "NSW Construction Law" },
   { "@type": "DefinedTerm", name: "Contemporaneous site diary records", inDefinedTermSet: "Construction Documentation" },
   { "@type": "DefinedTerm", name: "Requests for Information (RFI)", inDefinedTermSet: "Construction Administration" },
-  { "@type": "DefinedTerm", name: "Court-ready PDF documentation", inDefinedTermSet: "Legal Evidence" },
+  { "@type": "DefinedTerm", name: "Daily-report PDF documentation", inDefinedTermSet: "Legal Evidence" },
 ];
 
 /**
@@ -342,7 +342,7 @@ export const softwareApplicationSchema: SoftwareApplicationSchema = {
   name: "VoiceLogPro",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web, iOS, Android",
-  description: "AI-powered construction daily reporting tool. Converts voice notes into legally defensible PDF reports for subcontractors. Features automatic weather tagging, RFI detection, and compliance documentation for Texas Property Code Chapter 53, NSW Security of Payment Act (SOPA), and UK Building Safety Act Golden Thread requirements.",
+  description: "Human-assisted construction daily reporting service. Voice notes become structured, timestamped PDF reports for subcontractors, delivered the same or next business day. Records the weather conditions you dictate and supports compliance documentation for Texas Property Code Chapter 53, NSW Security of Payment Act (SOPA), and UK Building Safety Act Golden Thread requirements.",
   url: "https://voicelogpro.com",
   offers: {
     "@type": "Offer",
@@ -356,14 +356,14 @@ export const softwareApplicationSchema: SoftwareApplicationSchema = {
     audienceType: "Electrical, Plumbing, and HVAC Subcontractors"
   },
   featureList: [
-    "Voice-to-PDF conversion",
+    "Voice-to-PDF reports (human-assisted)",
     "Texas Property Code Chapter 53 Compliance",
     "Security of Payment Act (SOPA) Documentation",
     "Building Safety Act Golden Thread",
-    "Automatic timestamps and weather data",
-    "Court-ready PDF generation",
+    "Timestamps and the weather conditions you report",
+    "Daily-report PDF generation",
     "Photo attachments with geolocation",
-    "Offline capability",
+    "Record anywhere, send later",
     "Lien protection documentation",
     "RFI and delay documentation"
   ],
@@ -420,7 +420,7 @@ export const legalServiceSchema: LegalServiceSchema = {
   "@type": "LegalService",
   "@id": "https://voicelogpro.com/#legal-service",
   name: "Construction Compliance Documentation Service",
-  description: "Voice-powered daily reporting service that generates legally defensible documentation for construction subcontractors. Supports lien rights preservation, payment dispute documentation, delay claim evidence, and regulatory compliance across multiple jurisdictions.",
+  description: "Voice-powered, human-assisted daily reporting service for construction subcontractors. Supports lien rights preservation, payment dispute documentation, delay claim evidence, and regulatory compliance across multiple jurisdictions.",
   serviceType: "Construction Compliance Documentation",
   areaServed: [
     {

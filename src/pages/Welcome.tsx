@@ -53,8 +53,8 @@ export default function Welcome() {
             The kit documents your day.<br />VoiceLogPro does it for you.
           </h2>
           <p className="body-large mb-6">
-            Press record, speak your update, and get a timestamped, weather-stamped, court-ready PDF —
-            even offline. Free during beta, no card required, and beta partners lock the $49/month
+            Press record, speak your update, and get a timestamped PDF report of what you dictated —
+            recorded anywhere. Free during beta, no card required, and beta partners lock the launch price
             Crew Plan rate for good.
           </p>
           <Link

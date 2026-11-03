@@ -10,7 +10,7 @@ const features = [{
   description: "contemporaneous records preserved as evidence"
 }, {
   icon: Cloud,
-  title: "Automatic weather tagging",
+  title: "Weather conditions you dictate",
   description: "excusable delay proof for schedule compression claims"
 }, {
   icon: AlertTriangle,
@@ -18,7 +18,7 @@ const features = [{
   description: "dispute prevention and delay claim documentation"
 }, {
   icon: FileCheck,
-  title: "Legally defensible PDFs",
+  title: "Structured PDF reports",
   description: "aligned with AIA A401 documentation expectations"
 }, {
   icon: Share2,
@@ -26,8 +26,8 @@ const features = [{
   description: "supports payment applications and lien rights"
 }, {
   icon: WifiOff,
-  title: "Offline capture",
-  description: "evidence-grade daily logs from anywhere"
+  title: "Record anywhere",
+  description: "dictate logs from any job site, then send when back online"
 }];
 const complianceByRegion = {
   texas: {

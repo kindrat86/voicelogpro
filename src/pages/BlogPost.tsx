@@ -353,7 +353,7 @@ export default function BlogPost() {
                 Protect Your Payment Rights
               </h3>
               <p className="text-muted-foreground mb-6">
-                VoiceLogPro turns your voice notes into court-ready daily reports with timestamps and photos.
+                VoiceLogPro turns your voice notes into structured daily reports with timestamps and photos.
               </p>
               <CTAButton />
             </div>

@@ -277,7 +277,7 @@ export default function DefenseKit() {
           <h2 className="headline-section text-foreground mb-4">Now stop typing all of this</h2>
           <p className="body-large mb-8">
             The kit works — if you fill it in every single day. VoiceLogPro fills it for you: press record,
-            speak, and get a timestamped, weather-stamped, court-ready PDF. Even offline.
+            speak, and get a timestamped, timestamped PDF report of what you dictated. Even offline.
           </p>
           <Link
             to="/crew-plan"

@@ -14,7 +14,7 @@ const tradeCards = [
   {
     image: electricianCard,
     alt: "Electrician installing light fixtures",
-    quote: "Proof of work in seconds.",
+    quote: "Proof of work, every day.",
   },
 ];
 

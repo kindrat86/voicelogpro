@@ -101,7 +101,7 @@ const FAQS = [
   {
     question: "Do jobsite photos need metadata to hold up in a dispute?",
     answer:
-      "Metadata makes photos far harder to challenge. A photo file with an embedded timestamp and GPS coordinates establishes an objective record of site conditions on a specific date and place. Without that metadata, the other side can argue the image was taken at a different time or location. VoiceLogPro embeds timestamp and geolocation automatically when photos are attached to a daily report.",
+      "Metadata makes photos far harder to challenge. A photo file with an embedded timestamp and GPS coordinates establishes an objective record of site conditions on a specific date and place. Without that metadata, the other side can argue the image was taken at a different time or location. Photos attached to a daily report keep their own embedded timestamp and geolocation metadata.",
   },
   {
     question: "How long should I keep my daily logs?",
@@ -181,7 +181,7 @@ const CourtReadyDailyLogs = () => {
             <p className="text-sm font-semibold text-primary mb-4">
               <strong>TL;DR:</strong> A court-ready daily log is a contemporaneous business record with timestamps,
               weather corroboration, and geotagged photos — kept consistently as routine practice. VoiceLogPro
-              captures all five elements by voice in about 30 seconds on-site, producing a PDF that holds up
+              captures all five elements by voice in about half a minute on-site, producing a PDF built to hold up
               in payment disputes, mechanics liens, and delay claims.
             </p>
             <p className="text-xl text-muted-foreground mb-4 max-w-2xl">
@@ -207,8 +207,7 @@ const CourtReadyDailyLogs = () => {
               The five elements of a court-ready daily log
             </h2>
             <p className="text-muted-foreground mb-8 max-w-2xl">
-              Miss any one and the record gets easier to challenge. Each element stands on its own — and each is
-              something you can capture in seconds from the jobsite.
+              Miss any one and the record gets easier to challenge. Each element stands on its own — and each is something you can capture by voice from the jobsite.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {ELEMENTS.map((el) => (
@@ -310,13 +309,13 @@ const CourtReadyDailyLogs = () => {
                 <div className="flex gap-1"><CloudSun className="h-7 w-7 text-primary" /><MapPin className="h-7 w-7 text-primary" /></div>
                 <h3 className="font-semibold text-foreground">Auto-corroborated</h3>
                 <p className="text-muted-foreground text-sm">
-                  Weather and geolocation are tagged automatically, and attached photos keep their embedded
+                  Weather and geolocation come from what you dictate, and attached photos keep their embedded
                   timestamp and GPS metadata.
                 </p>
               </div>
               <div className="flex flex-col gap-2">
                 <ShieldCheck className="h-7 w-7 text-primary" />
-                <h3 className="font-semibold text-foreground">Court-ready PDF</h3>
+                <h3 className="font-semibold text-foreground">Structured PDF</h3>
                 <p className="text-muted-foreground text-sm">
                   Export a clean, dispute-ready PDF with all metadata embedded — no lock-in. Keep every report you
                   generate.

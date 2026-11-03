@@ -31,14 +31,14 @@ const ConstructiveAcceleration = () => {
             <p className="text-sm text-muted-foreground mb-8">Reviewed July 2026 · Aligned with AIA A401 documentation expectations</p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
-                Start Documenting — $49/month
+                Start with the $49 Founding Pilot
               </Button>
             </Link>
           </div>
         </section>
 
         {/* TL;DR */}
-        <TldrSection summary="VoiceLogPro creates the contemporaneous evidence you need to prove constructive acceleration in Virginia Data Center Alley. Timestamped daily logs with automatic weather tagging document excusable delays, GC directives to maintain schedule, and resulting acceleration costs." />
+        <TldrSection summary="VoiceLogPro creates the contemporaneous evidence you need to prove constructive acceleration in Virginia Data Center Alley. Timestamped daily logs with weather conditions you dictate document excusable delays, GC directives to maintain schedule, and resulting acceleration costs." />
 
         {/* Fact Tuples Section */}
         <section className="py-16 px-4 bg-muted/30">
@@ -144,7 +144,7 @@ const ConstructiveAcceleration = () => {
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Excusable Delay Occurred</h3>
                   <p className="text-muted-foreground">
-                    Timestamped daily logs documenting the delay event, cause, and impact on schedule. VoiceLogPro automatically captures date, time, and weather conditions.
+                    Timestamped daily logs documenting the delay event, cause, and impact on schedule. VoiceLogPro records the date, time, and the weather conditions you report.
                   </p>
                 </div>
               </div>
@@ -180,7 +180,7 @@ const ConstructiveAcceleration = () => {
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Weather Documentation</h3>
                   <p className="text-muted-foreground">
-                    Automatic weather tagging provides independent verification of conditions that caused excusable delays, supporting your claim for time extension.
+                    Weather conditions you dictate provides independent verification of conditions that caused excusable delays, supporting your claim for time extension.
                   </p>
                 </div>
               </div>
@@ -205,7 +205,7 @@ const ConstructiveAcceleration = () => {
                   Record a voice note describing the delay: "Rain delay today, couldn't run conduit in Building C due to standing water. Started at 6 AM, rain began at 7:30 AM, crew stood down at 8 AM."
                 </p>
                 <p className="text-sm text-muted-foreground italic">
-                  VoiceLogPro automatically adds timestamp (6:15 AM) and weather data (0.8" rainfall, 48°F).
+                  VoiceLogPro records timestamp (6:15 AM) and the weather data you dictate (0.8" rainfall, 48°F).
                 </p>
               </div>
               
@@ -249,7 +249,7 @@ const ConstructiveAcceleration = () => {
             </p>
             <Link to="/crew-plan">
               <Button size="lg" className="font-semibold">
-                Join the Waitlist — $49/month
+                Join the Waitlist
               </Button>
             </Link>
           </div>

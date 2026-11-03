@@ -4,7 +4,7 @@
 
 ## Product & Core Pages (6 pages)
 VoiceLogPro is a voice-to-PDF daily construction report SaaS for subcontractors.
-- [Homepage](https://voicelogpro.com/): Voice-to-PDF Construction Daily Reports — $49/month
+- [Homepage](https://voicelogpro.com/): Voice-to-PDF Construction Daily Reports — $49 one-time Founding Pilot
 - [Crew Plan](https://voicelogpro.com/crew-plan): Join the waitlist for voice-first daily reports
 - [About](https://voicelogpro.com/about): Built by subcontractors who learned that missing reports cost more than bad work
 - [Contact](https://voicelogpro.com/contact): Get in touch — support, partnerships, questions

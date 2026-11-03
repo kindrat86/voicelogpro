@@ -115,7 +115,7 @@ export function DocumentPreview() {
 
       {/* Caption */}
       <p className="text-center text-sm text-muted-foreground mt-3">
-        Court-ready format • Timestamped evidence
+        Structured format • Timestamped evidence
       </p>
     </div>
   );

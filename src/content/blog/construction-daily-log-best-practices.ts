@@ -23,7 +23,7 @@ export const dailyLogBestPractices = {
 - **Timestamp every entry** — manual time-of-day is good, GPS-timestamped automated entries are better.
 - Photographs should show **before work, throughout the day, and after completion** with full metadata.
 - **Never backdate** or alter logs after the fact. Tampered logs lose all evidentiary value under business records exceptions.
-- VoiceLogPro automates the logging process, ensuring consistent, timestamped, and court-admissible records.
+- VoiceLogPro's human-assisted pilot turns your voice notes into consistent, timestamped, structured records.
 
 ## Table of Contents
 
@@ -79,9 +79,9 @@ The legal foundation for daily log evidence comes from two rules:
 |------------------|-------------|------------------|------------|
 | End-of-day only | Moderate | Accepted but can be challenged | Easy |
 | Twice daily (start + end) | High | Strong business record | Moderate |
-| Voice-logged throughout day | Highest | Excellent — contemporaneous | VoiceLogPro automates this |
+| Voice-logged throughout day | Highest | Excellent — contemporaneous | VoiceLogPro does this for you |
 
-**Best practice:** Voice-record your log entries throughout the day rather than writing from memory at 5 PM. Automated timestamping eliminates disputes about when the entry was created.
+**Best practice:** Voice-record your log entries throughout the day rather than writing from memory at 5 PM. Timestamps captured at the moment of recording eliminate disputes about when the entry was created.
 
 ---
 

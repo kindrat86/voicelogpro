@@ -83,10 +83,10 @@ export default function LienDeadlineCheatSheetPage() {
             Never Miss a Lien Deadline Again
           </h2>
           <p className="text-muted-foreground mb-6">
-            VoiceLogPro documents your first and last furnishing dates automatically — the foundation data for every lien deadline calculation.
+            VoiceLogPro documents your first and last furnishing dates — the foundation data for every lien deadline calculation.
           </p>
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <Link to="/crew-plan">Get VoiceLogPro — $49/month</Link>
+            <Link to="/crew-plan">Get VoiceLogPro — $49 Founding Pilot</Link>
           </Button>
         </section>
 

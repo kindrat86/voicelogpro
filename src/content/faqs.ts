@@ -18,17 +18,17 @@ export const basicFaqs: FAQItem[] = [
   {
     id: "offline",
     question: "Does VoiceLogPro work offline?",
-    answerText: "Yes. You can record voice notes without a connection. Reports sync automatically when you're back online.",
+    answerText: "Yes. Record with your phone's own voice-memo app with no connection, then email it in when you're back online.",
   },
   {
     id: "cost",
     question: "How much does it cost?",
-    answerText: "$49/month for the Crew Plan. Includes unlimited daily reports, automatic timestamps, weather integration, photo attachments, and court-ready PDF exports.",
+    answerText: "Founding Pilot pricing: $49 one-time. One crew, 7 days, up to 5 human-assisted daily-report PDFs with timestamps and photo attachments, delivered same or next business day.",
   },
   {
     id: "court-ready",
     question: "Can these reports be used in court?",
-    answerText: "Yes. VoiceLogPro generates PDF reports with timestamps, weather data, and photos that serve as contemporaneous documentation. These reports support lien claims, delay disputes, and payment protection cases.",
+    answerText: "They can support your case. VoiceLogPro returns PDF reports with timestamps, the weather conditions you report, and your photos — contemporaneous documentation. These reports support lien claims, delay disputes, and payment protection cases.",
   },
 ];
 

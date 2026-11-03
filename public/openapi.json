@@ -62,8 +62,8 @@
     },
     "/api/generate-pdf": {
       "post": {
-        "summary": "Generate court-ready PDF report",
-        "description": "Generates a timestamped, court-admissible PDF daily report from structured report data.",
+        "summary": "Generate structured PDF report",
+        "description": "Generates a timestamped, structured PDF daily report from structured report data.",
         "operationId": "generatePdf",
         "requestBody": {
           "required": true,

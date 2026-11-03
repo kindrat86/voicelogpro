@@ -50,7 +50,7 @@ const it = {
     titleLine2: "Parla e Basta.",
     subtitle: "Lo strumento AI Voice-to-PDF per rapporti giornalieri per difendersi da controversie di pagamento, rinunce a privilegi e richieste di compressione dei tempi.",
     srOnly: "Registri giornalieri di costruzione per privilegi meccanici, documentazione di richieste di ritardo, prova di ritardo giustificabile e rapporti PDF pronti per controversie.",
-    bodyLine1: "Trasforma note vocali in PDF pronti per il lavoro in 30 secondi.",
+    bodyLine1: "Trasforma note vocali in PDF pronti per il lavoro (con assistenza, stesso giorno lavorativo o il successivo).",
     bodyLine2: "Creato per subappaltatori che devono muoversi velocemente — e dimostrare che il lavoro è stato fatto.",
     beforeLabel: "Prima: Note disordinate",
     afterLabel: "Dopo: PDF pulito",

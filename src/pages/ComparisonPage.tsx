@@ -32,7 +32,7 @@ function ComparisonCTA({ location }: { location: string }) {
           <ChevronRight className="w-5 h-5 ml-1" />
         </Button>
       </Link>
-      <span className="text-sm text-muted-foreground">Flat $49/month — no per-user fees</span>
+      <span className="text-sm text-muted-foreground">Founding Pilot: $49 one-time — no per-user fees</span>
     </div>
   );
 }
@@ -84,7 +84,7 @@ export default function ComparisonPage() {
         </section>
 
         {/* TL;DR */}
-        <TldrSection summary={`VoiceLogPro is cheaper (${comp.pricing.startsWith("$") ? '$49/month flat vs. ' + comp.pricing.split(" ")[0] : 'flat $49/month'}), faster (voice input vs. ${comp.inputMethod.toLowerCase()}), and built for subcontractors who need payment protection, not project management. You own your data, and reports are court-ready.`} />
+        <TldrSection summary={`VoiceLogPro is cheaper (${comp.pricing.startsWith("$") ? 'Founding Pilot ($49 one-time) vs. ' + comp.pricing.split(" ")[0] : 'Founding Pilot ($49 one-time)'}), faster (voice input vs. ${comp.inputMethod.toLowerCase()}), and built for subcontractors who need payment protection, not project management. You own your data, and reports are structured, timestamped PDFs.`} />
 
         {/* What {competitor} Is */}
         <section className="section-container bg-secondary/30 py-16 px-4">
@@ -146,7 +146,7 @@ export default function ComparisonPage() {
                     { label: "Built For", compVal: comp.builtFor, vlpVal: "Subcontractors" },
                     { label: "Primary Goal", compVal: comp.primaryGoal, vlpVal: "Get you paid" },
                     { label: "Data Ownership", compVal: comp.dataOwnership, vlpVal: "You" },
-                    { label: "Pricing", compVal: comp.pricing, vlpVal: "$49/month flat" },
+                    { label: "Pricing", compVal: comp.pricing, vlpVal: "$49 one-time Founding Pilot" },
                     { label: "Input Method", compVal: comp.inputMethod, vlpVal: "100% voice" },
                     { label: "Legal Focus", compVal: comp.legalFocus, vlpVal: "Payment & lien defense" },
                     { label: "Best For", compVal: comp.bestFor, vlpVal: "Trade subcontractors" },
@@ -196,7 +196,7 @@ export default function ComparisonPage() {
                   <Mic className="w-6 h-6 text-primary" />
                   <h3 className="font-display text-lg uppercase text-foreground">1. Voice-First, Glove-On Usability</h3>
                 </div>
-                <p className="text-muted-foreground text-sm">Built for crews with tools in their hands. Speak for 30 seconds — VoiceLogPro structures the report automatically.</p>
+                <p className="text-muted-foreground text-sm">Built for crews with tools in their hands. Speak for under a minute — VoiceLogPro structures the report for you.</p>
               </div>
               
               <div className="card-industrial p-6">
@@ -210,7 +210,7 @@ export default function ComparisonPage() {
               <div className="card-industrial p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <FileText className="w-6 h-6 text-primary" />
-                  <h3 className="font-display text-lg uppercase text-foreground">3. Court-Ready Evidence</h3>
+                  <h3 className="font-display text-lg uppercase text-foreground">3. Dispute-Ready Evidence</h3>
                 </div>
                 <p className="text-muted-foreground text-sm">Timestamped, weather-tagged, geolocated PDFs that serve as contemporaneous business records in court and adjudication.</p>
               </div>
@@ -218,9 +218,9 @@ export default function ComparisonPage() {
               <div className="card-industrial p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Wifi className="w-6 h-6 text-primary" />
-                  <h3 className="font-display text-lg uppercase text-foreground">4. Works Fully Offline</h3>
+                  <h3 className="font-display text-lg uppercase text-foreground">4. Records Anywhere</h3>
                 </div>
-                <p className="text-muted-foreground text-sm">Capture evidence in basements, mechanical rooms, and remote sites. Syncs automatically when you're back online.</p>
+                <p className="text-muted-foreground text-sm">Record in basements, mechanical rooms, and remote sites with any voice-memo app, then send it in when you're back online.</p>
               </div>
             </div>
           </div>
@@ -267,7 +267,7 @@ export default function ComparisonPage() {
                   </li>
                   <li className="flex items-start gap-2 text-foreground text-sm">
                     <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                    You want court-ready documentation without admin work
+                    You want dispute-ready documentation without admin work
                   </li>
                 </ul>
               </div>

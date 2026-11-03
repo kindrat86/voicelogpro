@@ -1,7 +1,7 @@
 {
   "protocolVersion": "0.3.0",
   "name": "VoiceLogPro Agent",
-  "description": "Voice-powered construction daily log app. Dictate your daily report hands-free and generate compliant, professional logs in seconds.",
+  "description": "Voice-powered construction daily log app. Dictate your daily report hands-free; our team returns compliant, professional logs the same or next business day.",
   "url": "https://voicelogpro.com/api/a2a",
   "preferredTransport": "JSONRPC",
   "version": "1.0.0",

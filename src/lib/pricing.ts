@@ -84,7 +84,7 @@ export const AUDIT_TRAIL_ADDON = {
 
 /** Canonical, verbatim offer phrases. */
 export const OFFER_COPY = {
-  crewHeadline: "$49/month for your entire crew.",
+  crewHeadline: "Founding Pilot: $49 one-time for your entire crew.",
   foundingLock: "Founding price locks at sign-up.",
   noChargeUntilLaunch: "Reserve your seat — no charge until launch.",
   guarantee: "30 Minutes Saved Per Day Guaranteed — Or Your Money Back",

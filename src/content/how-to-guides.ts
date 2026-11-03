@@ -24,17 +24,17 @@ export const howToGuides: HowToEntry[] = [
     metaTitle: "How to Document Construction Delays for Payment Claims | VoiceLogPro",
     metaDescription: "Learn how to document construction delays properly for payment claims and dispute resolution. Step-by-step guide with voice recording, timestamps, and weather data.",
     h1: "How to Document Construction Delays for Payment Claims",
-    intro: "To document a construction delay so it survives a payment dispute, capture contemporaneous evidence the moment the delay happens: a timestamped voice note describing the cause and impact, automatic weather data, and geotagged photos — not a summary written at end of day. Records created at the time of the event carry far more evidentiary weight than reconstructed notes. Construction delays cost subcontractors billions in unpaid claims every year; this guide walks through the exact steps to protect yours.",
+    intro: "To document a construction delay so it survives a payment dispute, capture contemporaneous evidence the moment the delay happens: a timestamped voice note describing the cause and impact, the weather conditions you report, and geotagged photos — not a summary written at end of day. Records created at the time of the event carry far more evidentiary weight than reconstructed notes. Construction delays cost subcontractors billions in unpaid claims every year; this guide walks through the exact steps to protect yours.",
     totalTime: "PT10M",
     lastReviewed: "2026-07-18",
     steps: [
       {
         task: "Record site conditions immediately when the delay occurs",
-        outcome: "Don't wait until end of day or end of week. Pull out your phone and record a 30-second voice note describing what's happening, why it's a delay, who is involved, and what work is being affected. Contemporaneous records carry maximum evidentiary weight.",
+        outcome: "Don't wait until end of day or end of week. Pull out your phone and record a short voice note describing what's happening, why it's a delay, who is involved, and what work is being affected. Contemporaneous records carry maximum evidentiary weight.",
       },
       {
-        task: "Capture weather conditions automatically",
-        outcome: "Weather is one of the most common excusable delay factors. Use VoiceLogPro's automatic weather tagging to record temperature, precipitation, and wind conditions at the time of recording. This creates objective evidence that conditions were outside normal working parameters.",
+        task: "Capture weather conditions as they happen",
+        outcome: "Weather is one of the most common excusable delay factors. Use VoiceLogPro's weather conditions you dictate to record temperature, precipitation, and wind conditions at the time of recording. This creates objective evidence that conditions were outside normal working parameters.",
       },
       {
         task: "Document the impact on your schedule",
@@ -50,7 +50,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Generate and distribute the daily report",
-        outcome: "At the end of the day, VoiceLogPro converts your voice notes into a court-ready PDF with all timestamps, weather data, and photos embedded. Send a copy to your project manager and save a copy for your records. This becomes your contemporaneous evidence package.",
+        outcome: "At the end of the day, VoiceLogPro returns a structured PDF with all timestamps, the weather you reported, and your photos embedded. Send a copy to your project manager and save a copy for your records. This becomes your contemporaneous evidence package.",
       },
     ],
     keyPoints: [
@@ -59,7 +59,7 @@ export const howToGuides: HowToEntry[] = [
       "Specific impact descriptions ('3 electricians idle for 4 hours') are more valuable than general statements",
       "Photo evidence with embedded timestamps eliminates 'when was this photo taken' disputes",
       "Cross-referencing RFI numbers creates an auditable chain of causation",
-      "Daily PDF reports with all metadata embedded are court-ready evidence packages",
+      "Daily PDF reports with all metadata embedded are strong evidence packages",
     ],
     faqs: [
       {
@@ -68,7 +68,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         question: "How soon after a delay should I document it?",
-        answer: "Immediately. Contemporaneous documentation — records created at the time of the event — carries significantly more evidentiary weight in disputes and adjudications than notes written hours or days later. VoiceLogPro makes instant documentation easy with voice recording.",
+        answer: "Immediately. Contemporaneous documentation — records created at the time of the event — carries significantly more evidentiary weight in disputes and adjudications than notes written hours or days later. VoiceLogPro makes contemporaneous documentation easy with voice recording.",
       },
       {
         question: "Can voice notes really be used as evidence?",
@@ -95,7 +95,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Create a daily log the first day you start work",
-        outcome: "Don't wait until there's a problem. Start documenting on day one. Record the date you first furnished labor or materials — this establishes the timeline for all subsequent notice periods. VoiceLogPro automatically timestamps every entry for a complete audit trail.",
+        outcome: "Don't wait until there's a problem. Start documenting on day one. Record the date you first furnished labor or materials — this establishes the timeline for all subsequent notice periods. VoiceLogPro timestamps every entry for a complete audit trail.",
       },
       {
         task: "Document labor and materials furnished every day",
@@ -110,8 +110,8 @@ export const howToGuides: HowToEntry[] = [
         outcome: "Many states require preliminary notices (within 20-45 days of starting) and monthly notices to preserve lien rights. Use your daily log data to support these notices with specific dates, amounts, and descriptions of work performed.",
       },
       {
-        task: "Generate and save court-ready PDF reports",
-        outcome: "VoiceLogPro generates PDF reports with timestamps, weather data, geolocation, and photo attachments — all the metadata that makes a contemporaneous record court-ready. Store these reports for each month of work. If a payment dispute arises, you have complete, verifiable evidence of every day you worked.",
+        task: "Generate and save structured PDF reports",
+        outcome: "VoiceLogPro returns PDF reports with timestamps, the weather conditions you report, and photo attachments — the metadata that makes a contemporaneous record. Store these reports for each month of work. If a payment dispute arises, you have complete, verifiable evidence of every day you worked.",
       },
     ],
     keyPoints: [
@@ -120,7 +120,7 @@ export const howToGuides: HowToEntry[] = [
       "Monthly notice deadlines are strict — missed by one day can mean lost rights",
       "Contemporaneous records (created on the day of work) are far more valuable than after-the-fact spreadsheets",
       "Photo evidence with timestamps proves site presence and work completion",
-      "A subscription to VoiceLogPro costs $49/month — losing a lien claim costs thousands",
+      "A VoiceLogPro Founding Pilot costs $49 one-time — losing a lien claim costs thousands",
     ],
     faqs: [
       {
@@ -137,7 +137,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         question: "Does VoiceLogPro automatically file liens?",
-        answer: "No, VoiceLogPro is a documentation tool, not a legal filing service. We generate the court-ready evidence and compliance records you need to support a lien claim. You should consult with a construction attorney for actual lien filings and legal strategy. We provide the proof — they provide the legal representation.",
+        answer: "No, VoiceLogPro is a documentation tool, not a legal filing service. We produce the structured evidence and compliance records you need to support a lien claim. You should consult with a construction attorney for actual lien filings and legal strategy. We provide the proof — they provide the legal representation.",
       },
     ],
   },
@@ -189,7 +189,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         question: "How do I track change order materials separately?",
-        answer: "VoiceLogPro lets you tag entries by category. Create a 'change order' tag and use it for any entry related to extra work. This automatically groups all related voice notes, photos, and materials into a change order package. At billing time, you have a complete, organized evidence file.",
+        answer: "VoiceLogPro lets you tag entries by category. Create a 'change order' tag and use it for any entry related to extra work. Our team groups the related voice notes, photos, and materials into a change order package. At billing time, you have a complete, organized evidence file.",
       },
     ],
   },
@@ -215,7 +215,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         task: "Maintain a daily record of crew hours on site",
-        outcome: "Backcharges sometimes claim you 'didn't have enough crew' or 'took too long.' Your daily logs with crew counts, hours worked, and tasks completed prove your actual resource allocation. VoiceLogPro tracks this automatically through your daily voice reports.",
+        outcome: "Backcharges sometimes claim you 'didn't have enough crew' or 'took too long.' Your daily logs with crew counts, hours worked, and tasks completed prove your actual resource allocation. VoiceLogPro tracks this through your daily voice reports.",
       },
       {
         task: "Save all correspondence related to the scope",
@@ -228,7 +228,7 @@ export const howToGuides: HowToEntry[] = [
       "Documenting conditions outside your control preemptively defeats blame-shifting",
       "Crew time records disprove 'not enough labor' claims",
       "Correspondence records in daily logs create a complete project timeline",
-      "VoiceLogPro costs $49/month — a single unfair deduction can cost thousands",
+      "A VoiceLogPro Founding Pilot costs $49 one-time — a single unfair deduction can cost thousands",
     ],
     faqs: [
       {
@@ -237,7 +237,7 @@ export const howToGuides: HowToEntry[] = [
       },
       {
         question: "Can photos really protect me from backcharges?",
-        answer: "Yes — but only if the photos have verifiable metadata. A photo file with embedded timestamps and geolocation creates an objective record of site conditions on a specific date. VoiceLogPro embeds this metadata automatically. A photo without metadata can be disputed as 'taken at a different time or location.'",
+        answer: "Yes — but only if the photos have verifiable metadata. A photo file with embedded timestamps and geolocation creates an objective record of site conditions on a specific date. VoiceLogPro records this metadata when you send photos with your report. A photo without metadata can be disputed as 'taken at a different time or location.'",
       },
       {
         question: "What should I do if I receive an unfair deduction?",

@@ -27,7 +27,7 @@ const organizationSchema = {
   description:
     "VoiceLogPro builds voice-first daily reporting tools for construction subcontractors. Specializing in compliance documentation for Texas Property Code Chapter 53, NSW SOPA adjudications, and UK Building Safety Act Golden Thread requirements.",
   disambiguatingDescription:
-    "VoiceLogPro is a voice-to-PDF daily construction log app (voice on-site → timestamped, court-admissible daily-report PDF) — not a general-purpose meeting/voice-transcription tool (Otter, Rev, Fireflies), and not a full construction-management platform (Procore, Raken).",
+    "VoiceLogPro is a voice-to-PDF daily construction log app (voice on-site → timestamped daily-report PDF) — not a general-purpose meeting/voice-transcription tool (Otter, Rev, Fireflies), and not a full construction-management platform (Procore, Raken).",
   foundingDate: "2024",
   sameAs: [
     "https://github.com/kindrat86",
@@ -64,7 +64,7 @@ export default function AboutPage() {
         <title>About VoiceLogPro — Voice-to-PDF Daily Construction Reports</title>
         <meta
           name="description"
-          content="VoiceLogPro turns voice notes into court-ready daily construction reports. Built by subcontractors who learned that missing daily reports cost more than bad work. Learn our story."
+          content="VoiceLogPro turns voice notes into structured daily construction reports. Built by subcontractors who learned that missing daily reports cost more than bad work. Learn our story."
         />
         <link rel="canonical" href="https://voicelogpro.com/about" />
         <meta property="og:type" content="website" />
@@ -72,7 +72,7 @@ export default function AboutPage() {
         <meta property="og:title" content="About VoiceLogPro — Voice-to-PDF Daily Construction Reports" />
         <meta
           property="og:description"
-          content="VoiceLogPro turns voice notes into court-ready daily construction reports. Built by subcontractors who learned that missing reports cost more than bad work."
+          content="VoiceLogPro turns voice notes into structured daily construction reports. Built by subcontractors who learned that missing reports cost more than bad work."
         />
         <meta
           property="og:image"
@@ -124,10 +124,10 @@ export default function AboutPage() {
           <p className="text-sm font-semibold text-primary max-w-2xl mx-auto mb-4">
             <strong>TL;DR:</strong> VoiceLogPro was built on actual jobsites by an electrical foreman who got tired
             of fighting backcharges. It turns voice notes into court-ready daily construction reports —
-            timestamped, weather-tagged, and formatted as PDFs. One price: $49/month for the whole crew.
+            timestamped, and formatted as PDFs. Current offer: the $49 one-time Founding Pilot for one crew.
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            VoiceLogPro turns voice notes into timestamped, court-ready daily construction reports.
+            VoiceLogPro turns voice notes into timestamped daily construction reports.
             It was built by subcontractors who learned the hard way that what kills your pay isn't bad
             work — it's late or missing paperwork.
           </p>
@@ -194,7 +194,7 @@ export default function AboutPage() {
           <h2 className="font-display text-3xl uppercase text-foreground mb-8 text-center">What VoiceLogPro Does</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-card border border-border rounded-lg p-6">
-              <h3 className="font-bold text-foreground mb-2">&#127897; Voice-to-PDF in 30 Seconds</h3>
+              <h3 className="font-bold text-foreground mb-2">&#127897; Voice-to-PDF, Human-Assisted</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Hit record, speak your day, and get a professional PDF with timestamps, weather data,
                 and crew details. No typing required.
@@ -208,9 +208,9 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-card border border-border rounded-lg p-6">
-              <h3 className="font-bold text-foreground mb-2">&#127748; Automatic Weather &amp; Location</h3>
+              <h3 className="font-bold text-foreground mb-2">&#127748; Weather &amp; Location as Reported</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Weather data and GPS coordinates are attached automatically. No more arguing about
+                You dictate the weather conditions, and photos keep their GPS metadata. No more arguing about
                 whether it rained on a particular day.
               </p>
             </div>

@@ -83,10 +83,10 @@ export default function DailyLogBestPracticesPage() {
             Start Creating Court-Ready Daily Logs
           </h2>
           <p className="text-muted-foreground mb-6">
-            VoiceLogPro automates daily log creation with GPS-timestamped entries that are court-admissible as business records.
+            VoiceLogPro builds your daily log from timestamped voice entries — contemporaneous records created as the work happens.
           </p>
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <Link to="/crew-plan">Get VoiceLogPro — $49/month</Link>
+            <Link to="/crew-plan">Get VoiceLogPro — $49 Founding Pilot</Link>
           </Button>
         </section>
 

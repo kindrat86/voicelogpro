@@ -44,7 +44,7 @@ export default function SmallElectricalBusinessSoftware() {
         <title>Small Electrical Business Software | VoiceLogPro</title>
         <meta 
           name="description" 
-          content="Skip the enterprise software trap. VoiceLogPro gives small electrical shops professional documentation for $49/month. No Procore. No consultants. Just clean logs that protect your margins." 
+          content="Skip the enterprise software trap. VoiceLogPro gives small electrical shops professional documentation from a $49 one-time pilot. No Procore. No consultants. Just clean logs that protect your margins." 
         />
         <meta name="keywords" content="small electrical business software, electrical contractor software, construction documentation, daily logs, change order protection" />
         <link rel="canonical" href="https://voicelogpro.com/solutions/small-electrical-business-software" />
@@ -75,7 +75,7 @@ export default function SmallElectricalBusinessSoftware() {
                 <Link to="/crew-plan">
                   <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-6 font-bold">
                     <DollarSign className="w-5 h-5 mr-2" />
-                    See the Crew Plan — $49/month
+                    See the Crew Plan
                   </Button>
                 </Link>
                 <a href="#what-you-need">
@@ -90,7 +90,7 @@ export default function SmallElectricalBusinessSoftware() {
         </section>
 
         {/* TL;DR */}
-        <TldrSection summary="Small electrical shops (1–5 crew) don't need Procore or PlanHub. VoiceLogPro gives you the one thing that actually protects your income: court-ready daily documentation that backs up invoices, protects change orders, and keeps you from getting underpaid." label="Bottom Line" />
+        <TldrSection summary="Small electrical shops (1–5 crew) don't need Procore or PlanHub. VoiceLogPro gives you the one thing that actually protects your income: structured daily documentation that backs up invoices, protects change orders, and keeps you from getting underpaid." label="Bottom Line" />
 
         {/* Reality Check Section */}
         <section className="py-16 md:py-20 bg-background">
@@ -230,7 +230,7 @@ export default function SmallElectricalBusinessSoftware() {
                     <Cloud className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground mb-2">Automatic Weather Tagging</h3>
+                    <h3 className="font-bold text-foreground mb-2">Weather Conditions You Dictate</h3>
                     <p className="text-muted-foreground">Document conditions without checking another app.</p>
                   </div>
                 </div>
@@ -320,7 +320,7 @@ export default function SmallElectricalBusinessSoftware() {
             <Link to="/crew-plan">
               <Button size="lg" className="text-xl px-10 py-7 font-bold mb-4">
                 <DollarSign className="w-6 h-6 mr-2" />
-                Get VoiceLogPro — $49/month
+                Get VoiceLogPro — $49 Founding Pilot
               </Button>
             </Link>
             

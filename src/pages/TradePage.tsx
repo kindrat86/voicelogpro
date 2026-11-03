@@ -54,14 +54,14 @@ export default function TradePage() {
           </p>
           <Link to="/crew-plan">
             <Button size="lg" className="font-semibold">
-              Start Documenting — $49/month
+              Start with the $49 Founding Pilot
               <ChevronRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
         </section>
 
         {/* TL;DR */}
-        <TldrSection summary={`VoiceLogPro lets ${trade.tradePlural} document daily work with 30-second voice recordings — no typing, no end-of-day catch-up. Court-ready PDFs with automatic timestamps, weather data, and photo attachments. Flat $49/month for your entire crew, works fully offline.`} />
+        <TldrSection summary={`VoiceLogPro lets ${trade.tradePlural} document daily work with short voice recordings — no typing, no end-of-day catch-up. Structured PDFs with timestamps, the conditions you dictate, and photo attachments, delivered same or next business day. Founding Pilot: $49 one-time for your entire crew.`} />
 
         {/* Pain Points */}
         <section className="section-container bg-secondary/30 py-16 px-4">
@@ -146,14 +146,14 @@ export default function TradePage() {
         {/* CTA */}
         <section className="section-container bg-primary/10 py-16 text-center">
           <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-            Built for {trade.tradePlural}. Ready in 30 Seconds.
+            Built for {trade.tradePlural}. Documented Daily.
           </h2>
           <p className="text-lg text-muted-foreground mb-6">
-            Speak your daily report. Get a court-ready PDF. Protect your payment.
+            Speak your daily report. Get a structured PDF back. Protect your payment.
           </p>
           <Link to="/crew-plan">
             <Button size="lg" className="font-semibold">
-              Get VoiceLogPro — $49/month
+              Get VoiceLogPro — $49 Founding Pilot
               <ChevronRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
