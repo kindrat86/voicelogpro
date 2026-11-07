@@ -17,7 +17,7 @@
     "lienFilingDeadline": "120 days after last work",
     "enforcementDeadline": "6 months after filing",
     "statute": "Alaska Stat. \u00a7 34.35.005 et seq.",
-    "statuteUrl": "https://www.akleg.gov/statutes/Title34/Chapter35/",
+    "statuteUrl": "https://www.akleg.gov/basis/statutes.asp?statute=34.35",
     "lastVerified": "2026-08-14",
     "notes": "Owner-occupied residential requires notice"
   },
@@ -61,7 +61,7 @@
     "lienFilingDeadline": "4 months after last work",
     "enforcementDeadline": "6 months after filing",
     "statute": "Colo. Rev. Stat. \u00a7 38-22-101 et seq.",
-    "statuteUrl": "https://leg.colorado.gov/sites/default/files/2021-09/title-38.pdf",
+    "statuteUrl": "https://content.leg.colorado.gov/agencies/office-legislative-legal-services/colorado-revised-statutes",
     "lastVerified": "2026-08-14",
     "notes": "One notice covers all work"
   },
@@ -138,7 +138,7 @@
     "lienFilingDeadline": "4 months after last work",
     "enforcementDeadline": "2 years after filing",
     "statute": "770 ILCS 60/1 et seq.",
-    "statuteUrl": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2812&ChapterID=50",
+    "statuteUrl": "https://www.ilga.gov/Legislation/ILCS/Articles?ActID=2254&ChapterID=63",
     "lastVerified": "2026-08-14",
     "notes": "Original contractor: file within 4 months"
   },
@@ -226,7 +226,7 @@
     "lienFilingDeadline": "90 days after last work (subcontractors: 60 days after NOF)",
     "enforcementDeadline": "90 days after filing",
     "statute": "Mass. Gen. Laws ch. 254 \u00a7 2 et seq.",
-    "statuteUrl": "https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleI/Chapter254",
+    "statuteUrl": "https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleIV/Chapter254",
     "lastVerified": "2026-08-14",
     "notes": "Must record notice of contract for large projects"
   },
@@ -237,7 +237,7 @@
     "lienFilingDeadline": "90 days after last work",
     "enforcementDeadline": "1 year after filing",
     "statute": "Mich. Comp. Laws \u00a7 570.1101 et seq.",
-    "statuteUrl": "http://www.legislature.mi.gov/(S(epgkb0mr4ps14adnqkfvlfhb))/mileg.aspx?page=GetObject&objectname=mcl-act-497-of-1980",
+    "statuteUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=MCL-Act-497-of-1980",
     "lastVerified": "2026-08-14",
     "notes": "Residential requires notice of furnishing"
   },
@@ -314,7 +314,7 @@
     "lienFilingDeadline": "120 days after last work",
     "enforcementDeadline": "120 days after filing",
     "statute": "N.H. Rev. Stat. \u00a7 447:1 et seq.",
-    "statuteUrl": "https://www.gencourt.state.nh.us/rsa/html/447/447-1.htm",
+    "statuteUrl": "https://gc.nh.gov/rsa/html/xli/447/447-mrg.htm",
     "lastVerified": "2026-08-14",
     "notes": "Must file attested account"
   },
@@ -335,9 +335,9 @@
     "preliminaryNoticeDeadline": "60 days after first work (commercial)",
     "lienFilingDeadline": "120 days after last work",
     "enforcementDeadline": "2 years after filing",
-    "statute": "N.M. Stat. \u00a7 48-2-1 et seq.",
-    "statuteUrl": "https://nmonesource.com/nmos/enus/Statutes/NMSA1978/NMSA1978-048-002/NMSA1978-048-002-1",
-    "lastVerified": "2026-08-14",
+    "statute": "",
+    "statuteUrl": "",
+    "lastVerified": "",
     "notes": "Notice of claim of lien required"
   },
   {

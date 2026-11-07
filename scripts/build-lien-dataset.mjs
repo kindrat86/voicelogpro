@@ -184,28 +184,31 @@ const STATUTE_BY_STATE = {
   // Sourced from official state legislature sites and verified via
   // Levelset, Husch Blackwell, and Franklin County Law Library references.
   "Alabama":               { statute: "Ala. Code \u00a7 35-11-210 et seq.", sourceUrl: "https://alison.legislature.state.al.us/code-of-alabama" },
-  "Alaska":                { statute: "Alaska Stat. \u00a7 34.35.005 et seq.", sourceUrl: "https://www.akleg.gov/statutes/Title34/Chapter35/" },
+  "Alaska":                { statute: "Alaska Stat. \u00a7 34.35.005 et seq.", sourceUrl: "https://www.akleg.gov/basis/statutes.asp?statute=34.35" },
   "Arkansas":              { statute: "Ark. Code \u00a7 18-44-101 et seq.", sourceUrl: "https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-44-101/" },
   "California":            { statute: "Cal. Civ. Code \u00a7 8000 et seq.", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?division=2.&lawCode=CIV&title=8." },
-  "Colorado":              { statute: "Colo. Rev. Stat. \u00a7 38-22-101 et seq.", sourceUrl: "https://leg.colorado.gov/sites/default/files/2021-09/title-38.pdf" },
+  // Office of Legislative Legal Services landing page: a CRS index. Link label must say index.
+  "Colorado":              { statute: "Colo. Rev. Stat. \u00a7 38-22-101 et seq.", sourceUrl: "https://content.leg.colorado.gov/agencies/office-legislative-legal-services/colorado-revised-statutes", linkLabel: "Colorado Revised Statutes index" },
   "Delaware":              { statute: "Del. Code tit. 6 \u00a7 2701 et seq.", sourceUrl: "https://delcode.delaware.gov/title6/c027/" },
   "Georgia":               { statute: "O.C.G.A. \u00a7 44-14-361 et seq.", sourceUrl: "https://law.justia.com/codes/georgia/title-44/chapter-14/article-3/part-1/" },
   "Hawaii":                { statute: "Haw. Rev. Stat. \u00a7 507-41 et seq.", sourceUrl: "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0501-0588/HRS0507/HRS_0507-0041.htm" },
   "Idaho":                 { statute: "Idaho Code \u00a7 45-501 et seq.", sourceUrl: "https://legislature.idaho.gov/statutesrules/idstat/title45/t45ch5/" },
-  "Illinois":              { statute: "770 ILCS 60/1 et seq.", sourceUrl: "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2812&ChapterID=50" },
+  // Pages cite 770 ILCS 60/1 et seq. The previous Illinois URL served 740 ILCS 128.
+  "Illinois":              { statute: "770 ILCS 60/1 et seq.", sourceUrl: "https://www.ilga.gov/Legislation/ILCS/Articles?ActID=2254&ChapterID=63" },
   "Indiana":               { statute: "Ind. Code \u00a7 32-28-3-1 et seq.", sourceUrl: "https://iga.in.gov/legislative/laws/2024/ic/titles/032#32-28-3" },
   "Iowa":                  { statute: "Iowa Code \u00a7 572.1 et seq.", sourceUrl: "https://www.legis.iowa.gov/docs/code/572.pdf" },
   "Kentucky":              { statute: "Ky. Rev. Stat. \u00a7 376.010 et seq.", sourceUrl: "https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=39198" },
   "Louisiana":             { statute: "La. R.S. 9:4801 et seq.", sourceUrl: "https://www.legis.la.gov/legis/Law.aspx?d=292868" },
   "Maryland":              { statute: "Md. Code, Real Prop. \u00a7 9-101 et seq.", sourceUrl: "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=grp&section=9-101&enactments=" },
-  "Massachusetts":         { statute: "Mass. Gen. Laws ch. 254 \u00a7 2 et seq.", sourceUrl: "https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleI/Chapter254" },
-  "Michigan":              { statute: "Mich. Comp. Laws \u00a7 570.1101 et seq.", sourceUrl: "http://www.legislature.mi.gov/(S(epgkb0mr4ps14adnqkfvlfhb))/mileg.aspx?page=GetObject&objectname=mcl-act-497-of-1980" },
+  "Massachusetts":         { statute: "Mass. Gen. Laws ch. 254 \u00a7 2 et seq.", sourceUrl: "https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleIV/Chapter254" },
+  "Michigan":              { statute: "Mich. Comp. Laws \u00a7 570.1101 et seq.", sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=MCL-Act-497-of-1980" },
   "Mississippi":           { statute: "Miss. Code \u00a7 85-7-181 et seq.", sourceUrl: "https://codes.findlaw.com/ms/title-85-trusts-and-trustees/ms-code-sect-85-7-181/" },
   "Nebraska":              { statute: "Neb. Rev. Stat. \u00a7 52-121 et seq.", sourceUrl: "https://nebraskalegislature.gov/laws/statutes.php?statute=52-121" },
   "Nevada":                { statute: "Nev. Rev. Stat. \u00a7 108.221 et seq.", sourceUrl: "https://www.leg.state.nv.us/NRS/NRS-108.html" },
-  "New Hampshire":         { statute: "N.H. Rev. Stat. \u00a7 447:1 et seq.", sourceUrl: "https://www.gencourt.state.nh.us/rsa/html/447/447-1.htm" },
+  "New Hampshire":         { statute: "N.H. Rev. Stat. \u00a7 447:1 et seq.", sourceUrl: "https://gc.nh.gov/rsa/html/xli/447/447-mrg.htm" },
   "New Jersey":            { statute: "N.J. Stat. \u00a7 2A:44A-1 et seq.", sourceUrl: "https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu" },
-  "New Mexico":            { statute: "N.M. Stat. \u00a7 48-2-1 et seq.", sourceUrl: "https://nmonesource.com/nmos/enus/Statutes/NMSA1978/NMSA1978-048-002/NMSA1978-048-002-1" },
+  // New Mexico is omitted. Its previous section link returned 404, and no official
+  // section page was verified. The state portal is not used as a substitute authority.
   "North Carolina":        { statute: "N.C. Gen. Stat. \u00a7 44A-1 et seq.", sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByChapter/Chapter_44A.html" },
   "North Dakota":          { statute: "N.D. Cent. Code \u00a7 35-27-01 et seq.", sourceUrl: "https://www.legis.nd.gov/cencode/t35c27.pdf" },
   "Ohio":                  { statute: "Ohio Rev. Code \u00a7 1311.01 et seq.", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/chapter-1311" },

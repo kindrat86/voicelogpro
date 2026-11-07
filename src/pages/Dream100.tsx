@@ -66,7 +66,7 @@ const podcasts = [
 
 const oshaResources = [
   { name: "OSHA Recordkeeping Handbook", url: "https://www.osha.gov/recordkeeping", desc: "Official OSHA recordkeeping requirements for construction." },
-  { name: "OSHA 300 Log", url: "https://www.osha.gov/recordkeeping/OSHA300-log", desc: "Required injury and illness log for contractors." },
+  { name: "OSHA 300 Log", url: "https://www.osha.gov/recordkeeping", desc: "Official OSHA recordkeeping hub, which covers injury and illness Forms 300, 300A, and 301." },
   { name: "OSHA Construction eTool", url: "https://www.osha.gov/etools/construction", desc: "Interactive safety guide for construction sites." },
   { name: "OSHA Training Institute", url: "https://www.osha.gov/otiec", desc: "Authorized OSHA training for construction safety." },
 ];

@@ -70,7 +70,7 @@ function depthSection(state) {
 
 <h2>What to preserve in the project file</h2>
 <p>Keep the contract, notices, proof of service, daily logs, delivery records, change orders, completion records, the recorded lien, and court or filing receipts together. Label the first furnishing, last furnishing, completion, notice, filing, and enforcement events plainly. If two records conflict, flag the conflict rather than silently choosing the date that leaves more time.</p>
-<p>This page cites <strong>${esc(st.statute)}</strong>. Read the <a href="${esc(st.sourceUrl)}" rel="nofollow noopener" target="_blank">official text</a> for definitions, claimant-specific rules, service requirements, exceptions, and any event that can shorten a period. The table is a planning reference, not a substitute for the statute or legal advice.</p>
+<p>This page cites <strong>${esc(st.statute)}</strong>. Read the <a href="${esc(st.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(st.linkLabel || "official text")}</a> for definitions, claimant-specific rules, service requirements, exceptions, and any event that can shorten a period. The table is a planning reference, not a substitute for the statute or legal advice.</p>
 </section>`;
 }
 
@@ -103,7 +103,7 @@ ${depthSection(state)}
   // an absent citation is safer than a wrong one on compliance content.
   const st = (D.statuteByState || {})[state];
   const statuteLine = st
-    ? ` Statute: ${esc(st.statute)} — <a href="${esc(st.sourceUrl)}" rel="nofollow noopener" target="_blank">official text</a>.`
+    ? ` Statute: ${esc(st.statute)} — <a href="${esc(st.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(st.linkLabel || "official text")}</a>.`
     : "";
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(state)} Mechanics Lien Deadlines (${D.updatedAt.slice(0,4)}) — Preliminary Notice & Filing | VoiceLogPro</title>

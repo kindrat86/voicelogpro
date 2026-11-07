@@ -2245,7 +2245,7 @@
     },
     "Alaska": {
       "statute": "Alaska Stat. § 34.35.005 et seq.",
-      "sourceUrl": "https://www.akleg.gov/statutes/Title34/Chapter35/"
+      "sourceUrl": "https://www.akleg.gov/basis/statutes.asp?statute=34.35"
     },
     "Arkansas": {
       "statute": "Ark. Code § 18-44-101 et seq.",
@@ -2257,7 +2257,8 @@
     },
     "Colorado": {
       "statute": "Colo. Rev. Stat. § 38-22-101 et seq.",
-      "sourceUrl": "https://leg.colorado.gov/sites/default/files/2021-09/title-38.pdf"
+      "sourceUrl": "https://content.leg.colorado.gov/agencies/office-legislative-legal-services/colorado-revised-statutes",
+      "linkLabel": "Colorado Revised Statutes index"
     },
     "Delaware": {
       "statute": "Del. Code tit. 6 § 2701 et seq.",
@@ -2277,7 +2278,7 @@
     },
     "Illinois": {
       "statute": "770 ILCS 60/1 et seq.",
-      "sourceUrl": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2812&ChapterID=50"
+      "sourceUrl": "https://www.ilga.gov/Legislation/ILCS/Articles?ActID=2254&ChapterID=63"
     },
     "Indiana": {
       "statute": "Ind. Code § 32-28-3-1 et seq.",
@@ -2301,11 +2302,11 @@
     },
     "Massachusetts": {
       "statute": "Mass. Gen. Laws ch. 254 § 2 et seq.",
-      "sourceUrl": "https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleI/Chapter254"
+      "sourceUrl": "https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleIV/Chapter254"
     },
     "Michigan": {
       "statute": "Mich. Comp. Laws § 570.1101 et seq.",
-      "sourceUrl": "http://www.legislature.mi.gov/(S(epgkb0mr4ps14adnqkfvlfhb))/mileg.aspx?page=GetObject&objectname=mcl-act-497-of-1980"
+      "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=MCL-Act-497-of-1980"
     },
     "Mississippi": {
       "statute": "Miss. Code § 85-7-181 et seq.",
@@ -2321,15 +2322,11 @@
     },
     "New Hampshire": {
       "statute": "N.H. Rev. Stat. § 447:1 et seq.",
-      "sourceUrl": "https://www.gencourt.state.nh.us/rsa/html/447/447-1.htm"
+      "sourceUrl": "https://gc.nh.gov/rsa/html/xli/447/447-mrg.htm"
     },
     "New Jersey": {
       "statute": "N.J. Stat. § 2A:44A-1 et seq.",
       "sourceUrl": "https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu"
-    },
-    "New Mexico": {
-      "statute": "N.M. Stat. § 48-2-1 et seq.",
-      "sourceUrl": "https://nmonesource.com/nmos/enus/Statutes/NMSA1978/NMSA1978-048-002/NMSA1978-048-002-1"
     },
     "North Carolina": {
       "statute": "N.C. Gen. Stat. § 44A-1 et seq.",
