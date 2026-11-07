@@ -49,7 +49,7 @@ function addDays(d,n){const x=new Date(d);x.setDate(x.getDate()+n);return x.toIS
 function addMonths(d,n){const x=new Date(d);x.setMonth(x.getMonth()+n);return x.toISOString().slice(0,10);}
 function computed(rule,ff,lf){if(!rule)return null;const base=rule.trigger==='firstFurnishing'?ff:lf;if(!base)return null;return rule.unit==='months'?addMonths(base,rule.n):addDays(base,rule.n);}
 function line(label,cells,rule,ff,lf){if(!cells)return'';const text=cells.slice(1).filter(Boolean).join(' — ');const c=computed(rule,ff,lf);return'<div class="row"><strong>'+label+':</strong> '+text+(c?' → <span class="d">by '+c+'</span>':'')+'</div>';}
-function statLine(stat){if(!stat)return'';return'<div class="row"><strong>Statute:</strong> '+stat.statute+(stat.sourceUrl?' — <a href="'+stat.sourceUrl+'" target="_blank" rel="noopener noreferrer">official source</a>':'')+'</div>';}
+function statLine(stat){if(!stat)return'';var label=stat.linkLabel||'official source';return'<div class="row"><strong>Statute:</strong> '+stat.statute+(stat.sourceUrl?' — <a href="'+stat.sourceUrl+'" target="_blank" rel="noopener noreferrer">'+label+'</a>':'')+'</div>';}
 function render(){const s=sel.value,ff=document.getElementById('ff').value,lf=document.getElementById('lf').value,o=document.getElementById('out');if(!s){o.textContent='Select a state to see deadlines.';return;}const d=DATA[s];o.innerHTML=line('Preliminary notice',d.pn,d.num&&d.num.preliminaryNotice,ff,lf)+line('Lien filing',d.lf,d.num&&d.num.lienFiling,ff,lf)+line('Enforcement',d.en,null,ff,lf)+statLine(d.stat)+'<p class="disc">'+DISC+'</p>';}
 sel.onchange=render;document.getElementById('ff').onchange=render;document.getElementById('lf').onchange=render;
 </script>
